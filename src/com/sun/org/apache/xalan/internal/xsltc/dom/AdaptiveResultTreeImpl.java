@@ -40,14 +40,14 @@ import org.xml.sax.helpers.AttributesImpl;
 /**
  * AdaptiveResultTreeImpl is a adaptive DOM model for result tree fragments (RTF). It is
  * used in the case where the RTF is likely to be pure text yet it can still be a DOM tree.
- * It is designed for RTFs which have &lt;xsl:call-template&gt; or &lt;xsl:apply-templates&gt; in
+ * It is designed for RTFs which have <xsl:call-template> or <xsl:apply-templates> in
  * the contents. Example:
  * <pre>
- *    &lt;xsl:variable name = "x"&gt;
- *      &lt;xsl:call-template name = "test"&gt;
- *         &lt;xsl:with-param name="a" select="."/&gt;
- *      &lt;/xsl:call-template&gt;
- *    &lt;/xsl:variable>
+ *    <xsl:variable name = "x">
+ *      <xsl:call-template name = "test">
+ *         <xsl:with-param name="a" select="."/>
+ *      </xsl:call-template>
+ *    </xsl:variable>
  * </pre>
  * <p>In this example the result produced by <xsl:call-template> is likely to be a single
  * Text node. But it can also be a DOM tree. This kind of RTF cannot be modelled by

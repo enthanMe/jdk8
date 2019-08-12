@@ -60,7 +60,7 @@ package com.sun.org.apache.bcel.internal.generic;
 
 /**
  * F2D - Convert float to double
- * <PRE>Stack: ..., value -&gt; ..., result.word1, result.word2</PRE>
+ * <PRE>Stack: ..., value -> ..., result.word1, result.word2</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

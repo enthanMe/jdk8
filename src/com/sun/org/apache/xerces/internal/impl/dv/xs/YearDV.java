@@ -27,7 +27,7 @@ import com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException;
 import com.sun.org.apache.xerces.internal.impl.dv.ValidationContext;
 
 /**
- * Validator for &lt;gYear&gt; datatype (W3C Schema Datatypes)
+ * Validator for <gYear> datatype (W3C Schema Datatypes)
  *
  * @xerces.internal
  *

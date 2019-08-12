@@ -28,7 +28,7 @@ package javax.security.auth.login;
 /**
  * Signals that a credential was not found.
  *
- * <p> This exception may be thrown by a LoginModule if it is unable
+ * This exception may be thrown by a LoginModule if it is unable
  * to locate a credential necessary to perform authentication.
  *
  * @since 1.5

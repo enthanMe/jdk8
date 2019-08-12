@@ -32,7 +32,7 @@ import java.util.Iterator;
 /**
  * Charset service-provider class.
  *
- * <p> A charset provider is a concrete subclass of this class that has a
+ * A charset provider is a concrete subclass of this class that has a
  * zero-argument constructor and some number of associated charset
  * implementation classes.  Charset providers may be installed in an instance
  * of the Java platform as extensions, that is, jar files placed into any of
@@ -42,7 +42,7 @@ import java.util.Iterator;
  * thread's {@link java.lang.Thread#getContextClassLoader() context class
  * loader}.
  *
- * <p> A charset provider identifies itself with a provider-configuration file
+ * A charset provider identifies itself with a provider-configuration file
  * named <tt>java.nio.charset.spi.CharsetProvider</tt> in the resource
  * directory <tt>META-INF/services</tt>.  The file should contain a list of
  * fully-qualified concrete charset-provider class names, one per line.  A line
@@ -53,7 +53,7 @@ import java.util.Iterator;
  * each line all characters following the first comment character are ignored.
  * The file must be encoded in UTF-8.
  *
- * <p> If a particular concrete charset provider class is named in more than
+ * If a particular concrete charset provider class is named in more than
  * one configuration file, or is named in the same configuration file more than
  * once, then the duplicates will be ignored.  The configuration file naming a
  * particular provider need not be in the same jar file or other distribution

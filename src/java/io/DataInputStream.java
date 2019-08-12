@@ -107,16 +107,16 @@ class DataInputStream extends FilterInputStream implements DataInput {
      * possibly zero. The number of bytes actually read is returned as an
      * integer.
      *
-     * <p> This method blocks until input data is available, end of file is
+     * This method blocks until input data is available, end of file is
      * detected, or an exception is thrown.
      *
-     * <p> If <code>len</code> is zero, then no bytes are read and
+     * If <code>len</code> is zero, then no bytes are read and
      * <code>0</code> is returned; otherwise, there is an attempt to read at
      * least one byte. If no byte is available because the stream is at end of
      * file, the value <code>-1</code> is returned; otherwise, at least one
      * byte is read and stored into <code>b</code>.
      *
-     * <p> The first byte read is stored into element <code>b[off]</code>, the
+     * The first byte read is stored into element <code>b[off]</code>, the
      * next one into <code>b[off+1]</code>, and so on. The number of bytes read
      * is, at most, equal to <code>len</code>. Let <i>k</i> be the number of
      * bytes actually read; these bytes will be stored in elements
@@ -124,7 +124,7 @@ class DataInputStream extends FilterInputStream implements DataInput {
      * leaving elements <code>b[off+</code><i>k</i><code>]</code> through
      * <code>b[off+len-1]</code> unaffected.
      *
-     * <p> In every case, elements <code>b[0]</code> through
+     * In every case, elements <code>b[0]</code> through
      * <code>b[off]</code> and elements <code>b[off+len]</code> through
      * <code>b[b.length-1]</code> are unaffected.
      *

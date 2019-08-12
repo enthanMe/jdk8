@@ -691,7 +691,7 @@ public abstract class XMLScanner
      * Scans a processing instruction.
      * <p>
      * <pre>
-     * [16] PI ::= '&lt;?' PITarget (S (Char* - (Char* '?>' Char*)))? '?>'
+     * [16] PI ::= '<?' PITarget (S (Char* - (Char* '?>' Char*)))? '?>'
      * [17] PITarget ::= Name - (('X' | 'x') ('M' | 'm') ('L' | 'l'))
      * </pre>
      */
@@ -785,7 +785,7 @@ public abstract class XMLScanner
      * [15] Comment ::= '&lt!--' ((Char - '-') | ('-' (Char - '-')))* '-->'
      * </pre>
      * <p>
-     * <strong>Note:</strong> Called after scanning past '&lt;!--'
+     * <strong>Note:</strong> Called after scanning past '<!--'
      * <strong>Note:</strong> This method uses fString, anything in it
      * at the time of calling is lost.
      *

@@ -34,7 +34,7 @@ import javax.lang.model.element.ExecutableElement;
  * Represents the type of an executable.  An <i>executable</i>
  * is a method, constructor, or initializer.
  *
- * <p> The executable is
+ * The executable is
  * represented as when viewed as a method (or constructor or
  * initializer) of some reference type.
  * If that reference type is parameterized, then its actual

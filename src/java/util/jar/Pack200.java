@@ -576,7 +576,7 @@ public abstract class Pack200 {
          * Registers a listener for PropertyChange events on the properties map.
          * This is typically used by applications to update a progress bar.
          *
-         * <p> The default implementation of this method does nothing and has
+         * The default implementation of this method does nothing and has
          * no side-effects.</p>
          *
          * <p><b>WARNING:</b> This method is omitted from the interface
@@ -602,7 +602,7 @@ public abstract class Pack200 {
          * Remove a listener for PropertyChange events, added by
          * the {@link #addPropertyChangeListener}.
          *
-         * <p> The default implementation of this method does nothing and has
+         * The default implementation of this method does nothing and has
          * no side-effects.</p>
          *
          * <p><b>WARNING:</b> This method is omitted from the interface
@@ -735,7 +735,7 @@ public abstract class Pack200 {
          * Registers a listener for PropertyChange events on the properties map.
          * This is typically used by applications to update a progress bar.
          *
-         * <p> The default implementation of this method does nothing and has
+         * The default implementation of this method does nothing and has
          * no side-effects.</p>
          *
          * <p><b>WARNING:</b> This method is omitted from the interface
@@ -761,7 +761,7 @@ public abstract class Pack200 {
          * Remove a listener for PropertyChange events, added by
          * the {@link #addPropertyChangeListener}.
          *
-         * <p> The default implementation of this method does nothing and has
+         * The default implementation of this method does nothing and has
          * no side-effects.</p>
          *
          * <p><b>WARNING:</b> This method is omitted from the interface

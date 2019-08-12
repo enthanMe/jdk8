@@ -60,7 +60,7 @@ package com.sun.org.apache.bcel.internal.generic;
 
 /**
  * ACONST_NULL - Push null reference
- * <PRE>Stack: ... -&gt; ..., null</PRE>
+ * <PRE>Stack: ... -> ..., null</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

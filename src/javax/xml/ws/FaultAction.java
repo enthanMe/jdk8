@@ -65,17 +65,17 @@ import java.lang.annotation.Target;
  * The generated WSDL looks like:
  *
  * <pre>
- *   &lt;definitions targetNamespace="http://example.com/numbers" ...>
+ *   <definitions targetNamespace="http://example.com/numbers" ...>
  *     ...
- *     &lt;portType name="AddNumbersPortType">
- *       &lt;operation name="AddNumbers">
+ *     <portType name="AddNumbersPortType">
+ *       <operation name="AddNumbers">
  *         ...
- *         &lt;fault message="tns:AddNumbersException" name="AddNumbersException"
+ *         <fault message="tns:AddNumbersException" name="AddNumbersException"
  *           <b>wsam:Action="http://example.com/faultAction"</b>/>
- *       &lt;/operation>
- *     &lt;/portType>
+ *       </operation>
+ *     </portType>
  *     ...
- *   &lt;/definitions>
+ *   </definitions>
  * </pre>
  *
  * <p>
@@ -95,17 +95,17 @@ import java.lang.annotation.Target;
  * The generated WSDL looks like:
  *
  * <pre>
- *   &lt;definitions targetNamespace="http://example.com/numbers" ...>
+ *   <definitions targetNamespace="http://example.com/numbers" ...>
  *     ...
- *     &lt;portType name="AddNumbersPortType">
- *       &lt;operation name="AddNumbers">
+ *     <portType name="AddNumbersPortType">
+ *       <operation name="AddNumbers">
  *         ...
- *         &lt;fault message="tns:addNumbersFault" name="InvalidNumbers"
+ *         <fault message="tns:addNumbersFault" name="InvalidNumbers"
  *           <b>wsam:Action="http://example.com/numbers/AddNumbersPortType/AddNumbers/Fault/AddNumbersException"</b>/>
- *       &lt;/operation>
- *     &lt;/portType>
+ *       </operation>
+ *     </portType>
  *     ...
- *   &lt;/definitions>
+ *   </definitions>
  * </pre>
  *
  * <p>
@@ -130,19 +130,19 @@ import java.lang.annotation.Target;
  * The generated WSDL looks like:
  *
  * <pre>
- *   &lt;definitions targetNamespace="http://example.com/numbers" ...>
+ *   <definitions targetNamespace="http://example.com/numbers" ...>
  *     ...
- *     &lt;portType name="AddNumbersPortType">
- *       &lt;operation name="AddNumbers">
+ *     <portType name="AddNumbersPortType">
+ *       <operation name="AddNumbers">
  *         ...
- *         &lt;fault message="tns:addNumbersFault" name="AddNumbersException"
+ *         <fault message="tns:addNumbersFault" name="AddNumbersException"
  *           <b>wsam:Action="http://example.com/addFaultAction"</b>/>
- *         &lt;fault message="tns:tooBigNumbersFault" name="TooBigNumbersException"
+ *         <fault message="tns:tooBigNumbersFault" name="TooBigNumbersException"
  *           <b>wsam:Action="http://example.com/toobigFaultAction"</b>/>
- *       &lt;/operation>
- *     &lt;/portType>
+ *       </operation>
+ *     </portType>
  *     ...
- *   &lt;/definitions>
+ *   </definitions>
  * </pre>
  *
  * @since JAX-WS 2.1

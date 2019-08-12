@@ -50,7 +50,7 @@ package org.w3c.dom;
  * <code>DOMConfiguration</code> interface. If more than one error needs to
  * be reported during an operation, the sequence and numbers of the errors
  * passed to the error handler are implementation dependent.
- * <p> The application that is using the DOM implementation is expected to
+ * The application that is using the DOM implementation is expected to
  * implement this interface.
  * <p>See also the <a href='http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407'>Document Object Model (DOM) Level 3 Core Specification</a>.
  * @since DOM Level 3

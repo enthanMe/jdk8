@@ -52,13 +52,13 @@ public class MLetContent {
 
     /**
      * An ordered list of the TYPE attributes that appeared in nested
-     * &lt;PARAM&gt; tags.
+     * <PARAM> tags.
      */
     private List<String> types;
 
     /**
      * An ordered list of the VALUE attributes that appeared in nested
-     * &lt;PARAM&gt; tags.
+     * <PARAM> tags.
      */
     private List<String> values;
 
@@ -83,9 +83,9 @@ public class MLetContent {
      * example <code>codebase</code>.  The values are the associated attribute
      * values.
      * @param types A list of the TYPE attributes that appeared in nested
-     * &lt;PARAM&gt; tags.
+     * <PARAM> tags.
      * @param values A list of the VALUE attributes that appeared in nested
-     * &lt;PARAM&gt; tags.
+     * <PARAM> tags.
      */
     public MLetContent(URL url, Map<String,String> attributes,
                        List<String> types, List<String> values) {
@@ -206,7 +206,7 @@ public class MLetContent {
 
     /**
      * Gets the list of values of the <code>TYPE</code> attribute in
-     * each nested &lt;PARAM&gt; tag within the <code>MLET</code>
+     * each nested <PARAM> tag within the <code>MLET</code>
      * tag.
      * @return the list of types.
      */
@@ -216,7 +216,7 @@ public class MLetContent {
 
     /**
      * Gets the list of values of the <code>VALUE</code> attribute in
-     * each nested &lt;PARAM&gt; tag within the <code>MLET</code>
+     * each nested <PARAM> tag within the <code>MLET</code>
      * tag.
      * @return the list of values.
      */

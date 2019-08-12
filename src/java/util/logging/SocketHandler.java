@@ -37,26 +37,26 @@ import java.net.*;
  * <p>
  * <b>Configuration:</b>
  * By default each <tt>SocketHandler</tt> is initialized using the following
- * <tt>LogManager</tt> configuration properties where <tt>&lt;handler-name&gt;</tt>
+ * <tt>LogManager</tt> configuration properties where <tt><handler-name></tt>
  * refers to the fully-qualified class name of the handler.
  * If properties are not defined
  * (or have invalid values) then the specified default values are used.
  * <ul>
- * <li>   &lt;handler-name&gt;.level
+ * <li>   <handler-name>.level
  *        specifies the default level for the <tt>Handler</tt>
  *        (defaults to <tt>Level.ALL</tt>). </li>
- * <li>   &lt;handler-name&gt;.filter
+ * <li>   <handler-name>.filter
  *        specifies the name of a <tt>Filter</tt> class to use
  *        (defaults to no <tt>Filter</tt>). </li>
- * <li>   &lt;handler-name&gt;.formatter
+ * <li>   <handler-name>.formatter
  *        specifies the name of a <tt>Formatter</tt> class to use
  *        (defaults to <tt>java.util.logging.XMLFormatter</tt>). </li>
- * <li>   &lt;handler-name&gt;.encoding
+ * <li>   <handler-name>.encoding
  *        the name of the character set encoding to use (defaults to
  *        the default platform encoding). </li>
- * <li>   &lt;handler-name&gt;.host
+ * <li>   <handler-name>.host
  *        specifies the target host name to connect to (no default). </li>
- * <li>   &lt;handler-name&gt;.port
+ * <li>   <handler-name>.port
  *        specifies the target TCP port to use (no default). </li>
  * </ul>
  * <p>

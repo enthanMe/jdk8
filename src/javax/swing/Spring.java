@@ -64,7 +64,7 @@ import java.awt.Component;
  *  (<code>[a, b]</code> refers to the interval
  *  from <code>a</code>
  *  to <code>b</code>,
- *  where <code>a &lt;= b</code>).
+ *  where <code>a <= b</code>).
  *
  *  <pre>
  *          [a1, b1] + [a2, b2] = [a1 + a2, b1 + b2]
@@ -76,7 +76,7 @@ import java.awt.Component;
  *  <p>
  *
  *  If we denote <code>Spring</code>s as <code>[a, b, c]</code>,
- *  where <code>a &lt;= b &lt;= c</code>, we can define the same
+ *  where <code>a <= b <= c</code>, we can define the same
  *  arithmetic operators on <code>Spring</code>s:
  *
  *  <pre>

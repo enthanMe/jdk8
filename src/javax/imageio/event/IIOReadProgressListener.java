@@ -33,7 +33,7 @@ import javax.imageio.ImageReader;
  * notify callers of their image and thumbnail reading methods of
  * progress.
  *
- * <p> This interface receives general indications of decoding
+ * This interface receives general indications of decoding
  * progress (via the <code>imageProgress</code> and
  * <code>thumbnailProgress</code> methods), and events indicating when
  * an entire image has been updated (via the
@@ -88,7 +88,7 @@ public interface IIOReadProgressListener extends EventListener {
      * <code>read</code> call of the associated
      * <code>ImageReader</code>.
      *
-     * <p> The degree of completion is expressed as a percentage
+     * The degree of completion is expressed as a percentage
      * varying from <code>0.0F</code> to <code>100.0F</code>.  The
      * percentage should ideally be calculated in terms of the
      * remaining time to completion, but it is usually more practical
@@ -100,7 +100,7 @@ public interface IIOReadProgressListener extends EventListener {
      * <code>0</code> and <code>100</code>, as these may be inferred
      * by the callee from other methods.
      *
-     * <p> Each particular <code>ImageReader</code> implementation may
+     * Each particular <code>ImageReader</code> implementation may
      * call this method at whatever frequency it desires.  A rule of
      * thumb is to call it around each 5 percent mark.
      *

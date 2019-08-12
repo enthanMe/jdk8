@@ -34,13 +34,13 @@ import javax.imageio.ImageReadParam;
  * <code>getDefaultImageReadParam</code> methods of the built-in JPEG
  * <code>ImageReader</code>.
  *
- * <p> The sole purpose of these additions is to allow the
+ * The sole purpose of these additions is to allow the
  * specification of tables for use in decoding abbreviated streams.
  * The built-in JPEG reader will also accept an ordinary
  * <code>ImageReadParam</code>, which is sufficient for decoding
  * non-abbreviated streams.
  *
- * <p> While tables for abbreviated streams are often obtained by
+ * While tables for abbreviated streams are often obtained by
  * first reading another abbreviated stream containing only the
  * tables, in some applications the tables are fixed ahead of time.
  * This class allows the tables to be specified directly from client
@@ -50,13 +50,13 @@ import javax.imageio.ImageReadParam;
  * and {@link JPEGHuffmanTable JPEGHuffmanTable} for more information
  *  on the default tables.
  *
- * <p> The default <code>JPEGImageReadParam</code> returned by the
+ * The default <code>JPEGImageReadParam</code> returned by the
  * <code>getDefaultReadParam</code> method of the builtin JPEG reader
  * contains no tables.  Default tables may be obtained from the table
  * classes {@link JPEGQTable JPEGQTable} and
  * {@link JPEGHuffmanTable JPEGHuffmanTable}.
  *
- * <p> If a stream does contain tables, the tables given in a
+ * If a stream does contain tables, the tables given in a
  * <code>JPEGImageReadParam</code> are ignored.  Furthermore, if the
  * first image in a stream does contain tables and subsequent ones do
  * not, then the tables given in the first image are used for all the
@@ -66,7 +66,7 @@ import javax.imageio.ImageReadParam;
  * javax.imageio.ImageReader#setInput setInput} method of
  * the reader must be called to change the stream.
  *
- * <p> Note that this class does not provide a means for obtaining the
+ * Note that this class does not provide a means for obtaining the
  * tables found in a stream.  These may be extracted from a stream by
  * consulting the IIOMetadata object returned by the reader.
  *

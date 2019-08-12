@@ -46,7 +46,7 @@ import org.w3c.dom.DOMException;
 /**
  *  <code>DOMImplementationLS</code> contains the factory methods for creating
  * Load and Save objects.
- * <p> The expectation is that an instance of the
+ * The expectation is that an instance of the
  * <code>DOMImplementationLS</code> interface can be obtained by using
  * binding-specific casting methods on an instance of the
  * <code>DOMImplementation</code> interface or, if the <code>Document</code>

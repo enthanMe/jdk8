@@ -64,7 +64,7 @@ import com.sun.org.apache.bcel.internal.ExceptionConstants;
  * INVOKESPECIAL - Invoke instance method; special handling for superclass, private
  * and instance initialization method invocations
  *
- * <PRE>Stack: ..., objectref, [arg1, [arg2 ...]] -&gt; ...</PRE>
+ * <PRE>Stack: ..., objectref, [arg1, [arg2 ...]] -> ...</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

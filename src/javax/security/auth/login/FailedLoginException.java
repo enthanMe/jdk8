@@ -28,7 +28,7 @@ package javax.security.auth.login;
 /**
  * Signals that user authentication failed.
  *
- * <p> This exception is thrown by LoginModules if authentication failed.
+ * This exception is thrown by LoginModules if authentication failed.
  * For example, a {@code LoginModule} throws this exception if
  * the user entered an incorrect password.
  *

@@ -44,7 +44,7 @@ package org.w3c.dom;
 /**
  * CDATA sections are used to escape blocks of text containing characters that
  * would otherwise be regarded as markup. The only delimiter that is
- * recognized in a CDATA section is the "]]&gt;" string that ends the CDATA
+ * recognized in a CDATA section is the "]]>" string that ends the CDATA
  * section. CDATA sections cannot be nested. Their primary purpose is for
  * including material such as XML fragments, without needing to escape all
  * the delimiters.
@@ -57,8 +57,8 @@ package org.w3c.dom;
  * <code>CharacterData</code> interface through the <code>Text</code>
  * interface. Adjacent <code>CDATASection</code> nodes are not merged by use
  * of the <code>normalize</code> method of the <code>Node</code> interface.
- * <p> No lexical check is done on the content of a CDATA section and it is
- * therefore possible to have the character sequence <code>"]]&gt;"</code>
+ * No lexical check is done on the content of a CDATA section and it is
+ * therefore possible to have the character sequence <code>"]]>"</code>
  * in the content, which is illegal in a CDATA section per section 2.7 of [<a href='http://www.w3.org/TR/2004/REC-xml-20040204'>XML 1.0</a>]. The
  * presence of this character sequence must generate a fatal error during
  * serialization or the cdata section must be splitted before the

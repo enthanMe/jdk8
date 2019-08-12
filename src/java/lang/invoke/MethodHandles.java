@@ -980,7 +980,7 @@ assertEquals(""+l, (String) MH_this.invokeExact(subl)); // Listie method
          * }</pre></blockquote>
          *
          * @param refc the class or interface from which the method is accessed
-         * @param name the name of the method (which must not be "&lt;init&gt;")
+         * @param name the name of the method (which must not be "<init>")
          * @param type the type of the method, with the receiver argument omitted
          * @param specialCaller the proposed calling class to perform the {@code invokespecial}
          * @return the desired method handle
@@ -1397,7 +1397,7 @@ return mh1;
                 throw new MemberName(refc).makeAccessException("symbolic reference class is not public", this);
         }
 
-        /** Check name for an illegal leading "&lt;" character. */
+        /** Check name for an illegal leading "<" character. */
         void checkMethodName(byte refKind, String name) throws NoSuchMethodException {
             if (name.startsWith("<") && refKind != REF_newInvokeSpecial)
                 throw new NoSuchMethodException("illegal method name: "+name);
@@ -2574,7 +2574,7 @@ assertEquals("xY", (String) f1.invokeExact("x", "y")); // xY
 MethodHandle f2 = filterArguments(cat, 0, upcase, upcase);
 assertEquals("XY", (String) f2.invokeExact("x", "y")); // XY
      * }</pre></blockquote>
-     * <p> Here is pseudocode for the resulting adapter:
+     * Here is pseudocode for the resulting adapter:
      * <blockquote><pre>{@code
      * V target(P... p, A[i]... a[i], B... b);
      * A[i] filter[i](V[i]);
@@ -2688,7 +2688,7 @@ MethodHandle ts3_ts2_ts3 = collectArguments(ts3_ts2, 1, ts3);
 assertEquals("[top, [[up, down, strange], charm], bottom]",
              (String) ts3_ts2_ts3.invokeExact("top", "up", "down", "strange", "charm", "bottom"));
      * }</pre></blockquote>
-     * <p> Here is pseudocode for the resulting adapter:
+     * Here is pseudocode for the resulting adapter:
      * <blockquote><pre>{@code
      * T target(A...,V,C...);
      * V filter(B...);
@@ -2799,7 +2799,7 @@ System.out.println((String) cat.invokeExact("x", "y")); // xy
 MethodHandle f0 = filterReturnValue(cat, length);
 System.out.println((int) f0.invokeExact("x", "y")); // 2
      * }</pre></blockquote>
-     * <p> Here is pseudocode for the resulting adapter:
+     * Here is pseudocode for the resulting adapter:
      * <blockquote><pre>{@code
      * V target(A...);
      * T filter(V);
@@ -2899,7 +2899,7 @@ MethodHandle catTrace = foldArguments(cat, trace);
 // also prints "boo":
 assertEquals("boojum", (String) catTrace.invokeExact("boo", "jum"));
      * }</pre></blockquote>
-     * <p> Here is pseudocode for the resulting adapter:
+     * Here is pseudocode for the resulting adapter:
      * <blockquote><pre>{@code
      * // there are N arguments in A...
      * T target(V, A[N]..., B...);
@@ -2969,7 +2969,7 @@ assertEquals("boojum", (String) catTrace.invokeExact("boo", "jum"));
      * argument and return types, except that the return type
      * of the test must be boolean, and the test is allowed
      * to have fewer arguments than the other two method handles.
-     * <p> Here is pseudocode for the resulting adapter:
+     * Here is pseudocode for the resulting adapter:
      * <blockquote><pre>{@code
      * boolean test(A...);
      * T target(A...,B...);
@@ -3031,7 +3031,7 @@ assertEquals("boojum", (String) catTrace.invokeExact("boo", "jum"));
      * argument and return types, except that handler may omit trailing arguments
      * (similarly to the predicate in {@link #guardWithTest guardWithTest}).
      * Also, the handler must have an extra leading parameter of {@code exType} or a supertype.
-     * <p> Here is pseudocode for the resulting adapter:
+     * Here is pseudocode for the resulting adapter:
      * <blockquote><pre>{@code
      * T target(A..., B...);
      * T handler(ExType, A...);

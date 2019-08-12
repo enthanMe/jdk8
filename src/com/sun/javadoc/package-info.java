@@ -128,7 +128,7 @@ from "<code>@param</code>" tags.
 <p>
 This doclet when invoked with a command line like:
 <pre>
-    javadoc -doclet ListParams -sourcepath &lt;source-location&gt; java.util
+    javadoc -doclet ListParams -sourcepath <source-location> java.util
 </pre>
 producing output like:
 <pre>

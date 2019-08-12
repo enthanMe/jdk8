@@ -1,38 +1,14 @@
-/*
- * Copyright (c) 2010, 2013, Oracle and/or its affiliates. All rights reserved.
- * ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- */
 package java.util.function;
 
 import java.util.Objects;
 
 /**
- * Represents a predicate (boolean-valued function) of one argument.
+ * 表示一个参数的谓词（布尔值函数）
  *
  * <p>This is a <a href="package-summary.html">functional interface</a>
  * whose functional method is {@link #test(Object)}.
  *
- * @param <T> the type of the input to the predicate
+ * @param <T> 谓词输入的类型
  *
  * @since 1.8
  */
@@ -40,7 +16,7 @@ import java.util.Objects;
 public interface Predicate<T> {
 
     /**
-     * Evaluates this predicate on the given argument.
+     * 根据给定的参数计算此谓词.
      *
      * @param t the input argument
      * @return {@code true} if the input argument matches the predicate,
@@ -49,19 +25,14 @@ public interface Predicate<T> {
     boolean test(T t);
 
     /**
-     * Returns a composed predicate that represents a short-circuiting logical
-     * AND of this predicate and another.  When evaluating the composed
-     * predicate, if this predicate is {@code false}, then the {@code other}
-     * predicate is not evaluated.
+     * 返回一个组合谓词，表示此谓词和另一个谓词的短路逻辑AND。
+     * 在评估组合谓词时，如果此谓词是{@code false}，则不评估{@code other}谓词。
      *
-     * <p>Any exceptions thrown during evaluation of either predicate are relayed
-     * to the caller; if evaluation of this predicate throws an exception, the
-     * {@code other} predicate will not be evaluated.
+     * 在评估任一谓词期间抛出的任何异常都会转发给调用者;
+     * 如果对此谓词的评估引发异常，则不会评估{@code other}谓词。
      *
-     * @param other a predicate that will be logically-ANDed with this
-     *              predicate
-     * @return a composed predicate that represents the short-circuiting logical
-     * AND of this predicate and the {@code other} predicate
+     * @param other 一个与该谓词进行逻辑AND运算的谓词
+     * @return 一个组合谓词，表示该谓词和{@code other}谓词的短路逻辑AND
      * @throws NullPointerException if other is null
      */
     default Predicate<T> and(Predicate<? super T> other) {
@@ -70,30 +41,23 @@ public interface Predicate<T> {
     }
 
     /**
-     * Returns a predicate that represents the logical negation of this
-     * predicate.
+     * 返回表示此谓词的逻辑否定的谓词。
      *
-     * @return a predicate that represents the logical negation of this
-     * predicate
+     * @return 表示此谓词的逻辑否定的谓词。
      */
     default Predicate<T> negate() {
         return (t) -> !test(t);
     }
 
     /**
-     * Returns a composed predicate that represents a short-circuiting logical
-     * OR of this predicate and another.  When evaluating the composed
-     * predicate, if this predicate is {@code true}, then the {@code other}
-     * predicate is not evaluated.
+     * 返回一个组合谓词，表示此谓词与另一个谓词的短路逻辑OR。
+     * 在评估组合谓词时，如果此谓词是{@code true}，则不评估{@code other}谓词。
      *
-     * <p>Any exceptions thrown during evaluation of either predicate are relayed
-     * to the caller; if evaluation of this predicate throws an exception, the
-     * {@code other} predicate will not be evaluated.
+     * 在评估任一谓词期间抛出的任何异常都会转发给调用者;
+     * 如果对此谓词的评估引发异常，则不会评估{@code other}谓词。
      *
-     * @param other a predicate that will be logically-ORed with this
-     *              predicate
-     * @return a composed predicate that represents the short-circuiting logical
-     * OR of this predicate and the {@code other} predicate
+     * @param other 与谓词逻辑或运算的谓词
+     * @return 一个组合谓词，表示短路逻辑或该谓词和{@code other}谓词
      * @throws NullPointerException if other is null
      */
     default Predicate<T> or(Predicate<? super T> other) {
@@ -102,14 +66,11 @@ public interface Predicate<T> {
     }
 
     /**
-     * Returns a predicate that tests if two arguments are equal according
-     * to {@link Objects#equals(Object, Object)}.
+     * 返回一个谓词，根据{@link Objects#equals(Object，Object)}测试两个参数是否相等。
      *
-     * @param <T> the type of arguments to the predicate
-     * @param targetRef the object reference with which to compare for equality,
-     *               which may be {@code null}
-     * @return a predicate that tests if two arguments are equal according
-     * to {@link Objects#equals(Object, Object)}
+     * @param <T> 谓词的参数类型
+     * @param targetRef 用于比较相等性的对象引用，可能是{@code null}
+     * @return 一个谓词，根据{@link Objects#equals(Object, Object)}测试两个参数是否相等
      */
     static <T> Predicate<T> isEqual(Object targetRef) {
         return (null == targetRef)

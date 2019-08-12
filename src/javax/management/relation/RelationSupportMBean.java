@@ -40,7 +40,7 @@ package javax.management.relation;
  * <P>It is also possible to have in a user relation MBean class a member
  * being a RelationSupport object, and to implement the required interfaces by
  * delegating all to this member.
- * <P> RelationSupport implements the Relation interface (to be handled by the
+ * RelationSupport implements the Relation interface (to be handled by the
  * Relation Service).
  *
  * @since 1.5

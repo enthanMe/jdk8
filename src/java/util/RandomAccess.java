@@ -49,7 +49,7 @@ package java.util;
  * <tt>List</tt> implementation should implement this interface if,
  * for typical instances of the class, this loop:
  * <pre>
- *     for (int i=0, n=list.size(); i &lt; n; i++)
+ *     for (int i=0, n=list.size(); i < n; i++)
  *         list.get(i);
  * </pre>
  * runs faster than this loop:

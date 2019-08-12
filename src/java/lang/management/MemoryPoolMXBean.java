@@ -30,7 +30,7 @@ package java.lang.management;
  * represents the memory resource managed by the Java virtual machine
  * and is managed by one or more {@link MemoryManagerMXBean memory managers}.
  *
- * <p> A Java virtual machine has one or more instances of the
+ * A Java virtual machine has one or more instances of the
  * implementation class of this interface.  An instance
  * implementing this interface is
  * an <a href="ManagementFactory.html#MXBean">MXBean</a>

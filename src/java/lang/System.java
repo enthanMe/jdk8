@@ -222,12 +222,12 @@ public final class System {
      * Returns the channel inherited from the entity that created this
      * Java virtual machine.
      *
-     * <p> This method returns the channel obtained by invoking the
+     * This method returns the channel obtained by invoking the
      * {@link java.nio.channels.spi.SelectorProvider#inheritedChannel
      * inheritedChannel} method of the system-wide default
      * {@link java.nio.channels.spi.SelectorProvider} object. </p>
      *
-     * <p> In addition to the network-oriented channels described in
+     * In addition to the network-oriented channels described in
      * {@link java.nio.channels.spi.SelectorProvider#inheritedChannel
      * inheritedChannel}, this method may return other kinds of
      * channels in the future.
@@ -261,14 +261,14 @@ public final class System {
     /**
      * Sets the System security.
      *
-     * <p> If there is a security manager already installed, this method first
+     * If there is a security manager already installed, this method first
      * calls the security manager's <code>checkPermission</code> method
      * with a <code>RuntimePermission("setSecurityManager")</code>
      * permission to ensure it's ok to replace the existing
      * security manager.
      * This may result in throwing a <code>SecurityException</code>.
      *
-     * <p> Otherwise, the argument is established as the current
+     * Otherwise, the argument is established as the current
      * security manager. If the argument is <code>null</code> and no
      * security manager has been established, then no action is taken and
      * the method simply returns.
@@ -342,7 +342,7 @@ public final class System {
      * operating systems measure time in units of tens of
      * milliseconds.
      *
-     * <p> See the description of the class <code>Date</code> for
+     * See the description of the class <code>Date</code> for
      * a discussion of slight discrepancies that may arise between
      * "computer time" and coordinated universal time (UTC).
      *
@@ -377,7 +377,7 @@ public final class System {
      * the difference between two such values, obtained within the same
      * instance of a Java virtual machine, is computed.
      *
-     * <p> For example, to measure how long some code takes to execute:
+     * For example, to measure how long some code takes to execute:
      *  <pre> {@code
      * long startTime = System.nanoTime();
      * // ... the code being measured ...

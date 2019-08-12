@@ -745,7 +745,7 @@ public final class DateTimeFormatterBuilder {
      * for localized month names. Using this method, a map can be created which
      * defines the connection between each value and the text:
      * <pre>
-     * Map&lt;Long, String&gt; map = new HashMap&lt;&gt;();
+     * Map<Long, String> map = new HashMap<>();
      * map.put(1L, "JNY");
      * map.put(2L, "FBY");
      * map.put(3L, "MCH");

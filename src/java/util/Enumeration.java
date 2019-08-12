@@ -31,9 +31,9 @@ package java.util;
  * <code>nextElement</code> method return successive elements of the
  * series.
  * <p>
- * For example, to print all elements of a <tt>Vector&lt;E&gt;</tt> <i>v</i>:
+ * For example, to print all elements of a <tt>Vector<E></tt> <i>v</i>:
  * <pre>
- *   for (Enumeration&lt;E&gt; e = v.elements(); e.hasMoreElements();)
+ *   for (Enumeration<E> e = v.elements(); e.hasMoreElements();)
  *       System.out.println(e.nextElement());</pre>
  * <p>
  * Methods are provided to enumerate through the elements of a

@@ -1068,21 +1068,21 @@ public class ObjectName implements Comparable<ObjectName>, QueryExp {
      *               <li>In the current serial form (value of property
      *                   <code>jmx.serial.form</code> differs from
      *                   <code>1.0</code>): the string
-     *                   &quot;&lt;domain&gt;:&lt;properties&gt;&lt;wild&gt;&quot;,
+     *                   &quot;<domain>:<properties><wild>&quot;,
      *                   where: <ul>
-     *                            <li>&lt;domain&gt; represents the domain part
+     *                            <li><domain> represents the domain part
      *                                of the {@link ObjectName}</li>
-     *                            <li>&lt;properties&gt; represents the list of
+     *                            <li><properties> represents the list of
      *                                properties, as returned by
      *                                {@link #getKeyPropertyListString}
-     *                            <li>&lt;wild&gt; is empty if not
+     *                            <li><wild> is empty if not
      *                                <code>isPropertyPattern</code>, or
      *                                is the character "<code>*</code>" if
      *                                <code>isPropertyPattern</code>
-     *                                and &lt;properties&gt; is empty, or
+     *                                and <properties> is empty, or
      *                                is "<code>,*</code>" if
      *                                <code>isPropertyPattern</code> and
-     *                                &lt;properties&gt; is not empty.
+     *                                <properties> is not empty.
      *                            </li>
      *                          </ul>
      *                   The intent is that this string could be supplied
@@ -1091,28 +1091,28 @@ public class ObjectName implements Comparable<ObjectName>, QueryExp {
      *               </li>
      *               <li>In the old serial form (value of property
      *                   <code>jmx.serial.form</code> is
-     *                   <code>1.0</code>): &lt;domain&gt; &lt;propertyList&gt;
-     *                   &lt;propertyListString&gt; &lt;canonicalName&gt;
-     *                   &lt;pattern&gt; &lt;propertyPattern&gt;,
+     *                   <code>1.0</code>): <domain> <propertyList>
+     *                   <propertyListString> <canonicalName>
+     *                   <pattern> <propertyPattern>,
      *                   where: <ul>
-     *                            <li>&lt;domain&gt; represents the domain part
+     *                            <li><domain> represents the domain part
      *                                of the {@link ObjectName}</li>
-     *                            <li>&lt;propertyList&gt; is the
+     *                            <li><propertyList> is the
      *                                {@link Hashtable} that contains all the
      *                                pairs (key,value) for this
      *                                {@link ObjectName}</li>
-     *                            <li>&lt;propertyListString&gt; is the
+     *                            <li><propertyListString> is the
      *                                {@link String} representation of the
      *                                list of properties in any order (not
      *                                mandatorily a canonical representation)
      *                                </li>
-     *                            <li>&lt;canonicalName&gt; is the
+     *                            <li><canonicalName> is the
      *                                {@link String} containing this
      *                                {@link ObjectName}'s canonical name</li>
-     *                            <li>&lt;pattern&gt; is a boolean which is
+     *                            <li><pattern> is a boolean which is
      *                                <code>true</code> if this
      *                                {@link ObjectName} contains a pattern</li>
-     *                            <li>&lt;propertyPattern&gt; is a boolean which
+     *                            <li><propertyPattern> is a boolean which
      *                                is <code>true</code> if this
      *                                {@link ObjectName} contains a pattern in
      *                                the list of properties</li>
@@ -1165,21 +1165,21 @@ public class ObjectName implements Comparable<ObjectName>, QueryExp {
      *               <li>In the current serial form (value of property
      *                   <code>jmx.serial.form</code> differs from
      *                   <code>1.0</code>): the string
-     *                   &quot;&lt;domain&gt;:&lt;properties&gt;&lt;wild&gt;&quot;,
+     *                   &quot;<domain>:<properties><wild>&quot;,
      *                   where: <ul>
-     *                            <li>&lt;domain&gt; represents the domain part
+     *                            <li><domain> represents the domain part
      *                                of the {@link ObjectName}</li>
-     *                            <li>&lt;properties&gt; represents the list of
+     *                            <li><properties> represents the list of
      *                                properties, as returned by
      *                                {@link #getKeyPropertyListString}
-     *                            <li>&lt;wild&gt; is empty if not
+     *                            <li><wild> is empty if not
      *                                <code>isPropertyPattern</code>, or
      *                                is the character "<code>*</code>" if
      *                                this <code>isPropertyPattern</code>
-     *                                and &lt;properties&gt; is empty, or
+     *                                and <properties> is empty, or
      *                                is "<code>,*</code>" if
      *                                <code>isPropertyPattern</code> and
-     *                                &lt;properties&gt; is not empty.
+     *                                <properties> is not empty.
      *                            </li>
      *                          </ul>
      *                   The intent is that this string could be supplied
@@ -1188,28 +1188,28 @@ public class ObjectName implements Comparable<ObjectName>, QueryExp {
      *               </li>
      *               <li>In the old serial form (value of property
      *                   <code>jmx.serial.form</code> is
-     *                   <code>1.0</code>): &lt;domain&gt; &lt;propertyList&gt;
-     *                   &lt;propertyListString&gt; &lt;canonicalName&gt;
-     *                   &lt;pattern&gt; &lt;propertyPattern&gt;,
+     *                   <code>1.0</code>): <domain> <propertyList>
+     *                   <propertyListString> <canonicalName>
+     *                   <pattern> <propertyPattern>,
      *                   where: <ul>
-     *                            <li>&lt;domain&gt; represents the domain part
+     *                            <li><domain> represents the domain part
      *                                of the {@link ObjectName}</li>
-     *                            <li>&lt;propertyList&gt; is the
+     *                            <li><propertyList> is the
      *                                {@link Hashtable} that contains all the
      *                                pairs (key,value) for this
      *                                {@link ObjectName}</li>
-     *                            <li>&lt;propertyListString&gt; is the
+     *                            <li><propertyListString> is the
      *                                {@link String} representation of the
      *                                list of properties in any order (not
      *                                mandatorily a canonical representation)
      *                                </li>
-     *                            <li>&lt;canonicalName&gt; is the
+     *                            <li><canonicalName> is the
      *                                {@link String} containing this
      *                                {@link ObjectName}'s canonical name</li>
-     *                            <li>&lt;pattern&gt; is a boolean which is
+     *                            <li><pattern> is a boolean which is
      *                                <code>true</code> if this
      *                                {@link ObjectName} contains a pattern</li>
-     *                            <li>&lt;propertyPattern&gt; is a boolean which
+     *                            <li><propertyPattern> is a boolean which
      *                                is <code>true</code> if this
      *                                {@link ObjectName} contains a pattern in
      *                                the list of properties</li>

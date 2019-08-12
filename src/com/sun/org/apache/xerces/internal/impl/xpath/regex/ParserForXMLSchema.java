@@ -29,7 +29,7 @@ import java.util.Map;
  *
  * @xerces.internal
  *
- * @author TAMURA Kent &lt;kent@trl.ibm.co.jp&gt;
+ * @author TAMURA Kent <kent@trl.ibm.co.jp>
  * @version $Id: ParserForXMLSchema.java,v 1.9 2010-11-12 18:09:45 joehw Exp $
  */
 class ParserForXMLSchema extends RegexParser {
@@ -163,8 +163,8 @@ class ParserForXMLSchema extends RegexParser {
      * c-c-subtraction  ::= (positive-c-group | negative-c-group) subtraction
      * subtraction      ::= '-' c-c-expression
      * c-range          ::= single-range | from-to-range
-     * single-range     ::= multi-c-escape | category-c-escape | block-c-escape | &lt;any XML char&gt;
-     * cc-normal-c      ::= &lt;any character except [, ], \&gt;
+     * single-range     ::= multi-c-escape | category-c-escape | block-c-escape | <any XML char>
+     * cc-normal-c      ::= <any character except [, ], \>
      * from-to-range    ::= cc-normal-c '-' cc-normal-c
      *
      * @param useNrage Ignored.

@@ -260,7 +260,7 @@ class InflaterInputStream extends FilterInputStream {
     /**
      * Marks the current position in this input stream.
      *
-     * <p> The <code>mark</code> method of <code>InflaterInputStream</code>
+     * The <code>mark</code> method of <code>InflaterInputStream</code>
      * does nothing.
      *
      * @param   readlimit   the maximum limit of bytes that can be read before
@@ -274,7 +274,7 @@ class InflaterInputStream extends FilterInputStream {
      * Repositions this stream to the position at the time the
      * <code>mark</code> method was last called on this input stream.
      *
-     * <p> The method <code>reset</code> for class
+     * The method <code>reset</code> for class
      * <code>InflaterInputStream</code> does nothing except throw an
      * <code>IOException</code>.
      *

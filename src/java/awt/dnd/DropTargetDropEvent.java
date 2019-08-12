@@ -48,9 +48,9 @@ import java.util.List;
  * source and the drop action selected by the user. The user can select a drop
  * action by pressing modifier keys during the drag operation:
  * <pre>
- *   Ctrl + Shift -&gt; ACTION_LINK
- *   Ctrl         -&gt; ACTION_COPY
- *   Shift        -&gt; ACTION_MOVE
+ *   Ctrl + Shift -> ACTION_LINK
+ *   Ctrl         -> ACTION_COPY
+ *   Shift        -> ACTION_MOVE
  * </pre>
  * If the user selects a drop action, the <i>user drop action</i> is one of
  * <code>DnDConstants</code> that represents the selected drop action if this

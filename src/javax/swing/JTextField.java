@@ -128,7 +128,7 @@ import java.io.Serializable;
 &nbsp;                return;
 &nbsp;            }
 &nbsp;            char[] upper = str.toCharArray();
-&nbsp;            for (int i = 0; i &lt; upper.length; i++) {
+&nbsp;            for (int i = 0; i < upper.length; i++) {
 &nbsp;                upper[i] = Character.toUpperCase(upper[i]);
 &nbsp;            }
 &nbsp;            super.insertString(offs, new String(upper), a);
@@ -223,10 +223,10 @@ public class JTextField extends JTextComponent implements SwingConstants {
      *          <code>createDefaultModel</code> method
      * @param text  the initial string to display, or <code>null</code>
      * @param columns  the number of columns to use to calculate
-     *   the preferred width &gt;= 0; if <code>columns</code>
+     *   the preferred width >= 0; if <code>columns</code>
      *   is set to zero, the preferred width will be whatever
      *   naturally results from the component implementation
-     * @exception IllegalArgumentException if <code>columns</code> &lt; 0
+     * @exception IllegalArgumentException if <code>columns</code> < 0
      */
     public JTextField(Document doc, String text, int columns) {
         if (columns < 0) {
@@ -367,7 +367,7 @@ public class JTextField extends JTextComponent implements SwingConstants {
     /**
      * Returns the number of columns in this <code>TextField</code>.
      *
-     * @return the number of columns &gt;= 0
+     * @return the number of columns >= 0
      */
     public int getColumns() {
         return columns;
@@ -377,7 +377,7 @@ public class JTextField extends JTextComponent implements SwingConstants {
      * Sets the number of columns in this <code>TextField</code>,
      * and then invalidate the layout.
      *
-     * @param columns the number of columns &gt;= 0
+     * @param columns the number of columns >= 0
      * @exception IllegalArgumentException if <code>columns</code>
      *          is less than 0
      * @beaninfo
@@ -402,7 +402,7 @@ public class JTextField extends JTextComponent implements SwingConstants {
      * character <em>m</em> for the font used.  This method can be
      * redefined to be some alternative amount
      *
-     * @return the column width &gt;= 1
+     * @return the column width >= 1
      */
     protected int getColumnWidth() {
         if (columnWidth == 0) {
@@ -744,7 +744,7 @@ public class JTextField extends JTextComponent implements SwingConstants {
     /**
      * Gets the scroll offset, in pixels.
      *
-     * @return the offset &gt;= 0
+     * @return the offset >= 0
      */
     public int getScrollOffset() {
         return visibility.getValue();
@@ -753,7 +753,7 @@ public class JTextField extends JTextComponent implements SwingConstants {
     /**
      * Sets the scroll offset, in pixels.
      *
-     * @param scrollOffset the offset &gt;= 0
+     * @param scrollOffset the offset >= 0
      */
     public void setScrollOffset(int scrollOffset) {
         visibility.setValue(scrollOffset);

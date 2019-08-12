@@ -31,7 +31,7 @@ package java.lang.ref;
  * made finalizable, finalized, and then reclaimed.  Weak references are most
  * often used to implement canonicalizing mappings.
  *
- * <p> Suppose that the garbage collector determines at a certain point in time
+ * Suppose that the garbage collector determines at a certain point in time
  * that an object is <a href="package-summary.html#reachability">weakly
  * reachable</a>.  At that time it will atomically clear all weak references to
  * that object and all weak references to any other weakly-reachable objects

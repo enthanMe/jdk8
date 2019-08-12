@@ -35,7 +35,7 @@ package javax.imageio.metadata;
  * or merely computes a set of values is irrelevant to this
  * interface).
  *
- * <p> Within the <code>activate</code> method, a controller obtains
+ * Within the <code>activate</code> method, a controller obtains
  * initial values by querying the <code>IIOMetadata</code> object's
  * settings, either using the XML DOM tree or a plug-in specific
  * interface, modifies values by whatever means, then modifies the
@@ -46,12 +46,12 @@ package javax.imageio.metadata;
  * <code>true</code>, the <code>IIOMetadata</code> object is ready for
  * use in a write operation.
  *
- * <p> Vendors may choose to provide GUIs for the
+ * Vendors may choose to provide GUIs for the
  * <code>IIOMetadata</code> subclasses they define for a particular
  * plug-in.  These can be set up as default controllers in the
  * corresponding <code>IIOMetadata</code> subclasses.
  *
- * <p> Alternatively, an algorithmic process such as a database lookup
+ * Alternatively, an algorithmic process such as a database lookup
  * or the parsing of a command line could be used as a controller, in
  * which case the <code>activate</code> method would simply look up or
  * compute the settings, call methods on <code>IIOMetadata</code> to

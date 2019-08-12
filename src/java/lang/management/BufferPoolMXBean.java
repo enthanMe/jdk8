@@ -30,17 +30,17 @@ package java.lang.management;
  * {@link java.nio.ByteBuffer#allocateDirect direct} or {@link
  * java.nio.MappedByteBuffer mapped} buffers.
  *
- * <p> A class implementing this interface is an
+ * A class implementing this interface is an
  * {@link javax.management.MXBean}. A Java
  * virtual machine has one or more implementations of this interface. The {@link
  * java.lang.management.ManagementFactory#getPlatformMXBeans getPlatformMXBeans}
  * method can be used to obtain the list of {@code BufferPoolMXBean} objects
  * representing the management interfaces for pools of buffers as follows:
  * <pre>
- *     List&lt;BufferPoolMXBean&gt; pools = ManagementFactory.getPlatformMXBeans(BufferPoolMXBean.class);
+ *     List<BufferPoolMXBean> pools = ManagementFactory.getPlatformMXBeans(BufferPoolMXBean.class);
  * </pre>
  *
- * <p> The management interfaces are also registered with the platform {@link
+ * The management interfaces are also registered with the platform {@link
  * javax.management.MBeanServer MBeanServer}. The {@link
  * javax.management.ObjectName ObjectName} that uniquely identifies the
  * management interface within the {@code MBeanServer} takes the form:

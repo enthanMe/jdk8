@@ -27,7 +27,7 @@ import com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException;
 import com.sun.org.apache.xerces.internal.impl.dv.ValidationContext;
 
 /**
- * Validator for &lt;time&gt; datatype (W3C Schema Datatypes)
+ * Validator for <time> datatype (W3C Schema Datatypes)
  *
  * @xerces.internal
  *

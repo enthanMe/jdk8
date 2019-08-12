@@ -33,7 +33,7 @@ package javax.xml.soap;
  * <P>
  * The following is an example of a namespace declaration in an element.
  * <PRE>
- *   &lt;wombat:GetLastTradePrice xmlns:wombat="http://www.wombat.org/trader"&gt;
+ *   <wombat:GetLastTradePrice xmlns:wombat="http://www.wombat.org/trader">
  * </PRE>
  * ("xmlns" stands for "XML namespace".)
  * The following

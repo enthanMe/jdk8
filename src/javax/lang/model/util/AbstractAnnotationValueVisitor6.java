@@ -37,7 +37,7 @@ import javax.annotation.processing.SupportedSourceVersion;
  * appropriate for the {@link SourceVersion#RELEASE_6 RELEASE_6}
  * source version.
  *
- * <p> <b>WARNING:</b> The {@code AnnotationValueVisitor} interface
+ * <b>WARNING:</b> The {@code AnnotationValueVisitor} interface
  * implemented by this class may have methods added to it in the
  * future to accommodate new, currently unknown, language structures
  * added to future versions of the Java&trade; programming language.
@@ -64,7 +64,7 @@ import javax.annotation.processing.SupportedSourceVersion;
  * in this situation.
  *
  * @param <R> the return type of this visitor's methods
- * @param <P> the type of the additional parameter to this visitor's methods.
+ * @param the type of the additional parameter to this visitor's methods.
  *
  * @author Joseph D. Darcy
  * @author Scott Seligman

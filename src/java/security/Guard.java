@@ -26,7 +26,7 @@
 package java.security;
 
 /**
- * <p> This interface represents a guard, which is an object that is used
+ * This interface represents a guard, which is an object that is used
  * to protect access to another object.
  *
  * <p>This interface contains a single method, {@code checkGuard},

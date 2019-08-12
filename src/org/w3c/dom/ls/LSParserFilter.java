@@ -49,7 +49,7 @@ import org.w3c.dom.Element;
  * nodes as they are being constructed while parsing. As each node is
  * examined, it may be modified or removed, or the entire parse may be
  * terminated early.
- * <p> At the time any of the filter methods are called by the parser, the
+ * At the time any of the filter methods are called by the parser, the
  * owner Document and DOMImplementation objects exist and are accessible.
  * The document element is never passed to the <code>LSParserFilter</code>
  * methods, i.e. it is not possible to filter out the document element.
@@ -61,15 +61,15 @@ import org.w3c.dom.Element;
  * entities</a>" is set to <code>false</code>. Note that, as described by the parameter "<a href='http://www.w3.org/TR/DOM-Level-3-Core/core.html#parameter-entities'>
  * entities</a>", unexpanded entity reference nodes are never discarded and are always
  * passed to the filter.
- * <p> All validity checking while parsing a document occurs on the source
+ * All validity checking while parsing a document occurs on the source
  * document as it appears on the input stream, not on the DOM document as it
  * is built in memory. With filters, the document in memory may be a subset
  * of the document on the stream, and its validity may have been affected by
  * the filtering.
- * <p> All default attributes must be present on elements when the elements
+ * All default attributes must be present on elements when the elements
  * are passed to the filter methods. All other default content must be
  * passed to the filter methods.
- * <p> DOM applications must not raise exceptions in a filter. The effect of
+ * DOM applications must not raise exceptions in a filter. The effect of
  * throwing exceptions from a filter is DOM implementation dependent.
  * <p>See also the <a href='http://www.w3.org/TR/2004/REC-DOM-Level-3-LS-20040407'>Document Object Model (DOM) Level 3 Load
 and Save Specification</a>.

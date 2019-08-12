@@ -35,7 +35,7 @@ import java.nio.channels.spi.SelectorProvider;
 /**
  * A selectable channel for stream-oriented listening sockets.
  *
- * <p> A server-socket channel is created by invoking the {@link #open() open}
+ * A server-socket channel is created by invoking the {@link #open() open}
  * method of this class.  It is not possible to create a channel for an arbitrary,
  * pre-existing {@link ServerSocket}. A newly-created server-socket channel is
  * open but not yet bound.  An attempt to invoke the {@link #accept() accept}
@@ -43,7 +43,7 @@ import java.nio.channels.spi.SelectorProvider;
  * to be thrown. A server-socket channel can be bound by invoking one of the
  * {@link #bind(java.net.SocketAddress,int) bind} methods defined by this class.
  *
- * <p> Socket options are configured using the {@link #setOption(SocketOption,Object)
+ * Socket options are configured using the {@link #setOption(SocketOption,Object)
  * setOption} method. Server-socket channels support the following options:
  * <blockquote>
  * <table border summary="Socket options">
@@ -63,7 +63,7 @@ import java.nio.channels.spi.SelectorProvider;
  * </blockquote>
  * Additional (implementation specific) options may also be supported.
  *
- * <p> Server-socket channels are safe for use by multiple concurrent threads.
+ * Server-socket channels are safe for use by multiple concurrent threads.
  * </p>
  *
  * @author Mark Reinhold
@@ -89,12 +89,12 @@ public abstract class ServerSocketChannel
     /**
      * Opens a server-socket channel.
      *
-     * <p> The new channel is created by invoking the {@link
+     * The new channel is created by invoking the {@link
      * java.nio.channels.spi.SelectorProvider#openServerSocketChannel
      * openServerSocketChannel} method of the system-wide default {@link
      * java.nio.channels.spi.SelectorProvider} object.
      *
-     * <p> The new channel's socket is initially unbound; it must be bound to a
+     * The new channel's socket is initially unbound; it must be bound to a
      * specific address via one of its socket's {@link
      * java.net.ServerSocket#bind(SocketAddress) bind} methods before
      * connections can be accepted.  </p>
@@ -112,7 +112,7 @@ public abstract class ServerSocketChannel
      * Returns an operation set identifying this channel's supported
      * operations.
      *
-     * <p> Server-socket channels only support the accepting of new
+     * Server-socket channels only support the accepting of new
      * connections, so this method returns {@link SelectionKey#OP_ACCEPT}.
      * </p>
      *
@@ -129,7 +129,7 @@ public abstract class ServerSocketChannel
      * Binds the channel's socket to a local address and configures the socket
      * to listen for connections.
      *
-     * <p> An invocation of this method is equivalent to the following:
+     * An invocation of this method is equivalent to the following:
      * <blockquote><pre>
      * bind(local, 0);
      * </pre></blockquote>
@@ -161,11 +161,11 @@ public abstract class ServerSocketChannel
      * Binds the channel's socket to a local address and configures the socket to
      * listen for connections.
      *
-     * <p> This method is used to establish an association between the socket and
+     * This method is used to establish an association between the socket and
      * a local address. Once an association is established then the socket remains
      * bound until the channel is closed.
      *
-     * <p> The {@code backlog} parameter is the maximum number of pending
+     * The {@code backlog} parameter is the maximum number of pending
      * connections on the socket. Its exact semantics are implementation specific.
      * In particular, an implementation may impose a maximum length or may choose
      * to ignore the parameter altogther. If the {@code backlog} parameter has
@@ -212,7 +212,7 @@ public abstract class ServerSocketChannel
     /**
      * Retrieves a server socket associated with this channel.
      *
-     * <p> The returned object will not declare any public methods that are not
+     * The returned object will not declare any public methods that are not
      * declared in the {@link java.net.ServerSocket} class.  </p>
      *
      * @return  A server socket associated with this channel
@@ -222,15 +222,15 @@ public abstract class ServerSocketChannel
     /**
      * Accepts a connection made to this channel's socket.
      *
-     * <p> If this channel is in non-blocking mode then this method will
+     * If this channel is in non-blocking mode then this method will
      * immediately return <tt>null</tt> if there are no pending connections.
      * Otherwise it will block indefinitely until a new connection is available
      * or an I/O error occurs.
      *
-     * <p> The socket channel returned by this method, if any, will be in
+     * The socket channel returned by this method, if any, will be in
      * blocking mode regardless of the blocking mode of this channel.
      *
-     * <p> This method performs exactly the same security checks as the {@link
+     * This method performs exactly the same security checks as the {@link
      * java.net.ServerSocket#accept accept} method of the {@link
      * java.net.ServerSocket} class.  That is, if a security manager has been
      * installed then for each new connection this method verifies that the

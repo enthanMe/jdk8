@@ -29,7 +29,7 @@ package java.nio.charset;
 /**
  * A typesafe enumeration for coding-error actions.
  *
- * <p> Instances of this class are used to specify how malformed-input and
+ * Instances of this class are used to specify how malformed-input and
  * unmappable-character errors are to be handled by charset <a
  * href="CharsetDecoder.html#cae">decoders</a> and <a
  * href="CharsetEncoder.html#cae">encoders</a>.  </p>

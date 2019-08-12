@@ -28,7 +28,7 @@ package java.lang.reflect;
 
 /**
  * ParameterizedType represents a parameterized type such as
- * Collection&lt;String&gt;.
+ * Collection<String>.
  *
  * <p>A parameterized type is created the first time it is needed by a
  * reflective method, as specified in this package. When a

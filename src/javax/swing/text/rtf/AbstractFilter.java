@@ -32,14 +32,14 @@ import java.lang.*;
  * consisting of runs of characters interspersed with occasional
  * ``specials'' (formatting characters).
  *
- * <p> Most of the functionality
+ * Most of the functionality
  * of this class would be redundant except that the
  * <code>ByteToChar</code> converters
  * are suddenly private API. Presumably this class will disappear
  * when the API is made public again. (sigh) That will also let us handle
  * multibyte character sets...
  *
- * <P> A subclass should override at least <code>write(char)</code>
+ * A subclass should override at least <code>write(char)</code>
  * and <code>writeSpecial(int)</code>. For efficiency's sake it's a
  * good idea to override <code>write(String)</code> as well. The subclass'
  * initializer may also install appropriate translation and specials tables.
@@ -153,7 +153,7 @@ abstract class AbstractFilter extends OutputStream
      * Implements the buffer-at-a-time write method for greater
      * efficiency.
      *
-     * <p> <strong>PENDING:</strong> Does <code>write(byte[])</code>
+     * <strong>PENDING:</strong> Does <code>write(byte[])</code>
      * call <code>write(byte[], int, int)</code> or is it the other way
      * around?
      */

@@ -35,7 +35,7 @@ import static javax.lang.model.SourceVersion.*;
  * appropriate for the {@link SourceVersion#RELEASE_8 RELEASE_8}
  * source version.
  *
- * <p> <b>WARNING:</b> The {@code ElementVisitor} interface
+ * <b>WARNING:</b> The {@code ElementVisitor} interface
  * implemented by this class may have methods added to it in the
  * future to accommodate new, currently unknown, language structures
  * added to future versions of the Java&trade; programming language.
@@ -63,7 +63,7 @@ import static javax.lang.model.SourceVersion.*;
  *
  * @param <R> the return type of this visitor's methods.  Use {@link
  *            Void} for visitors that do not need to return results.
- * @param <P> the type of the additional parameter to this visitor's
+ * @param the type of the additional parameter to this visitor's
  *            methods.  Use {@code Void} for visitors that do not need an
  *            additional parameter.
  *

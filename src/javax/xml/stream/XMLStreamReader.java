@@ -37,14 +37,14 @@ import javax.xml.namespace.QName;
  *  It is designed to be the lowest level and most efficient way to
  *  read XML data.
  *
- * <p> The XMLStreamReader is designed to iterate over XML using
+ * The XMLStreamReader is designed to iterate over XML using
  * next() and hasNext().  The data can be accessed using methods such as getEventType(),
  * getNamespaceURI(), getLocalName() and getText();
  *
- * <p> The <a href="#next()">next()</a> method causes the reader to read the next parse event.
+ * The <a href="#next()">next()</a> method causes the reader to read the next parse event.
  * The next() method returns an integer which identifies the type of event just read.
- * <p> The event type can be determined using <a href="#getEventType()">getEventType()</a>.
- * <p> Parsing events are defined as the XML Declaration, a DTD,
+ * The event type can be determined using <a href="#getEventType()">getEventType()</a>.
+ * Parsing events are defined as the XML Declaration, a DTD,
  * start tag, character data, white space, end tag, comment,
  * or processing instruction.  An attribute or namespace event may be encountered
  * at the root level of a document as the result of a query operation.
@@ -184,7 +184,7 @@ public interface XMLStreamReader extends XMLStreamConstants {
    * If element content is empty (i.e. content is "") then no CHARACTERS event will be reported.
    *
    * <p>Given the following XML:<br>
-   * &lt;foo>&lt;!--description-->content text&lt;![CDATA[&lt;greeting>Hello&lt;/greeting>]]>other content&lt;/foo><br>
+   * <foo><!--description-->content text<![CDATA[<greeting>Hello</greeting>]]>other content</foo><br>
    * The behavior of calling next() when being on foo will be:<br>
    * 1- the comment (COMMENT)<br>
    * 2- then the characters section (CHARACTERS)<br>
@@ -192,9 +192,9 @@ public interface XMLStreamReader extends XMLStreamConstants {
    * 4- then the next characters section (another CHARACTERS)<br>
    * 5- then the END_ELEMENT<br>
    *
-   * <p><b>NOTE:</b> empty element (such as &lt;tag/>) will be reported
+   * <p><b>NOTE:</b> empty element (such as <tag/>) will be reported
    *  with  two separate events: START_ELEMENT, END_ELEMENT - This preserves
-   *   parsing equivalency of empty element to &lt;tag>&lt;/tag>.
+   *   parsing equivalency of empty element to <tag></tag>.
    *
    * This method will throw an IllegalStateException if it is called after hasNext() returns false.
    * @see javax.xml.stream.events.XMLEvent
@@ -579,7 +579,7 @@ public interface XMLStreamReader extends XMLStreamConstants {
    *
    * All characters must have been checked for well-formedness.
    *
-   * <p> This method is optional and will throw UnsupportedOperationException if it is not supported.
+   * This method is optional and will throw UnsupportedOperationException if it is not supported.
    * @throws UnsupportedOperationException if this method is not supported
    * @throws IllegalStateException if this is not a valid text state
    */

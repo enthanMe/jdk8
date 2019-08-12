@@ -32,12 +32,12 @@ package javax.security.auth;
  * but no actions list; you either have the named permission
  * or you don't.
  *
- * <p> The target name is the name of a security configuration parameter
+ * The target name is the name of a security configuration parameter
  * (see below).  Currently the AuthPermission object is used to
  * guard access to the Policy, Subject, LoginContext,
  * and Configuration objects.
  *
- * <p> The possible target names for an Authentication Permission are:
+ * The possible target names for an Authentication Permission are:
  *
  * <pre>
  *      doAs -                  allow the caller to invoke the
@@ -102,7 +102,7 @@ package javax.security.auth;
  *                              login Configuration.
  * </pre>
  *
- * <p> The following target name has been deprecated in favor of
+ * The following target name has been deprecated in favor of
  * {@code createLoginContext.{name}}.
  *
  * <pre>
@@ -110,7 +110,7 @@ package javax.security.auth;
  *                              {@code LoginContext}.
  * </pre>
  *
- * <p> {@code javax.security.auth.Policy} has been
+ * {@code javax.security.auth.Policy} has been
  * deprecated in favor of {@code java.security.Policy}.
  * Therefore, the following target names have also been deprecated:
  *

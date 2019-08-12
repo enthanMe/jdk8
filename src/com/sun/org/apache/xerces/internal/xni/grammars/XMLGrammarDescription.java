@@ -23,7 +23,7 @@ package com.sun.org.apache.xerces.internal.xni.grammars;
 import com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier;
 
 /**
- * <p> This interface describes basic attributes of XML grammars--their
+ * This interface describes basic attributes of XML grammars--their
  * physical location and their type. </p>
  *
  * @author Neil Graham, IBM

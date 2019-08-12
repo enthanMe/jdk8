@@ -25,8 +25,8 @@ import com.sun.org.apache.xerces.internal.util.XML11Char;
 import com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource;
 
 /**
- * This class is used for reading resources requested in &lt;include&gt; elements in
- * XML 1.1 entities, when the parse attribute of the &lt;include&gt; element is "text".
+ * This class is used for reading resources requested in <include> elements in
+ * XML 1.1 entities, when the parse attribute of the <include> element is "text".
  * Using this class will open the location, detect the encoding, and discard the
  * byte order mark, if applicable.
  *

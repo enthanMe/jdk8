@@ -57,15 +57,15 @@ import org.w3c.dom.Node;
  *
  * <p>Usage-from stylesheet:
  * <code><pre>
- *    &lt;?xml version="1.0"?&gt;
- *    &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
+ *    <?xml version="1.0"?>
+ *    <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
  *        xmlns:xalan="http://xml.apache.org/xalan"
- *        exclude-result-prefixes="xalan"&gt;
- *    &lt;xsl:output indent="yes"/&gt;
- *    &lt;xsl:template match="/"&gt;
- *      &lt;xsl:copy-of select="xalan:checkEnvironment()"/&gt;
- *    &lt;/xsl:template&gt;
- *    &lt;/xsl:stylesheet&gt;
+ *        exclude-result-prefixes="xalan">
+ *    <xsl:output indent="yes"/>
+ *    <xsl:template match="/">
+ *      <xsl:copy-of select="xalan:checkEnvironment()"/>
+ *    </xsl:template>
+ *    </xsl:stylesheet>
  * </pre></code></p>
  *
  * <p>Xalan users reporting problems are encouraged to use this class

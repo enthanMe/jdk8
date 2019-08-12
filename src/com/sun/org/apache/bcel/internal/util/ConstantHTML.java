@@ -87,7 +87,7 @@ final class ConstantHTML implements com.sun.org.apache.bcel.internal.Constants {
     constants           = constant_pool.getConstantPool();
     file                = new PrintWriter(new FileOutputStream(dir + class_name + "_cp.html"));
     constant_ref        = new String[constants.length];
-    constant_ref[0]     = "&lt;unknown&gt;";
+    constant_ref[0]     = "<unknown>";
 
     file.println("<HTML><BODY BGCOLOR=\"#C0C0C0\"><TABLE BORDER=0>");
 

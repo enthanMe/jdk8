@@ -46,7 +46,7 @@ public interface IIOReadUpdateListener extends EventListener {
      * encoding should use this to notify clients when each pass is
      * completed when reading a progressively encoded image.
      *
-     * <p> An estimate of the area that will be updated by the pass is
+     * An estimate of the area that will be updated by the pass is
      * indicated by the <code>minX</code>, <code>minY</code>,
      * <code>width</code>, and <code>height</code> parameters.  If the
      * pass is interlaced, that is, it only updates selected rows or
@@ -87,7 +87,7 @@ public interface IIOReadUpdateListener extends EventListener {
      * for example, in order to provide a progressive display effect,
      * or perform other incremental processing.
      *
-     * <p> Note that different image format readers may produce
+     * Note that different image format readers may produce
      * decoded pixels in a variety of different orders.  Many readers
      * will produce pixels in a simple top-to-bottom,
      * left-to-right-order, but others may use multiple passes of
@@ -98,7 +98,7 @@ public interface IIOReadUpdateListener extends EventListener {
      * activity has taken place within some subregion of the one
      * specified.
      *
-     * <p> The particular <code>ImageReader</code> implementation may
+     * The particular <code>ImageReader</code> implementation may
      * choose how often to provide updates.  Each update specifies
      * that a given region of the image has been updated since the
      * last update.  A region is described by its spatial bounding box

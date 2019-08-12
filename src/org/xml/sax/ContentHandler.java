@@ -331,7 +331,7 @@ public interface ContentHandler
      * composite characters, such as a base character combining with one or
      * more accent characters. </p>
      *
-     * <p> Your code should not assume that algorithms using
+     * Your code should not assume that algorithms using
      * <code>char</code>-at-a-time idioms will be working in character
      * units; in some cases they will split characters.  This is relevant
      * wherever XML permits arbitrary characters, such as attribute values,

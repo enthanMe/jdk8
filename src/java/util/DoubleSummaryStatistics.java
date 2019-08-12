@@ -132,7 +132,7 @@ public class DoubleSummaryStatistics implements DoubleConsumer {
      * If any recorded value is a NaN or the sum is at any point a NaN
      * then the sum will be NaN.
      *
-     * <p> The value of a floating-point sum is a function both of the
+     * The value of a floating-point sum is a function both of the
      * input values as well as the order of addition operations. The
      * order of addition operations of this method is intentionally
      * not defined to allow for implementation flexibility to improve

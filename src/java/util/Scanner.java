@@ -111,7 +111,7 @@ import sun.misc.LRUCache;
  * <tt>hasNext</tt> method blocks has no connection to whether or not its
  * associated <tt>next</tt> method will block.
  *
- * <p> The {@link #findInLine}, {@link #findWithinHorizon}, and {@link #skip}
+ * The {@link #findInLine}, {@link #findWithinHorizon}, and {@link #skip}
  * methods operate independently of the delimiter pattern. These methods will
  * attempt to match the specified pattern with no regard to delimiters in the
  * input and thus can be used in special circumstances where delimiters are
@@ -127,7 +127,7 @@ import sun.misc.LRUCache;
  * pattern <tt>"\\s"</tt> could return empty tokens since it only passes one
  * space at a time.
  *
- * <p> A scanner can read text from any object which implements the {@link
+ * A scanner can read text from any object which implements the {@link
  * java.lang.Readable} interface.  If an invocation of the underlying
  * readable's {@link java.lang.Readable#read} method throws an {@link
  * java.io.IOException} then the scanner assumes that the end of the input
@@ -151,7 +151,7 @@ import sun.misc.LRUCache;
  *
  * <h3> <a name="localized-numbers">Localized numbers</a> </h3>
  *
- * <p> An instance of this class is capable of scanning numbers in the standard
+ * An instance of this class is capable of scanning numbers in the standard
  * formats as well as in the formats of the scanner's locale. A scanner's
  * <a name="initial-locale">initial locale </a>is the value returned by the {@link
  * java.util.Locale#getDefault(Locale.Category)
@@ -212,7 +212,7 @@ import sun.misc.LRUCache;
  *
  * <h4> <a name="number-syntax">Number syntax</a> </h4>
  *
- * <p> The strings that can be parsed as numbers by an instance of this class
+ * The strings that can be parsed as numbers by an instance of this class
  * are specified in terms of the following regular-expression grammar, where
  * Rmax is the highest digit in the radix being used (for example, Rmax is 9 in base 10).
  *
@@ -1075,7 +1075,7 @@ public final class Scanner implements Iterator<String>, Closeable {
     /**
      * Closes this scanner.
      *
-     * <p> If this scanner has not yet been closed then if its underlying
+     * If this scanner has not yet been closed then if its underlying
      * {@linkplain java.lang.Readable readable} also implements the {@link
      * java.io.Closeable} interface then the readable's <tt>close</tt> method
      * will be invoked.  If this scanner is already closed then invoking this
@@ -1136,11 +1136,11 @@ public final class Scanner implements Iterator<String>, Closeable {
      * Sets this scanner's delimiting pattern to a pattern constructed from
      * the specified <code>String</code>.
      *
-     * <p> An invocation of this method of the form
+     * An invocation of this method of the form
      * <tt>useDelimiter(pattern)</tt> behaves in exactly the same way as the
      * invocation <tt>useDelimiter(Pattern.compile(pattern))</tt>.
      *
-     * <p> Invoking the {@link #reset} method will set the scanner's delimiter
+     * Invoking the {@link #reset} method will set the scanner's delimiter
      * to the <a href= "#default-delimiter">default</a>.
      *
      * @param pattern A string specifying a delimiting pattern
@@ -1387,7 +1387,7 @@ public final class Scanner implements Iterator<String>, Closeable {
      * Returns true if the next token matches the pattern constructed from the
      * specified string. The scanner does not advance past any input.
      *
-     * <p> An invocation of this method of the form <tt>hasNext(pattern)</tt>
+     * An invocation of this method of the form <tt>hasNext(pattern)</tt>
      * behaves in exactly the same way as the invocation
      * <tt>hasNext(Pattern.compile(pattern))</tt>.
      *
@@ -1405,7 +1405,7 @@ public final class Scanner implements Iterator<String>, Closeable {
      * specified string.  If the match is successful, the scanner advances
      * past the input that matched the pattern.
      *
-     * <p> An invocation of this method of the form <tt>next(pattern)</tt>
+     * An invocation of this method of the form <tt>next(pattern)</tt>
      * behaves in exactly the same way as the invocation
      * <tt>next(Pattern.compile(pattern))</tt>.
      *
@@ -1737,7 +1737,7 @@ public final class Scanner implements Iterator<String>, Closeable {
      * Skips input that matches a pattern constructed from the specified
      * string.
      *
-     * <p> An invocation of this method of the form <tt>skip(pattern)</tt>
+     * An invocation of this method of the form <tt>skip(pattern)</tt>
      * behaves in exactly the same way as the invocation
      * <tt>skip(Pattern.compile(pattern))</tt>.
      *
@@ -1824,7 +1824,7 @@ public final class Scanner implements Iterator<String>, Closeable {
     /**
      * Scans the next token of the input as a <tt>byte</tt>.
      *
-     * <p> An invocation of this method of the form
+     * An invocation of this method of the form
      * <tt>nextByte()</tt> behaves in exactly the same way as the
      * invocation <tt>nextByte(radix)</tt>, where <code>radix</code>
      * is the default radix of this scanner.
@@ -1847,7 +1847,7 @@ public final class Scanner implements Iterator<String>, Closeable {
      * described below. If the translation is successful, the scanner advances
      * past the input that matched.
      *
-     * <p> If the next token matches the <a
+     * If the next token matches the <a
      * href="#Integer-regex"><i>Integer</i></a> regular expression defined
      * above then the token is converted into a <tt>byte</tt> value as if by
      * removing all locale specific prefixes, group separators, and locale
@@ -1930,7 +1930,7 @@ public final class Scanner implements Iterator<String>, Closeable {
     /**
      * Scans the next token of the input as a <tt>short</tt>.
      *
-     * <p> An invocation of this method of the form
+     * An invocation of this method of the form
      * <tt>nextShort()</tt> behaves in exactly the same way as the
      * invocation <tt>nextShort(radix)</tt>, where <code>radix</code>
      * is the default radix of this scanner.
@@ -1953,7 +1953,7 @@ public final class Scanner implements Iterator<String>, Closeable {
      * described below. If the translation is successful, the scanner advances
      * past the input that matched.
      *
-     * <p> If the next token matches the <a
+     * If the next token matches the <a
      * href="#Integer-regex"><i>Integer</i></a> regular expression defined
      * above then the token is converted into a <tt>short</tt> value as if by
      * removing all locale specific prefixes, group separators, and locale
@@ -2060,7 +2060,7 @@ public final class Scanner implements Iterator<String>, Closeable {
     /**
      * Scans the next token of the input as an <tt>int</tt>.
      *
-     * <p> An invocation of this method of the form
+     * An invocation of this method of the form
      * <tt>nextInt()</tt> behaves in exactly the same way as the
      * invocation <tt>nextInt(radix)</tt>, where <code>radix</code>
      * is the default radix of this scanner.
@@ -2083,7 +2083,7 @@ public final class Scanner implements Iterator<String>, Closeable {
      * described below. If the translation is successful, the scanner advances
      * past the input that matched.
      *
-     * <p> If the next token matches the <a
+     * If the next token matches the <a
      * href="#Integer-regex"><i>Integer</i></a> regular expression defined
      * above then the token is converted into an <tt>int</tt> value as if by
      * removing all locale specific prefixes, group separators, and locale
@@ -2166,7 +2166,7 @@ public final class Scanner implements Iterator<String>, Closeable {
     /**
      * Scans the next token of the input as a <tt>long</tt>.
      *
-     * <p> An invocation of this method of the form
+     * An invocation of this method of the form
      * <tt>nextLong()</tt> behaves in exactly the same way as the
      * invocation <tt>nextLong(radix)</tt>, where <code>radix</code>
      * is the default radix of this scanner.
@@ -2189,7 +2189,7 @@ public final class Scanner implements Iterator<String>, Closeable {
      * described below. If the translation is successful, the scanner advances
      * past the input that matched.
      *
-     * <p> If the next token matches the <a
+     * If the next token matches the <a
      * href="#Integer-regex"><i>Integer</i></a> regular expression defined
      * above then the token is converted into a <tt>long</tt> value as if by
      * removing all locale specific prefixes, group separators, and locale
@@ -2312,7 +2312,7 @@ public final class Scanner implements Iterator<String>, Closeable {
      * described below. If the translation is successful, the scanner advances
      * past the input that matched.
      *
-     * <p> If the next token matches the <a
+     * If the next token matches the <a
      * href="#Float-regex"><i>Float</i></a> regular expression defined above
      * then the token is converted into a <tt>float</tt> value as if by
      * removing all locale specific prefixes, group separators, and locale
@@ -2379,7 +2379,7 @@ public final class Scanner implements Iterator<String>, Closeable {
      * If the translation is successful, the scanner advances past the input
      * that matched.
      *
-     * <p> If the next token matches the <a
+     * If the next token matches the <a
      * href="#Float-regex"><i>Float</i></a> regular expression defined above
      * then the token is converted into a <tt>double</tt> value as if by
      * removing all locale specific prefixes, group separators, and locale
@@ -2464,7 +2464,7 @@ public final class Scanner implements Iterator<String>, Closeable {
      * Scans the next token of the input as a {@link java.math.BigInteger
      * BigInteger}.
      *
-     * <p> An invocation of this method of the form
+     * An invocation of this method of the form
      * <tt>nextBigInteger()</tt> behaves in exactly the same way as the
      * invocation <tt>nextBigInteger(radix)</tt>, where <code>radix</code>
      * is the default radix of this scanner.
@@ -2484,7 +2484,7 @@ public final class Scanner implements Iterator<String>, Closeable {
      * Scans the next token of the input as a {@link java.math.BigInteger
      * BigInteger}.
      *
-     * <p> If the next token matches the <a
+     * If the next token matches the <a
      * href="#Integer-regex"><i>Integer</i></a> regular expression defined
      * above then the token is converted into a <tt>BigInteger</tt> value as if
      * by removing all group separators, mapping non-ASCII digits into ASCII
@@ -2551,7 +2551,7 @@ public final class Scanner implements Iterator<String>, Closeable {
      * Scans the next token of the input as a {@link java.math.BigDecimal
      * BigDecimal}.
      *
-     * <p> If the next token matches the <a
+     * If the next token matches the <a
      * href="#Decimal-regex"><i>Decimal</i></a> regular expression defined
      * above then the token is converted into a <tt>BigDecimal</tt> value as if
      * by removing all group separators, mapping non-ASCII digits into ASCII
@@ -2589,11 +2589,11 @@ public final class Scanner implements Iterator<String>, Closeable {
     /**
      * Resets this scanner.
      *
-     * <p> Resetting a scanner discards all of its explicit state
+     * Resetting a scanner discards all of its explicit state
      * information which may have been changed by invocations of {@link
      * #useDelimiter}, {@link #useLocale}, or {@link #useRadix}.
      *
-     * <p> An invocation of this method of the form
+     * An invocation of this method of the form
      * <tt>scanner.reset()</tt> behaves in exactly the same way as the
      * invocation
      *

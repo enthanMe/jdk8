@@ -37,14 +37,14 @@ import sun.security.util.SecurityConstants;
  * currently registered proxy selector can be retrieved by calling
  * {@link java.net.ProxySelector#getDefault getDefault} method.
  *
- * <p> When a proxy selector is registered, for instance, a subclass
+ * When a proxy selector is registered, for instance, a subclass
  * of URLConnection class should call the {@link #select select}
  * method for each URL request so that the proxy selector can decide
  * if a direct, or proxied connection should be used. The {@link
  * #select select} method returns an iterator over a collection with
  * the preferred connection approach.
  *
- * <p> If a connection cannot be established to a proxy (PROXY or
+ * If a connection cannot be established to a proxy (PROXY or
  * SOCKS) servers then the caller should call the proxy selector's
  * {@link #connectFailed connectFailed} method to notify the proxy
  * selector that the proxy server is unavailable. </p>

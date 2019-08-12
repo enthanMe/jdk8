@@ -51,13 +51,13 @@ import org.w3c.dom.DOMException;
  * output stream. Any changes or fixups made during the serialization affect
  * only the serialized data. The <code>Document</code> object and its
  * children are never altered by the serialization operation.
- * <p> During serialization of XML data, namespace fixup is done as defined in [<a href='http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407'>DOM Level 3 Core</a>]
+ * During serialization of XML data, namespace fixup is done as defined in [<a href='http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407'>DOM Level 3 Core</a>]
  * , Appendix B. [<a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>DOM Level 2 Core</a>]
  *  allows empty strings as a real namespace URI. If the
  * <code>namespaceURI</code> of a <code>Node</code> is empty string, the
  * serialization will treat them as <code>null</code>, ignoring the prefix
  * if any.
- * <p> <code>LSSerializer</code> accepts any node type for serialization. For
+ * <code>LSSerializer</code> accepts any node type for serialization. For
  * nodes of type <code>Document</code> or <code>Entity</code>, well-formed
  * XML will be created when possible (well-formedness is guaranteed if the
  * document or entity comes from a parse operation and is unchanged since it
@@ -116,31 +116,31 @@ import org.w3c.dom.DOMException;
  * <p ><b>Note:</b>  The serialization of a <code>Node</code> does not always
  * generate a well-formed XML document, i.e. a <code>LSParser</code> might
  * throw fatal errors when parsing the resulting serialization.
- * <p> Within the character data of a document (outside of markup), any
+ * Within the character data of a document (outside of markup), any
  * characters that cannot be represented directly are replaced with
- * character references. Occurrences of '&lt;' and '&amp;' are replaced by
+ * character references. Occurrences of '<' and '&amp;' are replaced by
  * the predefined entities &amp;lt; and &amp;amp;. The other predefined
  * entities (&amp;gt;, &amp;apos;, and &amp;quot;) might not be used, except
- * where needed (e.g. using &amp;gt; in cases such as ']]&gt;'). Any
+ * where needed (e.g. using &amp;gt; in cases such as ']]>'). Any
  * characters that cannot be represented directly in the output character
  * encoding are serialized as numeric character references (and since
  * character encoding standards commonly use hexadecimal representations of
  * characters, using the hexadecimal representation when serializing
  * character references is encouraged).
- * <p> To allow attribute values to contain both single and double quotes, the
+ * To allow attribute values to contain both single and double quotes, the
  * apostrophe or single-quote character (') may be represented as
  * "&amp;apos;", and the double-quote character (")  as "&amp;quot;". New
  * line characters and other characters that cannot be represented directly
  * in attribute values in the output character encoding are serialized as a
  * numeric character reference.
- * <p> Within markup, but outside of attributes, any occurrence of a character
+ * Within markup, but outside of attributes, any occurrence of a character
  * that cannot be represented in the output character encoding is reported
  * as a <code>DOMError</code> fatal error. An example would be serializing
- * the element &lt;LaCa\u00f1ada/&gt; with <code>encoding="us-ascii"</code>.
+ * the element <LaCa\u00f1ada/> with <code>encoding="us-ascii"</code>.
  * This will result with a generation of a <code>DOMError</code>
  * "wf-invalid-character-in-node-name" (as proposed in "<a href='http://www.w3.org/TR/DOM-Level-3-Core/core.html#parameter-well-formed'>
  * well-formed</a>").
- * <p> When requested by setting the parameter "<a href='http://www.w3.org/TR/DOM-Level-3-Core/core.html#parameter-normalize-characters'>
+ * When requested by setting the parameter "<a href='http://www.w3.org/TR/DOM-Level-3-Core/core.html#parameter-normalize-characters'>
  * normalize-characters</a>" on <code>LSSerializer</code> to true, character normalization is
  * performed according to the definition of <a href='http://www.w3.org/TR/2004/REC-xml11-20040204/#dt-fullnorm'>fully
  * normalized</a> characters included in appendix E of [<a href='http://www.w3.org/TR/2004/REC-xml11-20040204/'>XML 1.1</a>] on all
@@ -148,7 +148,7 @@ import org.w3c.dom.DOMException;
  * normalization process affects only the data as it is being written; it
  * does not alter the DOM's view of the document after serialization has
  * completed.
- * <p> Implementations are required to support the encodings "UTF-8",
+ * Implementations are required to support the encodings "UTF-8",
  * "UTF-16", "UTF-16BE", and "UTF-16LE" to guarantee that data is
  * serializable in all encodings that are required to be supported by all
  * XML parsers. When the encoding is UTF-8, whether or not a byte order mark
@@ -164,7 +164,7 @@ import org.w3c.dom.DOMException;
  * generated, will correspond to the encoding used during the serialization
  * (e.g. <code>encoding="UTF-16"</code> will appear if UTF-16 was
  * requested).
- * <p> Namespaces are fixed up during serialization, the serialization process
+ * Namespaces are fixed up during serialization, the serialization process
  * will verify that namespace declarations, namespace prefixes and the
  * namespace URI associated with elements and attributes are consistent. If
  * inconsistencies are found, the serialized form of the document will be
@@ -172,9 +172,9 @@ import org.w3c.dom.DOMException;
  * while serializing a document is the algorithm defined in Appendix B.1,
  * "Namespace normalization", of [<a href='http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407'>DOM Level 3 Core</a>]
  * .
- * <p> While serializing a document, the parameter "discard-default-content"
+ * While serializing a document, the parameter "discard-default-content"
  * controls whether or not non-specified data is serialized.
- * <p> While serializing, errors and warnings are reported to the application
+ * While serializing, errors and warnings are reported to the application
  * through the error handler (<code>LSSerializer.domConfig</code>'s "<a href='http://www.w3.org/TR/DOM-Level-3-Core/core.html#parameter-error-handler'>
  * error-handler</a>" parameter). This specification does in no way try to define all possible
  * errors and warnings that can occur while serializing a DOM node, but some
@@ -198,7 +198,7 @@ import org.w3c.dom.DOMException;
  * <dd> Raised if an unsupported
  * encoding is encountered. </dd>
  * </dl>
- * <p> In addition to raising the defined errors and warnings, implementations
+ * In addition to raising the defined errors and warnings, implementations
  * are expected to raise implementation specific errors and warnings for any
  * other error and warning cases such as IO errors (file not found,
  * permission denied,...) and so on.

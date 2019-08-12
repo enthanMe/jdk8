@@ -77,7 +77,7 @@ public interface DirObjectFactory extends ObjectFactory {
  * otherwise, it invokes
  * <tt>ObjectFactory.getObjectInstance()</tt>. It does this until a factory
  * produces a non-null answer.
- * <p> When an exception
+ * When an exception
  * is thrown by an object factory, the exception is passed on to the caller
  * of <tt>DirectoryManager.getObjectInstance()</tt>. The search for other factories
  * that may produce a non-null answer is halted.

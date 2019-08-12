@@ -185,7 +185,7 @@ public final class Byte extends Number implements Comparable<Byte> {
      * int)} method. The result is a {@code Byte} object that
      * represents the {@code byte} value specified by the string.
      *
-     * <p> In other words, this method returns a {@code Byte} object
+     * In other words, this method returns a {@code Byte} object
      * equal to the value of:
      *
      * <blockquote>
@@ -214,7 +214,7 @@ public final class Byte extends Number implements Comparable<Byte> {
      * {@code Byte} object that represents the {@code byte}
      * value specified by the string.
      *
-     * <p> In other words, this method returns a {@code Byte} object
+     * In other words, this method returns a {@code Byte} object
      * equal to the value of:
      *
      * <blockquote>

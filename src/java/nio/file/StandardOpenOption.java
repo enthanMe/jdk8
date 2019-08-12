@@ -46,7 +46,7 @@ public enum StandardOpenOption implements OpenOption {
      * If the file is opened for {@link #WRITE} access then bytes will be written
      * to the end of the file rather than the beginning.
      *
-     * <p> If the file is opened for write access by other programs, then it
+     * If the file is opened for write access by other programs, then it
      * is file system specific if writing to the end of the file is atomic.
      */
     APPEND,
@@ -92,7 +92,7 @@ public enum StandardOpenOption implements OpenOption {
      * file is open. Consequently, security sensitive applications should take
      * care when using this option.
      *
-     * <p> For security reasons, this option may imply the {@link
+     * For security reasons, this option may imply the {@link
      * LinkOption#NOFOLLOW_LINKS} option. In other words, if the option is present
      * when opening an existing file that is a symbolic link then it may fail
      * (by throwing {@link java.io.IOException}).

@@ -30,11 +30,11 @@ import java.io.IOException;
 import com.sun.corba.se.pept.protocol.MessageMediator;
 
 /**
- * <p> An <code>OutputObject</code> is the interface used by the
+ * An <code>OutputObject</code> is the interface used by the
  * presentation block to give programming language typed data to
  * the encoding block to be encoded and sent in a message. </p>
  *
- * <p> The implementation of an <code>OutputObject</code> contains the
+ * The implementation of an <code>OutputObject</code> contains the
  * encoded data.  When the presentation block gives programming language
  * typed data to
  * <code>OutputObject</code>, the

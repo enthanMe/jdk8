@@ -113,7 +113,7 @@ public class ReferenceQueue<T> {
      * Removes the next reference object in this queue, blocking until either
      * one becomes available or the given timeout period expires.
      *
-     * <p> This method does not offer real-time guarantees: It schedules the
+     * This method does not offer real-time guarantees: It schedules the
      * timeout as if by invoking the {@link Object#wait(long)} method.
      *
      * @param  timeout  If positive, block for up to <code>timeout</code>

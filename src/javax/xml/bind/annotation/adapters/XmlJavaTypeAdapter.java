@@ -48,9 +48,9 @@ import static java.lang.annotation.ElementType.PACKAGE;
 /**
  * Use an adapter that implements {@link XmlAdapter} for custom marshaling.
  *
- * <p> <b> Usage: </b> </p>
+ * <b> Usage: </b> </p>
  *
- * <p> The <tt>@XmlJavaTypeAdapter</tt> annotation can be used with the
+ * The <tt>@XmlJavaTypeAdapter</tt> annotation can be used with the
  * following program elements:
  * <ul>
  *   <li> a JavaBean property </li>
@@ -60,19 +60,19 @@ import static java.lang.annotation.ElementType.PACKAGE;
  *   <li> from within {@link XmlJavaTypeAdapters} </li>
  * </ul>
  *
- * <p> When <tt>@XmlJavaTypeAdapter</tt> annotation is defined on a
+ * When <tt>@XmlJavaTypeAdapter</tt> annotation is defined on a
  * class, it applies to all references to the class.
- * <p> When <tt>@XmlJavaTypeAdapter</tt> annotation is defined at the
+ * When <tt>@XmlJavaTypeAdapter</tt> annotation is defined at the
  * package level it applies to all references from within the package
  * to <tt>@XmlJavaTypeAdapter.type()</tt>.
- * <p> When <tt>@XmlJavaTypeAdapter</tt> annotation is defined on the
+ * When <tt>@XmlJavaTypeAdapter</tt> annotation is defined on the
  * field, property or parameter, then the annotation applies to the
  * field, property or the parameter only.
- * <p> A <tt>@XmlJavaTypeAdapter</tt> annotation on a field, property
+ * A <tt>@XmlJavaTypeAdapter</tt> annotation on a field, property
  * or parameter overrides the <tt>@XmlJavaTypeAdapter</tt> annotation
  * associated with the class being referenced by the field, property
  * or parameter.
- * <p> A <tt>@XmlJavaTypeAdapter</tt> annotation on a class overrides
+ * A <tt>@XmlJavaTypeAdapter</tt> annotation on a class overrides
  * the <tt>@XmlJavaTypeAdapter</tt> annotation specified at the
  * package level for that class.
  *

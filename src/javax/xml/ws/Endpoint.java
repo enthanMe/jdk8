@@ -355,7 +355,7 @@ public abstract class Endpoint {
     /**
      * Returns a list of metadata documents for the service.
      *
-     * @return <code>List&lt;javax.xml.transform.Source&gt;</code> A list of metadata documents for the service
+     * @return <code>List<javax.xml.transform.Source></code> A list of metadata documents for the service
      **/
     public abstract List<javax.xml.transform.Source> getMetadata();
 
@@ -410,7 +410,7 @@ public abstract class Endpoint {
     /**
      * Returns the property bag for this <code>Endpoint</code> instance.
      *
-     * @return Map&lt;String,Object&gt; The property bag
+     * @return Map<String,Object> The property bag
      *         associated with this instance.
      **/
     public abstract Map<String,Object> getProperties();

@@ -222,7 +222,7 @@ public enum RoundingMode {
          * Rounding mode to round towards {@literal "nearest neighbor"}
          * unless both neighbors are equidistant, in which case round
          * down.  Behaves as for {@code RoundingMode.UP} if the discarded
-         * fraction is &gt; 0.5; otherwise, behaves as for
+         * fraction is > 0.5; otherwise, behaves as for
          * {@code RoundingMode.DOWN}.
          *
          *<p>Example:

@@ -247,7 +247,7 @@ public class CopyOnWriteArrayList<E>
      * this list, searching forwards from {@code index}, or returns -1 if
      * the element is not found.
      * More formally, returns the lowest index {@code i} such that
-     * <tt>(i&nbsp;&gt;=&nbsp;index&nbsp;&amp;&amp;&nbsp;(e==null&nbsp;?&nbsp;get(i)==null&nbsp;:&nbsp;e.equals(get(i))))</tt>,
+     * <tt>(i&nbsp;>=&nbsp;index&nbsp;&amp;&amp;&nbsp;(e==null&nbsp;?&nbsp;get(i)==null&nbsp;:&nbsp;e.equals(get(i))))</tt>,
      * or -1 if there is no such index.
      *
      * @param e element to search for
@@ -275,7 +275,7 @@ public class CopyOnWriteArrayList<E>
      * this list, searching backwards from {@code index}, or returns -1 if
      * the element is not found.
      * More formally, returns the highest index {@code i} such that
-     * <tt>(i&nbsp;&lt;=&nbsp;index&nbsp;&amp;&amp;&nbsp;(e==null&nbsp;?&nbsp;get(i)==null&nbsp;:&nbsp;e.equals(get(i))))</tt>,
+     * <tt>(i&nbsp;<=&nbsp;index&nbsp;&amp;&amp;&nbsp;(e==null&nbsp;?&nbsp;get(i)==null&nbsp;:&nbsp;e.equals(get(i))))</tt>,
      * or -1 if there is no such index.
      *
      * @param e element to search for

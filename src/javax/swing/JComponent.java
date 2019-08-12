@@ -2547,9 +2547,9 @@ public abstract class JComponent extends Container implements Serializable,
      * <p>
      * This method calls into the <code>ComponentUI</code> method of the
      * same name.  If this component does not have a <code>ComponentUI</code>
-     * -1 will be returned.  If a value &gt;= 0 is
+     * -1 will be returned.  If a value >= 0 is
      * returned, then the component has a valid baseline for any
-     * size &gt;= the minimum size and <code>getBaselineResizeBehavior</code>
+     * size >= the minimum size and <code>getBaselineResizeBehavior</code>
      * can be used to determine how the baseline changes with size.
      *
      * @throws IllegalArgumentException {@inheritDoc}
@@ -2579,7 +2579,7 @@ public abstract class JComponent extends Container implements Serializable,
      * never return <code>null</code>; if the baseline can not be
      * calculated return <code>BaselineResizeBehavior.OTHER</code>.  Callers
      * should first ask for the baseline using
-     * <code>getBaseline</code> and if a value &gt;= 0 is returned use
+     * <code>getBaseline</code> and if a value >= 0 is returned use
      * this method.  It is acceptable for this method to return a
      * value other than <code>BaselineResizeBehavior.OTHER</code> even if
      * <code>getBaseline</code> returns a value less than 0.

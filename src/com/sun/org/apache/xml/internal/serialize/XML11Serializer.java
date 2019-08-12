@@ -277,7 +277,7 @@ extends XMLSerializer {
             if (ch == '\n' || ch == '\r' || ch == '\t' || ch == 0x0085 || ch == 0x2028){
                                 printHex(ch);
                         } else if (ch == '<') {
-                                _printer.printText("&lt;");
+                                _printer.printText("<");
                         } else if (ch == '&') {
                                 _printer.printText("&amp;");
                         } else if (ch == '"') {
@@ -375,13 +375,13 @@ extends XMLSerializer {
         if (ch == '\r' || ch == 0x0085 || ch == 0x2028) {
                         printHex(ch);
         } else if ( ch == '<') {
-            _printer.printText("&lt;");
+            _printer.printText("<");
         } else if (ch == '&') {
             _printer.printText("&amp;");
                 } else if (ch == '>'){
                         // character sequence "]]>" can't appear in content, therefore
                         // we should escape '>'
-                        _printer.printText("&gt;");
+                        _printer.printText(">");
         } else if ( _encodingInfo.isPrintable((char)ch) && XML11Char.isXML11ValidLiteral(ch)) {
             _printer.printText((char)ch);
         } else {

@@ -51,7 +51,7 @@ public interface MessageContext extends Map<String, Object> {
     /**
      * Standard property: Map of attachments to a message for the inbound
      * message, key is  the MIME Content-ID, value is a DataHandler.
-     * <p>Type: java.util.Map&lt;String,DataHandler>
+     * <p>Type: java.util.Map<String,DataHandler>
      */
     public static final String INBOUND_MESSAGE_ATTACHMENTS =
             "javax.xml.ws.binding.attachments.inbound";
@@ -59,7 +59,7 @@ public interface MessageContext extends Map<String, Object> {
     /**
      * Standard property: Map of attachments to a message for the outbound
      * message, key is the MIME Content-ID, value is a DataHandler.
-     * <p>Type: java.util.Map&lt;String,DataHandler>
+     * <p>Type: java.util.Map<String,DataHandler>
      */
     public static final String OUTBOUND_MESSAGE_ATTACHMENTS =
             "javax.xml.ws.binding.attachments.outbound";
@@ -108,14 +108,14 @@ public interface MessageContext extends Map<String, Object> {
 
     /**
      * Standard property: HTTP request headers.
-     * <p>Type: java.util.Map&lt;java.lang.String, java.util.List&lt;java.lang.String>>
+     * <p>Type: java.util.Map<java.lang.String, java.util.List<java.lang.String>>
      */
     public static final String HTTP_REQUEST_HEADERS =
             "javax.xml.ws.http.request.headers";
 
     /**
      * Standard property: HTTP response headers.
-     * <p>Type: java.util.Map&lt;java.lang.String, java.util.List&lt;java.lang.String>>
+     * <p>Type: java.util.Map<java.lang.String, java.util.List<java.lang.String>>
      */
     public static final String HTTP_RESPONSE_HEADERS =
             "javax.xml.ws.http.response.headers";
@@ -166,7 +166,7 @@ public interface MessageContext extends Map<String, Object> {
      * Standard property: WS Addressing Reference Parameters.
      * The list MUST include all SOAP headers marked with the
      * wsa:IsReferenceParameter="true" attribute.
-     * <p>Type: List&lt;Element>
+     * <p>Type: List<Element>
      *
      * @since JAX-WS 2.1
      */

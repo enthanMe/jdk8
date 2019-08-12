@@ -52,7 +52,7 @@ import sun.management.jmxremote.ConnectorBootstrap;
 /**
  * This {@link LoginModule} performs file-based authentication.
  *
- * <p> A supplied username and password is verified against the
+ * A supplied username and password is verified against the
  * corresponding user credentials stored in a designated password file.
  * If successful then a new {@link JMXPrincipal} is created with the
  * user's name and it is associated with the current {@link Subject}.
@@ -60,7 +60,7 @@ import sun.management.jmxremote.ConnectorBootstrap;
  * the access control file for JMX remote management or in a Java security
  * policy.
  *
- * <p> The password file comprises a list of key-value pairs as specified in
+ * The password file comprises a list of key-value pairs as specified in
  * {@link Properties}. The key represents a user's name and the value is its
  * associated cleartext password. By default, the following password file is
  * used:
@@ -70,7 +70,7 @@ import sun.management.jmxremote.ConnectorBootstrap;
  * A different password file can be specified via the <code>passwordFile</code>
  * configuration option.
  *
- * <p> This module recognizes the following <code>Configuration</code> options:
+ * This module recognizes the following <code>Configuration</code> options:
  * <dl>
  * <dt> <code>passwordFile</code> </dt>
  * <dd> the path to an alternative password file. It is used instead of
@@ -209,7 +209,7 @@ public class FileLoginModule implements LoginModule {
     /**
      * Begin user authentication (Authentication Phase 1).
      *
-     * <p> Acquire the user's name and password and verify them against
+     * Acquire the user's name and password and verify them against
      * the corresponding credentials from the password file.
      *
      * @return true always, since this <code>LoginModule</code>
@@ -313,12 +313,12 @@ public class FileLoginModule implements LoginModule {
     /**
      * Complete user authentication (Authentication Phase 2).
      *
-     * <p> This method is called if the LoginContext's
+     * This method is called if the LoginContext's
      * overall authentication has succeeded
      * (all the relevant REQUIRED, REQUISITE, SUFFICIENT and OPTIONAL
      * LoginModules have succeeded).
      *
-     * <p> If this LoginModule's own authentication attempt
+     * If this LoginModule's own authentication attempt
      * succeeded (checked by retrieving the private state saved by the
      * <code>login</code> method), then this method associates a
      * <code>JMXPrincipal</code> with the <code>Subject</code> located in the
@@ -358,11 +358,11 @@ public class FileLoginModule implements LoginModule {
     /**
      * Abort user authentication (Authentication Phase 2).
      *
-     * <p> This method is called if the LoginContext's overall authentication
+     * This method is called if the LoginContext's overall authentication
      * failed (the relevant REQUIRED, REQUISITE, SUFFICIENT and OPTIONAL
      * LoginModules did not succeed).
      *
-     * <p> If this LoginModule's own authentication attempt
+     * If this LoginModule's own authentication attempt
      * succeeded (checked by retrieving the private state saved by the
      * <code>login</code> and <code>commit</code> methods),
      * then this method cleans up any state that was originally saved.
@@ -397,7 +397,7 @@ public class FileLoginModule implements LoginModule {
     /**
      * Logout a user.
      *
-     * <p> This method removes the Principals
+     * This method removes the Principals
      * that were added by the <code>commit</code> method.
      *
      * @exception LoginException if the logout fails.
@@ -505,7 +505,7 @@ public class FileLoginModule implements LoginModule {
      * This method does not return any value.
      * Instead, it sets global name and password variables.
      *
-     * <p> Also note that this method will set the username and password
+     * Also note that this method will set the username and password
      * values in the shared state in case subsequent LoginModules
      * want to use them via use/tryFirstPass.
      *

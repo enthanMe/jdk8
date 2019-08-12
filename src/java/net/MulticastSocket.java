@@ -222,7 +222,7 @@ class MulticastSocket extends DatagramSocket {
      * on this {@code MulticastSocket} in order to control the
      * scope of the multicasts.
      *
-     * <P> The ttl <B>must</B> be in the range {@code  0 <= ttl <=
+     * The ttl <B>must</B> be in the range {@code  0 <= ttl <=
      * 255} or an {@code IllegalArgumentException} will be thrown.
      * Multicast packets sent with a TTL of {@code 0} are not transmitted
      * on the network but may be delivered locally.

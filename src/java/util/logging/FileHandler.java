@@ -65,33 +65,33 @@ import java.util.Set;
  * <p>
  * <b>Configuration:</b>
  * By default each <tt>FileHandler</tt> is initialized using the following
- * <tt>LogManager</tt> configuration properties where <tt>&lt;handler-name&gt;</tt>
+ * <tt>LogManager</tt> configuration properties where <tt><handler-name></tt>
  * refers to the fully-qualified class name of the handler.
  * If properties are not defined
  * (or have invalid values) then the specified default values are used.
  * <ul>
- * <li>   &lt;handler-name&gt;.level
+ * <li>   <handler-name>.level
  *        specifies the default level for the <tt>Handler</tt>
  *        (defaults to <tt>Level.ALL</tt>). </li>
- * <li>   &lt;handler-name&gt;.filter
+ * <li>   <handler-name>.filter
  *        specifies the name of a <tt>Filter</tt> class to use
  *        (defaults to no <tt>Filter</tt>). </li>
- * <li>   &lt;handler-name&gt;.formatter
+ * <li>   <handler-name>.formatter
  *        specifies the name of a <tt>Formatter</tt> class to use
  *        (defaults to <tt>java.util.logging.XMLFormatter</tt>) </li>
- * <li>   &lt;handler-name&gt;.encoding
+ * <li>   <handler-name>.encoding
  *        the name of the character set encoding to use (defaults to
  *        the default platform encoding). </li>
- * <li>   &lt;handler-name&gt;.limit
+ * <li>   <handler-name>.limit
  *        specifies an approximate maximum amount to write (in bytes)
  *        to any one file.  If this is zero, then there is no limit.
  *        (Defaults to no limit). </li>
- * <li>   &lt;handler-name&gt;.count
+ * <li>   <handler-name>.count
  *        specifies how many output files to cycle through (defaults to 1). </li>
- * <li>   &lt;handler-name&gt;.pattern
+ * <li>   <handler-name>.pattern
  *        specifies a pattern for generating the output file name.  See
  *        below for details. (Defaults to "%h/java%u.log"). </li>
- * <li>   &lt;handler-name&gt;.append
+ * <li>   <handler-name>.append
  *        specifies whether the FileHandler should append onto
  *        any existing files (defaults to false). </li>
  * </ul>

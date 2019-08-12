@@ -35,7 +35,7 @@ import com.sun.imageio.plugins.bmp.BMPCompressionTypes;
  * A subclass of <code>ImageWriteParam</code> for encoding images in
  * the BMP format.
  *
- * <p> This class allows for the specification of various parameters
+ * This class allows for the specification of various parameters
  * while writing a BMP format image file.  By default, the data layout
  * is bottom-up, such that the pixels are stored in bottom-up order,
  * the first scanline being stored last.

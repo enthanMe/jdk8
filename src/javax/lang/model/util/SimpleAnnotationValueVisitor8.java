@@ -36,12 +36,12 @@ import static javax.lang.model.SourceVersion.*;
  * defaultAction} passing their arguments to {@code defaultAction}'s
  * corresponding parameters.
  *
- * <p> Methods in this class may be overridden subject to their
+ * Methods in this class may be overridden subject to their
  * general contract.  Note that annotating methods in concrete
  * subclasses with {@link java.lang.Override @Override} will help
  * ensure that methods are overridden as intended.
  *
- * <p> <b>WARNING:</b> The {@code AnnotationValueVisitor} interface
+ * <b>WARNING:</b> The {@code AnnotationValueVisitor} interface
  * implemented by this class may have methods added to it in the
  * future to accommodate new, currently unknown, language structures
  * added to future versions of the Java&trade; programming language.
@@ -68,7 +68,7 @@ import static javax.lang.model.SourceVersion.*;
  * in this situation.
  *
  * @param <R> the return type of this visitor's methods
- * @param <P> the type of the additional parameter to this visitor's methods.
+ * @param the type of the additional parameter to this visitor's methods.
  *
  * @see SimpleAnnotationValueVisitor6
  * @see SimpleAnnotationValueVisitor7

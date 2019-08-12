@@ -52,14 +52,14 @@ import java.lang.annotation.Target;
  * </pre>
  * The above code maps to the following XML:
  * <pre>
- * &lt;xs:element name="foo" xmlns:ref="http://ws-i.org/profiles/basic/1.1/xsd">
- *   &lt;xs:complexType>
- *     &lt;xs:sequence>
- *       &lt;xs:element name="body" type="ref:swaRef" minOccurs="0" />
- *     &lt;/xs:sequence>
- *     &lt;xs:attribute name="data" type="ref:swaRef" use="optional" />
- *   &lt;/xs:complexType>
- * &lt;/xs:element>
+ * <xs:element name="foo" xmlns:ref="http://ws-i.org/profiles/basic/1.1/xsd">
+ *   <xs:complexType>
+ *     <xs:sequence>
+ *       <xs:element name="body" type="ref:swaRef" minOccurs="0" />
+ *     </xs:sequence>
+ *     <xs:attribute name="data" type="ref:swaRef" use="optional" />
+ *   </xs:complexType>
+ * </xs:element>
  * </pre>
  *
  * <p>

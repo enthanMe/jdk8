@@ -81,9 +81,9 @@ public class XMLFormatter extends Formatter {
         for (int i = 0; i < text.length(); i++) {
             char ch = text.charAt(i);
             if (ch == '<') {
-                sb.append("&lt;");
+                sb.append("<");
             } else if (ch == '>') {
-                sb.append("&gt;");
+                sb.append(">");
             } else if (ch == '&') {
                 sb.append("&amp;");
             } else {

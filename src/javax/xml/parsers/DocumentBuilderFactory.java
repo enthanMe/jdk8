@@ -105,7 +105,7 @@ public abstract class DocumentBuilderFactory {
      * this method to print a lot of debug messages
      * to <code>System.err</code> about what it is doing and where it is looking at.</p>
      *
-     * <p> If you have problems loading {@link DocumentBuilder}s, try:</p>
+     * If you have problems loading {@link DocumentBuilder}s, try:</p>
      * <pre>
      * java -Djaxp.debug=1 YourProgram ....
      * </pre>
@@ -139,7 +139,7 @@ public abstract class DocumentBuilderFactory {
      * this method to print a lot of debug messages
      * to <code>System.err</code> about what it is doing and where it is looking at.</p>
      *
-     * <p> If you have problems try:</p>
+     * If you have problems try:</p>
      * <pre>
      * java -Djaxp.debug=1 YourProgram ....
      * </pre>

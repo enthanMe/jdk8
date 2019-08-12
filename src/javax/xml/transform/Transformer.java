@@ -115,8 +115,8 @@ public abstract class Transformer {
      * application can safely check for a non-null URI by testing to see if the
      * first character of the name is a '{' character.</p>
      * <p>For example, if a URI and local name were obtained from an element
-     * defined with &lt;xyz:foo
-     * xmlns:xyz="http://xyz.foo.com/yada/baz.html"/&gt;,
+     * defined with <xyz:foo
+     * xmlns:xyz="http://xyz.foo.com/yada/baz.html"/>,
      * then the qualified name would be "{http://xyz.foo.com/yada/baz.html}foo".
      * Note that no prefix is used.</p>
      *
@@ -208,8 +208,8 @@ public abstract class Transformer {
      * application can safely check for a non-null URI by testing to see if the
      * first character of the name is a '{' character.</p>
      * <p>For example, if a URI and local name were obtained from an element
-     * defined with &lt;xyz:foo
-     * xmlns:xyz="http://xyz.foo.com/yada/baz.html"/&gt;,
+     * defined with <xyz:foo
+     * xmlns:xyz="http://xyz.foo.com/yada/baz.html"/>,
      * then the qualified name would be "{http://xyz.foo.com/yada/baz.html}foo".
      * Note that no prefix is used.</p>
      * An <code>IllegalArgumentException</code> is thrown  if any of the
@@ -275,8 +275,8 @@ public abstract class Transformer {
      * application can safely check for a non-null URI by testing to see if the
      * first character of the name is a '{' character.</p>
      * <p>For example, if a URI and local name were obtained from an element
-     * defined with &lt;xyz:foo
-     * xmlns:xyz="http://xyz.foo.com/yada/baz.html"/&gt;,
+     * defined with <xyz:foo
+     * xmlns:xyz="http://xyz.foo.com/yada/baz.html"/>,
      * then the qualified name would be "{http://xyz.foo.com/yada/baz.html}foo".
      * Note that no prefix is used.</p>
      *

@@ -142,7 +142,7 @@ public abstract class IIOMetadata {
      * format names and format class names, as well as a boolean
      * indicating whether the standard format is supported.
      *
-     * <p> This constructor does not attempt to check the class names
+     * This constructor does not attempt to check the class names
      * for validity.  Invalid class names may cause exceptions in
      * subsequent calls to <code>getMetadataFormat</code>.
      *
@@ -209,7 +209,7 @@ public abstract class IIOMetadata {
      * <code>getAsTree</code>, <code>setFromTree</code>, and
      * <code>mergeTree</code>.
      *
-     * <p> The default implementation returns the value of the
+     * The default implementation returns the value of the
      * <code>standardFormatSupported</code> instance variable.
      *
      * @return <code>true</code> if the standard metadata format
@@ -241,7 +241,7 @@ public abstract class IIOMetadata {
      * this plug-in.  If no such format is supported,
      * <code>null</code>will be returned.
      *
-     * <p> The structure and contents of the "native" metadata format
+     * The structure and contents of the "native" metadata format
      * are defined by the plug-in that created this
      * <code>IIOMetadata</code> object.  Plug-ins for simple formats
      * will usually create a dummy node for the root, and then a
@@ -249,7 +249,7 @@ public abstract class IIOMetadata {
      * keyword/value pairs.  A plug-in may choose whether or not to
      * document its native format.
      *
-     * <p> The default implementation returns the value of the
+     * The default implementation returns the value of the
      * <code>nativeMetadataFormatName</code> instance variable.
      *
      * @return the name of the native format, or <code>null</code>.
@@ -269,7 +269,7 @@ public abstract class IIOMetadata {
      * <code>mergeTree</code> methods.  If there are no such additional
      * formats, <code>null</code> is returned.
      *
-     * <p> The default implementation returns a clone of the
+     * The default implementation returns a clone of the
      * <code>extraMetadataFormatNames</code> instance variable.
      *
      * @return an array of <code>String</code>s with length at least
@@ -295,7 +295,7 @@ public abstract class IIOMetadata {
      * <code>setFromTree</code>, and <code>mergeTree</code> methods.
      * If there are no such formats, <code>null</code> is returned.
      *
-     * <p> The default implementation calls
+     * The default implementation calls
      * <code>getNativeMetadataFormatName</code>,
      * <code>isStandardMetadataFormatSupported</code>, and
      * <code>getExtraMetadataFormatNames</code> and returns the
@@ -352,7 +352,7 @@ public abstract class IIOMetadata {
      * native format name, the standard format name, or one of those
      * returned by <code>getExtraMetadataFormatNames</code>).
      *
-     * <p> The default implementation checks the name against the
+     * The default implementation checks the name against the
      * global standard metadata format name, and returns that format
      * if it is supported.  Otherwise, it checks against the native
      * format names followed by any additional format names.  If a
@@ -453,7 +453,7 @@ public abstract class IIOMetadata {
      * according to the conventions defined by a given metadata
      * format.
      *
-     * <p> The names of the available metadata formats may be queried
+     * The names of the available metadata formats may be queried
      * using the <code>getMetadataFormatNames</code> method.
      *
      * @param formatName the desired metadata format.
@@ -480,7 +480,7 @@ public abstract class IIOMetadata {
      * are invalid, an <code>IIOInvalidTreeException</code> will be
      * thrown.
      *
-     * <p> As the semantics of how a tree or subtree may be merged with
+     * As the semantics of how a tree or subtree may be merged with
      * another tree are completely format-specific, plug-in authors may
      * implement this method in whatever manner is most appropriate for
      * the format, including simply replacing all existing state with the
@@ -513,9 +513,9 @@ public abstract class IIOMetadata {
      * available.  This method is intended to be called by the utility
      * routine <code>getStandardTree</code>.
      *
-     * <p> The default implementation returns <code>null</code>.
+     * The default implementation returns <code>null</code>.
      *
-     * <p> Subclasses should override this method to produce an
+     * Subclasses should override this method to produce an
      * appropriate subtree if they wish to support the standard
      * metadata format.
      *
@@ -535,9 +535,9 @@ public abstract class IIOMetadata {
      * method is intended to be called by the utility routine
      * <code>getStandardTree</code>.
      *
-     * <p> The default implementation returns <code>null</code>.
+     * The default implementation returns <code>null</code>.
      *
-     * <p> Subclasses should override this method to produce an
+     * Subclasses should override this method to produce an
      * appropriate subtree if they wish to support the standard
      * metadata format.
      *
@@ -557,9 +557,9 @@ public abstract class IIOMetadata {
      * method is intended to be called by the utility routine
      * <code>getStandardTree</code>.
      *
-     * <p> The default implementation returns <code>null</code>.
+     * The default implementation returns <code>null</code>.
      *
-     * <p> Subclasses should override this method to produce an
+     * Subclasses should override this method to produce an
      * appropriate subtree if they wish to support the standard
      * metadata format.
      *
@@ -579,9 +579,9 @@ public abstract class IIOMetadata {
      * method is intended to be called by the utility routine
      * <code>getStandardTree</code>.
      *
-     * <p> The default implementation returns <code>null</code>.
+     * The default implementation returns <code>null</code>.
      *
-     * <p> Subclasses should override this method to produce an
+     * Subclasses should override this method to produce an
      * appropriate subtree if they wish to support the standard
      * metadata format.
      *
@@ -600,9 +600,9 @@ public abstract class IIOMetadata {
      * available.  This method is intended to be called by the utility
      * routine <code>getStandardTree</code>.
      *
-     * <p> The default implementation returns <code>null</code>.
+     * The default implementation returns <code>null</code>.
      *
-     * <p> Subclasses should override this method to produce an
+     * Subclasses should override this method to produce an
      * appropriate subtree if they wish to support the standard
      * metadata format.
      *
@@ -621,9 +621,9 @@ public abstract class IIOMetadata {
      * available.  This method is intended to be called by the utility
      * routine <code>getStandardTree</code>.
      *
-     * <p> The default implementation returns <code>null</code>.
+     * The default implementation returns <code>null</code>.
      *
-     * <p> Subclasses should override this method to produce an
+     * Subclasses should override this method to produce an
      * appropriate subtree if they wish to support the standard
      * metadata format.
      *
@@ -642,9 +642,9 @@ public abstract class IIOMetadata {
      * available.  This method is intended to be called by the utility
      * routine <code>getStandardTree</code>.
      *
-     * <p> The default implementation returns <code>null</code>.
+     * The default implementation returns <code>null</code>.
      *
-     * <p> Subclasses should override this method to produce an
+     * Subclasses should override this method to produce an
      * appropriate subtree if they wish to support the standard
      * metadata format.
      *
@@ -664,9 +664,9 @@ public abstract class IIOMetadata {
      * method is intended to be called by the utility routine
      * <code>getStandardTree</code>.
      *
-     * <p> The default implementation returns <code>null</code>.
+     * The default implementation returns <code>null</code>.
      *
-     * <p> Subclasses should override this method to produce an
+     * Subclasses should override this method to produce an
      * appropriate subtree if they wish to support the standard
      * metadata format.
      *
@@ -692,7 +692,7 @@ public abstract class IIOMetadata {
      * contained within this object according to the conventions of
      * the standard <code>javax_imageio_1.0</code> metadata format.
      *
-     * <p> This method calls the various <code>getStandard*Node</code>
+     * This method calls the various <code>getStandard*Node</code>
      * methods to supply each of the subtrees rooted at the children
      * of the root node.  If any of those methods returns
      * <code>null</code>, the corresponding subtree will be omitted.
@@ -733,7 +733,7 @@ public abstract class IIOMetadata {
      * discarded.  If the tree's structure or contents are invalid, an
      * <code>IIOInvalidTreeException</code> will be thrown.
      *
-     * <p> The default implementation calls <code>reset</code>
+     * The default implementation calls <code>reset</code>
      * followed by <code>mergeTree(formatName, root)</code>.
      *
      * @param formatName the desired metadata format.
@@ -784,7 +784,7 @@ public abstract class IIOMetadata {
      * used, including any default.  To restore the default, use
      * <code>setController(getDefaultController())</code>.
      *
-     * <p> The default implementation sets the <code>controller</code>
+     * The default implementation sets the <code>controller</code>
      * instance variable to the supplied value.
      *
      * @param controller An appropriate
@@ -806,7 +806,7 @@ public abstract class IIOMetadata {
      * <code>null</code>, or the argument of the most recent call
      * to <code>setController</code>.
      *
-     * <p> The default implementation returns the value of the
+     * The default implementation returns the value of the
      * <code>controller</code> instance variable.
      *
      * @return the currently installed
@@ -827,7 +827,7 @@ public abstract class IIOMetadata {
      * is one, regardless of the currently installed controller.  If
      * there is no default controller, returns <code>null</code>.
      *
-     * <p> The default implementation returns the value of the
+     * The default implementation returns the value of the
      * <code>defaultController</code> instance variable.
      *
      * @return the default <code>IIOMetadataController</code>, or
@@ -847,7 +847,7 @@ public abstract class IIOMetadata {
      * Returns <code>true</code> if there is a controller installed
      * for this <code>IIOMetadata</code> object.
      *
-     * <p> The default implementation returns <code>true</code> if the
+     * The default implementation returns <code>true</code> if the
      * <code>getController</code> method returns a
      * non-<code>null</code> value.
      *
@@ -872,11 +872,11 @@ public abstract class IIOMetadata {
      * returned, no settings in this object will have been disturbed
      * (<i>i.e.</i>, the user canceled the operation).
      *
-     * <p> Ordinarily, the controller will be a GUI providing a user
+     * Ordinarily, the controller will be a GUI providing a user
      * interface for a subclass of <code>IIOMetadata</code> for a
      * particular plug-in.  Controllers need not be GUIs, however.
      *
-     * <p> The default implementation calls <code>getController</code>
+     * The default implementation calls <code>getController</code>
      * and the calls <code>activate</code> on the returned object if
      * <code>hasController</code> returns <code>true</code>.
      *

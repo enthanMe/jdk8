@@ -196,7 +196,7 @@ public class InitialContext implements Context {
      * Constructs an initial context using the supplied environment.
      * Environment properties are discussed in the class description.
      *
-     * <p> This constructor will not modify <tt>environment</tt>
+     * This constructor will not modify <tt>environment</tt>
      * or save a reference to it, but may save a clone.
      * Caller should not modify mutable keys and values in
      * <tt>environment</tt> after it has been passed to the constructor.
@@ -220,7 +220,7 @@ public class InitialContext implements Context {
      * Initializes the initial context using the supplied environment.
      * Environment properties are discussed in the class description.
      *
-     * <p> This method will modify <tt>environment</tt> and save
+     * This method will modify <tt>environment</tt> and save
      * a reference to it.  The caller may no longer modify it.
      *
      * @param environment
@@ -253,7 +253,7 @@ public class InitialContext implements Context {
      *        InitialContext ic = new InitialContext();
      *        Object obj = ic.lookup();
      * </code>
-     * <p> If <tt>name</tt> is empty, returns a new instance of this context
+     * If <tt>name</tt> is empty, returns a new instance of this context
      * (which represents the same naming context as this context, but its
      * environment may be modified independently and it may be accessed
      * concurrently).

@@ -64,7 +64,7 @@ import com.sun.org.apache.bcel.internal.ExceptionConstants;
 
 /**
  * MULTIANEWARRAY - Create new mutidimensional array of references
- * <PRE>Stack: ..., count1, [count2, ...] -&gt; ..., arrayref</PRE>
+ * <PRE>Stack: ..., count1, [count2, ...] -> ..., arrayref</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

@@ -31,7 +31,7 @@ import org.xml.sax.XMLReader;
  * coroutines. See CoroutineSAXParser and CoroutineSAXParser_Xerces
  * for examples.</p>
  *
- * <p>&lt;grumble&gt; I'd like the interface to require a specific form
+ * <p><grumble> I'd like the interface to require a specific form
  * for either the base constructor or a static factory method. Java
  * doesn't allow us to specify either, so I'll just document them
  * here:
@@ -41,7 +41,7 @@ import org.xml.sax.XMLReader;
  * <li>public CoroutineParser createCoroutineParser(CoroutineManager co, int appCoroutine);</li>
  * </ul>
  *
- * &lt;/grumble&gt;</p>
+ * </grumble></p>
  *
  * @deprecated Since the ability to start a parse via the
  * coroutine protocol was not being used and was complicating design.

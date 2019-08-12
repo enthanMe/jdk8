@@ -37,7 +37,7 @@ import sun.java2d.DisposerRecord;
  * used to cache at least the data between the discard position and
  * the current read position.
  *
- * <p> In general, it is preferable to use a
+ * In general, it is preferable to use a
  * <code>FileCacheImageInputStream</code> when reading from a regular
  * <code>InputStream</code>.  This class is provided for cases where
  * it is not possible to create a writable temporary file.

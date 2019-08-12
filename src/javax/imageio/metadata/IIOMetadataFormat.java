@@ -38,20 +38,20 @@ import javax.imageio.ImageTypeSpecifier;
  * belong to an element, and the type and values of
  * <code>Object</code> reference that may be stored at a node.
  *
- * <p> N.B: classes that implement this interface should contain a
+ * N.B: classes that implement this interface should contain a
  * method declared as <code>public static getInstance()</code> which
  * returns an instance of the class.  Commonly, an implementation will
  * construct only a single instance and cache it for future
  * invocations of <code>getInstance</code>.
  *
- * <p> The structures that may be described by this class are a subset
+ * The structures that may be described by this class are a subset
  * of those expressible using XML document type definitions (DTDs),
  * with the addition of some basic information on the datatypes of
  * attributes and the ability to store an <code>Object</code>
  * reference within a node.  In the future, XML Schemas could be used
  * to represent these structures, and many others.
  *
- * <p> The differences between
+ * The differences between
  * <code>IIOMetadataFormat</code>-described structures and DTDs are as
  * follows:
  *
@@ -159,7 +159,7 @@ public interface IIOMetadataFormat {
      * <code>VALUE_RANGE_MAX_INCLUSIVE</code> to obtain
      * <code>VALUE_RANGE_MIN_MAX_INCLUSIVE</code>.
      *
-     * <p> Similarly, the value may be and'ed with the value of
+     * Similarly, the value may be and'ed with the value of
      * <code>getAttributeValueType</code>or
      * <code>getObjectValueType</code> to determine if the minimum
      * value of the range is inclusive.
@@ -172,7 +172,7 @@ public interface IIOMetadataFormat {
      * <code>VALUE_RANGE_MIN_INCLUSIVE</code> to obtain
      * <code>VALUE_RANGE_MIN_MAX_INCLUSIVE</code>.
      *
-     * <p> Similarly, the value may be and'ed with the value of
+     * Similarly, the value may be and'ed with the value of
      * <code>getAttributeValueType</code>or
      * <code>getObjectValueType</code> to determine if the maximum
      * value of the range is inclusive.
@@ -218,7 +218,7 @@ public interface IIOMetadataFormat {
      * <code>String</code>s; for objects, they are
      * <code>Object</code>s implementing a given class or interface.
      *
-     * <p> Attribute values of type <code>DATATYPE_BOOLEAN</code>
+     * Attribute values of type <code>DATATYPE_BOOLEAN</code>
      * should be marked as enumerations.
      */
     int VALUE_ENUMERATION = 16;
@@ -346,7 +346,7 @@ public interface IIOMetadataFormat {
      * named element, or <code>null</code>.  The description will be
      * localized for the supplied <code>Locale</code> if possible.
      *
-     * <p> If <code>locale</code> is <code>null</code>, the current
+     * If <code>locale</code> is <code>null</code>, the current
      * default <code>Locale</code> returned by <code>Locale.getLocale</code>
      * will be used.
      *
@@ -627,7 +627,7 @@ public interface IIOMetadataFormat {
      * named attribute, or <code>null</code>.  The description will be
      * localized for the supplied <code>Locale</code> if possible.
      *
-     * <p> If <code>locale</code> is <code>null</code>, the current
+     * If <code>locale</code> is <code>null</code>, the current
      * default <code>Locale</code> returned by <code>Locale.getLocale</code>
      * will be used.
      *
@@ -657,7 +657,7 @@ public interface IIOMetadataFormat {
      * stored within the given element, the result of this method will
      * be <code>VALUE_NONE</code>.
      *
-     * <p> <code>Object</code> references whose legal values are
+     * <code>Object</code> references whose legal values are
      * defined as a range must implement the <code>Comparable</code>
      * interface.
      *
@@ -682,7 +682,7 @@ public interface IIOMetadataFormat {
      * class type (<i>e.g</i>, for an array of <code>int</code>s, this
      * method would return <code>int.class</code>).
      *
-     * <p> <code>Object</code> references whose legal values are
+     * <code>Object</code> references whose legal values are
      * defined as a range must implement the <code>Comparable</code>
      * interface.
      *
@@ -724,7 +724,7 @@ public interface IIOMetadataFormat {
      * <code>getObjectValueType</code> returns
      * <code>VALUE_ENUMERATION</code>.
      *
-     * <p> The <code>Object</code> associated with a node that accepts
+     * The <code>Object</code> associated with a node that accepts
      * enumerated values must be equal to one of the values returned by
      * this method, as defined by the <code>==</code> operator (as
      * opposed to the <code>Object.equals</code> method).

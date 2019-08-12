@@ -59,7 +59,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.Text;
 
 /**
- * Handles <code>&lt;ds:Reference&gt;</code> elements.
+ * Handles <code><ds:Reference></code> elements.
  *
  * This includes:
  *
@@ -87,17 +87,17 @@ import org.w3c.dom.Text;
  * </pre>
  *
  * <pre>
- * &lt;element name="Reference" type="ds:ReferenceType"/&gt;
- *  &lt;complexType name="ReferenceType"&gt;
- *    &lt;sequence&gt;
- *      &lt;element ref="ds:Transforms" minOccurs="0"/&gt;
- *      &lt;element ref="ds:DigestMethod"/&gt;
- *      &lt;element ref="ds:DigestValue"/&gt;
- *    &lt;/sequence&gt;
- *    &lt;attribute name="Id" type="ID" use="optional"/&gt;
- *    &lt;attribute name="URI" type="anyURI" use="optional"/&gt;
- *    &lt;attribute name="Type" type="anyURI" use="optional"/&gt;
- *  &lt;/complexType&gt;
+ * <element name="Reference" type="ds:ReferenceType"/>
+ *  <complexType name="ReferenceType">
+ *    <sequence>
+ *      <element ref="ds:Transforms" minOccurs="0"/>
+ *      <element ref="ds:DigestMethod"/>
+ *      <element ref="ds:DigestValue"/>
+ *    </sequence>
+ *    <attribute name="Id" type="ID" use="optional"/>
+ *    <attribute name="URI" type="anyURI" use="optional"/>
+ *    <attribute name="Type" type="anyURI" use="optional"/>
+ *  </complexType>
  * </pre>
  *
  * @author Christian Geuer-Pollmann

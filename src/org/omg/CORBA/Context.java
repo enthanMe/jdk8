@@ -72,8 +72,8 @@ package org.omg.CORBA;
  * A context property name pattern is either a property name
  * or a property name followed by a single "*".  A property
  * name pattern without a trailing "*" is said to match only
- * itself.  A property name pattern of the form "&lt;name&gt;*" matches any
- * property name that starts with &lt;name&gt; and continues with zero
+ * itself.  A property name pattern of the form "<name>*" matches any
+ * property name that starts with <name> and continues with zero
  * or more additional characters.
  * <P>
  * Property name patterns are used in the context clause of

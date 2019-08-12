@@ -33,16 +33,16 @@ import java.io.IOException;
  * instances are intended to receive formatted output from a {@link
  * java.util.Formatter}.
  *
- * <p> The characters to be appended should be valid Unicode characters as
+ * The characters to be appended should be valid Unicode characters as
  * described in <a href="Character.html#unicode">Unicode Character
  * Representation</a>.  Note that supplementary characters may be composed of
  * multiple 16-bit <tt>char</tt> values.
  *
- * <p> Appendables are not necessarily safe for multithreaded access.  Thread
+ * Appendables are not necessarily safe for multithreaded access.  Thread
  * safety is the responsibility of classes that extend and implement this
  * interface.
  *
- * <p> Since this interface may be implemented by existing classes
+ * Since this interface may be implemented by existing classes
  * with different styles of error handling there is no guarantee that
  * errors will be propagated to the invoker.
  *
@@ -53,7 +53,7 @@ public interface Appendable {
     /**
      * Appends the specified character sequence to this <tt>Appendable</tt>.
      *
-     * <p> Depending on which class implements the character sequence
+     * Depending on which class implements the character sequence
      * <tt>csq</tt>, the entire sequence may not be appended.  For
      * instance, if <tt>csq</tt> is a {@link java.nio.CharBuffer} then
      * the subsequence to append is defined by the buffer's position and limit.
@@ -74,7 +74,7 @@ public interface Appendable {
      * Appends a subsequence of the specified character sequence to this
      * <tt>Appendable</tt>.
      *
-     * <p> An invocation of this method of the form <tt>out.append(csq, start,
+     * An invocation of this method of the form <tt>out.append(csq, start,
      * end)</tt> when <tt>csq</tt> is not <tt>null</tt>, behaves in
      * exactly the same way as the invocation
      *

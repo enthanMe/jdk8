@@ -232,7 +232,7 @@ public abstract class SchemaFactory {
      * this method to print a lot of debug messages
      * to <code>System.err</code> about what it is doing and where it is looking at.</p>
      *
-     * <p> If you have problems try:</p>
+     * If you have problems try:</p>
      * <pre>
      * java -Djaxp.debug=1 YourProgram ....
      * </pre>
@@ -571,7 +571,7 @@ public abstract class SchemaFactory {
      * when it needs to locate external resources while parsing schemas,
      * although exactly what constitutes "locating external resources" is
      * up to each schema language. For example, for W3C XML Schema,
-     * this includes files <code>&lt;include></code>d or <code>&lt;import></code>ed,
+     * this includes files <code><include></code>d or <code><import></code>ed,
      * and DTD referenced from schema files, etc.
      *
      * <p>
@@ -698,7 +698,7 @@ public abstract class SchemaFactory {
      * regard.  While a processor should be consistent in its treatment of
      * JAXP schema sources and XML Schema imports, the behaviour between
      * JAXP-compliant parsers may vary; in particular, parsers may choose
-     * to ignore all but the first &lt;import> for a given namespace,
+     * to ignore all but the first <import> for a given namespace,
      * regardless of information provided in schemaLocation.
      *
      * <p>

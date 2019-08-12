@@ -60,8 +60,8 @@ import sun.misc.SharedSecrets;
  * unsynchronized access:
  *
  * <pre>
- *     Map&lt;EnumKey, V&gt; m
- *         = Collections.synchronizedMap(new EnumMap&lt;EnumKey, V&gt;(...));
+ *     Map<EnumKey, V> m
+ *         = Collections.synchronizedMap(new EnumMap<EnumKey, V>(...));
  * </pre>
  *
  * <p>Implementation note: All basic operations execute in constant time.

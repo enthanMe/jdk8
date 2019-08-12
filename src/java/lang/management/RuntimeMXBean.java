@@ -29,7 +29,7 @@ package java.lang.management;
  * The management interface for the runtime system of
  * the Java virtual machine.
  *
- * <p> A Java virtual machine has a single instance of the implementation
+ * A Java virtual machine has a single instance of the implementation
  * class of this interface.  This instance implementing this interface is
  * an <a href="ManagementFactory.html#MXBean">MXBean</a>
  * that can be obtained by calling
@@ -47,7 +47,7 @@ package java.lang.management;
  * It can be obtained by calling the
  * {@link PlatformManagedObject#getObjectName} method.
  *
- * <p> This interface defines several convenient methods for accessing
+ * This interface defines several convenient methods for accessing
  * system properties about the Java virtual machine.
  *
  * @see ManagementFactory#getPlatformMXBeans(Class)
@@ -184,7 +184,7 @@ public interface RuntimeMXBean extends PlatformManagedObject {
      * This method is equivalent to {@link System#getProperty
      * System.getProperty("java.class.path")}.
      *
-     * <p> Multiple paths in the Java class path are separated by the
+     * Multiple paths in the Java class path are separated by the
      * path separator character of the platform of the Java virtual machine
      * being monitored.
      *
@@ -204,7 +204,7 @@ public interface RuntimeMXBean extends PlatformManagedObject {
      * This method is equivalent to {@link System#getProperty
      * System.getProperty("java.library.path")}.
      *
-     * <p> Multiple paths in the Java library path are separated by the
+     * Multiple paths in the Java library path are separated by the
      * path separator character of the platform of the Java virtual machine
      * being monitored.
      *
@@ -233,7 +233,7 @@ public interface RuntimeMXBean extends PlatformManagedObject {
      * Returns the boot class path that is used by the bootstrap class loader
      * to search for class files.
      *
-     * <p> Multiple paths in the boot class path are separated by the
+     * Multiple paths in the boot class path are separated by the
      * path separator character of the platform on which the Java
      * virtual machine is running.
      *

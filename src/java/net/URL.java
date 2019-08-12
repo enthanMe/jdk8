@@ -265,17 +265,17 @@ public final class URL implements java.io.Serializable {
      *     slash character '{@code |}'. The constructor tries to load
      *     the class named:
      *     <blockquote><pre>
-     *         &lt;<i>package</i>&gt;.&lt;<i>protocol</i>&gt;.Handler
+     *         <<i>package</i>>.<<i>protocol</i>>.Handler
      *     </pre></blockquote>
-     *     where &lt;<i>package</i>&gt; is replaced by the name of the package
-     *     and &lt;<i>protocol</i>&gt; is replaced by the name of the protocol.
+     *     where <<i>package</i>> is replaced by the name of the package
+     *     and <<i>protocol</i>> is replaced by the name of the protocol.
      *     If this class does not exist, or if the class exists but it is not
      *     a subclass of {@code URLStreamHandler}, then the next package
      *     in the list is tried.
      * <li>If the previous step fails to find a protocol handler, then the
      *     constructor tries to load from a system default package.
      *     <blockquote><pre>
-     *         &lt;<i>system default package</i>&gt;.&lt;<i>protocol</i>&gt;.Handler
+     *         <<i>system default package</i>>.<<i>protocol</i>>.Handler
      *     </pre></blockquote>
      *     If this class does not exist, or if the class exists but it is not a
      *     subclass of {@code URLStreamHandler}, then a
@@ -446,7 +446,7 @@ public final class URL implements java.io.Serializable {
      * argument as described in
      * RFC2396 &quot;Uniform Resource Identifiers : Generic * Syntax&quot; :
      * <blockquote><pre>
-     *          &lt;scheme&gt;://&lt;authority&gt;&lt;path&gt;?&lt;query&gt;#&lt;fragment&gt;
+     *          <scheme>://<authority><path>?<query>#<fragment>
      * </pre></blockquote>
      * The reference is parsed into the scheme, authority, path, query and
      * fragment parts. If the path component is empty and the scheme,
@@ -1088,10 +1088,10 @@ public final class URL implements java.io.Serializable {
      * This method can be called at most once in a given Java Virtual
      * Machine.
      *
-     *<p> The {@code URLStreamHandlerFactory} instance is used to
+     *The {@code URLStreamHandlerFactory} instance is used to
      *construct a stream protocol handler from a protocol name.
      *
-     * <p> If there is a security manager, this method first calls
+     * If there is a security manager, this method first calls
      * the security manager's {@code checkSetFactory} method
      * to ensure the operation is allowed.
      * This could result in a SecurityException.

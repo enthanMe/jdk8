@@ -217,7 +217,7 @@ public class URLClassLoader extends SecureClassLoader implements Closeable {
      * If this loader is closed, then any resources opened by this method
      * will be closed.
      *
-     * <p> The search order is described in the documentation for {@link
+     * The search order is described in the documentation for {@link
      * #getResource(String)}.  </p>
      *
      * @param  name

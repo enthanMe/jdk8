@@ -133,7 +133,7 @@ public abstract class TransformService implements Transform {
      * from the first <code>Provider</code> that supports the specified
      * algorithm and mechanism type is returned.
      *
-     * <p> Note that the list of registered providers may be retrieved via
+     * Note that the list of registered providers may be retrieved via
      * the {@link Security#getProviders() Security.getProviders()} method.
      *
      * @param algorithm the URI of the algorithm

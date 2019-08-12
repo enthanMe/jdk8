@@ -38,7 +38,7 @@ import static java.lang.annotation.ElementType.METHOD;
  * <p>
  * Maps a JavaBean property to a map of wildcard attributes.
  *
- * <p> <b>Usage</b> </p>
+ * <b>Usage</b> </p>
  * <p>
  * The <tt>&#64;XmlAnyAttribute</tt> annotation can be used with the
  * following program elements:
@@ -62,7 +62,7 @@ import static java.lang.annotation.ElementType.METHOD;
  * each attribute that is not statically associated with another
  * JavaBean property, via {@link XmlAttribute}, is entered into the
  * wildcard attribute map represented by
- * {@link Map}&lt;{@link QName},{@link Object}>. The attribute QName is the
+ * {@link Map}<{@link QName},{@link Object}>. The attribute QName is the
  * map's key. The key's value is the String value of the attribute.
  *
  * @author Kohsuke Kawaguchi, Sun Microsystems, Inc.

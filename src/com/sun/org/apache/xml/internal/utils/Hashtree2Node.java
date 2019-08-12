@@ -49,7 +49,7 @@ public abstract class Hashtree2Node
      *
      * <p>The hash may have either Hashtables as values (in which
      * case we recurse) or other values, in which case we print them
-     * as &lt;item> elements, with a 'key' attribute with the value
+     * as <item> elements, with a 'key' attribute with the value
      * of the key, and the element contents as the value.</p>
      *
      * <p>If args are null we simply return without doing anything.

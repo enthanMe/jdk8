@@ -27,14 +27,14 @@
  * Defines interfaces and classes for the Java virtual machine to access files,
  * file attributes, and file systems.
  *
- * <p> The java.nio.file package defines classes to access files and file
+ * The java.nio.file package defines classes to access files and file
  * systems. The API to access file and file system attributes is defined in the
  * {@link java.nio.file.attribute} package. The {@link java.nio.file.spi}
  * package is used by service provider implementors wishing to extend the
  * platform default provider, or to construct other provider implementations. </p>
  *
  * <h3><a name="links">Symbolic Links</a></h3>
- * <p> Many operating systems and file systems support for <em>symbolic links</em>.
+ * Many operating systems and file systems support for <em>symbolic links</em>.
  * A symbolic link is a special file that serves as a reference to another file.
  * For the most part, symbolic links are transparent to applications and
  * operations on symbolic links are automatically redirected to the <em>target</em>
@@ -46,7 +46,7 @@
  * not included in this package. </p>
  *
  * <h3><a name="interop">Interoperability</a></h3>
- * <p> The {@link java.io.File} class defines the {@link java.io.File#toPath
+ * The {@link java.io.File} class defines the {@link java.io.File#toPath
  * toPath} method to construct a {@link java.nio.file.Path} by converting
  * the abstract path represented by the {@code java.io.File} object. The resulting
  * {@code Path} can be used to operate on the same file as the {@code File}
@@ -55,7 +55,7 @@
  * and {@code java.io.File} objects. </p>
  *
  * <h3>Visibility</h3>
- * <p> The view of the files and file system provided by classes in this package are
+ * The view of the files and file system provided by classes in this package are
  * guaranteed to be consistent with other views provided by other instances in the
  * same Java virtual machine.  The view may or may not, however, be consistent with
  * the view of the file system as seen by other concurrently running programs due
@@ -66,7 +66,7 @@
  * system-dependent and are therefore unspecified. </p>
  *
  * <h3><a name="integrity">Synchronized I/O File Integrity</a></h3>
- * <p> The {@link java.nio.file.StandardOpenOption#SYNC SYNC} and {@link
+ * The {@link java.nio.file.StandardOpenOption#SYNC SYNC} and {@link
  * java.nio.file.StandardOpenOption#DSYNC DSYNC} options are used when opening a file
  * to require that updates to the file are written synchronously to the underlying
  * storage device. In the case of the default provider, and the file resides on
@@ -83,13 +83,13 @@
  * specific. </p>
  *
  * <h3>General Exceptions</h3>
- * <p> Unless otherwise noted, passing a {@code null} argument to a constructor
+ * Unless otherwise noted, passing a {@code null} argument to a constructor
  * or method of any class or interface in this package will cause a {@link
  * java.lang.NullPointerException NullPointerException} to be thrown. Additionally,
  * invoking a method with a collection containing a {@code null} element will
  * cause a {@code NullPointerException}, unless otherwise specified. </p>
  *
- * <p> Unless otherwise noted, methods that attempt to access the file system
+ * Unless otherwise noted, methods that attempt to access the file system
  * will throw {@link java.nio.file.ClosedFileSystemException} when invoked on
  * objects associated with a {@link java.nio.file.FileSystem} that has been
  * {@link java.nio.file.FileSystem#close closed}. Additionally, any methods
@@ -98,7 +98,7 @@
  * with a {@link java.nio.file.FileSystem} that only provides read-only
  * access. </p>
  *
- * <p> Unless otherwise noted, invoking a method of any class or interface in
+ * Unless otherwise noted, invoking a method of any class or interface in
  * this package created by one {@link java.nio.file.spi.FileSystemProvider
  * provider} with a parameter that is an object created by another provider,
  * will throw {@link java.nio.file.ProviderMismatchException}. </p>

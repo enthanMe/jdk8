@@ -951,7 +951,7 @@ public class XSAttributeChecker {
      * <code>returnAttrArray</code> to return that array.
      *
      * @param element    which element to check
-     * @param isGlobal   whether a child of &lt;schema&gt; or &lt;redefine&gt;
+     * @param isGlobal   whether a child of <schema> or <redefine>
      * @param schemaDoc  the document where the element lives in
      * @return           an array containing attribute values
      */
@@ -969,7 +969,7 @@ public class XSAttributeChecker {
      * QName later.
      *
      * @param element      which element to check
-     * @param isGlobal     whether a child of &lt;schema&gt; or &lt;redefine&gt;
+     * @param isGlobal     whether a child of <schema> or <redefine>
      * @param schemaDoc    the document where the element lives in
      * @param enumAsQName  whether to tread enumeration value as QName
      * @return             an array containing attribute values

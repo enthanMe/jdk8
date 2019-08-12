@@ -32,7 +32,7 @@ import java.util.List;
  *
  * For example:
  * <pre>
- *   <em>type</em> &lt; <em>typeArguments</em> &gt;
+ *   <em>type</em> < <em>typeArguments</em> >
  * </pre>
  *
  * @jls section 4.5.1

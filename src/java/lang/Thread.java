@@ -268,12 +268,12 @@ class Thread implements Runnable {
      * its current use of a processor. The scheduler is free to ignore this
      * hint.
      *
-     * <p> Yield is a heuristic attempt to improve relative progression
+     * Yield is a heuristic attempt to improve relative progression
      * between threads that would otherwise over-utilise a CPU. Its use
      * should be combined with detailed profiling and benchmarking to
      * ensure that it actually has the desired effect.
      *
-     * <p> It is rarely appropriate to use this method. It may be useful
+     * It is rarely appropriate to use this method. It may be useful
      * for debugging or testing purposes, where it may help to reproduce
      * bugs due to race conditions. It may also be useful when designing
      * concurrency control constructs such as the ones in the
@@ -872,12 +872,12 @@ class Thread implements Runnable {
     /**
      * Interrupts this thread.
      *
-     * <p> Unless the current thread is interrupting itself, which is
+     * Unless the current thread is interrupting itself, which is
      * always permitted, the {@link #checkAccess() checkAccess} method
      * of this thread is invoked, which may cause a {@link
      * SecurityException} to be thrown.
      *
-     * <p> If this thread is blocked in an invocation of the {@link
+     * If this thread is blocked in an invocation of the {@link
      * Object#wait() wait()}, {@link Object#wait(long) wait(long)}, or {@link
      * Object#wait(long, int) wait(long, int)} methods of the {@link Object}
      * class, or of the {@link #join()}, {@link #join(long)}, {@link
@@ -885,22 +885,22 @@ class Thread implements Runnable {
      * methods of this class, then its interrupt status will be cleared and it
      * will receive an {@link InterruptedException}.
      *
-     * <p> If this thread is blocked in an I/O operation upon an {@link
+     * If this thread is blocked in an I/O operation upon an {@link
      * java.nio.channels.InterruptibleChannel InterruptibleChannel}
      * then the channel will be closed, the thread's interrupt
      * status will be set, and the thread will receive a {@link
      * java.nio.channels.ClosedByInterruptException}.
      *
-     * <p> If this thread is blocked in a {@link java.nio.channels.Selector}
+     * If this thread is blocked in a {@link java.nio.channels.Selector}
      * then the thread's interrupt status will be set and it will return
      * immediately from the selection operation, possibly with a non-zero
      * value, just as if the selector's {@link
      * java.nio.channels.Selector#wakeup wakeup} method were invoked.
      *
-     * <p> If none of the previous conditions hold then this thread's interrupt
+     * If none of the previous conditions hold then this thread's interrupt
      * status will be set. </p>
      *
-     * <p> Interrupting a thread that is not alive need not have any effect.
+     * Interrupting a thread that is not alive need not have any effect.
      *
      * @throws  SecurityException
      *          if the current thread cannot modify this thread
@@ -1156,7 +1156,7 @@ class Thread implements Runnable {
      * subgroups. Recursively iterates over all subgroups in the current
      * thread's thread group.
      *
-     * <p> The value returned is only an estimate because the number of
+     * The value returned is only an estimate because the number of
      * threads may change dynamically while this method traverses internal
      * data structures, and might be affected by the presence of certain
      * system threads. This method is intended primarily for debugging
@@ -1176,7 +1176,7 @@ class Thread implements Runnable {
      * invokes the {@link java.lang.ThreadGroup#enumerate(Thread[])}
      * method of the current thread's thread group.
      *
-     * <p> An application might use the {@linkplain #activeCount activeCount}
+     * An application might use the {@linkplain #activeCount activeCount}
      * method to get an estimate of how big the array should be, however
      * <i>if the array is too short to hold all the threads, the extra threads
      * are silently ignored.</i>  If it is critical to obtain every active
@@ -1184,7 +1184,7 @@ class Thread implements Runnable {
      * invoker should verify that the returned int value is strictly less
      * than the length of {@code tarray}.
      *
-     * <p> Due to the inherent race condition in this method, it is recommended
+     * Due to the inherent race condition in this method, it is recommended
      * that the method only be used for debugging and monitoring purposes.
      *
      * @param  tarray
@@ -1218,7 +1218,7 @@ class Thread implements Runnable {
      * Waits at most {@code millis} milliseconds for this thread to
      * die. A timeout of {@code 0} means to wait forever.
      *
-     * <p> This implementation uses a loop of {@code this.wait} calls
+     * This implementation uses a loop of {@code this.wait} calls
      * conditioned on {@code this.isAlive}. As a thread terminates the
      * {@code this.notifyAll} method is invoked. It is recommended that
      * applications not use {@code wait}, {@code notify}, or
@@ -1264,7 +1264,7 @@ class Thread implements Runnable {
      * Waits at most {@code millis} milliseconds plus
      * {@code nanos} nanoseconds for this thread to die.
      *
-     * <p> This implementation uses a loop of {@code this.wait} calls
+     * This implementation uses a loop of {@code this.wait} calls
      * conditioned on {@code this.isAlive}. As a thread terminates the
      * {@code this.notifyAll} method is invoked. It is recommended that
      * applications not use {@code wait}, {@code notify}, or
@@ -1307,7 +1307,7 @@ class Thread implements Runnable {
     /**
      * Waits for this thread to die.
      *
-     * <p> An invocation of this method behaves in exactly the same
+     * An invocation of this method behaves in exactly the same
      * way as the invocation
      *
      * <blockquote>
@@ -1338,7 +1338,7 @@ class Thread implements Runnable {
      * or a user thread. The Java Virtual Machine exits when the only
      * threads running are all daemon threads.
      *
-     * <p> This method must be invoked before the thread is started.
+     * This method must be invoked before the thread is started.
      *
      * @param  on
      *         if {@code true}, marks this thread as a daemon thread

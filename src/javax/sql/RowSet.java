@@ -1399,7 +1399,7 @@ public interface RowSet extends ResultSet {
   /**
    * Sets the designated parameter in this <code>RowSet</code> object's command
    * with the given  <code>Ref</code> value.  The driver will convert this
-   * to the appropriate <code>REF(&lt;structured-type&gt;)</code> value.
+   * to the appropriate <code>REF(<structured-type>)</code> value.
    *
    * @param i the first parameter is 1, the second is 2, ...
    * @param x an object representing data of an SQL <code>REF</code> type

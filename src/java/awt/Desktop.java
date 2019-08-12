@@ -45,7 +45,7 @@ import sun.security.util.SecurityConstants;
  * associated applications registered on the native desktop to handle
  * a {@link java.net.URI} or a file.
  *
- * <p> Supported operations include:
+ * Supported operations include:
  * <ul>
  *   <li>launching the user-default browser to show a specified
  *       URI;</li>
@@ -55,21 +55,21 @@ import sun.security.util.SecurityConstants;
  *       specified file.</li>
  * </ul>
  *
- * <p> This class provides methods corresponding to these
+ * This class provides methods corresponding to these
  * operations. The methods look for the associated application
  * registered on the current platform, and launch it to handle a URI
  * or file. If there is no associated application or the associated
  * application fails to be launched, an exception is thrown.
  *
- * <p> An application is registered to a URI or file type; for
+ * An application is registered to a URI or file type; for
  * example, the {@code "sxi"} file extension is typically registered
  * to StarOffice.  The mechanism of registering, accessing, and
  * launching the associated application is platform-dependent.
  *
- * <p> Each operation is an action type represented by the {@link
+ * Each operation is an action type represented by the {@link
  * Desktop.Action} class.
  *
- * <p> Note: when some action is invoked and the associated
+ * Note: when some action is invoked and the associated
  * application is executed, it will be executed on the same system as
  * the one on which the Java application was launched.
  *
@@ -244,7 +244,7 @@ public class Desktop {
     /**
      * Launches the associated application to open the file.
      *
-     * <p> If the specified file is a directory, the file manager of
+     * If the specified file is a directory, the file manager of
      * the current platform is launched to open it.
      *
      * @param file the file to be opened with the associated application
@@ -437,7 +437,7 @@ public class Desktop {
      * client, filling the message fields specified by a {@code
      * mailto:} URI.
      *
-     * <p> A <code>mailto:</code> URI can specify message fields
+     * A <code>mailto:</code> URI can specify message fields
      * including <i>"to"</i>, <i>"cc"</i>, <i>"subject"</i>,
      * <i>"body"</i>, etc.  See <a
      * href="http://www.ietf.org/rfc/rfc2368.txt">The mailto URL

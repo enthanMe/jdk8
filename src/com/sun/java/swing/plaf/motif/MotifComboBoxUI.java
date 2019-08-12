@@ -35,7 +35,7 @@ import java.beans.*;
 
 /**
  * ComboBox motif look and feel
- * <p> * <strong>Warning:</strong>
+ * * <strong>Warning:</strong>
  * Serialized objects of this class will not be compatible with
  * future Swing releases.  The current serialization support is appropriate
  * for short term storage or RMI between applications running the same

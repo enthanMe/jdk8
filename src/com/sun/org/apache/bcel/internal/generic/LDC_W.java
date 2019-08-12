@@ -63,7 +63,7 @@ import com.sun.org.apache.bcel.internal.util.ByteSequence;
 /**
  * LDC_W - Push item from constant pool (wide index)
  *
- * <PRE>Stack: ... -&gt; ..., item.word1, item.word2</PRE>
+ * <PRE>Stack: ... -> ..., item.word1, item.word2</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

@@ -38,10 +38,10 @@ import javax.xml.crypto.dsig.SignatureMethod;
  * output. The XML Schema Definition of the <code>HMACOutputLength</code>
  * element is defined as:
  * <pre><code>
- * &lt;element name="HMACOutputLength" minOccurs="0" type="ds:HMACOutputLengthType"/&gt;
- * &lt;simpleType name="HMACOutputLengthType"&gt;
- *   &lt;restriction base="integer"/&gt;
- * &lt;/simpleType&gt;
+ * <element name="HMACOutputLength" minOccurs="0" type="ds:HMACOutputLengthType"/>
+ * <simpleType name="HMACOutputLengthType">
+ *   <restriction base="integer"/>
+ * </simpleType>
  * </code></pre>
  *
  * @author Sean Mullan

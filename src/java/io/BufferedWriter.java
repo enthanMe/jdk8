@@ -30,16 +30,16 @@ package java.io;
  * Writes text to a character-output stream, buffering characters so as to
  * provide for the efficient writing of single characters, arrays, and strings.
  *
- * <p> The buffer size may be specified, or the default size may be accepted.
+ * The buffer size may be specified, or the default size may be accepted.
  * The default is large enough for most purposes.
  *
- * <p> A newLine() method is provided, which uses the platform's own notion of
+ * A newLine() method is provided, which uses the platform's own notion of
  * line separator as defined by the system property <tt>line.separator</tt>.
  * Not all platforms use the newline character ('\n') to terminate lines.
  * Calling this method to terminate each output line is therefore preferred to
  * writing a newline character directly.
  *
- * <p> In general, a Writer sends its output immediately to the underlying
+ * In general, a Writer sends its output immediately to the underlying
  * character or byte stream.  Unless prompt output is required, it is advisable
  * to wrap a BufferedWriter around any Writer whose write() operations may be
  * costly, such as FileWriters and OutputStreamWriters.  For example,
@@ -157,7 +157,7 @@ public class BufferedWriter extends Writer {
     /**
      * Writes a portion of an array of characters.
      *
-     * <p> Ordinarily this method stores characters from the given array into
+     * Ordinarily this method stores characters from the given array into
      * this stream's buffer, flushing the buffer to the underlying stream as
      * needed.  If the requested length is at least as large as the buffer,
      * however, then this method will flush the buffer and write the characters
@@ -204,7 +204,7 @@ public class BufferedWriter extends Writer {
     /**
      * Writes a portion of a String.
      *
-     * <p> If the value of the <tt>len</tt> parameter is negative then no
+     * If the value of the <tt>len</tt> parameter is negative then no
      * characters are written.  This is contrary to the specification of this
      * method in the {@linkplain java.io.Writer#write(java.lang.String,int,int)
      * superclass}, which requires that an {@link IndexOutOfBoundsException} be

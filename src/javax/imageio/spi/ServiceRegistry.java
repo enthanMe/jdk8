@@ -38,18 +38,18 @@ import java.util.ServiceLoader;
 /**
  * A registry for service provider instances.
  *
- * <p> A <i>service</i> is a well-known set of interfaces and (usually
+ * A <i>service</i> is a well-known set of interfaces and (usually
  * abstract) classes.  A <i>service provider</i> is a specific
  * implementation of a service.  The classes in a provider typically
  * implement the interface or subclass the class defined by the
  * service itself.
  *
- * <p> Service providers are stored in one or more <i>categories</i>,
+ * Service providers are stored in one or more <i>categories</i>,
  * each of which is defined by a class of interface (described by a
  * <code>Class</code> object) that all of its members must implement.
  * The set of categories may be changed dynamically.
  *
- * <p> Only a single instance of a given leaf class (that is, the
+ * Only a single instance of a given leaf class (that is, the
  * actual class returned by <code>getClass()</code>, as opposed to any
  * inherited classes or interfaces) may be registered.  That is,
  * suppose that the
@@ -62,7 +62,7 @@ import java.util.ServiceLoader;
  * the previous instance.  In practice, service provider objects are
  * usually singletons so this behavior is appropriate.
  *
- * <p> To declare a service provider, a <code>services</code>
+ * To declare a service provider, a <code>services</code>
  * subdirectory is placed within the <code>META-INF</code> directory
  * that is present in every JAR file.  This directory contains a file
  * for each service provider interface that has one or more
@@ -79,16 +79,16 @@ import java.util.ServiceLoader;
  * com.mycompany.mypkg.MyService
  * </pre>
  *
- * <p> The service provider classes should be to be lightweight and
+ * The service provider classes should be to be lightweight and
  * quick to load.  Implementations of these interfaces should avoid
  * complex dependencies on other classes and on native code. The usual
  * pattern for more complex services is to register a lightweight
  * proxy for the heavyweight service.
  *
- * <p> An application may customize the contents of a registry as it
+ * An application may customize the contents of a registry as it
  * sees fit, so long as it has the appropriate runtime permission.
  *
- * <p> For more details on declaring service providers, and the JAR
+ * For more details on declaring service providers, and the JAR
  * format in general, see the <a
  * href="../../../../technotes/guides/jar/jar.html">
  * JAR File Specification</a>.
@@ -136,7 +136,7 @@ public class ServiceRegistry {
      * Searches for implementations of a particular service class
      * using the given class loader.
      *
-     * <p> This method transforms the name of the given service class
+     * This method transforms the name of the given service class
      * into a provider-configuration filename as described in the
      * class comment and then uses the <code>getResources</code>
      * method of the given class loader to find all available files
@@ -145,7 +145,7 @@ public class ServiceRegistry {
      * returned uses the given class loader to look up and then
      * instantiate each element of the list.
      *
-     * <p> Because it is possible for extensions to be installed into
+     * Because it is possible for extensions to be installed into
      * a running Java virtual machine, this method may return
      * different results each time it is invoked.
      *
@@ -241,7 +241,7 @@ public class ServiceRegistry {
      * Adds a service provider object to the registry.  The provider
      * is associated with the given category.
      *
-     * <p> If <code>provider</code> implements the
+     * If <code>provider</code> implements the
      * <code>RegisterableService</code> interface, its
      * <code>onRegistration</code> method will be called.  Its
      * <code>onDeregistration</code> method will be called each time
@@ -284,7 +284,7 @@ public class ServiceRegistry {
      * is associated within each category present in the registry
      * whose <code>Class</code> it implements.
      *
-     * <p> If <code>provider</code> implements the
+     * If <code>provider</code> implements the
      * <code>RegisterableService</code> interface, its
      * <code>onRegistration</code> method will be called once for each
      * category it is registered under.  Its
@@ -314,7 +314,7 @@ public class ServiceRegistry {
      * associated within each category present in the registry whose
      * <code>Class</code> it implements.
      *
-     * <p> For each entry of <code>providers</code> that implements
+     * For each entry of <code>providers</code> that implements
      * the <code>RegisterableService</code> interface, its
      * <code>onRegistration</code> method will be called once for each
      * category it is registered under.  Its
@@ -346,7 +346,7 @@ public class ServiceRegistry {
      * <code>provider</code> is registered, it will not be
      * deregistered.
      *
-     * <p> If <code>provider</code> implements the
+     * If <code>provider</code> implements the
      * <code>RegisterableService</code> interface, its
      * <code>onDeregistration</code> method will be called.
      *
@@ -488,7 +488,7 @@ public class ServiceRegistry {
      * imposed by the supplied <code>ServiceRegistry.Filter</code>
      * object's <code>filter</code> method.
      *
-     * <p> The <code>useOrdering</code> argument controls the
+     * The <code>useOrdering</code> argument controls the
      * ordering of the results using the same rules as
      * <code>getServiceProviders(Class, boolean)</code>.
      *
@@ -561,7 +561,7 @@ public class ServiceRegistry {
      * were ordered in the reverse direction, that ordering is
      * removed.
      *
-     * <p> The ordering will be used by the
+     * The ordering will be used by the
      * <code>getServiceProviders</code> methods when their
      * <code>useOrdering</code> argument is <code>true</code>.
      *
@@ -607,7 +607,7 @@ public class ServiceRegistry {
      * ordering is currently set between them, nothing happens
      * and <code>false</code> is returned.
      *
-     * <p> The ordering will be used by the
+     * The ordering will be used by the
      * <code>getServiceProviders</code> methods when their
      * <code>useOrdering</code> argument is <code>true</code>.
      *

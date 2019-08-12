@@ -60,7 +60,7 @@ public class HTMLWriter extends AbstractWriter {
      * Stores all embedded tags. Embedded tags are tags that are
      * stored as attributes in other tags. Generally they're
      * character level attributes.  Examples include
-     * &lt;b&gt;, &lt;i&gt;, &lt;font&gt;, and &lt;a&gt;.
+     * <b>, <i>, <font>, and <a>.
      */
     private Vector<HTML.Tag> tags = new Vector<HTML.Tag>(10);
 
@@ -85,7 +85,7 @@ public class HTMLWriter extends AbstractWriter {
     private boolean wroteHead;
 
     /**
-     * Set to true when entities (such as &lt;) should be replaced.
+     * Set to true when entities (such as <) should be replaced.
      */
     private boolean replaceEntities;
 
@@ -1110,7 +1110,7 @@ public class HTMLWriter extends AbstractWriter {
     }
 
     /**
-     * Create/update an HTML &lt;font&gt; tag attribute.  The
+     * Create/update an HTML <font> tag attribute.  The
      * value of the attribute should be a MutableAttributeSet so
      * that the attributes can be updated as they are discovered.
      */
@@ -1176,7 +1176,7 @@ public class HTMLWriter extends AbstractWriter {
 
     /**
      * This method is overriden to map any character entities, such as
-     * &lt; to &amp;lt;. <code>super.output</code> will be invoked to
+     * < to &amp;lt;. <code>super.output</code> will be invoked to
      * write the content.
      * @since 1.3
      */
@@ -1198,14 +1198,14 @@ public class HTMLWriter extends AbstractWriter {
                     super.output(chars, last, counter - last);
                 }
                 last = counter + 1;
-                output("&lt;");
+                output("<");
                 break;
             case '>':
                 if (counter > last) {
                     super.output(chars, last, counter - last);
                 }
                 last = counter + 1;
-                output("&gt;");
+                output(">");
                 break;
             case '&':
                 if (counter > last) {

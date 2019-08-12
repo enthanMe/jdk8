@@ -63,9 +63,9 @@ import com.sun.org.apache.bcel.internal.ExceptionConstants;
 
 /**
  * GETFIELD - Fetch field from object
- * <PRE>Stack: ..., objectref -&gt; ..., value</PRE>
+ * <PRE>Stack: ..., objectref -> ..., value</PRE>
  * OR
- * <PRE>Stack: ..., objectref -&gt; ..., value.word1, value.word2</PRE>
+ * <PRE>Stack: ..., objectref -> ..., value.word1, value.word2</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

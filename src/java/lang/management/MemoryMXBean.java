@@ -31,7 +31,7 @@ import javax.management.openmbean.CompositeData;
  * The management interface for the memory system of
  * the Java virtual machine.
  *
- * <p> A Java virtual machine has a single instance of the implementation
+ * A Java virtual machine has a single instance of the implementation
  * class of this interface.  This instance implementing this interface is
  * an <a href="ManagementFactory.html#MXBean">MXBean</a>
  * that can be obtained by calling
@@ -67,14 +67,14 @@ import javax.management.openmbean.CompositeData;
  * The Java virtual machine manages memory other than the heap
  * (referred as <i>non-heap memory</i>).
  *
- * <p> The Java virtual machine has a <i>method area</i> that is shared
+ * The Java virtual machine has a <i>method area</i> that is shared
  * among all threads.
  * The method area belongs to non-heap memory.  It stores per-class structures
  * such as a runtime constant pool, field and method data, and the code for
  * methods and constructors.  It is created at the Java virtual machine
  * start-up.
  *
- * <p> The method area is logically part of the heap but a Java virtual
+ * The method area is logically part of the heap but a Java virtual
  * machine implementation may choose not to either garbage collect
  * or compact it.  Similar to the heap, the method area may be of a
  * fixed size or may be expanded and shrunk.  The memory for the

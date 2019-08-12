@@ -49,11 +49,11 @@ import org.w3c.dom.DOMException;
 /**
  *  An interface to an object that is able to build, or augment, a DOM tree
  * from various input sources.
- * <p> <code>LSParser</code> provides an API for parsing XML and building the
+ * <code>LSParser</code> provides an API for parsing XML and building the
  * corresponding DOM document structure. A <code>LSParser</code> instance
  * can be obtained by invoking the
  * <code>DOMImplementationLS.createLSParser()</code> method.
- * <p> As specified in [<a href='http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407'>DOM Level 3 Core</a>]
+ * As specified in [<a href='http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407'>DOM Level 3 Core</a>]
  * , when a document is first made available via the LSParser:
  * <ul>
  * <li> there will
@@ -75,11 +75,11 @@ import org.w3c.dom.DOMException;
  * .
  * </li>
  * </ul>
- * <p> Asynchronous <code>LSParser</code> objects are expected to also
+ * Asynchronous <code>LSParser</code> objects are expected to also
  * implement the <code>events::EventTarget</code> interface so that event
  * listeners can be registered on asynchronous <code>LSParser</code>
  * objects.
- * <p> Events supported by asynchronous <code>LSParser</code> objects are:
+ * Events supported by asynchronous <code>LSParser</code> objects are:
  * <dl>
  * <dt>load</dt>
  * <dd>
@@ -101,7 +101,7 @@ import org.w3c.dom.DOMException;
  * </dl>
  * <p ><b>Note:</b>  All events defined in this specification use the
  * namespace URI <code>"http://www.w3.org/2002/DOMLS"</code>.
- * <p> While parsing an input source, errors are reported to the application
+ * While parsing an input source, errors are reported to the application
  * through the error handler (<code>LSParser.domConfig</code>'s "<a href='http://www.w3.org/TR/DOM-Level-3-Core/core.html#parameter-error-handler'>
  * error-handler</a>" parameter). This specification does in no way try to define all possible
  * errors that can occur while parsing XML, or any other markup, but some
@@ -130,12 +130,12 @@ import org.w3c.dom.DOMException;
  * this warning will be raised is if the configuration parameter "<a href='http://www.w3.org/TR/DOM-Level-3-Core/core.html#parameter-entities'>
  * entities</a>" is set to <code>false</code> and the following XML file is parsed:
  * <pre>
- * &lt;!DOCTYPE root [ &lt;!ENTITY e SYSTEM 'subdir/myentity.ent' ]&gt;
- * &lt;root&gt; &amp;e; &lt;/root&gt;</pre>
+ * <!DOCTYPE root [ <!ENTITY e SYSTEM 'subdir/myentity.ent' ]>
+ * <root> &amp;e; </root></pre>
  *  And <code>subdir/myentity.ent</code>
  * contains:
- * <pre>&lt;one&gt; &lt;two/&gt; &lt;/one&gt; &lt;?pi 3.14159?&gt;
- * &lt;more/&gt;</pre>
+ * <pre><one> <two/> </one> <?pi 3.14159?>
+ * <more/></pre>
  * </dd>
  * <dt><code>"unbound-prefix-in-entity" [warning]</code></dt>
  * <dd> An
@@ -160,7 +160,7 @@ import org.w3c.dom.DOMException;
  * Raised if the configuration parameter "supported-media-types-only" is set
  * to <code>true</code> and an unsupported media type is encountered. </dd>
  * </dl>
- * <p> In addition to raising the defined errors and warnings, implementations
+ * In addition to raising the defined errors and warnings, implementations
  * are expected to raise implementation specific errors and warnings for any
  * other error and warning cases such as IO errors (file not found,
  * permission denied,...), XML well-formedness errors, and so on.

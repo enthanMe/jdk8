@@ -33,12 +33,12 @@ import java.io.IOException;
  * consist of <em>mandatory</em> and <em>optional</em> file attributes as
  * defined by the {@link BasicFileAttributes} interface.
 
- * <p> The file attributes are retrieved from the file system as a <em>bulk
+ * The file attributes are retrieved from the file system as a <em>bulk
  * operation</em> by invoking the {@link #readAttributes() readAttributes} method.
  * This class also defines the {@link #setTimes setTimes} method to update the
  * file's time attributes.
  *
- * <p> Where dynamic access to file attributes is required, the attributes
+ * Where dynamic access to file attributes is required, the attributes
  * supported by this attribute view have the following names and types:
  * <blockquote>
  *  <table border="1" cellpadding="8" summary="Supported attributes">
@@ -85,11 +85,11 @@ import java.io.IOException;
  * </table>
  * </blockquote>
  *
- * <p> The {@link java.nio.file.Files#getAttribute getAttribute} method may be
+ * The {@link java.nio.file.Files#getAttribute getAttribute} method may be
  * used to read any of these attributes as if by invoking the {@link
  * #readAttributes() readAttributes()} method.
  *
- * <p> The {@link java.nio.file.Files#setAttribute setAttribute} method may be
+ * The {@link java.nio.file.Files#setAttribute setAttribute} method may be
  * used to update the file's last modified time, last access time or create time
  * attributes as if by invoking the {@link #setTimes setTimes} method.
  *
@@ -109,7 +109,7 @@ public interface BasicFileAttributeView
     /**
      * Reads the basic file attributes as a bulk operation.
      *
-     * <p> It is implementation specific if all file attributes are read as an
+     * It is implementation specific if all file attributes are read as an
      * atomic operation with respect to other file system operations.
      *
      * @return  the file attributes
@@ -127,7 +127,7 @@ public interface BasicFileAttributeView
      * Updates any or all of the file's last modified time, last access time,
      * and create time attributes.
      *
-     * <p> This method updates the file's timestamp attributes. The values are
+     * This method updates the file's timestamp attributes. The values are
      * converted to the epoch and precision supported by the file system.
      * Converting from finer to coarser granularities result in precision loss.
      * The behavior of this method when attempting to set a timestamp that is
@@ -135,7 +135,7 @@ public interface BasicFileAttributeView
      * underlying file store is not defined. It may or not fail by throwing an
      * {@code IOException}.
      *
-     * <p> If any of the {@code lastModifiedTime}, {@code lastAccessTime},
+     * If any of the {@code lastModifiedTime}, {@code lastAccessTime},
      * or {@code createTime} parameters has the value {@code null} then the
      * corresponding timestamp is not changed. An implementation may require to
      * read the existing values of the file attributes when only some, but not
@@ -146,7 +146,7 @@ public interface BasicFileAttributeView
      * lastAccessTime} and {@code createTime} parameters are {@code null} then
      * this method has no effect.
      *
-     * <p> <b>Usage Example:</b>
+     * <b>Usage Example:</b>
      * Suppose we want to change a file's last access time.
      * <pre>
      *    Path path = ...

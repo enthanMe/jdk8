@@ -63,7 +63,7 @@ import com.sun.org.apache.bcel.internal.util.ByteSequence;
 /**
  * RET - Return from subroutine
  *
- * <PRE>Stack: ..., -&gt; ..., address</PRE>
+ * <PRE>Stack: ..., -> ..., address</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

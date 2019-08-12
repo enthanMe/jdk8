@@ -234,7 +234,7 @@ final class AttributeHTML implements com.sun.org.apache.bcel.internal.Constants 
         if(index > 0)
           name =((ConstantUtf8)constant_pool.getConstant(index, CONSTANT_Utf8)).getBytes();
         else
-          name = "&lt;anonymous&gt;";
+          name = "<anonymous>";
 
         access = Utility.accessToString(classes[i].getInnerAccessFlags());
 

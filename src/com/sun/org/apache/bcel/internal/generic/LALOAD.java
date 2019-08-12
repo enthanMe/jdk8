@@ -60,7 +60,7 @@ package com.sun.org.apache.bcel.internal.generic;
 
 /**
  * LALOAD - Load long from array
- * <PRE>Stack: ..., arrayref, index -&gt; ..., value1, value2</PRE>
+ * <PRE>Stack: ..., arrayref, index -> ..., value1, value2</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

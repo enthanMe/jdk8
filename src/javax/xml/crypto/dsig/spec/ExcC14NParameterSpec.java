@@ -40,16 +40,16 @@ import java.util.List;
  * Schema Definition of the Exclusive XML Canonicalization parameters is
  * defined as:
  * <pre><code>
- * &lt;schema xmlns="http://www.w3.org/2001/XMLSchema"
+ * <schema xmlns="http://www.w3.org/2001/XMLSchema"
  *         xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#"
  *         targetNamespace="http://www.w3.org/2001/10/xml-exc-c14n#"
- *         version="0.1" elementFormDefault="qualified"&gt;
+ *         version="0.1" elementFormDefault="qualified">
  *
- * &lt;element name="InclusiveNamespaces" type="ec:InclusiveNamespaces"/&gt;
- * &lt;complexType name="InclusiveNamespaces"&gt;
- *   &lt;attribute name="PrefixList" type="xsd:string"/&gt;
- * &lt;/complexType&gt;
- * &lt;/schema&gt;
+ * <element name="InclusiveNamespaces" type="ec:InclusiveNamespaces"/>
+ * <complexType name="InclusiveNamespaces">
+ *   <attribute name="PrefixList" type="xsd:string"/>
+ * </complexType>
+ * </schema>
  * </code></pre>
  *
  * @author Sean Mullan

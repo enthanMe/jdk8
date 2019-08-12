@@ -63,7 +63,7 @@ import java.io.IOException;
  * PermissionCollection that uses a hashtable will be created and used. Each
  * hashtable entry stores a Permission object as both the key and the value.
  *
- * <p> Enumerations returned via the {@code elements} method are
+ * Enumerations returned via the {@code elements} method are
  * not <em>fail-fast</em>.  Modifications to a collection should not be
  * performed while enumerating over that collection.
  *

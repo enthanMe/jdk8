@@ -305,7 +305,7 @@ class RegexParser {
      * term ::= factor+
      * factor ::= ('^' | '$' | '\A' | '\Z' | '\z' | '\b' | '\B' | '\<' | '\>'
      *            | atom (('*' | '+' | '?' | minmax ) '?'? )?)
-     *            | '(?=' regex ')'  | '(?!' regex ')'  | '(?&lt;=' regex ')'  | '(?&lt;!' regex ')'
+     *            | '(?=' regex ')'  | '(?!' regex ')'  | '(?<=' regex ')'  | '(?<!' regex ')'
      * atom ::= char | '.' | range | '(' regex ')' | '(?:' regex ')' | '\' [0-9]
      *          | '\w' | '\W' | '\d' | '\D' | '\s' | '\S' | category-block
      */
@@ -645,7 +645,7 @@ class RegexParser {
     /**
      * factor ::= ('^' | '$' | '\A' | '\Z' | '\z' | '\b' | '\B' | '\<' | '\>'
      *            | atom (('*' | '+' | '?' | minmax ) '?'? )?)
-     *            | '(?=' regex ')'  | '(?!' regex ')'  | '(?&lt;=' regex ')'  | '(?&lt;!' regex ')'
+     *            | '(?=' regex ')'  | '(?!' regex ')'  | '(?<=' regex ')'  | '(?<!' regex ')'
      *            | '(?#' [^)]* ')'
      * minmax ::= '{' min (',' max?)? '}'
      * min ::= [0-9]+

@@ -36,7 +36,7 @@ import sun.swing.text.html.FrameEditorPaneTag;
 
 /**
  * Implements a FrameView, intended to support the HTML
- * &lt;FRAME&gt; tag.  Supports the frameborder, scrolling,
+ * <FRAME> tag.  Supports the frameborder, scrolling,
  * marginwidth and marginheight attributes.
  *
  * @author    Sunita Mani

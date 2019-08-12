@@ -30,7 +30,7 @@ package com.sun.security.auth;
  * interface typically also implements this interface to provide
  * a means for comparing that object to a specified <code>Subject</code>.
  *
- * <p> The comparison is achieved via the <code>implies</code> method.
+ * The comparison is achieved via the <code>implies</code> method.
  * The implementation of the <code>implies</code> method determines
  * whether this object "implies" the specified <code>Subject</code>.
  * One example application of this method may be for
@@ -40,7 +40,7 @@ package com.sun.security.auth;
  * "role" object to imply a particular <code>Subject</code>
  * if that <code>Subject</code> is currently acting in that role.
  *
- * <p> Although classes that implement this interface typically
+ * Although classes that implement this interface typically
  * also implement the <code>java.security.Principal</code> interface,
  * it is not required.  In other words, classes may implement the
  * <code>java.security.Principal</code> interface by itself,

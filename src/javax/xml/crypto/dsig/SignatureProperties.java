@@ -36,13 +36,13 @@ import java.util.List;
  * W3C Recommendation for XML-Signature Syntax and Processing</a>.
  * The XML Schema Definition is defined as:
  * <pre><code>
- *&lt;element name="SignatureProperties" type="ds:SignaturePropertiesType"/&gt;
- *   &lt;complexType name="SignaturePropertiesType"&gt;
- *     &lt;sequence&gt;
- *       &lt;element ref="ds:SignatureProperty" maxOccurs="unbounded"/&gt;
- *     &lt;/sequence&gt;
- *     &lt;attribute name="Id" type="ID" use="optional"/&gt;
- *   &lt;/complexType&gt;
+ *<element name="SignatureProperties" type="ds:SignaturePropertiesType"/>
+ *   <complexType name="SignaturePropertiesType">
+ *     <sequence>
+ *       <element ref="ds:SignatureProperty" maxOccurs="unbounded"/>
+ *     </sequence>
+ *     <attribute name="Id" type="ID" use="optional"/>
+ *   </complexType>
  * </code></pre>
  *
  * A <code>SignatureProperties</code> instance may be created by invoking the

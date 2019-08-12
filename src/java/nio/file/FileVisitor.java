@@ -33,12 +33,12 @@ import java.io.IOException;
  * {@link Files#walkFileTree Files.walkFileTree} methods to visit each file in
  * a file tree.
  *
- * <p> <b>Usage Examples:</b>
+ * <b>Usage Examples:</b>
  * Suppose we want to delete a file tree. In that case, each directory should
  * be deleted after the entries in the directory are deleted.
  * <pre>
  *     Path start = ...
- *     Files.walkFileTree(start, new SimpleFileVisitor&lt;Path&gt;() {
+ *     Files.walkFileTree(start, new SimpleFileVisitor<Path>() {
  *         &#64;Override
  *         public FileVisitResult visitFile(Path file, BasicFileAttributes attrs)
  *             throws IOException
@@ -60,7 +60,7 @@ import java.io.IOException;
  *         }
  *     });
  * </pre>
- * <p> Furthermore, suppose we want to copy a file tree to a target location.
+ * Furthermore, suppose we want to copy a file tree to a target location.
  * In that case, symbolic links should be followed and the target directory
  * should be created before the entries in the directory are copied.
  * <pre>
@@ -68,7 +68,7 @@ import java.io.IOException;
  *     final Path target = ...
  *
  *     Files.walkFileTree(source, EnumSet.of(FileVisitOption.FOLLOW_LINKS), Integer.MAX_VALUE,
- *         new SimpleFileVisitor&lt;Path&gt;() {
+ *         new SimpleFileVisitor<Path>() {
  *             &#64;Override
  *             public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs)
  *                 throws IOException
@@ -100,7 +100,7 @@ public interface FileVisitor<T> {
     /**
      * Invoked for a directory before entries in the directory are visited.
      *
-     * <p> If this method returns {@link FileVisitResult#CONTINUE CONTINUE},
+     * If this method returns {@link FileVisitResult#CONTINUE CONTINUE},
      * then entries in the directory are visited. If this method returns {@link
      * FileVisitResult#SKIP_SUBTREE SKIP_SUBTREE} or {@link
      * FileVisitResult#SKIP_SIBLINGS SKIP_SIBLINGS} then entries in the

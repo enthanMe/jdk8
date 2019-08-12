@@ -86,7 +86,7 @@ public class PaintEvent extends ComponentEvent {
     /**
      * Constructs a <code>PaintEvent</code> object with the specified
      * source component and type.
-     * <p> This method throws an
+     * This method throws an
      * <code>IllegalArgumentException</code> if <code>source</code>
      * is <code>null</code>.
      *

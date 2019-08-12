@@ -28,10 +28,10 @@ package java.net;
 /**
  * Defines the <em>standard</em> socket options.
  *
- * <p> The {@link SocketOption#name name} of each socket option defined by this
+ * The {@link SocketOption#name name} of each socket option defined by this
  * class is its field name.
  *
- * <p> In this release, the socket options defined here are used by {@link
+ * In this release, the socket options defined here are used by {@link
  * java.nio.channels.NetworkChannel network} channels in the {@link
  * java.nio.channels channels} package.
  *
@@ -46,13 +46,13 @@ public final class StandardSocketOptions {
     /**
      * Allow transmission of broadcast datagrams.
      *
-     * <p> The value of this socket option is a {@code Boolean} that represents
+     * The value of this socket option is a {@code Boolean} that represents
      * whether the option is enabled or disabled. The option is specific to
      * datagram-oriented sockets sending to {@link java.net.Inet4Address IPv4}
      * broadcast addresses. When the socket option is enabled then the socket
      * can be used to send <em>broadcast datagrams</em>.
      *
-     * <p> The initial value of this socket option is {@code FALSE}. The socket
+     * The initial value of this socket option is {@code FALSE}. The socket
      * option may be enabled or disabled at any time. Some operating systems may
      * require that the Java virtual machine be started with implementation
      * specific privileges to enable this option or send broadcast datagrams.
@@ -67,14 +67,14 @@ public final class StandardSocketOptions {
     /**
      * Keep connection alive.
      *
-     * <p> The value of this socket option is a {@code Boolean} that represents
+     * The value of this socket option is a {@code Boolean} that represents
      * whether the option is enabled or disabled. When the {@code SO_KEEPALIVE}
      * option is enabled the operating system may use a <em>keep-alive</em>
      * mechanism to periodically probe the other end of a connection when the
      * connection is otherwise idle. The exact semantics of the keep alive
      * mechanism is system dependent and therefore unspecified.
      *
-     * <p> The initial value of this socket option is {@code FALSE}. The socket
+     * The initial value of this socket option is {@code FALSE}. The socket
      * option may be enabled or disabled at any time.
      *
      * @see <a href="http://www.ietf.org/rfc/rfc1122.txt">RFC&nbsp;1122
@@ -87,7 +87,7 @@ public final class StandardSocketOptions {
     /**
      * The size of the socket send buffer.
      *
-     * <p> The value of this socket option is an {@code Integer} that is the
+     * The value of this socket option is an {@code Integer} that is the
      * size of the socket send buffer in bytes. The socket send buffer is an
      * output buffer used by the networking implementation. It may need to be
      * increased for high-volume connections. The value of the socket option is
@@ -95,17 +95,17 @@ public final class StandardSocketOptions {
      * size may differ. The socket option can be queried to retrieve the actual
      * size.
      *
-     * <p> For datagram-oriented sockets, the size of the send buffer may limit
+     * For datagram-oriented sockets, the size of the send buffer may limit
      * the size of the datagrams that may be sent by the socket. Whether
      * datagrams larger than the buffer size are sent or discarded is system
      * dependent.
      *
-     * <p> The initial/default size of the socket send buffer and the range of
+     * The initial/default size of the socket send buffer and the range of
      * allowable values is system dependent although a negative size is not
      * allowed. An attempt to set the socket send buffer to larger than its
      * maximum size causes it to be set to its maximum size.
      *
-     * <p> An implementation allows this socket option to be set before the
+     * An implementation allows this socket option to be set before the
      * socket is bound or connected. Whether an implementation allows the
      * socket send buffer to be changed after the socket is bound is system
      * dependent.
@@ -119,7 +119,7 @@ public final class StandardSocketOptions {
     /**
      * The size of the socket receive buffer.
      *
-     * <p> The value of this socket option is an {@code Integer} that is the
+     * The value of this socket option is an {@code Integer} that is the
      * size of the socket receive buffer in bytes. The socket receive buffer is
      * an input buffer used by the networking implementation. It may need to be
      * increased for high-volume connections or decreased to limit the possible
@@ -127,22 +127,22 @@ public final class StandardSocketOptions {
      * <em>hint</em> to the implementation to size the buffer and the actual
      * size may differ.
      *
-     * <p> For datagram-oriented sockets, the size of the receive buffer may
+     * For datagram-oriented sockets, the size of the receive buffer may
      * limit the size of the datagrams that can be received. Whether datagrams
      * larger than the buffer size can be received is system dependent.
      * Increasing the socket receive buffer may be important for cases where
      * datagrams arrive in bursts faster than they can be processed.
      *
-     * <p> In the case of stream-oriented sockets and the TCP/IP protocol, the
+     * In the case of stream-oriented sockets and the TCP/IP protocol, the
      * size of the socket receive buffer may be used when advertising the size
      * of the TCP receive window to the remote peer.
      *
-     * <p> The initial/default size of the socket receive buffer and the range
+     * The initial/default size of the socket receive buffer and the range
      * of allowable values is system dependent although a negative size is not
      * allowed. An attempt to set the socket receive buffer to larger than its
      * maximum size causes it to be set to its maximum size.
      *
-     * <p> An implementation allows this socket option to be set before the
+     * An implementation allows this socket option to be set before the
      * socket is bound or connected. Whether an implementation allows the
      * socket receive buffer to be changed after the socket is bound is system
      * dependent.
@@ -158,11 +158,11 @@ public final class StandardSocketOptions {
     /**
      * Re-use address.
      *
-     * <p> The value of this socket option is a {@code Boolean} that represents
+     * The value of this socket option is a {@code Boolean} that represents
      * whether the option is enabled or disabled. The exact semantics of this
      * socket option are socket type and system dependent.
      *
-     * <p> In the case of stream-oriented sockets, this socket option will
+     * In the case of stream-oriented sockets, this socket option will
      * usually determine whether the socket can be bound to a socket address
      * when a previous connection involving that socket address is in the
      * <em>TIME_WAIT</em> state. On implementations where the semantics differ,
@@ -170,11 +170,11 @@ public final class StandardSocketOptions {
      * socket when a previous connection is in this state, then the
      * implementation may choose to ignore this option.
      *
-     * <p> For datagram-oriented sockets the socket option is used to allow
+     * For datagram-oriented sockets the socket option is used to allow
      * multiple programs bind to the same address. This option should be enabled
      * when the socket is to be used for Internet Protocol (IP) multicasting.
      *
-     * <p> An implementation allows this socket option to be set before the
+     * An implementation allows this socket option to be set before the
      * socket is bound or connected. Changing the value of this socket option
      * after the socket is bound has no effect. The default value of this
      * socket option is system dependent.
@@ -189,7 +189,7 @@ public final class StandardSocketOptions {
     /**
      * Linger on close if data is present.
      *
-     * <p> The value of this socket option is an {@code Integer} that controls
+     * The value of this socket option is an {@code Integer} that controls
      * the action taken when unsent data is queued on the socket and a method
      * to close the socket is invoked. If the value of the socket option is zero
      * or greater, then it represents a timeout value, in seconds, known as the
@@ -201,12 +201,12 @@ public final class StandardSocketOptions {
      * unsent data is transmitted; if possible the operating system will transmit
      * any unsent data before the connection is closed.
      *
-     * <p> This socket option is intended for use with sockets that are configured
+     * This socket option is intended for use with sockets that are configured
      * in {@link java.nio.channels.SelectableChannel#isBlocking() blocking} mode
      * only. The behavior of the {@code close} method when this option is
      * enabled on a non-blocking socket is not defined.
      *
-     * <p> The initial value of this socket option is a negative value, meaning
+     * The initial value of this socket option is a negative value, meaning
      * that the option is disabled. The option may be enabled, or the linger
      * interval changed, at any time. The maximum value of the linger interval
      * is system dependent. Setting the linger interval to a value that is
@@ -224,7 +224,7 @@ public final class StandardSocketOptions {
     /**
      * The Type of Service (ToS) octet in the Internet Protocol (IP) header.
      *
-     * <p> The value of this socket option is an {@code Integer} representing
+     * The value of this socket option is an {@code Integer} representing
      * the value of the ToS octet in IP packets sent by sockets to an {@link
      * StandardProtocolFamily#INET IPv4} socket. The interpretation of the ToS
      * octet is network specific and is not defined by this class. Further
@@ -234,14 +234,14 @@ public final class StandardSocketOptions {
      * of the socket option is a <em>hint</em>. An implementation may ignore the
      * value, or ignore specific values.
      *
-     * <p> The initial/default value of the TOS field in the ToS octet is
+     * The initial/default value of the TOS field in the ToS octet is
      * implementation specific but will typically be {@code 0}. For
      * datagram-oriented sockets the option may be configured at any time after
      * the socket has been bound. The new value of the octet is used when sending
      * subsequent datagrams. It is system dependent whether this option can be
      * queried or changed prior to binding the socket.
      *
-     * <p> The behavior of this socket option on a stream-oriented socket, or an
+     * The behavior of this socket option on a stream-oriented socket, or an
      * {@link StandardProtocolFamily#INET6 IPv6} socket, is not defined in this
      * release.
      *
@@ -253,14 +253,14 @@ public final class StandardSocketOptions {
     /**
      * The network interface for Internet Protocol (IP) multicast datagrams.
      *
-     * <p> The value of this socket option is a {@link NetworkInterface} that
+     * The value of this socket option is a {@link NetworkInterface} that
      * represents the outgoing interface for multicast datagrams sent by the
      * datagram-oriented socket. For {@link StandardProtocolFamily#INET6 IPv6}
      * sockets then it is system dependent whether setting this option also
      * sets the outgoing interface for multicast datagrams sent to IPv4
      * addresses.
      *
-     * <p> The initial/default value of this socket option may be {@code null}
+     * The initial/default value of this socket option may be {@code null}
      * to indicate that outgoing interface will be selected by the operating
      * system, typically based on the network routing tables. An implementation
      * allows this socket option to be set after the socket is bound. Whether
@@ -276,7 +276,7 @@ public final class StandardSocketOptions {
     /**
      * The <em>time-to-live</em> for Internet Protocol (IP) multicast datagrams.
      *
-     * <p> The value of this socket option is an {@code Integer} in the range
+     * The value of this socket option is an {@code Integer} in the range
      * {@code 0 <= value <= 255}. It is used to control the scope of multicast
      * datagrams sent by the datagram-oriented socket.
      * In the case of an {@link StandardProtocolFamily#INET IPv4} socket
@@ -289,7 +289,7 @@ public final class StandardSocketOptions {
      * system dependent whether the option also sets the <em>time-to-live</em>
      * on multicast datagrams sent to IPv4 addresses.
      *
-     * <p> The initial/default value of the time-to-live setting is typically
+     * The initial/default value of the time-to-live setting is typically
      * {@code 1}. An implementation allows this socket option to be set after
      * the socket is bound. Whether the socket option can be queried or changed
      * prior to binding the socket is system dependent.
@@ -303,18 +303,18 @@ public final class StandardSocketOptions {
     /**
      * Loopback for Internet Protocol (IP) multicast datagrams.
      *
-     * <p> The value of this socket option is a {@code Boolean} that controls
+     * The value of this socket option is a {@code Boolean} that controls
      * the <em>loopback</em> of multicast datagrams. The value of the socket
      * option represents if the option is enabled or disabled.
      *
-     * <p> The exact semantics of this socket options are system dependent.
+     * The exact semantics of this socket options are system dependent.
      * In particular, it is system dependent whether the loopback applies to
      * multicast datagrams sent from the socket or received by the socket.
      * For {@link StandardProtocolFamily#INET6 IPv6} sockets then it is
      * system dependent whether the option also applies to multicast datagrams
      * sent to IPv4 addresses.
      *
-     * <p> The initial/default value of this socket option is {@code TRUE}. An
+     * The initial/default value of this socket option is {@code TRUE}. An
      * implementation allows this socket option to be set after the socket is
      * bound. Whether the socket option can be queried or changed prior to
      * binding the socket is system dependent.
@@ -331,13 +331,13 @@ public final class StandardSocketOptions {
     /**
      * Disable the Nagle algorithm.
      *
-     * <p> The value of this socket option is a {@code Boolean} that represents
+     * The value of this socket option is a {@code Boolean} that represents
      * whether the option is enabled or disabled. The socket option is specific to
      * stream-oriented sockets using the TCP/IP protocol. TCP/IP uses an algorithm
      * known as <em>The Nagle Algorithm</em> to coalesce short segments and
      * improve network efficiency.
      *
-     * <p> The default value of this socket option is {@code FALSE}. The
+     * The default value of this socket option is {@code FALSE}. The
      * socket option should only be enabled in cases where it is known that the
      * coalescing impacts performance. The socket option may be enabled at any
      * time. In other words, the Nagle Algorithm can be disabled. Once the option

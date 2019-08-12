@@ -36,13 +36,13 @@ import com.sun.security.auth.SolarisNumericUserPrincipal;
 import com.sun.security.auth.SolarisNumericGroupPrincipal;
 
 /**
- * <p> This <code>LoginModule</code> imports a user's Solaris
+ * This <code>LoginModule</code> imports a user's Solaris
  * <code>Principal</code> information (<code>SolarisPrincipal</code>,
  * <code>SolarisNumericUserPrincipal</code>,
  * and <code>SolarisNumericGroupPrincipal</code>)
  * and associates them with the current <code>Subject</code>.
  *
- * <p> This LoginModule recognizes the debug option.
+ * This LoginModule recognizes the debug option.
  * If set to true in the login Configuration,
  * debug messages will be output to the output stream, System.out.
  * @deprecated  As of JDK1.4, replaced by
@@ -113,7 +113,7 @@ public class SolarisLoginModule implements LoginModule {
     /**
      * Authenticate the user (first phase).
      *
-     * <p> The implementation of this method attempts to retrieve the user's
+     * The implementation of this method attempts to retrieve the user's
      * Solaris <code>Subject</code> information by making a native Solaris
      * system call.
      *
@@ -167,12 +167,12 @@ public class SolarisLoginModule implements LoginModule {
     /**
      * Commit the authentication (second phase).
      *
-     * <p> This method is called if the LoginContext's
+     * This method is called if the LoginContext's
      * overall authentication succeeded
      * (the relevant REQUIRED, REQUISITE, SUFFICIENT and OPTIONAL LoginModules
      * succeeded).
      *
-     * <p> If this LoginModule's own authentication attempt
+     * If this LoginModule's own authentication attempt
      * succeeded (the importing of the Solaris authentication information
      * succeeded), then this method associates the Solaris Principals
      * with the <code>Subject</code> currently tied to the
@@ -226,12 +226,12 @@ public class SolarisLoginModule implements LoginModule {
     /**
      * Abort the authentication (second phase).
      *
-     * <p> This method is called if the LoginContext's
+     * This method is called if the LoginContext's
      * overall authentication failed.
      * (the relevant REQUIRED, REQUISITE, SUFFICIENT and OPTIONAL LoginModules
      * did not succeed).
      *
-     * <p> This method cleans up any state that was originally saved
+     * This method cleans up any state that was originally saved
      * as part of the authentication attempt from the <code>login</code>
      * and <code>commit</code> methods.
      *
@@ -271,7 +271,7 @@ public class SolarisLoginModule implements LoginModule {
     /**
      * Logout the user
      *
-     * <p> This method removes the Principals associated
+     * This method removes the Principals associated
      * with the <code>Subject</code>.
      *
      * <p>

@@ -339,7 +339,7 @@ public class Object {
      * waits should always occur in loops, like this one:
      * <pre>
      *     synchronized (obj) {
-     *         while (&lt;condition does not hold&gt;)
+     *         while (<condition does not hold>)
      *             obj.wait(timeout);
      *         ... // Perform action appropriate to condition
      *     }
@@ -419,7 +419,7 @@ public class Object {
      * possible, and this method should always be used in a loop:
      * <pre>
      *     synchronized (obj) {
-     *         while (&lt;condition does not hold&gt;)
+     *         while (<condition does not hold>)
      *             obj.wait(timeout, nanos);
      *         ... // Perform action appropriate to condition
      *     }
@@ -478,7 +478,7 @@ public class Object {
      * possible, and this method should always be used in a loop:
      * <pre>
      *     synchronized (obj) {
-     *         while (&lt;condition does not hold&gt;)
+     *         while (<condition does not hold>)
      *             obj.wait();
      *         ... // Perform action appropriate to condition
      *     }

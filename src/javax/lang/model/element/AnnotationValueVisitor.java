@@ -44,12 +44,12 @@ import javax.lang.model.type.TypeMirror;
  * the <tt>visit<i>XYZ</i></tt> method applicable to that value is
  * invoked.
  *
- * <p> Classes implementing this interface may or may not throw a
+ * Classes implementing this interface may or may not throw a
  * {@code NullPointerException} if the additional parameter {@code p}
  * is {@code null}; see documentation of the implementing class for
  * details.
  *
- * <p> <b>WARNING:</b> It is possible that methods will be added to
+ * <b>WARNING:</b> It is possible that methods will be added to
  * this interface to accommodate new, currently unknown, language
  * structures added to future versions of the Java&trade; programming
  * language.  Therefore, visitor classes directly implementing this
@@ -74,7 +74,7 @@ import javax.lang.model.type.TypeMirror;
  * platform versions.
  *
  * @param <R> the return type of this visitor's methods
- * @param <P> the type of the additional parameter to this visitor's methods.
+ * @param the type of the additional parameter to this visitor's methods.
  * @author Joseph D. Darcy
  * @author Scott Seligman
  * @author Peter von der Ah&eacute;

@@ -222,8 +222,8 @@ public class Class2HTML implements Constants
         char ch;
 
         switch(ch=str.charAt(i)) {
-        case '<': buf.append("&lt;"); break;
-        case '>': buf.append("&gt;"); break;
+        case '<': buf.append("<"); break;
+        case '>': buf.append(">"); break;
         case '\n': buf.append("\\n"); break;
         case '\r': buf.append("\\r"); break;
         default:  buf.append(ch);

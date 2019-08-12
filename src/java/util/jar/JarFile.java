@@ -50,7 +50,7 @@ import sun.security.util.SignatureFileVerifier;
  * <code>Manifest</code> can be used to specify meta-information about the
  * jar file and its entries.
  *
- * <p> Unless otherwise noted, passing a <tt>null</tt> argument to a constructor
+ * Unless otherwise noted, passing a <tt>null</tt> argument to a constructor
  * or method in this class will cause a {@link NullPointerException} to be
  * thrown.
  *

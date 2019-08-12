@@ -39,7 +39,7 @@ import java.util.Iterator;
  *       ("xmlns") in the Namespace declaration</li>
  * </ul>
  * <p>example:
- * <code>&lt;element xmlns:prefix="http://Namespace-name-URI"&gt;</code></p>
+ * <code><element xmlns:prefix="http://Namespace-name-URI"></code></p>
  *
  * <p>All <code>get*(*)</code> methods operate in the current scope
  * for Namespace URI and prefix resolution.</p>
@@ -50,18 +50,18 @@ import java.util.Iterator;
  * ("xmlns") Namespace declarations occur in the same Start-Tag and
  * refer to the same Namespace URI. e.g.<br />
  * <pre>
- * &lt;element xmlns:prefix1="http://Namespace-name-URI"
- *          xmlns:prefix2="http://Namespace-name-URI"&gt;
+ * <element xmlns:prefix1="http://Namespace-name-URI"
+ *          xmlns:prefix2="http://Namespace-name-URI">
  * </pre>
  * This can also occur when the same Namespace URI is used in multiple
  * <code>XMLConstants.XMLNS_ATTRIBUTE</code> ("xmlns") Namespace
  * declarations in the logical parent element hierarchy.  e.g.<br />
  * <pre>
- * &lt;parent xmlns:prefix1="http://Namespace-name-URI">
- *   &lt;child xmlns:prefix2="http://Namespace-name-URI"&gt;
+ * <parent xmlns:prefix1="http://Namespace-name-URI">
+ *   <child xmlns:prefix2="http://Namespace-name-URI">
  *     ...
- *   &lt;/child&gt;
- * &lt;/parent&gt;
+ *   </child>
+ * </parent>
  * </pre></p>
  *
  * <p>A prefix can only be bound to a <strong>single</strong>
@@ -173,7 +173,7 @@ public interface NamespaceContext {
      *   </thead>
      *   <tbody>
      *     <tr>
-     *       <td>&lt;default Namespace URI&gt;</td>
+     *       <td><default Namespace URI></td>
      *       <td><code>XMLConstants.DEFAULT_NS_PREFIX</code> ("")
      *       </td>
      *     </tr>
@@ -245,7 +245,7 @@ public interface NamespaceContext {
      *   <tbody>
      *     <tr>
      *       <td>bound Namespace URI,
-     *         including the &lt;default Namespace URI&gt;</td>
+     *         including the <default Namespace URI></td>
      *       <td>
      *         <code>Iterator</code> over prefixes bound to Namespace URI in
      *         the current scope in an arbitrary,

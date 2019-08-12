@@ -1040,7 +1040,7 @@ public class KeyEvent extends InputEvent {
 
     /**
      * Constructs a <code>KeyEvent</code> object.
-     * <p> This method throws an
+     * This method throws an
      * <code>IllegalArgumentException</code> if <code>source</code>
      * is <code>null</code>.
      *

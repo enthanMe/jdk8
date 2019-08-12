@@ -72,7 +72,7 @@ import com.sun.org.apache.xerces.internal.impl.dtd.XMLContentSpec;
  * by an alternation of the possible children. The children cannot have any
  * numeration or order, so it must look like this:
  * <pre>
- *   &lt;!ELEMENT Foo ((#PCDATA|a|b|c|)*)&gt;
+ *   <!ELEMENT Foo ((#PCDATA|a|b|c|)*)>
  * </pre>
  * So, all we have to do is to keep an array of the possible children and
  * validate by just looking up each child being validated by looking it up

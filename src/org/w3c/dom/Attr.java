@@ -71,7 +71,7 @@ package org.w3c.dom;
  * has been explicitly added. Note that the <code>Node.nodeValue</code>
  * attribute on the <code>Attr</code> instance can also be used to retrieve
  * the string version of the attribute's value(s).
- * <p> If the attribute was not explicitly given a value in the instance
+ * If the attribute was not explicitly given a value in the instance
  * document but has a default value provided by the schema associated with
  * the document, an attribute node will be created with
  * <code>specified</code> set to <code>false</code>. Removing attribute
@@ -139,7 +139,7 @@ package org.w3c.dom;
  * <pre>"y&amp;lt;6"</pre>
  * </td>
  * <td valign='top' rowspan='1' colspan='1'>
- * <pre>"y&lt;6"</pre>
+ * <pre>"y<6"</pre>
  * </td>
  * <td valign='top' rowspan='1' colspan='1'>
  * <pre>"y&amp;lt;6"</pre>
@@ -175,7 +175,7 @@ package org.w3c.dom;
  * <td valign='top' rowspan='1' colspan='1'>Entity <code>e</code> with literal newline</td>
  * <td valign='top' rowspan='1' colspan='1'>
  * <pre>
- * &lt;!ENTITY e '...&amp;#10;...'&gt; [...]&gt; "x=5&amp;e;y=6"</pre>
+ * <!ENTITY e '...&amp;#10;...'> [...]> "x=5&amp;e;y=6"</pre>
  * </td>
  * <td valign='top' rowspan='1' colspan='1'><em>Dependent on Implementation and Load Options</em></td>
  * <td valign='top' rowspan='1' colspan='1'><em>Dependent on Implementation and Load/Save Options</em></td>

@@ -38,7 +38,7 @@ import org.w3c.dom.Element;
  * If you want the your KeyResolver, at firstly you must extend this class, and register
  * as following in config.xml
  * <PRE>
- *  &lt;KeyResolver URI="http://www.w3.org/2000/09/xmldsig#KeyValue"
+ *  <KeyResolver URI="http://www.w3.org/2000/09/xmldsig#KeyValue"
  *   JAVACLASS="MyPackage.MyKeyValueImpl"//gt;
  * </PRE>
  */

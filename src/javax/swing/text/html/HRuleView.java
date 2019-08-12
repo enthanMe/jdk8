@@ -40,7 +40,7 @@ import java.lang.Integer;
 class HRuleView extends View  {
 
     /**
-     * Creates a new view that represents an &lt;hr&gt; element.
+     * Creates a new view that represents an <hr> element.
      *
      * @param elem the element to create a view for
      */

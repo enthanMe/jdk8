@@ -66,7 +66,7 @@ import java.security.spec.AlgorithmParameterSpec;
  * default modulus prime size of 1024 bits for the generation of DSA
  * parameters.
  *
- * <p> Every implementation of the Java platform is required to support the
+ * Every implementation of the Java platform is required to support the
  * following standard {@code AlgorithmParameterGenerator} algorithms and
  * keysizes in parentheses:
  * <ul>
@@ -129,13 +129,13 @@ public class AlgorithmParameterGenerator {
      * Returns an AlgorithmParameterGenerator object for generating
      * a set of parameters to be used with the specified algorithm.
      *
-     * <p> This method traverses the list of registered security Providers,
+     * This method traverses the list of registered security Providers,
      * starting with the most preferred Provider.
      * A new AlgorithmParameterGenerator object encapsulating the
      * AlgorithmParameterGeneratorSpi implementation from the first
      * Provider that supports the specified algorithm is returned.
      *
-     * <p> Note that the list of registered providers may be retrieved via
+     * Note that the list of registered providers may be retrieved via
      * the {@link Security#getProviders() Security.getProviders()} method.
      *
      * @param algorithm the name of the algorithm this
@@ -172,12 +172,12 @@ public class AlgorithmParameterGenerator {
      * Returns an AlgorithmParameterGenerator object for generating
      * a set of parameters to be used with the specified algorithm.
      *
-     * <p> A new AlgorithmParameterGenerator object encapsulating the
+     * A new AlgorithmParameterGenerator object encapsulating the
      * AlgorithmParameterGeneratorSpi implementation from the specified provider
      * is returned.  The specified provider must be registered
      * in the security provider list.
      *
-     * <p> Note that the list of registered providers may be retrieved via
+     * Note that the list of registered providers may be retrieved via
      * the {@link Security#getProviders() Security.getProviders()} method.
      *
      * @param algorithm the name of the algorithm this
@@ -221,7 +221,7 @@ public class AlgorithmParameterGenerator {
      * Returns an AlgorithmParameterGenerator object for generating
      * a set of parameters to be used with the specified algorithm.
      *
-     * <p> A new AlgorithmParameterGenerator object encapsulating the
+     * A new AlgorithmParameterGenerator object encapsulating the
      * AlgorithmParameterGeneratorSpi implementation from the specified Provider
      * object is returned.  Note that the specified Provider object
      * does not have to be registered in the provider list.

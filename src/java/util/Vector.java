@@ -388,7 +388,7 @@ public class Vector<E>
      * this vector, searching forwards from {@code index}, or returns -1 if
      * the element is not found.
      * More formally, returns the lowest index {@code i} such that
-     * <tt>(i&nbsp;&gt;=&nbsp;index&nbsp;&amp;&amp;&nbsp;(o==null&nbsp;?&nbsp;get(i)==null&nbsp;:&nbsp;o.equals(get(i))))</tt>,
+     * <tt>(i&nbsp;>=&nbsp;index&nbsp;&amp;&amp;&nbsp;(o==null&nbsp;?&nbsp;get(i)==null&nbsp;:&nbsp;o.equals(get(i))))</tt>,
      * or -1 if there is no such index.
      *
      * @param o element to search for
@@ -432,7 +432,7 @@ public class Vector<E>
      * this vector, searching backwards from {@code index}, or returns -1 if
      * the element is not found.
      * More formally, returns the highest index {@code i} such that
-     * <tt>(i&nbsp;&lt;=&nbsp;index&nbsp;&amp;&amp;&nbsp;(o==null&nbsp;?&nbsp;get(i)==null&nbsp;:&nbsp;o.equals(get(i))))</tt>,
+     * <tt>(i&nbsp;<=&nbsp;index&nbsp;&amp;&amp;&nbsp;(o==null&nbsp;?&nbsp;get(i)==null&nbsp;:&nbsp;o.equals(get(i))))</tt>,
      * or -1 if there is no such index.
      *
      * @param o element to search for

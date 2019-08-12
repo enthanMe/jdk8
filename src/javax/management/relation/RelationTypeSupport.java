@@ -99,7 +99,7 @@ public class RelationTypeSupport implements RelationType {
     /**
      * @serialField typeName String Relation type name
      * @serialField roleName2InfoMap Map {@link Map} holding the mapping:
-     *              &lt;role name ({@link String})&gt; -&gt; &lt;role info ({@link RoleInfo} object)&gt;
+     *              <role name ({@link String})> -> <role info ({@link RoleInfo} object)>
      * @serialField isInRelationService boolean Flag specifying whether the relation type has been declared in the
      *              Relation Service (so can no longer be updated)
      */
@@ -135,7 +135,7 @@ public class RelationTypeSupport implements RelationType {
 
     /**
      * @serial {@link Map} holding the mapping:
-     *           &lt;role name ({@link String})&gt; -&gt; &lt;role info ({@link RoleInfo} object)&gt;
+     *           <role name ({@link String})> -> <role info ({@link RoleInfo} object)>
      */
     private Map<String,RoleInfo> roleName2InfoMap =
         new HashMap<String,RoleInfo>();

@@ -85,8 +85,8 @@ import javax.management.RuntimeOperationsException;
  *     <td>Frequency of persist cycle in seconds. Used when persistPolicy is
  *         "OnTimer" or "NoMoreOftenThan".</td></tr>
  * <tr><td>currencyTimeLimit</td><td>Number</td>
- *     <td>How long <a href="#value=field">value</a> is valid: &lt;0 never,
- *         =0 always, &gt;0 seconds.</td></tr>
+ *     <td>How long <a href="#value=field">value</a> is valid: <0 never,
+ *         =0 always, >0 seconds.</td></tr>
  * <tr><td>lastUpdatedTimeStamp</td><td>Number</td>
  *     <td>When <a href="#value-field">value</a> was set.</td></tr>
  * <tr><td>visibility</td><td>Number</td>

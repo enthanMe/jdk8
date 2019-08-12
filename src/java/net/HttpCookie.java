@@ -41,7 +41,7 @@ import java.util.Objects;
  * information between server and user agent. Cookie is widely adopted
  * to create stateful sessions.
  *
- * <p> There are 3 HTTP cookie specifications:
+ * There are 3 HTTP cookie specifications:
  * <blockquote>
  *   Netscape draft<br>
  *   RFC 2109 - <a href="http://www.ietf.org/rfc/rfc2109.txt">
@@ -50,7 +50,7 @@ import java.util.Objects;
  * <i>http://www.ietf.org/rfc/rfc2965.txt</i></a>
  * </blockquote>
  *
- * <p> HttpCookie class can accept all these 3 forms of syntax.
+ * HttpCookie class can accept all these 3 forms of syntax.
  *
  * @author Edward Wang
  * @since 1.6
@@ -106,17 +106,17 @@ public final class HttpCookie implements Cloneable {
     /**
      * Constructs a cookie with a specified name and value.
      *
-     * <p> The name must conform to RFC 2965. That means it can contain
+     * The name must conform to RFC 2965. That means it can contain
      * only ASCII alphanumeric characters and cannot contain commas,
      * semicolons, or white space or begin with a $ character. The cookie's
      * name cannot be changed after creation.
      *
-     * <p> The value can be anything the server chooses to send. Its
+     * The value can be anything the server chooses to send. Its
      * value is probably of interest only to the server. The cookie's
      * value can be changed after creation with the
      * {@code setValue} method.
      *
-     * <p> By default, cookies are created according to the RFC 2965
+     * By default, cookies are created according to the RFC 2965
      * cookie specification. The version can be changed with the
      * {@code setVersion} method.
      *
@@ -345,7 +345,7 @@ public final class HttpCookie implements Cloneable {
     /**
      * Specifies the domain within which this cookie should be presented.
      *
-     * <p> The form of the domain name is specified by RFC 2965. A domain
+     * The form of the domain name is specified by RFC 2965. A domain
      * name begins with a dot ({@code .foo.com}) and means that
      * the cookie is visible to servers in a specified Domain Name System
      * (DNS) zone (for example, {@code www.foo.com}, but not
@@ -380,12 +380,12 @@ public final class HttpCookie implements Cloneable {
     /**
      * Sets the maximum age of the cookie in seconds.
      *
-     * <p> A positive value indicates that the cookie will expire
+     * A positive value indicates that the cookie will expire
      * after that many seconds have passed. Note that the value is
      * the <i>maximum</i> age when the cookie will expire, not the cookie's
      * current age.
      *
-     * <p> A negative value means that the cookie is not stored persistently
+     * A negative value means that the cookie is not stored persistently
      * and will be deleted when the Web browser exits. A zero value causes the
      * cookie to be deleted.
      *
@@ -416,13 +416,13 @@ public final class HttpCookie implements Cloneable {
      * Specifies a path for the cookie to which the client should return
      * the cookie.
      *
-     * <p> The cookie is visible to all the pages in the directory
+     * The cookie is visible to all the pages in the directory
      * you specify, and all the pages in that directory's subdirectories.
      * A cookie's path must include the servlet that set the cookie,
      * for example, <i>/catalog</i>, which makes the cookie
      * visible to all directories on the server under <i>/catalog</i>.
      *
-     * <p> Consult RFC 2965 (available on the Internet) for more
+     * Consult RFC 2965 (available on the Internet) for more
      * information on setting path names for cookies.
      *
      * @param  uri
@@ -451,7 +451,7 @@ public final class HttpCookie implements Cloneable {
      * Indicates whether the cookie should only be sent using a secure protocol,
      * such as HTTPS or SSL.
      *
-     * <p> The default value is {@code false}.
+     * The default value is {@code false}.
      *
      * @param  flag
      *         If {@code true}, the cookie can only be sent over a secure
@@ -492,7 +492,7 @@ public final class HttpCookie implements Cloneable {
      * Assigns a new value to a cookie after the cookie is created.
      * If you use a binary value, you may want to use BASE64 encoding.
      *
-     * <p> With Version 0 cookies, values should not contain white space,
+     * With Version 0 cookies, values should not contain white space,
      * brackets, parentheses, equals signs, commas, double quotes, slashes,
      * question marks, at signs, colons, and semicolons. Empty values may not
      * behave the same way on all browsers.
@@ -585,7 +585,7 @@ public final class HttpCookie implements Cloneable {
     /**
      * The utility method to check whether a host name is in a domain or not.
      *
-     * <p> This concept is described in the cookie specification.
+     * This concept is described in the cookie specification.
      * To understand the concept, some terminologies need to be defined first:
      * <blockquote>
      * effective host name = hostname if host name contains dot<br>
@@ -696,7 +696,7 @@ public final class HttpCookie implements Cloneable {
     /**
      * Test the equality of two HTTP cookies.
      *
-     * <p> The result is {@code true} only if two cookies come from same domain
+     * The result is {@code true} only if two cookies come from same domain
      * (case-insensitive), have same name (case-insensitive), and have same path
      * (case-sensitive).
      *

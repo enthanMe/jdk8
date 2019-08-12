@@ -82,7 +82,7 @@ package javax.management.openmbean;
  *                                   ct.getDescription(),
  *                                   itemNames.toArray(new String[0]),
  *                                   itemDescriptions.toArray(new String[0]),
- *                                   itemTypes.toArray(new OpenType&lt;?&gt;[0]));
+ *                                   itemTypes.toArray(new OpenType<?>[0]));
  *             CompositeData cd =
  *                 new CompositeDataSupport(xct,
  *                                          new String[] {"units", "value"},

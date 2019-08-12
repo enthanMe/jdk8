@@ -68,7 +68,7 @@ import javax.management.openmbean.OpenMBeanParameterInfoSupport;
  * management interface, provided that it complies with JMX patterns
  * (i.e., attributes defined by getter/setter etc...).</p>
  *
- * <p> This class also provides hooks that make it possible to supply
+ * This class also provides hooks that make it possible to supply
  * custom descriptions and names for the {@link MBeanInfo} returned by
  * the DynamicMBean interface.</p>
  *

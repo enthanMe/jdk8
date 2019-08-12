@@ -361,7 +361,7 @@ public abstract class DefaultRowSorter<M, I> extends RowSorter<M> {
      * The default value is 3.
      *
      * @param max the maximum number of sort keys
-     * @throws IllegalArgumentException if <code>max</code> &lt; 1
+     * @throws IllegalArgumentException if <code>max</code> < 1
      */
     public void setMaxSortKeys(int max) {
         if (max < 1) {

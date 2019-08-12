@@ -39,24 +39,24 @@ import sun.security.util.SecurityConstants;
  * in the Java runtime environment has permission to perform a
  * security-sensitive operation.
  *
- * <p> There is only one Policy object installed in the runtime at any
+ * There is only one Policy object installed in the runtime at any
  * given time.  A Policy object can be installed by calling the
  * {@code setPolicy} method.  The installed Policy object can be
  * obtained by calling the {@code getPolicy} method.
  *
- * <p> If no Policy object has been installed in the runtime, a call to
+ * If no Policy object has been installed in the runtime, a call to
  * {@code getPolicy} installs an instance of the default Policy
  * implementation (a default subclass implementation of this abstract class).
  * The default Policy implementation can be changed by setting the value
  * of the {@code policy.provider} security property to the fully qualified
  * name of the desired Policy subclass implementation.
  *
- * <p> Application code can directly subclass Policy to provide a custom
+ * Application code can directly subclass Policy to provide a custom
  * implementation.  In addition, an instance of a Policy object can be
  * constructed by invoking one of the {@code getInstance} factory methods
  * with a standard type.  The default policy type is "JavaPolicy".
  *
- * <p> Once a Policy instance has been installed (either by default, or by
+ * Once a Policy instance has been installed (either by default, or by
  * calling {@code setPolicy}), the Java runtime invokes its
  * {@code implies} method when it needs to
  * determine whether executing code (encapsulated in a ProtectionDomain)
@@ -65,7 +65,7 @@ import sun.security.util.SecurityConstants;
  * The policy data may be stored, for example, in a flat ASCII file,
  * in a serialized binary file of the Policy class, or in a database.
  *
- * <p> The {@code refresh} method causes the policy object to
+ * The {@code refresh} method causes the policy object to
  * refresh/reload its data.  This operation is implementation-dependent.
  * For example, if the policy object stores its data in configuration files,
  * calling {@code refresh} will cause it to re-read the configuration
@@ -344,13 +344,13 @@ public abstract class Policy {
     /**
      * Returns a Policy object of the specified type.
      *
-     * <p> This method traverses the list of registered security providers,
+     * This method traverses the list of registered security providers,
      * starting with the most preferred Provider.
      * A new Policy object encapsulating the
      * PolicySpi implementation from the first
      * Provider that supports the specified type is returned.
      *
-     * <p> Note that the list of registered providers may be retrieved via
+     * Note that the list of registered providers may be retrieved via
      * the {@link Security#getProviders() Security.getProviders()} method.
      *
      * @param type the specified Policy type.  See the Policy section in the
@@ -399,12 +399,12 @@ public abstract class Policy {
     /**
      * Returns a Policy object of the specified type.
      *
-     * <p> A new Policy object encapsulating the
+     * A new Policy object encapsulating the
      * PolicySpi implementation from the specified provider
      * is returned.   The specified provider must be registered
      * in the provider list.
      *
-     * <p> Note that the list of registered providers may be retrieved via
+     * Note that the list of registered providers may be retrieved via
      * the {@link Security#getProviders() Security.getProviders()} method.
      *
      * @param type the specified Policy type.  See the Policy section in the
@@ -466,7 +466,7 @@ public abstract class Policy {
     /**
      * Returns a Policy object of the specified type.
      *
-     * <p> A new Policy object encapsulating the
+     * A new Policy object encapsulating the
      * PolicySpi implementation from the specified Provider
      * object is returned.  Note that the specified Provider object
      * does not have to be registered in the provider list.
@@ -535,7 +535,7 @@ public abstract class Policy {
     /**
      * Return the Provider of this Policy.
      *
-     * <p> This Policy instance will only have a Provider if it
+     * This Policy instance will only have a Provider if it
      * was obtained via a call to {@code Policy.getInstance}.
      * Otherwise this method returns null.
      *
@@ -550,7 +550,7 @@ public abstract class Policy {
     /**
      * Return the type of this Policy.
      *
-     * <p> This Policy instance will only have a type if it
+     * This Policy instance will only have a type if it
      * was obtained via a call to {@code Policy.getInstance}.
      * Otherwise this method returns null.
      *
@@ -565,7 +565,7 @@ public abstract class Policy {
     /**
      * Return Policy parameters.
      *
-     * <p> This Policy instance will only have parameters if it
+     * This Policy instance will only have parameters if it
      * was obtained via a call to {@code Policy.getInstance}.
      * Otherwise this method returns null.
      *
@@ -581,14 +581,14 @@ public abstract class Policy {
      * Return a PermissionCollection object containing the set of
      * permissions granted to the specified CodeSource.
      *
-     * <p> Applications are discouraged from calling this method
+     * Applications are discouraged from calling this method
      * since this operation may not be supported by all policy implementations.
      * Applications should solely rely on the {@code implies} method
      * to perform policy checks.  If an application absolutely must call
      * a getPermissions method, it should call
      * {@code getPermissions(ProtectionDomain)}.
      *
-     * <p> The default implementation of this method returns
+     * The default implementation of this method returns
      * Policy.UNSUPPORTED_EMPTY_COLLECTION.  This method can be
      * overridden if the policy implementation can return a set of
      * permissions granted to a CodeSource.
@@ -611,12 +611,12 @@ public abstract class Policy {
      * Return a PermissionCollection object containing the set of
      * permissions granted to the specified ProtectionDomain.
      *
-     * <p> Applications are discouraged from calling this method
+     * Applications are discouraged from calling this method
      * since this operation may not be supported by all policy implementations.
      * Applications should rely on the {@code implies} method
      * to perform policy checks.
      *
-     * <p> The default implementation of this method first retrieves
+     * The default implementation of this method first retrieves
      * the permissions returned via {@code getPermissions(CodeSource)}
      * (the CodeSource is taken from the specified ProtectionDomain),
      * as well as the permissions located inside the specified ProtectionDomain.
@@ -626,7 +626,7 @@ public abstract class Policy {
      * returns the permissions contained inside the specified ProtectionDomain
      * in a new PermissionCollection object.
      *
-     * <p> This method can be overridden if the policy implementation
+     * This method can be overridden if the policy implementation
      * supports returning a set of permissions granted to a ProtectionDomain.
      *
      * @param domain the ProtectionDomain to which the returned
@@ -736,7 +736,7 @@ public abstract class Policy {
      * depends on the implementation. For example, calling {@code refresh}
      * on a file-based policy will cause the file to be re-read.
      *
-     * <p> The default implementation of this method does nothing.
+     * The default implementation of this method does nothing.
      * This method should be overridden if a refresh operation is supported
      * by the policy implementation.
      */

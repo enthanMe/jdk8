@@ -1,28 +1,3 @@
-/*
- * Copyright (c) 2007, 2013, Oracle and/or its affiliates. All rights reserved.
- * ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- */
-
 package java.nio.file;
 
 import java.io.Closeable;
@@ -35,7 +10,7 @@ import java.util.concurrent.TimeUnit;
  * directory for changes so that it can update its display of the list of files
  * when files are created or deleted.
  *
- * <p> A {@link Watchable} object is registered with a watch service by invoking
+ * A {@link Watchable} object is registered with a watch service by invoking
  * its {@link Watchable#register register} method, returning a {@link WatchKey}
  * to represent the registration. When an event for an object is detected the
  * key is <em>signalled</em>, and if not currently signalled, it is queued to
@@ -45,7 +20,7 @@ import java.util.concurrent.TimeUnit;
  * invokes the key's {@link WatchKey#reset reset} method to reset the key which
  * allows the key to be signalled and re-queued with further events.
  *
- * <p> Registration with a watch service is cancelled by invoking the key's
+ * Registration with a watch service is cancelled by invoking the key's
  * {@link WatchKey#cancel cancel} method. A key that is queued at the time that
  * it is cancelled remains in the queue until it is retrieved. Depending on the
  * object, a key may be cancelled automatically. For example, suppose a
@@ -55,7 +30,7 @@ import java.util.concurrent.TimeUnit;
  * that the consumer is notified the return value from the {@code reset}
  * method indicates if the key is valid.
  *
- * <p> A watch service is safe for use by multiple concurrent consumers. To
+ * A watch service is safe for use by multiple concurrent consumers. To
  * ensure that only one consumer processes the events for a particular object at
  * any time then care should be taken to ensure that the key's {@code reset}
  * method is only invoked after its events have been processed. The {@link
@@ -63,7 +38,7 @@ import java.util.concurrent.TimeUnit;
  * any threads waiting to retrieve keys, to throw {@code
  * ClosedWatchServiceException}.
  *
- * <p> File systems may report events faster than they can be retrieved or
+ * File systems may report events faster than they can be retrieved or
  * processed and an implementation may impose an unspecified limit on the number
  * of events that it may accumulate. Where an implementation <em>knowingly</em>
  * discards events then it arranges for the key's {@link WatchKey#pollEvents
@@ -71,7 +46,7 @@ import java.util.concurrent.TimeUnit;
  * StandardWatchEventKinds#OVERFLOW OVERFLOW}. This event can be used by the
  * consumer as a trigger to re-examine the state of the object.
  *
- * <p> When an event is reported to indicate that a file in a watched directory
+ * When an event is reported to indicate that a file in a watched directory
  * has been modified then there is no guarantee that the program (or programs)
  * that have modified the file have completed. Care should be taken to coordinate
  * access with other programs that may be updating the file.
@@ -80,7 +55,7 @@ import java.util.concurrent.TimeUnit;
  *
  * <h2>Platform dependencies</h2>
  *
- * <p> The implementation that observes events from the file system is intended
+ * The implementation that observes events from the file system is intended
  * to map directly on to the native file event notification facility where
  * available, or to use a primitive mechanism, such as polling, when a native
  * facility is not available. Consequently, many of the details on how events
@@ -93,7 +68,7 @@ import java.util.concurrent.TimeUnit;
  * may not be detected by primitive implementations that periodically poll the
  * file system to detect changes.
  *
- * <p> If a watched file is not located on a local storage device then it is
+ * If a watched file is not located on a local storage device then it is
  * implementation specific if changes to the file can be detected. In particular,
  * it is not required that changes to files carried out on remote systems be
  * detected.
@@ -102,7 +77,6 @@ import java.util.concurrent.TimeUnit;
  *
  * @see FileSystem#newWatchService
  */
-
 public interface WatchService
     extends Closeable
 {
@@ -110,13 +84,13 @@ public interface WatchService
     /**
      * Closes this watch service.
      *
-     * <p> If a thread is currently blocked in the {@link #take take} or {@link
+     * If a thread is currently blocked in the {@link #take take} or {@link
      * #poll(long,TimeUnit) poll} methods waiting for a key to be queued then
      * it immediately receives a {@link ClosedWatchServiceException}. Any
      * valid keys associated with this watch service are {@link WatchKey#isValid
      * invalidated}.
      *
-     * <p> After a watch service is closed, any further attempt to invoke
+     * After a watch service is closed, any further attempt to invoke
      * operations upon it will throw {@link ClosedWatchServiceException}.
      * If this watch service is already closed then invoking this method
      * has no effect.

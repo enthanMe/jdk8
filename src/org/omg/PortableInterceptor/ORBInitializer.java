@@ -32,9 +32,9 @@ package org.omg.PortableInterceptor;
    * <p>
    * The property names are of the form: 
    *   <blockquote><code>
-   *     org.omg.PortableInterceptor.ORBInitializerClass.&lt;Service&gt;
+   *     org.omg.PortableInterceptor.ORBInitializerClass.<Service>
    *   </code></blockquote>
-   * where <code>&lt;Service&gt;</code> is the string name of a class 
+   * where <code><Service></code> is the string name of a class
    * which implements 
    *   <blockquote><code>
    *     org.omg.PortableInterceptor.ORBInitializer
@@ -55,9 +55,9 @@ package org.omg.PortableInterceptor;
    * </ul>
    * During ORB.init, these ORB properties which begin with 
    * <code>org.omg.PortableInterceptor.ORBInitializerClass</code> shall be 
-   * collected, the <code>&lt;Service&gt;</code> portion of each property 
+   * collected, the <code><Service></code> portion of each property
    * shall be extracted, an object shall be instantiated with the 
-   * <code>&lt;Service&gt;</code> string as its class name, and the 
+   * <code><Service></code> string as its class name, and the
    * <code>pre_init</code> and <code>post_init</code> methods shall be 
    * called on that object. If there are any exceptions, the ORB shall 
    * ignore them and proceed. 

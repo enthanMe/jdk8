@@ -35,7 +35,7 @@ package com.sun.javadoc;
  * it must also implement <code>optionLength</code> and
  * <code>validOptions</code>.
  *
- * <p> A doclet supporting the language features added since 1.1
+ * A doclet supporting the language features added since 1.1
  * (such as generics and annotations) should indicate this
  * by implementing <code>languageVersion</code>.  In the absence of
  * this the doclet should not invoke any of the Doclet API methods
@@ -44,7 +44,7 @@ package com.sun.javadoc;
  * to conceal the new constructs (such as type parameters) from
  * the doclet.
  *
- * <p> To start the doclet, pass
+ * To start the doclet, pass
  * <code>-doclet</code> followed by the fully-qualified
  * name of the starting class on the javadoc tool command line.
  */

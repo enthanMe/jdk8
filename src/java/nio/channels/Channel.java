@@ -32,18 +32,18 @@ import java.io.Closeable;
 /**
  * A nexus for I/O operations.
  *
- * <p> A channel represents an open connection to an entity such as a hardware
+ * A channel represents an open connection to an entity such as a hardware
  * device, a file, a network socket, or a program component that is capable of
  * performing one or more distinct I/O operations, for example reading or
  * writing.
  *
- * <p> A channel is either open or closed.  A channel is open upon creation,
+ * A channel is either open or closed.  A channel is open upon creation,
  * and once closed it remains closed.  Once a channel is closed, any attempt to
  * invoke an I/O operation upon it will cause a {@link ClosedChannelException}
  * to be thrown.  Whether or not a channel is open may be tested by invoking
  * its {@link #isOpen isOpen} method.
  *
- * <p> Channels are, in general, intended to be safe for multithreaded access
+ * Channels are, in general, intended to be safe for multithreaded access
  * as described in the specifications of the interfaces and classes that extend
  * and implement this interface.
  *
@@ -65,14 +65,14 @@ public interface Channel extends Closeable {
     /**
      * Closes this channel.
      *
-     * <p> After a channel is closed, any further attempt to invoke I/O
+     * After a channel is closed, any further attempt to invoke I/O
      * operations upon it will cause a {@link ClosedChannelException} to be
      * thrown.
      *
-     * <p> If this channel is already closed then invoking this method has no
+     * If this channel is already closed then invoking this method has no
      * effect.
      *
-     * <p> This method may be invoked at any time.  If some other thread has
+     * This method may be invoked at any time.  If some other thread has
      * already invoked it, however, then another invocation will block until
      * the first invocation is complete, after which it will return without
      * effect. </p>

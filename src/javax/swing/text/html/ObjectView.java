@@ -36,7 +36,7 @@ import sun.reflect.misc.ReflectUtil;
 
 /**
  * Component decorator that implements the view interface
- * for &lt;object&gt; elements.
+ * for <object> elements.
  * <p>
  * This view will try to load the class specified by the
  * <code>classid</code> attribute.  If possible, the Classloader
@@ -52,7 +52,7 @@ import sun.reflect.misc.ReflectUtil;
  * to display the object.
  * <p>
  * This view can also manage a set of parameters with limitations.
- * The parameters to the &lt;object&gt; element are expected to
+ * The parameters to the <object> element are expected to
  * be present on the associated elements attribute set as simple
  * strings.  Each bean property will be queried as a key on
  * the AttributeSet, with the expectation that a non-null value
@@ -63,9 +63,9 @@ import sun.reflect.misc.ReflectUtil;
  * <p>
  * A simple example HTML invocation is:
  * <pre>
- *      &lt;object classid="javax.swing.JLabel"&gt;
- *      &lt;param name="text" value="sample text"&gt;
- *      &lt;/object&gt;
+ *      <object classid="javax.swing.JLabel">
+ *      <param name="text" value="sample text">
+ *      </object>
  * </pre>
  *
  * @author Timothy Prinzing
@@ -121,8 +121,8 @@ public class ObjectView extends ComponentView  {
 
     /**
      * Initialize this component according the KEY/VALUEs passed in
-     * via the &lt;param&gt; elements in the corresponding
-     * &lt;object&gt; element.
+     * via the <param> elements in the corresponding
+     * <object> element.
      */
     private void setParameters(Component comp, AttributeSet attr) {
         Class k = comp.getClass();

@@ -53,17 +53,17 @@ import static java.lang.annotation.ElementType.PARAMETER;
  * &#64;XmlRootElement
  * class Foo {
  *     &#64;XmlElement
- *     List&lt;String> data;
+ *     List<String> data;
  * }
  * </pre>
  *
  * would produce XML like this:
  *
  * <pre>
- * &lt;foo>
- *   &lt;data>abc</data>
- *   &lt;data>def</data>
- * &lt;/foo>
+ * <foo>
+ *   <data>abc</data>
+ *   <data>def</data>
+ * </foo>
  * </pre>
  *
  * &#64;XmlList annotation, on the other hand, allows multiple values to be
@@ -74,16 +74,16 @@ import static java.lang.annotation.ElementType.PARAMETER;
  * class Foo {
  *     &#64;XmlElement
  *     &#64;XmlList
- *     List&lt;String> data;
+ *     List<String> data;
  * }
  * </pre>
  *
  * the above code will produce XML like this:
  *
  * <pre>
- * &lt;foo>
- *   &lt;data>abc def</data>
- * &lt;/foo>
+ * <foo>
+ *   <data>abc def</data>
+ * </foo>
  * </pre>
  *
  * <p>This annotation can be used with the following annotations:

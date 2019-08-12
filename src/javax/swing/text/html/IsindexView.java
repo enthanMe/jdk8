@@ -35,7 +35,7 @@ import javax.swing.*;
 
 
 /**
- * A view that supports the &lt;ISINDEX&lt; tag.  This is implemented
+ * A view that supports the <ISINDEX< tag.  This is implemented
  * as a JPanel that contains
  *
  * @author Sunita Mani

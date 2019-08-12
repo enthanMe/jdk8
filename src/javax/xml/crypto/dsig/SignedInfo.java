@@ -37,15 +37,15 @@ import java.util.List;
  * W3C Recommendation for XML-Signature Syntax and Processing</a>.
  * The XML Schema Definition is defined as:
  * <pre><code>
- * &lt;element name="SignedInfo" type="ds:SignedInfoType"/&gt;
- * &lt;complexType name="SignedInfoType"&gt;
- *   &lt;sequence&gt;
- *     &lt;element ref="ds:CanonicalizationMethod"/&gt;
- *     &lt;element ref="ds:SignatureMethod"/&gt;
- *     &lt;element ref="ds:Reference" maxOccurs="unbounded"/&gt;
- *   &lt;/sequence&gt;
- *   &lt;attribute name="Id" type="ID" use="optional"/&gt;
- * &lt;/complexType&gt;
+ * <element name="SignedInfo" type="ds:SignedInfoType"/>
+ * <complexType name="SignedInfoType">
+ *   <sequence>
+ *     <element ref="ds:CanonicalizationMethod"/>
+ *     <element ref="ds:SignatureMethod"/>
+ *     <element ref="ds:Reference" maxOccurs="unbounded"/>
+ *   </sequence>
+ *   <attribute name="Id" type="ID" use="optional"/>
+ * </complexType>
  * </code></pre>
  *
  * A <code>SignedInfo</code> instance may be created by invoking one of the

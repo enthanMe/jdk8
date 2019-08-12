@@ -34,7 +34,7 @@ import java.security.spec.InvalidParameterSpecException;
  * for the {@code AlgorithmParameters} class, which is used to manage
  * algorithm parameters.
  *
- * <p> All the abstract methods in this class must be implemented by each
+ * All the abstract methods in this class must be implemented by each
  * cryptographic service provider who wishes to supply parameter management
  * for a particular algorithm.
  *

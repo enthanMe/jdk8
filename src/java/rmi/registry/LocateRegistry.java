@@ -43,7 +43,7 @@ import sun.rmi.transport.tcp.TCPEndpoint;
  * remote object registry on a particular host (including the local host), or
  * to create a remote object registry that accepts calls on a specific port.
  *
- * <p> Note that a <code>getRegistry</code> call does not actually make a
+ * Note that a <code>getRegistry</code> call does not actually make a
  * connection to the remote host.  It simply creates a local reference to
  * the remote registry and will succeed even if no registry is running on
  * the remote host.  Therefore, a subsequent method invocation to a remote

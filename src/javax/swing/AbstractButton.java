@@ -1616,7 +1616,7 @@ public abstract class AbstractButton extends JComponent implements ItemSelectabl
      * @since 1.4
      * @param index Index into the String to underline
      * @exception IllegalArgumentException will be thrown if <code>index</code>
-     *            is &gt;= length of the text, or &lt; -1
+     *            is >= length of the text, or < -1
      * @see #getDisplayedMnemonicIndex
      *
      * @beaninfo
@@ -1702,7 +1702,7 @@ public abstract class AbstractButton extends JComponent implements ItemSelectabl
      * @see #getMultiClickThreshhold
      * @param threshhold the amount of time required between mouse
      *        press events to generate corresponding action events
-     * @exception   IllegalArgumentException if threshhold &lt; 0
+     * @exception   IllegalArgumentException if threshhold < 0
      * @since 1.4
      */
     public void setMultiClickThreshhold(long threshhold) {
@@ -2724,7 +2724,7 @@ public abstract class AbstractButton extends JComponent implements ItemSelectabl
          *
          * @param part the AccessibleText.CHARACTER, AccessibleText.WORD,
          * or AccessibleText.SENTENCE to retrieve
-         * @param index an index within the text &gt;= 0
+         * @param index an index within the text >= 0
          * @return the letter, word, or sentence,
          *   null for an invalid index or part
          * @since 1.3
@@ -2771,7 +2771,7 @@ public abstract class AbstractButton extends JComponent implements ItemSelectabl
          *
          * @param part the AccessibleText.CHARACTER, AccessibleText.WORD,
          * or AccessibleText.SENTENCE to retrieve
-         * @param index an index within the text &gt;= 0
+         * @param index an index within the text >= 0
          * @return the letter, word, or sentence, null for an invalid
          *  index or part
          * @since 1.3
@@ -2835,7 +2835,7 @@ public abstract class AbstractButton extends JComponent implements ItemSelectabl
          *
          * @param part the AccessibleText.CHARACTER, AccessibleText.WORD,
          *   or AccessibleText.SENTENCE to retrieve
-         * @param index an index within the text &gt;= 0
+         * @param index an index within the text >= 0
          * @return the letter, word, or sentence, null for an invalid index
          *  or part
          * @since 1.3

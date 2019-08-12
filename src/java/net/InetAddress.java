@@ -49,7 +49,7 @@ import sun.net.spi.nameservice.*;
 /**
  * This class represents an Internet Protocol (IP) address.
  *
- * <p> An IP address is either a 32-bit or 128-bit unsigned number
+ * An IP address is either a 32-bit or 128-bit unsigned number
  * used by IP, a lower-level protocol on which protocols like UDP and
  * TCP are built. The IP address architecture is defined by <a
  * href="http://www.ietf.org/rfc/rfc790.txt"><i>RFC&nbsp;790:
@@ -73,16 +73,16 @@ import sun.net.spi.nameservice.*;
  *         a unicast address is delivered to the interface identified by
  *         that address.
  *
- *         <p> The Unspecified Address -- Also called anylocal or wildcard
+ *         The Unspecified Address -- Also called anylocal or wildcard
  *         address. It must never be assigned to any node. It indicates the
  *         absence of an address. One example of its use is as the target of
  *         bind, which allows a server to accept a client connection on any
  *         interface, in case the server host has multiple interfaces.
  *
- *         <p> The <i>unspecified</i> address must not be used as
+ *         The <i>unspecified</i> address must not be used as
  *         the destination address of an IP packet.
  *
- *         <p> The <i>Loopback</i> Addresses -- This is the address
+ *         The <i>Loopback</i> Addresses -- This is the address
  *         assigned to the loopback interface. Anything sent to this
  *         IP address loops around and becomes IP input on the local
  *         host. This address is often used when testing a
@@ -95,14 +95,14 @@ import sun.net.spi.nameservice.*;
  *
  * <h4> IP address scope </h4>
  *
- * <p> <i>Link-local</i> addresses are designed to be used for addressing
+ * <i>Link-local</i> addresses are designed to be used for addressing
  * on a single link for purposes such as auto-address configuration,
  * neighbor discovery, or when no routers are present.
  *
- * <p> <i>Site-local</i> addresses are designed to be used for addressing
+ * <i>Site-local</i> addresses are designed to be used for addressing
  * inside of a site without the need for a global prefix.
  *
- * <p> <i>Global</i> addresses are unique across the internet.
+ * <i>Global</i> addresses are unique across the internet.
  *
  * <h4> Textual representation of IP addresses </h4>
  *
@@ -127,10 +127,10 @@ import sun.net.spi.nameservice.*;
  * services(s) being used is by default the local machine configured
  * one. For any host name, its corresponding IP address is returned.
  *
- * <p> <i>Reverse name resolution</i> means that for any IP address,
+ * <i>Reverse name resolution</i> means that for any IP address,
  * the host associated with the IP address is returned.
  *
- * <p> The InetAddress class provides methods to resolve host names to
+ * The InetAddress class provides methods to resolve host names to
  * their IP addresses and vice versa.
  *
  * <h4> InetAddress Caching </h4>
@@ -138,7 +138,7 @@ import sun.net.spi.nameservice.*;
  * The InetAddress class has a cache to store successful as well as
  * unsuccessful host name resolutions.
  *
- * <p> By default, when a security manager is installed, in order to
+ * By default, when a security manager is installed, in order to
  * protect against DNS spoofing attacks,
  * the result of positive host name resolutions are
  * cached forever. When a security manager is not installed, the default
@@ -147,12 +147,12 @@ import sun.net.spi.nameservice.*;
  * name resolution is cached for a very short period of time (10
  * seconds) to improve performance.
  *
- * <p> If the default behavior is not desired, then a Java security property
+ * If the default behavior is not desired, then a Java security property
  * can be set to a different Time-to-live (TTL) value for positive
  * caching. Likewise, a system admin can configure a different
  * negative caching TTL value when needed.
  *
- * <p> Two Java security properties control the TTL values used for
+ * Two Java security properties control the TTL values used for
  *  positive and negative host name resolution caching:
  *
  * <blockquote>
@@ -1001,16 +1001,16 @@ class InetAddress implements java.io.Serializable {
      * Creates an InetAddress based on the provided host name and IP address.
      * No name service is checked for the validity of the address.
      *
-     * <p> The host name can either be a machine name, such as
+     * The host name can either be a machine name, such as
      * "{@code java.sun.com}", or a textual representation of its IP
      * address.
-     * <p> No validity checking is done on the host name either.
+     * No validity checking is done on the host name either.
      *
-     * <p> If addr specifies an IPv4 address an instance of Inet4Address
+     * If addr specifies an IPv4 address an instance of Inet4Address
      * will be returned; otherwise, an instance of Inet6Address
      * will be returned.
      *
-     * <p> IPv4 address byte array must be 4 bytes long and IPv6 byte array
+     * IPv4 address byte array must be 4 bytes long and IPv6 byte array
      * must be 16 bytes long
      *
      * @param host the specified host
@@ -1046,18 +1046,18 @@ class InetAddress implements java.io.Serializable {
     /**
      * Determines the IP address of a host, given the host's name.
      *
-     * <p> The host name can either be a machine name, such as
+     * The host name can either be a machine name, such as
      * "{@code java.sun.com}", or a textual representation of its
      * IP address. If a literal IP address is supplied, only the
      * validity of the address format is checked.
      *
-     * <p> For {@code host} specified in literal IPv6 address,
+     * For {@code host} specified in literal IPv6 address,
      * either the form defined in RFC 2732 or the literal IPv6 address
      * format defined in RFC 2373 is accepted. IPv6 scoped addresses are also
      * supported. See <a href="Inet6Address.html#scoped">here</a> for a description of IPv6
      * scoped addresses.
      *
-     * <p> If the host is {@code null} then an {@code InetAddress}
+     * If the host is {@code null} then an {@code InetAddress}
      * representing an address of the loopback interface is returned.
      * See <a href="http://www.ietf.org/rfc/rfc3330.txt">RFC&nbsp;3330</a>
      * section&nbsp;2 and <a href="http://www.ietf.org/rfc/rfc2373.txt">RFC&nbsp;2373</a>
@@ -1086,24 +1086,24 @@ class InetAddress implements java.io.Serializable {
      * Given the name of a host, returns an array of its IP addresses,
      * based on the configured name service on the system.
      *
-     * <p> The host name can either be a machine name, such as
+     * The host name can either be a machine name, such as
      * "{@code java.sun.com}", or a textual representation of its IP
      * address. If a literal IP address is supplied, only the
      * validity of the address format is checked.
      *
-     * <p> For {@code host} specified in <i>literal IPv6 address</i>,
+     * For {@code host} specified in <i>literal IPv6 address</i>,
      * either the form defined in RFC 2732 or the literal IPv6 address
      * format defined in RFC 2373 is accepted. A literal IPv6 address may
      * also be qualified by appending a scoped zone identifier or scope_id.
      * The syntax and usage of scope_ids is described
      * <a href="Inet6Address.html#scoped">here</a>.
-     * <p> If the host is {@code null} then an {@code InetAddress}
+     * If the host is {@code null} then an {@code InetAddress}
      * representing an address of the loopback interface is returned.
      * See <a href="http://www.ietf.org/rfc/rfc3330.txt">RFC&nbsp;3330</a>
      * section&nbsp;2 and <a href="http://www.ietf.org/rfc/rfc2373.txt">RFC&nbsp;2373</a>
      * section&nbsp;2.5.3. </p>
      *
-     * <p> If there is a security manager and {@code host} is not
+     * If there is a security manager and {@code host} is not
      * null and {@code host.length() } is not equal to zero, the
      * security manager's
      * {@code checkConnect} method is called
@@ -1423,10 +1423,10 @@ class InetAddress implements java.io.Serializable {
      * The argument is in network byte order: the highest order
      * byte of the address is in {@code getAddress()[0]}.
      *
-     * <p> This method doesn't block, i.e. no reverse name service lookup
+     * This method doesn't block, i.e. no reverse name service lookup
      * is performed.
      *
-     * <p> IPv4 address byte array must be 4 bytes long and IPv6 byte array
+     * IPv4 address byte array must be 4 bytes long and IPv6 byte array
      * must be 16 bytes long
      *
      * @param addr the raw IP address in network byte order

@@ -211,7 +211,7 @@ public class AudioFormat {
      * @param bigEndian        indicates whether the data for a single sample
      *                         is stored in big-endian byte order
      *                         (<code>false</code> means little-endian)
-     * @param properties       a <code>Map&lt;String,Object&gt;</code> object
+     * @param properties       a <code>Map<String,Object></code> object
      *                         containing format properties
      *
      * @since 1.5
@@ -389,7 +389,7 @@ public class AudioFormat {
      * The concept of properties is further explained in
      * the {@link AudioFileFormat class description}.
      *
-     * @return a <code>Map&lt;String,Object&gt;</code> object containing
+     * @return a <code>Map<String,Object></code> object containing
      *         all properties. If no properties are recognized, an empty map is
      *         returned.
      *

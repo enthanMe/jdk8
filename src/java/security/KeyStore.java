@@ -43,29 +43,29 @@ import sun.security.util.Debug;
  * This class represents a storage facility for cryptographic
  * keys and certificates.
  *
- * <p> A {@code KeyStore} manages different types of entries.
+ * A {@code KeyStore} manages different types of entries.
  * Each type of entry implements the {@code KeyStore.Entry} interface.
  * Three basic {@code KeyStore.Entry} implementations are provided:
  *
  * <ul>
  * <li><b>KeyStore.PrivateKeyEntry</b>
- * <p> This type of entry holds a cryptographic {@code PrivateKey},
+ * This type of entry holds a cryptographic {@code PrivateKey},
  * which is optionally stored in a protected format to prevent
  * unauthorized access.  It is also accompanied by a certificate chain
  * for the corresponding public key.
  *
- * <p> Private keys and certificate chains are used by a given entity for
+ * Private keys and certificate chains are used by a given entity for
  * self-authentication. Applications for this authentication include software
  * distribution organizations which sign JAR files as part of releasing
  * and/or licensing software.
  *
  * <li><b>KeyStore.SecretKeyEntry</b>
- * <p> This type of entry holds a cryptographic {@code SecretKey},
+ * This type of entry holds a cryptographic {@code SecretKey},
  * which is optionally stored in a protected format to prevent
  * unauthorized access.
  *
  * <li><b>KeyStore.TrustedCertificateEntry</b>
- * <p> This type of entry contains a single public key {@code Certificate}
+ * This type of entry contains a single public key {@code Certificate}
  * belonging to another party. It is called a <i>trusted certificate</i>
  * because the keystore owner trusts that the public key in the certificate
  * indeed belongs to the identity identified by the <i>subject</i> (owner)
@@ -74,24 +74,24 @@ import sun.security.util.Debug;
  * <p>This type of entry can be used to authenticate other parties.
  * </ul>
  *
- * <p> Each entry in a keystore is identified by an "alias" string. In the
+ * Each entry in a keystore is identified by an "alias" string. In the
  * case of private keys and their associated certificate chains, these strings
  * distinguish among the different ways in which the entity may authenticate
  * itself. For example, the entity may authenticate itself using different
  * certificate authorities, or using different public key algorithms.
  *
- * <p> Whether aliases are case sensitive is implementation dependent. In order
+ * Whether aliases are case sensitive is implementation dependent. In order
  * to avoid problems, it is recommended not to use aliases in a KeyStore that
  * only differ in case.
  *
- * <p> Whether keystores are persistent, and the mechanisms used by the
+ * Whether keystores are persistent, and the mechanisms used by the
  * keystore if it is persistent, are not specified here. This allows
  * use of a variety of techniques for protecting sensitive (e.g., private or
  * secret) keys. Smart cards or other integrated cryptographic engines
  * (SafeKeyper) are one option, and simpler mechanisms such as files may also
  * be used (in a variety of formats).
  *
- * <p> Typical ways to request a KeyStore object include
+ * Typical ways to request a KeyStore object include
  * relying on the default type and providing a specific keystore type.
  *
  * <ul>
@@ -109,7 +109,7 @@ import sun.security.util.Debug;
  * specified keystore type available in the environment. <p>
  * </ul>
  *
- * <p> Before a keystore can be accessed, it must be
+ * Before a keystore can be accessed, it must be
  * {@link #load(java.io.InputStream, char[]) loaded}.
  * <pre>
  *    KeyStore ks = KeyStore.getInstance(KeyStore.getDefaultType());
@@ -125,7 +125,7 @@ import sun.security.util.Debug;
  * To create an empty keystore using the above {@code load} method,
  * pass {@code null} as the {@code InputStream} argument.
  *
- * <p> Once the keystore has been loaded, it is possible
+ * Once the keystore has been loaded, it is possible
  * to read existing entries from the keystore, or to write new entries
  * into the keystore:
  * <pre>
@@ -156,7 +156,7 @@ import sun.security.util.Debug;
  * different passwords or other protection parameters
  * may also be used.
  *
- * <p> Every implementation of the Java platform is required to support
+ * Every implementation of the Java platform is required to support
  * the following standard {@code KeyStore} type:
  * <ul>
  * <li>{@code PKCS12}</li>
@@ -227,7 +227,7 @@ public class KeyStore {
     /**
      * A marker interface for keystore protection parameters.
      *
-     * <p> The information stored in a {@code ProtectionParameter}
+     * The information stored in a {@code ProtectionParameter}
      * object protects the contents of a keystore.
      * For example, protection parameters may be used to check
      * the integrity of keystore data, or to protect the
@@ -254,7 +254,7 @@ public class KeyStore {
         /**
          * Creates a password parameter.
          *
-         * <p> The specified {@code password} is cloned before it is stored
+         * The specified {@code password} is cloned before it is stored
          * in the new {@code PasswordProtection} object.
          *
          * @param password the password, which may be {@code null}
@@ -467,7 +467,7 @@ public class KeyStore {
          * Constructs a {@code PrivateKeyEntry} with a
          * {@code PrivateKey} and corresponding certificate chain.
          *
-         * <p> The specified {@code chain} is cloned before it is stored
+         * The specified {@code chain} is cloned before it is stored
          * in the new {@code PrivateKeyEntry} object.
          *
          * @param privateKey the {@code PrivateKey}
@@ -495,7 +495,7 @@ public class KeyStore {
          * Constructs a {@code PrivateKeyEntry} with a {@code PrivateKey} and
          * corresponding certificate chain and associated entry attributes.
          *
-         * <p> The specified {@code chain} and {@code attributes} are cloned
+         * The specified {@code chain} and {@code attributes} are cloned
          * before they are stored in the new {@code PrivateKeyEntry} object.
          *
          * @param privateKey the {@code PrivateKey}
@@ -572,7 +572,7 @@ public class KeyStore {
         /**
          * Gets the {@code Certificate} chain from this entry.
          *
-         * <p> The stored chain is cloned before being returned.
+         * The stored chain is cloned before being returned.
          *
          * @return an array of {@code Certificate}s corresponding
          *      to the certificate chain for the public key.
@@ -659,7 +659,7 @@ public class KeyStore {
          * Constructs a {@code SecretKeyEntry} with a {@code SecretKey} and
          * associated entry attributes.
          *
-         * <p> The specified {@code attributes} is cloned before it is stored
+         * The specified {@code attributes} is cloned before it is stored
          * in the new {@code SecretKeyEntry} object.
          *
          * @param secretKey the {@code SecretKey}
@@ -743,7 +743,7 @@ public class KeyStore {
          * Constructs a {@code TrustedCertificateEntry} with a
          * trusted {@code Certificate} and associated entry attributes.
          *
-         * <p> The specified {@code attributes} is cloned before it is stored
+         * The specified {@code attributes} is cloned before it is stored
          * in the new {@code TrustedCertificateEntry} object.
          *
          * @param trustedCert the trusted {@code Certificate}
@@ -818,13 +818,13 @@ public class KeyStore {
     /**
      * Returns a keystore object of the specified type.
      *
-     * <p> This method traverses the list of registered security Providers,
+     * This method traverses the list of registered security Providers,
      * starting with the most preferred Provider.
      * A new KeyStore object encapsulating the
      * KeyStoreSpi implementation from the first
      * Provider that supports the specified type is returned.
      *
-     * <p> Note that the list of registered providers may be retrieved via
+     * Note that the list of registered providers may be retrieved via
      * the {@link Security#getProviders() Security.getProviders()} method.
      *
      * @param type the type of keystore.
@@ -857,12 +857,12 @@ public class KeyStore {
     /**
      * Returns a keystore object of the specified type.
      *
-     * <p> A new KeyStore object encapsulating the
+     * A new KeyStore object encapsulating the
      * KeyStoreSpi implementation from the specified provider
      * is returned.  The specified provider must be registered
      * in the security provider list.
      *
-     * <p> Note that the list of registered providers may be retrieved via
+     * Note that the list of registered providers may be retrieved via
      * the {@link Security#getProviders() Security.getProviders()} method.
      *
      * @param type the type of keystore.
@@ -903,7 +903,7 @@ public class KeyStore {
     /**
      * Returns a keystore object of the specified type.
      *
-     * <p> A new KeyStore object encapsulating the
+     * A new KeyStore object encapsulating the
      * KeyStoreSpi implementation from the specified Provider
      * object is returned.  Note that the specified Provider object
      * does not have to be registered in the provider list.
@@ -1051,13 +1051,13 @@ public class KeyStore {
     /**
      * Returns the certificate associated with the given alias.
      *
-     * <p> If the given alias name identifies an entry
+     * If the given alias name identifies an entry
      * created by a call to {@code setCertificateEntry},
      * or created by a call to {@code setEntry} with a
      * {@code TrustedCertificateEntry},
      * then the trusted certificate contained in that entry is returned.
      *
-     * <p> If the given alias name identifies an entry
+     * If the given alias name identifies an entry
      * created by a call to {@code setKeyEntry},
      * or created by a call to {@code setEntry} with a
      * {@code PrivateKeyEntry},
@@ -1177,7 +1177,7 @@ public class KeyStore {
     /**
      * Assigns the given trusted certificate to the given alias.
      *
-     * <p> If the given alias identifies an existing entry
+     * If the given alias identifies an existing entry
      * created by a call to {@code setCertificateEntry},
      * or created by a call to {@code setEntry} with a
      * {@code TrustedCertificateEntry},
@@ -1321,14 +1321,14 @@ public class KeyStore {
      * Returns the (alias) name of the first keystore entry whose certificate
      * matches the given certificate.
      *
-     * <p> This method attempts to match the given certificate with each
+     * This method attempts to match the given certificate with each
      * keystore entry. If the entry being considered was
      * created by a call to {@code setCertificateEntry},
      * or created by a call to {@code setEntry} with a
      * {@code TrustedCertificateEntry},
      * then the given certificate is compared to that entry's certificate.
      *
-     * <p> If the entry being considered was
+     * If the entry being considered was
      * created by a call to {@code setKeyEntry},
      * or created by a call to {@code setEntry} with a
      * {@code PrivateKeyEntry},
@@ -1419,7 +1419,7 @@ public class KeyStore {
      * be initialized from a stream, pass {@code null}
      * as the {@code stream} argument.
      *
-     * <p> Note that if this keystore has already been loaded, it is
+     * Note that if this keystore has already been loaded, it is
      * reinitialized and loaded again from the given input stream.
      *
      * @param stream the input stream from which the keystore is loaded,
@@ -1449,7 +1449,7 @@ public class KeyStore {
     /**
      * Loads this keystore using the given {@code LoadStoreParameter}.
      *
-     * <p> Note that if this KeyStore has already been loaded, it is
+     * Note that if this KeyStore has already been loaded, it is
      * reinitialized and loaded again from the given parameter.
      *
      * @param param the {@code LoadStoreParameter}
@@ -1526,7 +1526,7 @@ public class KeyStore {
      * The protection parameter is used to protect the
      * {@code Entry}.
      *
-     * <p> If an entry already exists for the specified alias,
+     * If an entry already exists for the specified alias,
      * it is overridden.
      *
      * @param alias save the keystore {@code Entry} under this alias
@@ -1654,7 +1654,7 @@ public class KeyStore {
          * #getProtectionParameter getProtectionParameter()} method will
          * return {@code protectionParameters}.
          *
-         * <p> This is useful if an existing KeyStore object needs to be
+         * This is useful if an existing KeyStore object needs to be
          * used with Builder-based APIs.
          *
          * @return a new Builder object

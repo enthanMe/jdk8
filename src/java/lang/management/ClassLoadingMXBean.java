@@ -29,7 +29,7 @@ package java.lang.management;
  * The management interface for the class loading system of
  * the Java virtual machine.
  *
- * <p> A Java virtual machine has a single instance of the implementation
+ * A Java virtual machine has a single instance of the implementation
  * class of this interface.  This instance implementing this interface is
  * an <a href="ManagementFactory.html#MXBean">MXBean</a>
  * that can be obtained by calling

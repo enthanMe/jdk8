@@ -987,7 +987,7 @@ implements DTM, org.xml.sax.ContentHandler, org.xml.sax.ext.LexicalHandler
         // ========= Document Navigation Functions =========
 
         /** Given a node handle, test if it has child nodes.
-         * <p> %REVIEW% This is obviously useful at the DOM layer, where it
+         * %REVIEW% This is obviously useful at the DOM layer, where it
          * would permit testing this without having to create a proxy
          * node. It's less useful in the DTM API, where
          * (dtm.getFirstChild(nodeHandle)!=DTM.NULL) is just as fast and
@@ -1657,7 +1657,7 @@ implements DTM, org.xml.sax.ContentHandler, org.xml.sax.ext.LexicalHandler
          * mapping.
          * Given a node handle, return the prefix used to map to the namespace.
          *
-         * <p> %REVIEW% Are you sure you want "" for no prefix?  </p>
+         * %REVIEW% Are you sure you want "" for no prefix?  </p>
          *
          * %REVIEW%  Should this be DOM-style (undefined unless namespaced),
          * or other?
@@ -1947,7 +1947,7 @@ implements DTM, org.xml.sax.ContentHandler, org.xml.sax.ext.LexicalHandler
          *
          * @return false if node2 comes before node1, otherwise return true.
          * You can think of this as
-         * <code>(node1.documentOrderPosition &lt;= node2.documentOrderPosition)</code>.
+         * <code>(node1.documentOrderPosition <= node2.documentOrderPosition)</code>.
          */
         public boolean isNodeAfter(int nodeHandle1, int nodeHandle2) {return false;}
 

@@ -36,13 +36,13 @@ final class XSAnnotationInfo {
     /** Textual representation of annotation. **/
     String fAnnotation;
 
-    /** Line number of &lt;annotation&gt; element. **/
+    /** Line number of <annotation> element. **/
     int fLine;
 
-    /** Column number of &lt;annotation&gt; element. **/
+    /** Column number of <annotation> element. **/
     int fColumn;
 
-    /** Character offset of &lt;annotation&gt; element. **/
+    /** Character offset of <annotation> element. **/
     int fCharOffset;
 
     /** Next annotation. **/

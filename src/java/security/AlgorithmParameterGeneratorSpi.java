@@ -32,11 +32,11 @@ import java.security.spec.AlgorithmParameterSpec;
  * for the {@code AlgorithmParameterGenerator} class, which
  * is used to generate a set of parameters to be used with a certain algorithm.
  *
- * <p> All the abstract methods in this class must be implemented by each
+ * All the abstract methods in this class must be implemented by each
  * cryptographic service provider who wishes to supply the implementation
  * of a parameter generator for a particular algorithm.
  *
- * <p> In case the client does not explicitly initialize the
+ * In case the client does not explicitly initialize the
  * AlgorithmParameterGenerator (via a call to an {@code engineInit}
  * method), each provider must supply (and document) a default initialization.
  * For example, the Sun provider uses a default modulus prime size of 1024

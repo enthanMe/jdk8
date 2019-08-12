@@ -460,7 +460,7 @@ public class NodeSet
    * nulls appearing in the source NodeSet will
    * not be added to this one. </p>
    *
-   * <p> In case you're wondering why this function is needed: NodeSet
+   * In case you're wondering why this function is needed: NodeSet
    * implements both NodeIterator and NodeList. If this method isn't
    * provided, Java can't decide which of those to use when addNodes()
    * is invoked. Providing the more-explicit match avoids that

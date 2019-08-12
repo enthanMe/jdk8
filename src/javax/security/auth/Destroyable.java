@@ -36,7 +36,7 @@ public interface Destroyable {
     /**
      * Destroy this {@code Object}.
      *
-     * <p> Sensitive information associated with this {@code Object}
+     * Sensitive information associated with this {@code Object}
      * is destroyed or cleared.  Subsequent calls to certain methods
      * on this {@code Object} will result in an
      * {@code IllegalStateException} being thrown.

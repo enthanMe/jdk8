@@ -84,7 +84,7 @@ public final class ImageIO {
      * Thus this method need only be invoked by sophisticated applications
      * which dynamically make new plug-ins available at runtime.
      *
-     * <p> The <code>getResources</code> method of the context
+     * The <code>getResources</code> method of the context
      * <code>ClassLoader</code> is used locate JAR files containing
      * files named
      * <code>META-INF/services/javax.imageio.spi.</code><i>classname</i>,
@@ -94,14 +94,14 @@ public final class ImageIO {
      * <code>ImageOutputStreamSpi</code>, along the application class
      * path.
      *
-     * <p> The contents of the located files indicate the names of
+     * The contents of the located files indicate the names of
      * actual implementation classes which implement the
      * aforementioned service provider interfaces; the default class
      * loader is then used to load each of these classes and to
      * instantiate an instance of each class, which is then placed
      * into the registry for later retrieval.
      *
-     * <p> The exact set of locations searched depends on the
+     * The exact set of locations searched depends on the
      * implementation of the Java runtime environment.
      *
      * @see ClassLoader#getResources
@@ -228,7 +228,7 @@ public final class ImageIO {
      * be used when creating <code>ImageInputStream</code>s and
      * <code>ImageOutputStream</code>s.
      *
-     * <p> When reading from a standard <code>InputStream</code>, it
+     * When reading from a standard <code>InputStream</code>, it
      * may be necessary to save previously read information in a cache
      * since the underlying stream does not allow data to be re-read.
      * Similarly, when writing to a standard
@@ -236,13 +236,13 @@ public final class ImageIO {
      * previously written value to be changed before flushing it to
      * the final destination.
      *
-     * <p> The cache may reside in main memory or on disk.  Setting
+     * The cache may reside in main memory or on disk.  Setting
      * this flag to <code>false</code> disallows the use of disk for
      * future streams, which may be advantageous when working with
      * small images, as the overhead of creating and destroying files
      * is removed.
      *
-     * <p> On startup, the value is set to <code>true</code>.
+     * On startup, the value is set to <code>true</code>.
      *
      * @param useCache a <code>boolean</code> indicating whether a
      * cache file should be used, in cases where it is optional.
@@ -317,7 +317,7 @@ public final class ImageIO {
      * suitable <code>ImageInputStreamSpi</code> exists,
      * <code>null</code> is returned.
      *
-     * <p> The current cache settings from <code>getUseCache</code>and
+     * The current cache settings from <code>getUseCache</code>and
      * <code>getCacheDirectory</code> will be used to control caching.
      *
      * @param input an <code>Object</code> to be used as an input
@@ -378,7 +378,7 @@ public final class ImageIO {
      * suitable <code>ImageOutputStreamSpi</code> exists,
      * <code>null</code> is returned.
      *
-     * <p> The current cache settings from <code>getUseCache</code>and
+     * The current cache settings from <code>getUseCache</code>and
      * <code>getCacheDirectory</code> will be used to control caching.
      *
      * @param output an <code>Object</code> to be used as an output
@@ -623,7 +623,7 @@ public final class ImageIO {
      * decode the supplied <code>Object</code>, typically an
      * <code>ImageInputStream</code>.
      *
-     * <p> The stream position is left at its prior position upon
+     * The stream position is left at its prior position upon
      * exit from this method.
      *
      * @param input an <code>ImageInputStream</code> or other
@@ -1271,15 +1271,15 @@ public final class ImageIO {
      * <code>ImageReader</code> claims to be able to read the
      * resulting stream, <code>null</code> is returned.
      *
-     * <p> The current cache settings from <code>getUseCache</code>and
+     * The current cache settings from <code>getUseCache</code>and
      * <code>getCacheDirectory</code> will be used to control caching in the
      * <code>ImageInputStream</code> that is created.
      *
-     * <p> Note that there is no <code>read</code> method that takes a
+     * Note that there is no <code>read</code> method that takes a
      * filename as a <code>String</code>; use this method instead after
      * creating a <code>File</code> from the filename.
      *
-     * <p> This method does not attempt to locate
+     * This method does not attempt to locate
      * <code>ImageReader</code>s that can read directly from a
      * <code>File</code>; that may be accomplished using
      * <code>IIORegistry</code> and <code>ImageReaderSpi</code>.
@@ -1321,16 +1321,16 @@ public final class ImageIO {
      * <code>ImageReader</code> claims to be able to read the
      * resulting stream, <code>null</code> is returned.
      *
-     * <p> The current cache settings from <code>getUseCache</code>and
+     * The current cache settings from <code>getUseCache</code>and
      * <code>getCacheDirectory</code> will be used to control caching in the
      * <code>ImageInputStream</code> that is created.
      *
-     * <p> This method does not attempt to locate
+     * This method does not attempt to locate
      * <code>ImageReader</code>s that can read directly from an
      * <code>InputStream</code>; that may be accomplished using
      * <code>IIORegistry</code> and <code>ImageReaderSpi</code>.
      *
-     * <p> This method <em>does not</em> close the provided
+     * This method <em>does not</em> close the provided
      * <code>InputStream</code> after the read operation has completed;
      * it is the responsibility of the caller to close the stream, if desired.
      *
@@ -1365,11 +1365,11 @@ public final class ImageIO {
      * registered <code>ImageReader</code> claims to be able to read
      * the resulting stream, <code>null</code> is returned.
      *
-     * <p> The current cache settings from <code>getUseCache</code>and
+     * The current cache settings from <code>getUseCache</code>and
      * <code>getCacheDirectory</code> will be used to control caching in the
      * <code>ImageInputStream</code> that is created.
      *
-     * <p> This method does not attempt to locate
+     * This method does not attempt to locate
      * <code>ImageReader</code>s that can read directly from a
      * <code>URL</code>; that may be accomplished using
      * <code>IIORegistry</code> and <code>ImageReaderSpi</code>.
@@ -1415,7 +1415,7 @@ public final class ImageIO {
      * <code>ImageReader</code> claims to be able to read the stream,
      * <code>null</code> is returned.
      *
-     * <p> Unlike most other methods in this class, this method <em>does</em>
+     * Unlike most other methods in this class, this method <em>does</em>
      * close the provided <code>ImageInputStream</code> after the read
      * operation has completed, unless <code>null</code> is returned,
      * in which case this method <em>does not</em> close the stream.
@@ -1461,7 +1461,7 @@ public final class ImageIO {
      * pointer, overwriting existing stream data from that point
      * forward, if present.
      *
-     * <p> This method <em>does not</em> close the provided
+     * This method <em>does not</em> close the provided
      * <code>ImageOutputStream</code> after the write operation has completed;
      * it is the responsibility of the caller to close the stream, if desired.
      *
@@ -1543,11 +1543,11 @@ public final class ImageIO {
      * Writes an image using an arbitrary <code>ImageWriter</code>
      * that supports the given format to an <code>OutputStream</code>.
      *
-     * <p> This method <em>does not</em> close the provided
+     * This method <em>does not</em> close the provided
      * <code>OutputStream</code> after the write operation has completed;
      * it is the responsibility of the caller to close the stream, if desired.
      *
-     * <p> The current cache settings from <code>getUseCache</code>and
+     * The current cache settings from <code>getUseCache</code>and
      * <code>getCacheDirectory</code> will be used to control caching.
      *
      * @param im a <code>RenderedImage</code> to be written.

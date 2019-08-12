@@ -71,7 +71,7 @@ public class FileCacheImageInputStream extends ImageInputStreamImpl {
      * Constructs a <code>FileCacheImageInputStream</code> that will read
      * from a given <code>InputStream</code>.
      *
-     * <p> A temporary file is used as a cache.  If
+     * A temporary file is used as a cache.  If
      * <code>cacheDir</code>is non-<code>null</code> and is a
      * directory, the file will be created there.  If it is
      * <code>null</code>, the system-dependent default temporary-file

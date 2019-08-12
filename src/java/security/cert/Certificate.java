@@ -197,7 +197,7 @@ public abstract class Certificate implements java.io.Serializable {
      * supplied by the specified provider. Note that the specified
      * Provider object does not have to be registered in the provider list.
      *
-     * <p> This method was added to version 1.8 of the Java Platform
+     * This method was added to version 1.8 of the Java Platform
      * Standard Edition. In order to maintain backwards compatibility with
      * existing service providers, this method cannot be {@code abstract}
      * and by default throws an {@code UnsupportedOperationException}.

@@ -79,11 +79,11 @@ public abstract class AccessibleHyperlink implements AccessibleAction {
          * link action.  This should be a text string
          * associated with anchoring text, this should be the
          * anchor text.  E.g. from HTML:
-         *   &lt;a HREF="http://www.sun.com/access"&gt;Accessibility&lt;/a&gt;
+         *   <a HREF="http://www.sun.com/access">Accessibility</a>
          * this method would return "Accessibility".
          *
          * Similarly, from this HTML:
-         *   &lt;a HREF="#top"&gt;&lt;img src="top-hat.gif" alt="top hat"&gt;&lt;/a&gt;
+         *   <a HREF="#top"><img src="top-hat.gif" alt="top hat"></a>
          * this method would return "top hat"
          *
          * @param i zero-based index of the actions
@@ -95,7 +95,7 @@ public abstract class AccessibleHyperlink implements AccessibleAction {
         /**
          * Returns an object that represents the link action,
          * as appropriate for that link.  E.g. from HTML:
-         *   &lt;a HREF="http://www.sun.com/access"&gt;Accessibility&lt;/a&gt;
+         *   <a HREF="http://www.sun.com/access">Accessibility</a>
          * this method would return a
          * java.net.URL("http://www.sun.com/access.html");
          *
@@ -108,12 +108,12 @@ public abstract class AccessibleHyperlink implements AccessibleAction {
         /**
          * Returns an object that represents the link anchor,
          * as appropriate for that link.  E.g. from HTML:
-         *   &lt;a href="http://www.sun.com/access"&gt;Accessibility&lt;/a&gt;
+         *   <a href="http://www.sun.com/access">Accessibility</a>
          * this method would return a String containing the text:
          * "Accessibility".
          *
          * Similarly, from this HTML:
-         *   &lt;a HREF="#top"&gt;&lt;img src="top-hat.gif" alt="top hat"&gt;&lt;/a&gt;
+         *   <a HREF="#top"><img src="top-hat.gif" alt="top hat"></a>
          * this might return the object ImageIcon("top-hat.gif", "top hat");
          *
          * @param i zero-based index of the actions

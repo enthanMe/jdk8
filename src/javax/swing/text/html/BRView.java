@@ -27,14 +27,14 @@ package javax.swing.text.html;
 import javax.swing.text.*;
 
 /**
- * Processes the &lt;BR&gt; tag.  In other words, forces a line break.
+ * Processes the <BR> tag.  In other words, forces a line break.
  *
  * @author Sunita Mani
  */
 class BRView extends InlineView {
 
     /**
-     * Creates a new view that represents a &lt;BR&gt; element.
+     * Creates a new view that represents a <BR> element.
      *
      * @param elem the element to create a view for
      */

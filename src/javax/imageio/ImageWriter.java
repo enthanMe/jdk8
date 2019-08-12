@@ -47,7 +47,7 @@ import javax.imageio.spi.ImageWriterSpi;
  * must be subclassed by classes that write out images in the context
  * of the Java Image I/O framework.
  *
- * <p> <code>ImageWriter</code> objects are normally instantiated by
+ * <code>ImageWriter</code> objects are normally instantiated by
  * the service provider class for the specific format.  Service
  * provider classes are registered with the <code>IIORegistry</code>,
  * which uses them for format recognition and presentation of
@@ -128,7 +128,7 @@ public abstract class ImageWriter implements ImageTranscoder {
      * <code>originatingProvider</code> instance variable to the
      * supplied value.
      *
-     * <p> Subclasses that make use of extensions should provide a
+     * Subclasses that make use of extensions should provide a
      * constructor with signature <code>(ImageWriterSpi,
      * Object)</code> in order to retrieve the extension object.  If
      * the extension object is unsuitable, an
@@ -146,7 +146,7 @@ public abstract class ImageWriter implements ImageTranscoder {
      * this <code>ImageWriter</code>, or <code>null</code> if this
      * object was not created through the <code>IIORegistry</code>.
      *
-     * <p> The default implementation returns the value of the
+     * The default implementation returns the value of the
      * <code>originatingProvider</code> instance variable.
      *
      * @return an <code>ImageWriterSpi</code>, or <code>null</code>.
@@ -166,7 +166,7 @@ public abstract class ImageWriter implements ImageTranscoder {
      * single network connection.  If <code>output</code> is
      * <code>null</code>, any currently set output will be removed.
      *
-     * <p> If <code>output</code> is an
+     * If <code>output</code> is an
      * <code>ImageOutputStream</code>, calls to the
      * <code>write</code>, <code>writeToSequence</code>, and
      * <code>prepareWriteEmpty</code>/<code>endWriteEmpty</code>
@@ -179,7 +179,7 @@ public abstract class ImageWriter implements ImageTranscoder {
      * of the stream to be readable and writable, and may alter any
      * portion of the stream.
      *
-     * <p> Use of a general <code>Object</code> other than an
+     * Use of a general <code>Object</code> other than an
      * <code>ImageOutputStream</code> is intended for writers that
      * interact directly with an output device or imaging protocol.
      * The set of legal classes is advertised by the writer's service
@@ -188,7 +188,7 @@ public abstract class ImageWriter implements ImageTranscoder {
      * <code>ImageOutputStream.class</code> to indicate that they
      * accept only an <code>ImageOutputStream</code>.
      *
-     * <p> The default implementation sets the <code>output</code>
+     * The default implementation sets the <code>output</code>
      * instance variable to the value of <code>output</code> after
      * checking <code>output</code> against the set of classes
      * advertised by the originating provider, if there is one.
@@ -230,7 +230,7 @@ public abstract class ImageWriter implements ImageTranscoder {
      * <code>setOutput</code> method.  If no destination has been
      * set, <code>null</code> is returned.
      *
-     * <p> The default implementation returns the value of the
+     * The default implementation returns the value of the
      * <code>output</code> instance variable.
      *
      * @return the <code>Object</code> that was specified using
@@ -250,7 +250,7 @@ public abstract class ImageWriter implements ImageTranscoder {
      * value of <code>null</code> indicates that localization is not
      * supported.
      *
-     * <p> The default implementation returns a clone of the
+     * The default implementation returns a clone of the
      * <code>availableLocales</code> instance variable if it is
      * non-<code>null</code>, or else returns <code>null</code>.
      *
@@ -268,7 +268,7 @@ public abstract class ImageWriter implements ImageTranscoder {
      * <code>null</code> removes any previous setting, and indicates
      * that the writer should localize as it sees fit.
      *
-     * <p> The default implementation checks <code>locale</code>
+     * The default implementation checks <code>locale</code>
      * against the values returned by
      * <code>getAvailableLocales</code>, and sets the
      * <code>locale</code> instance variable if it is found.  If
@@ -307,7 +307,7 @@ public abstract class ImageWriter implements ImageTranscoder {
      * Returns the currently set <code>Locale</code>, or
      * <code>null</code> if none has been set.
      *
-     * <p> The default implementation returns the value of the
+     * The default implementation returns the value of the
      * <code>locale</code> instance variable.
      *
      * @return the current <code>Locale</code>, or <code>null</code>.
@@ -328,14 +328,14 @@ public abstract class ImageWriter implements ImageTranscoder {
      * is useful as a starting point for tweaking just a few parameters
      * and otherwise leaving the default settings alone.
      *
-     * <p> The default implementation constructs and returns a new
+     * The default implementation constructs and returns a new
      * <code>ImageWriteParam</code> object that does not allow tiling,
      * progressive encoding, or compression, and that will be
      * localized for the current <code>Locale</code> (<i>i.e.</i>,
      * what you would get by calling <code>new
      * ImageWriteParam(getLocale())</code>.
      *
-     * <p> Individual plug-ins may return an instance of
+     * Individual plug-ins may return an instance of
      * <code>ImageWriteParam</code> with additional optional features
      * enabled, or they may return an instance of a plug-in specific
      * subclass of <code>ImageWriteParam</code>.
@@ -359,16 +359,16 @@ public abstract class ImageWriter implements ImageTranscoder {
      * the <code>write</code> methods that take a stream metadata
      * parameter.
      *
-     * <p> An optional <code>ImageWriteParam</code> may be supplied
+     * An optional <code>ImageWriteParam</code> may be supplied
      * for cases where it may affect the structure of the stream
      * metadata.
      *
-     * <p> If the supplied <code>ImageWriteParam</code> contains
+     * If the supplied <code>ImageWriteParam</code> contains
      * optional setting values not supported by this writer (<i>e.g.</i>
      * progressive encoding or any format-specific settings), they
      * will be ignored.
      *
-     * <p> Writers that do not make use of stream metadata
+     * Writers that do not make use of stream metadata
      * (<i>e.g.</i>, writers for single-image formats) should return
      * <code>null</code>.
      *
@@ -390,11 +390,11 @@ public abstract class ImageWriter implements ImageTranscoder {
      * one of the <code>write</code> methods that take a stream
      * metadata parameter.
      *
-     * <p> An optional <code>ImageWriteParam</code> may be supplied
+     * An optional <code>ImageWriteParam</code> may be supplied
      * for cases where it may affect the structure of the image
      * metadata.
      *
-     * <p> If the supplied <code>ImageWriteParam</code> contains
+     * If the supplied <code>ImageWriteParam</code> contains
      * optional setting values not supported by this writer (<i>e.g.</i>
      * progressive encoding or any format-specific settings), they
      * will be ignored.
@@ -429,15 +429,15 @@ public abstract class ImageWriter implements ImageTranscoder {
      * encoding.  A return value of <code>-1</code> indicates that
      * insufficient information is available.
      *
-     * <p> An <code>ImageWriteParam</code> may optionally be supplied
+     * An <code>ImageWriteParam</code> may optionally be supplied
      * for cases where it may affect thumbnail handling.
      *
-     * <p> If the supplied <code>ImageWriteParam</code> contains
+     * If the supplied <code>ImageWriteParam</code> contains
      * optional setting values not supported by this writer (<i>e.g.</i>
      * progressive encoding or any format-specific settings), they
      * will be ignored.
      *
-     * <p> The default implementation returns 0.
+     * The default implementation returns 0.
      *
      * @param imageType an <code>ImageTypeSpecifier</code> indicating
      * the type of image to be written, or <code>null</code>.
@@ -466,7 +466,7 @@ public abstract class ImageWriter implements ImageTranscoder {
      * advisory; the writer will resize any supplied thumbnails as
      * necessary.
      *
-     * <p> The information is returned as a set of pairs; the first
+     * The information is returned as a set of pairs; the first
      * element of a pair contains an (inclusive) minimum width and
      * height, and the second element contains an (inclusive) maximum
      * width and height.  Together, each pair defines a valid range of
@@ -474,15 +474,15 @@ public abstract class ImageWriter implements ImageTranscoder {
      * appear for both elements.  A return value of <code>null</code>
      * indicates that the size is arbitrary or unknown.
      *
-     * <p> An <code>ImageWriteParam</code> may optionally be supplied
+     * An <code>ImageWriteParam</code> may optionally be supplied
      * for cases where it may affect thumbnail handling.
      *
-     * <p> If the supplied <code>ImageWriteParam</code> contains
+     * If the supplied <code>ImageWriteParam</code> contains
      * optional setting values not supported by this writer (<i>e.g.</i>
      * progressive encoding or any format-specific settings), they
      * will be ignored.
      *
-     * <p> The default implementation returns <code>null</code>.
+     * The default implementation returns <code>null</code>.
      *
      * @param imageType an <code>ImageTypeSpecifier</code> indicating the
      * type of image to be written, or <code>null</code>.
@@ -512,7 +512,7 @@ public abstract class ImageWriter implements ImageTranscoder {
      * <code>UnsupportedOperationException</code> if supplied with an
      * <code>IIOImage</code> containing a <code>Raster</code>.
      *
-     * <p> The default implementation returns <code>false</code>.
+     * The default implementation returns <code>false</code>.
      *
      * @return <code>true</code> if <code>Raster</code> sources are
      * supported.
@@ -529,28 +529,28 @@ public abstract class ImageWriter implements ImageTranscoder {
      * contents prior to the current seek position are not affected,
      * and need not be readable or writable.
      *
-     * <p> The output must have been set beforehand using the
+     * The output must have been set beforehand using the
      * <code>setOutput</code> method.
      *
-     * <p> Stream metadata may optionally be supplied; if it is
+     * Stream metadata may optionally be supplied; if it is
      * <code>null</code>, default stream metadata will be used.
      *
-     * <p> If <code>canWriteRasters</code> returns <code>true</code>,
+     * If <code>canWriteRasters</code> returns <code>true</code>,
      * the <code>IIOImage</code> may contain a <code>Raster</code>
      * source.  Otherwise, it must contain a
      * <code>RenderedImage</code> source.
      *
-     * <p> The supplied thumbnails will be resized if needed, and any
+     * The supplied thumbnails will be resized if needed, and any
      * thumbnails in excess of the supported number will be ignored.
      * If the format requires additional thumbnails that are not
      * provided, the writer should generate them internally.
      *
-     * <p>  An <code>ImageWriteParam</code> may
+     *  An <code>ImageWriteParam</code> may
      * optionally be supplied to control the writing process.  If
      * <code>param</code> is <code>null</code>, a default write param
      * will be used.
      *
-     * <p> If the supplied <code>ImageWriteParam</code> contains
+     * If the supplied <code>ImageWriteParam</code> contains
      * optional setting values not supported by this writer (<i>e.g.</i>
      * progressive encoding or any format-specific settings), they
      * will be ignored.
@@ -631,11 +631,11 @@ public abstract class ImageWriter implements ImageTranscoder {
      * image to an image stream that already contains header
      * information and possibly prior images.
      *
-     * <p> If <code>canWriteSequence</code> returns <code>false</code>,
+     * If <code>canWriteSequence</code> returns <code>false</code>,
      * <code>writeToSequence</code> and <code>endWriteSequence</code>
      * will throw an <code>UnsupportedOperationException</code>.
      *
-     * <p> The default implementation returns <code>false</code>.
+     * The default implementation returns <code>false</code>.
      *
      * @return <code>true</code> if images may be appended sequentially.
      */
@@ -650,7 +650,7 @@ public abstract class ImageWriter implements ImageTranscoder {
      * it should precede the image data.  If the argument is <code>null</code>,
      * default stream metadata is used.
      *
-     * <p> If the output is an <code>ImageOutputStream</code>, the existing
+     * If the output is an <code>ImageOutputStream</code>, the existing
      * contents of the output prior to the current seek position are
      * flushed, and need not be readable or writable.  If the format
      * requires that <code>endWriteSequence</code> be able to rewind to
@@ -659,14 +659,14 @@ public abstract class ImageWriter implements ImageTranscoder {
      * must remain in a writable portion of the stream.  Other formats
      * may flush the stream after this method and after each image.
      *
-     * <p> If <code>canWriteSequence</code> returns <code>false</code>,
+     * If <code>canWriteSequence</code> returns <code>false</code>,
      * this method will throw an
      * <code>UnsupportedOperationException</code>.
      *
-     * <p> The output must have been set beforehand using either
+     * The output must have been set beforehand using either
      * the <code>setOutput</code> method.
      *
-     * <p> The default implementation throws an
+     * The default implementation throws an
      * <code>IllegalStateException</code> if the output is
      * <code>null</code>, and otherwise throws an
      * <code>UnsupportedOperationException</code>.
@@ -694,36 +694,36 @@ public abstract class ImageWriter implements ImageTranscoder {
      * be able to patch up the header information when
      * <code>endWriteSequence</code> is called (<i>e.g.</i> TIFF).
      *
-     * <p> If <code>canWriteSequence</code> returns <code>false</code>,
+     * If <code>canWriteSequence</code> returns <code>false</code>,
      * this method will throw an
      * <code>UnsupportedOperationException</code>.
      *
-     * <p> The output must have been set beforehand using
+     * The output must have been set beforehand using
      * the <code>setOutput</code> method.
      *
-     * <p> <code>prepareWriteSequence</code> must have been called
+     * <code>prepareWriteSequence</code> must have been called
      * beforehand, or an <code>IllegalStateException</code> is thrown.
      *
-     * <p> If <code>canWriteRasters</code> returns <code>true</code>,
+     * If <code>canWriteRasters</code> returns <code>true</code>,
      * the <code>IIOImage</code> may contain a <code>Raster</code>
      * source.  Otherwise, it must contain a
      * <code>RenderedImage</code> source.
      *
-     * <p> The supplied thumbnails will be resized if needed, and any
+     * The supplied thumbnails will be resized if needed, and any
      * thumbnails in excess of the supported number will be ignored.
      * If the format requires additional thumbnails that are not
      * provided, the writer will generate them internally.
      *
-     * <p> An <code>ImageWriteParam</code> may optionally be supplied
+     * An <code>ImageWriteParam</code> may optionally be supplied
      * to control the writing process.  If <code>param</code> is
      * <code>null</code>, a default write param will be used.
      *
-     * <p> If the supplied <code>ImageWriteParam</code> contains
+     * If the supplied <code>ImageWriteParam</code> contains
      * optional setting values not supported by this writer (<i>e.g.</i>
      * progressive encoding or any format-specific settings), they
      * will be ignored.
      *
-     * <p> The default implementation throws an
+     * The default implementation throws an
      * <code>IllegalStateException</code> if the output is
      * <code>null</code>, and otherwise throws an
      * <code>UnsupportedOperationException</code>.
@@ -760,11 +760,11 @@ public abstract class ImageWriter implements ImageTranscoder {
      * at the end of the sequence are flushed and need not be readable
      * or writable.
      *
-     * <p> If <code>canWriteSequence</code> returns <code>false</code>,
+     * If <code>canWriteSequence</code> returns <code>false</code>,
      * this method will throw an
      * <code>UnsupportedOperationException</code>.
      *
-     * <p> The default implementation throws an
+     * The default implementation throws an
      * <code>IllegalStateException</code> if the output is
      * <code>null</code>, and otherwise throws an
      * <code>UnsupportedOperationException</code>.
@@ -785,7 +785,7 @@ public abstract class ImageWriter implements ImageTranscoder {
      * Returns <code>true</code> if it is possible to replace the
      * stream metadata already present in the output.
      *
-     * <p> The default implementation throws an
+     * The default implementation throws an
      * <code>IllegalStateException</code> if the output is
      * <code>null</code>, and otherwise returns <code>false</code>.
      *
@@ -811,11 +811,11 @@ public abstract class ImageWriter implements ImageTranscoder {
      * new data.  All of the prior contents of the output must be
      * available for reading and writing.
      *
-     * <p> If <code>canReplaceStreamMetadata</code> returns
+     * If <code>canReplaceStreamMetadata</code> returns
      * <code>false</code>, an
      * <code>UnsupportedOperationException</code> will be thrown.
      *
-     * <p> The default implementation throws an
+     * The default implementation throws an
      * <code>IllegalStateException</code> if the output is
      * <code>null</code>, and otherwise throws an
      * <code>UnsupportedOperationException</code>.
@@ -843,11 +843,11 @@ public abstract class ImageWriter implements ImageTranscoder {
      * <code>replaceImageMetadata(imageIndex)</code> will throw an
      * <code>UnsupportedOperationException</code>.
      *
-     * <p> A writer that does not support any image metadata
+     * A writer that does not support any image metadata
      * replacement may return <code>false</code> without performing
      * bounds checking on the index.
      *
-     * <p> The default implementation throws an
+     * The default implementation throws an
      * <code>IllegalStateException</code> if the output is
      * <code>null</code>, and otherwise returns <code>false</code>
      * without checking the value of <code>imageIndex</code>.
@@ -877,11 +877,11 @@ public abstract class ImageWriter implements ImageTranscoder {
     /**
      * Replaces the image metadata associated with an existing image.
      *
-     * <p> If <code>canReplaceImageMetadata(imageIndex)</code> returns
+     * If <code>canReplaceImageMetadata(imageIndex)</code> returns
      * <code>false</code>, an
      * <code>UnsupportedOperationException</code> will be thrown.
      *
-     * <p> The default implementation throws an
+     * The default implementation throws an
      * <code>IllegalStateException</code> if the output is
      * <code>null</code>, and otherwise throws an
      * <code>UnsupportedOperationException</code>.
@@ -916,11 +916,11 @@ public abstract class ImageWriter implements ImageTranscoder {
      * <code>imageIndex</code> of <code>-1</code> may be used to
      * signify an index one larger than the current largest index.
      *
-     * <p> A writer that does not support any image insertion may
+     * A writer that does not support any image insertion may
      * return <code>false</code> without performing bounds checking on
      * the index.
      *
-     * <p> The default implementation throws an
+     * The default implementation throws an
      * <code>IllegalStateException</code> if the output is
      * <code>null</code>, and otherwise returns <code>false</code>
      * without checking the value of <code>imageIndex</code>.
@@ -955,20 +955,20 @@ public abstract class ImageWriter implements ImageTranscoder {
      * sequence.  If the output is an <code>ImageOutputStream</code>,
      * the entirety of the stream must be both readable and writeable.
      *
-     * <p> If <code>canInsertImage(imageIndex)</code> returns
+     * If <code>canInsertImage(imageIndex)</code> returns
      * <code>false</code>, an
      * <code>UnsupportedOperationException</code> will be thrown.
      *
-     * <p> An <code>ImageWriteParam</code> may optionally be supplied
+     * An <code>ImageWriteParam</code> may optionally be supplied
      * to control the writing process.  If <code>param</code> is
      * <code>null</code>, a default write param will be used.
      *
-     * <p> If the supplied <code>ImageWriteParam</code> contains
+     * If the supplied <code>ImageWriteParam</code> contains
      * optional setting values not supported by this writer (<i>e.g.</i>
      * progressive encoding or any format-specific settings), they
      * will be ignored.
      *
-     * <p> The default implementation throws an
+     * The default implementation throws an
      * <code>IllegalStateException</code> if the output is
      * <code>null</code>, and otherwise throws an
      * <code>UnsupportedOperationException</code>.
@@ -1007,11 +1007,11 @@ public abstract class ImageWriter implements ImageTranscoder {
      * indices greater than the insertion index will have
      * their indices decreased by 1.
      *
-     * <p> A writer that does not support any image removal may
+     * A writer that does not support any image removal may
      * return <code>false</code> without performing bounds checking on
      * the index.
      *
-     * <p> The default implementation throws an
+     * The default implementation throws an
      * <code>IllegalStateException</code> if the output is
      * <code>null</code>, and otherwise returns <code>false</code>
      * without checking the value of <code>imageIndex</code>.
@@ -1039,13 +1039,13 @@ public abstract class ImageWriter implements ImageTranscoder {
     /**
      * Removes an image from the stream.
      *
-     * <p> If <code>canRemoveImage(imageIndex)</code> returns false,
+     * If <code>canRemoveImage(imageIndex)</code> returns false,
      * an <code>UnsupportedOperationException</code>will be thrown.
      *
-     * <p> The removal may or may not cause a reduction in the actual
+     * The removal may or may not cause a reduction in the actual
      * file size.
      *
-     * <p> The default implementation throws an
+     * The default implementation throws an
      * <code>IllegalStateException</code> if the output is
      * <code>null</code>, and otherwise throws an
      * <code>UnsupportedOperationException</code>.
@@ -1077,7 +1077,7 @@ public abstract class ImageWriter implements ImageTranscoder {
      * prior to the current seek position are not affected, and need
      * not be readable or writable.
      *
-     * <p> The default implementation throws an
+     * The default implementation throws an
      * <code>IllegalStateException</code> if the output is
      * <code>null</code>, and otherwise returns <code>false</code>.
      *
@@ -1105,7 +1105,7 @@ public abstract class ImageWriter implements ImageTranscoder {
      * its existing contents prior to the current seek position are
      * not affected, and need not be readable or writable.
      *
-     * <p> The writing is not complete until a call to
+     * The writing is not complete until a call to
      * <code>endWriteEmpty</code> occurs.  Calls to
      * <code>prepareReplacePixels</code>, <code>replacePixels</code>,
      * and <code>endReplacePixels</code> may occur between calls to
@@ -1114,19 +1114,19 @@ public abstract class ImageWriter implements ImageTranscoder {
      * nested, and calls to <code>prepareWriteEmpty</code> and
      * <code>prepareInsertEmpty</code> may not be interspersed.
      *
-     * <p> If <code>canWriteEmpty</code> returns <code>false</code>,
+     * If <code>canWriteEmpty</code> returns <code>false</code>,
      * an <code>UnsupportedOperationException</code> will be thrown.
      *
-     * <p> An <code>ImageWriteParam</code> may optionally be supplied
+     * An <code>ImageWriteParam</code> may optionally be supplied
      * to control the writing process.  If <code>param</code> is
      * <code>null</code>, a default write param will be used.
      *
-     * <p> If the supplied <code>ImageWriteParam</code> contains
+     * If the supplied <code>ImageWriteParam</code> contains
      * optional setting values not supported by this writer (<i>e.g.</i>
      * progressive encoding or any format-specific settings), they
      * will be ignored.
      *
-     * <p> The default implementation throws an
+     * The default implementation throws an
      * <code>IllegalStateException</code> if the output is
      * <code>null</code>, and otherwise throws an
      * <code>UnsupportedOperationException</code>.
@@ -1177,10 +1177,10 @@ public abstract class ImageWriter implements ImageTranscoder {
      * Completes the writing of a new image that was begun with a
      * prior call to <code>prepareWriteEmpty</code>.
      *
-     * <p> If <code>canWriteEmpty()</code> returns <code>false</code>,
+     * If <code>canWriteEmpty()</code> returns <code>false</code>,
      * an <code>UnsupportedOperationException</code> will be thrown.
      *
-     * <p> The default implementation throws an
+     * The default implementation throws an
      * <code>IllegalStateException</code> if the output is
      * <code>null</code>, and otherwise throws an
      * <code>UnsupportedOperationException</code>.
@@ -1218,11 +1218,11 @@ public abstract class ImageWriter implements ImageTranscoder {
      * <code>imageIndex</code> of <code>-1</code> may be used to
      * signify an index one larger than the current largest index.
      *
-     * <p> A writer that does not support insertion of empty images
+     * A writer that does not support insertion of empty images
      * may return <code>false</code> without performing bounds
      * checking on the index.
      *
-     * <p> The default implementation throws an
+     * The default implementation throws an
      * <code>IllegalStateException</code> if the output is
      * <code>null</code>, and otherwise returns <code>false</code>
      * without checking the value of <code>imageIndex</code>.
@@ -1259,7 +1259,7 @@ public abstract class ImageWriter implements ImageTranscoder {
      * sequence.  If the output is an <code>ImageOutputStream</code>,
      * the entirety of the stream must be both readable and writeable.
      *
-     * <p> The image contents may be
+     * The image contents may be
      * supplied later using the <code>replacePixels</code> method.
      * The insertion is not complete until a call to
      * <code>endInsertEmpty</code> occurs.  Calls to
@@ -1271,20 +1271,20 @@ public abstract class ImageWriter implements ImageTranscoder {
      * <code>prepareWriteEmpty</code> and
      * <code>prepareInsertEmpty</code> may not be interspersed.
      *
-     * <p> If <code>canInsertEmpty(imageIndex)</code> returns
+     * If <code>canInsertEmpty(imageIndex)</code> returns
      * <code>false</code>, an
      * <code>UnsupportedOperationException</code> will be thrown.
      *
-     * <p> An <code>ImageWriteParam</code> may optionally be supplied
+     * An <code>ImageWriteParam</code> may optionally be supplied
      * to control the writing process.  If <code>param</code> is
      * <code>null</code>, a default write param will be used.
      *
-     * <p> If the supplied <code>ImageWriteParam</code> contains
+     * If the supplied <code>ImageWriteParam</code> contains
      * optional setting values not supported by this writer (<i>e.g.</i>
      * progressive encoding or any format-specific settings), they
      * will be ignored.
      *
-     * <p> The default implementation throws an
+     * The default implementation throws an
      * <code>IllegalStateException</code> if the output is
      * <code>null</code>, and otherwise throws an
      * <code>UnsupportedOperationException</code>.
@@ -1337,7 +1337,7 @@ public abstract class ImageWriter implements ImageTranscoder {
      * Completes the insertion of a new image that was begun with a
      * prior call to <code>prepareInsertEmpty</code>.
      *
-     * <p> The default implementation throws an
+     * The default implementation throws an
      * <code>IllegalStateException</code> if the output is
      * <code>null</code>, and otherwise throws an
      * <code>UnsupportedOperationException</code>.
@@ -1369,11 +1369,11 @@ public abstract class ImageWriter implements ImageTranscoder {
      * given image to be replaced using the <code>replacePixels</code>
      * methods.
      *
-     * <p> A writer that does not support any pixel replacement may
+     * A writer that does not support any pixel replacement may
      * return <code>false</code> without performing bounds checking on
      * the index.
      *
-     * <p> The default implementation throws an
+     * The default implementation throws an
      * <code>IllegalStateException</code> if the output is
      * <code>null</code>, and otherwise returns <code>false</code>
      * without checking the value of <code>imageIndex</code>.
@@ -1403,11 +1403,11 @@ public abstract class ImageWriter implements ImageTranscoder {
      * <code>replacePixels</code> methods.  The affected pixel area
      * will be clipped against the supplied
      *
-     * <p> If <code>canReplacePixels</code> returns
+     * If <code>canReplacePixels</code> returns
      * <code>false</code>, and
      * <code>UnsupportedOperationException</code> will be thrown.
      *
-     * <p> The default implementation throws an
+     * The default implementation throws an
      * <code>IllegalStateException</code> if the output is
      * <code>null</code>, and otherwise throws an
      * <code>UnsupportedOperationException</code>.
@@ -1443,26 +1443,26 @@ public abstract class ImageWriter implements ImageTranscoder {
      * with a portion of the given image.  The image data must match,
      * or be convertible to, the image layout of the existing image.
      *
-     * <p> The destination region is specified in the
+     * The destination region is specified in the
      * <code>param</code> argument, and will be clipped to the image
      * boundaries and the region supplied to
      * <code>prepareReplacePixels</code>.  At least one pixel of the
      * source must not be clipped, or an exception is thrown.
      *
-     * <p> An <code>ImageWriteParam</code> may optionally be supplied
+     * An <code>ImageWriteParam</code> may optionally be supplied
      * to control the writing process.  If <code>param</code> is
      * <code>null</code>, a default write param will be used.
      *
-     * <p> If the supplied <code>ImageWriteParam</code> contains
+     * If the supplied <code>ImageWriteParam</code> contains
      * optional setting values not supported by this writer (<i>e.g.</i>
      * progressive encoding or any format-specific settings), they
      * will be ignored.
      *
-     * <p> This method may only be called after a call to
+     * This method may only be called after a call to
      * <code>prepareReplacePixels</code>, or else an
      * <code>IllegalStateException</code> will be thrown.
      *
-     * <p> The default implementation throws an
+     * The default implementation throws an
      * <code>IllegalStateException</code> if the output is
      * <code>null</code>, and otherwise throws an
      * <code>UnsupportedOperationException</code>.
@@ -1502,26 +1502,26 @@ public abstract class ImageWriter implements ImageTranscoder {
      * data must match, or be convertible to, the image layout of the
      * existing image.
      *
-     * <p> An <code>ImageWriteParam</code> may optionally be supplied
+     * An <code>ImageWriteParam</code> may optionally be supplied
      * to control the writing process.  If <code>param</code> is
      * <code>null</code>, a default write param will be used.
      *
-     * <p> The destination region is specified in the
+     * The destination region is specified in the
      * <code>param</code> argument, and will be clipped to the image
      * boundaries and the region supplied to
      * <code>prepareReplacePixels</code>.  At least one pixel of the
      * source must not be clipped, or an exception is thrown.
      *
-     * <p> If the supplied <code>ImageWriteParam</code> contains
+     * If the supplied <code>ImageWriteParam</code> contains
      * optional setting values not supported by this writer (<i>e.g.</i>
      * progressive encoding or any format-specific settings), they
      * will be ignored.
      *
-     * <p> This method may only be called after a call to
+     * This method may only be called after a call to
      * <code>prepareReplacePixels</code>, or else an
      * <code>IllegalStateException</code> will be thrown.
      *
-     * <p> The default implementation throws an
+     * The default implementation throws an
      * <code>IllegalStateException</code> if the output is
      * <code>null</code>, and otherwise throws an
      * <code>UnsupportedOperationException</code>.
@@ -1560,11 +1560,11 @@ public abstract class ImageWriter implements ImageTranscoder {
     /**
      * Terminates a sequence of calls to <code>replacePixels</code>.
      *
-     * <p> If <code>canReplacePixels</code> returns
+     * If <code>canReplacePixels</code> returns
      * <code>false</code>, and
      * <code>UnsupportedOperationException</code> will be thrown.
      *
-     * <p> The default implementation throws an
+     * The default implementation throws an
      * <code>IllegalStateException</code> if the output is
      * <code>null</code>, and otherwise throws an
      * <code>UnsupportedOperationException</code>.
@@ -1589,7 +1589,7 @@ public abstract class ImageWriter implements ImageTranscoder {
      * Requests that any current write operation be aborted.  The
      * contents of the output following the abort will be undefined.
      *
-     * <p> Writers should call <code>clearAbortRequest</code> at the
+     * Writers should call <code>clearAbortRequest</code> at the
      * beginning of each write operation, and poll the value of
      * <code>abortRequested</code> regularly during the write.
      */
@@ -1680,7 +1680,7 @@ public abstract class ImageWriter implements ImageTranscoder {
      * Removes all currently registered
      * <code>IIOWriteWarningListener</code> objects.
      *
-     * <p> The default implementation sets the
+     * The default implementation sets the
      * <code>warningListeners</code> and <code>warningLocales</code>
      * instance variables to <code>null</code>.
      */
@@ -1733,7 +1733,7 @@ public abstract class ImageWriter implements ImageTranscoder {
      * Removes all currently registered
      * <code>IIOWriteProgressListener</code> objects.
      *
-     * <p> The default implementation sets the
+     * The default implementation sets the
      * <code>progressListeners</code> instance variable to
      * <code>null</code>.
      */
@@ -2003,7 +2003,7 @@ public abstract class ImageWriter implements ImageTranscoder {
     /**
      * Restores the <code>ImageWriter</code> to its initial state.
      *
-     * <p> The default implementation calls
+     * The default implementation calls
      * <code>setOutput(null)</code>, <code>setLocale(null)</code>,
      * <code>removeAllIIOWriteWarningListeners()</code>,
      * <code>removeAllIIOWriteProgressListeners()</code>, and

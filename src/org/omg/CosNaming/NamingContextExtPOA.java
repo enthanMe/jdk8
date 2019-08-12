@@ -202,7 +202,7 @@ public abstract class NamingContextExtPOA extends org.omg.PortableServer.Servant
  * Indicates that the name is invalid. <p>
  *
  * @exception org.omg.CosNaming.NamingContextPackage.AlreadyBound 
- * Indicates an object is already bound to the specified name.<p> 
+ * Indicates an object is already bound to the specified name.
  */
        case 4:  // CosNaming/NamingContext/bind
        {

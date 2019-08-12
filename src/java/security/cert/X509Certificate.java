@@ -262,7 +262,7 @@ implements X509Extension {
      * then the {@code getName()} method of the returned
      * {@code Principal} object returns an empty string ("").
      *
-     * <p> The ASN.1 definition for this is:
+     * The ASN.1 definition for this is:
      * <pre>
      * subject    Name
      * </pre>

@@ -38,28 +38,28 @@ import javax.swing.text.*;
  *
  * The format for the document is:
  * <pre>
- * &lt;html&gt;
- *   &lt;head&gt;
- *     &lt;style&gt;
- *        &lt;!-- list of named styles
+ * <html>
+ *   <head>
+ *     <style>
+ *        <!-- list of named styles
  *         p.normal {
  *            font-family: SansSerif;
  *            margin-height: 0;
  *            font-size: 14
  *         }
- *        --&gt;
- *      &lt;/style&gt;
- *   &lt;/head&gt;
- *   &lt;body&gt;
- *    &lt;p style=normal&gt;
+ *        -->
+ *      </style>
+ *   </head>
+ *   <body>
+ *    <p style=normal>
  *        <b>Bold, italic, and underline attributes
  *        of the run are emitted as HTML tags.
  *        The remaining attributes are emitted as
- *        part of the style attribute of a &lt;span&gt; tag.
+ *        part of the style attribute of a <span> tag.
  *        The syntax is similar to inline styles.</b>
- *    &lt;/p&gt;
- *   &lt;/body&gt;
- * &lt;/html&gt;
+ *    </p>
+ *   </body>
+ * </html>
  * </pre>
  *
  * @author Sunita Mani
@@ -89,7 +89,7 @@ public class MinimalHTMLWriter extends AbstractWriter {
      * Stores the attributes of the previous run.
      * Used to compare with the current run's
      * attributeset.  If identical, then a
-     * &lt;span&gt; tag is not emitted.
+     * <span> tag is not emitted.
      */
     private AttributeSet fontAttributes;
 
@@ -220,10 +220,10 @@ public class MinimalHTMLWriter extends AbstractWriter {
 
 
     /**
-     * Writes out the &lt;head&gt; and &lt;style&gt;
+     * Writes out the <head> and <style>
      * tags, and then invokes writeStyles() to write
      * out all the named styles as the content of the
-     * &lt;style&gt; tag.  The content is surrounded by
+     * <style> tag.  The content is surrounded by
      * valid HTML comment markers to ensure that the
      * document is viewable in applications/browsers
      * that do not support the tag.
@@ -244,7 +244,7 @@ public class MinimalHTMLWriter extends AbstractWriter {
 
     /**
      * Writes out all the named styles as the
-     * content of the &lt;style&gt; tag.
+     * content of the <style> tag.
      *
      * @exception IOException on any I/O error
      */
@@ -329,7 +329,7 @@ public class MinimalHTMLWriter extends AbstractWriter {
 
 
     /**
-     * Emits an end tag for a &lt;p&gt;
+     * Emits an end tag for a <p>
      * tag.  Before writing out the tag, this method ensures
      * that all other tags that have been opened are
      * appropriately closed off.
@@ -351,7 +351,7 @@ public class MinimalHTMLWriter extends AbstractWriter {
      * Emits the start tag for a paragraph. If
      * the paragraph has a named style associated with it,
      * then this method also generates a class attribute for the
-     * &lt;p&gt; tag and sets its value to be the name of the
+     * <p> tag and sets its value to be the name of the
      * style.
      *
      * @exception IOException on any I/O error
@@ -387,7 +387,7 @@ public class MinimalHTMLWriter extends AbstractWriter {
      * Responsible for handling Icon Elements;
      * deliberately unimplemented.  How to implement this method is
      * an issue of policy.  For example, if you're generating
-     * an &lt;img&gt; tag, how should you
+     * an <img> tag, how should you
      * represent the src attribute (the location of the image)?
      * In certain cases it could be a URL, in others it could
      * be read from a stream.
@@ -439,7 +439,7 @@ public class MinimalHTMLWriter extends AbstractWriter {
 
     /**
      * Generates
-     * bold &lt;b&gt;, italic &lt;i&gt;, and &lt;u&gt; tags for the
+     * bold <b>, italic <i>, and <u> tags for the
      * text based on its attribute settings.
      *
      * @exception IOException on any I/O error
@@ -504,7 +504,7 @@ public class MinimalHTMLWriter extends AbstractWriter {
 
 
     /**
-     * Writes out start tags &lt;u&gt;, &lt;i&gt;, and &lt;b&gt; based on
+     * Writes out start tags <u>, <i>, and <b> based on
      * the mask settings.
      *
      * @exception IOException on any I/O error
@@ -524,7 +524,7 @@ public class MinimalHTMLWriter extends AbstractWriter {
     }
 
     /**
-     * Writes out end tags for &lt;u&gt;, &lt;i&gt;, and &lt;b&gt; based on
+     * Writes out end tags for <u>, <i>, and <b> based on
      * the mask settings.
      *
      * @exception IOException on any I/O error
@@ -549,7 +549,7 @@ public class MinimalHTMLWriter extends AbstractWriter {
      * character-level attributes (attributes other than bold,
      * italic, and underline) in an HTML-compliant way.  Given that
      * attributes such as font family and font size have no direct
-     * mapping to HTML tags, a &lt;span&gt; tag is generated and its
+     * mapping to HTML tags, a <span> tag is generated and its
      * style attribute is set to contain the list of remaining
      * attributes just like inline styles.
      *
@@ -607,16 +607,16 @@ public class MinimalHTMLWriter extends AbstractWriter {
 
 
     /**
-     * Returns true if we are currently in a &lt;font&gt; tag.
+     * Returns true if we are currently in a <font> tag.
      */
     protected boolean inFontTag() {
         return (fontAttributes != null);
     }
 
     /**
-     * This is no longer used, instead &lt;span&gt; will be written out.
+     * This is no longer used, instead <span> will be written out.
      * <p>
-     * Writes out an end tag for the &lt;font&gt; tag.
+     * Writes out an end tag for the <font> tag.
      *
      * @exception IOException on any I/O error
      */
@@ -628,9 +628,9 @@ public class MinimalHTMLWriter extends AbstractWriter {
 
 
     /**
-     * This is no longer used, instead &lt;span&gt; will be written out.
+     * This is no longer used, instead <span> will be written out.
      * <p>
-     * Writes out a start tag for the &lt;font&gt; tag.
+     * Writes out a start tag for the <font> tag.
      * Because font tags cannot be nested,
      * this method closes out
      * any enclosing font tag before writing out a
@@ -651,7 +651,7 @@ public class MinimalHTMLWriter extends AbstractWriter {
     }
 
     /**
-     * Writes out a start tag for the &lt;font&gt; tag.
+     * Writes out a start tag for the <font> tag.
      * Because font tags cannot be nested,
      * this method closes out
      * any enclosing font tag before writing out a
@@ -672,7 +672,7 @@ public class MinimalHTMLWriter extends AbstractWriter {
     }
 
     /**
-     * Writes out an end tag for the &lt;span&gt; tag.
+     * Writes out an end tag for the <span> tag.
      *
      * @exception IOException on any I/O error
      */

@@ -53,7 +53,7 @@ public abstract class SecureRandomSpi implements java.io.Serializable {
     /**
      * Generates a user-specified number of random bytes.
      *
-     * <p> If a call to {@code engineSetSeed} had not occurred previously,
+     * If a call to {@code engineSetSeed} had not occurred previously,
      * the first call to this method forces this SecureRandom implementation
      * to seed itself.  This self-seeding will not occur if
      * {@code engineSetSeed} was previously called.

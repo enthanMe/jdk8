@@ -37,7 +37,7 @@ import com.sun.jmx.snmp.internal.SnmpSecurityCache;
 import com.sun.jmx.snmp.SnmpUnknownSecModelException;
 import com.sun.jmx.snmp.SnmpBadSecurityLevelException;
 /**
- * <P> An <CODE>SnmpOutgoingRequest</CODE> handles the marshalling of the message to send.</P>
+ * An <CODE>SnmpOutgoingRequest</CODE> handles the marshalling of the message to send.</P>
  * <p><b>This API is a Sun Microsystems internal API  and is subject
  * to change without notice.</b></p>
  * @since 1.5

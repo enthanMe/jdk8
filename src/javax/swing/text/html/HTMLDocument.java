@@ -68,7 +68,7 @@ import static sun.swing.SwingUtilities2.IMPLIED_CR;
  * <p>The <code>Base</code> property determines the URL against which
  * relative URLs are resolved.  By default, this will be the
  * <code>Document.StreamDescriptionProperty</code> if the value of the
- * property is a URL.  If a &lt;BASE&gt; tag is encountered, the base
+ * property is a URL.  If a <BASE> tag is encountered, the base
  * will become the URL specified by that tag.  Because the base URL is
  * a property, it can of course be set directly.</p>
  *
@@ -107,21 +107,21 @@ import static sun.swing.SwingUtilities2.IMPLIED_CR;
  * <p>With the following HTML content:</p>
  *
  * <pre>
- * &lt;html&gt;
- *   &lt;head&gt;
- *     &lt;title&gt;An example HTMLDocument&lt;/title&gt;
- *     &lt;style type="text/css"&gt;
+ * <html>
+ *   <head>
+ *     <title>An example HTMLDocument</title>
+ *     <style type="text/css">
  *       div { background-color: silver; }
  *       ul { color: red; }
- *     &lt;/style&gt;
- *   &lt;/head&gt;
- *   &lt;body&gt;
- *     &lt;div id="BOX"&gt;
- *       &lt;p&gt;Paragraph 1&lt;/p&gt;
- *       &lt;p&gt;Paragraph 2&lt;/p&gt;
- *     &lt;/div&gt;
- *   &lt;/body&gt;
- * &lt;/html&gt;
+ *     </style>
+ *   </head>
+ *   <body>
+ *     <div id="BOX">
+ *       <p>Paragraph 1</p>
+ *       <p>Paragraph 2</p>
+ *     </div>
+ *   </body>
+ * </html>
  * </pre>
  *
  * <p>All the methods for modifying an HTML document require an {@link
@@ -149,10 +149,10 @@ import static sun.swing.SwingUtilities2.IMPLIED_CR;
  * of any non-leaf element by using the methods
  * <code>insertAfterStart</code> and <code>insertBeforeEnd</code>.
  * For example, if <code>e</code> is the <code>DIV</code> element,
- * <code>d.insertAfterStart(e, "&lt;ul&gt;&lt;li&gt;List
- * Item&lt;/li&gt;&lt;/ul&gt;")</code> inserts the list before the first
- * paragraph, and <code>d.insertBeforeEnd(e, "&lt;ul&gt;&lt;li&gt;List
- * Item&lt;/li&gt;&lt;/ul&gt;")</code> inserts the list after the last
+ * <code>d.insertAfterStart(e, "<ul><li>List
+ * Item</li></ul>")</code> inserts the list before the first
+ * paragraph, and <code>d.insertBeforeEnd(e, "<ul><li>List
+ * Item</li></ul>")</code> inserts the list after the last
  * paragraph.  The <code>DIV</code> block becomes the parent of the
  * newly inserted elements.</p>
  *
@@ -160,9 +160,9 @@ import static sun.swing.SwingUtilities2.IMPLIED_CR;
  * using the methods <code>insertBeforeStart</code> and
  * <code>insertAfterEnd</code>.  For example, if <code>e</code> is the
  * <code>DIV</code> element, <code>d.insertBeforeStart(e,
- * "&lt;ul&gt;&lt;li&gt;List Item&lt;/li&gt;&lt;/ul&gt;")</code> inserts the list
+ * "<ul><li>List Item</li></ul>")</code> inserts the list
  * before the <code>DIV</code> element, and <code>d.insertAfterEnd(e,
- * "&lt;ul&gt;&lt;li&gt;List Item&lt;/li&gt;&lt;/ul&gt;")</code> inserts the list
+ * "<ul><li>List Item</li></ul>")</code> inserts the list
  * after the <code>DIV</code> element.  The newly inserted elements
  * become siblings of the <code>DIV</code> element.</p>
  *
@@ -171,10 +171,10 @@ import static sun.swing.SwingUtilities2.IMPLIED_CR;
  * <p>Elements and all their descendants can be replaced by using the
  * methods <code>setInnerHTML</code> and <code>setOuterHTML</code>.
  * For example, if <code>e</code> is the <code>DIV</code> element,
- * <code>d.setInnerHTML(e, "&lt;ul&gt;&lt;li&gt;List
- * Item&lt;/li&gt;&lt;/ul&gt;")</code> replaces all children paragraphs with
- * the list, and <code>d.setOuterHTML(e, "&lt;ul&gt;&lt;li&gt;List
- * Item&lt;/li&gt;&lt;/ul&gt;")</code> replaces the <code>DIV</code> element
+ * <code>d.setInnerHTML(e, "<ul><li>List
+ * Item</li></ul>")</code> replaces all children paragraphs with
+ * the list, and <code>d.setOuterHTML(e, "<ul><li>List
+ * Item</li></ul>")</code> replaces the <code>DIV</code> element
  * itself.  In latter case the parent of the list is the
  * <code>BODY</code> element.
  *
@@ -685,7 +685,7 @@ public class HTMLDocument extends DefaultStyledDocument {
      * <code>ChangedUpdate</code> event.
      *<p>
      * If the target is _parent, then it deletes the parent element,
-     * which is a &lt;FRAMESET&gt; element, and inserts a new &lt;FRAME&gt;
+     * which is a <FRAMESET> element, and inserts a new <FRAME>
      * element, and sets its <code>HTML.Attribute.SRC</code> attribute
      * to have a value equal to the destination URL and fire a
      * <code>RemovedUpdate</code> and <code>InsertUpdate</code>.
@@ -985,25 +985,25 @@ public class HTMLDocument extends DefaultStyledDocument {
      * parameter is <b>in bold</b>).</p>
      *
      * <pre>
-     *     &lt;body&gt;
+     *     <body>
      *       |
-     *     <b>&lt;div&gt;</b>
+     *     <b><div></b>
      *      /  \
-     *    &lt;p&gt;   &lt;p&gt;
+     *    <p>   <p>
      * </pre>
      *
-     * <p>Invoking <code>setInnerHTML(elem, "&lt;ul&gt;&lt;li&gt;")</code>
+     * <p>Invoking <code>setInnerHTML(elem, "<ul><li>")</code>
      * results in the following structure (new elements are <font
      * color="red">in red</font>).</p>
      *
      * <pre>
-     *     &lt;body&gt;
+     *     <body>
      *       |
-     *     <b>&lt;div&gt;</b>
+     *     <b><div></b>
      *         \
-     *         <font color="red">&lt;ul&gt;</font>
+     *         <font color="red"><ul></font>
      *           \
-     *           <font color="red">&lt;li&gt;</font>
+     *           <font color="red"><li></font>
      * </pre>
      *
      * <p>Parameter <code>elem</code> must not be a leaf element,
@@ -1052,7 +1052,7 @@ public class HTMLDocument extends DefaultStyledDocument {
      * <p>When replacing a leaf this will attempt to make sure there is
      * a newline present if one is needed. This may result in an additional
      * element being inserted. Consider, if you were to replace a character
-     * element that contained a newline with &lt;img&gt; this would create
+     * element that contained a newline with <img> this would create
      * two elements, one for the image, and one for the newline.</p>
      *
      * <p>If you try to replace the element at length you will most
@@ -1066,23 +1066,23 @@ public class HTMLDocument extends DefaultStyledDocument {
      * parameter is <b>in bold</b>).</p>
      *
      * <pre>
-     *     &lt;body&gt;
+     *     <body>
      *       |
-     *     <b>&lt;div&gt;</b>
+     *     <b><div></b>
      *      /  \
-     *    &lt;p&gt;   &lt;p&gt;
+     *    <p>   <p>
      * </pre>
      *
-     * <p>Invoking <code>setOuterHTML(elem, "&lt;ul&gt;&lt;li&gt;")</code>
+     * <p>Invoking <code>setOuterHTML(elem, "<ul><li>")</code>
      * results in the following structure (new elements are <font
      * color="red">in red</font>).</p>
      *
      * <pre>
-     *    &lt;body&gt;
+     *    <body>
      *      |
-     *     <font color="red">&lt;ul&gt;</font>
+     *     <font color="red"><ul></font>
      *       \
-     *       <font color="red">&lt;li&gt;</font>
+     *       <font color="red"><li></font>
      * </pre>
      *
      * <p>If either <code>elem</code> or <code>htmlText</code>
@@ -1136,25 +1136,25 @@ public class HTMLDocument extends DefaultStyledDocument {
      * parameter is <b>in bold</b>).</p>
      *
      * <pre>
-     *     &lt;body&gt;
+     *     <body>
      *       |
-     *     <b>&lt;div&gt;</b>
+     *     <b><div></b>
      *      /  \
-     *    &lt;p&gt;   &lt;p&gt;
+     *    <p>   <p>
      * </pre>
      *
      * <p>Invoking <code>insertAfterStart(elem,
-     * "&lt;ul&gt;&lt;li&gt;")</code> results in the following structure
+     * "<ul><li>")</code> results in the following structure
      * (new elements are <font color="red">in red</font>).</p>
      *
      * <pre>
-     *        &lt;body&gt;
+     *        <body>
      *          |
-     *        <b>&lt;div&gt;</b>
+     *        <b><div></b>
      *       /  |  \
-     *    <font color="red">&lt;ul&gt;</font> &lt;p&gt; &lt;p&gt;
+     *    <font color="red"><ul></font> <p> <p>
      *     /
-     *  <font color="red">&lt;li&gt;</font>
+     *  <font color="red"><li></font>
      * </pre>
      *
      * <p>Unlike the <code>insertBeforeStart</code> method, new
@@ -1197,7 +1197,7 @@ public class HTMLDocument extends DefaultStyledDocument {
      * Inserts the HTML specified as a string at the end of
      * the element.
      *
-     * <p> If <code>elem</code>'s children are leaves, and the
+     * If <code>elem</code>'s children are leaves, and the
      * character at a <code>elem.getEndOffset() - 1</code> is a newline,
      * this will insert before the newline so that there isn't text after
      * the newline.</p>
@@ -1206,25 +1206,25 @@ public class HTMLDocument extends DefaultStyledDocument {
      * parameter is <b>in bold</b>).</p>
      *
      * <pre>
-     *     &lt;body&gt;
+     *     <body>
      *       |
-     *     <b>&lt;div&gt;</b>
+     *     <b><div></b>
      *      /  \
-     *    &lt;p&gt;   &lt;p&gt;
+     *    <p>   <p>
      * </pre>
      *
-     * <p>Invoking <code>insertBeforeEnd(elem, "&lt;ul&gt;&lt;li&gt;")</code>
+     * <p>Invoking <code>insertBeforeEnd(elem, "<ul><li>")</code>
      * results in the following structure (new elements are <font
      * color="red">in red</font>).</p>
      *
      * <pre>
-     *        &lt;body&gt;
+     *        <body>
      *          |
-     *        <b>&lt;div&gt;</b>
+     *        <b><div></b>
      *       /  |  \
-     *     &lt;p&gt; &lt;p&gt; <font color="red">&lt;ul&gt;</font>
+     *     <p> <p> <font color="red"><ul></font>
      *               \
-     *               <font color="red">&lt;li&gt;</font>
+     *               <font color="red"><li></font>
      * </pre>
      *
      * <p>Unlike the <code>insertAfterEnd</code> method, new elements
@@ -1273,23 +1273,23 @@ public class HTMLDocument extends DefaultStyledDocument {
      * parameter is <b>in bold</b>).</p>
      *
      * <pre>
-     *     &lt;body&gt;
+     *     <body>
      *       |
-     *     <b>&lt;div&gt;</b>
+     *     <b><div></b>
      *      /  \
-     *    &lt;p&gt;   &lt;p&gt;
+     *    <p>   <p>
      * </pre>
      *
      * <p>Invoking <code>insertBeforeStart(elem,
-     * "&lt;ul&gt;&lt;li&gt;")</code> results in the following structure
+     * "<ul><li>")</code> results in the following structure
      * (new elements are <font color="red">in red</font>).</p>
      *
      * <pre>
-     *        &lt;body&gt;
+     *        <body>
      *         /  \
-     *      <font color="red">&lt;ul&gt;</font> <b>&lt;div&gt;</b>
+     *      <font color="red"><ul></font> <b><div></b>
      *       /    /  \
-     *     <font color="red">&lt;li&gt;</font> &lt;p&gt;  &lt;p&gt;
+     *     <font color="red"><li></font> <p>  <p>
      * </pre>
      *
      * <p>Unlike the <code>insertAfterStart</code> method, new
@@ -1331,23 +1331,23 @@ public class HTMLDocument extends DefaultStyledDocument {
      * parameter is <b>in bold</b>).</p>
      *
      * <pre>
-     *     &lt;body&gt;
+     *     <body>
      *       |
-     *     <b>&lt;div&gt;</b>
+     *     <b><div></b>
      *      /  \
-     *    &lt;p&gt;   &lt;p&gt;
+     *    <p>   <p>
      * </pre>
      *
-     * <p>Invoking <code>insertAfterEnd(elem, "&lt;ul&gt;&lt;li&gt;")</code>
+     * <p>Invoking <code>insertAfterEnd(elem, "<ul><li>")</code>
      * results in the following structure (new elements are <font
      * color="red">in red</font>).</p>
      *
      * <pre>
-     *        &lt;body&gt;
+     *        <body>
      *         /  \
-     *      <b>&lt;div&gt;</b> <font color="red">&lt;ul&gt;</font>
+     *      <b><div></b> <font color="red"><ul></font>
      *       / \    \
-     *     &lt;p&gt; &lt;p&gt;  <font color="red">&lt;li&gt;</font>
+     *     <p> <p>  <font color="red"><li></font>
      * </pre>
      *
      * <p>Unlike the <code>insertBeforeEnd</code> method, new elements
@@ -1403,7 +1403,7 @@ public class HTMLDocument extends DefaultStyledDocument {
      * If the element can't be found, <code>null</code> is returned.
      * Note that this method works on an <code>Attribute</code>,
      * <i>not</i> a character tag.  In the following HTML snippet:
-     * <code>&lt;a id="HelloThere"&gt;</code> the attribute is
+     * <code><a id="HelloThere"></code> the attribute is
      * 'id' and the character tag is 'a'.
      * This is a convenience method for
      * <code>getElement(RootElement, HTML.Attribute.id, id)</code>.
@@ -2098,8 +2098,8 @@ public class HTMLDocument extends DefaultStyledDocument {
      *
      * </dl>
      * <p>
-     * Currently, &lt;APPLET&gt;, &lt;PARAM&gt;, &lt;MAP&gt;, &lt;AREA&gt;, &lt;LINK&gt;,
-     * &lt;SCRIPT&gt; and &lt;STYLE&gt; are unsupported.
+     * Currently, <APPLET>, <PARAM>, <MAP>, <AREA>, <LINK>,
+     * <SCRIPT> and <STYLE> are unsupported.
      *
      * <p>
      * The assignment of the actions described is shown in the
@@ -2180,7 +2180,7 @@ public class HTMLDocument extends DefaultStyledDocument {
      * <tr><td><code>HTML.Tag.VAR</code>       <td>CharacterAction
      * </table>
      * <p>
-     * Once &lt;/html&gt; is encountered, the Actions are no longer notified.
+     * Once </html> is encountered, the Actions are no longer notified.
      */
     public class HTMLReader extends HTMLEditorKit.ParserCallback {
 
@@ -3307,8 +3307,8 @@ public class HTMLDocument extends DefaultStyledDocument {
         /**
          * Action to support forms by building all of the elements
          * used to represent form controls.  This will process
-         * the &lt;INPUT&gt;, &lt;TEXTAREA&gt;, &lt;SELECT&gt;,
-         * and &lt;OPTION&gt; tags.  The element created by
+         * the <INPUT>, <TEXTAREA>, <SELECT>,
+         * and <OPTION> tags.  The element created by
          * this action is expected to have the attribute
          * <code>StyleConstants.ModelAttribute</code> set to
          * the model that holds the state for the form control.
@@ -3493,9 +3493,9 @@ public class HTMLDocument extends DefaultStyledDocument {
             }
 
             /**
-             * If a &lt;SELECT&gt; tag is being processed, this
+             * If a <SELECT> tag is being processed, this
              * model will be a reference to the model being filled
-             * with the &lt;OPTION&gt; elements (which produce
+             * with the <OPTION> elements (which produce
              * objects of type <code>Option</code>.
              */
             Object selectModel;

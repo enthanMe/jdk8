@@ -31,7 +31,7 @@ import sun.nio.ch.DirectBuffer;
 /**
  * A class that can be used to compute the CRC-32 of a data stream.
  *
- * <p> Passing a {@code null} argument to a method in this class will cause
+ * Passing a {@code null} argument to a method in this class will cause
  * a {@link NullPointerException} to be thrown.
  *
  * @see         Checksum

@@ -42,13 +42,13 @@ import java.security.ProtectionDomain;
 import sun.security.util.ResourcesMgr;
 
 /**
- * <p> A {@code Subject} represents a grouping of related information
+ * A {@code Subject} represents a grouping of related information
  * for a single entity, such as a person.
  * Such information includes the Subject's identities as well as
  * its security-related attributes
  * (passwords and cryptographic keys, for example).
  *
- * <p> Subjects may potentially have multiple identities.
+ * Subjects may potentially have multiple identities.
  * Each identity is represented as a {@code Principal}
  * within the {@code Subject}.  Principals simply bind names to a
  * {@code Subject}.  For example, a {@code Subject} that happens
@@ -59,7 +59,7 @@ import sun.security.util.ResourcesMgr;
  * to the {@code Subject}.  Both Principals refer to the same
  * {@code Subject} even though each has a different name.
  *
- * <p> A {@code Subject} may also own security-related attributes,
+ * A {@code Subject} may also own security-related attributes,
  * which are referred to as credentials.
  * Sensitive credentials that require special protection, such as
  * private cryptographic keys, are stored within a private credential
@@ -68,7 +68,7 @@ import sun.security.util.ResourcesMgr;
  * within a public credential {@code Set}.  Different permissions
  * are required to access and modify the different credential Sets.
  *
- * <p> To retrieve all the Principals associated with a {@code Subject},
+ * To retrieve all the Principals associated with a {@code Subject},
  * invoke the {@code getPrincipals} method.  To retrieve
  * all the public or private credentials belonging to a {@code Subject},
  * invoke the {@code getPublicCredentials} method or
@@ -86,7 +86,7 @@ import sun.security.util.ResourcesMgr;
  *      subject.getPublicCredentials().add(credential);
  * </pre>
  *
- * <p> This {@code Subject} class implements {@code Serializable}.
+ * This {@code Subject} class implements {@code Serializable}.
  * While the Principals associated with the {@code Subject} are serialized,
  * the credentials associated with the {@code Subject} are not.
  * Note that the {@code java.security.Principal} class
@@ -139,12 +139,12 @@ public final class Subject implements java.io.Serializable {
      * with an empty {@code Set} of Principals and empty
      * Sets of public and private credentials.
      *
-     * <p> The newly constructed Sets check whether this {@code Subject}
+     * The newly constructed Sets check whether this {@code Subject}
      * has been set read-only before permitting subsequent modifications.
      * The newly created Sets also prevent illegal modifications
      * by ensuring that callers have sufficient permissions.
      *
-     * <p> To modify the Principals Set, the caller must have
+     * To modify the Principals Set, the caller must have
      * {@code AuthPermission("modifyPrincipals")}.
      * To modify the public credential Set, the caller must have
      * {@code AuthPermission("modifyPublicCredentials")}.
@@ -165,14 +165,14 @@ public final class Subject implements java.io.Serializable {
      * Create an instance of a {@code Subject} with
      * Principals and credentials.
      *
-     * <p> The Principals and credentials from the specified Sets
+     * The Principals and credentials from the specified Sets
      * are copied into newly constructed Sets.
      * These newly created Sets check whether this {@code Subject}
      * has been set read-only before permitting subsequent modifications.
      * The newly created Sets also prevent illegal modifications
      * by ensuring that callers have sufficient permissions.
      *
-     * <p> To modify the Principals Set, the caller must have
+     * To modify the Principals Set, the caller must have
      * {@code AuthPermission("modifyPrincipals")}.
      * To modify the public credential Set, the caller must have
      * {@code AuthPermission("modifyPublicCredentials")}.
@@ -218,13 +218,13 @@ public final class Subject implements java.io.Serializable {
     /**
      * Set this {@code Subject} to be read-only.
      *
-     * <p> Modifications (additions and removals) to this Subject's
+     * Modifications (additions and removals) to this Subject's
      * {@code Principal} {@code Set} and
      * credential Sets will be disallowed.
      * The {@code destroy} operation on this Subject's credentials will
      * still be permitted.
      *
-     * <p> Subsequent attempts to modify the Subject's {@code Principal}
+     * Subsequent attempts to modify the Subject's {@code Principal}
      * and credential Sets will result in an
      * {@code IllegalStateException} being thrown.
      * Also, once a {@code Subject} is read-only,
@@ -259,7 +259,7 @@ public final class Subject implements java.io.Serializable {
      * Get the {@code Subject} associated with the provided
      * {@code AccessControlContext}.
      *
-     * <p> The {@code AccessControlContext} may contain many
+     * The {@code AccessControlContext} may contain many
      * Subjects (from nested {@code doAs} calls).
      * In this situation, the most recent {@code Subject} associated
      * with the {@code AccessControlContext} is returned.
@@ -308,7 +308,7 @@ public final class Subject implements java.io.Serializable {
     /**
      * Perform work as a particular {@code Subject}.
      *
-     * <p> This method first retrieves the current Thread's
+     * This method first retrieves the current Thread's
      * {@code AccessControlContext} via
      * {@code AccessController.getContext},
      * and then instantiates a new {@code AccessControlContext}
@@ -364,7 +364,7 @@ public final class Subject implements java.io.Serializable {
     /**
      * Perform work as a particular {@code Subject}.
      *
-     * <p> This method first retrieves the current Thread's
+     * This method first retrieves the current Thread's
      * {@code AccessControlContext} via
      * {@code AccessController.getContext},
      * and then instantiates a new {@code AccessControlContext}
@@ -426,7 +426,7 @@ public final class Subject implements java.io.Serializable {
     /**
      * Perform privileged work as a particular {@code Subject}.
      *
-     * <p> This method behaves exactly as {@code Subject.doAs},
+     * This method behaves exactly as {@code Subject.doAs},
      * except that instead of retrieving the current Thread's
      * {@code AccessControlContext}, it uses the provided
      * {@code AccessControlContext}.  If the provided
@@ -487,7 +487,7 @@ public final class Subject implements java.io.Serializable {
     /**
      * Perform privileged work as a particular {@code Subject}.
      *
-     * <p> This method behaves exactly as {@code Subject.doAs},
+     * This method behaves exactly as {@code Subject.doAs},
      * except that instead of retrieving the current Thread's
      * {@code AccessControlContext}, it uses the provided
      * {@code AccessControlContext}.  If the provided
@@ -572,7 +572,7 @@ public final class Subject implements java.io.Serializable {
      * {@code Subject}.  Each {@code Principal} represents
      * an identity for this {@code Subject}.
      *
-     * <p> The returned {@code Set} is backed by this Subject's
+     * The returned {@code Set} is backed by this Subject's
      * internal {@code Principal} {@code Set}.  Any modification
      * to the returned {@code Set} affects the internal
      * {@code Principal} {@code Set} as well.
@@ -594,7 +594,7 @@ public final class Subject implements java.io.Serializable {
      * {@code Subject} that are instances or subclasses of the specified
      * {@code Class}.
      *
-     * <p> The returned {@code Set} is not backed by this Subject's
+     * The returned {@code Set} is not backed by this Subject's
      * internal {@code Principal} {@code Set}.  A new
      * {@code Set} is created and returned for each method invocation.
      * Modifications to the returned {@code Set}
@@ -628,7 +628,7 @@ public final class Subject implements java.io.Serializable {
      * Return the {@code Set} of public credentials held by this
      * {@code Subject}.
      *
-     * <p> The returned {@code Set} is backed by this Subject's
+     * The returned {@code Set} is backed by this Subject's
      * internal public Credential {@code Set}.  Any modification
      * to the returned {@code Set} affects the internal public
      * Credential {@code Set} as well.
@@ -649,17 +649,17 @@ public final class Subject implements java.io.Serializable {
      * Return the {@code Set} of private credentials held by this
      * {@code Subject}.
      *
-     * <p> The returned {@code Set} is backed by this Subject's
+     * The returned {@code Set} is backed by this Subject's
      * internal private Credential {@code Set}.  Any modification
      * to the returned {@code Set} affects the internal private
      * Credential {@code Set} as well.
      *
-     * <p> A caller requires permissions to access the Credentials
+     * A caller requires permissions to access the Credentials
      * in the returned {@code Set}, or to modify the
      * {@code Set} itself.  A {@code SecurityException}
      * is thrown if the caller does not have the proper permissions.
      *
-     * <p> While iterating through the {@code Set},
+     * While iterating through the {@code Set},
      * a {@code SecurityException} is thrown
      * if the caller does not have permission to access a
      * particular Credential.  The {@code Iterator}
@@ -690,7 +690,7 @@ public final class Subject implements java.io.Serializable {
      * {@code Subject} that are instances or subclasses of the specified
      * {@code Class}.
      *
-     * <p> The returned {@code Set} is not backed by this Subject's
+     * The returned {@code Set} is not backed by this Subject's
      * internal public Credential {@code Set}.  A new
      * {@code Set} is created and returned for each method invocation.
      * Modifications to the returned {@code Set}
@@ -725,11 +725,11 @@ public final class Subject implements java.io.Serializable {
      * {@code Subject} that are instances or subclasses of the specified
      * {@code Class}.
      *
-     * <p> The caller must have permission to access all of the
+     * The caller must have permission to access all of the
      * requested Credentials, or a {@code SecurityException}
      * will be thrown.
      *
-     * <p> The returned {@code Set} is not backed by this Subject's
+     * The returned {@code Set} is not backed by this Subject's
      * internal private Credential {@code Set}.  A new
      * {@code Set} is created and returned for each method invocation.
      * Modifications to the returned {@code Set}

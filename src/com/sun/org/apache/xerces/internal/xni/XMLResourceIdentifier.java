@@ -21,7 +21,7 @@
 package com.sun.org.apache.xerces.internal.xni;
 
 /**
- * <p> This represents the basic physical description of the location of any
+ * This represents the basic physical description of the location of any
  * XML resource (a Schema grammar, a DTD, a general entity etc.) </p>
  *
  * @author Neil Graham, IBM
@@ -51,7 +51,7 @@ public interface XMLResourceIdentifier {
         resolved.*/
     public void setBaseSystemId(String systemId);
 
-    /** <p> Returns the base URI against which the literal SystemId is to be
+    /** Returns the base URI against which the literal SystemId is to be
         resolved. </p> */
     public String getBaseSystemId();
 

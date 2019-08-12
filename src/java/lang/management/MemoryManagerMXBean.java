@@ -30,7 +30,7 @@ package java.lang.management;
  * A memory manager manages one or more memory pools of the
  * Java virtual machine.
  *
- * <p> A Java virtual machine has one or more memory managers.
+ * A Java virtual machine has one or more memory managers.
  * An instance implementing this interface is
  * an <a href="ManagementFactory.html#MXBean">MXBean</a>
  * that can be obtained by calling

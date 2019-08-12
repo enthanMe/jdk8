@@ -34,11 +34,11 @@ import static java.lang.annotation.ElementType.*;
 import static java.lang.annotation.RetentionPolicy.*;
 
 /**
- * <p> Controls the ordering of fields and properties in a class. </p>
+ * Controls the ordering of fields and properties in a class. </p>
  *
  * <h3>Usage </h3>
  *
- * <p> <tt> @XmlAccessorOrder </tt> annotation can be used with the following
+ * <tt> @XmlAccessorOrder </tt> annotation can be used with the following
  * program elements:</p>
  *
  * <ul>
@@ -46,7 +46,7 @@ import static java.lang.annotation.RetentionPolicy.*;
  *   <li> a top level class </li>
  * </ul>
  *
- * <p> See "Package Specification" in <tt>javax.xml.bind</tt> package javadoc for
+ * See "Package Specification" in <tt>javax.xml.bind</tt> package javadoc for
  * additional common information.</p>
  *
  * <p>The effective {@link XmlAccessOrder} on a class is determined

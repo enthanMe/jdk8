@@ -73,14 +73,14 @@ import sun.util.locale.provider.ResourceBundleBasedAdapter;
  * according to the customs and conventions of the user's native country,
  * region, or culture.
  *
- * <p> The {@code Locale} class implements IETF BCP 47 which is composed of
+ * The {@code Locale} class implements IETF BCP 47 which is composed of
  * <a href="http://tools.ietf.org/html/rfc4647">RFC 4647 "Matching of Language
  * Tags"</a> and <a href="http://tools.ietf.org/html/rfc5646">RFC 5646 "Tags
  * for Identifying Languages"</a> with support for the LDML (UTS#35, "Unicode
  * Locale Data Markup Language") BCP 47-compatible extensions for locale data
  * exchange.
  *
- * <p> A <code>Locale</code> object logically consists of the fields
+ * A <code>Locale</code> object logically consists of the fields
  * described below.
  *
  * <dl>

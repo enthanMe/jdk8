@@ -95,7 +95,7 @@ public abstract class Writer implements Appendable, Closeable, Flushable {
      * the 16 low-order bits of the given integer value; the 16 high-order bits
      * are ignored.
      *
-     * <p> Subclasses that intend to support efficient single-character output
+     * Subclasses that intend to support efficient single-character output
      * should override this method.
      *
      * @param  c
@@ -196,13 +196,13 @@ public abstract class Writer implements Appendable, Closeable, Flushable {
     /**
      * Appends the specified character sequence to this writer.
      *
-     * <p> An invocation of this method of the form <tt>out.append(csq)</tt>
+     * An invocation of this method of the form <tt>out.append(csq)</tt>
      * behaves in exactly the same way as the invocation
      *
      * <pre>
      *     out.write(csq.toString()) </pre>
      *
-     * <p> Depending on the specification of <tt>toString</tt> for the
+     * Depending on the specification of <tt>toString</tt> for the
      * character sequence <tt>csq</tt>, the entire sequence may not be
      * appended. For instance, invoking the <tt>toString</tt> method of a
      * character buffer will return a subsequence whose content depends upon
@@ -232,7 +232,7 @@ public abstract class Writer implements Appendable, Closeable, Flushable {
      * Appends a subsequence of the specified character sequence to this writer.
      * <tt>Appendable</tt>.
      *
-     * <p> An invocation of this method of the form <tt>out.append(csq, start,
+     * An invocation of this method of the form <tt>out.append(csq, start,
      * end)</tt> when <tt>csq</tt> is not <tt>null</tt> behaves in exactly the
      * same way as the invocation
      *
@@ -273,7 +273,7 @@ public abstract class Writer implements Appendable, Closeable, Flushable {
     /**
      * Appends the specified character to this writer.
      *
-     * <p> An invocation of this method of the form <tt>out.append(c)</tt>
+     * An invocation of this method of the form <tt>out.append(c)</tt>
      * behaves in exactly the same way as the invocation
      *
      * <pre>
@@ -301,7 +301,7 @@ public abstract class Writer implements Appendable, Closeable, Flushable {
      * byte stream, flush it.  Thus one flush() invocation will flush all the
      * buffers in a chain of Writers and OutputStreams.
      *
-     * <p> If the intended destination of this stream is an abstraction provided
+     * If the intended destination of this stream is an abstraction provided
      * by the underlying operating system, for example a file, then flushing the
      * stream guarantees only that bytes previously written to the stream are
      * passed to the operating system for writing; it does not guarantee that

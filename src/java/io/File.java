@@ -40,7 +40,7 @@ import sun.security.action.GetPropertyAction;
 /**
  * An abstract representation of file and directory pathnames.
  *
- * <p> User interfaces and operating systems use system-dependent <em>pathname
+ * User interfaces and operating systems use system-dependent <em>pathname
  * strings</em> to name files and directories.  This class presents an
  * abstract, system-independent view of hierarchical pathnames.  An
  * <em>abstract pathname</em> has two components:
@@ -58,7 +58,7 @@ import sun.security.action.GetPropertyAction;
  * either a directory or a file.  The <em>empty</em> abstract pathname has no
  * prefix and an empty name sequence.
  *
- * <p> The conversion of a pathname string to or from an abstract pathname is
+ * The conversion of a pathname string to or from an abstract pathname is
  * inherently system-dependent.  When an abstract pathname is converted into a
  * pathname string, each name is separated from the next by a single copy of
  * the default <em>separator character</em>.  The default name-separator
@@ -69,7 +69,7 @@ import sun.security.action.GetPropertyAction;
  * within it may be separated by the default name-separator character or by any
  * other name-separator character that is supported by the underlying system.
  *
- * <p> A pathname, whether abstract or in string form, may be either
+ * A pathname, whether abstract or in string form, may be either
  * <em>absolute</em> or <em>relative</em>.  An absolute pathname is complete in
  * that no other information is required in order to locate the file that it
  * denotes.  A relative pathname, in contrast, must be interpreted in terms of
@@ -79,7 +79,7 @@ import sun.security.action.GetPropertyAction;
  * <code>user.dir</code>, and is typically the directory in which the Java
  * virtual machine was invoked.
  *
- * <p> The <em>parent</em> of an abstract pathname may be obtained by invoking
+ * The <em>parent</em> of an abstract pathname may be obtained by invoking
  * the {@link #getParent} method of this class and consists of the pathname's
  * prefix and each name in the pathname's name sequence except for the last.
  * Each directory's absolute pathname is an ancestor of any <tt>File</tt>
@@ -88,7 +88,7 @@ import sun.security.action.GetPropertyAction;
  * pathname <tt>"/usr"</tt> is an ancestor of the directory denoted by the
  * pathname <tt>"/usr/local/bin"</tt>.
  *
- * <p> The prefix concept is used to handle root directories on UNIX platforms,
+ * The prefix concept is used to handle root directories on UNIX platforms,
  * and drive specifiers, root directories and UNC pathnames on Microsoft Windows platforms,
  * as follows:
  *
@@ -108,7 +108,7 @@ import sun.security.action.GetPropertyAction;
  *
  * </ul>
  *
- * <p> Instances of this class may or may not denote an actual file-system
+ * Instances of this class may or may not denote an actual file-system
  * object such as a file or a directory.  If it does denote such an object
  * then that object resides in a <i>partition</i>.  A partition is an
  * operating system-specific portion of storage for a file system.  A single
@@ -117,7 +117,7 @@ import sun.security.action.GetPropertyAction;
  * partition <a name="partName">named</a> by some ancestor of the absolute
  * form of this pathname.
  *
- * <p> A file system may implement restrictions to certain operations on the
+ * A file system may implement restrictions to certain operations on the
  * actual file-system object, such as reading, writing, and executing.  These
  * restrictions are collectively known as <i>access permissions</i>.  The file
  * system may have multiple sets of access permissions on a single object.
@@ -125,13 +125,13 @@ import sun.security.action.GetPropertyAction;
  * may apply to all other users.  The access permissions on an object may
  * cause some methods in this class to fail.
  *
- * <p> Instances of the <code>File</code> class are immutable; that is, once
+ * Instances of the <code>File</code> class are immutable; that is, once
  * created, the abstract pathname represented by a <code>File</code> object
  * will never change.
  *
  * <h3>Interoperability with {@code java.nio.file} package</h3>
  *
- * <p> The <a href="../../java/nio/file/package-summary.html">{@code java.nio.file}</a>
+ * The <a href="../../java/nio/file/package-summary.html">{@code java.nio.file}</a>
  * package defines interfaces and classes for the Java virtual machine to access
  * files, file attributes, and file systems. This API may be used to overcome
  * many of the limitations of the {@code java.io.File} class.
@@ -291,12 +291,12 @@ public class File
      * Creates a new <code>File</code> instance from a parent pathname string
      * and a child pathname string.
      *
-     * <p> If <code>parent</code> is <code>null</code> then the new
+     * If <code>parent</code> is <code>null</code> then the new
      * <code>File</code> instance is created as if by invoking the
      * single-argument <code>File</code> constructor on the given
      * <code>child</code> pathname string.
      *
-     * <p> Otherwise the <code>parent</code> pathname string is taken to denote
+     * Otherwise the <code>parent</code> pathname string is taken to denote
      * a directory, and the <code>child</code> pathname string is taken to
      * denote either a directory or a file.  If the <code>child</code> pathname
      * string is absolute then it is converted into a relative pathname in a
@@ -334,12 +334,12 @@ public class File
      * Creates a new <code>File</code> instance from a parent abstract
      * pathname and a child pathname string.
      *
-     * <p> If <code>parent</code> is <code>null</code> then the new
+     * If <code>parent</code> is <code>null</code> then the new
      * <code>File</code> instance is created as if by invoking the
      * single-argument <code>File</code> constructor on the given
      * <code>child</code> pathname string.
      *
-     * <p> Otherwise the <code>parent</code> abstract pathname is taken to
+     * Otherwise the <code>parent</code> abstract pathname is taken to
      * denote a directory, and the <code>child</code> pathname string is taken
      * to denote either a directory or a file.  If the <code>child</code>
      * pathname string is absolute then it is converted into a relative
@@ -377,11 +377,11 @@ public class File
      * Creates a new <tt>File</tt> instance by converting the given
      * <tt>file:</tt> URI into an abstract pathname.
      *
-     * <p> The exact form of a <tt>file:</tt> URI is system-dependent, hence
+     * The exact form of a <tt>file:</tt> URI is system-dependent, hence
      * the transformation performed by this constructor is also
      * system-dependent.
      *
-     * <p> For a given abstract pathname <i>f</i> it is guaranteed that
+     * For a given abstract pathname <i>f</i> it is guaranteed that
      *
      * <blockquote><tt>
      * new File(</tt><i>&nbsp;f</i><tt>.{@link #toURI() toURI}()).equals(</tt><i>&nbsp;f</i><tt>.{@link #getAbsoluteFile() getAbsoluteFile}())
@@ -460,7 +460,7 @@ public class File
      * Returns the pathname string of this abstract pathname's parent, or
      * <code>null</code> if this pathname does not name a parent directory.
      *
-     * <p> The <em>parent</em> of an abstract pathname consists of the
+     * The <em>parent</em> of an abstract pathname consists of the
      * pathname's prefix, if any, and each name in the pathname's name
      * sequence except for the last.  If the name sequence is empty then
      * the pathname does not name a parent directory.
@@ -484,7 +484,7 @@ public class File
      * or <code>null</code> if this pathname does not name a parent
      * directory.
      *
-     * <p> The <em>parent</em> of an abstract pathname consists of the
+     * The <em>parent</em> of an abstract pathname consists of the
      * pathname's prefix, if any, and each name in the pathname's name
      * sequence except for the last.  If the name sequence is empty then
      * the pathname does not name a parent directory.
@@ -532,7 +532,7 @@ public class File
     /**
      * Returns the absolute pathname string of this abstract pathname.
      *
-     * <p> If this abstract pathname is already absolute, then the pathname
+     * If this abstract pathname is already absolute, then the pathname
      * string is simply returned as if by the <code>{@link #getPath}</code>
      * method.  If this abstract pathname is the empty abstract pathname then
      * the pathname string of the current user directory, which is named by the
@@ -576,7 +576,7 @@ public class File
     /**
      * Returns the canonical pathname string of this abstract pathname.
      *
-     * <p> A canonical pathname is both absolute and unique.  The precise
+     * A canonical pathname is both absolute and unique.  The precise
      * definition of canonical form is system-dependent.  This method first
      * converts this pathname to absolute form if necessary, as if by invoking the
      * {@link #getAbsolutePath} method, and then maps it to its unique form in a
@@ -585,7 +585,7 @@ public class File
      * symbolic links (on UNIX platforms), and converting drive letters to a
      * standard case (on Microsoft Windows platforms).
      *
-     * <p> Every pathname that denotes an existing file or directory has a
+     * Every pathname that denotes an existing file or directory has a
      * unique canonical form.  Every pathname that denotes a nonexistent file
      * or directory also has a unique canonical form.  The canonical form of
      * the pathname of a nonexistent file or directory may be different from
@@ -689,11 +689,11 @@ public class File
     /**
      * Constructs a <tt>file:</tt> URI that represents this abstract pathname.
      *
-     * <p> The exact form of the URI is system-dependent.  If it can be
+     * The exact form of the URI is system-dependent.  If it can be
      * determined that the file denoted by this abstract pathname is a
      * directory, then the resulting URI will end with a slash.
      *
-     * <p> For a given abstract pathname <i>f</i>, it is guaranteed that
+     * For a given abstract pathname <i>f</i>, it is guaranteed that
      *
      * <blockquote><tt>
      * new {@link #File(java.net.URI) File}(</tt><i>&nbsp;f</i><tt>.toURI()).equals(</tt><i>&nbsp;f</i><tt>.{@link #getAbsoluteFile() getAbsoluteFile}())
@@ -707,7 +707,7 @@ public class File
      * system is converted into an abstract pathname in a virtual machine on a
      * different operating system.
      *
-     * <p> Note that when this abstract pathname represents a UNC pathname then
+     * Note that when this abstract pathname represents a UNC pathname then
      * all components of the UNC (including the server name component) are encoded
      * in the {@code URI} path. The authority component is undefined, meaning
      * that it is represented as {@code null}. The {@link Path} class defines the
@@ -823,7 +823,7 @@ public class File
      * Tests whether the file denoted by this abstract pathname is a
      * directory.
      *
-     * <p> Where it is required to distinguish an I/O exception from the case
+     * Where it is required to distinguish an I/O exception from the case
      * that the file is not a directory, or where several attributes of the
      * same file are required at the same time, then the {@link
      * java.nio.file.Files#readAttributes(Path,Class,LinkOption[])
@@ -856,7 +856,7 @@ public class File
      * addition, satisfies other system-dependent criteria.  Any non-directory
      * file created by a Java application is guaranteed to be a normal file.
      *
-     * <p> Where it is required to distinguish an I/O exception from the case
+     * Where it is required to distinguish an I/O exception from the case
      * that the file is not a normal file, or where several attributes of the
      * same file are required at the same time, then the {@link
      * java.nio.file.Files#readAttributes(Path,Class,LinkOption[])
@@ -915,7 +915,7 @@ public class File
      * Returns the time that the file denoted by this abstract pathname was
      * last modified.
      *
-     * <p> Where it is required to distinguish an I/O exception from the case
+     * Where it is required to distinguish an I/O exception from the case
      * where {@code 0L} is returned, or where several attributes of the
      * same file are required at the same time, or where the time of last
      * access or the creation time are required, then the {@link
@@ -947,7 +947,7 @@ public class File
      * Returns the length of the file denoted by this abstract pathname.
      * The return value is unspecified if this pathname denotes a directory.
      *
-     * <p> Where it is required to distinguish an I/O exception from the case
+     * Where it is required to distinguish an I/O exception from the case
      * that {@code 0L} is returned, or where several attributes of the same file
      * are required at the same time, then the {@link
      * java.nio.file.Files#readAttributes(Path,Class,LinkOption[])
@@ -1017,7 +1017,7 @@ public class File
      * this pathname denotes a directory, then the directory must be empty in
      * order to be deleted.
      *
-     * <p> Note that the {@link java.nio.file.Files} class defines the {@link
+     * Note that the {@link java.nio.file.Files} class defines the {@link
      * java.nio.file.Files#delete(Path) delete} method to throw an {@link IOException}
      * when a file cannot be deleted. This is useful for error reporting and to
      * diagnose why a file cannot be deleted.
@@ -1050,7 +1050,7 @@ public class File
      * Deletion will be attempted only for normal termination of the
      * virtual machine, as defined by the Java Language Specification.
      *
-     * <p> Once deletion has been requested, it is not possible to cancel the
+     * Once deletion has been requested, it is not possible to cancel the
      * request.  This method should therefore be used with care.
      *
      * <P>
@@ -1083,18 +1083,18 @@ public class File
      * Returns an array of strings naming the files and directories in the
      * directory denoted by this abstract pathname.
      *
-     * <p> If this abstract pathname does not denote a directory, then this
+     * If this abstract pathname does not denote a directory, then this
      * method returns {@code null}.  Otherwise an array of strings is
      * returned, one for each file or directory in the directory.  Names
      * denoting the directory itself and the directory's parent directory are
      * not included in the result.  Each string is a file name rather than a
      * complete path.
      *
-     * <p> There is no guarantee that the name strings in the resulting array
+     * There is no guarantee that the name strings in the resulting array
      * will appear in any specific order; they are not, in particular,
      * guaranteed to appear in alphabetical order.
      *
-     * <p> Note that the {@link java.nio.file.Files} class defines the {@link
+     * Note that the {@link java.nio.file.Files} class defines the {@link
      * java.nio.file.Files#newDirectoryStream(Path) newDirectoryStream} method to
      * open a directory and iterate over the names of the files in the directory.
      * This may use less resources when working with very large directories, and
@@ -1169,7 +1169,7 @@ public class File
      * Returns an array of abstract pathnames denoting the files in the
      * directory denoted by this abstract pathname.
      *
-     * <p> If this abstract pathname does not denote a directory, then this
+     * If this abstract pathname does not denote a directory, then this
      * method returns {@code null}.  Otherwise an array of {@code File} objects
      * is returned, one for each file or directory in the directory.  Pathnames
      * denoting the directory itself and the directory's parent directory are
@@ -1180,11 +1180,11 @@ public class File
      * pathname is relative then each resulting pathname will be relative to
      * the same directory.
      *
-     * <p> There is no guarantee that the name strings in the resulting array
+     * There is no guarantee that the name strings in the resulting array
      * will appear in any specific order; they are not, in particular,
      * guaranteed to appear in alphabetical order.
      *
-     * <p> Note that the {@link java.nio.file.Files} class defines the {@link
+     * Note that the {@link java.nio.file.Files} class defines the {@link
      * java.nio.file.Files#newDirectoryStream(Path) newDirectoryStream} method
      * to open a directory and iterate over the names of the files in the
      * directory. This may use less resources when working with very large
@@ -1358,14 +1358,14 @@ public class File
     /**
      * Renames the file denoted by this abstract pathname.
      *
-     * <p> Many aspects of the behavior of this method are inherently
+     * Many aspects of the behavior of this method are inherently
      * platform-dependent: The rename operation might not be able to move a
      * file from one filesystem to another, it might not be atomic, and it
      * might not succeed if a file with the destination abstract pathname
      * already exists.  The return value should always be checked to make sure
      * that the rename operation was successful.
      *
-     * <p> Note that the {@link java.nio.file.Files} class defines the {@link
+     * Note that the {@link java.nio.file.Files} class defines the {@link
      * java.nio.file.Files#move move} method to move or rename a file in a
      * platform independent manner.
      *
@@ -1401,7 +1401,7 @@ public class File
      * Sets the last-modified time of the file or directory named by this
      * abstract pathname.
      *
-     * <p> All platforms support file-modification times to the nearest second,
+     * All platforms support file-modification times to the nearest second,
      * but some provide more precision.  The argument will be truncated to fit
      * the supported precision.  If the operation succeeds and no intervening
      * operations on the file take place, then the next invocation of the
@@ -1471,7 +1471,7 @@ public class File
      * machine with special privileges that allow it to modify files that
      * disallow write operations.
      *
-     * <p> The {@link java.nio.file.Files} class defines methods that operate on
+     * The {@link java.nio.file.Files} class defines methods that operate on
      * file attributes including file permissions. This may be used when finer
      * manipulation of file permissions is required.
      *
@@ -1514,7 +1514,7 @@ public class File
      * machine with special privileges that allow it to modify files that
      * disallow write operations.
      *
-     * <p> An invocation of this method of the form <tt>file.setWritable(arg)</tt>
+     * An invocation of this method of the form <tt>file.setWritable(arg)</tt>
      * behaves in exactly the same way as the invocation
      *
      * <pre>
@@ -1545,7 +1545,7 @@ public class File
      * machine with special privileges that allow it to read files that are
      * marked as unreadable.
      *
-     * <p> The {@link java.nio.file.Files} class defines methods that operate on
+     * The {@link java.nio.file.Files} class defines methods that operate on
      * file attributes including file permissions. This may be used when finer
      * manipulation of file permissions is required.
      *
@@ -1625,7 +1625,7 @@ public class File
      * machine with special privileges that allow it to execute files that are
      * not marked executable.
      *
-     * <p> The {@link java.nio.file.Files} class defines methods that operate on
+     * The {@link java.nio.file.Files} class defines methods that operate on
      * file attributes including file permissions. This may be used when finer
      * manipulation of file permissions is required.
      *
@@ -1733,7 +1733,7 @@ public class File
     /**
      * List the available filesystem roots.
      *
-     * <p> A particular Java platform may support zero or more
+     * A particular Java platform may support zero or more
      * hierarchically-organized file systems.  Each file system has a
      * {@code root} directory from which all other files in that file system
      * can be reached.  Windows platforms, for example, have a root directory
@@ -1743,12 +1743,12 @@ public class File
      * removable media and the disconnecting or unmounting of physical or
      * virtual disk drives.
      *
-     * <p> This method returns an array of {@code File} objects that denote the
+     * This method returns an array of {@code File} objects that denote the
      * root directories of the available filesystem roots.  It is guaranteed
      * that the canonical pathname of any file physically present on the local
      * machine will begin with one of the roots returned by this method.
      *
-     * <p> The canonical pathname of a file that resides on some other machine
+     * The canonical pathname of a file that resides on some other machine
      * and is accessed via a remote-filesystem protocol such as SMB or NFS may
      * or may not begin with one of the roots returned by this method.  If the
      * pathname of a remote file is syntactically indistinguishable from the
@@ -1758,7 +1758,7 @@ public class File
      * platform will be returned by this method, while {@code File} objects
      * containing UNC pathnames will not be returned by this method.
      *
-     * <p> Unlike most methods in this class, this method does not throw
+     * Unlike most methods in this class, this method does not throw
      * security exceptions.  If a security manager exists and its {@link
      * SecurityManager#checkRead(String)} method denies read access to a
      * particular root directory, then that directory will not appear in the
@@ -1810,7 +1810,7 @@ public class File
      * Returns the number of unallocated bytes in the partition <a
      * href="#partName">named</a> by this abstract path name.
      *
-     * <p> The returned number of unallocated bytes is a hint, but not
+     * The returned number of unallocated bytes is a hint, but not
      * a guarantee, that it is possible to use most or any of these
      * bytes.  The number of unallocated bytes is most likely to be
      * accurate immediately after this call.  It is likely to be made
@@ -1852,7 +1852,7 @@ public class File
      * estimate of how much new data can actually be written than {@link
      * #getFreeSpace}.
      *
-     * <p> The returned number of available bytes is a hint, but not a
+     * The returned number of available bytes is a hint, but not a
      * guarantee, that it is possible to use most or any of these bytes.  The
      * number of unallocated bytes is most likely to be accurate immediately
      * after this call.  It is likely to be made inaccurate by any external
@@ -1925,7 +1925,7 @@ public class File
     }
 
     /**
-     * <p> Creates a new empty file in the specified directory, using the
+     * Creates a new empty file in the specified directory, using the
      * given prefix and suffix strings to generate its name.  If this method
      * returns successfully then it is guaranteed that:
      *
@@ -1941,13 +1941,13 @@ public class File
      * for a file created by this method to be deleted automatically, use the
      * <code>{@link #deleteOnExit}</code> method.
      *
-     * <p> The <code>prefix</code> argument must be at least three characters
+     * The <code>prefix</code> argument must be at least three characters
      * long.  It is recommended that the prefix be a short, meaningful string
      * such as <code>"hjb"</code> or <code>"mail"</code>.  The
      * <code>suffix</code> argument may be <code>null</code>, in which case the
      * suffix <code>".tmp"</code> will be used.
      *
-     * <p> To create the new file, the prefix and the suffix may first be
+     * To create the new file, the prefix and the suffix may first be
      * adjusted to fit the limitations of the underlying platform.  If the
      * prefix is too long then it will be truncated, but its first three
      * characters will always be preserved.  If the suffix is too long then it
@@ -1957,7 +1957,7 @@ public class File
      * made the name of the new file will be generated by concatenating the
      * prefix, five or more internally-generated characters, and the suffix.
      *
-     * <p> If the <code>directory</code> argument is <code>null</code> then the
+     * If the <code>directory</code> argument is <code>null</code> then the
      * system-dependent default temporary-file directory will be used.  The
      * default temporary-file directory is specified by the system property
      * <code>java.io.tmpdir</code>.  On UNIX systems the default value of this
@@ -2034,7 +2034,7 @@ public class File
      * java.lang.String, java.io.File)
      * createTempFile(prefix,&nbsp;suffix,&nbsp;null)}</code>.
      *
-     * <p> The {@link
+     * The {@link
      * java.nio.file.Files#createTempFile(String,String,java.nio.file.attribute.FileAttribute[])
      * Files.createTempFile} method provides an alternative method to create an
      * empty file in the temporary-file directory. Files created by that method
@@ -2204,7 +2204,7 @@ public class File
      * this abstract path. The resulting {@code Path} is associated with the
      * {@link java.nio.file.FileSystems#getDefault default-filesystem}.
      *
-     * <p> The first invocation of this method works as if invoking it were
+     * The first invocation of this method works as if invoking it were
      * equivalent to evaluating the expression:
      * <blockquote><pre>
      * {@link java.nio.file.FileSystems#getDefault FileSystems.getDefault}().{@link
@@ -2212,7 +2212,7 @@ public class File
      * </pre></blockquote>
      * Subsequent invocations of this method return the same {@code Path}.
      *
-     * <p> If this abstract pathname is the empty abstract pathname then this
+     * If this abstract pathname is the empty abstract pathname then this
      * method returns a {@code Path} that may be used to access the current
      * user directory.
      *

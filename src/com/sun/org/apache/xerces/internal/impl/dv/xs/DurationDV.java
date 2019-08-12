@@ -30,7 +30,7 @@ import com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException;
 import com.sun.org.apache.xerces.internal.impl.dv.ValidationContext;
 
 /**
- * Validator for &lt;duration&gt; datatype (W3C Schema Datatypes)
+ * Validator for <duration> datatype (W3C Schema Datatypes)
  *
  * @xerces.internal
  *

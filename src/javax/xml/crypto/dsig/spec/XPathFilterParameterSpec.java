@@ -41,7 +41,7 @@ import java.util.Map.Entry;
  * of additional namespace prefix mappings. The XML Schema Definition of
  * the XPath Filtering transform parameters is defined as:
  * <pre><code>
- * &lt;element name="XPath" type="string"/&gt;
+ * <element name="XPath" type="string"/>
  * </code></pre>
  *
  * @author Sean Mullan

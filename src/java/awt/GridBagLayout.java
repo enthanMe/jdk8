@@ -457,7 +457,7 @@ java.io.Serializable {
      * If this field is non-<code>null</code> the values are
      * applied to the gridbag after all of the columns
      * weights have been calculated.
-     * If <code>columnWeights[i]</code> &gt; weight for column i, then
+     * If <code>columnWeights[i]</code> > weight for column i, then
      * column i is assigned the weight in <code>columnWeights[i]</code>.
      * If <code>columnWeights</code> has more elements than the number
      * of columns, the excess elements are ignored - they do
@@ -472,7 +472,7 @@ java.io.Serializable {
      * If this field is non-<code>null</code> the values are
      * applied to the gridbag after all of the rows
      * weights have been calculated.
-     * If <code>rowWeights[i]</code> &gt; weight for row i, then
+     * If <code>rowWeights[i]</code> > weight for row i, then
      * row i is assigned the weight in <code>rowWeights[i]</code>.
      * If <code>rowWeights</code> has more elements than the number
      * of rows, the excess elements are ignored - they do

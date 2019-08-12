@@ -827,7 +827,7 @@ abstract class XSDAbstractTraverser {
                 newVal.append("&quot;");
             }
             else if (currChar == '<') {
-                newVal.append("&lt;");
+                newVal.append("<");
             }
             else if (currChar == '&') {
                 newVal.append("&amp;");

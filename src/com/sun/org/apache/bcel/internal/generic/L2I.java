@@ -60,7 +60,7 @@ package com.sun.org.apache.bcel.internal.generic;
 
 /**
  * L2I - Convert long to int
- * <PRE>Stack: ..., value.word1, value.word2 -&gt; ..., result</PRE>
+ * <PRE>Stack: ..., value.word1, value.word2 -> ..., result</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

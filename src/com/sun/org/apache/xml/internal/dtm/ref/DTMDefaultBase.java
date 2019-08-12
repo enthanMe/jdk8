@@ -866,7 +866,7 @@ public abstract class DTMDefaultBase implements DTM
 
   /**
    * Given a node handle, test if it has child nodes.
-   * <p> %REVIEW% This is obviously useful at the DOM layer, where it
+   * %REVIEW% This is obviously useful at the DOM layer, where it
    * would permit testing this without having to create a proxy
    * node. It's less useful in the DTM API, where
    * (dtm.getFirstChild(nodeHandle)!=DTM.NULL) is just as fast and
@@ -1789,8 +1789,8 @@ public abstract class DTMDefaultBase implements DTM
    * mapping.
    * Given a node handle, return the prefix used to map to the namespace.
    *
-   * <p> %REVIEW% Are you sure you want "" for no prefix?  </p>
-   * <p> %REVIEW-COMMENT% I think so... not totally sure. -sb  </p>
+   * %REVIEW% Are you sure you want "" for no prefix?  </p>
+   * %REVIEW-COMMENT% I think so... not totally sure. -sb  </p>
    *
    * @param nodeHandle the id of the node.
    * @return String prefix of this node's name, or "" if no explicit
@@ -2108,7 +2108,7 @@ public abstract class DTMDefaultBase implements DTM
    *
    * @return true if node1 comes before node2, otherwise return false.
    * You can think of this as
-   * <code>(node1.documentOrderPosition &lt;= node2.documentOrderPosition)</code>.
+   * <code>(node1.documentOrderPosition <= node2.documentOrderPosition)</code>.
    */
   public boolean isNodeAfter(int nodeHandle1, int nodeHandle2)
   {

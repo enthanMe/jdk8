@@ -146,10 +146,10 @@ public abstract class BranchInstruction extends Instruction implements Instructi
   /**
    * Long output format:
    *
-   * &lt;position in byte code&gt;
-   * &lt;name of opcode&gt; "["&lt;opcode number&gt;"]"
-   * "("&lt;length of instruction&gt;")"
-   * "&lt;"&lt;target instruction&gt;"&gt;" "@"&lt;branch target offset&gt;
+   * <position in byte code>
+   * <name of opcode> "["<opcode number>"]"
+   * "("<length of instruction>")"
+   * "<"<target instruction>">" "@"<branch target offset>
    *
    * @param verbose long/short format switch
    * @return mnemonic for instruction

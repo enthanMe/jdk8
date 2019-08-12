@@ -30,10 +30,10 @@ import sun.reflect.CallerSensitive;
 import sun.reflect.Reflection;
 
 /**
- * <p> The AccessController class is used for access control operations
+ * The AccessController class is used for access control operations
  * and decisions.
  *
- * <p> More specifically, the AccessController class is used for
+ * More specifically, the AccessController class is used for
  * three purposes:
  *
  * <ul>
@@ -46,7 +46,7 @@ import sun.reflect.Reflection;
  * access-control decisions from a different context can be made with
  * respect to the saved context. </ul>
  *
- * <p> The {@link #checkPermission(Permission) checkPermission} method
+ * The {@link #checkPermission(Permission) checkPermission} method
  * determines whether the access request indicated by a specified
  * permission should be granted or denied. A sample call appears
  * below. In this example, {@code checkPermission} will determine
@@ -60,7 +60,7 @@ import sun.reflect.Reflection;
  *
  * </pre>
  *
- * <p> If a requested access is allowed,
+ * If a requested access is allowed,
  * {@code checkPermission} returns quietly. If denied, an
  * AccessControlException is
  * thrown. AccessControlException can also be thrown if the requested
@@ -100,7 +100,7 @@ import sun.reflect.Reflection;
  * inheritedContext.checkPermission(permission);
  * }</pre>
  *
- * <p> A caller can be marked as being "privileged"
+ * A caller can be marked as being "privileged"
  * (see {@link #doPrivileged(PrivilegedAction) doPrivileged} and below).
  * When making access control decisions, the {@code checkPermission}
  * method stops checking if it reaches a caller that
@@ -118,7 +118,7 @@ import sun.reflect.Reflection;
  * until there are no more callers or another {@code doPrivileged}
  * call matches the requested permission and returns normally.
  *
- * <p> The normal use of the "privileged" feature is as follows. If you
+ * The normal use of the "privileged" feature is as follows. If you
  * don't need to return a value from within the "privileged" block, do
  * the following:
  *
@@ -150,7 +150,7 @@ import sun.reflect.Reflection;
  * {@code doPrivileged} return value (which is
  * ignored in this example).
  *
- * <p> If you need to return a value, you can do something like the following:
+ * If you need to return a value, you can do something like the following:
  *
  *  <pre> {@code
  * somemethod() {
@@ -189,13 +189,13 @@ import sun.reflect.Reflection;
  *     ...normal code here...
  *  }}</pre>
  *
- * <p> Be *very* careful in your use of the "privileged" construct, and
+ * Be *very* careful in your use of the "privileged" construct, and
  * always remember to make the privileged code section as small as possible.
  * You can pass {@code Permission} arguments to further limit the
  * scope of the "privilege" (see below).
  *
  *
- * <p> Note that {@code checkPermission} always performs security checks
+ * Note that {@code checkPermission} always performs security checks
  * within the context of the currently executing thread.
  * Sometimes a security check that should be made within a given context
  * will actually need to be done from within a
@@ -227,7 +227,7 @@ import sun.reflect.Reflection;
  *
  * </pre>
  *
- * <p> There are also times where you don't know a priori which permissions
+ * There are also times where you don't know a priori which permissions
  * to check the context against. In these cases you can use the
  * doPrivileged method that takes a context. You can also limit the scope
  * of the privileged code by passing additional {@code Permission}
@@ -248,7 +248,7 @@ import sun.reflect.Reflection;
  *     }, acc, new FilePermission("/temp/*", read));
  *     ...normal code here...
  * }}</pre>
- * <p> Passing a limiting {@code Permission} argument of an instance of
+ * Passing a limiting {@code Permission} argument of an instance of
  * {@code AllPermission} is equivalent to calling the equivalent
  * {@code doPrivileged} method without limiting {@code Permission}
  * arguments. Passing a zero length array of {@code Permission} disables
@@ -273,10 +273,10 @@ public final class AccessController {
      * enabled. The action is performed with <i>all</i> of the permissions
      * possessed by the caller's protection domain.
      *
-     * <p> If the action's {@code run} method throws an (unchecked)
+     * If the action's {@code run} method throws an (unchecked)
      * exception, it will propagate through this method.
      *
-     * <p> Note that any DomainCombiner associated with the current
+     * Note that any DomainCombiner associated with the current
      * AccessControlContext will be ignored while the action is performed.
      *
      * @param <T> the type of the value returned by the PrivilegedAction's
@@ -302,10 +302,10 @@ public final class AccessController {
      * enabled. The action is performed with <i>all</i> of the permissions
      * possessed by the caller's protection domain.
      *
-     * <p> If the action's {@code run} method throws an (unchecked)
+     * If the action's {@code run} method throws an (unchecked)
      * exception, it will propagate through this method.
      *
-     * <p> This method preserves the current AccessControlContext's
+     * This method preserves the current AccessControlContext's
      * DomainCombiner (which may be null) while the action is performed.
      *
      * @param <T> the type of the value returned by the PrivilegedAction's
@@ -444,7 +444,7 @@ public final class AccessController {
      * If the action's {@code run} method throws an (unchecked) exception,
      * it will propagate through this method.
      *
-     * <p> This method preserves the current AccessControlContext's
+     * This method preserves the current AccessControlContext's
      * DomainCombiner (which may be null) while the action is performed.
      * <p>
      * If a security manager is installed and the specified
@@ -500,10 +500,10 @@ public final class AccessController {
      * privileges enabled.  The action is performed with <i>all</i> of the
      * permissions possessed by the caller's protection domain.
      *
-     * <p> If the action's {@code run} method throws an <i>unchecked</i>
+     * If the action's {@code run} method throws an <i>unchecked</i>
      * exception, it will propagate through this method.
      *
-     * <p> Note that any DomainCombiner associated with the current
+     * Note that any DomainCombiner associated with the current
      * AccessControlContext will be ignored while the action is performed.
      *
      * @param <T> the type of the value returned by the
@@ -533,10 +533,10 @@ public final class AccessController {
      * privileges enabled.  The action is performed with <i>all</i> of the
      * permissions possessed by the caller's protection domain.
      *
-     * <p> If the action's {@code run} method throws an <i>unchecked</i>
+     * If the action's {@code run} method throws an <i>unchecked</i>
      * exception, it will propagate through this method.
      *
-     * <p> This method preserves the current AccessControlContext's
+     * This method preserves the current AccessControlContext's
      * DomainCombiner (which may be null) while the action is performed.
      *
      * @param <T> the type of the value returned by the
@@ -728,7 +728,7 @@ public final class AccessController {
      * If the action's {@code run} method throws an (unchecked) exception,
      * it will propagate through this method.
      *
-     * <p> This method preserves the current AccessControlContext's
+     * This method preserves the current AccessControlContext's
      * DomainCombiner (which may be null) while the action is performed.
      * <p>
      * If a security manager is installed and the specified

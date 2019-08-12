@@ -49,7 +49,7 @@ import sun.reflect.Reflection;
  * <pre>
  * <CODE>jdbc.drivers=foo.bah.Driver:wombat.sql.Driver:bad.taste.ourDriver</CODE>
  * </pre>
- *<P> The <code>DriverManager</code> methods <code>getConnection</code> and
+ *The <code>DriverManager</code> methods <code>getConnection</code> and
  * <code>getDrivers</code> have been enhanced to support the Java Standard Edition
  * <a href="../../../technotes/guides/jar/jar.html#Service%20Provider">Service Provider</a> mechanism. JDBC 4.0 Drivers must
  * include the file <code>META-INF/services/java.sql.Driver</code>. This file contains the name of the JDBC drivers

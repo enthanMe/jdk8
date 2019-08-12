@@ -63,9 +63,9 @@ import com.sun.org.apache.bcel.internal.ExceptionConstants;
 
 /**
  * PUTSTATIC - Put static field in class
- * <PRE>Stack: ..., value -&gt; ...</PRE>
+ * <PRE>Stack: ..., value -> ...</PRE>
  * OR
- * <PRE>Stack: ..., value.word1, value.word2 -&gt; ...</PRE>
+ * <PRE>Stack: ..., value.word1, value.word2 -> ...</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

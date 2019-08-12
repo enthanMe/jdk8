@@ -149,7 +149,7 @@ public interface DTMIterator
    * their descendants will be rejected. Note that this rejection takes
    * precedence over <code>whatToShow</code> and the filter. </p>
    *
-   * <p> To produce a view of the document that has entity references
+   * To produce a view of the document that has entity references
    * expanded and does not expose the entity reference node itself, use
    * the <code>whatToShow</code> flags to hide the entity reference node
    * and set <code>expandEntityReferences</code> to true when creating the

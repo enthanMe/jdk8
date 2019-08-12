@@ -28,7 +28,7 @@ package com.sun.corba.se.pept.transport;
 import java.util.Iterator;
 
 /**
- * <p> <code>ContactInfoList</code> contains one or more
+ * <code>ContactInfoList</code> contains one or more
  * {@link com.sun.corba.se.pept.transport.ContactInfo ContactInfo}.
  *
  * @author Harold Carr

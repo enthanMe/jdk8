@@ -72,7 +72,7 @@ public class XMLChar {
 
     /**
      * Content character mask. Special characters are those that can
-     * be considered the start of markup, such as '&lt;' and '&amp;'.
+     * be considered the start of markup, such as '<' and '&amp;'.
      * The various newline characters are considered special as well.
      * All other valid XML characters can be considered content.
      * <p>
@@ -814,7 +814,7 @@ public class XMLChar {
 
     /**
      * Returns true if the specified character can be considered markup.
-     * Markup characters include '&lt;', '&amp;', and '%'.
+     * Markup characters include '<', '&amp;', and '%'.
      *
      * @param c The character to check.
      */

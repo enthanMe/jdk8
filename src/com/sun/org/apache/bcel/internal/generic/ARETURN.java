@@ -60,7 +60,7 @@ package com.sun.org.apache.bcel.internal.generic;
 
 /**
  * ARETURN -  Return reference from method
- * <PRE>Stack: ..., objectref -&gt; &lt;empty&gt;</PRE>
+ * <PRE>Stack: ..., objectref -> <empty></PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

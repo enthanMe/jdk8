@@ -2337,7 +2337,7 @@ public interface ResultSet extends Wrapper, AutoCloseable {
      * may actually refresh multiple rows at once if the fetch size is
      * greater than one.
      *
-     * <P> All values are refetched subject to the transaction isolation
+     * All values are refetched subject to the transaction isolation
      * level and cursor sensitivity.  If <code>refreshRow</code> is called after
      * calling an updater method, but before calling
      * the method <code>updateRow</code>, then the

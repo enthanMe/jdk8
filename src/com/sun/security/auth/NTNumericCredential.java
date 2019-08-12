@@ -26,7 +26,7 @@
 package com.sun.security.auth;
 
 /**
- * <p> This class abstracts an NT security token
+ * This class abstracts an NT security token
  * and provides a mechanism to do same-process security impersonation.
  *
  */

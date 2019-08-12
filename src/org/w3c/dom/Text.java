@@ -57,11 +57,11 @@ package org.w3c.dom;
  * will not (in general) persist between DOM editing sessions. The
  * <code>Node.normalize()</code> method merges any such adjacent
  * <code>Text</code> objects into a single node for each block of text.
- * <p> No lexical check is done on the content of a <code>Text</code> node
+ * No lexical check is done on the content of a <code>Text</code> node
  * and, depending on its position in the document, some characters must be
  * escaped during serialization using character references; e.g. the
- * characters "&lt;&amp;" if the textual content is part of an element or of
- * an attribute, the character sequence "]]&gt;" when part of an element,
+ * characters "<&amp;" if the textual content is part of an element or of
+ * an attribute, the character sequence "]]>" when part of an element,
  * the quotation mark character " or the apostrophe character ' when part of
  * an attribute.
  * <p>See also the <a href='http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407'>Document Object Model (DOM) Level 3 Core Specification</a>.
@@ -106,7 +106,7 @@ public interface Text extends CharacterData {
      *
      * <pre>
      *                     +-----+
-     *                     | &lt;p&gt; |
+     *                     | <p> |
      *                     +-----+
      *                       /\
      *                      /  \
@@ -150,7 +150,7 @@ public interface Text extends CharacterData {
      *
      * <pre>
      *                     +-----+
-     *                     | &lt;p&gt; |
+     *                     | <p> |
      *                     +-----+
      *                        |
      *                        |

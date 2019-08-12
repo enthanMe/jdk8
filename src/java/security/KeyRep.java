@@ -145,7 +145,7 @@ public class KeyRep implements Serializable {
     /**
      * Resolve the Key object.
      *
-     * <p> This method supports three Type/format combinations:
+     * This method supports three Type/format combinations:
      * <ul>
      * <li> Type.SECRET/"RAW" - returns a SecretKeySpec object
      * constructed using encoded key bytes and algorithm

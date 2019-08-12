@@ -32,7 +32,7 @@ package javax.security.auth.login;
  * All the abstract methods in this class must be implemented by each
  * service provider who wishes to supply a Configuration implementation.
  *
- * <p> Subclass implementations of this abstract class must provide
+ * Subclass implementations of this abstract class must provide
  * a public constructor that takes a {@code Configuration.Parameters}
  * object as an input parameter.  This constructor also must throw
  * an IllegalArgumentException if it does not understand the
@@ -59,12 +59,12 @@ public abstract class ConfigurationSpi {
     /**
      * Refresh and reload the Configuration.
      *
-     * <p> This method causes this Configuration object to refresh/reload its
+     * This method causes this Configuration object to refresh/reload its
      * contents in an implementation-dependent manner.
      * For example, if this Configuration object stores its entries in a file,
      * calling {@code refresh} may cause the file to be re-read.
      *
-     * <p> The default implementation of this method does nothing.
+     * The default implementation of this method does nothing.
      * This method should be overridden if a refresh operation is supported
      * by the implementation.
      *

@@ -58,7 +58,7 @@ import static com.sun.jmx.defaults.JmxProperties.SNMP_LOGGER;
  *<li> Access Control Sub System :
  * {@link com.sun.jmx.snmp.internal.SnmpAccessControlSubSystem}</li>
  *</ul>
- *<P> Each sub system contains a set of models. A model is an implementation
+ *Each sub system contains a set of models. A model is an implementation
  * of a particular treatement (eg: the User based Security Model defined in
  * RFC 2574 is a functional element dealing with authentication and privacy).
  *</P>
@@ -176,7 +176,7 @@ public class SnmpEngineImpl implements SnmpEngine, Serializable {
 
      /**
      * Constructor. A Local Configuration Datastore is passed to the engine. It will be used to store and retrieve data (engine Id, engine boots).
-     * <P> WARNING : The SnmpEngineId is computed as follow:
+     * WARNING : The SnmpEngineId is computed as follow:
      * <ul>
      * <li> If an lcd file is provided containing the property "localEngineID", this property value is used.</li>.
      * <li> If not, if the passed engineID is not null, this engine ID is used.</li>
@@ -209,7 +209,7 @@ public class SnmpEngineImpl implements SnmpEngine, Serializable {
     }
     /**
      * Constructor. A Local Configuration Datastore is passed to the engine. It will be used to store and retrieve data (engine ID, engine boots).
-     * <P> WARNING : The SnmpEngineId is computed as follow:
+     * WARNING : The SnmpEngineId is computed as follow:
      * <ul>
      * <li> If an lcd file is provided containing the property "localEngineID", this property value is used.</li>.
      * <li> If not, the passed address and port are used to compute one.</li>
@@ -243,7 +243,7 @@ public class SnmpEngineImpl implements SnmpEngine, Serializable {
 
     /**
      * Constructor. A Local Configuration Datastore is passed to the engine. It will be used to store and retrieve data (engine ID, engine boots).
-     * <P> WARNING : The SnmpEngineId is computed as follow:
+     * WARNING : The SnmpEngineId is computed as follow:
      * <ul>
      * <li> If an lcd file is provided containing the property "localEngineID", this property value is used.</li>.
      * <li> If not, The passed port is used to compute one.</li>
@@ -275,7 +275,7 @@ public class SnmpEngineImpl implements SnmpEngine, Serializable {
 
     /**
      * Constructor. A Local Configuration Datastore is passed to the engine. It will be used to store and retrieve data (engine ID, engine boots).
-     * <P> WARNING : The SnmpEngineId is computed as follow:
+     * WARNING : The SnmpEngineId is computed as follow:
      * <ul>
      * <li> If an lcd file is provided containing the property "localEngineID", this property value is used.</li>.
      * <li> If not, a time based engineID is computed.</li>

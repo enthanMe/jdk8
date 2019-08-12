@@ -60,7 +60,7 @@ package com.sun.org.apache.bcel.internal.generic;
 
 /**
  * ATHROW -  Throw exception
- * <PRE>Stack: ..., objectref -&gt; objectref</PRE>
+ * <PRE>Stack: ..., objectref -> objectref</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

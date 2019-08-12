@@ -60,7 +60,7 @@ package com.sun.org.apache.bcel.internal.generic;
 
 /**
  * FRETURN -  Return float from method
- * <PRE>Stack: ..., value -&gt; &lt;empty&gt;</PRE>
+ * <PRE>Stack: ..., value -> <empty></PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

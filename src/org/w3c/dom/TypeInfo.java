@@ -46,7 +46,7 @@ package org.w3c.dom;
  * <code>Element</code> or <code>Attr</code> nodes, specified in the schemas
  * associated with the document. The type is a pair of a namespace URI and
  * name properties, and depends on the document's schema.
- * <p> If the document's schema is an XML DTD [<a href='http://www.w3.org/TR/2004/REC-xml-20040204'>XML 1.0</a>], the values
+ * If the document's schema is an XML DTD [<a href='http://www.w3.org/TR/2004/REC-xml-20040204'>XML 1.0</a>], the values
  * are computed as follows:
  * <ul>
  * <li> If this type is referenced from an
@@ -61,7 +61,7 @@ package org.w3c.dom;
  * and <code>typeName</code> are <code>null</code>.
  * </li>
  * </ul>
- * <p> If the document's schema is an XML Schema [<a href='http://www.w3.org/TR/2001/REC-xmlschema-1-20010502/'>XML Schema Part 1</a>]
+ * If the document's schema is an XML Schema [<a href='http://www.w3.org/TR/2001/REC-xmlschema-1-20010502/'>XML Schema Part 1</a>]
  * , the values are computed as follows using the post-schema-validation
  * infoset contributions (also called PSVI contributions):
  * <ul>

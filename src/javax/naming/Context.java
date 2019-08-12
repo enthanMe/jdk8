@@ -348,7 +348,7 @@ public interface Context {
      * All intermediate contexts and the target context (that named by all
      * but terminal atomic component of the name) must already exist.
      *
-     * <p> If the object is a <tt>DirContext</tt>, any existing attributes
+     * If the object is a <tt>DirContext</tt>, any existing attributes
      * associated with the name are replaced with those of the object.
      * Otherwise, any existing attributes associated with the name remain
      * unchanged.
@@ -389,13 +389,13 @@ public interface Context {
      * from the target context--that named by all but the terminal
      * atomic part of <code>name</code>.
      *
-     * <p> This method is idempotent.
+     * This method is idempotent.
      * It succeeds even if the terminal atomic name
      * is not bound in the target context, but throws
      * <tt>NameNotFoundException</tt>
      * if any of the intermediate contexts do not exist.
      *
-     * <p> Any attributes associated with the name are removed.
+     * Any attributes associated with the name are removed.
      * Intermediate contexts are not changed.
      *
      * @param name
@@ -456,7 +456,7 @@ public interface Context {
      * class names of objects bound to them.
      * The contents of any subcontexts are not included.
      *
-     * <p> If a binding is added to or removed from this context,
+     * If a binding is added to or removed from this context,
      * its effect on an enumeration previously returned is undefined.
      *
      * @param name
@@ -493,7 +493,7 @@ public interface Context {
      * objects bound to them.
      * The contents of any subcontexts are not included.
      *
-     * <p> If a binding is added to or removed from this context,
+     * If a binding is added to or removed from this context,
      * its effect on an enumeration previously returned is undefined.
      *
      * @param name
@@ -530,13 +530,13 @@ public interface Context {
      * Any attributes associated with the name are also removed.
      * Intermediate contexts are not destroyed.
      *
-     * <p> This method is idempotent.
+     * This method is idempotent.
      * It succeeds even if the terminal atomic name
      * is not bound in the target context, but throws
      * <tt>NameNotFoundException</tt>
      * if any of the intermediate contexts do not exist.
      *
-     * <p> In a federated naming system, a context from one naming system
+     * In a federated naming system, a context from one naming system
      * may be bound to a name in another.  One can subsequently
      * look up and perform operations on the foreign context using a
      * composite name.  However, an attempt destroy the context using
@@ -766,7 +766,7 @@ public interface Context {
      * Retrieves the environment in effect for this context.
      * See class description for more details on environment properties.
      *
-     * <p> The caller should not make any changes to the object returned:
+     * The caller should not make any changes to the object returned:
      * their effect on the context is undefined.
      * The environment of this context may be changed using
      * <tt>addToEnvironment()</tt> and <tt>removeFromEnvironment()</tt>.
@@ -784,7 +784,7 @@ public interface Context {
      * This method releases this context's resources immediately, instead of
      * waiting for them to be released automatically by the garbage collector.
      *
-     * <p> This method is idempotent:  invoking it on a context that has
+     * This method is idempotent:  invoking it on a context that has
      * already been closed has no effect.  Invoking any other method
      * on a closed context is not allowed, and results in undefined behaviour.
      *
@@ -795,7 +795,7 @@ public interface Context {
     /**
      * Retrieves the full name of this context within its own namespace.
      *
-     * <p> Many naming services have a notion of a "full name" for objects
+     * Many naming services have a notion of a "full name" for objects
      * in their respective namespaces.  For example, an LDAP entry has
      * a distinguished name, and a DNS record has a fully qualified name.
      * This method allows the client application to retrieve this name.
@@ -828,7 +828,7 @@ public interface Context {
      * <tt>NoInitialContextException</tt> is thrown when an initial
      * context is required to complete an operation.
      *
-     * <p> The value of this constant is "java.naming.factory.initial".
+     * The value of this constant is "java.naming.factory.initial".
      *
      * @see InitialContext
      * @see javax.naming.directory.InitialDirContext
@@ -850,7 +850,7 @@ public interface Context {
      * This property may be specified in the environment, an applet
      * parameter, a system property, or one or more resource files.
      *
-     * <p> The value of this constant is "java.naming.factory.object".
+     * The value of this constant is "java.naming.factory.object".
      *
      * @see javax.naming.spi.NamingManager#getObjectInstance
      * @see javax.naming.spi.ObjectFactory
@@ -869,7 +869,7 @@ public interface Context {
      * This property may be specified in the environment, an applet
      * parameter, a system property, or one or more resource files.
      *
-     * <p> The value of this constant is "java.naming.factory.state".
+     * The value of this constant is "java.naming.factory.state".
      *
      * @see javax.naming.spi.NamingManager#getStateToBind
      * @see javax.naming.spi.StateFactory
@@ -893,7 +893,7 @@ public interface Context {
      * The prefix <tt>com.sun.jndi.url</tt> is always appended to
      * the possibly empty list of package prefixes.
      *
-     * <p> The value of this constant is "java.naming.factory.url.pkgs".
+     * The value of this constant is "java.naming.factory.url.pkgs".
      *
      * @see javax.naming.spi.NamingManager#getObjectInstance
      * @see javax.naming.spi.NamingManager#getURLContext
@@ -914,7 +914,7 @@ public interface Context {
      * If it is not specified in any of these sources,
      * the default configuration is determined by the service provider.
      *
-     * <p> The value of this constant is "java.naming.provider.url".
+     * The value of this constant is "java.naming.provider.url".
      *
      * @see #addToEnvironment(String, Object)
      * @see #removeFromEnvironment(String)
@@ -932,7 +932,7 @@ public interface Context {
      * and the program attempts to use a JNDI URL containing a DNS name,
      * a <tt>ConfigurationException</tt> will be thrown.
      *
-     * <p> The value of this constant is "java.naming.dns.url".
+     * The value of this constant is "java.naming.dns.url".
      *
      * @see #addToEnvironment(String, Object)
      * @see #removeFromEnvironment(String)
@@ -948,7 +948,7 @@ public interface Context {
      * the source need not be (but may be) authoritative.
      * If unspecified, the value defaults to "false".
      *
-     * <p> The value of this constant is "java.naming.authoritative".
+     * The value of this constant is "java.naming.authoritative".
      *
      * @see #addToEnvironment(String, Object)
      * @see #removeFromEnvironment(String)
@@ -966,7 +966,7 @@ public interface Context {
      * If unspecified, the batch size is determined by the service
      * provider.
      *
-     * <p> The value of this constant is "java.naming.batchsize".
+     * The value of this constant is "java.naming.batchsize".
      *
      * @see #addToEnvironment(String, Object)
      * @see #removeFromEnvironment(String)
@@ -989,7 +989,7 @@ public interface Context {
      * If this property is not specified, the default is
      * determined by the provider.
      *
-     * <p> The value of this constant is "java.naming.referral".
+     * The value of this constant is "java.naming.referral".
      *
      * @see #addToEnvironment(String, Object)
      * @see #removeFromEnvironment(String)
@@ -1004,7 +1004,7 @@ public interface Context {
      * If this property is unspecified,
      * the behaviour is determined by the service provider.
      *
-     * <p> The value of this constant is "java.naming.security.protocol".
+     * The value of this constant is "java.naming.security.protocol".
      *
      * @see #addToEnvironment(String, Object)
      * @see #removeFromEnvironment(String)
@@ -1019,7 +1019,7 @@ public interface Context {
      * If this property is unspecified,
      * the behaviour is determined by the service provider.
      *
-     * <p> The value of this constant is "java.naming.security.authentication".
+     * The value of this constant is "java.naming.security.authentication".
      *
      * @see #addToEnvironment(String, Object)
      * @see #removeFromEnvironment(String)
@@ -1034,7 +1034,7 @@ public interface Context {
      * If this property is unspecified,
      * the behaviour is determined by the service provider.
      *
-     * <p> The value of this constant is "java.naming.security.principal".
+     * The value of this constant is "java.naming.security.principal".
      *
      * @see #addToEnvironment(String, Object)
      * @see #removeFromEnvironment(String)
@@ -1050,7 +1050,7 @@ public interface Context {
      * If this property is unspecified,
      * the behaviour is determined by the service provider.
      *
-     * <p> The value of this constant is "java.naming.security.credentials".
+     * The value of this constant is "java.naming.security.credentials".
      *
      * @see #addToEnvironment(String, Object)
      * @see #removeFromEnvironment(String)
@@ -1065,7 +1065,7 @@ public interface Context {
      * If this property is unspecified,
      * the language preference is determined by the service provider.
      *
-     * <p> The value of this constant is "java.naming.language".
+     * The value of this constant is "java.naming.language".
      *
      * @see #addToEnvironment(String, Object)
      * @see #removeFromEnvironment(String)
@@ -1087,7 +1087,7 @@ public interface Context {
      * will search for properties only in the environment parameter
      * passed to it, the system properties, and application resource files.
      *
-     * <p> The value of this constant is "java.naming.applet".
+     * The value of this constant is "java.naming.applet".
      *
      * @see #addToEnvironment(String, Object)
      * @see #removeFromEnvironment(String)

@@ -127,9 +127,9 @@ public interface ItemPSVI {
      * <code>actualNormalizedValueType</code> is <code>LIST_DT</code>, the
      * returned array consists of one type kind which represents the itemType
      * . For example:
-     * <pre> &lt;simpleType name="listtype"&gt; &lt;list
-     * itemType="positiveInteger"/&gt; &lt;/simpleType&gt; &lt;element
-     * name="list" type="listtype"/&gt; ... &lt;list&gt;1 2 3&lt;/list&gt; </pre>
+     * <pre> <simpleType name="listtype"> <list
+     * itemType="positiveInteger"/> </simpleType> <element
+     * name="list" type="listtype"/> ... <list>1 2 3</list> </pre>
      *
      * The <code>schemaNormalizedValue</code> value is "1 2 3", the
      * <code>actualNormalizedValueType</code> value is <code>LIST_DT</code>,
@@ -139,11 +139,11 @@ public interface ItemPSVI {
      * type is a union type definition, i.e. <code>LISTOFUNION_DT</code>,
      * for each actual value in the list the array contains the
      * corresponding memberType kind. For example:
-     * <pre> &lt;simpleType
-     * name='union_type' memberTypes="integer string"/&gt; &lt;simpleType
-     * name='listOfUnion'&gt; &lt;list itemType='union_type'/&gt;
-     * &lt;/simpleType&gt; &lt;element name="list" type="listOfUnion"/&gt;
-     * ... &lt;list&gt;1 2 foo&lt;/list&gt; </pre>
+     * <pre> <simpleType
+     * name='union_type' memberTypes="integer string"/> <simpleType
+     * name='listOfUnion'> <list itemType='union_type'/>
+     * </simpleType> <element name="list" type="listOfUnion"/>
+     * ... <list>1 2 foo</list> </pre>
      *  The
      * <code>schemaNormalizedValue</code> value is "1 2 foo", the
      * <code>actualNormalizedValueType</code> is <code>LISTOFUNION_DT</code>

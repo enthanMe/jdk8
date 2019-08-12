@@ -60,7 +60,7 @@ import sun.misc.SharedSecrets;
  * unsynchronized access:
  *
  * <pre>
- * Set&lt;MyEnum&gt; s = Collections.synchronizedSet(EnumSet.noneOf(MyEnum.class));
+ * Set<MyEnum> s = Collections.synchronizedSet(EnumSet.noneOf(MyEnum.class));
  * </pre>
  *
  * <p>Implementation note: All basic operations execute in constant time.

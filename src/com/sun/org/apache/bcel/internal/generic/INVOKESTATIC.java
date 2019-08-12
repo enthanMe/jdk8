@@ -63,7 +63,7 @@ import com.sun.org.apache.bcel.internal.ExceptionConstants;
 /**
  * INVOKESTATIC - Invoke a class (static) method
  *
- * <PRE>Stack: ..., [arg1, [arg2 ...]] -&gt; ...</PRE>
+ * <PRE>Stack: ..., [arg1, [arg2 ...]] -> ...</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

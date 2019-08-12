@@ -33,7 +33,7 @@ import javax.xml.namespace.NamespaceContext;
 /**
  * The XMLStreamWriter interface specifies how to write XML.  The XMLStreamWriter  does
  * not perform well formedness checking on its input.  However
- * the writeCharacters method is required to escape &amp; , &lt; and &gt;
+ * the writeCharacters method is required to escape &amp; , < and >
  * For attribute values the writeAttribute method will escape the
  * above characters plus &quot; to ensure that all character content
  * and attribute values are well formed.
@@ -120,16 +120,16 @@ import javax.xml.namespace.NamespaceContext;
  *             <!-- isRepairingNamespaces == true -->
  *             <td >
  *                 <!-- namespaceURI bound -->
- *                 &lt;prefix:localName&gt;&nbsp;<sup>[1]</sup>
+ *                 <prefix:localName>&nbsp;<sup>[1]</sup>
  *             </td>
  *             <td>
  *                 <!-- namespaceURI unbound -->
- *                 &lt;{generated}:localName xmlns:{generated}="namespaceURI"&gt;
+ *                 <{generated}:localName xmlns:{generated}="namespaceURI">
  *             </td>
  *             <!-- isRepairingNamespaces == false -->
  *             <td>
  *                 <!-- namespaceURI bound -->
- *                 &lt;prefix:localName&gt;&nbsp;<sup>[1]</sup>
+ *                 <prefix:localName>&nbsp;<sup>[1]</sup>
  *             </td>
  *             <td>
  *                 <!-- namespaceURI unbound -->
@@ -145,27 +145,27 @@ import javax.xml.namespace.NamespaceContext;
  *             <td>
  *                 <!-- namespaceURI bound -->
  *                 bound to same prefix:<br />
- *                 &lt;prefix:localName&gt;&nbsp;<sup>[1]</sup><br />
+ *                 <prefix:localName>&nbsp;<sup>[1]</sup><br />
  *                 <br />
  *                 bound to different prefix:<br />
- *                 &lt;{generated}:localName xmlns:{generated}="namespaceURI"&gt;
+ *                 <{generated}:localName xmlns:{generated}="namespaceURI">
  *             </td>
  *             <td>
  *                 <!-- namespaceURI unbound -->
- *                 &lt;prefix:localName xmlns:prefix="namespaceURI"&gt;&nbsp;<sup>[4]</sup>
+ *                 <prefix:localName xmlns:prefix="namespaceURI">&nbsp;<sup>[4]</sup>
  *             </td>
  *             <!-- isRepairingNamespaces == false -->
  *             <td>
  *                 <!-- namespaceURI bound -->
  *                 bound to same prefix:<br />
- *                 &lt;prefix:localName&gt;&nbsp;<sup>[1]</sup><br />
+ *                 <prefix:localName>&nbsp;<sup>[1]</sup><br />
  *                 <br />
  *                 bound to different prefix:<br />
  *                 <code>XMLStreamException</code>
  *             </td>
  *             <td>
  *                 <!-- namespaceURI unbound -->
- *                 &lt;prefix:localName&gt;&nbsp;
+ *                 <prefix:localName>&nbsp;
  *             </td>
  *         </tr>
  *     </tbody>

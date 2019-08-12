@@ -40,7 +40,7 @@ import java.util.Locale;
 import java.util.Map;
 
 /**
- * <p> This class provides an easy way for a user to preparse grammars
+ * This class provides an easy way for a user to preparse grammars
  * of various types.  By default, it knows how to preparse external
  * DTD's and schemas; it provides an easy way for user applications to
  * register classes that know how to parse additional grammar types.
@@ -302,7 +302,7 @@ public class XMLGrammarPreparser {
     // an app needs to know if a particular property is supported
     // by a grammar loader of a particular type, it will have
     // to retrieve that loader and use the loader's setProperty method.
-    // <p> <strong>An application should use the explicit method
+    // <strong>An application should use the explicit method
     // in this class to set "standard" properties like error handler etc.</strong>
     public void setProperty(String propId, Object value) {
         for (Map.Entry<String, XMLGrammarLoader> entry : fLoaders.entrySet()) {

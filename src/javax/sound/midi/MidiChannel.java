@@ -315,7 +315,7 @@ public interface MidiChannel {
      * This affects all currently sounding notes as well as subsequent ones.
      * (For pitch bend to cease, the value needs to be reset to the
      * center position.)
-     * <p> The MIDI specification
+     * The MIDI specification
      * stipulates that pitch bend be a 14-bit value, where zero
      * is maximum downward bend, 16383 is maximum upward bend, and
      * 8192 is the center (no pitch bend).  The actual

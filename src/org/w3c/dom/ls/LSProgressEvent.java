@@ -48,7 +48,7 @@ import org.w3c.dom.events.Event;
  * application about progress as a document is parsed. It extends the
  * <code>Event</code> interface defined in [<a href='http://www.w3.org/TR/2003/NOTE-DOM-Level-3-Events-20031107'>DOM Level 3 Events</a>]
  * .
- * <p> The units used for the attributes <code>position</code> and
+ * The units used for the attributes <code>position</code> and
  * <code>totalSize</code> are not specified and can be implementation and
  * input dependent.
  * <p>See also the <a href='http://www.w3.org/TR/2004/REC-DOM-Level-3-LS-20040407'>Document Object Model (DOM) Level 3 Load

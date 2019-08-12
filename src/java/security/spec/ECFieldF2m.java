@@ -68,11 +68,11 @@ public class ECFieldF2m implements ECField {
      * the i-th coefficient of the reduction polynomial.<p>
      * Note: A valid reduction polynomial is either a
      * trinomial (X^{@code m} + X^{@code k} + 1
-     * with {@code m} &gt; {@code k} &gt;= 1) or a
+     * with {@code m} > {@code k} >= 1) or a
      * pentanomial (X^{@code m} + X^{@code k3}
      * + X^{@code k2} + X^{@code k1} + 1 with
-     * {@code m} &gt; {@code k3} &gt; {@code k2}
-     * &gt; {@code k1} &gt;= 1).
+     * {@code m} > {@code k3} > {@code k2}
+     * > {@code k1} >= 1).
      * @param m with 2^{@code m} being the number of elements.
      * @param rp the BigInteger whose i-th bit corresponds to
      * the i-th coefficient of the reduction polynomial.
@@ -113,11 +113,11 @@ public class ECFieldF2m implements ECField {
      * reduction polynomial.
      * Note: A valid reduction polynomial is either a
      * trinomial (X^{@code m} + X^{@code k} + 1
-     * with {@code m} &gt; {@code k} &gt;= 1) or a
+     * with {@code m} > {@code k} >= 1) or a
      * pentanomial (X^{@code m} + X^{@code k3}
      * + X^{@code k2} + X^{@code k1} + 1 with
-     * {@code m} &gt; {@code k3} &gt; {@code k2}
-     * &gt; {@code k1} &gt;= 1), so {@code ks} should
+     * {@code m} > {@code k3} > {@code k2}
+     * > {@code k1} >= 1), so {@code ks} should
      * have length 1 or 3.
      * @param m with 2^{@code m} being the number of elements.
      * @param ks the order of the middle term(s) of the

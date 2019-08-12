@@ -60,7 +60,7 @@ package com.sun.org.apache.bcel.internal.generic;
 
 /**
  * FALOAD - Load float from array
- * <PRE>Stack: ..., arrayref, index -&gt; ..., value</PRE>
+ * <PRE>Stack: ..., arrayref, index -> ..., value</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

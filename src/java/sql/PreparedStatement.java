@@ -519,7 +519,7 @@ public interface PreparedStatement extends Statement {
 
     /**
      * Sets the designated parameter to the given
-     *  <code>REF(&lt;structured-type&gt;)</code> value.
+     *  <code>REF(<structured-type>)</code> value.
      * The driver converts this to an SQL <code>REF</code> value when it
      * sends it to the database.
      *

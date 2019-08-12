@@ -80,7 +80,7 @@ import javax.accessibility.*;
  * The {@link #read read} method can be used to initialize the
  * component from a <code>Reader</code>.  Note that if the content type is HTML,
  * relative references (e.g. for things like images) can't be resolved
- * unless the &lt;base&gt; tag is used or the <em>Base</em> property
+ * unless the <base> tag is used or the <em>Base</em> property
  * on <code>HTMLDocument</code> is set.
  * In this case the current <code>EditorKit</code> will be used,
  * and the content type will be expected to be of this type.
@@ -1889,7 +1889,7 @@ public class JEditorPane extends JTextComponent {
              * 'Accessibility'.
              *
              * Similarly, from this HTML:
-             *   &lt;a HREF="#top"&gt;&lt;img src="top-hat.gif" alt="top hat"&gt;&lt;/a&gt;
+             *   <a HREF="#top"><img src="top-hat.gif" alt="top hat"></a>
              * this might return the object ImageIcon("top-hat.gif", "top hat");
              *
              * @param i zero-based index of the actions

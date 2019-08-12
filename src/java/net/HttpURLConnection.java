@@ -86,7 +86,7 @@ abstract public class HttpURLConnection extends URLConnection {
      * A value of {@code -1} means fixed-length streaming mode is disabled
      * for output.
      *
-     * <P> <B>NOTE:</B> {@link #fixedContentLengthLong} is recommended instead
+     * <B>NOTE:</B> {@link #fixedContentLengthLong} is recommended instead
      * of this field, as it allows larger content lengths to be set.
      *
      * @since 1.5
@@ -168,19 +168,19 @@ abstract public class HttpURLConnection extends URLConnection {
      * without internal buffering, when the content length is known in
      * advance.
      *
-     * <P> An exception will be thrown if the application attempts to write
+     * An exception will be thrown if the application attempts to write
      * more data than the indicated content-length, or if the application
      * closes the OutputStream before writing the indicated amount.
      *
-     * <P> When output streaming is enabled, authentication and redirection
+     * When output streaming is enabled, authentication and redirection
      * cannot be handled automatically. A {@linkplain HttpRetryException} will
      * be thrown when reading the response if authentication or redirection
      * are required. This exception can be queried for the details of the
      * error.
      *
-     * <P> This method must be called before the URLConnection is connected.
+     * This method must be called before the URLConnection is connected.
      *
-     * <P> The content length set by invoking this method takes precedence
+     * The content length set by invoking this method takes precedence
      * over any value set by {@link #setFixedLengthStreamingMode(int)}.
      *
      * @param  contentLength

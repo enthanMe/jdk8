@@ -53,7 +53,7 @@ import java.util.Arrays;
  *
  * <h3> Thread safety </h3>
  *
- * <p> A SerialBlob is not safe for use by multiple concurrent threads.  If a
+ * A SerialBlob is not safe for use by multiple concurrent threads.  If a
  * SerialBlob is to be used by more than one thread then access to the SerialBlob
  * should be controlled by appropriate synchronization.
  *
@@ -476,7 +476,7 @@ public class SerialBlob implements Blob, Serializable, Cloneable {
     /**
      * This method frees the {@code SeriableBlob} object and releases the
      * resources that it holds. The object is invalid once the {@code free}
-     * method is called. <p> If {@code free} is called multiple times, the
+     * method is called. If {@code free} is called multiple times, the
      * subsequent calls to {@code free} are treated as a no-op. </P>
      *
      * @throws SQLException if an error occurs releasing the Blob's resources

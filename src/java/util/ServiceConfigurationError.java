@@ -29,7 +29,7 @@ package java.util;
 /**
  * Error thrown when something goes wrong while loading a service provider.
  *
- * <p> This error will be thrown in the following situations:
+ * This error will be thrown in the following situations:
  *
  * <ul>
  *

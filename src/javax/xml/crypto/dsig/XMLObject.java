@@ -47,15 +47,15 @@ import javax.xml.crypto.XMLStructure;
  * defined as:
  *
  * <pre><code>
- * &lt;element name="Object" type="ds:ObjectType"/&gt;
- * &lt;complexType name="ObjectType" mixed="true"&gt;
- *   &lt;sequence minOccurs="0" maxOccurs="unbounded"&gt;
- *     &lt;any namespace="##any" processContents="lax"/&gt;
- *   &lt;/sequence&gt;
- *   &lt;attribute name="Id" type="ID" use="optional"/&gt;
- *   &lt;attribute name="MimeType" type="string" use="optional"/&gt;
- *   &lt;attribute name="Encoding" type="anyURI" use="optional"/&gt;
- * &lt;/complexType&gt;
+ * <element name="Object" type="ds:ObjectType"/>
+ * <complexType name="ObjectType" mixed="true">
+ *   <sequence minOccurs="0" maxOccurs="unbounded">
+ *     <any namespace="##any" processContents="lax"/>
+ *   </sequence>
+ *   <attribute name="Id" type="ID" use="optional"/>
+ *   <attribute name="MimeType" type="string" use="optional"/>
+ *   <attribute name="Encoding" type="anyURI" use="optional"/>
+ * </complexType>
  * </code></pre>
  *
  * A <code>XMLObject</code> instance may be created by invoking the

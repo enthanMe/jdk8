@@ -365,7 +365,7 @@ public class XPathMatcher {
        *        content type of this element. IOW, the XML schema type
        *        of the <tt>value</tt>. Note that this may not be the type declared
        *        in the element declaration, but it is "the actual type". For example,
-       *        if the XML is &lt;foo xsi:type="xs:string">aaa&lt;/foo>, this
+       *        if the XML is <foo xsi:type="xs:string">aaa</foo>, this
        *        parameter will be "xs:string".
        * @param nillable - nillable
        *        true if the element declaration is nillable.

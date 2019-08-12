@@ -432,7 +432,7 @@ public class PKIXParameters implements CertPathParameters {
      * policies extension that is marked critical are rejected.
      * If the flag is false, certificates are not rejected on this basis.
      *
-     * <p> When a {@code PKIXParameters} object is created, this flag is
+     * When a {@code PKIXParameters} object is created, this flag is
      * set to true. This setting reflects the most common (and simplest)
      * strategy for processing policy qualifiers. Applications that want to use
      * a more sophisticated policy must set this flag to false.
@@ -459,7 +459,7 @@ public class PKIXParameters implements CertPathParameters {
      * extension that is marked critical are rejected.
      * If the flag is false, certificates are not rejected on this basis.
      *
-     * <p> When a {@code PKIXParameters} object is created, this flag is
+     * When a {@code PKIXParameters} object is created, this flag is
      * set to true. This setting reflects the most common (and simplest)
      * strategy for processing policy qualifiers. Applications that want to use
      * a more sophisticated policy must set this flag to false.

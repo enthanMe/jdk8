@@ -309,7 +309,7 @@ public abstract class InputEvent extends ComponentEvent {
     /**
      * Constructs an InputEvent object with the specified source component,
      * modifiers, and type.
-     * <p> This method throws an
+     * This method throws an
      * <code>IllegalArgumentException</code> if <code>source</code>
      * is <code>null</code>.
      *

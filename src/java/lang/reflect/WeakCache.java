@@ -51,7 +51,7 @@ import java.util.function.Supplier;
  *
  * @author Peter Levart
  * @param <K> type of keys
- * @param <P> type of parameters
+ * @param type of parameters
  * @param <V> type of values
  */
 final class WeakCache<K, P, V> {

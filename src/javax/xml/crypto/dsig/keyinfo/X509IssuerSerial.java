@@ -40,13 +40,13 @@ import javax.xml.crypto.XMLStructure;
  * defined as:
  *
  * <pre>
- *   &lt;element name="X509IssuerSerial" type="ds:X509IssuerSerialType"/&gt;
- *   &lt;complexType name="X509IssuerSerialType"&gt;
- *     &lt;sequence&gt;
- *       &lt;element name="X509IssuerName" type="string"/&gt;
- *       &lt;element name="X509SerialNumber" type="integer"/&gt;
- *     &lt;/sequence&gt;
- *   &lt;/complexType&gt;
+ *   <element name="X509IssuerSerial" type="ds:X509IssuerSerialType"/>
+ *   <complexType name="X509IssuerSerialType">
+ *     <sequence>
+ *       <element name="X509IssuerName" type="string"/>
+ *       <element name="X509SerialNumber" type="integer"/>
+ *     </sequence>
+ *   </complexType>
  * </pre>
  *
  * An <code>X509IssuerSerial</code> instance may be created by invoking the

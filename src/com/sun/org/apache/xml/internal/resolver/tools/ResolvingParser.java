@@ -151,7 +151,7 @@ public class ResolvingParser
    * that begins with a slash. For example, the declaration:</p>
    *
    * <pre>
-   * &lt;!DOCTYPE book SYSTEM "/path/to/dtd/on/my/system/docbookx.dtd">
+   * <!DOCTYPE book SYSTEM "/path/to/dtd/on/my/system/docbookx.dtd">
    * </pre>
    *
    * <p>would cause such an error. As a convenience, this method catches

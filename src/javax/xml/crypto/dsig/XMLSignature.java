@@ -51,16 +51,16 @@ import java.util.List;
  * with behavior as defined by the W3C specification. The XML Schema Definition
  * is defined as:
  * <pre><code>
- * &lt;element name="Signature" type="ds:SignatureType"/&gt;
- * &lt;complexType name="SignatureType"&gt;
- *    &lt;sequence&gt;
- *      &lt;element ref="ds:SignedInfo"/&gt;
- *      &lt;element ref="ds:SignatureValue"/&gt;
- *      &lt;element ref="ds:KeyInfo" minOccurs="0"/&gt;
- *      &lt;element ref="ds:Object" minOccurs="0" maxOccurs="unbounded"/&gt;
- *    &lt;/sequence&gt;
- *    &lt;attribute name="Id" type="ID" use="optional"/&gt;
- * &lt;/complexType&gt;
+ * <element name="Signature" type="ds:SignatureType"/>
+ * <complexType name="SignatureType">
+ *    <sequence>
+ *      <element ref="ds:SignedInfo"/>
+ *      <element ref="ds:SignatureValue"/>
+ *      <element ref="ds:KeyInfo" minOccurs="0"/>
+ *      <element ref="ds:Object" minOccurs="0" maxOccurs="unbounded"/>
+ *    </sequence>
+ *    <attribute name="Id" type="ID" use="optional"/>
+ * </complexType>
  * </code></pre>
  * <p>
  * An <code>XMLSignature</code> instance may be created by invoking one of the
@@ -189,14 +189,14 @@ public interface XMLSignature extends XMLStructure {
      * The XML Schema Definition is defined as:
      * <p>
      * <pre>
-     *   &lt;element name="SignatureValue" type="ds:SignatureValueType"/&gt;
-     *     &lt;complexType name="SignatureValueType"&gt;
-     *       &lt;simpleContent&gt;
-     *         &lt;extension base="base64Binary"&gt;
-     *           &lt;attribute name="Id" type="ID" use="optional"/&gt;
-     *         &lt;/extension&gt;
-     *       &lt;/simpleContent&gt;
-     *     &lt;/complexType&gt;
+     *   <element name="SignatureValue" type="ds:SignatureValueType"/>
+     *     <complexType name="SignatureValueType">
+     *       <simpleContent>
+     *         <extension base="base64Binary">
+     *           <attribute name="Id" type="ID" use="optional"/>
+     *         </extension>
+     *       </simpleContent>
+     *     </complexType>
      * </pre>
      *
      * @author Sean Mullan

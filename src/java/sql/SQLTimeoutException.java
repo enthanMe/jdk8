@@ -30,7 +30,7 @@ package java.sql;
  * {@code Statement.setQueryTimeout}, {@code DriverManager.setLoginTimeout},
  * {@code DataSource.setLoginTimeout},{@code XADataSource.setLoginTimeout}
  * has expired.
- * <P> This exception does not correspond to a standard SQLState.
+ * This exception does not correspond to a standard SQLState.
  *
  * @since 1.6
  */

@@ -39,22 +39,22 @@ import java.util.List;
  * W3C Recommendation for XML-Signature Syntax and Processing</a>.
  * The XML schema is defined as:
  * <code><pre>
- * &lt;element name="Reference" type="ds:ReferenceType"/&gt;
- * &lt;complexType name="ReferenceType"&gt;
- *   &lt;sequence&gt;
- *     &lt;element ref="ds:Transforms" minOccurs="0"/&gt;
- *     &lt;element ref="ds:DigestMethod"/&gt;
- *     &lt;element ref="ds:DigestValue"/&gt;
- *   &lt;/sequence&gt;
- *   &lt;attribute name="Id" type="ID" use="optional"/&gt;
- *   &lt;attribute name="URI" type="anyURI" use="optional"/&gt;
- *   &lt;attribute name="Type" type="anyURI" use="optional"/&gt;
- * &lt;/complexType&gt;
+ * <element name="Reference" type="ds:ReferenceType"/>
+ * <complexType name="ReferenceType">
+ *   <sequence>
+ *     <element ref="ds:Transforms" minOccurs="0"/>
+ *     <element ref="ds:DigestMethod"/>
+ *     <element ref="ds:DigestValue"/>
+ *   </sequence>
+ *   <attribute name="Id" type="ID" use="optional"/>
+ *   <attribute name="URI" type="anyURI" use="optional"/>
+ *   <attribute name="Type" type="anyURI" use="optional"/>
+ * </complexType>
  *
- * &lt;element name="DigestValue" type="ds:DigestValueType"/&gt;
- * &lt;simpleType name="DigestValueType"&gt;
- *   &lt;restriction base="base64Binary"/&gt;
- * &lt;/simpleType&gt;
+ * <element name="DigestValue" type="ds:DigestValueType"/>
+ * <simpleType name="DigestValueType">
+ *   <restriction base="base64Binary"/>
+ * </simpleType>
  * </pre></code>
  *
  * <p>A <code>Reference</code> instance may be created by invoking one of the

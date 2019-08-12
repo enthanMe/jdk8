@@ -51,7 +51,7 @@ package org.w3c.dom;
  * of the <code>Document</code> is requested. <code>DOMConfiguration</code>
  * objects are also used in [<a href='http://www.w3.org/TR/2004/REC-DOM-Level-3-LS-20040407'>DOM Level 3 Load and Save</a>]
  *  in the <code>DOMParser</code> and <code>DOMSerializer</code> interfaces.
- * <p> The parameter names used by the <code>DOMConfiguration</code> object
+ * The parameter names used by the <code>DOMConfiguration</code> object
  * are defined throughout the DOM Level 3 specifications. Names are
  * case-insensitive. To avoid possible conflicts, as a convention, names
  * referring to parameters defined outside the DOM specification should be
@@ -64,7 +64,7 @@ package org.w3c.dom;
  * value must be supported or not.
  * <p ><b>Note:</b>  Parameters are similar to features and properties used in
  * SAX2 [<a href='http://www.saxproject.org/'>SAX</a>].
- * <p> The following list of parameters defined in the DOM:
+ * The following list of parameters defined in the DOM:
  * <dl>
  * <dt>
  * <code>"canonical-form"</code></dt>
@@ -276,7 +276,7 @@ package org.w3c.dom;
  * <dt>
  * <code>true</code></dt>
  * <dd>[<em>required</em>] (<em>default</em>)Split CDATA sections containing the CDATA section termination marker
- * ']]&gt;'. When a CDATA section is split a warning is issued with a
+ * ']]>'. When a CDATA section is split a warning is issued with a
  * <code>DOMError.type</code> equals to
  * <code>"cdata-sections-splitted"</code> and
  * <code>DOMError.relatedData</code> equals to the first
@@ -374,7 +374,7 @@ package org.w3c.dom;
  * <dd>[<em>optional</em>] Do not check for XML well-formedness. </dd>
  * </dl></dd>
  * </dl>
- * <p> The resolution of the system identifiers associated with entities is
+ * The resolution of the system identifiers associated with entities is
  * done using <code>Document.documentURI</code>. However, when the feature
  * "LS" defined in [<a href='http://www.w3.org/TR/2004/REC-DOM-Level-3-LS-20040407'>DOM Level 3 Load and Save</a>]
  *  is supported by the DOM implementation, the parameter

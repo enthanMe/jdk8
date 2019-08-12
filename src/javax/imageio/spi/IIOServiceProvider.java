@@ -101,9 +101,9 @@ public abstract class IIOServiceProvider implements RegisterableService {
      * in the environment where it finds itself, it should deregister
      * itself from the registry.
      *
-     * <p> Only the registry should call this method.
+     * Only the registry should call this method.
      *
-     * <p> The default implementation does nothing.
+     * The default implementation does nothing.
      *
      * @see ServiceRegistry#registerServiceProvider(Object provider)
      */
@@ -114,9 +114,9 @@ public abstract class IIOServiceProvider implements RegisterableService {
      * A callback that will be whenever the Spi class has been
      * deregistered from a <code>ServiceRegistry</code>.
      *
-     * <p> Only the registry should call this method.
+     * Only the registry should call this method.
      *
-     * <p> The default implementation does nothing.
+     * The default implementation does nothing.
      *
      * @see ServiceRegistry#deregisterServiceProvider(Object provider)
      */
@@ -129,7 +129,7 @@ public abstract class IIOServiceProvider implements RegisterableService {
      * the vendor name may be used to select a service provider,
      * it is not localized.
      *
-     * <p> The default implementation returns the value of the
+     * The default implementation returns the value of the
      * <code>vendorName</code> instance variable.
      *
      * @return a non-<code>null</code> <code>String</code> containing
@@ -146,7 +146,7 @@ public abstract class IIOServiceProvider implements RegisterableService {
      * to identify the service providers they understand, this method
      * is not localized.
      *
-     * <p> The default implementation returns the value of the
+     * The default implementation returns the value of the
      * <code>version</code> instance variable.
      *
      * @return a non-<code>null</code> <code>String</code> containing

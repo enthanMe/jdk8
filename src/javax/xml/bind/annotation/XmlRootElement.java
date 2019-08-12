@@ -34,7 +34,7 @@ import static java.lang.annotation.ElementType.TYPE;
 /**
  * Maps a class or an enum type to an XML element.
  *
- * <p> <b>Usage</b> </p>
+ * <b>Usage</b> </p>
  * <p>
  * The &#64;XmlRootElement annotation can be used with the following program
  * elements:
@@ -51,7 +51,7 @@ import static java.lang.annotation.ElementType.TYPE;
  * &#64;XmlRootElement annotation, then its value is represented
  * as XML element in an XML document.
  *
- * <p> This annotation can be used with the following annotations:
+ * This annotation can be used with the following annotations:
  * {@link XmlType}, {@link XmlEnum}, {@link XmlAccessorType},
  * {@link XmlAccessorOrder}.
  * <p>
@@ -74,11 +74,11 @@ import static java.lang.annotation.ElementType.TYPE;
  * </pre>
  *
  * <pre>
- *     &lt;!-- Example: XML output -->
- *     &lt;point>
- *       &lt;x> 3 </x>
- *       &lt;y> 5 </y>
- *     &lt;/point>
+ *     <!-- Example: XML output -->
+ *     <point>
+ *       <x> 3 </x>
+ *       <y> 5 </y>
+ *     </point>
  * </pre>
  *
  * The annotation causes an global element declaration to be produced
@@ -86,14 +86,14 @@ import static java.lang.annotation.ElementType.TYPE;
  * the XML schema type to which the class is mapped.
  *
  * <pre>
- *     &lt;!-- Example: XML schema definition -->
- *     &lt;xs:element name="point" type="point"/>
- *     &lt;xs:complexType name="point">
- *       &lt;xs:sequence>
- *         &lt;xs:element name="x" type="xs:int"/>
- *         &lt;xs:element name="y" type="xs:int"/>
- *       &lt;/xs:sequence>
- *     &lt;/xs:complexType>
+ *     <!-- Example: XML schema definition -->
+ *     <xs:element name="point" type="point"/>
+ *     <xs:complexType name="point">
+ *       <xs:sequence>
+ *         <xs:element name="x" type="xs:int"/>
+ *         <xs:element name="y" type="xs:int"/>
+ *       </xs:sequence>
+ *     </xs:complexType>
  * </pre>
  *
  * <p>
@@ -114,25 +114,25 @@ import static java.lang.annotation.ElementType.TYPE;
  *     //Example: Code fragment corresponding to XML output *
  *     marshal( new Point3D(3,5,0), System.out );
  *
- *     &lt;!-- Example: XML output -->
- *     &lt;!-- The element name is point3D not point -->
- *     &lt;point3D>
- *       &lt;x>3&lt;/x>
- *       &lt;y>5&lt;/y>
- *       &lt;z>0&lt;/z>
- *     &lt;/point3D>
+ *     <!-- Example: XML output -->
+ *     <!-- The element name is point3D not point -->
+ *     <point3D>
+ *       <x>3</x>
+ *       <y>5</y>
+ *       <z>0</z>
+ *     </point3D>
  *
- *     &lt;!-- Example: XML schema definition -->
- *     &lt;xs:element name="point3D" type="point3D"/>
- *     &lt;xs:complexType name="point3D">
- *       &lt;xs:complexContent>
- *         &lt;xs:extension base="point">
- *           &lt;xs:sequence>
- *             &lt;xs:element name="z" type="xs:int"/>
- *           &lt;/xs:sequence>
- *         &lt;/xs:extension>
- *       &lt;/xs:complexContent>
- *     &lt;/xs:complexType>
+ *     <!-- Example: XML schema definition -->
+ *     <xs:element name="point3D" type="point3D"/>
+ *     <xs:complexType name="point3D">
+ *       <xs:complexContent>
+ *         <xs:extension base="point">
+ *           <xs:sequence>
+ *             <xs:element name="z" type="xs:int"/>
+ *           </xs:sequence>
+ *         </xs:extension>
+ *       </xs:complexContent>
+ *     </xs:complexType>
  * </pre>
  *
  * <b>Example 3: </b> Associate a global element with XML Schema type
@@ -145,13 +145,13 @@ import static java.lang.annotation.ElementType.TYPE;
  *         public java.math.BigDecimal price;
  *     }
  *
- *     &lt;!-- Example: XML schema definition -->
- *     &lt;xs:element name="PriceElement" type="USPrice"/>
- *     &lt;xs:complexType name="USPrice">
- *       &lt;xs:sequence>
- *         &lt;xs:element name="price" type="xs:decimal"/>
- *       &lt;/sequence>
- *     &lt;/xs:complexType>
+ *     <!-- Example: XML schema definition -->
+ *     <xs:element name="PriceElement" type="USPrice"/>
+ *     <xs:complexType name="USPrice">
+ *       <xs:sequence>
+ *         <xs:element name="price" type="xs:decimal"/>
+ *       </sequence>
+ *     </xs:complexType>
  * </pre>
  *
  * @author Sekhar Vajjhala, Sun Microsystems, Inc.

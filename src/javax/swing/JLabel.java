@@ -546,7 +546,7 @@ public class JLabel extends JComponent implements SwingConstants, Accessible
      * @since 1.4
      * @param index Index into the String to underline
      * @exception IllegalArgumentException will be thrown if <code>index</code>
-     *            is &gt;= length of the text, or &lt; -1
+     *            is >= length of the text, or < -1
      *
      * @beaninfo
      *        bound: true
@@ -1251,7 +1251,7 @@ public class JLabel extends JComponent implements SwingConstants, Accessible
          *
          * @param part the AccessibleText.CHARACTER, AccessibleText.WORD,
          * or AccessibleText.SENTENCE to retrieve
-         * @param index an index within the text &gt;= 0
+         * @param index an index within the text >= 0
          * @return the letter, word, or sentence,
          *   null for an invalid index or part
          * @since 1.3
@@ -1298,7 +1298,7 @@ public class JLabel extends JComponent implements SwingConstants, Accessible
          *
          * @param part the AccessibleText.CHARACTER, AccessibleText.WORD,
          * or AccessibleText.SENTENCE to retrieve
-         * @param index an index within the text &gt;= 0
+         * @param index an index within the text >= 0
          * @return the letter, word, or sentence, null for an invalid
          *  index or part
          * @since 1.3
@@ -1362,7 +1362,7 @@ public class JLabel extends JComponent implements SwingConstants, Accessible
          *
          * @param part the AccessibleText.CHARACTER, AccessibleText.WORD,
          *   or AccessibleText.SENTENCE to retrieve
-         * @param index an index within the text &gt;= 0
+         * @param index an index within the text >= 0
          * @return the letter, word, or sentence, null for an invalid index
          *  or part
          * @since 1.3

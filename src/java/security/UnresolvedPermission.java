@@ -68,7 +68,7 @@ import java.security.cert.*;
  * the appropriate class type is instantiated, based on the
  * information in the UnresolvedPermission.
  *
- * <p> To instantiate the new class, UnresolvedPermission assumes
+ * To instantiate the new class, UnresolvedPermission assumes
  * the class provides a zero, one, and/or two-argument constructor.
  * The zero-argument constructor would be used to instantiate
  * a permission without a name and without actions.
@@ -81,10 +81,10 @@ import java.security.cert.*;
  * the UnresolvedPermission is ignored and the relevant permission
  * will not be granted to executing code.
  *
- * <p> The newly created permission object replaces the
+ * The newly created permission object replaces the
  * UnresolvedPermission, which is removed.
  *
- * <p> Note that the {@code getName} method for an
+ * Note that the {@code getName} method for an
  * {@code UnresolvedPermission} returns the
  * {@code type} (class name) for the underlying permission
  * that has not been resolved.
@@ -314,7 +314,7 @@ implements java.io.Serializable
      * the same type (class) name, permission name, actions, and
      * certificates as this object.
      *
-     * <p> To determine certificate equality, this method only compares
+     * To determine certificate equality, this method only compares
      * actual signer certificates.  Supporting certificate chains
      * are not taken into consideration by this method.
      *

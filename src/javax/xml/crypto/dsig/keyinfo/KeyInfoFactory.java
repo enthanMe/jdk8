@@ -126,7 +126,7 @@ public abstract class KeyInfoFactory {
      * from the first <code>Provider</code> that supports the specified
      * mechanism is returned.
      *
-     * <p> Note that the list of registered providers may be retrieved via
+     * Note that the list of registered providers may be retrieved via
      * the {@link Security#getProviders() Security.getProviders()} method.
      *
      * @param mechanismType the type of the XML processing mechanism and
@@ -260,7 +260,7 @@ public abstract class KeyInfoFactory {
      * from the first <code>Provider</code> that supports the DOM mechanism is
      * returned.
      *
-     * <p> Note that the list of registered providers may be retrieved via
+     * Note that the list of registered providers may be retrieved via
      * the {@link Security#getProviders() Security.getProviders()} method.
      *
      * @return a new <code>KeyInfoFactory</code>

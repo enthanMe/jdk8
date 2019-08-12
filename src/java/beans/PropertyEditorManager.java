@@ -95,7 +95,7 @@ public class PropertyEditorManager {
      *
      * @return  The array of package names that will be searched in
      *          order to find property editors.
-     * <p>     The default value for this array is implementation-dependent,
+     *     The default value for this array is implementation-dependent,
      *         e.g. Sun implementation initially sets to  {"sun.beans.editors"}.
      */
     public static String[] getEditorSearchPath() {

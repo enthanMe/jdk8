@@ -60,7 +60,7 @@ package com.sun.org.apache.bcel.internal.generic;
 import com.sun.org.apache.bcel.internal.ExceptionConstants;
 /**
  * CHECKCAST - Check whether object is of given type
- * <PRE>Stack: ..., objectref -&gt; ..., objectref</PRE>
+ * <PRE>Stack: ..., objectref -> ..., objectref</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

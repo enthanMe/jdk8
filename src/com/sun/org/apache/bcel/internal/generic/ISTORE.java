@@ -60,7 +60,7 @@ package com.sun.org.apache.bcel.internal.generic;
 
 /**
  * ISTORE - Store int from stack into local variable
- * <PRE>Stack: ..., value -&gt; ... </PRE>
+ * <PRE>Stack: ..., value -> ... </PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

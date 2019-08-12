@@ -71,14 +71,14 @@ import javax.management.openmbean.OpenType;
  *     public Object fromOpenValue(Object openValue) throws InvalidObjectException {
  *         String[] array = (String[]) openValue;
  *         MyLinkedList list = null;
- *         for (int i = array.length - 1; i &gt;= 0; i--)
+ *         for (int i = array.length - 1; i >= 0; i--)
  *             list = new MyLinkedList(array[i], list);
  *         return list;
  *     }
  *
  *     {@literal @Override}
  *     public Object toOpenValue(Object javaValue) throws OpenDataException {
- *         ArrayList&lt;String&gt; array = new ArrayList&lt;String&gt;();
+ *         ArrayList<String> array = new ArrayList<String>();
  *         for (MyLinkedList list = (MyLinkedList) javaValue; list != null;
  *              list = list.getNext())
  *             array.add(list.getName());

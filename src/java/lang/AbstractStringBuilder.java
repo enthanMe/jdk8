@@ -244,7 +244,7 @@ abstract class AbstractStringBuilder implements Appendable, CharSequence {
      * (Unicode code units) and ranges from {@code 0} to
      * {@link #length()}{@code  - 1}.
      *
-     * <p> If the {@code char} value specified at the given index
+     * If the {@code char} value specified at the given index
      * is in the high-surrogate range, the following index is less
      * than the length of this sequence, and the
      * {@code char} value at the following index is in the
@@ -272,7 +272,7 @@ abstract class AbstractStringBuilder implements Appendable, CharSequence {
      * (Unicode code units) and ranges from {@code 1} to {@link
      * #length()}.
      *
-     * <p> If the {@code char} value at {@code (index - 1)}
+     * If the {@code char} value at {@code (index - 1)}
      * is in the low-surrogate range, {@code (index - 2)} is not
      * negative, and the {@code char} value at {@code (index -
      * 2)} is in the high-surrogate range, then the
@@ -770,11 +770,11 @@ abstract class AbstractStringBuilder implements Appendable, CharSequence {
      * Appends the string representation of the {@code codePoint}
      * argument to this sequence.
      *
-     * <p> The argument is appended to the contents of this sequence.
+     * The argument is appended to the contents of this sequence.
      * The length of this sequence increases by
      * {@link Character#charCount(int) Character.charCount(codePoint)}.
      *
-     * <p> The overall effect is exactly as if the argument were
+     * The overall effect is exactly as if the argument were
      * converted to a {@code char} array by the method
      * {@link Character#toChars(int)} and the character in that array
      * were then {@link #append(char[]) appended} to this character
@@ -884,7 +884,7 @@ abstract class AbstractStringBuilder implements Appendable, CharSequence {
     /**
      * Returns a new character sequence that is a subsequence of this sequence.
      *
-     * <p> An invocation of this method of the form
+     * An invocation of this method of the form
      *
      * <pre>{@code
      * sb.subSequence(begin,&nbsp;end)}</pre>

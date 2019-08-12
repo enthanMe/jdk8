@@ -51,9 +51,9 @@ import java.util.regex.PatternSyntaxException;
  * <code>include</code> method that allows only entries containing one or
  * more values starting with the string "a":
  * <pre>
- * RowFilter&lt;Object,Object&gt; startsWithAFilter = new RowFilter&lt;Object,Object&gt;() {
- *   public boolean include(Entry&lt;? extends Object, ? extends Object&gt; entry) {
- *     for (int i = entry.getValueCount() - 1; i &gt;= 0; i--) {
+ * RowFilter<Object,Object> startsWithAFilter = new RowFilter<Object,Object>() {
+ *   public boolean include(Entry<? extends Object, ? extends Object> entry) {
+ *     for (int i = entry.getValueCount() - 1; i >= 0; i--) {
  *       if (entry.getStringValue(i).startsWith("a")) {
  *         // The value starts with "a", include it
  *         return true;
@@ -71,20 +71,20 @@ import java.util.regex.PatternSyntaxException;
  * objects of type <code>Person</code>.  Only <code>Person</code>s
  * with an age over 20 will be shown:
  * <pre>
- * RowFilter&lt;PersonModel,Integer&gt; ageFilter = new RowFilter&lt;PersonModel,Integer&gt;() {
- *   public boolean include(Entry&lt;? extends PersonModel, ? extends Integer&gt; entry) {
+ * RowFilter<PersonModel,Integer> ageFilter = new RowFilter<PersonModel,Integer>() {
+ *   public boolean include(Entry<? extends PersonModel, ? extends Integer> entry) {
  *     PersonModel personModel = entry.getModel();
  *     Person person = personModel.getPerson(entry.getIdentifier());
- *     if (person.getAge() &gt; 20) {
+ *     if (person.getAge() > 20) {
  *       // Returning true indicates this row should be shown.
  *       return true;
  *     }
- *     // Age is &lt;= 20, don't show it.
+ *     // Age is <= 20, don't show it.
  *     return false;
  *   }
  * };
  * PersonModel model = createPersonModel();
- * TableRowSorter&lt;PersonModel&gt; sorter = new TableRowSorter&lt;PersonModel&gt;(model);
+ * TableRowSorter<PersonModel> sorter = new TableRowSorter<PersonModel>(model);
  * sorter.setRowFilter(ageFilter);
  * </pre>
  *
@@ -166,7 +166,7 @@ public abstract class RowFilter<M,I> {
      * @throws NullPointerException if <code>regex</code> is
      *         <code>null</code>
      * @throws IllegalArgumentException if any of the <code>indices</code>
-     *         are &lt; 0
+     *         are < 0
      * @throws PatternSyntaxException if <code>regex</code> is
      *         not a valid regular expression.
      * @see java.util.regex.Pattern
@@ -194,7 +194,7 @@ public abstract class RowFilter<M,I> {
      * @throws NullPointerException if <code>date</code> is
      *          <code>null</code>
      * @throws IllegalArgumentException if any of the <code>indices</code>
-     *         are &lt; 0 or <code>type</code> is
+     *         are < 0 or <code>type</code> is
      *         <code>null</code>
      * @see java.util.Calendar
      * @see java.util.Date
@@ -219,7 +219,7 @@ public abstract class RowFilter<M,I> {
      *               values are evaluated
      * @return a <code>RowFilter</code> implementing the specified criteria
      * @throws IllegalArgumentException if any of the <code>indices</code>
-     *         are &lt; 0, <code>type</code> is <code>null</code>
+     *         are < 0, <code>type</code> is <code>null</code>
      *         or <code>number</code> is <code>null</code>
      */
     public static <M,I> RowFilter<M,I> numberFilter(ComparisonType type,
@@ -235,10 +235,10 @@ public abstract class RowFilter<M,I> {
      * include any entries containing the string "foo" or the string
      * "bar":
      * <pre>
-     *   List&lt;RowFilter&lt;Object,Object&gt;&gt; filters = new ArrayList&lt;RowFilter&lt;Object,Object&gt;&gt;(2);
+     *   List<RowFilter<Object,Object>> filters = new ArrayList<RowFilter<Object,Object>>(2);
      *   filters.add(RowFilter.regexFilter("foo"));
      *   filters.add(RowFilter.regexFilter("bar"));
-     *   RowFilter&lt;Object,Object&gt; fooBarFilter = RowFilter.orFilter(filters);
+     *   RowFilter<Object,Object> fooBarFilter = RowFilter.orFilter(filters);
      * </pre>
      *
      * @param filters the <code>RowFilter</code>s to test
@@ -261,10 +261,10 @@ public abstract class RowFilter<M,I> {
      * include any entries containing the string "foo" and the string
      * "bar":
      * <pre>
-     *   List&lt;RowFilter&lt;Object,Object&gt;&gt; filters = new ArrayList&lt;RowFilter&lt;Object,Object&gt;&gt;(2);
+     *   List<RowFilter<Object,Object>> filters = new ArrayList<RowFilter<Object,Object>>(2);
      *   filters.add(RowFilter.regexFilter("foo"));
      *   filters.add(RowFilter.regexFilter("bar"));
-     *   RowFilter&lt;Object,Object&gt; fooBarFilter = RowFilter.andFilter(filters);
+     *   RowFilter<Object,Object> fooBarFilter = RowFilter.andFilter(filters);
      * </pre>
      *
      * @param filters the <code>RowFilter</code>s to test
@@ -358,8 +358,8 @@ public abstract class RowFilter<M,I> {
          *
          * @param index the index of the value to get
          * @return value at the specified index
-         * @throws IndexOutOfBoundsException if index &lt; 0 or
-         *         &gt;= getValueCount
+         * @throws IndexOutOfBoundsException if index < 0 or
+         *         >= getValueCount
          */
         public abstract Object getValue(int index);
 
@@ -377,8 +377,8 @@ public abstract class RowFilter<M,I> {
          *
          * @param index the index of the value to get
          * @return {@code non-null} string at the specified index
-         * @throws IndexOutOfBoundsException if index &lt; 0 ||
-         *         &gt;= getValueCount
+         * @throws IndexOutOfBoundsException if index < 0 ||
+         *         >= getValueCount
          */
         public String getStringValue(int index) {
             Object value = getValue(index);

@@ -39,7 +39,7 @@ import java.net.URI;
  * This class represents a default implementation for
  * {@code javax.security.auth.login.Configuration}.
  *
- * <p> This object stores the runtime login configuration representation,
+ * This object stores the runtime login configuration representation,
  * and is the amalgamation of multiple static login
  * configurations that resides in files.
  * The algorithm for locating the login configuration file(s) and reading their
@@ -76,7 +76,7 @@ import java.net.URI;
  *   represented by the "user.home" System property.
  * </ol>
  *
- * <p> The configuration syntax supported by this implementation
+ * The configuration syntax supported by this implementation
  * is exactly that syntax specified in the
  * {@code javax.security.auth.login.Configuration} class.
  *

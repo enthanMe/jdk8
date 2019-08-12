@@ -63,9 +63,9 @@ import com.sun.org.apache.bcel.internal.ExceptionConstants;
 
 /**
  * PUTFIELD - Put field in object
- * <PRE>Stack: ..., objectref, value -&gt; ...</PRE>
+ * <PRE>Stack: ..., objectref, value -> ...</PRE>
  * OR
- * <PRE>Stack: ..., objectref, value.word1, value.word2 -&gt; ...</PRE>
+ * <PRE>Stack: ..., objectref, value.word1, value.word2 -> ...</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

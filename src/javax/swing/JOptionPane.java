@@ -280,7 +280,7 @@ import static javax.swing.ClientPropertyKey.PopupFactory_FORCE_HEAVYWEIGHT_POPUP
  *     }
  *     <i>//If there is an array of option buttons:</i>
  *     for(int counter = 0, maxCounter = options.length;
- *        counter &lt; maxCounter; counter++) {
+ *        counter < maxCounter; counter++) {
  *        if(options[counter].equals(selectedValue))
  *        return counter;
  *     }

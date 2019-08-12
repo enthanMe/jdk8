@@ -48,7 +48,7 @@ public interface SOAPFault extends SOAPBodyElement {
     /**
      * Sets this <code>SOAPFault</code> object with the given fault code.
      *
-     * <P> Fault codes, which give information about the fault, are defined
+     * Fault codes, which give information about the fault, are defined
      * in the SOAP 1.1 specification. A fault code is mandatory and must
      * be of type <code>Name</code>. This method provides a convenient
      * way to set a fault code. For example,

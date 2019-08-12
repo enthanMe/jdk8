@@ -43,21 +43,21 @@ import java.util.stream.StreamSupport;
 /**
  * A compiled representation of a regular expression.
  *
- * <p> A regular expression, specified as a string, must first be compiled into
+ * A regular expression, specified as a string, must first be compiled into
  * an instance of this class.  The resulting pattern can then be used to create
  * a {@link Matcher} object that can match arbitrary {@linkplain
  * java.lang.CharSequence character sequences} against the regular
  * expression.  All of the state involved in performing a match resides in the
  * matcher, so many matchers can share the same pattern.
  *
- * <p> A typical invocation sequence is thus
+ * A typical invocation sequence is thus
  *
  * <blockquote><pre>
  * Pattern p = Pattern.{@link #compile compile}("a*b");
  * Matcher m = p.{@link #matcher matcher}("aaaaab");
  * boolean b = m.{@link Matcher#matches matches}();</pre></blockquote>
  *
- * <p> A {@link #matches matches} method is defined by this class as a
+ * A {@link #matches matches} method is defined by this class as a
  * convenience for when a regular expression is used just once.  This method
  * compiles an expression and matches an input sequence against it in a single
  * invocation.  The statement
@@ -68,7 +68,7 @@ import java.util.stream.StreamSupport;
  * is equivalent to the three statements above, though for repeated matches it
  * is less efficient since it does not allow the compiled pattern to be reused.
  *
- * <p> Instances of this class are immutable and are safe for use by multiple
+ * Instances of this class are immutable and are safe for use by multiple
  * concurrent threads.  Instances of the {@link Matcher} class are not safe for
  * such use.
  *
@@ -92,14 +92,14 @@ import java.util.stream.StreamSupport;
  *     <td headers="matches">The backslash character</td></tr>
  * <tr><td valign="top" headers="construct characters"><tt>\0</tt><i>n</i></td>
  *     <td headers="matches">The character with octal value <tt>0</tt><i>n</i>
- *         (0&nbsp;<tt>&lt;=</tt>&nbsp;<i>n</i>&nbsp;<tt>&lt;=</tt>&nbsp;7)</td></tr>
+ *         (0&nbsp;<tt><=</tt>&nbsp;<i>n</i>&nbsp;<tt><=</tt>&nbsp;7)</td></tr>
  * <tr><td valign="top" headers="construct characters"><tt>\0</tt><i>nn</i></td>
  *     <td headers="matches">The character with octal value <tt>0</tt><i>nn</i>
- *         (0&nbsp;<tt>&lt;=</tt>&nbsp;<i>n</i>&nbsp;<tt>&lt;=</tt>&nbsp;7)</td></tr>
+ *         (0&nbsp;<tt><=</tt>&nbsp;<i>n</i>&nbsp;<tt><=</tt>&nbsp;7)</td></tr>
  * <tr><td valign="top" headers="construct characters"><tt>\0</tt><i>mnn</i></td>
  *     <td headers="matches">The character with octal value <tt>0</tt><i>mnn</i>
- *         (0&nbsp;<tt>&lt;=</tt>&nbsp;<i>m</i>&nbsp;<tt>&lt;=</tt>&nbsp;3,
- *         0&nbsp;<tt>&lt;=</tt>&nbsp;<i>n</i>&nbsp;<tt>&lt;=</tt>&nbsp;7)</td></tr>
+ *         (0&nbsp;<tt><=</tt>&nbsp;<i>m</i>&nbsp;<tt><=</tt>&nbsp;3,
+ *         0&nbsp;<tt><=</tt>&nbsp;<i>n</i>&nbsp;<tt><=</tt>&nbsp;7)</td></tr>
  * <tr><td valign="top" headers="construct characters"><tt>\x</tt><i>hh</i></td>
  *     <td headers="matches">The character with hexadecimal&nbsp;value&nbsp;<tt>0x</tt><i>hh</i></td></tr>
  * <tr><td valign="top" headers="construct characters"><tt>&#92;u</tt><i>hhhh</i></td>
@@ -107,7 +107,7 @@ import java.util.stream.StreamSupport;
  * <tr><td valign="top" headers="construct characters"><tt>&#92;x</tt><i>{h...h}</i></td>
  *     <td headers="matches">The character with hexadecimal&nbsp;value&nbsp;<tt>0x</tt><i>h...h</i>
  *         ({@link java.lang.Character#MIN_CODE_POINT Character.MIN_CODE_POINT}
- *         &nbsp;&lt;=&nbsp;<tt>0x</tt><i>h...h</i>&nbsp;&lt;=&nbsp;
+ *         &nbsp;<=&nbsp;<tt>0x</tt><i>h...h</i>&nbsp;<=&nbsp;
  *          {@link java.lang.Character#MAX_CODE_POINT Character.MAX_CODE_POINT})</td></tr>
  * <tr><td valign="top" headers="matches"><tt>\t</tt></td>
  *     <td headers="matches">The tab character (<tt>'&#92;u0009'</tt>)</td></tr>
@@ -327,7 +327,7 @@ import java.util.stream.StreamSupport;
  *     <td valign="bottom" headers="matches">Whatever the <i>n</i><sup>th</sup>
  *     <a href="#cg">capturing group</a> matched</td></tr>
  *
- * <tr><td valign="bottom" headers="construct backref"><tt>\</tt><i>k</i>&lt;<i>name</i>&gt;</td>
+ * <tr><td valign="bottom" headers="construct backref"><tt>\</tt><i>k</i><<i>name</i>></td>
  *     <td valign="bottom" headers="matches">Whatever the
  *     <a href="#groupname">named-capturing group</a> "name" matched</td></tr>
  *
@@ -345,7 +345,7 @@ import java.util.stream.StreamSupport;
  * <tr><th>&nbsp;</th></tr>
  * <tr align="left"><th colspan="2" id="special">Special constructs (named-capturing and non-capturing)</th></tr>
  *
- * <tr><td valign="top" headers="construct special"><tt>(?&lt;<a href="#groupname">name</a>&gt;</tt><i>X</i><tt>)</tt></td>
+ * <tr><td valign="top" headers="construct special"><tt>(?<<a href="#groupname">name</a>></tt><i>X</i><tt>)</tt></td>
  *     <td headers="matches"><i>X</i>, as a named-capturing group</td></tr>
  * <tr><td valign="top" headers="construct special"><tt>(?:</tt><i>X</i><tt>)</tt></td>
  *     <td headers="matches"><i>X</i>, as a non-capturing group</td></tr>
@@ -363,11 +363,11 @@ import java.util.stream.StreamSupport;
  *     <td headers="matches"><i>X</i>, via zero-width positive lookahead</td></tr>
  * <tr><td valign="top" headers="construct special"><tt>(?!</tt><i>X</i><tt>)</tt></td>
  *     <td headers="matches"><i>X</i>, via zero-width negative lookahead</td></tr>
- * <tr><td valign="top" headers="construct special"><tt>(?&lt;=</tt><i>X</i><tt>)</tt></td>
+ * <tr><td valign="top" headers="construct special"><tt>(?<=</tt><i>X</i><tt>)</tt></td>
  *     <td headers="matches"><i>X</i>, via zero-width positive lookbehind</td></tr>
- * <tr><td valign="top" headers="construct special"><tt>(?&lt;!</tt><i>X</i><tt>)</tt></td>
+ * <tr><td valign="top" headers="construct special"><tt>(?<!</tt><i>X</i><tt>)</tt></td>
  *     <td headers="matches"><i>X</i>, via zero-width negative lookbehind</td></tr>
- * <tr><td valign="top" headers="construct special"><tt>(?&gt;</tt><i>X</i><tt>)</tt></td>
+ * <tr><td valign="top" headers="construct special"><tt>(?></tt><i>X</i><tt>)</tt></td>
  *     <td headers="matches"><i>X</i>, as an independent, non-capturing group</td></tr>
  *
  * </table>
@@ -377,19 +377,19 @@ import java.util.stream.StreamSupport;
  *
  * <h3><a name="bs">Backslashes, escapes, and quoting</a></h3>
  *
- * <p> The backslash character (<tt>'\'</tt>) serves to introduce escaped
+ * The backslash character (<tt>'\'</tt>) serves to introduce escaped
  * constructs, as defined in the table above, as well as to quote characters
  * that otherwise would be interpreted as unescaped constructs.  Thus the
  * expression <tt>\\</tt> matches a single backslash and <tt>\{</tt> matches a
  * left brace.
  *
- * <p> It is an error to use a backslash prior to any alphabetic character that
+ * It is an error to use a backslash prior to any alphabetic character that
  * does not denote an escaped construct; these are reserved for future
  * extensions to the regular-expression language.  A backslash may be used
  * prior to a non-alphabetic character regardless of whether that character is
  * part of an unescaped construct.
  *
- * <p> Backslashes within string literals in Java source code are interpreted
+ * Backslashes within string literals in Java source code are interpreted
  * as required by
  * <cite>The Java&trade; Language Specification</cite>
  * as either Unicode escapes (section 3.3) or other character escapes (section 3.10.6)
@@ -405,7 +405,7 @@ import java.util.stream.StreamSupport;
  *
  * <h3><a name="cc">Character Classes</a></h3>
  *
- *    <p> Character classes may appear within other character classes, and
+ *    Character classes may appear within other character classes, and
  *    may be composed by the union operator (implicit) and the intersection
  *    operator (<tt>&amp;&amp;</tt>).
  *    The union operator denotes a class that contains every character that is
@@ -413,7 +413,7 @@ import java.util.stream.StreamSupport;
  *    denotes a class that contains every character that is in both of its
  *    operand classes.
  *
- *    <p> The precedence of character-class operators is as follows, from
+ *    The precedence of character-class operators is as follows, from
  *    highest to lowest:
  *
  *    <blockquote><table border="0" cellpadding="1" cellspacing="0"
@@ -435,7 +435,7 @@ import java.util.stream.StreamSupport;
  *        <td>{@code [a-z&&[aeiou]]}</td></tr>
  *    </table></blockquote>
  *
- *    <p> Note that a different set of metacharacters are in effect inside
+ *    Note that a different set of metacharacters are in effect inside
  *    a character class than outside a character class. For instance, the
  *    regular expression <tt>.</tt> loses its special meaning inside a
  *    character class, while the expression <tt>-</tt> becomes a range
@@ -443,7 +443,7 @@ import java.util.stream.StreamSupport;
  *
  * <h3><a name="lt">Line terminators</a></h3>
  *
- * <p> A <i>line terminator</i> is a one- or two-character sequence that marks
+ * A <i>line terminator</i> is a one- or two-character sequence that marks
  * the end of a line of the input character sequence.  The following are
  * recognized as line terminators:
  *
@@ -466,10 +466,10 @@ import java.util.stream.StreamSupport;
  * <p>If {@link #UNIX_LINES} mode is activated, then the only line terminators
  * recognized are newline characters.
  *
- * <p> The regular expression <tt>.</tt> matches any character except a line
+ * The regular expression <tt>.</tt> matches any character except a line
  * terminator unless the {@link #DOTALL} flag is specified.
  *
- * <p> By default, the regular expressions <tt>^</tt> and <tt>$</tt> ignore
+ * By default, the regular expressions <tt>^</tt> and <tt>$</tt> ignore
  * line terminators and only match at the beginning and the end, respectively,
  * of the entire input sequence. If {@link #MULTILINE} mode is activated then
  * <tt>^</tt> matches at the beginning of input and after any line terminator
@@ -479,7 +479,7 @@ import java.util.stream.StreamSupport;
  * <h3><a name="cg">Groups and capturing</a></h3>
  *
  * <h4><a name="gnumber">Group number</a></h4>
- * <p> Capturing groups are numbered by counting their opening parentheses from
+ * Capturing groups are numbered by counting their opening parentheses from
  * left to right.  In the expression <tt>((A)(B(C)))</tt>, for example, there
  * are four such groups: </p>
  *
@@ -494,9 +494,9 @@ import java.util.stream.StreamSupport;
  *     <td><tt>(C)</tt></td></tr>
  * </table></blockquote>
  *
- * <p> Group zero always stands for the entire expression.
+ * Group zero always stands for the entire expression.
  *
- * <p> Capturing groups are so named because, during a match, each subsequence
+ * Capturing groups are so named because, during a match, each subsequence
  * of the input sequence that matches such a group is saved.  The captured
  * subsequence may be used later in the expression, via a back reference, and
  * may also be retrieved from the matcher once the match operation is complete.
@@ -515,10 +515,10 @@ import java.util.stream.StreamSupport;
  *        (<tt>'&#92;u0030'</tt>&nbsp;through&nbsp;<tt>'&#92;u0039'</tt>),
  * </ul>
  *
- * <p> A <tt>named-capturing group</tt> is still numbered as described in
+ * A <tt>named-capturing group</tt> is still numbered as described in
  * <a href="#gnumber">Group number</a>.
  *
- * <p> The captured input associated with a group is always the subsequence
+ * The captured input associated with a group is always the subsequence
  * that the group most recently matched.  If a group is evaluated a second time
  * because of quantification then its previously-captured value, if any, will
  * be retained if the second evaluation fails.  Matching the string
@@ -526,13 +526,13 @@ import java.util.stream.StreamSupport;
  * group two set to <tt>"b"</tt>.  All captured input is discarded at the
  * beginning of each match.
  *
- * <p> Groups beginning with <tt>(?</tt> are either pure, <i>non-capturing</i> groups
+ * Groups beginning with <tt>(?</tt> are either pure, <i>non-capturing</i> groups
  * that do not capture text and do not count towards the group total, or
  * <i>named-capturing</i> group.
  *
  * <h3> Unicode support </h3>
  *
- * <p> This class is in conformance with Level 1 of <a
+ * This class is in conformance with Level 1 of <a
  * href="http://www.unicode.org/reports/tr18/"><i>Unicode Technical
  * Standard #18: Unicode Regular Expression</i></a>, plus RL2.1
  * Canonical Equivalents.
@@ -676,54 +676,54 @@ import java.util.stream.StreamSupport;
  * <p>The <code>Pattern</code> engine performs traditional NFA-based matching
  * with ordered alternation as occurs in Perl 5.
  *
- * <p> Perl constructs not supported by this class: </p>
+ * Perl constructs not supported by this class: </p>
  *
  * <ul>
- *    <li><p> Predefined character classes (Unicode character)
+ *    <li>Predefined character classes (Unicode character)
  *    <p><tt>\X&nbsp;&nbsp;&nbsp;&nbsp;</tt>Match Unicode
  *    <a href="http://www.unicode.org/reports/tr18/#Default_Grapheme_Clusters">
  *    <i>extended grapheme cluster</i></a>
  *    </p></li>
  *
- *    <li><p> The backreference constructs, <tt>\g{</tt><i>n</i><tt>}</tt> for
+ *    <li>The backreference constructs, <tt>\g{</tt><i>n</i><tt>}</tt> for
  *    the <i>n</i><sup>th</sup><a href="#cg">capturing group</a> and
  *    <tt>\g{</tt><i>name</i><tt>}</tt> for
  *    <a href="#groupname">named-capturing group</a>.
  *    </p></li>
  *
- *    <li><p> The named character construct, <tt>\N{</tt><i>name</i><tt>}</tt>
+ *    <li>The named character construct, <tt>\N{</tt><i>name</i><tt>}</tt>
  *    for a Unicode character by its name.
  *    </p></li>
  *
- *    <li><p> The conditional constructs
+ *    <li>The conditional constructs
  *    <tt>(?(</tt><i>condition</i><tt>)</tt><i>X</i><tt>)</tt> and
  *    <tt>(?(</tt><i>condition</i><tt>)</tt><i>X</i><tt>|</tt><i>Y</i><tt>)</tt>,
  *    </p></li>
  *
- *    <li><p> The embedded code constructs <tt>(?{</tt><i>code</i><tt>})</tt>
+ *    <li>The embedded code constructs <tt>(?{</tt><i>code</i><tt>})</tt>
  *    and <tt>(??{</tt><i>code</i><tt>})</tt>,</p></li>
  *
- *    <li><p> The embedded comment syntax <tt>(?#comment)</tt>, and </p></li>
+ *    <li>The embedded comment syntax <tt>(?#comment)</tt>, and </p></li>
  *
- *    <li><p> The preprocessing operations <tt>\l</tt> <tt>&#92;u</tt>,
+ *    <li>The preprocessing operations <tt>\l</tt> <tt>&#92;u</tt>,
  *    <tt>\L</tt>, and <tt>\U</tt>.  </p></li>
  *
  * </ul>
  *
- * <p> Constructs supported by this class but not by Perl: </p>
+ * Constructs supported by this class but not by Perl: </p>
  *
  * <ul>
  *
- *    <li><p> Character-class union and intersection as described
+ *    <li>Character-class union and intersection as described
  *    <a href="#cc">above</a>.</p></li>
  *
  * </ul>
  *
- * <p> Notable differences from Perl: </p>
+ * Notable differences from Perl: </p>
  *
  * <ul>
  *
- *    <li><p> In Perl, <tt>\1</tt> through <tt>\9</tt> are always interpreted
+ *    <li>In Perl, <tt>\1</tt> through <tt>\9</tt> are always interpreted
  *    as back references; a backslash-escaped number greater than <tt>9</tt> is
  *    treated as a back reference if at least that many subexpressions exist,
  *    otherwise it is interpreted, if possible, as an octal escape.  In this
@@ -735,13 +735,13 @@ import java.util.stream.StreamSupport;
  *    smaller or equal to the existing number of groups or it is one digit.
  *    </p></li>
  *
- *    <li><p> Perl uses the <tt>g</tt> flag to request a match that resumes
+ *    <li>Perl uses the <tt>g</tt> flag to request a match that resumes
  *    where the last match left off.  This functionality is provided implicitly
  *    by the {@link Matcher} class: Repeated invocations of the {@link
  *    Matcher#find find} method will resume where the last match left off,
  *    unless the matcher is reset.  </p></li>
  *
- *    <li><p> In Perl, embedded flags at the top level of an expression affect
+ *    <li>In Perl, embedded flags at the top level of an expression affect
  *    the whole expression.  In this class, embedded flags always take effect
  *    at the point at which they appear, whether they are at the top level or
  *    within a group; in the latter case, flags are restored at the end of the
@@ -750,7 +750,7 @@ import java.util.stream.StreamSupport;
  * </ul>
  *
  *
- * <p> For a more precise description of the behavior of regular expression
+ * For a more precise description of the behavior of regular expression
  * constructs, please see <a href="http://www.oreilly.com/catalog/regex3/">
  * <i>Mastering Regular Expressions, 3nd Edition</i>, Jeffrey E. F. Friedl,
  * O'Reilly and Associates, 2006.</a>
@@ -786,10 +786,10 @@ public final class Pattern
     /**
      * Enables Unix lines mode.
      *
-     * <p> In this mode, only the <tt>'\n'</tt> line terminator is recognized
+     * In this mode, only the <tt>'\n'</tt> line terminator is recognized
      * in the behavior of <tt>.</tt>, <tt>^</tt>, and <tt>$</tt>.
      *
-     * <p> Unix lines mode can also be enabled via the embedded flag
+     * Unix lines mode can also be enabled via the embedded flag
      * expression&nbsp;<tt>(?d)</tt>.
      */
     public static final int UNIX_LINES = 0x01;
@@ -797,25 +797,25 @@ public final class Pattern
     /**
      * Enables case-insensitive matching.
      *
-     * <p> By default, case-insensitive matching assumes that only characters
+     * By default, case-insensitive matching assumes that only characters
      * in the US-ASCII charset are being matched.  Unicode-aware
      * case-insensitive matching can be enabled by specifying the {@link
      * #UNICODE_CASE} flag in conjunction with this flag.
      *
-     * <p> Case-insensitive matching can also be enabled via the embedded flag
+     * Case-insensitive matching can also be enabled via the embedded flag
      * expression&nbsp;<tt>(?i)</tt>.
      *
-     * <p> Specifying this flag may impose a slight performance penalty.  </p>
+     * Specifying this flag may impose a slight performance penalty.  </p>
      */
     public static final int CASE_INSENSITIVE = 0x02;
 
     /**
      * Permits whitespace and comments in pattern.
      *
-     * <p> In this mode, whitespace is ignored, and embedded comments starting
+     * In this mode, whitespace is ignored, and embedded comments starting
      * with <tt>#</tt> are ignored until the end of a line.
      *
-     * <p> Comments mode can also be enabled via the embedded flag
+     * Comments mode can also be enabled via the embedded flag
      * expression&nbsp;<tt>(?x)</tt>.
      */
     public static final int COMMENTS = 0x04;
@@ -823,12 +823,12 @@ public final class Pattern
     /**
      * Enables multiline mode.
      *
-     * <p> In multiline mode the expressions <tt>^</tt> and <tt>$</tt> match
+     * In multiline mode the expressions <tt>^</tt> and <tt>$</tt> match
      * just after or just before, respectively, a line terminator or the end of
      * the input sequence.  By default these expressions only match at the
      * beginning and the end of the entire input sequence.
      *
-     * <p> Multiline mode can also be enabled via the embedded flag
+     * Multiline mode can also be enabled via the embedded flag
      * expression&nbsp;<tt>(?m)</tt>.  </p>
      */
     public static final int MULTILINE = 0x08;
@@ -836,7 +836,7 @@ public final class Pattern
     /**
      * Enables literal parsing of the pattern.
      *
-     * <p> When this flag is specified then the input string that specifies
+     * When this flag is specified then the input string that specifies
      * the pattern is treated as a sequence of literal characters.
      * Metacharacters or escape sequences in the input sequence will be
      * given no special meaning.
@@ -845,7 +845,7 @@ public final class Pattern
      * matching when used in conjunction with this flag. The other flags
      * become superfluous.
      *
-     * <p> There is no embedded flag character for enabling literal parsing.
+     * There is no embedded flag character for enabling literal parsing.
      * @since 1.5
      */
     public static final int LITERAL = 0x10;
@@ -853,11 +853,11 @@ public final class Pattern
     /**
      * Enables dotall mode.
      *
-     * <p> In dotall mode, the expression <tt>.</tt> matches any character,
+     * In dotall mode, the expression <tt>.</tt> matches any character,
      * including a line terminator.  By default this expression does not match
      * line terminators.
      *
-     * <p> Dotall mode can also be enabled via the embedded flag
+     * Dotall mode can also be enabled via the embedded flag
      * expression&nbsp;<tt>(?s)</tt>.  (The <tt>s</tt> is a mnemonic for
      * "single-line" mode, which is what this is called in Perl.)  </p>
      */
@@ -866,32 +866,32 @@ public final class Pattern
     /**
      * Enables Unicode-aware case folding.
      *
-     * <p> When this flag is specified then case-insensitive matching, when
+     * When this flag is specified then case-insensitive matching, when
      * enabled by the {@link #CASE_INSENSITIVE} flag, is done in a manner
      * consistent with the Unicode Standard.  By default, case-insensitive
      * matching assumes that only characters in the US-ASCII charset are being
      * matched.
      *
-     * <p> Unicode-aware case folding can also be enabled via the embedded flag
+     * Unicode-aware case folding can also be enabled via the embedded flag
      * expression&nbsp;<tt>(?u)</tt>.
      *
-     * <p> Specifying this flag may impose a performance penalty.  </p>
+     * Specifying this flag may impose a performance penalty.  </p>
      */
     public static final int UNICODE_CASE = 0x40;
 
     /**
      * Enables canonical equivalence.
      *
-     * <p> When this flag is specified then two characters will be considered
+     * When this flag is specified then two characters will be considered
      * to match if, and only if, their full canonical decompositions match.
      * The expression <tt>"a&#92;u030A"</tt>, for example, will match the
      * string <tt>"&#92;u00E5"</tt> when this flag is specified.  By default,
      * matching does not take canonical equivalence into account.
      *
-     * <p> There is no embedded flag character for enabling canonical
+     * There is no embedded flag character for enabling canonical
      * equivalence.
      *
-     * <p> Specifying this flag may impose a performance penalty.  </p>
+     * Specifying this flag may impose a performance penalty.  </p>
      */
     public static final int CANON_EQ = 0x80;
 
@@ -899,7 +899,7 @@ public final class Pattern
      * Enables the Unicode version of <i>Predefined character classes</i> and
      * <i>POSIX character classes</i>.
      *
-     * <p> When this flag is specified then the (US-ASCII only)
+     * When this flag is specified then the (US-ASCII only)
      * <i>Predefined character classes</i> and <i>POSIX character classes</i>
      * are in conformance with
      * <a href="http://www.unicode.org/reports/tr18/"><i>Unicode Technical
@@ -1107,7 +1107,7 @@ public final class Pattern
      * Compiles the given regular expression and attempts to match the given
      * input against it.
      *
-     * <p> An invocation of this convenience method of the form
+     * An invocation of this convenience method of the form
      *
      * <blockquote><pre>
      * Pattern.matches(regex, input);</pre></blockquote>
@@ -1117,7 +1117,7 @@ public final class Pattern
      * <blockquote><pre>
      * Pattern.compile(regex).matcher(input).matches()</pre></blockquote>
      *
-     * <p> If a pattern is to be used multiple times, compiling it once and reusing
+     * If a pattern is to be used multiple times, compiling it once and reusing
      * it will be more efficient than invoking this method each time.  </p>
      *
      * @param  regex
@@ -1138,7 +1138,7 @@ public final class Pattern
     /**
      * Splits the given input sequence around matches of this pattern.
      *
-     * <p> The array returned by this method contains each substring of the
+     * The array returned by this method contains each substring of the
      * input sequence that is terminated by another subsequence that matches
      * this pattern or is terminated by the end of the input sequence.  The
      * substrings in the array are in the order in which they occur in the
@@ -1146,12 +1146,12 @@ public final class Pattern
      * the resulting array has just one element, namely the input sequence in
      * string form.
      *
-     * <p> When there is a positive-width match at the beginning of the input
+     * When there is a positive-width match at the beginning of the input
      * sequence then an empty leading substring is included at the beginning
      * of the resulting array. A zero-width match at the beginning however
      * never produces such empty leading substring.
      *
-     * <p> The <tt>limit</tt> parameter controls the number of times the
+     * The <tt>limit</tt> parameter controls the number of times the
      * pattern is applied and therefore affects the length of the resulting
      * array.  If the limit <i>n</i> is greater than zero then the pattern
      * will be applied at most <i>n</i>&nbsp;-&nbsp;1 times, the array's
@@ -1162,7 +1162,7 @@ public final class Pattern
      * the pattern will be applied as many times as possible, the array can
      * have any length, and trailing empty strings will be discarded.
      *
-     * <p> The input <tt>"boo:and:foo"</tt>, for example, yields the following
+     * The input <tt>"boo:and:foo"</tt>, for example, yields the following
      * results with these parameters:
      *
      * <blockquote><table cellpadding=1 cellspacing=0
@@ -1244,12 +1244,12 @@ public final class Pattern
     /**
      * Splits the given input sequence around matches of this pattern.
      *
-     * <p> This method works as if by invoking the two-argument {@link
+     * This method works as if by invoking the two-argument {@link
      * #split(java.lang.CharSequence, int) split} method with the given input
      * sequence and a limit argument of zero.  Trailing empty strings are
      * therefore not included in the resulting array. </p>
      *
-     * <p> The input <tt>"boo:and:foo"</tt>, for example, yields the following
+     * The input <tt>"boo:and:foo"</tt>, for example, yields the following
      * results with these expressions:
      *
      * <blockquote><table cellpadding=1 cellspacing=0
@@ -5760,23 +5760,23 @@ NEXT:       while (i <= last) {
      * Creates a stream from the given input sequence around matches of this
      * pattern.
      *
-     * <p> The stream returned by this method contains each substring of the
+     * The stream returned by this method contains each substring of the
      * input sequence that is terminated by another subsequence that matches
      * this pattern or is terminated by the end of the input sequence.  The
      * substrings in the stream are in the order in which they occur in the
      * input. Trailing empty strings will be discarded and not encountered in
      * the stream.
      *
-     * <p> If this pattern does not match any subsequence of the input then
+     * If this pattern does not match any subsequence of the input then
      * the resulting stream has just one element, namely the input sequence in
      * string form.
      *
-     * <p> When there is a positive-width match at the beginning of the input
+     * When there is a positive-width match at the beginning of the input
      * sequence then an empty leading substring is included at the beginning
      * of the stream. A zero-width match at the beginning however never produces
      * such empty leading substring.
      *
-     * <p> If the input sequence is mutable, it must remain constant during the
+     * If the input sequence is mutable, it must remain constant during the
      * execution of the terminal stream operation.  Otherwise, the result of the
      * terminal stream operation is undefined.
      *

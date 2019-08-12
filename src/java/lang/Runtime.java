@@ -67,7 +67,7 @@ public class Runtime {
      * serves as a status code; by convention, a nonzero status code indicates
      * abnormal termination.
      *
-     * <p> The virtual machine's shutdown sequence consists of two phases.  In
+     * The virtual machine's shutdown sequence consists of two phases.  In
      * the first phase all registered {@link #addShutdownHook shutdown hooks},
      * if any, are started in some unspecified order and allowed to run
      * concurrently until they finish.  In the second phase all uninvoked
@@ -75,14 +75,14 @@ public class Runtime {
      * has been enabled.  Once this is done the virtual machine {@link #halt
      * halts}.
      *
-     * <p> If this method is invoked after the virtual machine has begun its
+     * If this method is invoked after the virtual machine has begun its
      * shutdown sequence then if shutdown hooks are being run this method will
      * block indefinitely.  If shutdown hooks have already been run and on-exit
      * finalization has been enabled then this method halts the virtual machine
      * with the given status code if the status is nonzero; otherwise, it
      * blocks indefinitely.
      *
-     * <p> The <tt>{@link System#exit(int) System.exit}</tt> method is the
+     * The <tt>{@link System#exit(int) System.exit}</tt> method is the
      * conventional and convenient means of invoking this method. <p>
      *
      * @param  status
@@ -112,7 +112,7 @@ public class Runtime {
     /**
      * Registers a new virtual-machine shutdown hook.
      *
-     * <p> The Java virtual machine <i>shuts down</i> in response to two kinds
+     * The Java virtual machine <i>shuts down</i> in response to two kinds
      * of events:
      *
      *   <ul>
@@ -127,7 +127,7 @@ public class Runtime {
      *
      *   </ul>
      *
-     * <p> A <i>shutdown hook</i> is simply an initialized but unstarted
+     * A <i>shutdown hook</i> is simply an initialized but unstarted
      * thread.  When the virtual machine begins its shutdown sequence it will
      * start all registered shutdown hooks in some unspecified order and let
      * them run concurrently.  When all the hooks have finished it will then
@@ -137,16 +137,16 @@ public class Runtime {
      * if shutdown was initiated by invoking the <tt>{@link #exit exit}</tt>
      * method.
      *
-     * <p> Once the shutdown sequence has begun it can be stopped only by
+     * Once the shutdown sequence has begun it can be stopped only by
      * invoking the <tt>{@link #halt halt}</tt> method, which forcibly
      * terminates the virtual machine.
      *
-     * <p> Once the shutdown sequence has begun it is impossible to register a
+     * Once the shutdown sequence has begun it is impossible to register a
      * new shutdown hook or de-register a previously-registered hook.
      * Attempting either of these operations will cause an
      * <tt>{@link IllegalStateException}</tt> to be thrown.
      *
-     * <p> Shutdown hooks run at a delicate time in the life cycle of a virtual
+     * Shutdown hooks run at a delicate time in the life cycle of a virtual
      * machine and should therefore be coded defensively.  They should, in
      * particular, be written to be thread-safe and to avoid deadlocks insofar
      * as possible.  They should also not rely blindly upon services that may
@@ -155,7 +155,7 @@ public class Runtime {
      * services such as the AWT event-dispatch thread, for example, may lead to
      * deadlocks.
      *
-     * <p> Shutdown hooks should also finish their work quickly.  When a
+     * Shutdown hooks should also finish their work quickly.  When a
      * program invokes <tt>{@link #exit exit}</tt> the expectation is
      * that the virtual machine will promptly shut down and exit.  When the
      * virtual machine is terminated due to user logoff or system shutdown the
@@ -164,7 +164,7 @@ public class Runtime {
      * user interaction or to perform a long-running computation in a shutdown
      * hook.
      *
-     * <p> Uncaught exceptions are handled in shutdown hooks just as in any
+     * Uncaught exceptions are handled in shutdown hooks just as in any
      * other thread, by invoking the <tt>{@link ThreadGroup#uncaughtException
      * uncaughtException}</tt> method of the thread's <tt>{@link
      * ThreadGroup}</tt> object.  The default implementation of this method
@@ -172,7 +172,7 @@ public class Runtime {
      * terminates the thread; it does not cause the virtual machine to exit or
      * halt.
      *
-     * <p> In rare circumstances the virtual machine may <i>abort</i>, that is,
+     * In rare circumstances the virtual machine may <i>abort</i>, that is,
      * stop running without shutting down cleanly.  This occurs when the
      * virtual machine is terminated externally, for example with the
      * <tt>SIGKILL</tt> signal on Unix or the <tt>TerminateProcess</tt> call on
@@ -243,7 +243,7 @@ public class Runtime {
      * Forcibly terminates the currently running Java virtual machine.  This
      * method never returns normally.
      *
-     * <p> This method should be used with extreme caution.  Unlike the
+     * This method should be used with extreme caution.  Unlike the
      * <tt>{@link #exit exit}</tt> method, this method does not cause shutdown
      * hooks to be started and does not run uninvoked finalizers if
      * finalization-on-exit has been enabled.  If the shutdown sequence has
@@ -623,7 +623,7 @@ public class Runtime {
     /**
      * Returns the number of processors available to the Java virtual machine.
      *
-     * <p> This value may change during a particular invocation of the virtual
+     * This value may change during a particular invocation of the virtual
      * machine.  Applications that are sensitive to the number of available
      * processors should therefore occasionally poll this property and adjust
      * their resource usage appropriately. </p>

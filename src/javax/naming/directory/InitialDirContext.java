@@ -84,7 +84,7 @@ public class InitialDirContext extends InitialContext implements DirContext {
      * Environment properties are discussed in the
      * <tt>javax.naming.InitialContext</tt> class description.
      *
-     * <p> This constructor will not modify <tt>environment</tt>
+     * This constructor will not modify <tt>environment</tt>
      * or save a reference to it, but may save a clone.
      * Caller should not modify mutable keys and values in
      * <tt>environment</tt> after it has been passed to the constructor.

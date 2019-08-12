@@ -200,7 +200,7 @@ public class HierarchyEvent extends AWTEvent {
     /**
      * Constructs an <code>HierarchyEvent</code> object to identify
      * a change in the <code>Component</code> hierarchy.
-     * <p> This method throws an
+     * This method throws an
      * <code>IllegalArgumentException</code> if <code>source</code>
      * is <code>null</code>.
      *

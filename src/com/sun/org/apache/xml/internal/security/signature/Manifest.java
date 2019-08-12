@@ -50,8 +50,8 @@ import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
 
 /**
- * Handles <code>&lt;ds:Manifest&gt;</code> elements.
- * <p> This element holds the <code>Reference</code> elements</p>
+ * Handles <code><ds:Manifest></code> elements.
+ * This element holds the <code>Reference</code> elements</p>
  */
 public class Manifest extends SignatureElementProxy {
 

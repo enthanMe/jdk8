@@ -89,7 +89,7 @@ public interface StateFactory {
  * <tt>DirStateFactory</tt>, then <tt>DirectoryManager</tt>
  * invokes <tt>DirStateFactory.getStateToBind()</tt>; otherwise
  * it invokes <tt>StateFactory.getStateToBind()</tt>.
- *<p> When an exception
+ *When an exception
  * is thrown by a factory, the exception is passed on to the caller
  * of <tt>NamingManager.getStateToBind()</tt> and
  * <tt>DirectoryManager.getStateToBind()</tt>.

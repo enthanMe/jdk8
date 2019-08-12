@@ -60,7 +60,7 @@ package com.sun.org.apache.bcel.internal.generic;
 
 /**
  * DALOAD - Load double from array
- * <PRE>Stack: ..., arrayref, index -&gt; ..., result.word1, result.word2</PRE>
+ * <PRE>Stack: ..., arrayref, index -> ..., result.word1, result.word2</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

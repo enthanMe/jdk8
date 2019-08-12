@@ -42,7 +42,7 @@ import java.awt.Point;
  * Refer to the class comment for Raster for descriptions of how
  * a Raster stores pixels.
  *
- * <p> The constructors of this class are protected.  To instantiate
+ * The constructors of this class are protected.  To instantiate
  * a WritableRaster, use one of the createWritableRaster factory methods
  * in the Raster class.
  */
@@ -165,13 +165,13 @@ public class WritableRaster extends Raster {
      * possess a reference to the current WritableRaster, accessible
      * through its getParent() and getWritableParent() methods.
      *
-     * <p> The parentX, parentY, width and height parameters form a
+     * The parentX, parentY, width and height parameters form a
      * Rectangle in this WritableRaster's coordinate space, indicating
      * the area of pixels to be shared.  An error will be thrown if
      * this Rectangle is not contained with the bounds of the current
      * WritableRaster.
      *
-     * <p> The new WritableRaster may additionally be translated to a
+     * The new WritableRaster may additionally be translated to a
      * different coordinate system for the plane than that used by the current
      * WritableRaster.  The childMinX and childMinY parameters give
      * the new (x, y) coordinate of the upper-left pixel of the
@@ -179,13 +179,13 @@ public class WritableRaster extends Raster {
      * in the new WritableRaster will map to the same pixel as the
      * coordinate (parentX, parentY) in the current WritableRaster.
      *
-     * <p> The new WritableRaster may be defined to contain only a
+     * The new WritableRaster may be defined to contain only a
      * subset of the bands of the current WritableRaster, possibly
      * reordered, by means of the bandList parameter.  If bandList is
      * null, it is taken to include all of the bands of the current
      * WritableRaster in their current order.
      *
-     * <p> To create a new WritableRaster that contains a subregion of
+     * To create a new WritableRaster that contains a subregion of
      * the current WritableRaster, but shares its coordinate system
      * and bands, this method should be called with childMinX equal to
      * parentX, childMinY equal to parentY, and bandList equal to

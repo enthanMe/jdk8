@@ -82,7 +82,7 @@ import java.util.regex.PatternSyntaxException;
  * string concatenation and conversion, see Gosling, Joy, and Steele,
  * <i>The Java Language Specification</i>.
  *
- * <p> Unless otherwise noted, passing a <tt>null</tt> argument to a constructor
+ * Unless otherwise noted, passing a <tt>null</tt> argument to a constructor
  * or method in this class will cause a {@link NullPointerException} to be
  * thrown.
  *
@@ -284,11 +284,11 @@ public final class String
      * Allocates a new {@code String} constructed from a subarray of an array
      * of 8-bit integer values.
      *
-     * <p> The {@code offset} argument is the index of the first byte of the
+     * The {@code offset} argument is the index of the first byte of the
      * subarray, and the {@code count} argument specifies the length of the
      * subarray.
      *
-     * <p> Each {@code byte} in the subarray is converted to a {@code char} as
+     * Each {@code byte} in the subarray is converted to a {@code char} as
      * specified in the method above.
      *
      * @deprecated This method does not properly convert bytes into characters.
@@ -344,7 +344,7 @@ public final class String
      * <i>b</i> in the byte array such that:
      *
      * <blockquote><pre>
-     *     <b><i>c</i></b> == (char)(((hibyte &amp; 0xff) &lt;&lt; 8)
+     *     <b><i>c</i></b> == (char)(((hibyte &amp; 0xff) << 8)
      *                         | (<b><i>b</i></b> &amp; 0xff))
      * </pre></blockquote>
      *
@@ -391,7 +391,7 @@ public final class String
      * is a function of the charset, and hence may not be equal to the length
      * of the subarray.
      *
-     * <p> The behavior of this constructor when the given bytes are not valid
+     * The behavior of this constructor when the given bytes are not valid
      * in the given charset is unspecified.  The {@link
      * java.nio.charset.CharsetDecoder} class should be used when more control
      * over the decoding process is required.
@@ -432,7 +432,7 @@ public final class String
      * The length of the new {@code String} is a function of the charset, and
      * hence may not be equal to the length of the subarray.
      *
-     * <p> This method always replaces malformed-input and unmappable-character
+     * This method always replaces malformed-input and unmappable-character
      * sequences with this charset's default replacement string.  The {@link
      * java.nio.charset.CharsetDecoder} class should be used when more control
      * over the decoding process is required.
@@ -469,7 +469,7 @@ public final class String
      * length of the new {@code String} is a function of the charset, and hence
      * may not be equal to the length of the byte array.
      *
-     * <p> The behavior of this constructor when the given bytes are not valid
+     * The behavior of this constructor when the given bytes are not valid
      * in the given charset is unspecified.  The {@link
      * java.nio.charset.CharsetDecoder} class should be used when more control
      * over the decoding process is required.
@@ -497,7 +497,7 @@ public final class String
      * The length of the new {@code String} is a function of the charset, and
      * hence may not be equal to the length of the byte array.
      *
-     * <p> This method always replaces malformed-input and unmappable-character
+     * This method always replaces malformed-input and unmappable-character
      * sequences with this charset's default replacement string.  The {@link
      * java.nio.charset.CharsetDecoder} class should be used when more control
      * over the decoding process is required.
@@ -521,7 +521,7 @@ public final class String
      * {@code String} is a function of the charset, and hence may not be equal
      * to the length of the subarray.
      *
-     * <p> The behavior of this constructor when the given bytes are not valid
+     * The behavior of this constructor when the given bytes are not valid
      * in the default charset is unspecified.  The {@link
      * java.nio.charset.CharsetDecoder} class should be used when more control
      * over the decoding process is required.
@@ -552,7 +552,7 @@ public final class String
      * String} is a function of the charset, and hence may not be equal to the
      * length of the byte array.
      *
-     * <p> The behavior of this constructor when the given bytes are not valid
+     * The behavior of this constructor when the given bytes are not valid
      * in the default charset is unspecified.  The {@link
      * java.nio.charset.CharsetDecoder} class should be used when more control
      * over the decoding process is required.
@@ -587,7 +587,7 @@ public final class String
      * string builder are copied; subsequent modification of the string builder
      * does not affect the newly created string.
      *
-     * <p> This constructor is provided to ease migration to {@code
+     * This constructor is provided to ease migration to {@code
      * StringBuilder}. Obtaining a string from a string builder via the {@code
      * toString} method is likely to run faster and is generally preferred.
      *
@@ -666,7 +666,7 @@ public final class String
      * (Unicode code units) and ranges from {@code 0} to
      * {@link #length()}{@code  - 1}.
      *
-     * <p> If the {@code char} value specified at the given index
+     * If the {@code char} value specified at the given index
      * is in the high-surrogate range, the following index is less
      * than the length of this {@code String}, and the
      * {@code char} value at the following index is in the
@@ -695,7 +695,7 @@ public final class String
      * (Unicode code units) and ranges from {@code 1} to {@link
      * CharSequence#length() length}.
      *
-     * <p> If the {@code char} value at {@code (index - 1)}
+     * If the {@code char} value at {@code (index - 1)}
      * is in the low-surrogate range, {@code (index - 2)} is not
      * negative, and the {@code char} value at {@code (index -
      * 2)} is in the high-surrogate range, then the
@@ -832,7 +832,7 @@ public final class String
      * eight high-order bits of each character are not copied and do not
      * participate in the transfer in any way.
      *
-     * <p> The first character to be copied is at index {@code srcBegin}; the
+     * The first character to be copied is at index {@code srcBegin}; the
      * last character to be copied is at index {@code srcEnd-1}.  The total
      * number of characters to be copied is {@code srcEnd-srcBegin}. The
      * characters, converted to bytes, are copied into the subarray of {@code
@@ -896,7 +896,7 @@ public final class String
      * Encodes this {@code String} into a sequence of bytes using the named
      * charset, storing the result into a new byte array.
      *
-     * <p> The behavior of this method when this string cannot be encoded in
+     * The behavior of this method when this string cannot be encoded in
      * the given charset is unspecified.  The {@link
      * java.nio.charset.CharsetEncoder} class should be used when more control
      * over the encoding process is required.
@@ -923,7 +923,7 @@ public final class String
      * {@linkplain java.nio.charset.Charset charset}, storing the result into a
      * new byte array.
      *
-     * <p> This method always replaces malformed-input and unmappable-character
+     * This method always replaces malformed-input and unmappable-character
      * sequences with this charset's default replacement byte array.  The
      * {@link java.nio.charset.CharsetEncoder} class should be used when more
      * control over the encoding process is required.
@@ -945,7 +945,7 @@ public final class String
      * Encodes this {@code String} into a sequence of bytes using the
      * platform's default charset, storing the result into a new byte array.
      *
-     * <p> The behavior of this method when this string cannot be encoded in
+     * The behavior of this method when this string cannot be encoded in
      * the default charset is unspecified.  The {@link
      * java.nio.charset.CharsetEncoder} class should be used when more control
      * over the encoding process is required.
@@ -1080,7 +1080,7 @@ public final class String
      * are of the same length and corresponding characters in the two strings
      * are equal ignoring case.
      *
-     * <p> Two characters {@code c1} and {@code c2} are considered the same
+     * Two characters {@code c1} and {@code c2} are considered the same
      * ignoring case if at least one of the following is true:
      * <ul>
      *   <li> The two characters are the same (as compared by the
@@ -1128,7 +1128,7 @@ public final class String
      * or both. If they have different characters at one or more index
      * positions, let <i>k</i> be the smallest such index; then the string
      * whose character at position <i>k</i> has the smaller value, as
-     * determined by using the &lt; operator, lexicographically precedes the
+     * determined by using the < operator, lexicographically precedes the
      * other string. In this case, {@code compareTo} returns the
      * difference of the two character values at position {@code k} in
      * the two string -- that is, the value:
@@ -1514,12 +1514,12 @@ public final class String
      * of {@code ch} in the range from 0 to 0xFFFF (inclusive),
      * this is the smallest value <i>k</i> such that:
      * <blockquote><pre>
-     * (this.charAt(<i>k</i>) == ch) {@code &&} (<i>k</i> &gt;= fromIndex)
+     * (this.charAt(<i>k</i>) == ch) {@code &&} (<i>k</i> >= fromIndex)
      * </pre></blockquote>
      * is true. For other values of {@code ch}, it is the
      * smallest value <i>k</i> such that:
      * <blockquote><pre>
-     * (this.codePointAt(<i>k</i>) == ch) {@code &&} (<i>k</i> &gt;= fromIndex)
+     * (this.codePointAt(<i>k</i>) == ch) {@code &&} (<i>k</i> >= fromIndex)
      * </pre></blockquote>
      * is true. In either case, if no such character occurs in this
      * string at or after position {@code fromIndex}, then
@@ -1618,12 +1618,12 @@ public final class String
      * from 0 to 0xFFFF (inclusive), the index returned is the largest
      * value <i>k</i> such that:
      * <blockquote><pre>
-     * (this.charAt(<i>k</i>) == ch) {@code &&} (<i>k</i> &lt;= fromIndex)
+     * (this.charAt(<i>k</i>) == ch) {@code &&} (<i>k</i> <= fromIndex)
      * </pre></blockquote>
      * is true. For other values of {@code ch}, it is the
      * largest value <i>k</i> such that:
      * <blockquote><pre>
-     * (this.codePointAt(<i>k</i>) == ch) {@code &&} (<i>k</i> &lt;= fromIndex)
+     * (this.codePointAt(<i>k</i>) == ch) {@code &&} (<i>k</i> <= fromIndex)
      * </pre></blockquote>
      * is true. In either case, if no such character occurs in this
      * string at or before position {@code fromIndex}, then
@@ -1704,7 +1704,7 @@ public final class String
      *
      * <p>The returned index is the smallest value <i>k</i> for which:
      * <blockquote><pre>
-     * <i>k</i> &gt;= fromIndex {@code &&} this.startsWith(str, <i>k</i>)
+     * <i>k</i> >= fromIndex {@code &&} this.startsWith(str, <i>k</i>)
      * </pre></blockquote>
      * If no such value of <i>k</i> exists, then {@code -1} is returned.
      *
@@ -1973,7 +1973,7 @@ public final class String
     /**
      * Returns a character sequence that is a subsequence of this sequence.
      *
-     * <p> An invocation of this method of the form
+     * An invocation of this method of the form
      *
      * <blockquote><pre>
      * str.subSequence(begin,&nbsp;end)</pre></blockquote>
@@ -2094,7 +2094,7 @@ public final class String
      * Tells whether or not this string matches the given <a
      * href="../util/regex/Pattern.html#sum">regular expression</a>.
      *
-     * <p> An invocation of this method of the form
+     * An invocation of this method of the form
      * <i>str</i>{@code .matches(}<i>regex</i>{@code )} yields exactly the
      * same result as the expression
      *
@@ -2138,7 +2138,7 @@ public final class String
      * href="../util/regex/Pattern.html#sum">regular expression</a> with the
      * given replacement.
      *
-     * <p> An invocation of this method of the form
+     * An invocation of this method of the form
      * <i>str</i>{@code .replaceFirst(}<i>regex</i>{@code ,} <i>repl</i>{@code )}
      * yields exactly the same result as the expression
      *
@@ -2183,7 +2183,7 @@ public final class String
      * href="../util/regex/Pattern.html#sum">regular expression</a> with the
      * given replacement.
      *
-     * <p> An invocation of this method of the form
+     * An invocation of this method of the form
      * <i>str</i>{@code .replaceAll(}<i>regex</i>{@code ,} <i>repl</i>{@code )}
      * yields exactly the same result as the expression
      *
@@ -2244,19 +2244,19 @@ public final class String
      * Splits this string around matches of the given
      * <a href="../util/regex/Pattern.html#sum">regular expression</a>.
      *
-     * <p> The array returned by this method contains each substring of this
+     * The array returned by this method contains each substring of this
      * string that is terminated by another substring that matches the given
      * expression or is terminated by the end of the string.  The substrings in
      * the array are in the order in which they occur in this string.  If the
      * expression does not match any part of the input then the resulting array
      * has just one element, namely this string.
      *
-     * <p> When there is a positive-width match at the beginning of this
+     * When there is a positive-width match at the beginning of this
      * string then an empty leading substring is included at the beginning
      * of the resulting array. A zero-width match at the beginning however
      * never produces such empty leading substring.
      *
-     * <p> The {@code limit} parameter controls the number of times the
+     * The {@code limit} parameter controls the number of times the
      * pattern is applied and therefore affects the length of the resulting
      * array.  If the limit <i>n</i> is greater than zero then the pattern
      * will be applied at most <i>n</i>&nbsp;-&nbsp;1 times, the array's
@@ -2267,7 +2267,7 @@ public final class String
      * the pattern will be applied as many times as possible, the array can
      * have any length, and trailing empty strings will be discarded.
      *
-     * <p> The string {@code "boo:and:foo"}, for example, yields the
+     * The string {@code "boo:and:foo"}, for example, yields the
      * following results with these parameters:
      *
      * <blockquote><table cellpadding=1 cellspacing=0 summary="Split example showing regex, limit, and result">
@@ -2296,7 +2296,7 @@ public final class String
      *     <td>{@code { "b", "", ":and:f" }}</td></tr>
      * </table></blockquote>
      *
-     * <p> An invocation of this method of the form
+     * An invocation of this method of the form
      * <i>str.</i>{@code split(}<i>regex</i>{@code ,}&nbsp;<i>n</i>{@code )}
      * yields the same result as the expression
      *
@@ -2384,12 +2384,12 @@ public final class String
      * Splits this string around matches of the given <a
      * href="../util/regex/Pattern.html#sum">regular expression</a>.
      *
-     * <p> This method works as if by invoking the two-argument {@link
+     * This method works as if by invoking the two-argument {@link
      * #split(String, int) split} method with the given expression and a limit
      * argument of zero.  Trailing empty strings are therefore not included in
      * the resulting array.
      *
-     * <p> The string {@code "boo:and:foo"}, for example, yields the following
+     * The string {@code "boo:and:foo"}, for example, yields the following
      * results with these expressions:
      *
      * <blockquote><table cellpadding=1 cellspacing=0 summary="Split examples showing regex and result">
@@ -2525,13 +2525,13 @@ public final class String
      *   <td>tr (Turkish)</td>
      *   <td>&#92;u0130</td>
      *   <td>&#92;u0069</td>
-     *   <td>capital letter I with dot above -&gt; small letter i</td>
+     *   <td>capital letter I with dot above -> small letter i</td>
      * </tr>
      * <tr>
      *   <td>tr (Turkish)</td>
      *   <td>&#92;u0049</td>
      *   <td>&#92;u0131</td>
-     *   <td>capital letter I -&gt; small letter dotless i </td>
+     *   <td>capital letter I -> small letter dotless i </td>
      * </tr>
      * <tr>
      *   <td>(all)</td>
@@ -2690,19 +2690,19 @@ public final class String
      *   <td>tr (Turkish)</td>
      *   <td>&#92;u0069</td>
      *   <td>&#92;u0130</td>
-     *   <td>small letter i -&gt; capital letter I with dot above</td>
+     *   <td>small letter i -> capital letter I with dot above</td>
      * </tr>
      * <tr>
      *   <td>tr (Turkish)</td>
      *   <td>&#92;u0131</td>
      *   <td>&#92;u0049</td>
-     *   <td>small letter dotless i -&gt; capital letter I</td>
+     *   <td>small letter dotless i -> capital letter I</td>
      * </tr>
      * <tr>
      *   <td>(all)</td>
      *   <td>&#92;u00df</td>
      *   <td>&#92;u0053 &#92;u0053</td>
-     *   <td>small letter sharp s -&gt; two letters: SS</td>
+     *   <td>small letter sharp s -> two letters: SS</td>
      * </tr>
      * <tr>
      *   <td>(all)</td>
@@ -2905,7 +2905,7 @@ public final class String
      * Returns a formatted string using the specified format string and
      * arguments.
      *
-     * <p> The locale always used is the one returned by {@link
+     * The locale always used is the one returned by {@link
      * java.util.Locale#getDefault() Locale.getDefault()}.
      *
      * @param  format

@@ -127,7 +127,7 @@ public final class KerberosPrincipal
      * name type, KRB_NT_PRINCIPAL where <i>duke</i>
      * represents a principal, and <i>FOO.COM</i> represents a realm).
 
-     * <p> If the input name does not contain a realm, the default realm
+     * If the input name does not contain a realm, the default realm
      * is used. The default realm can be specified either in a Kerberos
      * configuration file or via the java.security.krb5.realm
      * system property. For more information, see

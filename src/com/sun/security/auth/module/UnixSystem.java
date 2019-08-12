@@ -26,7 +26,7 @@
 package com.sun.security.auth.module;
 
 /**
- * <p> This class implementation retrieves and makes available Unix
+ * This class implementation retrieves and makes available Unix
  * UID/GID/groups information for the current user.
  *
  */

@@ -245,7 +245,7 @@ class EffectUtils {
      * @param h      the height of the rectangle of pixels to grab
      * @param pixels a pre-allocated array of pixels of size w*h; can be null
      * @return <code>pixels</code> if non-null, a new array of integers otherwise
-     * @throws IllegalArgumentException is <code>pixels</code> is non-null and of length &lt; w*h
+     * @throws IllegalArgumentException is <code>pixels</code> is non-null and of length < w*h
      */
     static byte[] getPixels(BufferedImage img,
                                    int x, int y, int w, int h, byte[] pixels) {
@@ -279,7 +279,7 @@ class EffectUtils {
      * @param w      the width of the rectangle of pixels to store
      * @param h      the height of the rectangle of pixels to store
      * @param pixels an array of pixels, stored as integers
-     * @throws IllegalArgumentException is <code>pixels</code> is non-null and of length &lt; w*h
+     * @throws IllegalArgumentException is <code>pixels</code> is non-null and of length < w*h
      */
     static void setPixels(BufferedImage img,
                                  int x, int y, int w, int h, byte[] pixels) {
@@ -313,7 +313,7 @@ class EffectUtils {
      * @return <code>pixels</code> if non-null, a new array of integers
      *   otherwise
      * @throws IllegalArgumentException is <code>pixels</code> is non-null and
-     *   of length &lt; w*h
+     *   of length < w*h
      */
     public static int[] getPixels(BufferedImage img,
                                   int x, int y, int w, int h, int[] pixels) {
@@ -352,7 +352,7 @@ class EffectUtils {
      * @param h the height of the rectangle of pixels to store
      * @param pixels an array of pixels, stored as integers
      * @throws IllegalArgumentException is <code>pixels</code> is non-null and
-     *   of length &lt; w*h
+     *   of length < w*h
      */
     public static void setPixels(BufferedImage img,
                                  int x, int y, int w, int h, int[] pixels) {

@@ -133,12 +133,12 @@ public interface Constants {
 
   /** The name of the static initializer, also called &quot;class
    *  initialization method&quot; or &quot;interface initialization
-   *   method&quot;. This is &quot;&lt;clinit&gt;&quot;.
+   *   method&quot;. This is &quot;<clinit>&quot;.
    */
   public final static String STATIC_INITIALIZER_NAME = "<clinit>";
 
   /** The name of every constructor method in a class, also called
-   * &quot;instance initialization method&quot;. This is &quot;&lt;init&gt;&quot;.
+   * &quot;instance initialization method&quot;. This is &quot;<init>&quot;.
    */
   public final static String CONSTRUCTOR_NAME = "<init>";
 

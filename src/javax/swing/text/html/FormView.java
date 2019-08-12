@@ -35,8 +35,8 @@ import javax.swing.text.*;
 
 /**
  * Component decorator that implements the view interface
- * for form elements, &lt;input&gt;, &lt;textarea&gt;,
- * and &lt;select&gt;.  The model for the component is stored
+ * for form elements, <input>, <textarea>,
+ * and <select>.  The model for the component is stored
  * as an attribute of the the element (using StyleConstants.ModelAttribute),
  * and is used to build the component of the view.  The type
  * of the model is assumed to of the type that would be set by
@@ -84,7 +84,7 @@ import javax.swing.text.*;
  *   <td>JTextField</td>
  * </tr>
  * <tr>
- *   <td>select, size &gt; 1 or multiple attribute defined</td>
+ *   <td>select, size > 1 or multiple attribute defined</td>
  *   <td>JList in a JScrollPane</td>
  * </tr>
  * <tr>
@@ -204,10 +204,10 @@ public class FormView extends ComponentView implements ActionListener {
 
 
     /**
-     * Creates a component for an &lt;INPUT&gt; element based on the
+     * Creates a component for an <INPUT> element based on the
      * value of the "type" attribute.
      *
-     * @param set of attributes associated with the &lt;INPUT&gt; element.
+     * @param set of attributes associated with the <INPUT> element.
      * @param model the value of the StyleConstants.ModelAttribute
      * @return the component.
      */
@@ -380,7 +380,7 @@ public class FormView extends ComponentView implements ActionListener {
      * axis of interest.
      *
      * @param axis may be either View.X_AXIS or View.Y_AXIS
-     * @return   the span the view would like to be rendered into &gt;= 0.
+     * @return   the span the view would like to be rendered into >= 0.
      *           Typically the view is told to render into the span
      *           that is returned, although there is no guarantee.
      *           The parent may choose to resize or break the view.
@@ -562,7 +562,7 @@ public class FormView extends ComponentView implements ActionListener {
 
     /**
      * This method is called to submit a form in response
-     * to a click on an image -- an &lt;INPUT&gt; form
+     * to a click on an image -- an <INPUT> form
      * element of type "image".
      *
      * @param imageData the mouse click coordinates.
@@ -710,7 +710,7 @@ public class FormView extends ComponentView implements ActionListener {
 
 
     /**
-     * Returns the data associated with an &lt;INPUT&gt; form
+     * Returns the data associated with an <INPUT> form
      * element.  The value of "type" attributes is
      * used to determine the type of the model associated
      * with the element and then the relevant data is
@@ -759,7 +759,7 @@ public class FormView extends ComponentView implements ActionListener {
     }
 
     /**
-     * Returns the data associated with the &lt;TEXTAREA&gt; form
+     * Returns the data associated with the <TEXTAREA> form
      * element.  This is done by getting the text stored in the
      * Document model.
      */
@@ -830,7 +830,7 @@ public class FormView extends ComponentView implements ActionListener {
     /**
      * Iterates over the element hierarchy to determine if
      * the element parameter, which is assumed to be an
-     * &lt;INPUT&gt; element of type password or text, is the last
+     * <INPUT> element of type password or text, is the last
      * one of either kind, in the form to which it belongs.
      */
     boolean isLastTextOrPasswordField() {

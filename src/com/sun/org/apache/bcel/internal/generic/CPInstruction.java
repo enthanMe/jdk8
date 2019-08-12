@@ -104,8 +104,8 @@ public abstract class CPInstruction extends Instruction
   /**
    * Long output format:
    *
-   * &lt;name of opcode&gt; "["&lt;opcode number&gt;"]"
-   * "("&lt;length of instruction&gt;")" "&lt;"&lt; constant pool index&gt;"&gt;"
+   * <name of opcode> "["<opcode number>"]"
+   * "("<length of instruction>")" "<"< constant pool index>">"
    *
    * @param verbose long/short format switch
    * @return mnemonic for instruction

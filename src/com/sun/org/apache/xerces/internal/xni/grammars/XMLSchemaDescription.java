@@ -33,17 +33,17 @@ public interface XMLSchemaDescription extends XMLGrammarDescription {
 
     // used to indicate what triggered the call
     /**
-     * Indicate that the current schema document is &lt;include&gt;d by another
+     * Indicate that the current schema document is <include>d by another
      * schema document.
      */
     public final static short CONTEXT_INCLUDE   = 0;
     /**
-     * Indicate that the current schema document is &lt;redefine&gt;d by another
+     * Indicate that the current schema document is <redefine>d by another
      * schema document.
      */
     public final static short CONTEXT_REDEFINE  = 1;
     /**
-     * Indicate that the current schema document is &lt;import&gt;ed by another
+     * Indicate that the current schema document is <import>ed by another
      * schema document.
      */
     public final static short CONTEXT_IMPORT    = 2;

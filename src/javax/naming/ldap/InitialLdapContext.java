@@ -108,12 +108,12 @@ public class InitialLdapContext extends InitialDirContext implements LdapContext
      * See <tt>javax.naming.InitialContext</tt> for a discussion of
      * environment properties.
      *
-     * <p> This constructor will not modify its parameters or
+     * This constructor will not modify its parameters or
      * save references to them, but may save a clone or copy.
      * Caller should not modify mutable keys and values in
      * <tt>environment</tt> after it has been passed to the constructor.
      *
-     * <p> <tt>connCtls</tt> is used as the underlying context instance's
+     * <tt>connCtls</tt> is used as the underlying context instance's
      * connection request controls.  See the class description
      * for details.
      *

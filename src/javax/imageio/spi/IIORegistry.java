@@ -64,12 +64,12 @@ import java.util.ServiceConfigurationError;
  * <code>ImageWriter</code>, <code>ImageTranscoder</code>,
  * <code>ImageInputStream</code>, and <code>ImageOutputStream</code>.
  *
- * <p> Service providers found on the system classpath (typically
+ * Service providers found on the system classpath (typically
  * the <code>lib/ext</code> directory in the Java
  * installation directory) are automatically loaded as soon as this class is
  * instantiated.
  *
- * <p> When the <code>registerApplicationClasspathSpis</code> method
+ * When the <code>registerApplicationClasspathSpis</code> method
  * is called, service provider instances declared in the
  * meta-information section of JAR files on the application class path
  * are loaded.  To declare a service provider, a <code>services</code>
@@ -92,18 +92,18 @@ import java.util.ServiceConfigurationError;
  * com.mycompany.imageio.MyFormatReaderSpi
  * </pre>
  *
- * <p> The service provider classes are intended to be lightweight
+ * The service provider classes are intended to be lightweight
  * and quick to load.  Implementations of these interfaces
  * should avoid complex dependencies on other classes and on
  * native code.
  *
- * <p> It is also possible to manually add service providers not found
+ * It is also possible to manually add service providers not found
  * automatically, as well as to remove those that are using the
  * interfaces of the <code>ServiceRegistry</code> class.  Thus
  * the application may customize the contents of the registry as it
  * sees fit.
  *
- * <p> For more details on declaring service providers, and the JAR
+ * For more details on declaring service providers, and the JAR
  * format in general, see the <a
  * href="{@docRoot}/../technotes/guides/jar/jar.html">
  * JAR File Specification</a>.
@@ -129,7 +129,7 @@ public final class IIORegistry extends ServiceRegistry {
      * Set up the valid service provider categories and automatically
      * register all available service providers.
      *
-     * <p> The constructor is private in order to prevent creation of
+     * The constructor is private in order to prevent creation of
      * additional instances.
      */
     private IIORegistry() {
@@ -143,7 +143,7 @@ public final class IIORegistry extends ServiceRegistry {
      * the Image I/O API.  This instance should be used for all
      * registry functions.
      *
-     * <p> Each <code>ThreadGroup</code> will receive its own
+     * Each <code>ThreadGroup</code> will receive its own
      * instance; this allows different <code>Applet</code>s in the
      * same browser (for example) to each have their own registry.
      *

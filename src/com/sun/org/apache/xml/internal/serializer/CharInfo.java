@@ -361,7 +361,7 @@ final class CharInfo
      * supplied. Nothing happens if the character reference is already defined.
      * <p>Unlike internal entities, character references are a string to single
      * character mapping. They are used to map non-ASCII characters both on
-     * parsing and printing, primarily for HTML documents. '&lt;amp;' is an
+     * parsing and printing, primarily for HTML documents. '<amp;' is an
      * example of a character reference.</p>
      *
      * @param name The entity's name
@@ -380,7 +380,7 @@ final class CharInfo
     /**
      * Map a character to a String. For example given
      * the character '>' this method would return the fully decorated
-     * entity name "&lt;".
+     * entity name "<".
      * Strings for entity references are loaded from a properties file,
      * but additional mappings defined through calls to defineChar2String()
      * are possible. Such entity reference mappings could be over-ridden.
@@ -394,7 +394,7 @@ final class CharInfo
      * string pool for a related solution.
      *
      * @param value The character that should be resolved to
-     * a String, e.g. resolve '>' to  "&lt;".
+     * a String, e.g. resolve '>' to  "<".
      *
      * @return The String that the character is mapped to, or null if not found.
      * @xsl.usage internal

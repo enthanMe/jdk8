@@ -35,7 +35,7 @@ import java.security.PublicKey;
  * {@link CertPathValidator#validate validate} method of
  * {@code CertPathValidator} objects implementing the PKIX algorithm.
  *
- * <p> All {@code PKIXCertPathValidatorResult} objects contain the
+ * All {@code PKIXCertPathValidatorResult} objects contain the
  * valid policy tree and subject public key resulting from the
  * validation algorithm, as well as a {@code TrustAnchor} describing
  * the certification authority (CA) that served as a trust anchor for the

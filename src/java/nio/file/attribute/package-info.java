@@ -48,7 +48,7 @@
  *     <td>Can read or update file system attributes</td></tr>
  * </table></blockquote>
  *
- * <p> An attribute view provides a read-only or updatable view of the non-opaque
+ * An attribute view provides a read-only or updatable view of the non-opaque
  * values, or <em>metadata</em>, associated with objects in a file system.
  * The {@link java.nio.file.attribute.FileAttributeView} interface is
  * extended by several other interfaces that that views to specific sets of file
@@ -60,28 +60,28 @@
  * a given type is obtained by invoking the {@link
  * java.nio.file.FileStore#getFileStoreAttributeView} method.
  *
- * <p> The {@link java.nio.file.attribute.BasicFileAttributeView}
+ * The {@link java.nio.file.attribute.BasicFileAttributeView}
  * class defines methods to read and update a <em>basic</em> set of file
  * attributes that are common to many file systems.
  *
- * <p> The {@link java.nio.file.attribute.PosixFileAttributeView}
+ * The {@link java.nio.file.attribute.PosixFileAttributeView}
  * interface extends {@code BasicFileAttributeView} by defining methods
  * to access the file attributes commonly used by file systems and operating systems
  * that implement the Portable Operating System Interface (POSIX) family of
  * standards.
  *
- * <p> The {@link java.nio.file.attribute.DosFileAttributeView}
+ * The {@link java.nio.file.attribute.DosFileAttributeView}
  * class extends {@code BasicFileAttributeView} by defining methods to
  * access the legacy "DOS" file attributes supported on file systems such as File
  * Allocation Tabl (FAT), commonly used in consumer devices.
  *
- * <p> The {@link java.nio.file.attribute.AclFileAttributeView}
+ * The {@link java.nio.file.attribute.AclFileAttributeView}
  * class defines methods to read and write the Access Control List (ACL)
  * file attribute. The ACL model used by this file attribute view is based
  * on the model defined by <a href="http://www.ietf.org/rfc/rfc3530.txt">
  * <i>RFC&nbsp;3530: Network File System (NFS) version 4 Protocol</i></a>.
  *
- * <p> In addition to attribute views, this package also defines classes and
+ * In addition to attribute views, this package also defines classes and
  * interfaces that are used when accessing attributes:
  *
  * <ul>
@@ -100,7 +100,7 @@
  * </ul>
  *
  *
- * <p> Unless otherwise noted, passing a <tt>null</tt> argument to a constructor
+ * Unless otherwise noted, passing a <tt>null</tt> argument to a constructor
  * or method in any class or interface in this package will cause a {@link
  * java.lang.NullPointerException NullPointerException} to be thrown.
  *

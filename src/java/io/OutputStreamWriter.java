@@ -37,14 +37,14 @@ import sun.nio.cs.StreamEncoder;
  * may be specified by name or may be given explicitly, or the platform's
  * default charset may be accepted.
  *
- * <p> Each invocation of a write() method causes the encoding converter to be
+ * Each invocation of a write() method causes the encoding converter to be
  * invoked on the given character(s).  The resulting bytes are accumulated in a
  * buffer before being written to the underlying output stream.  The size of
  * this buffer may be specified, but by default it is large enough for most
  * purposes.  Note that the characters passed to the write() methods are not
  * buffered.
  *
- * <p> For top efficiency, consider wrapping an OutputStreamWriter within a
+ * For top efficiency, consider wrapping an OutputStreamWriter within a
  * BufferedWriter so as to avoid frequent converter invocations.  For example:
  *
  * <pre>
@@ -52,16 +52,16 @@ import sun.nio.cs.StreamEncoder;
  *   = new BufferedWriter(new OutputStreamWriter(System.out));
  * </pre>
  *
- * <p> A <i>surrogate pair</i> is a character represented by a sequence of two
+ * A <i>surrogate pair</i> is a character represented by a sequence of two
  * <tt>char</tt> values: A <i>high</i> surrogate in the range '&#92;uD800' to
  * '&#92;uDBFF' followed by a <i>low</i> surrogate in the range '&#92;uDC00' to
  * '&#92;uDFFF'.
  *
- * <p> A <i>malformed surrogate element</i> is a high surrogate that is not
+ * A <i>malformed surrogate element</i> is a high surrogate that is not
  * followed by a low surrogate or a low surrogate that is not preceded by a
  * high surrogate.
  *
- * <p> This class always replaces malformed surrogate elements and unmappable
+ * This class always replaces malformed surrogate elements and unmappable
  * character sequences with the charset's default <i>substitution sequence</i>.
  * The {@linkplain java.nio.charset.CharsetEncoder} class should be used when more
  * control over the encoding process is required.
@@ -155,10 +155,10 @@ public class OutputStreamWriter extends Writer {
     /**
      * Returns the name of the character encoding being used by this stream.
      *
-     * <p> If the encoding has an historical name then that name is returned;
+     * If the encoding has an historical name then that name is returned;
      * otherwise the encoding's canonical name is returned.
      *
-     * <p> If this instance was created with the {@link
+     * If this instance was created with the {@link
      * #OutputStreamWriter(OutputStream, String)} constructor then the returned
      * name, being unique for the encoding, may differ from the name passed to
      * the constructor.  This method may return <tt>null</tt> if the stream has

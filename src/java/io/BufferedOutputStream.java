@@ -66,7 +66,7 @@ class BufferedOutputStream extends FilterOutputStream {
      *
      * @param   out    the underlying output stream.
      * @param   size   the buffer size.
-     * @exception IllegalArgumentException if size &lt;= 0.
+     * @exception IllegalArgumentException if size <= 0.
      */
     public BufferedOutputStream(OutputStream out, int size) {
         super(out);
@@ -101,7 +101,7 @@ class BufferedOutputStream extends FilterOutputStream {
      * Writes <code>len</code> bytes from the specified byte array
      * starting at offset <code>off</code> to this buffered output stream.
      *
-     * <p> Ordinarily this method stores bytes from the given array into this
+     * Ordinarily this method stores bytes from the given array into this
      * stream's buffer, flushing the buffer to the underlying output stream as
      * needed.  If the requested length is at least as large as this stream's
      * buffer, however, then this method will flush the buffer and write the

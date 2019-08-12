@@ -48,7 +48,7 @@ import sun.security.util.SecurityConstants;
  * actually needs to be done from within a
  * <i>different</i> context (for example, from within a worker thread).
  *
- * <p> An AccessControlContext is created by calling the
+ * An AccessControlContext is created by calling the
  * {@code AccessController.getContext} method.
  * The {@code getContext} method takes a "snapshot"
  * of the current calling context, and places

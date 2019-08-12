@@ -31,9 +31,9 @@ package com.sun.jmx.snmp;
  * When an <CODE> SnmpEngine </CODE> is created, a User based Security Model (USM) is initialized. The security configuration is located in a text file.
  * The text file is read when the engine is created.
  * <p>Note that the engine is not used when the agent is SNMPv1/SNMPv2 only.
-<P> The USM configuration text file is remotely updatable using the USM Mib.</P>
-<P> User that are configured in the Usm text file are nonVolatile. </P>
-<P> Usm Mib userEntry supported storage type values are : volatile or nonVolatile only. Other values are rejected and a wrongValue is returned) </P>
+The USM configuration text file is remotely updatable using the USM Mib.</P>
+User that are configured in the Usm text file are nonVolatile. </P>
+Usm Mib userEntry supported storage type values are : volatile or nonVolatile only. Other values are rejected and a wrongValue is returned) </P>
 <ul>
 <li> volatile means that user entry is not flushed in security file </li>
 <li> nonVolatile means that user entry is flushed in security file </li>

@@ -228,10 +228,10 @@ public class JSpinner extends JComponent implements Accessible
      * replace the editor created here with the <code>setEditor</code>
      * method.  The default mapping from model type to editor is:
      * <ul>
-     * <li> <code>SpinnerNumberModel =&gt; JSpinner.NumberEditor</code>
-     * <li> <code>SpinnerDateModel =&gt; JSpinner.DateEditor</code>
-     * <li> <code>SpinnerListModel =&gt; JSpinner.ListEditor</code>
-     * <li> <i>all others</i> =&gt; <code>JSpinner.DefaultEditor</code>
+     * <li> <code>SpinnerNumberModel => JSpinner.NumberEditor</code>
+     * <li> <code>SpinnerDateModel => JSpinner.DateEditor</code>
+     * <li> <code>SpinnerListModel => JSpinner.ListEditor</code>
+     * <li> <i>all others</i> => <code>JSpinner.DefaultEditor</code>
      * </ul>
      *
      * @return a component that displays the current value of the sequence

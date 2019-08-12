@@ -29,9 +29,9 @@ import javax.swing.text.*;
 
 /**
  * Value for the ListModel used to represent
- * &lt;option&gt; elements.  This is the object
+ * <option> elements.  This is the object
  * installed as items of the DefaultComboBoxModel
- * used to represent the &lt;select&gt; element.
+ * used to represent the <select> element.
  * <p>
  * <strong>Warning:</strong>
  * Serialized objects of this class will not be compatible with

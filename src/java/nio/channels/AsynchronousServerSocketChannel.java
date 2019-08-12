@@ -34,7 +34,7 @@ import java.io.IOException;
 /**
  * An asynchronous channel for stream-oriented listening sockets.
  *
- * <p> An asynchronous server-socket channel is created by invoking the
+ * An asynchronous server-socket channel is created by invoking the
  * {@link #open open} method of this class.
  * A newly-created asynchronous server-socket channel is open but not yet bound.
  * It can be bound to a local address and configured to listen for connections
@@ -44,12 +44,12 @@ import java.io.IOException;
  * An attempt to invoke the <tt>accept</tt> method on an unbound channel will
  * cause a {@link NotYetBoundException} to be thrown.
  *
- * <p> Channels of this type are safe for use by multiple concurrent threads
+ * Channels of this type are safe for use by multiple concurrent threads
  * though at most one accept operation can be outstanding at any time.
  * If a thread initiates an accept operation before a previous accept operation
  * has completed then an {@link AcceptPendingException} will be thrown.
  *
- * <p> Socket options are configured using the {@link #setOption(SocketOption,Object)
+ * Socket options are configured using the {@link #setOption(SocketOption,Object)
  * setOption} method. Channels of this type support the following options:
  * <blockquote>
  * <table border summary="Socket options">
@@ -69,12 +69,12 @@ import java.io.IOException;
  * </blockquote>
  * Additional (implementation specific) options may also be supported.
  *
- * <p> <b>Usage Example:</b>
+ * <b>Usage Example:</b>
  * <pre>
  *  final AsynchronousServerSocketChannel listener =
  *      AsynchronousServerSocketChannel.open().bind(new InetSocketAddress(5000));
  *
- *  listener.accept(null, new CompletionHandler&lt;AsynchronousSocketChannel,Void&gt;() {
+ *  listener.accept(null, new CompletionHandler<AsynchronousSocketChannel,Void>() {
  *      public void completed(AsynchronousSocketChannel ch, Void att) {
  *          // accept the next connection
  *          listener.accept(null, this);
@@ -118,7 +118,7 @@ public abstract class AsynchronousServerSocketChannel
     /**
      * Opens an asynchronous server-socket channel.
      *
-     * <p> The new channel is created by invoking the {@link
+     * The new channel is created by invoking the {@link
      * java.nio.channels.spi.AsynchronousChannelProvider#openAsynchronousServerSocketChannel
      * openAsynchronousServerSocketChannel} method on the {@link
      * java.nio.channels.spi.AsynchronousChannelProvider} object that created
@@ -148,7 +148,7 @@ public abstract class AsynchronousServerSocketChannel
     /**
      * Opens an asynchronous server-socket channel.
      *
-     * <p> This method returns an asynchronous server socket channel that is
+     * This method returns an asynchronous server socket channel that is
      * bound to the <em>default group</em>. This method is equivalent to evaluating
      * the expression:
      * <blockquote><pre>
@@ -170,7 +170,7 @@ public abstract class AsynchronousServerSocketChannel
      * Binds the channel's socket to a local address and configures the socket to
      * listen for connections.
      *
-     * <p> An invocation of this method is equivalent to the following:
+     * An invocation of this method is equivalent to the following:
      * <blockquote><pre>
      * bind(local, 0);
      * </pre></blockquote>
@@ -197,11 +197,11 @@ public abstract class AsynchronousServerSocketChannel
      * Binds the channel's socket to a local address and configures the socket to
      * listen for connections.
      *
-     * <p> This method is used to establish an association between the socket and
+     * This method is used to establish an association between the socket and
      * a local address. Once an association is established then the socket remains
      * bound until the associated channel is closed.
      *
-     * <p> The {@code backlog} parameter is the maximum number of pending
+     * The {@code backlog} parameter is the maximum number of pending
      * connections on the socket. Its exact semantics are implementation specific.
      * In particular, an implementation may impose a maximum length or may choose
      * to ignore the parameter altogther. If the {@code backlog} parameter has
@@ -242,25 +242,25 @@ public abstract class AsynchronousServerSocketChannel
     /**
      * Accepts a connection.
      *
-     * <p> This method initiates an asynchronous operation to accept a
+     * This method initiates an asynchronous operation to accept a
      * connection made to this channel's socket. The {@code handler} parameter is
      * a completion handler that is invoked when a connection is accepted (or
      * the operation fails). The result passed to the completion handler is
      * the {@link AsynchronousSocketChannel} to the new connection.
      *
-     * <p> When a new connection is accepted then the resulting {@code
+     * When a new connection is accepted then the resulting {@code
      * AsynchronousSocketChannel} will be bound to the same {@link
      * AsynchronousChannelGroup} as this channel. If the group is {@link
      * AsynchronousChannelGroup#isShutdown shutdown} and a connection is accepted,
      * then the connection is closed, and the operation completes with an {@code
      * IOException} and cause {@link ShutdownChannelGroupException}.
      *
-     * <p> To allow for concurrent handling of new connections, the completion
+     * To allow for concurrent handling of new connections, the completion
      * handler is not invoked directly by the initiating thread when a new
      * connection is accepted immediately (see <a
      * href="AsynchronousChannelGroup.html#threading">Threading</a>).
      *
-     * <p> If a security manager has been installed then it verifies that the
+     * If a security manager has been installed then it verifies that the
      * address and port number of the connection's remote endpoint are permitted
      * by the security manager's {@link SecurityManager#checkAccept checkAccept}
      * method. The permission check is performed with privileges that are restricted
@@ -288,7 +288,7 @@ public abstract class AsynchronousServerSocketChannel
     /**
      * Accepts a connection.
      *
-     * <p> This method initiates an asynchronous operation to accept a
+     * This method initiates an asynchronous operation to accept a
      * connection made to this channel's socket. The method behaves in exactly
      * the same manner as the {@link #accept(Object, CompletionHandler)} method
      * except that instead of specifying a completion handler, this method

@@ -69,11 +69,11 @@ import sun.misc.FormattedFloatingDecimal;
  * are supported.  Limited formatting customization for arbitrary user types is
  * provided through the {@link Formattable} interface.
  *
- * <p> Formatters are not necessarily safe for multithreaded access.  Thread
+ * Formatters are not necessarily safe for multithreaded access.  Thread
  * safety is optional and is the responsibility of users of methods in this
  * class.
  *
- * <p> Formatted printing for the Java language is heavily inspired by C's
+ * Formatted printing for the Java language is heavily inspired by C's
  * {@code printf}.  Although the format strings are similar to C, some
  * customizations have been made to accommodate the Java language and exploit
  * some of its features.  Also, Java formatting is more strict than C's; for
@@ -82,7 +82,7 @@ import sun.misc.FormattedFloatingDecimal;
  * are thus intended to be recognizable to C programmers but not necessarily
  * completely compatible with those in C.
  *
- * <p> Examples of expected usage:
+ * Examples of expected usage:
  *
  * <blockquote><pre>
  *   StringBuilder sb = new StringBuilder();
@@ -91,37 +91,37 @@ import sun.misc.FormattedFloatingDecimal;
  *
  *   // Explicit argument indices may be used to re-order output.
  *   formatter.format("%4$2s %3$2s %2$2s %1$2s", "a", "b", "c", "d")
- *   // -&gt; " d  c  b  a"
+ *   // -> " d  c  b  a"
  *
  *   // Optional locale as the first argument can be used to get
  *   // locale-specific formatting of numbers.  The precision and width can be
  *   // given to round and align the value.
  *   formatter.format(Locale.FRANCE, "e = %+10.4f", Math.E);
- *   // -&gt; "e =    +2,7183"
+ *   // -> "e =    +2,7183"
  *
  *   // The '(' numeric flag may be used to format negative numbers with
  *   // parentheses rather than a minus sign.  Group separators are
  *   // automatically inserted.
  *   formatter.format("Amount gained or lost since last statement: $ %(,.2f",
  *                    balanceDelta);
- *   // -&gt; "Amount gained or lost since last statement: $ (6,217.58)"
+ *   // -> "Amount gained or lost since last statement: $ (6,217.58)"
  * </pre></blockquote>
  *
- * <p> Convenience methods for common formatting requests exist as illustrated
+ * Convenience methods for common formatting requests exist as illustrated
  * by the following invocations:
  *
  * <blockquote><pre>
  *   // Writes a formatted string to System.out.
  *   System.out.format("Local time: %tT", Calendar.getInstance());
- *   // -&gt; "Local time: 13:34:18"
+ *   // -> "Local time: 13:34:18"
  *
  *   // Writes formatted output to System.err.
  *   System.err.printf("Unable to open file '%1$s': %2$s",
  *                     fileName, exception.getMessage());
- *   // -&gt; "Unable to open file 'food': No such file or directory"
+ *   // -> "Unable to open file 'food': No such file or directory"
  * </pre></blockquote>
  *
- * <p> Like C's {@code sprintf(3)}, Strings may be formatted using the static
+ * Like C's {@code sprintf(3)}, Strings may be formatted using the static
  * method {@link String#format(String,Object...) String.format}:
  *
  * <blockquote><pre>
@@ -132,12 +132,12 @@ import sun.misc.FormattedFloatingDecimal;
  *
  *   Calendar c = new GregorianCalendar(1995, MAY, 23);
  *   String s = String.format("Duke's Birthday: %1$tb %1$te, %1$tY", c);
- *   // -&gt; s == "Duke's Birthday: May 23, 1995"
+ *   // -> s == "Duke's Birthday: May 23, 1995"
  * </pre></blockquote>
  *
  * <h3><a name="org">Organization</a></h3>
  *
- * <p> This specification is divided into two sections.  The first section, <a
+ * This specification is divided into two sections.  The first section, <a
  * href="#summary">Summary</a>, covers the basic formatting concepts.  This
  * section is intended for users who want to get started quickly and are
  * familiar with formatted printing in other programming languages.  The second
@@ -147,13 +147,13 @@ import sun.misc.FormattedFloatingDecimal;
  *
  * <h3><a name="summary">Summary</a></h3>
  *
- * <p> This section is intended to provide a brief overview of formatting
+ * This section is intended to provide a brief overview of formatting
  * concepts.  For precise behavioral details, refer to the <a
  * href="#detail">Details</a> section.
  *
  * <h4><a name="syntax">Format String Syntax</a></h4>
  *
- * <p> Every method which produces formatted output requires a <i>format
+ * Every method which produces formatted output requires a <i>format
  * string</i> and an <i>argument list</i>.  The format string is a {@link
  * String} which may contain fixed text and one or more embedded <i>format
  * specifiers</i>.  Consider the following example:
@@ -183,21 +183,21 @@ import sun.misc.FormattedFloatingDecimal;
  *   %[argument_index$][flags][width][.precision]conversion
  * </pre></blockquote>
  *
- * <p> The optional <i>argument_index</i> is a decimal integer indicating the
+ * The optional <i>argument_index</i> is a decimal integer indicating the
  * position of the argument in the argument list.  The first argument is
  * referenced by "{@code 1$}", the second by "{@code 2$}", etc.
  *
- * <p> The optional <i>flags</i> is a set of characters that modify the output
+ * The optional <i>flags</i> is a set of characters that modify the output
  * format.  The set of valid flags depends on the conversion.
  *
- * <p> The optional <i>width</i> is a positive decimal integer indicating
+ * The optional <i>width</i> is a positive decimal integer indicating
  * the minimum number of characters to be written to the output.
  *
- * <p> The optional <i>precision</i> is a non-negative decimal integer usually
+ * The optional <i>precision</i> is a non-negative decimal integer usually
  * used to restrict the number of characters.  The specific behavior depends on
  * the conversion.
  *
- * <p> The required <i>conversion</i> is a character indicating how the
+ * The required <i>conversion</i> is a character indicating how the
  * argument should be formatted.  The set of valid conversions for a given
  * argument depends on the argument's data type.
  *
@@ -208,10 +208,10 @@ import sun.misc.FormattedFloatingDecimal;
  *   %[argument_index$][flags][width]conversion
  * </pre></blockquote>
  *
- * <p> The optional <i>argument_index</i>, <i>flags</i> and <i>width</i> are
+ * The optional <i>argument_index</i>, <i>flags</i> and <i>width</i> are
  * defined as above.
  *
- * <p> The required <i>conversion</i> is a two character sequence.  The first
+ * The required <i>conversion</i> is a two character sequence.  The first
  * character is {@code 't'} or {@code 'T'}.  The second character indicates
  * the format to be used.  These characters are similar to but not completely
  * identical to those defined by GNU {@code date} and POSIX
@@ -224,16 +224,16 @@ import sun.misc.FormattedFloatingDecimal;
  *   %[flags][width]conversion
  * </pre></blockquote>
  *
- * <p> The optional <i>flags</i> and <i>width</i> is defined as above.
+ * The optional <i>flags</i> and <i>width</i> is defined as above.
  *
- * <p> The required <i>conversion</i> is a character indicating content to be
+ * The required <i>conversion</i> is a character indicating content to be
  * inserted in the output.
  *
  * </ul>
  *
  * <h4> Conversions </h4>
  *
- * <p> Conversions are divided into the following categories:
+ * Conversions are divided into the following categories:
  *
  * <ol>
  *
@@ -272,7 +272,7 @@ import sun.misc.FormattedFloatingDecimal;
  *
  * </ol>
  *
- * <p> The following table summarizes the supported conversions.  Conversions
+ * The following table summarizes the supported conversions.  Conversions
  * denoted by an upper-case character (i.e. {@code 'B'}, {@code 'H'},
  * {@code 'S'}, {@code 'C'}, {@code 'X'}, {@code 'E'}, {@code 'G'},
  * {@code 'A'}, and {@code 'T'}) are the same as those for the corresponding
@@ -363,19 +363,19 @@ import sun.misc.FormattedFloatingDecimal;
  *
  * </table>
  *
- * <p> Any characters not explicitly defined as conversions are illegal and are
+ * Any characters not explicitly defined as conversions are illegal and are
  * reserved for future extensions.
  *
  * <h4><a name="dt">Date/Time Conversions</a></h4>
  *
- * <p> The following date and time conversion suffix characters are defined for
+ * The following date and time conversion suffix characters are defined for
  * the {@code 't'} and {@code 'T'} conversions.  The types are similar to but
  * not completely identical to those defined by GNU {@code date} and POSIX
  * {@code strftime(3c)}.  Additional conversion types are provided to access
  * Java-specific functionality (e.g. {@code 'L'} for milliseconds within the
  * second).
  *
- * <p> The following conversion characters are used for formatting times:
+ * The following conversion characters are used for formatting times:
  *
  * <table cellpadding=5 summary="time">
  *
@@ -444,7 +444,7 @@ import sun.misc.FormattedFloatingDecimal;
  *
  * </table>
  *
- * <p> The following conversion characters are used for formatting dates:
+ * The following conversion characters are used for formatting dates:
  *
  * <table cellpadding=5 summary="date">
  *
@@ -500,7 +500,7 @@ import sun.misc.FormattedFloatingDecimal;
  *
  * </table>
  *
- * <p> The following conversion characters are used for formatting common
+ * The following conversion characters are used for formatting common
  * date/time compositions.
  *
  * <table cellpadding=5 summary="composites">
@@ -529,12 +529,12 @@ import sun.misc.FormattedFloatingDecimal;
  *
  * </table>
  *
- * <p> Any characters not explicitly defined as date/time conversion suffixes
+ * Any characters not explicitly defined as date/time conversion suffixes
  * are illegal and are reserved for future extensions.
  *
  * <h4> Flags </h4>
  *
- * <p> The following table summarizes the supported flags.  <i>y</i> means the
+ * The following table summarizes the supported flags.  <i>y</i> means the
  * flag is supported for the indicated argument types.
  *
  * <table cellpadding=5 summary="genConv">
@@ -597,52 +597,52 @@ import sun.misc.FormattedFloatingDecimal;
  *
  * </table>
  *
- * <p> <sup>1</sup> Depends on the definition of {@link Formattable}.
+ * <sup>1</sup> Depends on the definition of {@link Formattable}.
  *
- * <p> <sup>2</sup> For {@code 'd'} conversion only.
+ * <sup>2</sup> For {@code 'd'} conversion only.
  *
- * <p> <sup>3</sup> For {@code 'o'}, {@code 'x'}, and {@code 'X'}
+ * <sup>3</sup> For {@code 'o'}, {@code 'x'}, and {@code 'X'}
  * conversions only.
  *
- * <p> <sup>4</sup> For {@code 'd'}, {@code 'o'}, {@code 'x'}, and
+ * <sup>4</sup> For {@code 'd'}, {@code 'o'}, {@code 'x'}, and
  * {@code 'X'} conversions applied to {@link java.math.BigInteger BigInteger}
  * or {@code 'd'} applied to {@code byte}, {@link Byte}, {@code short}, {@link
  * Short}, {@code int} and {@link Integer}, {@code long}, and {@link Long}.
  *
- * <p> <sup>5</sup> For {@code 'e'}, {@code 'E'}, {@code 'f'},
+ * <sup>5</sup> For {@code 'e'}, {@code 'E'}, {@code 'f'},
  * {@code 'g'}, and {@code 'G'} conversions only.
  *
- * <p> Any characters not explicitly defined as flags are illegal and are
+ * Any characters not explicitly defined as flags are illegal and are
  * reserved for future extensions.
  *
  * <h4> Width </h4>
  *
- * <p> The width is the minimum number of characters to be written to the
+ * The width is the minimum number of characters to be written to the
  * output.  For the line separator conversion, width is not applicable; if it
  * is provided, an exception will be thrown.
  *
  * <h4> Precision </h4>
  *
- * <p> For general argument types, the precision is the maximum number of
+ * For general argument types, the precision is the maximum number of
  * characters to be written to the output.
  *
- * <p> For the floating-point conversions {@code 'a'}, {@code 'A'}, {@code 'e'},
+ * For the floating-point conversions {@code 'a'}, {@code 'A'}, {@code 'e'},
  * {@code 'E'}, and {@code 'f'} the precision is the number of digits after the
  * radix point.  If the conversion is {@code 'g'} or {@code 'G'}, then the
  * precision is the total number of digits in the resulting magnitude after
  * rounding.
  *
- * <p> For character, integral, and date/time argument types and the percent
+ * For character, integral, and date/time argument types and the percent
  * and line separator conversions, the precision is not applicable; if a
  * precision is provided, an exception will be thrown.
  *
  * <h4> Argument Index </h4>
  *
- * <p> The argument index is a decimal integer indicating the position of the
+ * The argument index is a decimal integer indicating the position of the
  * argument in the argument list.  The first argument is referenced by
  * "{@code 1$}", the second by "{@code 2$}", etc.
  *
- * <p> Another way to reference arguments by position is to use the
+ * Another way to reference arguments by position is to use the
  * {@code '<'} (<tt>'&#92;u003c'</tt>) flag, which causes the argument for
  * the previous format specifier to be re-used.  For example, the following two
  * statements would produce identical strings:
@@ -651,38 +651,38 @@ import sun.misc.FormattedFloatingDecimal;
  *   Calendar c = ...;
  *   String s1 = String.format("Duke's Birthday: %1$tm %1$te,%1$tY", c);
  *
- *   String s2 = String.format("Duke's Birthday: %1$tm %&lt;te,%&lt;tY", c);
+ *   String s2 = String.format("Duke's Birthday: %1$tm %<te,%<tY", c);
  * </pre></blockquote>
  *
  * <hr>
  * <h3><a name="detail">Details</a></h3>
  *
- * <p> This section is intended to provide behavioral details for formatting,
+ * This section is intended to provide behavioral details for formatting,
  * including conditions and exceptions, supported data types, localization, and
  * interactions between flags, conversions, and data types.  For an overview of
  * formatting concepts, refer to the <a href="#summary">Summary</a>
  *
- * <p> Any characters not explicitly defined as conversions, date/time
+ * Any characters not explicitly defined as conversions, date/time
  * conversion suffixes, or flags are illegal and are reserved for
  * future extensions.  Use of such a character in a format string will
  * cause an {@link UnknownFormatConversionException} or {@link
  * UnknownFormatFlagsException} to be thrown.
  *
- * <p> If the format specifier contains a width or precision with an invalid
+ * If the format specifier contains a width or precision with an invalid
  * value or which is otherwise unsupported, then a {@link
  * IllegalFormatWidthException} or {@link IllegalFormatPrecisionException}
  * respectively will be thrown.
  *
- * <p> If a format specifier contains a conversion character that is not
+ * If a format specifier contains a conversion character that is not
  * applicable to the corresponding argument, then an {@link
  * IllegalFormatConversionException} will be thrown.
  *
- * <p> All specified exceptions may be thrown by any of the {@code format}
+ * All specified exceptions may be thrown by any of the {@code format}
  * methods of {@code Formatter} as well as by any {@code format} convenience
  * methods such as {@link String#format(String,Object...) String.format} and
  * {@link java.io.PrintStream#printf(String,Object...) PrintStream.printf}.
  *
- * <p> Conversions denoted by an upper-case character (i.e. {@code 'B'},
+ * Conversions denoted by an upper-case character (i.e. {@code 'B'},
  * {@code 'H'}, {@code 'S'}, {@code 'C'}, {@code 'X'}, {@code 'E'},
  * {@code 'G'}, {@code 'A'}, and {@code 'T'}) are the same as those for the
  * corresponding lower-case conversion characters except that the result is
@@ -695,7 +695,7 @@ import sun.misc.FormattedFloatingDecimal;
  *
  * <h4><a name="dgen">General</a></h4>
  *
- * <p> The following general conversions may be applied to any argument type:
+ * The following general conversions may be applied to any argument type:
  *
  * <table cellpadding=5 summary="dgConv">
  *
@@ -704,13 +704,13 @@ import sun.misc.FormattedFloatingDecimal;
  *     <td> Produces either "{@code true}" or "{@code false}" as returned by
  *     {@link Boolean#toString(boolean)}.
  *
- *     <p> If the argument is {@code null}, then the result is
+ *     If the argument is {@code null}, then the result is
  *     "{@code false}".  If the argument is a {@code boolean} or {@link
  *     Boolean}, then the result is the string returned by {@link
  *     String#valueOf(boolean) String.valueOf()}.  Otherwise, the result is
  *     "{@code true}".
  *
- *     <p> If the {@code '#'} flag is given, then a {@link
+ *     If the {@code '#'} flag is given, then a {@link
  *     FormatFlagsConversionMismatchException} will be thrown.
  *
  * <tr><td valign="top"> {@code 'B'}
@@ -721,11 +721,11 @@ import sun.misc.FormattedFloatingDecimal;
  *     <td valign="top"> <tt>'&#92;u0068'</tt>
  *     <td> Produces a string representing the hash code value of the object.
  *
- *     <p> If the argument, <i>arg</i> is {@code null}, then the
+ *     If the argument, <i>arg</i> is {@code null}, then the
  *     result is "{@code null}".  Otherwise, the result is obtained
  *     by invoking {@code Integer.toHexString(arg.hashCode())}.
  *
- *     <p> If the {@code '#'} flag is given, then a {@link
+ *     If the {@code '#'} flag is given, then a {@link
  *     FormatFlagsConversionMismatchException} will be thrown.
  *
  * <tr><td valign="top"> {@code 'H'}
@@ -736,13 +736,13 @@ import sun.misc.FormattedFloatingDecimal;
  *     <td valign="top"> <tt>'&#92;u0073'</tt>
  *     <td> Produces a string.
  *
- *     <p> If the argument is {@code null}, then the result is
+ *     If the argument is {@code null}, then the result is
  *     "{@code null}".  If the argument implements {@link Formattable}, then
  *     its {@link Formattable#formatTo formatTo} method is invoked.
  *     Otherwise, the result is obtained by invoking the argument's
  *     {@code toString()} method.
  *
- *     <p> If the {@code '#'} flag is given and the argument is not a {@link
+ *     If the {@code '#'} flag is given and the argument is not a {@link
  *     Formattable} , then a {@link FormatFlagsConversionMismatchException}
  *     will be thrown.
  *
@@ -752,7 +752,7 @@ import sun.misc.FormattedFloatingDecimal;
  *
  * </table>
  *
- * <p> The following <a name="dFlags">flags</a> apply to general conversions:
+ * The following <a name="dFlags">flags</a> apply to general conversions:
  *
  * <table cellpadding=5 summary="dFlags">
  *
@@ -771,7 +771,7 @@ import sun.misc.FormattedFloatingDecimal;
  *
  * </table>
  *
- * <p> The <a name="genWidth">width</a> is the minimum number of characters to
+ * The <a name="genWidth">width</a> is the minimum number of characters to
  * be written to the
  * output.  If the length of the converted value is less than the width then
  * the output will be padded by <tt>'&nbsp;&nbsp;'</tt> (<tt>'&#92;u0020'</tt>)
@@ -780,7 +780,7 @@ import sun.misc.FormattedFloatingDecimal;
  * will be on the right.  If the width is not specified then there is no
  * minimum.
  *
- * <p> The precision is the maximum number of characters to be written to the
+ * The precision is the maximum number of characters to be written to the
  * output.  The precision is applied before the width, thus the output will be
  * truncated to {@code precision} characters even if the width is greater than
  * the precision.  If the precision is not specified then there is no explicit
@@ -804,7 +804,7 @@ import sun.misc.FormattedFloatingDecimal;
  *     Representation</a>.  This may be more than one 16-bit {@code char} in
  *     the case where the argument represents a supplementary character.
  *
- *     <p> If the {@code '#'} flag is given, then a {@link
+ *     If the {@code '#'} flag is given, then a {@link
  *     FormatFlagsConversionMismatchException} will be thrown.
  *
  * <tr><td valign="top"> {@code 'C'}
@@ -813,18 +813,18 @@ import sun.misc.FormattedFloatingDecimal;
  *
  * </table>
  *
- * <p> The {@code '-'} flag defined for <a href="#dFlags">General
+ * The {@code '-'} flag defined for <a href="#dFlags">General
  * conversions</a> applies.  If the {@code '#'} flag is given, then a {@link
  * FormatFlagsConversionMismatchException} will be thrown.
  *
- * <p> The width is defined as for <a href="#genWidth">General conversions</a>.
+ * The width is defined as for <a href="#genWidth">General conversions</a>.
  *
- * <p> The precision is not applicable.  If the precision is specified then an
+ * The precision is not applicable.  If the precision is specified then an
  * {@link IllegalFormatPrecisionException} will be thrown.
  *
  * <h4><a name="dnum">Numeric</a></h4>
  *
- * <p> Numeric conversions are divided into the following categories:
+ * Numeric conversions are divided into the following categories:
  *
  * <ol>
  *
@@ -838,11 +838,11 @@ import sun.misc.FormattedFloatingDecimal;
  *
  * </ol>
  *
- * <p> Numeric types will be formatted according to the following algorithm:
+ * Numeric types will be formatted according to the following algorithm:
  *
  * <p><b><a name="L10nAlgorithm"> Number Localization Algorithm</a></b>
  *
- * <p> After digits are obtained for the integer part, fractional part, and
+ * After digits are obtained for the integer part, fractional part, and
  * exponent (as appropriate for the data type), the following transformation
  * is applied:
  *
@@ -885,14 +885,14 @@ import sun.misc.FormattedFloatingDecimal;
  *
  * </ol>
  *
- * <p> If the value is NaN or positive infinity the literal strings "NaN" or
+ * If the value is NaN or positive infinity the literal strings "NaN" or
  * "Infinity" respectively, will be output.  If the value is negative infinity,
  * then the output will be "(Infinity)" if the {@code '('} flag is given
  * otherwise the output will be "-Infinity".  These values are not localized.
  *
  * <p><a name="dnint"><b> Byte, Short, Integer, and Long </b></a>
  *
- * <p> The following conversions may be applied to {@code byte}, {@link Byte},
+ * The following conversions may be applied to {@code byte}, {@link Byte},
  * {@code short}, {@link Short}, {@code int} and {@link Integer},
  * {@code long}, and {@link Long}.
  *
@@ -903,10 +903,10 @@ import sun.misc.FormattedFloatingDecimal;
  *     <td> Formats the argument as a decimal integer. The <a
  *     href="#L10nAlgorithm">localization algorithm</a> is applied.
  *
- *     <p> If the {@code '0'} flag is given and the value is negative, then
+ *     If the {@code '0'} flag is given and the value is negative, then
  *     the zero padding will occur after the sign.
  *
- *     <p> If the {@code '#'} flag is given then a {@link
+ *     If the {@code '#'} flag is given then a {@link
  *     FormatFlagsConversionMismatchException} will be thrown.
  *
  * <tr><td valign="top"> {@code 'o'}
@@ -914,20 +914,20 @@ import sun.misc.FormattedFloatingDecimal;
  *     <td> Formats the argument as an integer in base eight.  No localization
  *     is applied.
  *
- *     <p> If <i>x</i> is negative then the result will be an unsigned value
+ *     If <i>x</i> is negative then the result will be an unsigned value
  *     generated by adding 2<sup>n</sup> to the value where {@code n} is the
  *     number of bits in the type as returned by the static {@code SIZE} field
  *     in the {@linkplain Byte#SIZE Byte}, {@linkplain Short#SIZE Short},
  *     {@linkplain Integer#SIZE Integer}, or {@linkplain Long#SIZE Long}
  *     classes as appropriate.
  *
- *     <p> If the {@code '#'} flag is given then the output will always begin
+ *     If the {@code '#'} flag is given then the output will always begin
  *     with the radix indicator {@code '0'}.
  *
- *     <p> If the {@code '0'} flag is given then the output will be padded
+ *     If the {@code '0'} flag is given then the output will be padded
  *     with leading zeros to the field width following any indication of sign.
  *
- *     <p> If {@code '('}, {@code '+'}, '&nbsp;&nbsp;', or {@code ','} flags
+ *     If {@code '('}, {@code '+'}, '&nbsp;&nbsp;', or {@code ','} flags
  *     are given then a {@link FormatFlagsConversionMismatchException} will be
  *     thrown.
  *
@@ -936,21 +936,21 @@ import sun.misc.FormattedFloatingDecimal;
  *     <td> Formats the argument as an integer in base sixteen. No
  *     localization is applied.
  *
- *     <p> If <i>x</i> is negative then the result will be an unsigned value
+ *     If <i>x</i> is negative then the result will be an unsigned value
  *     generated by adding 2<sup>n</sup> to the value where {@code n} is the
  *     number of bits in the type as returned by the static {@code SIZE} field
  *     in the {@linkplain Byte#SIZE Byte}, {@linkplain Short#SIZE Short},
  *     {@linkplain Integer#SIZE Integer}, or {@linkplain Long#SIZE Long}
  *     classes as appropriate.
  *
- *     <p> If the {@code '#'} flag is given then the output will always begin
+ *     If the {@code '#'} flag is given then the output will always begin
  *     with the radix indicator {@code "0x"}.
  *
- *     <p> If the {@code '0'} flag is given then the output will be padded to
+ *     If the {@code '0'} flag is given then the output will be padded to
  *     the field width with leading zeros after the radix indicator or sign (if
  *     present).
  *
- *     <p> If {@code '('}, <tt>'&nbsp;&nbsp;'</tt>, {@code '+'}, or
+ *     If {@code '('}, <tt>'&nbsp;&nbsp;'</tt>, {@code '+'}, or
  *     {@code ','} flags are given then a {@link
  *     FormatFlagsConversionMismatchException} will be thrown.
  *
@@ -964,16 +964,16 @@ import sun.misc.FormattedFloatingDecimal;
  *
  * </table>
  *
- * <p> If the conversion is {@code 'o'}, {@code 'x'}, or {@code 'X'} and
+ * If the conversion is {@code 'o'}, {@code 'x'}, or {@code 'X'} and
  * both the {@code '#'} and the {@code '0'} flags are given, then result will
  * contain the radix indicator ({@code '0'} for octal and {@code "0x"} or
  * {@code "0X"} for hexadecimal), some number of zeros (based on the width),
  * and the value.
  *
- * <p> If the {@code '-'} flag is not given, then the space padding will occur
+ * If the {@code '-'} flag is not given, then the space padding will occur
  * before the sign.
  *
- * <p> The following <a name="intFlags">flags</a> apply to numeric integral
+ * The following <a name="intFlags">flags</a> apply to numeric integral
  * conversions:
  *
  * <table cellpadding=5 summary="intFlags">
@@ -984,7 +984,7 @@ import sun.misc.FormattedFloatingDecimal;
  *     numbers.  If this flag is not given then only negative values will
  *     include a sign.
  *
- *     <p> If both the {@code '+'} and <tt>'&nbsp;&nbsp;'</tt> flags are given
+ *     If both the {@code '+'} and <tt>'&nbsp;&nbsp;'</tt> flags are given
  *     then an {@link IllegalFormatFlagsException} will be thrown.
  *
  * <tr><td valign="top"> <tt>'&nbsp;&nbsp;'</tt>
@@ -992,7 +992,7 @@ import sun.misc.FormattedFloatingDecimal;
  *     <td> Requires the output to include a single extra space
  *     (<tt>'&#92;u0020'</tt>) for non-negative values.
  *
- *     <p> If both the {@code '+'} and <tt>'&nbsp;&nbsp;'</tt> flags are given
+ *     If both the {@code '+'} and <tt>'&nbsp;&nbsp;'</tt> flags are given
  *     then an {@link IllegalFormatFlagsException} will be thrown.
  *
  * <tr><td valign="top"> {@code '0'}
@@ -1003,7 +1003,7 @@ import sun.misc.FormattedFloatingDecimal;
  *     or infinity.  If the width is not provided, then a {@link
  *     MissingFormatWidthException} will be thrown.
  *
- *     <p> If both the {@code '-'} and {@code '0'} flags are given then an
+ *     If both the {@code '-'} and {@code '0'} flags are given then an
  *     {@link IllegalFormatFlagsException} will be thrown.
  *
  * <tr><td valign="top"> {@code ','}
@@ -1021,7 +1021,7 @@ import sun.misc.FormattedFloatingDecimal;
  *
  * </table>
  *
- * <p> If no <a name="intdFlags">flags</a> are given the default formatting is
+ * If no <a name="intdFlags">flags</a> are given the default formatting is
  * as follows:
  *
  * <ul>
@@ -1037,7 +1037,7 @@ import sun.misc.FormattedFloatingDecimal;
  *
  * </ul>
  *
- * <p> The <a name="intWidth">width</a> is the minimum number of characters to
+ * The <a name="intWidth">width</a> is the minimum number of characters to
  * be written to the output.  This includes any signs, digits, grouping
  * separators, radix indicator, and parentheses.  If the length of the
  * converted value is less than the width then the output will be padded by
@@ -1046,12 +1046,12 @@ import sun.misc.FormattedFloatingDecimal;
  * given then the padding will be on the right.  If width is not specified then
  * there is no minimum.
  *
- * <p> The precision is not applicable.  If precision is specified then an
+ * The precision is not applicable.  If precision is specified then an
  * {@link IllegalFormatPrecisionException} will be thrown.
  *
  * <p><a name="dnbint"><b> BigInteger </b></a>
  *
- * <p> The following conversions may be applied to {@link
+ * The following conversions may be applied to {@link
  * java.math.BigInteger}.
  *
  * <table cellpadding=5 summary="BIntConv">
@@ -1061,7 +1061,7 @@ import sun.misc.FormattedFloatingDecimal;
  *     <td> Requires the output to be formatted as a decimal integer. The <a
  *     href="#L10nAlgorithm">localization algorithm</a> is applied.
  *
- *     <p> If the {@code '#'} flag is given {@link
+ *     If the {@code '#'} flag is given {@link
  *     FormatFlagsConversionMismatchException} will be thrown.
  *
  * <tr><td valign="top"> {@code 'o'}
@@ -1069,22 +1069,22 @@ import sun.misc.FormattedFloatingDecimal;
  *     <td> Requires the output to be formatted as an integer in base eight.
  *     No localization is applied.
  *
- *     <p> If <i>x</i> is negative then the result will be a signed value
+ *     If <i>x</i> is negative then the result will be a signed value
  *     beginning with {@code '-'} (<tt>'&#92;u002d'</tt>).  Signed output is
  *     allowed for this type because unlike the primitive types it is not
  *     possible to create an unsigned equivalent without assuming an explicit
  *     data-type size.
  *
- *     <p> If <i>x</i> is positive or zero and the {@code '+'} flag is given
+ *     If <i>x</i> is positive or zero and the {@code '+'} flag is given
  *     then the result will begin with {@code '+'} (<tt>'&#92;u002b'</tt>).
  *
- *     <p> If the {@code '#'} flag is given then the output will always begin
+ *     If the {@code '#'} flag is given then the output will always begin
  *     with {@code '0'} prefix.
  *
- *     <p> If the {@code '0'} flag is given then the output will be padded
+ *     If the {@code '0'} flag is given then the output will be padded
  *     with leading zeros to the field width following any indication of sign.
  *
- *     <p> If the {@code ','} flag is given then a {@link
+ *     If the {@code ','} flag is given then a {@link
  *     FormatFlagsConversionMismatchException} will be thrown.
  *
  * <tr><td valign="top"> {@code 'x'}
@@ -1092,23 +1092,23 @@ import sun.misc.FormattedFloatingDecimal;
  *     <td> Requires the output to be formatted as an integer in base
  *     sixteen.  No localization is applied.
  *
- *     <p> If <i>x</i> is negative then the result will be a signed value
+ *     If <i>x</i> is negative then the result will be a signed value
  *     beginning with {@code '-'} (<tt>'&#92;u002d'</tt>).  Signed output is
  *     allowed for this type because unlike the primitive types it is not
  *     possible to create an unsigned equivalent without assuming an explicit
  *     data-type size.
  *
- *     <p> If <i>x</i> is positive or zero and the {@code '+'} flag is given
+ *     If <i>x</i> is positive or zero and the {@code '+'} flag is given
  *     then the result will begin with {@code '+'} (<tt>'&#92;u002b'</tt>).
  *
- *     <p> If the {@code '#'} flag is given then the output will always begin
+ *     If the {@code '#'} flag is given then the output will always begin
  *     with the radix indicator {@code "0x"}.
  *
- *     <p> If the {@code '0'} flag is given then the output will be padded to
+ *     If the {@code '0'} flag is given then the output will be padded to
  *     the field width with leading zeros after the radix indicator or sign (if
  *     present).
  *
- *     <p> If the {@code ','} flag is given then a {@link
+ *     If the {@code ','} flag is given then a {@link
  *     FormatFlagsConversionMismatchException} will be thrown.
  *
  * <tr><td valign="top"> {@code 'X'}
@@ -1121,31 +1121,31 @@ import sun.misc.FormattedFloatingDecimal;
  *
  * </table>
  *
- * <p> If the conversion is {@code 'o'}, {@code 'x'}, or {@code 'X'} and
+ * If the conversion is {@code 'o'}, {@code 'x'}, or {@code 'X'} and
  * both the {@code '#'} and the {@code '0'} flags are given, then result will
  * contain the base indicator ({@code '0'} for octal and {@code "0x"} or
  * {@code "0X"} for hexadecimal), some number of zeros (based on the width),
  * and the value.
  *
- * <p> If the {@code '0'} flag is given and the value is negative, then the
+ * If the {@code '0'} flag is given and the value is negative, then the
  * zero padding will occur after the sign.
  *
- * <p> If the {@code '-'} flag is not given, then the space padding will occur
+ * If the {@code '-'} flag is not given, then the space padding will occur
  * before the sign.
  *
- * <p> All <a href="#intFlags">flags</a> defined for Byte, Short, Integer, and
+ * All <a href="#intFlags">flags</a> defined for Byte, Short, Integer, and
  * Long apply.  The <a href="#intdFlags">default behavior</a> when no flags are
  * given is the same as for Byte, Short, Integer, and Long.
  *
- * <p> The specification of <a href="#intWidth">width</a> is the same as
+ * The specification of <a href="#intWidth">width</a> is the same as
  * defined for Byte, Short, Integer, and Long.
  *
- * <p> The precision is not applicable.  If precision is specified then an
+ * The precision is not applicable.  If precision is specified then an
  * {@link IllegalFormatPrecisionException} will be thrown.
  *
  * <p><a name="dndec"><b> Float and Double</b></a>
  *
- * <p> The following conversions may be applied to {@code float}, {@link
+ * The following conversions may be applied to {@code float}, {@link
  * Float}, {@code double} and {@link Double}.
  *
  * <table cellpadding=5 summary="floatConv">
@@ -1156,25 +1156,25 @@ import sun.misc.FormattedFloatingDecimal;
  *     name="scientific">computerized scientific notation</a>.  The <a
  *     href="#L10nAlgorithm">localization algorithm</a> is applied.
  *
- *     <p> The formatting of the magnitude <i>m</i> depends upon its value.
+ *     The formatting of the magnitude <i>m</i> depends upon its value.
  *
- *     <p> If <i>m</i> is NaN or infinite, the literal strings "NaN" or
+ *     If <i>m</i> is NaN or infinite, the literal strings "NaN" or
  *     "Infinity", respectively, will be output.  These values are not
  *     localized.
  *
- *     <p> If <i>m</i> is positive-zero or negative-zero, then the exponent
+ *     If <i>m</i> is positive-zero or negative-zero, then the exponent
  *     will be {@code "+00"}.
  *
- *     <p> Otherwise, the result is a string that represents the sign and
+ *     Otherwise, the result is a string that represents the sign and
  *     magnitude (absolute value) of the argument.  The formatting of the sign
  *     is described in the <a href="#L10nAlgorithm">localization
  *     algorithm</a>. The formatting of the magnitude <i>m</i> depends upon its
  *     value.
  *
- *     <p> Let <i>n</i> be the unique integer such that 10<sup><i>n</i></sup>
- *     &lt;= <i>m</i> &lt; 10<sup><i>n</i>+1</sup>; then let <i>a</i> be the
+ *     Let <i>n</i> be the unique integer such that 10<sup><i>n</i></sup>
+ *     <= <i>m</i> < 10<sup><i>n</i>+1</sup>; then let <i>a</i> be the
  *     mathematically exact quotient of <i>m</i> and 10<sup><i>n</i></sup> so
- *     that 1 &lt;= <i>a</i> &lt; 10. The magnitude is then represented as the
+ *     that 1 <= <i>a</i> < 10. The magnitude is then represented as the
  *     integer part of <i>a</i>, as a single decimal digit, followed by the
  *     decimal separator followed by decimal digits representing the fractional
  *     part of <i>a</i>, followed by the exponent symbol {@code 'e'}
@@ -1183,7 +1183,7 @@ import sun.misc.FormattedFloatingDecimal;
  *     method {@link Long#toString(long, int)}, and zero-padded to include at
  *     least two digits.
  *
- *     <p> The number of digits in the result for the fractional part of
+ *     The number of digits in the result for the fractional part of
  *     <i>m</i> or <i>a</i> is equal to the precision.  If the precision is not
  *     specified then the default value is {@code 6}. If the precision is less
  *     than the number of digits which would appear after the decimal point in
@@ -1209,23 +1209,23 @@ import sun.misc.FormattedFloatingDecimal;
  *     as described below. The <a href="#L10nAlgorithm">localization
  *     algorithm</a> is applied.
  *
- *     <p> After rounding for the precision, the formatting of the resulting
+ *     After rounding for the precision, the formatting of the resulting
  *     magnitude <i>m</i> depends on its value.
  *
- *     <p> If <i>m</i> is greater than or equal to 10<sup>-4</sup> but less
+ *     If <i>m</i> is greater than or equal to 10<sup>-4</sup> but less
  *     than 10<sup>precision</sup> then it is represented in <i><a
  *     href="#decimal">decimal format</a></i>.
  *
- *     <p> If <i>m</i> is less than 10<sup>-4</sup> or greater than or equal to
+ *     If <i>m</i> is less than 10<sup>-4</sup> or greater than or equal to
  *     10<sup>precision</sup>, then it is represented in <i><a
  *     href="#scientific">computerized scientific notation</a></i>.
  *
- *     <p> The total number of significant digits in <i>m</i> is equal to the
+ *     The total number of significant digits in <i>m</i> is equal to the
  *     precision.  If the precision is not specified, then the default value is
  *     {@code 6}.  If the precision is {@code 0}, then it is taken to be
  *     {@code 1}.
  *
- *     <p> If the {@code '#'} flag is given then an {@link
+ *     If the {@code '#'} flag is given then an {@link
  *     FormatFlagsConversionMismatchException} will be thrown.
  *
  * <tr><td valign="top"> {@code 'G'}
@@ -1238,21 +1238,21 @@ import sun.misc.FormattedFloatingDecimal;
  *     format</a>.  The <a href="#L10nAlgorithm">localization algorithm</a> is
  *     applied.
  *
- *     <p> The result is a string that represents the sign and magnitude
+ *     The result is a string that represents the sign and magnitude
  *     (absolute value) of the argument.  The formatting of the sign is
  *     described in the <a href="#L10nAlgorithm">localization
  *     algorithm</a>. The formatting of the magnitude <i>m</i> depends upon its
  *     value.
  *
- *     <p> If <i>m</i> NaN or infinite, the literal strings "NaN" or
+ *     If <i>m</i> NaN or infinite, the literal strings "NaN" or
  *     "Infinity", respectively, will be output.  These values are not
  *     localized.
  *
- *     <p> The magnitude is formatted as the integer part of <i>m</i>, with no
+ *     The magnitude is formatted as the integer part of <i>m</i>, with no
  *     leading zeroes, followed by the decimal separator followed by one or
  *     more decimal digits representing the fractional part of <i>m</i>.
  *
- *     <p> The number of digits in the result for the fractional part of
+ *     The number of digits in the result for the fractional part of
  *     <i>m</i> or <i>a</i> is equal to the precision.  If the precision is not
  *     specified then the default value is {@code 6}. If the precision is less
  *     than the number of digits which would appear after the decimal point in
@@ -1269,17 +1269,17 @@ import sun.misc.FormattedFloatingDecimal;
  *     <td> Requires the output to be formatted in hexadecimal exponential
  *     form.  No localization is applied.
  *
- *     <p> The result is a string that represents the sign and magnitude
+ *     The result is a string that represents the sign and magnitude
  *     (absolute value) of the argument <i>x</i>.
  *
- *     <p> If <i>x</i> is negative or a negative-zero value then the result
+ *     If <i>x</i> is negative or a negative-zero value then the result
  *     will begin with {@code '-'} (<tt>'&#92;u002d'</tt>).
  *
- *     <p> If <i>x</i> is positive or a positive-zero value and the
+ *     If <i>x</i> is positive or a positive-zero value and the
  *     {@code '+'} flag is given then the result will begin with {@code '+'}
  *     (<tt>'&#92;u002b'</tt>).
  *
- *     <p> The formatting of the magnitude <i>m</i> depends upon its value.
+ *     The formatting of the magnitude <i>m</i> depends upon its value.
  *
  *     <ul>
  *
@@ -1314,7 +1314,7 @@ import sun.misc.FormattedFloatingDecimal;
  *
  *     </ul>
  *
- *     <p> If the {@code '('} or {@code ','} flags are given, then a {@link
+ *     If the {@code '('} or {@code ','} flags are given, then a {@link
  *     FormatFlagsConversionMismatchException} will be thrown.
  *
  * <tr><td valign="top"> {@code 'A'}
@@ -1327,13 +1327,13 @@ import sun.misc.FormattedFloatingDecimal;
  *
  * </table>
  *
- * <p> All <a href="#intFlags">flags</a> defined for Byte, Short, Integer, and
+ * All <a href="#intFlags">flags</a> defined for Byte, Short, Integer, and
  * Long apply.
  *
- * <p> If the {@code '#'} flag is given, then the decimal separator will
+ * If the {@code '#'} flag is given, then the decimal separator will
  * always be present.
  *
- * <p> If no <a name="floatdFlags">flags</a> are given the default formatting
+ * If no <a name="floatdFlags">flags</a> are given the default formatting
  * is as follows:
  *
  * <ul>
@@ -1351,7 +1351,7 @@ import sun.misc.FormattedFloatingDecimal;
  *
  * </ul>
  *
- * <p> The <a name="floatDWidth">width</a> is the minimum number of characters
+ * The <a name="floatDWidth">width</a> is the minimum number of characters
  * to be written to the output.  This includes any signs, digits, grouping
  * separators, decimal separators, exponential symbol, radix indicator,
  * parentheses, and strings representing infinity and NaN as applicable.  If
@@ -1361,25 +1361,25 @@ import sun.misc.FormattedFloatingDecimal;
  * {@code '-'} flag is given then the padding will be on the right.  If width
  * is not specified then there is no minimum.
  *
- * <p> If the <a name="floatDPrec">conversion</a> is {@code 'e'},
+ * If the <a name="floatDPrec">conversion</a> is {@code 'e'},
  * {@code 'E'} or {@code 'f'}, then the precision is the number of digits
  * after the decimal separator.  If the precision is not specified, then it is
  * assumed to be {@code 6}.
  *
- * <p> If the conversion is {@code 'g'} or {@code 'G'}, then the precision is
+ * If the conversion is {@code 'g'} or {@code 'G'}, then the precision is
  * the total number of significant digits in the resulting magnitude after
  * rounding.  If the precision is not specified, then the default value is
  * {@code 6}.  If the precision is {@code 0}, then it is taken to be
  * {@code 1}.
  *
- * <p> If the conversion is {@code 'a'} or {@code 'A'}, then the precision
+ * If the conversion is {@code 'a'} or {@code 'A'}, then the precision
  * is the number of hexadecimal digits after the radix point.  If the
  * precision is not provided, then all of the digits as returned by {@link
  * Double#toHexString(double)} will be output.
  *
  * <p><a name="dnbdec"><b> BigDecimal </b></a>
  *
- * <p> The following conversions may be applied {@link java.math.BigDecimal
+ * The following conversions may be applied {@link java.math.BigDecimal
  * BigDecimal}.
  *
  * <table cellpadding=5 summary="floatConv">
@@ -1390,21 +1390,21 @@ import sun.misc.FormattedFloatingDecimal;
  *     name="bscientific">computerized scientific notation</a>.  The <a
  *     href="#L10nAlgorithm">localization algorithm</a> is applied.
  *
- *     <p> The formatting of the magnitude <i>m</i> depends upon its value.
+ *     The formatting of the magnitude <i>m</i> depends upon its value.
  *
- *     <p> If <i>m</i> is positive-zero or negative-zero, then the exponent
+ *     If <i>m</i> is positive-zero or negative-zero, then the exponent
  *     will be {@code "+00"}.
  *
- *     <p> Otherwise, the result is a string that represents the sign and
+ *     Otherwise, the result is a string that represents the sign and
  *     magnitude (absolute value) of the argument.  The formatting of the sign
  *     is described in the <a href="#L10nAlgorithm">localization
  *     algorithm</a>. The formatting of the magnitude <i>m</i> depends upon its
  *     value.
  *
- *     <p> Let <i>n</i> be the unique integer such that 10<sup><i>n</i></sup>
- *     &lt;= <i>m</i> &lt; 10<sup><i>n</i>+1</sup>; then let <i>a</i> be the
+ *     Let <i>n</i> be the unique integer such that 10<sup><i>n</i></sup>
+ *     <= <i>m</i> < 10<sup><i>n</i>+1</sup>; then let <i>a</i> be the
  *     mathematically exact quotient of <i>m</i> and 10<sup><i>n</i></sup> so
- *     that 1 &lt;= <i>a</i> &lt; 10. The magnitude is then represented as the
+ *     that 1 <= <i>a</i> < 10. The magnitude is then represented as the
  *     integer part of <i>a</i>, as a single decimal digit, followed by the
  *     decimal separator followed by decimal digits representing the fractional
  *     part of <i>a</i>, followed by the exponent symbol {@code 'e'}
@@ -1413,7 +1413,7 @@ import sun.misc.FormattedFloatingDecimal;
  *     method {@link Long#toString(long, int)}, and zero-padded to include at
  *     least two digits.
  *
- *     <p> The number of digits in the result for the fractional part of
+ *     The number of digits in the result for the fractional part of
  *     <i>m</i> or <i>a</i> is equal to the precision.  If the precision is not
  *     specified then the default value is {@code 6}.  If the precision is
  *     less than the number of digits to the right of the decimal point then
@@ -1423,7 +1423,7 @@ import sun.misc.FormattedFloatingDecimal;
  *     For a canonical representation of the value, use {@link
  *     BigDecimal#toString()}.
  *
- *     <p> If the {@code ','} flag is given, then an {@link
+ *     If the {@code ','} flag is given, then an {@link
  *     FormatFlagsConversionMismatchException} will be thrown.
  *
  * <tr><td valign="top"> {@code 'E'}
@@ -1437,23 +1437,23 @@ import sun.misc.FormattedFloatingDecimal;
  *     as described below. The <a href="#L10nAlgorithm">localization
  *     algorithm</a> is applied.
  *
- *     <p> After rounding for the precision, the formatting of the resulting
+ *     After rounding for the precision, the formatting of the resulting
  *     magnitude <i>m</i> depends on its value.
  *
- *     <p> If <i>m</i> is greater than or equal to 10<sup>-4</sup> but less
+ *     If <i>m</i> is greater than or equal to 10<sup>-4</sup> but less
  *     than 10<sup>precision</sup> then it is represented in <i><a
  *     href="#bdecimal">decimal format</a></i>.
  *
- *     <p> If <i>m</i> is less than 10<sup>-4</sup> or greater than or equal to
+ *     If <i>m</i> is less than 10<sup>-4</sup> or greater than or equal to
  *     10<sup>precision</sup>, then it is represented in <i><a
  *     href="#bscientific">computerized scientific notation</a></i>.
  *
- *     <p> The total number of significant digits in <i>m</i> is equal to the
+ *     The total number of significant digits in <i>m</i> is equal to the
  *     precision.  If the precision is not specified, then the default value is
  *     {@code 6}.  If the precision is {@code 0}, then it is taken to be
  *     {@code 1}.
  *
- *     <p> If the {@code '#'} flag is given then an {@link
+ *     If the {@code '#'} flag is given then an {@link
  *     FormatFlagsConversionMismatchException} will be thrown.
  *
  * <tr><td valign="top"> {@code 'G'}
@@ -1466,17 +1466,17 @@ import sun.misc.FormattedFloatingDecimal;
  *     format</a>.  The <a href="#L10nAlgorithm">localization algorithm</a> is
  *     applied.
  *
- *     <p> The result is a string that represents the sign and magnitude
+ *     The result is a string that represents the sign and magnitude
  *     (absolute value) of the argument.  The formatting of the sign is
  *     described in the <a href="#L10nAlgorithm">localization
  *     algorithm</a>. The formatting of the magnitude <i>m</i> depends upon its
  *     value.
  *
- *     <p> The magnitude is formatted as the integer part of <i>m</i>, with no
+ *     The magnitude is formatted as the integer part of <i>m</i>, with no
  *     leading zeroes, followed by the decimal separator followed by one or
  *     more decimal digits representing the fractional part of <i>m</i>.
  *
- *     <p> The number of digits in the result for the fractional part of
+ *     The number of digits in the result for the fractional part of
  *     <i>m</i> or <i>a</i> is equal to the precision. If the precision is not
  *     specified then the default value is {@code 6}.  If the precision is
  *     less than the number of digits to the right of the decimal point
@@ -1488,22 +1488,22 @@ import sun.misc.FormattedFloatingDecimal;
  *
  * </table>
  *
- * <p> All <a href="#intFlags">flags</a> defined for Byte, Short, Integer, and
+ * All <a href="#intFlags">flags</a> defined for Byte, Short, Integer, and
  * Long apply.
  *
- * <p> If the {@code '#'} flag is given, then the decimal separator will
+ * If the {@code '#'} flag is given, then the decimal separator will
  * always be present.
  *
- * <p> The <a href="#floatdFlags">default behavior</a> when no flags are
+ * The <a href="#floatdFlags">default behavior</a> when no flags are
  * given is the same as for Float and Double.
  *
- * <p> The specification of <a href="#floatDWidth">width</a> and <a
+ * The specification of <a href="#floatDWidth">width</a> and <a
  * href="#floatDPrec">precision</a> is the same as defined for Float and
  * Double.
  *
  * <h4><a name="ddt">Date/Time</a></h4>
  *
- * <p> This conversion may be applied to {@code long}, {@link Long}, {@link
+ * This conversion may be applied to {@code long}, {@link Long}, {@link
  * Calendar}, {@link Date} and {@link TemporalAccessor TemporalAccessor}
  *
  * <table cellpadding=5 summary="DTConv">
@@ -1517,14 +1517,14 @@ import sun.misc.FormattedFloatingDecimal;
  *
  * </table>
  *
- * <p> The following date and time conversion character suffixes are defined
+ * The following date and time conversion character suffixes are defined
  * for the {@code 't'} and {@code 'T'} conversions.  The types are similar to
  * but not completely identical to those defined by GNU {@code date} and
  * POSIX {@code strftime(3c)}.  Additional conversion types are provided to
  * access Java-specific functionality (e.g. {@code 'L'} for milliseconds
  * within the second).
  *
- * <p> The following conversion characters are used for formatting times:
+ * The following conversion characters are used for formatting times:
  *
  * <table cellpadding=5 summary="time">
  *
@@ -1616,7 +1616,7 @@ import sun.misc.FormattedFloatingDecimal;
  *
  * </table>
  *
- * <p> The following conversion characters are used for formatting dates:
+ * The following conversion characters are used for formatting dates:
  *
  * <table cellpadding=5 summary="date">
  *
@@ -1688,7 +1688,7 @@ import sun.misc.FormattedFloatingDecimal;
  *
  * </table>
  *
- * <p> The following conversion characters are used for formatting common
+ * The following conversion characters are used for formatting common
  * date/time compositions.
  *
  * <table cellpadding=5 summary="composites">
@@ -1723,11 +1723,11 @@ import sun.misc.FormattedFloatingDecimal;
  *
  * </table>
  *
- * <p> The {@code '-'} flag defined for <a href="#dFlags">General
+ * The {@code '-'} flag defined for <a href="#dFlags">General
  * conversions</a> applies.  If the {@code '#'} flag is given, then a {@link
  * FormatFlagsConversionMismatchException} will be thrown.
  *
- * <p> The width is the minimum number of characters to
+ * The width is the minimum number of characters to
  * be written to the output.  If the length of the converted value is less than
  * the {@code width} then the output will be padded by spaces
  * (<tt>'&#92;u0020'</tt>) until the total number of characters equals width.
@@ -1735,37 +1735,37 @@ import sun.misc.FormattedFloatingDecimal;
  * then the padding will be on the right.  If width is not specified then there
  * is no minimum.
  *
- * <p> The precision is not applicable.  If the precision is specified then an
+ * The precision is not applicable.  If the precision is specified then an
  * {@link IllegalFormatPrecisionException} will be thrown.
  *
  * <h4><a name="dper">Percent</a></h4>
  *
- * <p> The conversion does not correspond to any argument.
+ * The conversion does not correspond to any argument.
  *
  * <table cellpadding=5 summary="DTConv">
  *
  * <tr><td valign="top">{@code '%'}
  *     <td> The result is a literal {@code '%'} (<tt>'&#92;u0025'</tt>)
  *
- * <p> The width is the minimum number of characters to
+ * The width is the minimum number of characters to
  * be written to the output including the {@code '%'}.  If the length of the
  * converted value is less than the {@code width} then the output will be
  * padded by spaces (<tt>'&#92;u0020'</tt>) until the total number of
  * characters equals width.  The padding is on the left.  If width is not
  * specified then just the {@code '%'} is output.
  *
- * <p> The {@code '-'} flag defined for <a href="#dFlags">General
+ * The {@code '-'} flag defined for <a href="#dFlags">General
  * conversions</a> applies.  If any other flags are provided, then a
  * {@link FormatFlagsConversionMismatchException} will be thrown.
  *
- * <p> The precision is not applicable.  If the precision is specified an
+ * The precision is not applicable.  If the precision is specified an
  * {@link IllegalFormatPrecisionException} will be thrown.
  *
  * </table>
  *
  * <h4><a name="dls">Line Separator</a></h4>
  *
- * <p> The conversion does not correspond to any argument.
+ * The conversion does not correspond to any argument.
  *
  * <table cellpadding=5 summary="DTConv">
  *
@@ -1775,13 +1775,13 @@ import sun.misc.FormattedFloatingDecimal;
  *
  * </table>
  *
- * <p> Flags, width, and precision are not applicable.  If any are provided an
+ * Flags, width, and precision are not applicable.  If any are provided an
  * {@link IllegalFormatFlagsException}, {@link IllegalFormatWidthException},
  * and {@link IllegalFormatPrecisionException}, respectively will be thrown.
  *
  * <h4><a name="dpos">Argument Index</a></h4>
  *
- * <p> Format specifiers can reference arguments in three ways:
+ * Format specifiers can reference arguments in three ways:
  *
  * <ul>
  *
@@ -1791,12 +1791,12 @@ import sun.misc.FormattedFloatingDecimal;
  * referenced by "{@code 1$}", the second by "{@code 2$}", etc.  An argument
  * may be referenced more than once.
  *
- * <p> For example:
+ * For example:
  *
  * <blockquote><pre>
  *   formatter.format("%4$s %3$s %2$s %1$s %4$s %3$s %2$s %1$s",
  *                    "a", "b", "c", "d")
- *   // -&gt; "d c b a d c b a"
+ *   // -> "d c b a d c b a"
  * </pre></blockquote>
  *
  * <li> <i>Relative indexing</i> is used when the format specifier contains a
@@ -1805,8 +1805,8 @@ import sun.misc.FormattedFloatingDecimal;
  * argument, then a {@link MissingFormatArgumentException} is thrown.
  *
  * <blockquote><pre>
- *    formatter.format("%s %s %&lt;s %&lt;s", "a", "b", "c", "d")
- *    // -&gt; "a b b b"
+ *    formatter.format("%s %s %<s %<s", "a", "b", "c", "d")
+ *    // -> "a b b b"
  *    // "c" and "d" are ignored because they are not referenced
  * </pre></blockquote>
  *
@@ -1818,30 +1818,30 @@ import sun.misc.FormattedFloatingDecimal;
  *
  * <blockquote><pre>
  *   formatter.format("%s %s %s %s", "a", "b", "c", "d")
- *   // -&gt; "a b c d"
+ *   // -> "a b c d"
  * </pre></blockquote>
  *
  * </ul>
  *
- * <p> It is possible to have a format string which uses all forms of indexing,
+ * It is possible to have a format string which uses all forms of indexing,
  * for example:
  *
  * <blockquote><pre>
- *   formatter.format("%2$s %s %&lt;s %s", "a", "b", "c", "d")
- *   // -&gt; "b a a b"
+ *   formatter.format("%2$s %s %<s %s", "a", "b", "c", "d")
+ *   // -> "b a a b"
  *   // "c" and "d" are ignored because they are not referenced
  * </pre></blockquote>
  *
- * <p> The maximum number of arguments is limited by the maximum dimension of a
+ * The maximum number of arguments is limited by the maximum dimension of a
  * Java array as defined by
  * <cite>The Java&trade; Virtual Machine Specification</cite>.
  * If the argument index is does not correspond to an
  * available argument, then a {@link MissingFormatArgumentException} is thrown.
  *
- * <p> If there are more arguments than format specifiers, the extra arguments
+ * If there are more arguments than format specifiers, the extra arguments
  * are ignored.
  *
- * <p> Unless otherwise specified, passing a {@code null} argument to any
+ * Unless otherwise specified, passing a {@code null} argument to any
  * method or constructor in this class will cause a {@link
  * NullPointerException} to be thrown.
  *
@@ -1902,7 +1902,7 @@ public final class Formatter implements Closeable, Flushable {
     /**
      * Constructs a new formatter.
      *
-     * <p> The destination of the formatted output is a {@link StringBuilder}
+     * The destination of the formatted output is a {@link StringBuilder}
      * which may be retrieved by invoking {@link #out out()} and whose
      * current content may be converted into a string by invoking {@link
      * #toString toString()}.  The locale used is the {@linkplain
@@ -1917,7 +1917,7 @@ public final class Formatter implements Closeable, Flushable {
     /**
      * Constructs a new formatter with the specified destination.
      *
-     * <p> The locale used is the {@linkplain
+     * The locale used is the {@linkplain
      * Locale#getDefault(Locale.Category) default locale} for
      * {@linkplain Locale.Category#FORMAT formatting} for this instance of the Java
      * virtual machine.
@@ -1933,7 +1933,7 @@ public final class Formatter implements Closeable, Flushable {
     /**
      * Constructs a new formatter with the specified locale.
      *
-     * <p> The destination of the formatted output is a {@link StringBuilder}
+     * The destination of the formatted output is a {@link StringBuilder}
      * which may be retrieved by invoking {@link #out out()} and whose current
      * content may be converted into a string by invoking {@link #toString
      * toString()}.
@@ -1966,11 +1966,11 @@ public final class Formatter implements Closeable, Flushable {
     /**
      * Constructs a new formatter with the specified file name.
      *
-     * <p> The charset used is the {@linkplain
+     * The charset used is the {@linkplain
      * java.nio.charset.Charset#defaultCharset() default charset} for this
      * instance of the Java virtual machine.
      *
-     * <p> The locale used is the {@linkplain
+     * The locale used is the {@linkplain
      * Locale#getDefault(Locale.Category) default locale} for
      * {@linkplain Locale.Category#FORMAT formatting} for this instance of the Java
      * virtual machine.
@@ -2000,7 +2000,7 @@ public final class Formatter implements Closeable, Flushable {
     /**
      * Constructs a new formatter with the specified file name and charset.
      *
-     * <p> The locale used is the {@linkplain
+     * The locale used is the {@linkplain
      * Locale#getDefault(Locale.Category) default locale} for
      * {@linkplain Locale.Category#FORMAT formatting} for this instance of the Java
      * virtual machine.
@@ -2077,11 +2077,11 @@ public final class Formatter implements Closeable, Flushable {
     /**
      * Constructs a new formatter with the specified file.
      *
-     * <p> The charset used is the {@linkplain
+     * The charset used is the {@linkplain
      * java.nio.charset.Charset#defaultCharset() default charset} for this
      * instance of the Java virtual machine.
      *
-     * <p> The locale used is the {@linkplain
+     * The locale used is the {@linkplain
      * Locale#getDefault(Locale.Category) default locale} for
      * {@linkplain Locale.Category#FORMAT formatting} for this instance of the Java
      * virtual machine.
@@ -2111,7 +2111,7 @@ public final class Formatter implements Closeable, Flushable {
     /**
      * Constructs a new formatter with the specified file and charset.
      *
-     * <p> The locale used is the {@linkplain
+     * The locale used is the {@linkplain
      * Locale#getDefault(Locale.Category) default locale} for
      * {@linkplain Locale.Category#FORMAT formatting} for this instance of the Java
      * virtual machine.
@@ -2188,12 +2188,12 @@ public final class Formatter implements Closeable, Flushable {
     /**
      * Constructs a new formatter with the specified print stream.
      *
-     * <p> The locale used is the {@linkplain
+     * The locale used is the {@linkplain
      * Locale#getDefault(Locale.Category) default locale} for
      * {@linkplain Locale.Category#FORMAT formatting} for this instance of the Java
      * virtual machine.
      *
-     * <p> Characters are written to the given {@link java.io.PrintStream
+     * Characters are written to the given {@link java.io.PrintStream
      * PrintStream} object and are therefore encoded using that object's
      * charset.
      *
@@ -2208,11 +2208,11 @@ public final class Formatter implements Closeable, Flushable {
     /**
      * Constructs a new formatter with the specified output stream.
      *
-     * <p> The charset used is the {@linkplain
+     * The charset used is the {@linkplain
      * java.nio.charset.Charset#defaultCharset() default charset} for this
      * instance of the Java virtual machine.
      *
-     * <p> The locale used is the {@linkplain
+     * The locale used is the {@linkplain
      * Locale#getDefault(Locale.Category) default locale} for
      * {@linkplain Locale.Category#FORMAT formatting} for this instance of the Java
      * virtual machine.
@@ -2230,7 +2230,7 @@ public final class Formatter implements Closeable, Flushable {
      * Constructs a new formatter with the specified output stream and
      * charset.
      *
-     * <p> The locale used is the {@linkplain
+     * The locale used is the {@linkplain
      * Locale#getDefault(Locale.Category) default locale} for
      * {@linkplain Locale.Category#FORMAT formatting} for this instance of the Java
      * virtual machine.
@@ -2290,7 +2290,7 @@ public final class Formatter implements Closeable, Flushable {
     /**
      * Returns the locale set by the construction of this formatter.
      *
-     * <p> The {@link #format(java.util.Locale,String,Object...) format} method
+     * The {@link #format(java.util.Locale,String,Object...) format} method
      * for this object which has a locale argument does not change this value.
      *
      * @return  {@code null} if no localization is applied, otherwise a
@@ -2328,16 +2328,16 @@ public final class Formatter implements Closeable, Flushable {
      *   Formatter f = new Formatter();
      *   f.format("Last reboot at %tc", lastRebootDate);
      *   String s = f.toString();
-     *   // -&gt; s == "Last reboot at Sat Jan 01 00:00:00 PST 2000"
+     *   // -> s == "Last reboot at Sat Jan 01 00:00:00 PST 2000"
      * </pre></blockquote>
      *
-     * <p> An invocation of this method behaves in exactly the same way as the
+     * An invocation of this method behaves in exactly the same way as the
      * invocation
      *
      * <pre>
      *     out().toString() </pre>
      *
-     * <p> Depending on the specification of {@code toString} for the {@link
+     * Depending on the specification of {@code toString} for the {@link
      * Appendable}, the returned string may or may not contain the characters
      * written to the destination.  For instance, buffers typically return
      * their contents in {@code toString()}, but streams cannot since the
@@ -2359,7 +2359,7 @@ public final class Formatter implements Closeable, Flushable {
      * Flushes this formatter.  If the destination implements the {@link
      * java.io.Flushable} interface, its {@code flush} method will be invoked.
      *
-     * <p> Flushing a formatter writes any buffered output in the destination
+     * Flushing a formatter writes any buffered output in the destination
      * to the underlying stream.
      *
      * @throws  FormatterClosedException
@@ -2381,11 +2381,11 @@ public final class Formatter implements Closeable, Flushable {
      * Closes this formatter.  If the destination implements the {@link
      * java.io.Closeable} interface, its {@code close} method will be invoked.
      *
-     * <p> Closing a formatter allows it to release resources it may be holding
+     * Closing a formatter allows it to release resources it may be holding
      * (such as open files).  If the formatter is already closed, then invoking
      * this method has no effect.
      *
-     * <p> Attempting to invoke any methods except {@link #ioException()} in
+     * Attempting to invoke any methods except {@link #ioException()} in
      * this formatter after it has been closed will result in a {@link
      * FormatterClosedException}.
      */
@@ -2411,7 +2411,7 @@ public final class Formatter implements Closeable, Flushable {
      * Returns the {@code IOException} last thrown by this formatter's {@link
      * Appendable}.
      *
-     * <p> If the destination's {@code append()} method never throws
+     * If the destination's {@code append()} method never throws
      * {@code IOException}, then this method will always return {@code null}.
      *
      * @return  The last exception thrown by the Appendable or {@code null} if

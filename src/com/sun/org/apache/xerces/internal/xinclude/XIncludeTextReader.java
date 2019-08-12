@@ -44,8 +44,8 @@ import com.sun.org.apache.xerces.internal.xni.XMLString;
 import com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource;
 
 /**
- * This class is used for reading resources requested in &lt;include&gt; elements,
- * when the parse attribute of the &lt;include&gt; element is "text".  Using this
+ * This class is used for reading resources requested in <include> elements,
+ * when the parse attribute of the <include> element is "text".  Using this
  * class will open the location, detect the encoding, and discard the byte order
  * mark, if applicable.
  *

@@ -70,7 +70,7 @@ import java.math.BigInteger;
  * Otherwise, the value is <code>Transparency.TRANSLUCENT</code>, indicating
  * that some valid color has an alpha component that is
  * neither completely transparent nor completely opaque
- * (0.0 &lt; alpha &lt; 1.0).
+ * (0.0 < alpha < 1.0).
  * </a>
  *
  * <p>

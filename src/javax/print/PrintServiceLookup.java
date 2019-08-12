@@ -128,7 +128,7 @@ public abstract class PrintServiceLookup {
     /**
      * Locates MultiDoc print Services capable of printing MultiDocs
      * containing all the specified doc flavors.
-     * <P> This method is useful to help locate a service that can print
+     * This method is useful to help locate a service that can print
      * a <code>MultiDoc</code> in which the elements may be different
      * flavors. An application could perform this itself by multiple lookups
      * on each <code>DocFlavor</code> in turn and collating the results,

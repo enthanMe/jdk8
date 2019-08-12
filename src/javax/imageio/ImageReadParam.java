@@ -33,7 +33,7 @@ import java.awt.image.BufferedImage;
  * this class or its subclasses are used to supply prescriptive
  * "how-to" information to instances of <code>ImageReader</code>.
  *
- * <p> An image encoded as part of a file or stream may be thought of
+ * An image encoded as part of a file or stream may be thought of
  * extending out in multiple dimensions: the spatial dimensions of
  * width and height, a number of bands, and a number of progressive
  * decoding passes.  This class allows a contiguous (hyper)rectangular
@@ -45,7 +45,7 @@ import java.awt.image.BufferedImage;
  * providing a <code>BufferedImage</code> or by using an
  * <code>ImageTypeSpecifier</code>.
  *
- * <p> An <code>ImageReadParam</code> object is used to specify how an
+ * An <code>ImageReadParam</code> object is used to specify how an
  * image, or a set of images, will be converted on input from
  * a stream in the context of the Java Image I/O framework.  A plug-in for a
  * specific image format will return instances of
@@ -53,7 +53,7 @@ import java.awt.image.BufferedImage;
  * <code>getDefaultReadParam</code> method of its
  * <code>ImageReader</code> implementation.
  *
- * <p> The state maintained by an instance of
+ * The state maintained by an instance of
  * <code>ImageReadParam</code> is independent of any particular image
  * being decoded.  When actual decoding takes place, the values set in
  * the read param are combined with the actual properties of the image
@@ -66,7 +66,7 @@ import java.awt.image.BufferedImage;
  * resulting rectangle intersected with the actual valid destination
  * area to yield the destination area that will be written.
  *
- * <p> The parameters specified by an <code>ImageReadParam</code> are
+ * The parameters specified by an <code>ImageReadParam</code> are
  * applied to an image as follows.  First, if a rendering size has
  * been set by <code>setSourceRenderSize</code>, the entire decoded
  * image is rendered at the size given by
@@ -74,11 +74,11 @@ import java.awt.image.BufferedImage;
  * natural size given by <code>ImageReader.getWidth</code> and
  * <code>ImageReader.getHeight</code>.
  *
- * <p> Next, the image is clipped against the source region
+ * Next, the image is clipped against the source region
  * specified by <code>getSourceXOffset</code>, <code>getSourceYOffset</code>,
  * <code>getSourceWidth</code>, and <code>getSourceHeight</code>.
  *
- * <p> The resulting region is then subsampled according to the
+ * The resulting region is then subsampled according to the
  * factors given in {@link IIOParam#setSourceSubsampling
  * IIOParam.setSourceSubsampling}.  The first pixel,
  * the number of pixels per row, and the number of rows all depend
@@ -87,7 +87,7 @@ import java.awt.image.BufferedImage;
  * (<code>minX</code>, <code>minY</code>), its width <code>w</code>
  * and its height <code>h</code>.
  *
- * <p> This rectangle is offset by
+ * This rectangle is offset by
  * (<code>getDestinationOffset().x</code>,
  * <code>getDestinationOffset().y</code>) and clipped against the
  * destination bounds.  If no destination image has been set, the
@@ -97,17 +97,17 @@ import java.awt.image.BufferedImage;
  * that all pixels of the source region may be written to the
  * destination.
  *
- * <p> Pixels that land, after subsampling, within the destination
+ * Pixels that land, after subsampling, within the destination
  * image, and that are written in one of the progressive passes
  * specified by <code>getSourceMinProgressivePass</code> and
  * <code>getSourceNumProgressivePasses</code> are passed along to the
  * next step.
  *
- * <p> Finally, the source samples of each pixel are mapped into
+ * Finally, the source samples of each pixel are mapped into
  * destination bands according to the algorithm described in the
  * comment for <code>setDestinationBands</code>.
  *
- * <p> Plug-in writers may extend the functionality of
+ * Plug-in writers may extend the functionality of
  * <code>ImageReadParam</code> by providing a subclass that implements
  * additional, plug-in specific interfaces.  It is up to the plug-in
  * to document what interfaces are available and how they are to be
@@ -117,7 +117,7 @@ import java.awt.image.BufferedImage;
  * disable when creating their own <code>ImageReadParam</code>
  * instances via <code>getDefaultReadParam</code>.
  *
- * <p> Note that unless a query method exists for a capability, it must
+ * Note that unless a query method exists for a capability, it must
  * be supported by all <code>ImageReader</code> implementations
  * (<i>e.g.</i> source render size is optional, but subsampling must be
  * supported).
@@ -135,7 +135,7 @@ public class ImageReadParam extends IIOParam {
      * value is <code>false</code>.  Subclasses must set this value
      * manually.
      *
-     * <p> <code>ImageReader</code>s that do not support setting of
+     * <code>ImageReader</code>s that do not support setting of
      * the source render size should set this value to
      * <code>false</code>.
      */
@@ -146,7 +146,7 @@ public class ImageReadParam extends IIOParam {
      * <code>canSetSourceRenderSize</code> is <code>true</code>, or
      * <code>null</code>.
      *
-     * <p> <code>ImageReader</code>s that do not support setting of
+     * <code>ImageReader</code>s that do not support setting of
      * the source render size may ignore this value.
      */
     protected Dimension sourceRenderSize = null;
@@ -171,7 +171,7 @@ public class ImageReadParam extends IIOParam {
      * that passes starting with the first available pass should be
      * decoded.
      *
-     * <p> Subclasses should ensure that this value is
+     * Subclasses should ensure that this value is
      * non-negative.
      */
     protected int minProgressivePass = 0;
@@ -182,7 +182,7 @@ public class ImageReadParam extends IIOParam {
      * <code>Integer.MAX_VALUE</code>, which indicates that passes up
      * to and including the last available pass should be decoded.
      *
-     * <p> Subclasses should ensure that this value is positive.
+     * Subclasses should ensure that this value is positive.
      * Additionally, if the value is not
      * <code>Integer.MAX_VALUE</code>, then <code>minProgressivePass +
      * numProgressivePasses - 1</code> should not exceed
@@ -208,15 +208,15 @@ public class ImageReadParam extends IIOParam {
      * <code>readAll</code>, and <code>readRaster</code> methods, and
      * a reference to it will be returned by those methods.
      *
-     * <p> Pixel data from the aforementioned methods will be written
+     * Pixel data from the aforementioned methods will be written
      * starting at the offset specified by
      * <code>getDestinationOffset</code>.
      *
-     * <p> If <code>destination</code> is <code>null</code>, a
+     * If <code>destination</code> is <code>null</code>, a
      * newly-created <code>BufferedImage</code> will be returned by
      * those methods.
      *
-     * <p> At the time of reading, the image is checked to verify that
+     * At the time of reading, the image is checked to verify that
      * its <code>ColorModel</code> and <code>SampleModel</code>
      * correspond to one of the <code>ImageTypeSpecifier</code>s
      * returned from the <code>ImageReader</code>'s
@@ -249,10 +249,10 @@ public class ImageReadParam extends IIOParam {
      * Sets the indices of the destination bands where data
      * will be placed.  Duplicate indices are not allowed.
      *
-     * <p> A <code>null</code> value indicates that all destination
+     * A <code>null</code> value indicates that all destination
      * bands will be used.
      *
-     * <p> Choosing a destination band subset will not affect the
+     * Choosing a destination band subset will not affect the
      * number of bands in the output image of a read if no destination
      * image is specified; the created destination image will still
      * have the same number of bands as if this method had never been
@@ -260,7 +260,7 @@ public class ImageReadParam extends IIOParam {
      * image is desired, an image must be supplied using the
      * <code>ImageReadParam.setDestination</code> method.
      *
-     * <p> At the time of reading or writing, an
+     * At the time of reading or writing, an
      * <code>IllegalArgumentException</code> will be thrown by the
      * reader or writer if a value larger than the largest destination
      * band index has been specified, or if the number of source bands
@@ -344,16 +344,16 @@ public class ImageReadParam extends IIOParam {
      * tiled the tile width and height are given in terms of the default
      * size.
      *
-     * <p> Typically, the width and height should be chosen such that
+     * Typically, the width and height should be chosen such that
      * the ratio of width to height closely approximates the aspect
      * ratio of the image, as returned from
      * <code>ImageReader.getAspectRatio</code>.
      *
-     * <p> If this plug-in does not allow the rendering size to be
+     * If this plug-in does not allow the rendering size to be
      * set, an <code>UnsupportedOperationException</code> will be
      * thrown.
      *
-     * <p> To remove the render size setting, pass in a value of
+     * To remove the render size setting, pass in a value of
      * <code>null</code> for <code>size</code>.
      *
      * @param size a <code>Dimension</code> indicating the desired
@@ -406,26 +406,26 @@ public class ImageReadParam extends IIOParam {
      * Sets the range of progressive passes that will be decoded.
      * Passes outside of this range will be ignored.
      *
-     * <p> A progressive pass is a re-encoding of the entire image,
+     * A progressive pass is a re-encoding of the entire image,
      * generally at progressively higher effective resolutions, but
      * requiring greater transmission bandwidth.  The most common use
      * of progressive encoding is found in the JPEG format, where
      * successive passes include more detailed representations of the
      * high-frequency image content.
      *
-     * <p> The actual number of passes to be decoded is determined
+     * The actual number of passes to be decoded is determined
      * during decoding, based on the number of actual passes available
      * in the stream.  Thus if <code>minPass + numPasses - 1</code> is
      * larger than the index of the last available passes, decoding
      * will end with that pass.
      *
-     * <p> A value of <code>numPasses</code> of
+     * A value of <code>numPasses</code> of
      * <code>Integer.MAX_VALUE</code> indicates that all passes from
      * <code>minPass</code> forward should be read.  Otherwise, the
      * index of the last pass (<i>i.e.</i>, <code>minPass + numPasses
      * - 1</code>) must not exceed <code>Integer.MAX_VALUE</code>.
      *
-     * <p> There is no <code>unsetSourceProgressivePasses</code>
+     * There is no <code>unsetSourceProgressivePasses</code>
      * method; the same effect may be obtained by calling
      * <code>setSourceProgressivePasses(0, Integer.MAX_VALUE)</code>.
      *

@@ -255,7 +255,7 @@ public class KeyStoreLoginModule implements LoginModule {
     /**
      * Authenticate the user.
      *
-     * <p> Get the Keystore alias and relevant passwords.
+     * Get the Keystore alias and relevant passwords.
      * Retrieve the alias's principal and credentials from the Keystore.
      *
      * <p>
@@ -712,12 +712,12 @@ public class KeyStoreLoginModule implements LoginModule {
     /**
      * Abstract method to commit the authentication process (phase 2).
      *
-     * <p> This method is called if the LoginContext's
+     * This method is called if the LoginContext's
      * overall authentication succeeded
      * (the relevant REQUIRED, REQUISITE, SUFFICIENT and OPTIONAL LoginModules
      * succeeded).
      *
-     * <p> If this LoginModule's own authentication attempt
+     * If this LoginModule's own authentication attempt
      * succeeded (checked by retrieving the private state saved by the
      * <code>login</code> method), then this method associates a
      * <code>X500Principal</code> for the subject distinguished name of the
@@ -774,17 +774,17 @@ public class KeyStoreLoginModule implements LoginModule {
     }
 
     /**
-     * <p> This method is called if the LoginContext's
+     * This method is called if the LoginContext's
      * overall authentication failed.
      * (the relevant REQUIRED, REQUISITE, SUFFICIENT and OPTIONAL LoginModules
      * did not succeed).
      *
-     * <p> If this LoginModule's own authentication attempt
+     * If this LoginModule's own authentication attempt
      * succeeded (checked by retrieving the private state saved by the
      * <code>login</code> and <code>commit</code> methods),
      * then this method cleans up any state that was originally saved.
      *
-     * <p> If the loaded KeyStore's provider extends
+     * If the loaded KeyStore's provider extends
      * <code>java.security.AuthProvider</code>,
      * then the provider's <code>logout</code> method is invoked.
      *
@@ -814,10 +814,10 @@ public class KeyStoreLoginModule implements LoginModule {
     /**
      * Logout a user.
      *
-     * <p> This method removes the Principals, public credentials and the
+     * This method removes the Principals, public credentials and the
      * private credentials that were added by the <code>commit</code> method.
      *
-     * <p> If the loaded KeyStore's provider extends
+     * If the loaded KeyStore's provider extends
      * <code>java.security.AuthProvider</code>,
      * then the provider's <code>logout</code> method is invoked.
      *

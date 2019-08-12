@@ -33,7 +33,7 @@ import javax.swing.text.*;
 import javax.swing.event.*;
 
 /**
- * View of an Image, intended to support the HTML &lt;IMG&gt; tag.
+ * View of an Image, intended to support the HTML <IMG> tag.
  * Supports scaling via the HEIGHT and WIDTH attributes of the tag.
  * If the image is unable to be loaded any text specified via the
  * <code>ALT</code> attribute will be rendered.
@@ -554,8 +554,8 @@ public class ImageView extends View {
      * Sets the size of the view.  This should cause
      * layout of the view if it has any layout duties.
      *
-     * @param width the width &gt;= 0
-     * @param height the height &gt;= 0
+     * @param width the width >= 0
+     * @param height the height >= 0
      */
     public void setSize(float width, float height) {
         sync();

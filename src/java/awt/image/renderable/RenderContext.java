@@ -46,13 +46,13 @@ import java.awt.image.*;
  * resolution at which the rendering is to be performed, and hints
  * used to control the rendering process.
  *
- * <p> Users create RenderContexts and pass them to the
+ * Users create RenderContexts and pass them to the
  * RenderableImage via the createRendering method.  Most of the methods of
  * RenderContexts are not meant to be used directly by applications,
  * but by the RenderableImage and operator classes to which it is
  * passed.
  *
- * <p> The AffineTransform parameter passed into and out of this class
+ * The AffineTransform parameter passed into and out of this class
  * are cloned.  The RenderingHints and Shape parameters are not
  * necessarily cloneable and are therefore only reference copied.
  * Altering RenderingHints or Shape instances that are in use by

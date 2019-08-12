@@ -79,7 +79,7 @@ import static java.lang.annotation.RetentionPolicy.*;
  * complex type with simpleContent.
  * </p>
  *
- * <p> <b> Example 1: </b> Map a class to XML Schema simpleType</p>
+ * <b> Example 1: </b> Map a class to XML Schema simpleType</p>
  *
  *   <pre>
  *
@@ -89,10 +89,10 @@ import static java.lang.annotation.RetentionPolicy.*;
  *         public java.math.BigDecimal price;
  *     }
  *
- *     &lt;!-- Example 1: XML Schema fragment -->
- *     &lt;xs:simpleType name="USPrice">
- *       &lt;xs:restriction base="xs:decimal"/>
- *     &lt;/xs:simpleType>
+ *     <!-- Example 1: XML Schema fragment -->
+ *     <xs:simpleType name="USPrice">
+ *       <xs:restriction base="xs:decimal"/>
+ *     </xs:simpleType>
  *
  *   </pre>
  *
@@ -110,14 +110,14 @@ import static java.lang.annotation.RetentionPolicy.*;
  *       public String currency;
  *   }
  *
- *   &lt;!-- Example 2: XML Schema fragment -->
- *   &lt;xs:complexType name="InternationalPrice">
- *     &lt;xs:simpleContent>
- *       &lt;xs:extension base="xs:decimal">
- *         &lt;xs:attribute name="currency" type="xs:string"/>
- *       &lt;/xs:extension>
- *     &lt;/xs:simpleContent>
- *   &lt;/xs:complexType>
+ *   <!-- Example 2: XML Schema fragment -->
+ *   <xs:complexType name="InternationalPrice">
+ *     <xs:simpleContent>
+ *       <xs:extension base="xs:decimal">
+ *         <xs:attribute name="currency" type="xs:string"/>
+ *       </xs:extension>
+ *     </xs:simpleContent>
+ *   </xs:complexType>
  *
  *   </pre>
  * </p>

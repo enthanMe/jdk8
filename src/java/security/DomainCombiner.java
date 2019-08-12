@@ -30,7 +30,7 @@ package java.security;
  * update the ProtectionDomains associated with the current
  * {@code AccessControlContext}.
  *
- * <p> A {@code DomainCombiner} is passed as a parameter to the
+ * A {@code DomainCombiner} is passed as a parameter to the
  * appropriate constructor for {@code AccessControlContext}.
  * The newly constructed context is then passed to the
  * {@code AccessController.doPrivileged(..., context)} method
@@ -40,7 +40,7 @@ package java.security;
  * {@code AccessController.checkPermission}
  * cause the {@code DomainCombiner.combine} to get invoked.
  *
- * <p> The combine method takes two arguments.  The first argument represents
+ * The combine method takes two arguments.  The first argument represents
  * an array of ProtectionDomains from the current execution Thread,
  * since the most recent call to {@code AccessController.doPrivileged}.
  * If no call to doPrivileged was made, then the first argument will contain
@@ -56,7 +56,7 @@ package java.security;
  * was to doPrivileged(action), then there is no privileged context,
  * and the second argument will be {@code null}.
  *
- * <p> The {@code combine} method investigates the two input arrays
+ * The {@code combine} method investigates the two input arrays
  * of ProtectionDomains and returns a single array containing the updated
  * ProtectionDomains.  In the simplest case, the {@code combine}
  * method merges the two stacks into one.  In more complex cases,
@@ -68,7 +68,7 @@ package java.security;
  * {@code combine} method bases its updates on the information
  * encapsulated in the {@code DomainCombiner}.
  *
- * <p> After the {@code AccessController.getContext} method
+ * After the {@code AccessController.getContext} method
  * receives the combined stack of ProtectionDomains back from
  * the {@code DomainCombiner}, it returns a new
  * AccessControlContext that has both the combined ProtectionDomains

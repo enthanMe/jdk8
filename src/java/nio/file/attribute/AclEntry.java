@@ -30,32 +30,32 @@ import java.util.*;
 /**
  * An entry in an access control list (ACL).
  *
- * <p> The ACL entry represented by this class is based on the ACL model
+ * The ACL entry represented by this class is based on the ACL model
  * specified in <a href="http://www.ietf.org/rfc/rfc3530.txt"><i>RFC&nbsp;3530:
  * Network File System (NFS) version 4 Protocol</i></a>. Each entry has four
  * components as follows:
  *
  * <ol>
- *    <li><p> The {@link #type() type} component determines if the entry
+ *    <li>The {@link #type() type} component determines if the entry
  *    grants or denies access. </p></li>
  *
- *    <li><p> The {@link #principal() principal} component, sometimes called the
+ *    <li>The {@link #principal() principal} component, sometimes called the
  *    "who" component, is a {@link UserPrincipal} corresponding to the identity
  *    that the entry grants or denies access
  *    </p></li>
  *
- *    <li><p> The {@link #permissions permissions} component is a set of
+ *    <li>The {@link #permissions permissions} component is a set of
  *    {@link AclEntryPermission permissions}
  *    </p></li>
  *
- *    <li><p> The {@link #flags flags} component is a set of {@link AclEntryFlag
+ *    <li>The {@link #flags flags} component is a set of {@link AclEntryFlag
  *    flags} to indicate how entries are inherited and propagated </p></li>
  * </ol>
  *
- * <p> ACL entries are created using an associated {@link Builder} object by
+ * ACL entries are created using an associated {@link Builder} object by
  * invoking its {@link Builder#build build} method.
  *
- * <p> ACL entries are immutable and are safe for use by multiple concurrent
+ * ACL entries are immutable and are safe for use by multiple concurrent
  * threads.
  *
  * @since 1.7
@@ -86,11 +86,11 @@ public final class AclEntry {
     /**
      * A builder of {@link AclEntry} objects.
      *
-     * <p> A {@code Builder} object is obtained by invoking one of the {@link
+     * A {@code Builder} object is obtained by invoking one of the {@link
      * AclEntry#newBuilder newBuilder} methods defined by the {@code AclEntry}
      * class.
      *
-     * <p> Builder objects are mutable and are not safe for use by multiple
+     * Builder objects are mutable and are not safe for use by multiple
      * concurrent threads without appropriate synchronization.
      *
      * @since 1.7
@@ -301,7 +301,7 @@ public final class AclEntry {
     /**
      * Returns a copy of the permissions component.
      *
-     * <p> The returned set is a modifiable copy of the permissions.
+     * The returned set is a modifiable copy of the permissions.
      *
      * @return the permissions component
      */
@@ -312,7 +312,7 @@ public final class AclEntry {
     /**
      * Returns a copy of the flags component.
      *
-     * <p> The returned set is a modifiable copy of the flags.
+     * The returned set is a modifiable copy of the flags.
      *
      * @return the flags component
      */
@@ -323,14 +323,14 @@ public final class AclEntry {
     /**
      * Compares the specified object with this ACL entry for equality.
      *
-     * <p> If the given object is not an {@code AclEntry} then this method
+     * If the given object is not an {@code AclEntry} then this method
      * immediately returns {@code false}.
      *
-     * <p> For two ACL entries to be considered equals requires that they are
+     * For two ACL entries to be considered equals requires that they are
      * both the same type, their who components are equal, their permissions
      * components are equal, and their flags components are equal.
      *
-     * <p> This method satisfies the general contract of the {@link
+     * This method satisfies the general contract of the {@link
      * java.lang.Object#equals(Object) Object.equals} method. </p>
      *
      * @param   ob   the object to which this object is to be compared
@@ -363,7 +363,7 @@ public final class AclEntry {
     /**
      * Returns the hash-code value for this ACL entry.
      *
-     * <p> This method satisfies the general contract of the {@link
+     * This method satisfies the general contract of the {@link
      * Object#hashCode} method.
      */
     @Override

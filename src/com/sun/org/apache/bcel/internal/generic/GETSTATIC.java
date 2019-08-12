@@ -63,9 +63,9 @@ import com.sun.org.apache.bcel.internal.ExceptionConstants;
 
 /**
  * GETSTATIC - Fetch static field from class
- * <PRE>Stack: ..., -&gt; ..., value</PRE>
+ * <PRE>Stack: ..., -> ..., value</PRE>
  * OR
- * <PRE>Stack: ..., -&gt; ..., value.word1, value.word2</PRE>
+ * <PRE>Stack: ..., -> ..., value.word1, value.word2</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

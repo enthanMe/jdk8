@@ -28,7 +28,7 @@ package java.nio.channels;
 /**
  * A handler for consuming the result of an asynchronous I/O operation.
  *
- * <p> The asynchronous channels defined in this package allow a completion
+ * The asynchronous channels defined in this package allow a completion
  * handler to be specified to consume the result of an asynchronous operation.
  * The {@link #completed completed} method is invoked when the I/O operation
  * completes successfully. The {@link #failed failed} method is invoked if the

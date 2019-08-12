@@ -40,7 +40,7 @@ import sun.net.www.ParseUtil;
  * <p>The syntax of a JAR URL is:
  *
  * <pre>
- * jar:&lt;url&gt;!/{entry}
+ * jar:<url>!/{entry}
  * </pre>
  *
  * <p>for example:

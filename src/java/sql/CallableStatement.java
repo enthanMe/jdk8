@@ -39,8 +39,8 @@ import java.io.InputStream;
  * can be used for input, output or both. Parameters are referred to
  * sequentially, by number, with the first parameter being 1.
  * <PRE>
- *   {?= call &lt;procedure-name&gt;[(&lt;arg1&gt;,&lt;arg2&gt;, ...)]}
- *   {call &lt;procedure-name&gt;[(&lt;arg1&gt;,&lt;arg2&gt;, ...)]}
+ *   {?= call <procedure-name>[(<arg1>,<arg2>, ...)]}
+ *   {call <procedure-name>[(<arg1>,<arg2>, ...)]}
  * </PRE>
  * <P>
  * IN parameter values are set using the <code>set</code> methods inherited from
@@ -429,7 +429,7 @@ public interface CallableStatement extends PreparedStatement {
         throws SQLException;
 
     /**
-     * Retrieves the value of the designated JDBC <code>REF(&lt;structured-type&gt;)</code>
+     * Retrieves the value of the designated JDBC <code>REF(<structured-type>)</code>
      * parameter as a {@link java.sql.Ref} object in the Java programming language.
      * @param parameterIndex the first parameter is 1, the second is 2,
      * and so on
@@ -583,7 +583,7 @@ public interface CallableStatement extends PreparedStatement {
      *<p>
      * All OUT parameters must be registered
      * before a stored procedure is executed.
-     * <p>  For a user-defined parameter, the fully-qualified SQL
+     *  For a user-defined parameter, the fully-qualified SQL
      * type name of the parameter should also be given, while a <code>REF</code>
      * parameter requires that the fully-qualified type name of the
      * referenced type be given.  A JDBC driver that does not need the
@@ -1586,7 +1586,7 @@ public interface CallableStatement extends PreparedStatement {
       throws SQLException;
 
     /**
-     * Retrieves the value of a JDBC <code>REF(&lt;structured-type&gt;)</code>
+     * Retrieves the value of a JDBC <code>REF(<structured-type>)</code>
      * parameter as a {@link java.sql.Ref} object in the Java programming language.
      *
      * @param parameterName the name of the parameter
@@ -2659,7 +2659,7 @@ public interface CallableStatement extends PreparedStatement {
      *<p>
      * All OUT parameters must be registered
      * before a stored procedure is executed.
-     * <p>  For a user-defined parameter, the fully-qualified SQL
+     *  For a user-defined parameter, the fully-qualified SQL
      * type name of the parameter should also be given, while a {@code REF}
      * parameter requires that the fully-qualified type name of the
      * referenced type be given.  A JDBC driver that does not need the

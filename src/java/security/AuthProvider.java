@@ -32,7 +32,7 @@ import javax.security.auth.callback.CallbackHandler;
 /**
  * This class defines login and logout methods for a provider.
  *
- * <p> While callers may invoke {@code login} directly,
+ * While callers may invoke {@code login} directly,
  * the provider may also invoke {@code login} on behalf of callers
  * if it determines that a login must be performed
  * prior to certain operations.
@@ -58,7 +58,7 @@ public abstract class AuthProvider extends Provider {
     /**
      * Log in to this provider.
      *
-     * <p> The provider relies on a {@code CallbackHandler}
+     * The provider relies on a {@code CallbackHandler}
      * to obtain authentication information from the caller
      * (a PIN, for example).  If the caller passes a {@code null}
      * handler to this method, the provider uses the handler set in the
@@ -104,7 +104,7 @@ public abstract class AuthProvider extends Provider {
     /**
      * Set a {@code CallbackHandler}.
      *
-     * <p> The provider uses this handler if one is not passed to the
+     * The provider uses this handler if one is not passed to the
      * {@code login} method.  The provider also uses this handler
      * if it invokes {@code login} on behalf of callers.
      * In either case if a handler is not set via this method,

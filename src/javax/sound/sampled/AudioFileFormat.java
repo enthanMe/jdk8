@@ -180,7 +180,7 @@ public class AudioFileFormat {
      * @param format      the format of the audio data contained in the file
      * @param frameLength the audio data length in sample frames, or
      *                    <code>AudioSystem.NOT_SPECIFIED</code>
-     * @param properties  a <code>Map&lt;String,Object&gt;</code> object
+     * @param properties  a <code>Map<String,Object></code> object
      *        with properties
      *
      * @since 1.5
@@ -237,7 +237,7 @@ public class AudioFileFormat {
      * The concept of properties is further explained in
      * the {@link AudioFileFormat class description}.
      *
-     * @return a <code>Map&lt;String,Object&gt;</code> object containing
+     * @return a <code>Map<String,Object></code> object containing
      *         all properties. If no properties are recognized, an empty map is
      *         returned.
      *

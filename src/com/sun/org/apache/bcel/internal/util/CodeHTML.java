@@ -402,7 +402,7 @@ final class CodeHTML implements com.sun.org.apache.bcel.internal.Constants {
 
   /**
    * Find all target addresses in code, so that they can be marked
-   * with &lt;A NAME = ...&gt;. Target addresses are kept in an BitSet object.
+   * with <A NAME = ...>. Target addresses are kept in an BitSet object.
    */
   private final void findGotos(ByteSequence bytes, Method method, Code code)
        throws IOException

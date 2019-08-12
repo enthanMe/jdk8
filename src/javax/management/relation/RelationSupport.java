@@ -59,7 +59,7 @@ import javax.management.ReflectionException;
  * <P>It is also possible to have in a user relation MBean class a member
  * being a RelationSupport object, and to implement the required interfaces by
  * delegating all to this member.
- * <P> RelationSupport implements the Relation interface (to be handled by the
+ * RelationSupport implements the Relation interface (to be handled by the
  * Relation Service).
  * <P>It implements also the MBeanRegistration interface to be able to retrieve
  * the MBean Server where it is registered (if registered as a MBean) to access
@@ -590,7 +590,7 @@ public class RelationSupport
      * Retrieves MBeans referenced in the various roles of the relation.
      *
      * @return a HashMap mapping:
-     * <P> ObjectName {@literal ->} ArrayList of String (role names)
+     * ObjectName {@literal ->} ArrayList of String (role names)
      */
     public Map<ObjectName,List<String>> getReferencedMBeans() {
 

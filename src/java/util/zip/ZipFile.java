@@ -50,7 +50,7 @@ import static java.util.zip.ZipConstants64.*;
 /**
  * This class is used to read entries from a zip file.
  *
- * <p> Unless otherwise noted, passing a <tt>null</tt> argument to a constructor
+ * Unless otherwise noted, passing a <tt>null</tt> argument to a constructor
  * or method in this class will cause a {@link NullPointerException} to be
  * thrown.
  *
@@ -331,7 +331,7 @@ class ZipFile implements ZipConstants, Closeable {
      * Returns an input stream for reading the contents of the specified
      * zip file entry.
      *
-     * <p> Closing this ZIP file will, in turn, close all input
+     * Closing this ZIP file will, in turn, close all input
      * streams that have been returned by invocations of this method.
      *
      * @param entry the zip file entry
@@ -599,7 +599,7 @@ class ZipFile implements ZipConstants, Closeable {
 
     /**
      * Closes the ZIP file.
-     * <p> Closing this ZIP file will close all of the input streams
+     * Closing this ZIP file will close all of the input streams
      * previously returned by invocations of the {@link #getInputStream
      * getInputStream} method.
      *

@@ -92,7 +92,7 @@ public final class IDN {
      * If ToASCII operation fails, an IllegalArgumentException will be thrown.
      * In this case, the input string should not be used in an internationalized domain name.
      *
-     * <p> A label is an individual part of a domain name. The original ToASCII operation,
+     * A label is an individual part of a domain name. The original ToASCII operation,
      * as defined in RFC 3490, only operates on a single label. This method can handle
      * both label and entire domain name, by assuming that labels in a domain name are
      * always separated by dots. The following characters are recognized as dots:
@@ -135,7 +135,7 @@ public final class IDN {
      * Translates a string from Unicode to ASCII Compatible Encoding (ACE),
      * as defined by the ToASCII operation of <a href="http://www.ietf.org/rfc/rfc3490.txt">RFC 3490</a>.
      *
-     * <p> This convenience method works as if by invoking the
+     * This convenience method works as if by invoking the
      * two-argument counterpart as follows:
      * <blockquote>
      * {@link #toASCII(String, int) toASCII}(input,&nbsp;0);
@@ -158,7 +158,7 @@ public final class IDN {
      *
      * <p>ToUnicode never fails. In case of any error, the input string is returned unmodified.
      *
-     * <p> A label is an individual part of a domain name. The original ToUnicode operation,
+     * A label is an individual part of a domain name. The original ToUnicode operation,
      * as defined in RFC 3490, only operates on a single label. This method can handle
      * both label and entire domain name, by assuming that labels in a domain name are
      * always separated by dots. The following characters are recognized as dots:
@@ -196,7 +196,7 @@ public final class IDN {
      * Translates a string from ASCII Compatible Encoding (ACE) to Unicode,
      * as defined by the ToUnicode operation of <a href="http://www.ietf.org/rfc/rfc3490.txt">RFC 3490</a>.
      *
-     * <p> This convenience method works as if by invoking the
+     * This convenience method works as if by invoking the
      * two-argument counterpart as follows:
      * <blockquote>
      * {@link #toUnicode(String, int) toUnicode}(input,&nbsp;0);

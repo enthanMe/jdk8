@@ -280,14 +280,14 @@ public class XMLDecoder implements AutoCloseable {
      * created by the {@code XMLEncoder} class.
      *
      * The {@code owner} should be used if parsed XML document contains
-     * the method call within context of the &lt;java&gt; element.
+     * the method call within context of the <java> element.
      * The {@code null} value may cause illegal parsing in such case.
      * The same problem may occur, if the {@code owner} class
      * does not contain expected method to call. See details <a
      * href="http://java.sun.com/products/jfc/tsc/articles/persistence3/">here</a>.
      *
      * @param owner  the owner of the default handler
-     *               that can be used as a value of &lt;java&gt; element
+     *               that can be used as a value of <java> element
      * @param el     the exception handler for the parser,
      *               or {@code null} to use the default exception handler
      * @param cl     the class loader used for instantiating objects,

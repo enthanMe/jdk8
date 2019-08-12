@@ -424,7 +424,7 @@ public final class HTMLdtd
      * <P>
      * Unlike internal entities, character references are a string to single
      * character mapping. They are used to map non-ASCII characters both on
-     * parsing and printing, primarily for HTML documents. '&lt;amp;' is an
+     * parsing and printing, primarily for HTML documents. '<amp;' is an
      * example of a character reference.
      *
      * @param name The entity's name

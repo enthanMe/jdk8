@@ -41,21 +41,21 @@ import javax.xml.crypto.XMLStructure;
  * needed to validate an XML signature. The XML Schema Definition is defined as:
  *
  * <pre>
- * &lt;element name="KeyInfo" type="ds:KeyInfoType"/&gt;
- * &lt;complexType name="KeyInfoType" mixed="true"&gt;
- *   &lt;choice maxOccurs="unbounded"&gt;
- *     &lt;element ref="ds:KeyName"/&gt;
- *     &lt;element ref="ds:KeyValue"/&gt;
- *     &lt;element ref="ds:RetrievalMethod"/&gt;
- *     &lt;element ref="ds:X509Data"/&gt;
- *     &lt;element ref="ds:PGPData"/&gt;
- *     &lt;element ref="ds:SPKIData"/&gt;
- *     &lt;element ref="ds:MgmtData"/&gt;
- *     &lt;any processContents="lax" namespace="##other"/&gt;
- *     &lt;!-- (1,1) elements from (0,unbounded) namespaces --&gt;
- *   &lt;/choice&gt;
- *   &lt;attribute name="Id" type="ID" use="optional"/&gt;
- * &lt;/complexType&gt;
+ * <element name="KeyInfo" type="ds:KeyInfoType"/>
+ * <complexType name="KeyInfoType" mixed="true">
+ *   <choice maxOccurs="unbounded">
+ *     <element ref="ds:KeyName"/>
+ *     <element ref="ds:KeyValue"/>
+ *     <element ref="ds:RetrievalMethod"/>
+ *     <element ref="ds:X509Data"/>
+ *     <element ref="ds:PGPData"/>
+ *     <element ref="ds:SPKIData"/>
+ *     <element ref="ds:MgmtData"/>
+ *     <any processContents="lax" namespace="##other"/>
+ *     <!-- (1,1) elements from (0,unbounded) namespaces -->
+ *   </choice>
+ *   <attribute name="Id" type="ID" use="optional"/>
+ * </complexType>
  * </pre>
  *
  * A <code>KeyInfo</code> instance may be created by invoking one of the

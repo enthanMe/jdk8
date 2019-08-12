@@ -60,7 +60,7 @@ package com.sun.org.apache.bcel.internal.generic;
 
 /**
  * I2B - Convert int to byte
- * <PRE>Stack: ..., value -&gt; ..., result</PRE>
+ * <PRE>Stack: ..., value -> ..., result</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

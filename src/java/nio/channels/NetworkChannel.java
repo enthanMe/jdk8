@@ -33,7 +33,7 @@ import java.io.IOException;
 /**
  * A channel to a network socket.
  *
- * <p> A channel that implements this interface is a channel to a network
+ * A channel that implements this interface is a channel to a network
  * socket. The {@link #bind(SocketAddress) bind} method is used to bind the
  * socket to a local {@link SocketAddress address}, the {@link #getLocalAddress()
  * getLocalAddress} method returns the address that the socket is bound to, and
@@ -42,7 +42,7 @@ import java.io.IOException;
  * options.  An implementation of this interface should specify the socket options
  * that it supports.
  *
- * <p> The {@link #bind bind} and {@link #setOption setOption} methods that do
+ * The {@link #bind bind} and {@link #setOption setOption} methods that do
  * not otherwise have a value to return are specified to return the network
  * channel upon which they are invoked. This allows method invocations to be
  * chained. Implementations of this interface should specialize the return type
@@ -57,7 +57,7 @@ public interface NetworkChannel
     /**
      * Binds the channel's socket to a local address.
      *
-     * <p> This method is used to establish an association between the socket and
+     * This method is used to establish an association between the socket and
      * a local address. Once an association is established then the socket remains
      * bound until the channel is closed. If the {@code local} parameter has the
      * value {@code null} then the socket will be bound to an address that is
@@ -89,7 +89,7 @@ public interface NetworkChannel
     /**
      * Returns the socket address that this channel's socket is bound to.
      *
-     * <p> Where the channel is {@link #bind bound} to an Internet Protocol
+     * Where the channel is {@link #bind bound} to an Internet Protocol
      * socket address then the return value from this method is of type {@link
      * java.net.InetSocketAddress}.
      *
@@ -154,7 +154,7 @@ public interface NetworkChannel
     /**
      * Returns a set of the socket options supported by this channel.
      *
-     * <p> This method will continue to return the set of options even after the
+     * This method will continue to return the set of options even after the
      * channel has been closed.
      *
      * @return  A set of the socket options supported by this channel

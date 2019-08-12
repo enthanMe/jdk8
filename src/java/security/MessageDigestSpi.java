@@ -36,11 +36,11 @@ import sun.security.jca.JCAUtil;
  * secure one-way hash functions that take arbitrary-sized data and output a
  * fixed-length hash value.
  *
- * <p> All the abstract methods in this class must be implemented by a
+ * All the abstract methods in this class must be implemented by a
  * cryptographic service provider who wishes to supply the implementation
  * of a particular message digest algorithm.
  *
- * <p> Implementations are free to implement the Cloneable interface.
+ * Implementations are free to implement the Cloneable interface.
  *
  * @author Benjamin Renaud
  *

@@ -133,13 +133,13 @@ public class CertPathBuilder {
      * Returns a {@code CertPathBuilder} object that implements the
      * specified algorithm.
      *
-     * <p> This method traverses the list of registered security Providers,
+     * This method traverses the list of registered security Providers,
      * starting with the most preferred Provider.
      * A new CertPathBuilder object encapsulating the
      * CertPathBuilderSpi implementation from the first
      * Provider that supports the specified algorithm is returned.
      *
-     * <p> Note that the list of registered providers may be retrieved via
+     * Note that the list of registered providers may be retrieved via
      * the {@link Security#getProviders() Security.getProviders()} method.
      *
      * @param algorithm the name of the requested {@code CertPathBuilder}
@@ -169,12 +169,12 @@ public class CertPathBuilder {
      * Returns a {@code CertPathBuilder} object that implements the
      * specified algorithm.
      *
-     * <p> A new CertPathBuilder object encapsulating the
+     * A new CertPathBuilder object encapsulating the
      * CertPathBuilderSpi implementation from the specified provider
      * is returned.  The specified provider must be registered
      * in the security provider list.
      *
-     * <p> Note that the list of registered providers may be retrieved via
+     * Note that the list of registered providers may be retrieved via
      * the {@link Security#getProviders() Security.getProviders()} method.
      *
      * @param algorithm the name of the requested {@code CertPathBuilder}
@@ -212,7 +212,7 @@ public class CertPathBuilder {
      * Returns a {@code CertPathBuilder} object that implements the
      * specified algorithm.
      *
-     * <p> A new CertPathBuilder object encapsulating the
+     * A new CertPathBuilder object encapsulating the
      * CertPathBuilderSpi implementation from the specified Provider
      * object is returned.  Note that the specified Provider object
      * does not have to be registered in the provider list.

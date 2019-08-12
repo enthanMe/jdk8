@@ -39,7 +39,7 @@ import sun.security.jca.JCAUtil;
  * functionality of a digital signature algorithm. Digital signatures are used
  * for authentication and integrity assurance of digital data.
  *.
- * <p> All the abstract methods in this class must be implemented by each
+ * All the abstract methods in this class must be implemented by each
  * cryptographic service provider who wishes to supply the implementation
  * of a particular signature algorithm.
  *
@@ -256,7 +256,7 @@ public abstract class SignatureSpi {
      * Verifies the passed-in signature in the specified array
      * of bytes, starting at the specified offset.
      *
-     * <p> Note: Subclasses should overwrite the default implementation.
+     * Note: Subclasses should overwrite the default implementation.
      *
      *
      * @param sigBytes the signature bytes to be verified.

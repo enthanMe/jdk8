@@ -61,7 +61,7 @@ public abstract class XPathFactory {
     public static final String DEFAULT_OBJECT_MODEL_URI = "http://java.sun.com/jaxp/xpath/dom";
 
     /**
-     *<p> Take care of restrictions imposed by java security model </p>
+     *Take care of restrictions imposed by java security model </p>
      */
     private static SecuritySupport ss = new SecuritySupport() ;
 
@@ -211,7 +211,7 @@ public abstract class XPathFactory {
      * this method to print a lot of debug messages
      * to <code>System.err</code> about what it is doing and where it is looking at.</p>
      *
-     * <p> If you have problems try:</p>
+     * If you have problems try:</p>
      * <pre>
      * java -Djaxp.debug=1 YourProgram ....
      * </pre>

@@ -39,7 +39,7 @@ import java.io.ObjectStreamException;
  * found in section 8.9 of
  * <cite>The Java&trade; Language Specification</cite>.
  *
- * <p> Note that when using an enumeration type as the type of a set
+ * Note that when using an enumeration type as the type of a set
  * or as the type of the keys in a map, specialized and efficient
  * {@linkplain java.util.EnumSet set} and {@linkplain
  * java.util.EnumMap map} implementations are available.

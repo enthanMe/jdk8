@@ -48,7 +48,7 @@ import org.w3c.dom.DOMException;
  * ordered collection of media, without defining or constraining how this
  * collection is implemented. An empty list is the same as a list that
  * contains the medium <code>"all"</code>.
- * <p> The items in the <code>MediaList</code> are accessible via an integral
+ * The items in the <code>MediaList</code> are accessible via an integral
  * index, starting from 0.
  * <p>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113'>Document Object Model (DOM) Level 2 Style Specification</a>.
  * @since DOM Level 2

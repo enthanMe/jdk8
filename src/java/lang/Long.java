@@ -34,7 +34,7 @@ import java.math.*;
  * long} in an object. An object of type {@code Long} contains a
  * single field whose type is {@code long}.
  *
- * <p> In addition, this class provides several methods for converting
+ * In addition, this class provides several methods for converting
  * a {@code long} to a {@code String} and a {@code String} to a {@code
  * long}, as well as other constants and methods useful when dealing
  * with a {@code long}.

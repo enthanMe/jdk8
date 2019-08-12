@@ -156,7 +156,7 @@ public abstract class SnmpMibGroup extends SnmpMibOid
      * </ul>
      * <p>Both implementations rely upon specific - and distinct, set of
      * mibgen generated methods.
-     * <p> You can override this method if you need to implement some
+     * You can override this method if you need to implement some
      * specific policies for minimizing the accesses made to some remote
      * underlying resources.
      * <p>
@@ -186,7 +186,7 @@ public abstract class SnmpMibGroup extends SnmpMibOid
      * </ul>
      * <p>Both implementations rely upon specific - and distinct, set of
      * mibgen generated methods.
-     * <p> You can override this method if you need to implement some
+     * You can override this method if you need to implement some
      * specific policies for minimizing the accesses made to some remote
      * underlying resources.
      * <p>
@@ -217,7 +217,7 @@ public abstract class SnmpMibGroup extends SnmpMibOid
      * </ul>
      * <p>Both implementations rely upon specific - and distinct, set of
      * mibgen generated methods.
-     * <p> You can override this method if you need to implement some
+     * You can override this method if you need to implement some
      * specific policies for minimizing the accesses made to some remote
      * underlying resources, or if you need to implement some consistency
      * checks between the different values provided in the varbind list.

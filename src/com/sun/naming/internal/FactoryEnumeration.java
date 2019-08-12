@@ -52,7 +52,7 @@ public final class FactoryEnumeration {
      * instance of the Class itself; eventually, the list contains
      * only a list of factory instances and no more updates are required.
      *
-     * <p> Both Class objects and factories are wrapped in weak
+     * Both Class objects and factories are wrapped in weak
      * references so as not to prevent GC of the class loader.  Each
      * weak reference is tagged with the factory's class name so the
      * class can be reloaded if the reference is cleared.

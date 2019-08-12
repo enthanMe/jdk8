@@ -289,7 +289,7 @@ class FileInputStream extends InputStream
      * or another thread. A single read or skip of this many bytes will not
      * block, but may read or skip fewer bytes.
      *
-     * <p> In some cases, a non-blocking read (or skip) may appear to be
+     * In some cases, a non-blocking read (or skip) may appear to be
      * blocked when it is merely slow, for example when reading large
      * files over slow networks.
      *
@@ -304,7 +304,7 @@ class FileInputStream extends InputStream
      * Closes this file input stream and releases any system resources
      * associated with the stream.
      *
-     * <p> If this stream has an associated channel then the channel is closed
+     * If this stream has an associated channel then the channel is closed
      * as well.
      *
      * @exception  IOException  if an I/O error occurs.
@@ -351,7 +351,7 @@ class FileInputStream extends InputStream
      * Returns the unique {@link java.nio.channels.FileChannel FileChannel}
      * object associated with this file input stream.
      *
-     * <p> The initial {@link java.nio.channels.FileChannel#position()
+     * The initial {@link java.nio.channels.FileChannel#position()
      * position} of the returned channel will be equal to the
      * number of bytes read from the file so far.  Reading bytes from this
      * stream will increment the channel's position.  Changing the channel's

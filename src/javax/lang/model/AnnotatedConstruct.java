@@ -130,7 +130,7 @@ public interface AnnotatedConstruct {
      * Returns this construct's annotation of the specified type if
      * such an annotation is <em>present</em>, else {@code null}.
      *
-     * <p> The annotation returned by this method could contain an element
+     * The annotation returned by this method could contain an element
      * whose value is of type {@code Class}.
      * This value cannot be returned directly:  information necessary to
      * locate and load a class (such as the class loader to use) is
@@ -189,7 +189,7 @@ public interface AnnotatedConstruct {
      * annotation type</em>, and if so, attempts to find one or more
      * annotations of that type by "looking through" a container annotation.
      *
-     * <p> The annotations returned by this method could contain an element
+     * The annotations returned by this method could contain an element
      * whose value is of type {@code Class}.
      * This value cannot be returned directly:  information necessary to
      * locate and load a class (such as the class loader to use) is

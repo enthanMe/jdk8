@@ -80,13 +80,13 @@ package java.util;
  * is a sorted set of strings.  The following idiom obtains a view
  * containing all of the strings in <tt>s</tt> from <tt>low</tt> to
  * <tt>high</tt>, inclusive:<pre>
- *   SortedSet&lt;String&gt; sub = s.subSet(low, high+"\0");</pre>
+ *   SortedSet<String> sub = s.subSet(low, high+"\0");</pre>
  *
  * A similar technique can be used to generate an <i>open range</i> (which
  * contains neither endpoint).  The following idiom obtains a view
  * containing all of the Strings in <tt>s</tt> from <tt>low</tt> to
  * <tt>high</tt>, exclusive:<pre>
- *   SortedSet&lt;String&gt; sub = s.subSet(low+"\0", high);</pre>
+ *   SortedSet<String> sub = s.subSet(low+"\0", high);</pre>
  *
  * <p>This interface is a member of the
  * <a href="{@docRoot}/../technotes/guides/collections/index.html">

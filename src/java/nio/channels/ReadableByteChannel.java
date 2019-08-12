@@ -32,7 +32,7 @@ import java.nio.ByteBuffer;
 /**
  * A channel that can read bytes.
  *
- * <p> Only one read operation upon a readable channel may be in progress at
+ * Only one read operation upon a readable channel may be in progress at
  * any given time.  If one thread initiates a read operation upon a channel
  * then any other thread that attempts to initiate another read operation will
  * block until the first operation is complete.  Whether or not other kinds of
@@ -50,12 +50,12 @@ public interface ReadableByteChannel extends Channel {
     /**
      * Reads a sequence of bytes from this channel into the given buffer.
      *
-     * <p> An attempt is made to read up to <i>r</i> bytes from the channel,
+     * An attempt is made to read up to <i>r</i> bytes from the channel,
      * where <i>r</i> is the number of bytes remaining in the buffer, that is,
      * <tt>dst.remaining()</tt>, at the moment this method is invoked.
      *
-     * <p> Suppose that a byte sequence of length <i>n</i> is read, where
-     * <tt>0</tt>&nbsp;<tt>&lt;=</tt>&nbsp;<i>n</i>&nbsp;<tt>&lt;=</tt>&nbsp;<i>r</i>.
+     * Suppose that a byte sequence of length <i>n</i> is read, where
+     * <tt>0</tt>&nbsp;<tt><=</tt>&nbsp;<i>n</i>&nbsp;<tt><=</tt>&nbsp;<i>r</i>.
      * This byte sequence will be transferred into the buffer so that the first
      * byte in the sequence is at index <i>p</i> and the last byte is at index
      * <i>p</i>&nbsp;<tt>+</tt>&nbsp;<i>n</i>&nbsp;<tt>-</tt>&nbsp;<tt>1</tt>,
@@ -63,7 +63,7 @@ public interface ReadableByteChannel extends Channel {
      * invoked.  Upon return the buffer's position will be equal to
      * <i>p</i>&nbsp;<tt>+</tt>&nbsp;<i>n</i>; its limit will not have changed.
      *
-     * <p> A read operation might not fill the buffer, and in fact it might not
+     * A read operation might not fill the buffer, and in fact it might not
      * read any bytes at all.  Whether or not it does so depends upon the
      * nature and state of the channel.  A socket channel in non-blocking mode,
      * for example, cannot read any more bytes than are immediately available
@@ -73,7 +73,7 @@ public interface ReadableByteChannel extends Channel {
      * remaining in the buffer then this method will block until at least one
      * byte is read.
      *
-     * <p> This method may be invoked at any time.  If another thread has
+     * This method may be invoked at any time.  If another thread has
      * already initiated a read operation upon this channel, however, then an
      * invocation of this method will block until the first operation is
      * complete. </p>

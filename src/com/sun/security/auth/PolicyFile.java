@@ -33,7 +33,7 @@ import javax.security.auth.Subject;
  * This class represents a default implementation for
  * <code>javax.security.auth.Policy</code>.
  *
- * <p> This object stores the policy for entire Java runtime,
+ * This object stores the policy for entire Java runtime,
  * and is the amalgamation of multiple static policy
  * configurations that resides in files.
  * The algorithm for locating the policy file(s) and reading their
@@ -83,7 +83,7 @@ import javax.security.auth.Subject;
  * doesn't matter and some are optional, as noted below).
  * Italicized items represent variable values.
  *
- * <p> A grant entry must begin with the word <code>grant</code>.
+ * A grant entry must begin with the word <code>grant</code>.
  * The <code>signedBy</code> and <code>codeBase</code>
  * name/value pairs are optional.
  * If they are not present, then any signer (including unsigned code)
@@ -97,12 +97,12 @@ import javax.security.auth.Subject;
  * any <code>Principal</code> name.  When setting the <i>principalName</i>
  * to the *, do not surround the * with quotes.
  *
- * <p> A permission entry must begin with the word <code>permission</code>.
+ * A permission entry must begin with the word <code>permission</code>.
  * The word <code><i>Type</i></code> in the template above is
  * a specific permission type, such as <code>java.io.FilePermission</code>
  * or <code>java.lang.RuntimePermission</code>.
  *
- * <p> The "<i>action</i>" is required for
+ * The "<i>action</i>" is required for
  * many permission types, such as <code>java.io.FilePermission</code>
  * (where it specifies what type of file access that is permitted).
  * It is not required for categories such as
@@ -111,7 +111,7 @@ import javax.security.auth.Subject;
  * permission specified by the <code>"<i>name</i>"</code>
  * value following the type name or you don't.
  *
- * <p> The <code>signedBy</code> name/value pair for a permission entry
+ * The <code>signedBy</code> name/value pair for a permission entry
  * is optional. If present, it indicates a signed permission. That is,
  * the permission class itself must be signed by the given alias in
  * order for it to be granted. For example,
@@ -123,21 +123,21 @@ import javax.security.auth.Subject;
  *   }
  * </pre>
  *
- * <p> Then this permission of type <i>Foo</i> is granted if the
+ * Then this permission of type <i>Foo</i> is granted if the
  * <code>Foo.class</code> permission has been signed by the
  * "FooSoft" alias, or if <code>Foo.class</code> is a
  * system class (i.e., is found on the CLASSPATH).
  *
- * <p> Items that appear in an entry must appear in the specified order
+ * Items that appear in an entry must appear in the specified order
  * (<code>permission</code>, <i>Type</i>, "<i>name</i>", and
  * "<i>action</i>"). An entry is terminated with a semicolon.
  *
- * <p> Case is unimportant for the identifiers (<code>permission</code>,
+ * Case is unimportant for the identifiers (<code>permission</code>,
  * <code>signedBy</code>, <code>codeBase</code>, etc.) but is
  * significant for the <i>Type</i>
  * or for any string that is passed in as a value. <p>
  *
- * <p> An example of two entries in a policy configuration file is
+ * An example of two entries in a policy configuration file is
  * <pre>
  *   // if the code is comes from "foo.com" and is running as "Duke",
  *   // grant it read/write to all files in /tmp.
@@ -153,7 +153,7 @@ import javax.security.auth.Subject;
  *         permission java.util.PropertyPermission "java.vendor";
  * </pre>
  *
- * <p> This <code>Policy</code> implementation supports
+ * This <code>Policy</code> implementation supports
  * special handling for PrivateCredentialPermissions.
  * If a grant entry is configured with a
  * <code>PrivateCredentialPermission</code>,
@@ -246,14 +246,14 @@ public class PolicyFile extends javax.security.auth.Policy {
      * Examines this <code>Policy</code> and returns the Permissions granted
      * to the specified <code>Subject</code> and <code>CodeSource</code>.
      *
-     * <p> Permissions for a particular <i>grant</i> entry are returned
+     * Permissions for a particular <i>grant</i> entry are returned
      * if the <code>CodeSource</code> constructed using the codebase and
      * signedby values specified in the entry <code>implies</code>
      * the <code>CodeSource</code> provided to this method, and if the
      * <code>Subject</code> provided to this method contains all of the
      * Principals specified in the entry.
      *
-     * <p> The <code>Subject</code> provided to this method contains all
+     * The <code>Subject</code> provided to this method contains all
      * of the Principals specified in the entry if, for each
      * <code>Principal</code>, "P1", specified in the <i>grant</i> entry
      * one of the following two conditions is met:
@@ -271,7 +271,7 @@ public class PolicyFile extends javax.security.auth.Policy {
      *      and <code>P1.implies</code> the provided <code>Subject</code>.
      * </ol>
      *
-     * <p> Note that this <code>Policy</code> implementation has
+     * Note that this <code>Policy</code> implementation has
      * special handling for PrivateCredentialPermissions.
      * When this method encounters a <code>PrivateCredentialPermission</code>
      * which specifies "self" as the <code>Principal</code> class and name,

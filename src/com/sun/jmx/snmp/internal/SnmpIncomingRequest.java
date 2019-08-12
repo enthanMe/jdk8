@@ -36,7 +36,7 @@ import com.sun.jmx.snmp.SnmpUnknownSecModelException;
 import com.sun.jmx.snmp.SnmpBadSecurityLevelException;
 
 /**
-<P> An <CODE>SnmpIncomingRequest</CODE> handles both sides of an incoming SNMP request:
+An <CODE>SnmpIncomingRequest</CODE> handles both sides of an incoming SNMP request:
 <ul>
 <li> The request. Unmarshalling of the received message. </li>
 <li> The response. Marshalling of the message to send. </li>

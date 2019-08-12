@@ -118,7 +118,7 @@ public class SubjectDomainCombiner implements java.security.DomainCombiner {
      * from the {@code Subject} associated with this
      * {@code SubjectDomainCombiner}.
      *
-     * <p> A new {@code ProtectionDomain} instance is created
+     * A new {@code ProtectionDomain} instance is created
      * for each {@code ProtectionDomain} in the
      * <i>currentDomains</i> array.  Each new {@code ProtectionDomain}
      * instance is created using the {@code CodeSource},
@@ -128,12 +128,12 @@ public class SubjectDomainCombiner implements java.security.DomainCombiner {
      * the {@code Subject} associated with this
      * {@code SubjectDomainCombiner}.
      *
-     * <p> All of the newly instantiated ProtectionDomains are
+     * All of the newly instantiated ProtectionDomains are
      * combined into a new array.  The ProtectionDomains from the
      * <i>assignedDomains</i> array are appended to this new array,
      * and the result is returned.
      *
-     * <p> Note that optimizations such as the removal of duplicate
+     * Note that optimizations such as the removal of duplicate
      * ProtectionDomains may have occurred.
      * In addition, caching of ProtectionDomains may be permitted.
      *

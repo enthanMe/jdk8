@@ -30,7 +30,7 @@ import java.security.cert.X509Certificate;
 import javax.security.auth.Destroyable;
 
 /**
- * <p> This class represents an {@code X500PrivateCredential}.
+ * This class represents an {@code X500PrivateCredential}.
  * It associates an X.509 certificate, corresponding private key and the
  * KeyStore alias used to reference that exact key pair in the KeyStore.
  * This enables looking up the private credentials for an X.500 principal

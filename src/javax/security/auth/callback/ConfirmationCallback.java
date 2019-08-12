@@ -26,7 +26,7 @@
 package javax.security.auth.callback;
 
 /**
- * <p> Underlying security services instantiate and pass a
+ * Underlying security services instantiate and pass a
  * {@code ConfirmationCallback} to the {@code handle}
  * method of a {@code CallbackHandler} to ask for YES/NO,
  * OK/CANCEL, YES/NO/CANCEL or other similar confirmations.
@@ -40,7 +40,7 @@ public class ConfirmationCallback implements Callback, java.io.Serializable {
     /**
      * Unspecified option type.
      *
-     * <p> The {@code getOptionType} method returns this
+     * The {@code getOptionType} method returns this
      * value if this {@code ConfirmationCallback} was instantiated
      * with {@code options} instead of an {@code optionType}.
      */
@@ -49,7 +49,7 @@ public class ConfirmationCallback implements Callback, java.io.Serializable {
     /**
      * YES/NO confirmation option.
      *
-     * <p> An underlying security service specifies this as the
+     * An underlying security service specifies this as the
      * {@code optionType} to a {@code ConfirmationCallback}
      * constructor if it requires a confirmation which can be answered
      * with either {@code YES} or {@code NO}.
@@ -59,7 +59,7 @@ public class ConfirmationCallback implements Callback, java.io.Serializable {
     /**
      * YES/NO/CANCEL confirmation confirmation option.
      *
-     * <p> An underlying security service specifies this as the
+     * An underlying security service specifies this as the
      * {@code optionType} to a {@code ConfirmationCallback}
      * constructor if it requires a confirmation which can be answered
      * with either {@code YES}, {@code NO} or {@code CANCEL}.
@@ -69,7 +69,7 @@ public class ConfirmationCallback implements Callback, java.io.Serializable {
     /**
      * OK/CANCEL confirmation confirmation option.
      *
-     * <p> An underlying security service specifies this as the
+     * An underlying security service specifies this as the
      * {@code optionType} to a {@code ConfirmationCallback}
      * constructor if it requires a confirmation which can be answered
      * with either {@code OK} or {@code CANCEL}.
@@ -79,7 +79,7 @@ public class ConfirmationCallback implements Callback, java.io.Serializable {
     /**
      * YES option.
      *
-     * <p> If an {@code optionType} was specified to this
+     * If an {@code optionType} was specified to this
      * {@code ConfirmationCallback}, this option may be specified as a
      * {@code defaultOption} or returned as the selected index.
      */
@@ -88,7 +88,7 @@ public class ConfirmationCallback implements Callback, java.io.Serializable {
     /**
      * NO option.
      *
-     * <p> If an {@code optionType} was specified to this
+     * If an {@code optionType} was specified to this
      * {@code ConfirmationCallback}, this option may be specified as a
      * {@code defaultOption} or returned as the selected index.
      */
@@ -97,7 +97,7 @@ public class ConfirmationCallback implements Callback, java.io.Serializable {
     /**
      * CANCEL option.
      *
-     * <p> If an {@code optionType} was specified to this
+     * If an {@code optionType} was specified to this
      * {@code ConfirmationCallback}, this option may be specified as a
      * {@code defaultOption} or returned as the selected index.
      */
@@ -106,7 +106,7 @@ public class ConfirmationCallback implements Callback, java.io.Serializable {
     /**
      * OK option.
      *
-     * <p> If an {@code optionType} was specified to this
+     * If an {@code optionType} was specified to this
      * {@code ConfirmationCallback}, this option may be specified as a
      * {@code defaultOption} or returned as the selected index.
      */
@@ -155,7 +155,7 @@ public class ConfirmationCallback implements Callback, java.io.Serializable {
      * Construct a {@code ConfirmationCallback} with a
      * message type, an option type and a default option.
      *
-     * <p> Underlying security services use this constructor if
+     * Underlying security services use this constructor if
      * they require either a YES/NO, YES/NO/CANCEL or OK/CANCEL
      * confirmation.
      *
@@ -215,7 +215,7 @@ public class ConfirmationCallback implements Callback, java.io.Serializable {
      * Construct a {@code ConfirmationCallback} with a
      * message type, a list of options and a default option.
      *
-     * <p> Underlying security services use this constructor if
+     * Underlying security services use this constructor if
      * they require a confirmation different from the available preset
      * confirmations provided (for example, CONTINUE/ABORT or STOP/GO).
      * The confirmation options are listed in the {@code options} array,
@@ -264,7 +264,7 @@ public class ConfirmationCallback implements Callback, java.io.Serializable {
      * Construct a {@code ConfirmationCallback} with a prompt,
      * message type, an option type and a default option.
      *
-     * <p> Underlying security services use this constructor if
+     * Underlying security services use this constructor if
      * they require either a YES/NO, YES/NO/CANCEL or OK/CANCEL
      * confirmation.
      *
@@ -330,7 +330,7 @@ public class ConfirmationCallback implements Callback, java.io.Serializable {
      * Construct a {@code ConfirmationCallback} with a prompt,
      * message type, a list of options and a default option.
      *
-     * <p> Underlying security services use this constructor if
+     * Underlying security services use this constructor if
      * they require a confirmation different from the available preset
      * confirmations provided (for example, CONTINUE/ABORT or STOP/GO).
      * The confirmation options are listed in the {@code options} array,
@@ -408,7 +408,7 @@ public class ConfirmationCallback implements Callback, java.io.Serializable {
     /**
      * Get the option type.
      *
-     * <p> If this method returns {@code UNSPECIFIED_OPTION}, then this
+     * If this method returns {@code UNSPECIFIED_OPTION}, then this
      * {@code ConfirmationCallback} was instantiated with
      * {@code options} instead of an {@code optionType}.
      * In this case, invoke the {@code getOptions} method

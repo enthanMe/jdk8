@@ -68,25 +68,25 @@ import sun.security.util.SecurityConstants;
  * typical strategy is to transform the name into a file name and then read a
  * "class file" of that name from a file system.
  *
- * <p> Every {@link Class <tt>Class</tt>} object contains a {@link
+ * Every {@link Class <tt>Class</tt>} object contains a {@link
  * Class#getClassLoader() reference} to the <tt>ClassLoader</tt> that defined
  * it.
  *
- * <p> <tt>Class</tt> objects for array classes are not created by class
+ * <tt>Class</tt> objects for array classes are not created by class
  * loaders, but are created automatically as required by the Java runtime.
  * The class loader for an array class, as returned by {@link
  * Class#getClassLoader()} is the same as the class loader for its element
  * type; if the element type is a primitive type, then the array class has no
  * class loader.
  *
- * <p> Applications implement subclasses of <tt>ClassLoader</tt> in order to
+ * Applications implement subclasses of <tt>ClassLoader</tt> in order to
  * extend the manner in which the Java virtual machine dynamically loads
  * classes.
  *
- * <p> Class loaders may typically be used by security managers to indicate
+ * Class loaders may typically be used by security managers to indicate
  * security domains.
  *
- * <p> The <tt>ClassLoader</tt> class uses a delegation model to search for
+ * The <tt>ClassLoader</tt> class uses a delegation model to search for
  * classes and resources.  Each instance of <tt>ClassLoader</tt> has an
  * associated parent class loader.  When requested to find a class or
  * resource, a <tt>ClassLoader</tt> instance will delegate the search for the
@@ -95,7 +95,7 @@ import sun.security.util.SecurityConstants;
  * called the "bootstrap class loader", does not itself have a parent but may
  * serve as the parent of a <tt>ClassLoader</tt> instance.
  *
- * <p> Class loaders that support concurrent loading of classes are known as
+ * Class loaders that support concurrent loading of classes are known as
  * <em>parallel capable</em> class loaders and are required to register
  * themselves at their class initialization time by invoking the
  * {@link
@@ -109,24 +109,24 @@ import sun.security.util.SecurityConstants;
  * duration of the class loading process (see {@link #loadClass
  * <tt>loadClass</tt>} methods).
  *
- * <p> Normally, the Java virtual machine loads classes from the local file
+ * Normally, the Java virtual machine loads classes from the local file
  * system in a platform-dependent manner.  For example, on UNIX systems, the
  * virtual machine loads classes from the directory defined by the
  * <tt>CLASSPATH</tt> environment variable.
  *
- * <p> However, some classes may not originate from a file; they may originate
+ * However, some classes may not originate from a file; they may originate
  * from other sources, such as the network, or they could be constructed by an
  * application.  The method {@link #defineClass(String, byte[], int, int)
  * <tt>defineClass</tt>} converts an array of bytes into an instance of class
  * <tt>Class</tt>. Instances of this newly defined class can be created using
  * {@link Class#newInstance <tt>Class.newInstance</tt>}.
  *
- * <p> The methods and constructors of objects created by a class loader may
+ * The methods and constructors of objects created by a class loader may
  * reference other classes.  To determine the class(es) referred to, the Java
  * virtual machine invokes the {@link #loadClass <tt>loadClass</tt>} method of
  * the class loader that originally created the class.
  *
- * <p> For example, an application could create a network class loader to
+ * For example, an application could create a network class loader to
  * download class files from a server.  Sample code might look like:
  *
  * <blockquote><pre>
@@ -135,7 +135,7 @@ import sun.security.util.SecurityConstants;
  *       &nbsp;.&nbsp;.&nbsp;.
  * </pre></blockquote>
  *
- * <p> The network class loader subclass must define the methods {@link
+ * The network class loader subclass must define the methods {@link
  * #findClass <tt>findClass</tt>} and <tt>loadClassData</tt> to load a class
  * from the network.  Once it has downloaded the bytes that make up the class,
  * it should use the method {@link #defineClass <tt>defineClass</tt>} to
@@ -160,11 +160,11 @@ import sun.security.util.SecurityConstants;
  *
  * <h3> <a name="name">Binary names</a> </h3>
  *
- * <p> Any class name provided as a {@link String} parameter to methods in
+ * Any class name provided as a {@link String} parameter to methods in
  * <tt>ClassLoader</tt> must be a binary name as defined by
  * <cite>The Java&trade; Language Specification</cite>.
  *
- * <p> Examples of valid class names include:
+ * Examples of valid class names include:
  * <blockquote><pre>
  *   "java.lang.String"
  *   "javax.swing.JSpinner$DefaultEditor"
@@ -297,7 +297,7 @@ public abstract class ClassLoader {
      * Creates a new class loader using the specified parent class loader for
      * delegation.
      *
-     * <p> If there is a security manager, its {@link
+     * If there is a security manager, its {@link
      * SecurityManager#checkCreateClassLoader()
      * <tt>checkCreateClassLoader</tt>} method is invoked.  This may result in
      * a security exception.  </p>
@@ -321,7 +321,7 @@ public abstract class ClassLoader {
      * the method {@link #getSystemClassLoader()
      * <tt>getSystemClassLoader()</tt>} as the parent class loader.
      *
-     * <p> If there is a security manager, its {@link
+     * If there is a security manager, its {@link
      * SecurityManager#checkCreateClassLoader()
      * <tt>checkCreateClassLoader</tt>} method is invoked.  This may result in
      * a security exception.  </p>
@@ -364,26 +364,26 @@ public abstract class ClassLoader {
      *
      * <ol>
      *
-     *   <li><p> Invoke {@link #findLoadedClass(String)} to check if the class
+     *   <li>Invoke {@link #findLoadedClass(String)} to check if the class
      *   has already been loaded.  </p></li>
      *
-     *   <li><p> Invoke the {@link #loadClass(String) <tt>loadClass</tt>} method
+     *   <li>Invoke the {@link #loadClass(String) <tt>loadClass</tt>} method
      *   on the parent class loader.  If the parent is <tt>null</tt> the class
      *   loader built-in to the virtual machine is used, instead.  </p></li>
      *
-     *   <li><p> Invoke the {@link #findClass(String)} method to find the
+     *   <li>Invoke the {@link #findClass(String)} method to find the
      *   class.  </p></li>
      *
      * </ol>
      *
-     * <p> If the class was found using the above steps, and the
+     * If the class was found using the above steps, and the
      * <tt>resolve</tt> flag is true, this method will then invoke the {@link
      * #resolveClass(Class)} method on the resulting <tt>Class</tt> object.
      *
-     * <p> Subclasses of <tt>ClassLoader</tt> are encouraged to override {@link
+     * Subclasses of <tt>ClassLoader</tt> are encouraged to override {@link
      * #findClass(String)}, rather than this method.  </p>
      *
-     * <p> Unless overridden, this method synchronizes on the result of
+     * Unless overridden, this method synchronizes on the result of
      * {@link #getClassLoadingLock <tt>getClassLoadingLock</tt>} method
      * during the entire class loading process.
      *
@@ -582,7 +582,7 @@ public abstract class ClassLoader {
      * Converts an array of bytes into an instance of class <tt>Class</tt>.
      * Before the <tt>Class</tt> can be used it must be resolved.
      *
-     * <p> This method assigns a default {@link java.security.ProtectionDomain
+     * This method assigns a default {@link java.security.ProtectionDomain
      * <tt>ProtectionDomain</tt>} to the newly defined class.  The
      * <tt>ProtectionDomain</tt> is effectively granted the same set of
      * permissions returned when {@link
@@ -592,7 +592,7 @@ public abstract class ClassLoader {
      * {@link #defineClass(String, byte[], int, int) <tt>defineClass</tt>},
      * and re-used on subsequent invocations.
      *
-     * <p> To assign a specific <tt>ProtectionDomain</tt> to the class, use
+     * To assign a specific <tt>ProtectionDomain</tt> to the class, use
      * the {@link #defineClass(String, byte[], int, int,
      * java.security.ProtectionDomain) <tt>defineClass</tt>} method that takes a
      * <tt>ProtectionDomain</tt> as one of its arguments.  </p>
@@ -696,7 +696,7 @@ public abstract class ClassLoader {
      * specified in the documentation for {@link #defineClass(String, byte[],
      * int, int)}.  Before the class can be used it must be resolved.
      *
-     * <p> The first class defined in a package determines the exact set of
+     * The first class defined in a package determines the exact set of
      * certificates that all subsequent classes defined in that package must
      * contain.  The set of certificates for a class is obtained from the
      * {@link java.security.CodeSource <tt>CodeSource</tt>} within the
@@ -708,7 +708,7 @@ public abstract class ClassLoader {
      * class you are defining as well as the bytes.  This ensures that the
      * class you are defining is indeed the class you think it is.
      *
-     * <p> The specified <tt>name</tt> cannot begin with "<tt>java.</tt>", since
+     * The specified <tt>name</tt> cannot begin with "<tt>java.</tt>", since
      * all classes in the "<tt>java.*</tt> packages can only be defined by the
      * bootstrap class loader.  If <tt>name</tt> is not <tt>null</tt>, it
      * must be equal to the <a href="#name">binary name</a> of the class
@@ -778,12 +778,12 @@ public abstract class ClassLoader {
      * are identical to those specified in the documentation for {@link
      * #defineClass(String, byte[], int, int, ProtectionDomain)}.
      *
-     * <p> An invocation of this method of the form
+     * An invocation of this method of the form
      * <i>cl</i><tt>.defineClass(</tt><i>name</i><tt>,</tt>
      * <i>bBuffer</i><tt>,</tt> <i>pd</i><tt>)</tt> yields exactly the same
      * result as the statements
      *
-     *<p> <tt>
+     *<tt>
      * ...<br>
      * byte[] temp = new byte[bBuffer.{@link
      * java.nio.ByteBuffer#remaining remaining}()];<br>
@@ -970,7 +970,7 @@ public abstract class ClassLoader {
      * Finds a class with the specified <a href="#name">binary name</a>,
      * loading it if necessary.
      *
-     * <p> This method loads the class through the system class loader (see
+     * This method loads the class through the system class loader (see
      * {@link #getSystemClassLoader()}).  The <tt>Class</tt> object returned
      * might have more than one <tt>ClassLoader</tt> associated with it.
      * Subclasses of <tt>ClassLoader</tt> need not usually invoke this method,
@@ -1064,10 +1064,10 @@ public abstract class ClassLoader {
      * (images, audio, text, etc) that can be accessed by class code in a way
      * that is independent of the location of the code.
      *
-     * <p> The name of a resource is a '<tt>/</tt>'-separated path name that
+     * The name of a resource is a '<tt>/</tt>'-separated path name that
      * identifies the resource.
      *
-     * <p> This method will first search the parent class loader for the
+     * This method will first search the parent class loader for the
      * resource; if the parent is <tt>null</tt> the path of the class loader
      * built-in to the virtual machine is searched.  That failing, this method
      * will invoke {@link #findResource(String)} to find the resource.  </p>
@@ -1106,7 +1106,7 @@ public abstract class ClassLoader {
      * <p>The name of a resource is a <tt>/</tt>-separated path name that
      * identifies the resource.
      *
-     * <p> The search order is described in the documentation for {@link
+     * The search order is described in the documentation for {@link
      * #getResource(String)}.  </p>
      *
      * @apiNote When overriding this method it is recommended that an
@@ -1232,7 +1232,7 @@ public abstract class ClassLoader {
      * {@link java.util.Enumeration <tt>Enumeration</tt>} of {@link
      * java.net.URL <tt>URL</tt>} objects.
      *
-     * <p> The search order is described in the documentation for {@link
+     * The search order is described in the documentation for {@link
      * #getSystemResource(String)}.  </p>
      *
      * @param  name
@@ -1292,7 +1292,7 @@ public abstract class ClassLoader {
     /**
      * Returns an input stream for reading the specified resource.
      *
-     * <p> The search order is described in the documentation for {@link
+     * The search order is described in the documentation for {@link
      * #getResource(String)}.  </p>
      *
      * @param  name
@@ -1343,7 +1343,7 @@ public abstract class ClassLoader {
      * will return <tt>null</tt> in such implementations if this class loader's
      * parent is the bootstrap class loader.
      *
-     * <p> If a security manager is present, and the invoker's class loader is
+     * If a security manager is present, and the invoker's class loader is
      * not <tt>null</tt> and is not an ancestor of this class loader, then this
      * method invokes the security manager's {@link
      * SecurityManager#checkPermission(java.security.Permission)
@@ -1381,14 +1381,14 @@ public abstract class ClassLoader {
      * delegation parent for new <tt>ClassLoader</tt> instances, and is
      * typically the class loader used to start the application.
      *
-     * <p> This method is first invoked early in the runtime's startup
+     * This method is first invoked early in the runtime's startup
      * sequence, at which point it creates the system class loader and sets it
      * as the context class loader of the invoking <tt>Thread</tt>.
      *
-     * <p> The default system class loader is an implementation-dependent
+     * The default system class loader is an implementation-dependent
      * instance of this class.
      *
-     * <p> If the system property "<tt>java.system.class.loader</tt>" is defined
+     * If the system property "<tt>java.system.class.loader</tt>" is defined
      * when this method is first invoked then the value of that property is
      * taken to be the name of a class that will be returned as the system
      * class loader.  The class is loaded using the default system class loader
@@ -1398,7 +1398,7 @@ public abstract class ClassLoader {
      * class loader as the parameter.  The resulting class loader is defined
      * to be the system class loader.
      *
-     * <p> If a security manager is present, and the invoker's class loader is
+     * If a security manager is present, and the invoker's class loader is
      * not <tt>null</tt> and the invoker's class loader is not the same as or
      * an ancestor of the system class loader, then this method invokes the
      * security manager's {@link
@@ -1700,7 +1700,7 @@ public abstract class ClassLoader {
      * into the system are entered into the <tt>systemNativeLibraries</tt>
      * vector.
      *
-     * <p> Every native library requires a particular version of JNI. This is
+     * Every native library requires a particular version of JNI. This is
      * denoted by the private <tt>jniVersion</tt> field.  This field is set by
      * the VM when it loads the library, and used by the VM to pass the correct
      * version of JNI to the native methods.  </p>
@@ -2022,19 +2022,19 @@ public abstract class ClassLoader {
      * classes initialized in the future that belong to the named package or
      * any of its "subpackages".
      *
-     * <p> A subpackage of a package named p is any package whose name begins
+     * A subpackage of a package named p is any package whose name begins
      * with "<tt>p.</tt>".  For example, <tt>javax.swing.text</tt> is a
      * subpackage of <tt>javax.swing</tt>, and both <tt>java.util</tt> and
      * <tt>java.lang.reflect</tt> are subpackages of <tt>java</tt>.
      *
-     * <p> In the event that multiple package defaults apply to a given class,
+     * In the event that multiple package defaults apply to a given class,
      * the package default pertaining to the most specific package takes
      * precedence over the others.  For example, if <tt>javax.lang</tt> and
      * <tt>javax.lang.reflect</tt> both have package defaults associated with
      * them, the latter package default applies to classes in
      * <tt>javax.lang.reflect</tt>.
      *
-     * <p> Package defaults take precedence over the class loader's default
+     * Package defaults take precedence over the class loader's default
      * assertion status, and may be overridden on a per-class basis by invoking
      * {@link #setClassAssertionStatus(String, boolean)}.  </p>
      *
@@ -2071,7 +2071,7 @@ public abstract class ClassLoader {
      * the named class has already been initialized.  (Once a class is
      * initialized, its assertion status cannot change.)
      *
-     * <p> If the named class is not a top-level class, this invocation will
+     * If the named class is not a top-level class, this invocation will
      * have no effect on the actual assertion status of any class. </p>
      *
      * @param  className

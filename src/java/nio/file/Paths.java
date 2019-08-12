@@ -1,28 +1,3 @@
-/*
- * Copyright (c) 2007, 2011, Oracle and/or its affiliates. All rights reserved.
- * ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- */
-
 package java.nio.file;
 
 import java.nio.file.spi.FileSystemProvider;
@@ -34,7 +9,6 @@ import java.net.URI;
  *
  * @since 1.7
  */
-
 public final class Paths {
     private Paths() { }
 
@@ -54,11 +28,11 @@ public final class Paths {
      * is the empty string and {@code more} does not contain any non-empty
      * strings.
      *
-     * <p> The {@code Path} is obtained by invoking the {@link FileSystem#getPath
+     * The {@code Path} is obtained by invoking the {@link FileSystem#getPath
      * getPath} method of the {@link FileSystems#getDefault default} {@link
      * FileSystem}.
      *
-     * <p> Note that while this method is very convenient, using it will imply
+     * Note that while this method is very convenient, using it will imply
      * an assumed reference to the default {@code FileSystem} and limit the
      * utility of the calling code. Hence it should not be used in library code
      * intended for flexible reuse. A more flexible alternative is to use an
@@ -87,20 +61,20 @@ public final class Paths {
     /**
      * Converts the given URI to a {@link Path} object.
      *
-     * <p> This method iterates over the {@link FileSystemProvider#installedProviders()
+     * This method iterates over the {@link FileSystemProvider#installedProviders()
      * installed} providers to locate the provider that is identified by the
      * URI {@link URI#getScheme scheme} of the given URI. URI schemes are
      * compared without regard to case. If the provider is found then its {@link
      * FileSystemProvider#getPath getPath} method is invoked to convert the
      * URI.
      *
-     * <p> In the case of the default provider, identified by the URI scheme
+     * In the case of the default provider, identified by the URI scheme
      * "file", the given URI has a non-empty path component, and undefined query
      * and fragment components. Whether the authority component may be present
      * is platform specific. The returned {@code Path} is associated with the
      * {@link FileSystems#getDefault default} file system.
      *
-     * <p> The default provider provides a similar <em>round-trip</em> guarantee
+     * The default provider provides a similar <em>round-trip</em> guarantee
      * to the {@link java.io.File} class. For a given {@code Path} <i>p</i> it
      * is guaranteed that
      * <blockquote><tt>

@@ -279,8 +279,8 @@ public abstract class ComponentUI {
      * @param width the width to get the baseline for
      * @param height the height to get the baseline for
      * @throws NullPointerException if <code>c</code> is <code>null</code>
-     * @throws IllegalArgumentException if width or height is &lt; 0
-     * @return baseline or a value &lt; 0 indicating there is no reasonable
+     * @throws IllegalArgumentException if width or height is < 0
+     * @return baseline or a value < 0 indicating there is no reasonable
      *                  baseline
      * @see javax.swing.JComponent#getBaseline(int,int)
      * @since 1.6

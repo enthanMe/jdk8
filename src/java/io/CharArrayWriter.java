@@ -141,13 +141,13 @@ class CharArrayWriter extends Writer {
     /**
      * Appends the specified character sequence to this writer.
      *
-     * <p> An invocation of this method of the form <tt>out.append(csq)</tt>
+     * An invocation of this method of the form <tt>out.append(csq)</tt>
      * behaves in exactly the same way as the invocation
      *
      * <pre>
      *     out.write(csq.toString()) </pre>
      *
-     * <p> Depending on the specification of <tt>toString</tt> for the
+     * Depending on the specification of <tt>toString</tt> for the
      * character sequence <tt>csq</tt>, the entire sequence may not be
      * appended. For instance, invoking the <tt>toString</tt> method of a
      * character buffer will return a subsequence whose content depends upon
@@ -171,7 +171,7 @@ class CharArrayWriter extends Writer {
     /**
      * Appends a subsequence of the specified character sequence to this writer.
      *
-     * <p> An invocation of this method of the form <tt>out.append(csq, start,
+     * An invocation of this method of the form <tt>out.append(csq, start,
      * end)</tt> when <tt>csq</tt> is not <tt>null</tt>, behaves in
      * exactly the same way as the invocation
      *
@@ -209,7 +209,7 @@ class CharArrayWriter extends Writer {
     /**
      * Appends the specified character to this writer.
      *
-     * <p> An invocation of this method of the form <tt>out.append(c)</tt>
+     * An invocation of this method of the form <tt>out.append(c)</tt>
      * behaves in exactly the same way as the invocation
      *
      * <pre>

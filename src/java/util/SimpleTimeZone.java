@@ -1627,7 +1627,7 @@ public class SimpleTimeZone extends TimeZone {
      * <code>DOW_IN_MONTH_MODE</code> rules, in the required section, followed
      * by the full rules, in packed format, in the optional section.  The
      * optional section will be ignored by JDK 1.1 code upon stream in.
-     * <p> Contents of the optional section: The length of a byte array is
+     * Contents of the optional section: The length of a byte array is
      * emitted (int); this is 4 as of this release. The byte array of the given
      * length is emitted. The contents of the byte array are the true values of
      * the fields <code>startDay</code>, <code>startDayOfWeek</code>,

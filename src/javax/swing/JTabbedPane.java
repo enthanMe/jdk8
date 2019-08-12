@@ -1235,8 +1235,8 @@ public class JTabbedPane extends JComponent
      * @return the key code which represents the mnemonic;
      *         -1 if a mnemonic is not specified for the tab
      * @exception IndexOutOfBoundsException if index is out of range
-     *            (<code>tabIndex</code> &lt; 0 ||
-     *              <code>tabIndex</code> &gt;= tab count)
+     *            (<code>tabIndex</code> < 0 ||
+     *              <code>tabIndex</code> >= tab count)
      * @see #setDisplayedMnemonicIndexAt(int,int)
      * @see #setMnemonicAt(int,int)
      */
@@ -1256,8 +1256,8 @@ public class JTabbedPane extends JComponent
      * @return index representing mnemonic character if one exists;
      *    otherwise returns -1
      * @exception IndexOutOfBoundsException if index is out of range
-     *            (<code>tabIndex</code> &lt; 0 ||
-     *              <code>tabIndex</code> &gt;= tab count)
+     *            (<code>tabIndex</code> < 0 ||
+     *              <code>tabIndex</code> >= tab count)
      * @see #setDisplayedMnemonicIndexAt(int,int)
      * @see #setMnemonicAt(int,int)
      */
@@ -1608,8 +1608,8 @@ public class JTabbedPane extends JComponent
      *            out of range ({@code tabIndex < 0 || tabIndex >= tab
      *            count})
      * @exception IllegalArgumentException will be thrown if
-     *            <code>mnemonicIndex</code> is &gt;= length of the tab
-     *            title , or &lt; -1
+     *            <code>mnemonicIndex</code> is >= length of the tab
+     *            title , or < -1
      * @see #setMnemonicAt(int,int)
      * @see #getDisplayedMnemonicIndexAt(int)
      *

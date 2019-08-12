@@ -156,7 +156,7 @@ public class InvocationEvent extends AWTEvent implements ActiveEvent {
      * <tt>InvocationEvent(source, runnable)</tt>
      * behaves in exactly the same way as the invocation of
      * <tt>{@link #InvocationEvent(Object, Runnable, Object, boolean) InvocationEvent}(source, runnable, null, false)</tt>.
-     * <p> This method throws an <code>IllegalArgumentException</code>
+     * This method throws an <code>IllegalArgumentException</code>
      * if <code>source</code> is <code>null</code>.
      *
      * @param source    The <code>Object</code> that originated the event

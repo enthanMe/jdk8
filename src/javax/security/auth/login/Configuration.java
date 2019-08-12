@@ -44,7 +44,7 @@ import sun.security.jca.GetInstance;
  * should be used for a particular application, and in what order the
  * LoginModules should be invoked.
  *
- * <p> A login configuration contains the following information.
+ * A login configuration contains the following information.
  * Note that this example only represents the default syntax for the
  * {@code Configuration}.  Subclass implementations of this class
  * may implement alternative syntaxes and may retrieve the
@@ -67,7 +67,7 @@ import sun.security.jca.GetInstance;
  *      };
  * </pre>
  *
- * <p> Each entry in the {@code Configuration} is indexed via an
+ * Each entry in the {@code Configuration} is indexed via an
  * application name, <i>Name</i>, and contains a list of
  * LoginModules configured for that application.  Each {@code LoginModule}
  * is specified via its fully qualified class name.
@@ -75,7 +75,7 @@ import sun.security.jca.GetInstance;
  * If an application does not have a specific entry,
  * it defaults to the specific entry for "<i>other</i>".
  *
- * <p> The <i>Flag</i> value controls the overall behavior as authentication
+ * The <i>Flag</i> value controls the overall behavior as authentication
  * proceeds down the stack.  The following represents a description of the
  * valid values for <i>Flag</i> and their respective semantics:
  *
@@ -104,7 +104,7 @@ import sun.security.jca.GetInstance;
  *                      {@code LoginModule} list.
  * </pre>
  *
- * <p> The overall authentication succeeds only if all <i>Required</i> and
+ * The overall authentication succeeds only if all <i>Required</i> and
  * <i>Requisite</i> LoginModules succeed.  If a <i>Sufficient</i>
  * {@code LoginModule} is configured and succeeds,
  * then only the <i>Required</i> and <i>Requisite</i> LoginModules prior to
@@ -114,7 +114,7 @@ import sun.security.jca.GetInstance;
  * then at least one <i>Sufficient</i> or <i>Optional</i>
  * {@code LoginModule} must succeed.
  *
- * <p> <i>ModuleOptions</i> is a space separated list of
+ * <i>ModuleOptions</i> is a space separated list of
  * {@code LoginModule}-specific values which are passed directly to
  * the underlying LoginModules.  Options are defined by the
  * {@code LoginModule} itself, and control the behavior within it.
@@ -128,7 +128,7 @@ import sun.security.jca.GetInstance;
  * Note that there is no limit to the number of
  * options a {@code LoginModule} may define.
  *
- * <p> The following represents an example {@code Configuration} entry
+ * The following represents an example {@code Configuration} entry
  * based on the syntax above:
  *
  * <pre>
@@ -140,7 +140,7 @@ import sun.security.jca.GetInstance;
  * };
  * </pre>
  *
- * <p> This {@code Configuration} specifies that an application named,
+ * This {@code Configuration} specifies that an application named,
  * "Login", requires users to first authenticate to the
  * <i>com.sun.security.auth.module.UnixLoginModule</i>, which is
  * required to succeed.  Even if the <i>UnixLoginModule</i>
@@ -151,7 +151,7 @@ import sun.security.jca.GetInstance;
  * authentication succeeds only if the <i>UnixLoginModule</i>
  * (<i>Required</i>) succeeds.
  *
- * <p> Also note that the LoginModule-specific options,
+ * Also note that the LoginModule-specific options,
  * <i>useTicketCache="true"</i> and
  * <i>ticketCache=${user.home}${/}tickets"</i>,
  * are passed to the <i>Krb5LoginModule</i>.
@@ -160,12 +160,12 @@ import sun.security.jca.GetInstance;
  * The system properties, <i>user.home</i> and <i>/</i>
  * (file.separator), are expanded to their respective values.
  *
- * <p> There is only one Configuration object installed in the runtime at any
+ * There is only one Configuration object installed in the runtime at any
  * given time.  A Configuration object can be installed by calling the
  * {@code setConfiguration} method.  The installed Configuration object
  * can be obtained by calling the {@code getConfiguration} method.
  *
- * <p> If no Configuration object has been installed in the runtime, a call to
+ * If no Configuration object has been installed in the runtime, a call to
  * {@code getConfiguration} installs an instance of the default
  * Configuration implementation (a default subclass implementation of this
  * abstract class).
@@ -173,7 +173,7 @@ import sun.security.jca.GetInstance;
  * of the {@code login.configuration.provider} security property to the fully
  * qualified name of the desired Configuration subclass implementation.
  *
- * <p> Application code can directly subclass Configuration to provide a custom
+ * Application code can directly subclass Configuration to provide a custom
  * implementation.  In addition, an instance of a Configuration object can be
  * constructed by invoking one of the {@code getInstance} factory methods
  * with a standard type.  The default policy type is "JavaLoginConfig".
@@ -306,13 +306,13 @@ public abstract class Configuration {
     /**
      * Returns a Configuration object of the specified type.
      *
-     * <p> This method traverses the list of registered security providers,
+     * This method traverses the list of registered security providers,
      * starting with the most preferred Provider.
      * A new Configuration object encapsulating the
      * ConfigurationSpi implementation from the first
      * Provider that supports the specified type is returned.
      *
-     * <p> Note that the list of registered providers may be retrieved via
+     * Note that the list of registered providers may be retrieved via
      * the {@link Security#getProviders() Security.getProviders()} method.
      *
      * @param type the specified Configuration type.  See the Configuration
@@ -363,12 +363,12 @@ public abstract class Configuration {
     /**
      * Returns a Configuration object of the specified type.
      *
-     * <p> A new Configuration object encapsulating the
+     * A new Configuration object encapsulating the
      * ConfigurationSpi implementation from the specified provider
      * is returned.   The specified provider must be registered
      * in the provider list.
      *
-     * <p> Note that the list of registered providers may be retrieved via
+     * Note that the list of registered providers may be retrieved via
      * the {@link Security#getProviders() Security.getProviders()} method.
      *
      * @param type the specified Configuration type.  See the Configuration
@@ -432,7 +432,7 @@ public abstract class Configuration {
     /**
      * Returns a Configuration object of the specified type.
      *
-     * <p> A new Configuration object encapsulating the
+     * A new Configuration object encapsulating the
      * ConfigurationSpi implementation from the specified Provider
      * object is returned.  Note that the specified Provider object
      * does not have to be registered in the provider list.
@@ -503,7 +503,7 @@ public abstract class Configuration {
     /**
      * Return the Provider of this Configuration.
      *
-     * <p> This Configuration instance will only have a Provider if it
+     * This Configuration instance will only have a Provider if it
      * was obtained via a call to {@code Configuration.getInstance}.
      * Otherwise this method returns null.
      *
@@ -518,7 +518,7 @@ public abstract class Configuration {
     /**
      * Return the type of this Configuration.
      *
-     * <p> This Configuration instance will only have a type if it
+     * This Configuration instance will only have a type if it
      * was obtained via a call to {@code Configuration.getInstance}.
      * Otherwise this method returns null.
      *
@@ -533,7 +533,7 @@ public abstract class Configuration {
     /**
      * Return Configuration parameters.
      *
-     * <p> This Configuration instance will only have parameters if it
+     * This Configuration instance will only have parameters if it
      * was obtained via a call to {@code Configuration.getInstance}.
      * Otherwise this method returns null.
      *
@@ -563,12 +563,12 @@ public abstract class Configuration {
     /**
      * Refresh and reload the Configuration.
      *
-     * <p> This method causes this Configuration object to refresh/reload its
+     * This method causes this Configuration object to refresh/reload its
      * contents in an implementation-dependent manner.
      * For example, if this Configuration object stores its entries in a file,
      * calling {@code refresh} may cause the file to be re-read.
      *
-     * <p> The default implementation of this method does nothing.
+     * The default implementation of this method does nothing.
      * This method should be overridden if a refresh operation is supported
      * by the implementation.
      *

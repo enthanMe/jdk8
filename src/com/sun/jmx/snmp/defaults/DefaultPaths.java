@@ -55,7 +55,7 @@ public class DefaultPaths {
      * Returns the installation directory for Java DMK.
      *
      * The default value of the installation directory is:
-     * <CODE>&lt;base_dir&gt; + File.separator + SUNWjdmk + File.separator + jdmk5.0 </CODE>
+     * <CODE><base_dir> + File.separator + SUNWjdmk + File.separator + jdmk5.0 </CODE>
      *
      * @return Java DMK installation directory.
      */
@@ -70,7 +70,7 @@ public class DefaultPaths {
      * Returns the installation directory for Java DMK concatenated with dirname.
      *
      * The default value of the installation directory is:
-     * <CODE>&lt;base_dir&gt; + File.separator + SUNWjdmk + File.separator + jdmk5.0 </CODE>
+     * <CODE><base_dir> + File.separator + SUNWjdmk + File.separator + jdmk5.0 </CODE>
      *
      * @param dirname The directory to be appended.
      *

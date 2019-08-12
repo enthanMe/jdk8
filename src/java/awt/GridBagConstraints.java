@@ -423,7 +423,7 @@ public class GridBagConstraints implements Cloneable, java.io.Serializable {
      * This field is used when the component is smaller than its
      * display area. It determines where, within the display area, to
      * place the component.
-     * <p> There are three kinds of possible values: orientation
+     * There are three kinds of possible values: orientation
      * relative, baseline relative and absolute.  Orientation relative
      * values are interpreted relative to the container's component
      * orientation property, baseline relative values are interpreted

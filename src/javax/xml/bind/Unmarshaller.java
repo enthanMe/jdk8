@@ -76,7 +76,7 @@ import java.io.Reader;
  *    <pre>
  *       JAXBContext jc = JAXBContext.newInstance( "com.acme.foo" );
  *       Unmarshaller u = jc.createUnmarshaller();
- *       StringBuffer xmlStr = new StringBuffer( "&lt;?xml version=&quot;1.0&quot;?&gt;..." );
+ *       StringBuffer xmlStr = new StringBuffer( "<?xml version=&quot;1.0&quot;?>..." );
  *       Object o = u.unmarshal( new StreamSource( new StringReader( xmlStr.toString() ) ) );
  *    </pre>
  * </blockquote>
@@ -238,7 +238,7 @@ import java.io.Reader;
  * to a JAXB mapped class by {@link JAXBContext}, that the root
  * element's <tt>xsi:type</tt> attribute takes
  * precedence over the unmarshal methods <tt>declaredType</tt> parameter.
- * These methods always return a <tt>JAXBElement&lt;declaredType></tt>
+ * These methods always return a <tt>JAXBElement<declaredType></tt>
  * instance. The table below shows how the properties of the returned JAXBElement
  * instance are set.
  *
@@ -284,19 +284,19 @@ import java.io.Reader;
  * <blockquote>
  *    <pre>
  *       Schema fragment for example
- *       &lt;xs:schema>
- *          &lt;xs:complexType name="FooType">...&lt;\xs:complexType>
- *          &lt;!-- global element declaration "PurchaseOrder" -->
- *          &lt;xs:element name="PurchaseOrder">
- *              &lt;xs:complexType>
- *                 &lt;xs:sequence>
- *                    &lt;!-- local element declaration "foo" -->
- *                    &lt;xs:element name="foo" type="FooType"/>
+ *       <xs:schema>
+ *          <xs:complexType name="FooType">...<\xs:complexType>
+ *          <!-- global element declaration "PurchaseOrder" -->
+ *          <xs:element name="PurchaseOrder">
+ *              <xs:complexType>
+ *                 <xs:sequence>
+ *                    <!-- local element declaration "foo" -->
+ *                    <xs:element name="foo" type="FooType"/>
  *                    ...
- *                 &lt;/xs:sequence>
- *              &lt;/xs:complexType>
- *          &lt;/xs:element>
- *       &lt;/xs:schema>
+ *                 </xs:sequence>
+ *              </xs:complexType>
+ *          </xs:element>
+ *       </xs:schema>
  *
  *       JAXBContext jc = JAXBContext.newInstance( "com.acme.foo" );
  *       Unmarshaller u = jc.createUnmarshaller();
@@ -309,7 +309,7 @@ import java.io.Reader;
  *                                  // local element declaration in schema.
  *
  *       // FooType is the JAXB mapping of the type of local element declaration foo.
- *       JAXBElement&lt;FooType> foo = u.unmarshal( fooSubtree, FooType.class);
+ *       JAXBElement<FooType> foo = u.unmarshal( fooSubtree, FooType.class);
  *    </pre>
  * </blockquote>
  *
@@ -1010,7 +1010,7 @@ public interface Unmarshaller {
      *
      * <p>
      * Every unmarshaller internally maintains a
-     * {@link java.util.Map}&lt;{@link Class},{@link XmlAdapter}>,
+     * {@link java.util.Map}<{@link Class},{@link XmlAdapter}>,
      * which it uses for unmarshalling classes whose fields/methods are annotated
      * with {@link javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter}.
      *

@@ -31,7 +31,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
 /**
- * Handles <code>&lt;ds:SignatureProperties&gt;</code> elements
+ * Handles <code><ds:SignatureProperties></code> elements
  * This Element holds {@link SignatureProperty} that contian additional information items
  * concerning the generation of the signature.
  * for example, data-time stamp, serial number of cryptographic hardware.

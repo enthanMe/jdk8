@@ -58,7 +58,7 @@ import javax.swing.plaf.synth.SynthConstants;
  * "Indeterminate" state for JProgressBars:</p>
  *
  * <pre><code>
- *     public final class IndeterminateState extends State&lt;JProgressBar&gt; {
+ *     public final class IndeterminateState extends State<JProgressBar> {
  *         public IndeterminateState() {
  *             super("Indeterminate");
  *         }

@@ -177,16 +177,16 @@ public class Raster {
      * Creates a Raster based on a PixelInterleavedSampleModel with the
      * specified data type, width, height, and number of bands.
      *
-     * <p> The upper left corner of the Raster is given by the
+     * The upper left corner of the Raster is given by the
      * location argument.  If location is null, (0, 0) will be used.
      * The dataType parameter should be one of the enumerated values
      * defined in the DataBuffer class.
      *
-     * <p> Note that interleaved <code>DataBuffer.TYPE_INT</code>
+     * Note that interleaved <code>DataBuffer.TYPE_INT</code>
      * Rasters are not supported.  To create a 1-band Raster of type
      * <code>DataBuffer.TYPE_INT</code>, use
      * Raster.createPackedRaster().
-     * <p> The only dataTypes supported currently are TYPE_BYTE
+     * The only dataTypes supported currently are TYPE_BYTE
      * and TYPE_USHORT.
      * @param dataType  the data type for storing samples
      * @param w         the width in pixels of the image data
@@ -219,16 +219,16 @@ public class Raster {
      * stride, and band offsets.  The number of bands is inferred from
      * bandOffsets.length.
      *
-     * <p> The upper left corner of the Raster is given by the
+     * The upper left corner of the Raster is given by the
      * location argument.  If location is null, (0, 0) will be used.
      * The dataType parameter should be one of the enumerated values
      * defined in the DataBuffer class.
      *
-     * <p> Note that interleaved <code>DataBuffer.TYPE_INT</code>
+     * Note that interleaved <code>DataBuffer.TYPE_INT</code>
      * Rasters are not supported.  To create a 1-band Raster of type
      * <code>DataBuffer.TYPE_INT</code>, use
      * Raster.createPackedRaster().
-     * <p> The only dataTypes supported currently are TYPE_BYTE
+     * The only dataTypes supported currently are TYPE_BYTE
      * and TYPE_USHORT.
      * @param dataType  the data type for storing samples
      * @param w         the width in pixels of the image data
@@ -283,12 +283,12 @@ public class Raster {
      * Creates a Raster based on a BandedSampleModel with the
      * specified data type, width, height, and number of bands.
      *
-     * <p> The upper left corner of the Raster is given by the
+     * The upper left corner of the Raster is given by the
      * location argument.  If location is null, (0, 0) will be used.
      * The dataType parameter should be one of the enumerated values
      * defined in the DataBuffer class.
      *
-     * <p> The only dataTypes supported currently are TYPE_BYTE, TYPE_USHORT,
+     * The only dataTypes supported currently are TYPE_BYTE, TYPE_USHORT,
      * and TYPE_INT.
      * @param dataType  the data type for storing samples
      * @param w         the width in pixels of the image data
@@ -333,11 +333,11 @@ public class Raster {
      * bankIndices.length and bandOffsets.length, which must be the
      * same.
      *
-     * <p> The upper left corner of the Raster is given by the
+     * The upper left corner of the Raster is given by the
      * location argument.  The dataType parameter should be one of the
      * enumerated values defined in the DataBuffer class.
      *
-     * <p> The only dataTypes supported currently are TYPE_BYTE, TYPE_USHORT,
+     * The only dataTypes supported currently are TYPE_BYTE, TYPE_USHORT,
      * and TYPE_INT.
      * @param dataType  the data type for storing samples
      * @param w         the width in pixels of the image data
@@ -423,12 +423,12 @@ public class Raster {
      * the specified data type, width, height, and band masks.
      * The number of bands is inferred from bandMasks.length.
      *
-     * <p> The upper left corner of the Raster is given by the
+     * The upper left corner of the Raster is given by the
      * location argument.  If location is null, (0, 0) will be used.
      * The dataType parameter should be one of the enumerated values
      * defined in the DataBuffer class.
      *
-     * <p> The only dataTypes supported currently are TYPE_BYTE, TYPE_USHORT,
+     * The only dataTypes supported currently are TYPE_BYTE, TYPE_USHORT,
      * and TYPE_INT.
      * @param dataType  the data type for storing samples
      * @param w         the width in pixels of the image data
@@ -481,18 +481,18 @@ public class Raster {
      * per band.  If the number of bands is one, the SampleModel will
      * be a MultiPixelPackedSampleModel.
      *
-     * <p> If the number of bands is more than one, the SampleModel
+     * If the number of bands is more than one, the SampleModel
      * will be a SinglePixelPackedSampleModel, with each band having
      * bitsPerBand bits.  In either case, the requirements on dataType
      * and bitsPerBand imposed by the corresponding SampleModel must
      * be met.
      *
-     * <p> The upper left corner of the Raster is given by the
+     * The upper left corner of the Raster is given by the
      * location argument.  If location is null, (0, 0) will be used.
      * The dataType parameter should be one of the enumerated values
      * defined in the DataBuffer class.
      *
-     * <p> The only dataTypes supported currently are TYPE_BYTE, TYPE_USHORT,
+     * The only dataTypes supported currently are TYPE_BYTE, TYPE_USHORT,
      * and TYPE_INT.
      * @param dataType  the data type for storing samples
      * @param w         the width in pixels of the image data
@@ -596,7 +596,7 @@ public class Raster {
      * bandOffsets.length.  The upper left corner of the Raster
      * is given by the location argument.  If location is null, (0, 0)
      * will be used.
-     * <p> Note that interleaved <code>DataBuffer.TYPE_INT</code>
+     * Note that interleaved <code>DataBuffer.TYPE_INT</code>
      * Rasters are not supported.  To create a 1-band Raster of type
      * <code>DataBuffer.TYPE_INT</code>, use
      * Raster.createPackedRaster().
@@ -1261,13 +1261,13 @@ public class Raster {
      * DataBuffer.  The new Raster will possess a reference to the
      * current Raster, accessible through its getParent() method.
      *
-     * <p> The parentX, parentY, width and height parameters
+     * The parentX, parentY, width and height parameters
      * form a Rectangle in this Raster's coordinate space,
      * indicating the area of pixels to be shared.  An error will
      * be thrown if this Rectangle is not contained with the bounds
      * of the current Raster.
      *
-     * <p> The new Raster may additionally be translated to a
+     * The new Raster may additionally be translated to a
      * different coordinate system for the plane than that used by the current
      * Raster.  The childMinX and childMinY parameters give the new
      * (x, y) coordinate of the upper-left pixel of the returned
@@ -1275,13 +1275,13 @@ public class Raster {
      * will map to the same pixel as the coordinate (parentX, parentY)
      * in the current Raster.
      *
-     * <p> The new Raster may be defined to contain only a subset of
+     * The new Raster may be defined to contain only a subset of
      * the bands of the current Raster, possibly reordered, by means
      * of the bandList parameter.  If bandList is null, it is taken to
      * include all of the bands of the current Raster in their current
      * order.
      *
-     * <p> To create a new Raster that contains a subregion of the current
+     * To create a new Raster that contains a subregion of the current
      * Raster, but shares its coordinate system and bands,
      * this method should be called with childMinX equal to parentX,
      * childMinY equal to parentY, and bandList equal to null.

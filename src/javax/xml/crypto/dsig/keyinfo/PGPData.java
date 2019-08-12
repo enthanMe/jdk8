@@ -40,22 +40,22 @@ import javax.xml.crypto.XMLStructure;
  * is defined as:
  *
  * <pre>
- *    &lt;element name="PGPData" type="ds:PGPDataType"/&gt;
- *    &lt;complexType name="PGPDataType"&gt;
- *      &lt;choice&gt;
- *        &lt;sequence&gt;
- *          &lt;element name="PGPKeyID" type="base64Binary"/&gt;
- *          &lt;element name="PGPKeyPacket" type="base64Binary" minOccurs="0"/&gt;
- *          &lt;any namespace="##other" processContents="lax" minOccurs="0"
- *           maxOccurs="unbounded"/&gt;
- *        &lt;/sequence&gt;
- *        &lt;sequence&gt;
- *          &lt;element name="PGPKeyPacket" type="base64Binary"/&gt;
- *          &lt;any namespace="##other" processContents="lax" minOccurs="0"
- *           maxOccurs="unbounded"/&gt;
- *        &lt;/sequence&gt;
- *      &lt;/choice&gt;
- *    &lt;/complexType&gt;
+ *    <element name="PGPData" type="ds:PGPDataType"/>
+ *    <complexType name="PGPDataType">
+ *      <choice>
+ *        <sequence>
+ *          <element name="PGPKeyID" type="base64Binary"/>
+ *          <element name="PGPKeyPacket" type="base64Binary" minOccurs="0"/>
+ *          <any namespace="##other" processContents="lax" minOccurs="0"
+ *           maxOccurs="unbounded"/>
+ *        </sequence>
+ *        <sequence>
+ *          <element name="PGPKeyPacket" type="base64Binary"/>
+ *          <any namespace="##other" processContents="lax" minOccurs="0"
+ *           maxOccurs="unbounded"/>
+ *        </sequence>
+ *      </choice>
+ *    </complexType>
  * </pre>
  *
  * A <code>PGPData</code> instance may be created by invoking one of the

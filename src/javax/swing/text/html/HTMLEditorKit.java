@@ -48,8 +48,8 @@ import java.security.PrivilegedAction;
  * by default.  The default support is provided by this class, which
  * supports HTML version 3.2 (with some extensions), and is migrating
  * toward version 4.0.
- * The &lt;applet&gt; tag is not supported, but some support is provided
- * for the &lt;object&gt; tag.
+ * The <applet> tag is not supported, but some support is provided
+ * for the <object> tag.
  * <p>
  * There are several goals of the HTML EditorKit provided, that have
  * an effect upon the way that HTML is modeled.  These
@@ -989,7 +989,7 @@ public class HTMLEditorKit extends StyledEditorKit implements Accessible {
     public static class ParserCallback {
         /**
          * This is passed as an attribute in the attributeset to indicate
-         * the element is implied eg, the string '&lt;&gt;foo&lt;\t&gt;'
+         * the element is implied eg, the string '<>foo<\t>'
          * contains an implied html element and an implied body element.
          *
          * @since 1.3
@@ -1586,7 +1586,7 @@ public class HTMLEditorKit extends StyledEditorKit implements Accessible {
      * For example, lets say you wanted to create an action to insert
      * a table into the body. The parentTag would be HTML.Tag.BODY,
      * addTag would be HTML.Tag.TABLE, and the string could be something
-     * like &lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;.
+     * like <table><tr><td></td></tr></table>.
      * <p>There is also an option to supply an alternate parentTag and
      * addTag. These will be checked for if there is no parentTag at
      * offset.

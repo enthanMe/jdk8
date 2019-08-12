@@ -34,23 +34,23 @@ import org.w3c.dom.Element;
 /**
  * The wildcard schema component traverser.
  *
- * &lt;any
+ * <any
  *   id = ID
  *   maxOccurs = (nonNegativeInteger | unbounded)  : 1
  *   minOccurs = nonNegativeInteger : 1
  *   namespace = ((##any | ##other) | List of (anyURI | (##targetNamespace | ##local)) )  : ##any
  *   processContents = (lax | skip | strict) : strict
- *   {any attributes with non-schema namespace . . .}&gt;
+ *   {any attributes with non-schema namespace . . .}>
  *   Content: (annotation?)
- * &lt;/any&gt;
+ * </any>
  *
- * &lt;anyAttribute
+ * <anyAttribute
  *   id = ID
  *   namespace = ((##any | ##other) | List of (anyURI | (##targetNamespace | ##local)) )  : ##any
  *   processContents = (lax | skip | strict) : strict
- *   {any attributes with non-schema namespace . . .}&gt;
+ *   {any attributes with non-schema namespace . . .}>
  *   Content: (annotation?)
- * &lt;/anyAttribute&gt;
+ * </anyAttribute>
  *
  * @xerces.internal
  *
@@ -75,7 +75,7 @@ class XSDWildcardTraverser extends XSDAbstractTraverser {
 
 
     /**
-     * Traverse &lt;any&gt;
+     * Traverse <any>
      *
      * @param  elmNode
      * @param  schemaDoc
@@ -116,7 +116,7 @@ class XSDWildcardTraverser extends XSDAbstractTraverser {
 
 
     /**
-     * Traverse &lt;anyAttribute&gt;
+     * Traverse <anyAttribute>
      *
      * @param  elmNode
      * @param  schemaDoc

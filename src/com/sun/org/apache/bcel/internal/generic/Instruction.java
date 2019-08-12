@@ -103,8 +103,8 @@ public abstract class Instruction implements Cloneable, Serializable {
   /**
    * Long output format:
    *
-   * &lt;name of opcode&gt; "["&lt;opcode number&gt;"]"
-   * "("&lt;length of instruction&gt;")"
+   * <name of opcode> "["<opcode number>"]"
+   * "("<length of instruction>")"
    *
    * @param verbose long/short format switch
    * @return mnemonic for instruction

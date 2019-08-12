@@ -53,7 +53,7 @@ import org.w3c.dom.DOMException;
  * original document, then no <code>CSSCharsetRule</code> is created. The
  * value of the <code>encoding</code> attribute may also be used as a hint
  * for the encoding used on serialization of the style sheet.
- * <p> The value of the @charset rule (and therefore of the
+ * The value of the @charset rule (and therefore of the
  * <code>CSSCharsetRule</code>) may not correspond to the encoding the
  * document actually came in; character encoding information e.g. in an HTTP
  * header, has priority (see CSS document representation) but this is not

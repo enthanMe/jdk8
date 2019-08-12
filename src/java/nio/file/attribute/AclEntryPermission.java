@@ -52,7 +52,7 @@ public enum AclEntryPermission {
     /**
      * Permission to read the named attributes of a file.
      *
-     * <p> <a href="http://www.ietf.org/rfc/rfc3530.txt">RFC&nbsp;3530: Network
+     * <a href="http://www.ietf.org/rfc/rfc3530.txt">RFC&nbsp;3530: Network
      * File System (NFS) version 4 Protocol</a> defines <em>named attributes</em>
      * as opaque files associated with a file in the file system.
      */
@@ -61,7 +61,7 @@ public enum AclEntryPermission {
     /**
      * Permission to write the named attributes of a file.
      *
-     * <p> <a href="http://www.ietf.org/rfc/rfc3530.txt">RFC&nbsp;3530: Network
+     * <a href="http://www.ietf.org/rfc/rfc3530.txt">RFC&nbsp;3530: Network
      * File System (NFS) version 4 Protocol</a> defines <em>named attributes</em>
      * as opaque files associated with a file in the file system.
      */

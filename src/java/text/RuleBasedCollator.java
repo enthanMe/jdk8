@@ -53,7 +53,7 @@ import java.util.Locale;
  * <code>RuleBasedCollator</code> has the following restrictions
  * for efficiency (other subclasses may be used for more complex languages) :
  * <ol>
- * <li>If a special collation rule controlled by a &lt;modifier&gt; is
+ * <li>If a special collation rule controlled by a <modifier> is
       specified it applies to the whole collator object.
  * <li>All non-mentioned characters are at the end of the
  *     collation order.
@@ -63,9 +63,9 @@ import java.util.Locale;
  * The collation table is composed of a list of collation rules, where each
  * rule is of one of three forms:
  * <pre>
- *    &lt;modifier&gt;
- *    &lt;relation&gt; &lt;text-argument&gt;
- *    &lt;reset&gt; &lt;text-argument&gt;
+ *    <modifier>
+ *    <relation> <text-argument>
+ *    <reset> <text-argument>
  * </pre>
  * The definitions of the rule elements is as follows:
  * <UL>
@@ -74,7 +74,7 @@ import java.util.Locale;
  *        whitespace characters [0009-000D, 0020] and rule syntax characters
  *        [0021-002F, 003A-0040, 005B-0060, 007B-007E]). If those
  *        characters are desired, you can put them in single quotes
- *        (e.g. ampersand =&gt; '&amp;'). Note that unquoted white space characters
+ *        (e.g. ampersand => '&amp;'). Note that unquoted white space characters
  *        are ignored; e.g. <code>b c</code> is treated as <code>bc</code>.
  *    <LI><strong>Modifier</strong>: There are currently two modifiers that
  *        turn on special collation rules.
@@ -92,7 +92,7 @@ import java.util.Locale;
  *        <p>'@' : Indicates that accents are sorted backwards, as in French.
  *    <LI><strong>Relation</strong>: The relations are the following:
  *        <UL>
- *            <LI>'&lt;' : Greater, as a letter difference (primary)
+ *            <LI>'<' : Greater, as a letter difference (primary)
  *            <LI>';' : Greater, as an accent difference (secondary)
  *            <LI>',' : Greater, as a case difference (tertiary)
  *            <LI>'=' : Equal
@@ -109,37 +109,37 @@ import java.util.Locale;
  * following are equivalent ways of expressing the same thing:
  * <blockquote>
  * <pre>
- * a &lt; b &lt; c
- * a &lt; b &amp; b &lt; c
- * a &lt; c &amp; a &lt; b
+ * a < b < c
+ * a < b &amp; b < c
+ * a < c &amp; a < b
  * </pre>
  * </blockquote>
  * Notice that the order is important, as the subsequent item goes immediately
  * after the text-argument. The following are not equivalent:
  * <blockquote>
  * <pre>
- * a &lt; b &amp; a &lt; c
- * a &lt; c &amp; a &lt; b
+ * a < b &amp; a < c
+ * a < c &amp; a < b
  * </pre>
  * </blockquote>
  * Either the text-argument must already be present in the sequence, or some
- * initial substring of the text-argument must be present. (e.g. "a &lt; b &amp; ae &lt;
+ * initial substring of the text-argument must be present. (e.g. "a < b &amp; ae <
  * e" is valid since "a" is present in the sequence before "ae" is reset). In
  * this latter case, "ae" is not entered and treated as a single character;
  * instead, "e" is sorted as if it were expanded to two characters: "a"
  * followed by an "e". This difference appears in natural languages: in
  * traditional Spanish "ch" is treated as though it contracts to a single
- * character (expressed as "c &lt; ch &lt; d"), while in traditional German
+ * character (expressed as "c < ch < d"), while in traditional German
  * a-umlaut is treated as though it expanded to two characters
- * (expressed as "a,A &lt; b,B ... &amp;ae;&#92;u00e3&amp;AE;&#92;u00c3").
+ * (expressed as "a,A < b,B ... &amp;ae;&#92;u00e3&amp;AE;&#92;u00c3").
  * [&#92;u00e3 and &#92;u00c3 are, of course, the escape sequences for a-umlaut.]
  * <p>
  * <strong>Ignorable Characters</strong>
  * <p>
  * For ignorable characters, the first rule must start with a relation (the
- * examples we have used above are really fragments; "a &lt; b" really should be
- * "&lt; a &lt; b"). If, however, the first relation is not "&lt;", then all the all
- * text-arguments up to the first "&lt;" are ignorable. For example, ", - &lt; a &lt; b"
+ * examples we have used above are really fragments; "a < b" really should be
+ * "< a < b"). If, however, the first relation is not "<", then all the all
+ * text-arguments up to the first "<" are ignorable. For example, ", - < a < b"
  * makes "-" an ignorable character, as we saw earlier in the word
  * "black-birds". In the samples for different languages, you see that most
  * accents are ignorable.
@@ -168,26 +168,26 @@ import java.util.Locale;
  * The following are errors:
  * <UL>
  *     <LI>A text-argument contains unquoted punctuation symbols
- *        (e.g. "a &lt; b-c &lt; d").
+ *        (e.g. "a < b-c < d").
  *     <LI>A relation or reset character not followed by a text-argument
- *        (e.g. "a &lt; ,b").
+ *        (e.g. "a < ,b").
  *     <LI>A reset where the text-argument (or an initial substring of the
  *         text-argument) is not already in the sequence.
- *         (e.g. "a &lt; b &amp; e &lt; f")
+ *         (e.g. "a < b &amp; e < f")
  * </UL>
  * If you produce one of these errors, a <code>RuleBasedCollator</code> throws
  * a <code>ParseException</code>.
  *
  * <p><strong>Examples</strong>
- * <p>Simple:     "&lt; a &lt; b &lt; c &lt; d"
- * <p>Norwegian:  "&lt; a, A &lt; b, B &lt; c, C &lt; d, D &lt; e, E &lt; f, F
- *                 &lt; g, G &lt; h, H &lt; i, I &lt; j, J &lt; k, K &lt; l, L
- *                 &lt; m, M &lt; n, N &lt; o, O &lt; p, P &lt; q, Q &lt; r, R
- *                 &lt; s, S &lt; t, T &lt; u, U &lt; v, V &lt; w, W &lt; x, X
- *                 &lt; y, Y &lt; z, Z
- *                 &lt; &#92;u00E6, &#92;u00C6
- *                 &lt; &#92;u00F8, &#92;u00D8
- *                 &lt; &#92;u00E5 = a&#92;u030A, &#92;u00C5 = A&#92;u030A;
+ * <p>Simple:     "< a < b < c < d"
+ * <p>Norwegian:  "< a, A < b, B < c, C < d, D < e, E < f, F
+ *                 < g, G < h, H < i, I < j, J < k, K < l, L
+ *                 < m, M < n, N < o, O < p, P < q, Q < r, R
+ *                 < s, S < t, T < u, U < v, V < w, W < x, X
+ *                 < y, Y < z, Z
+ *                 < &#92;u00E6, &#92;u00C6
+ *                 < &#92;u00F8, &#92;u00D8
+ *                 < &#92;u00E5 = a&#92;u030A, &#92;u00C5 = A&#92;u030A;
  *                      aa, AA"
  *
  * <p>
@@ -196,19 +196,19 @@ import java.util.Locale;
  * with the rules contained in a <code>String</code> object. For example:
  * <blockquote>
  * <pre>
- * String simple = "&lt; a&lt; b&lt; c&lt; d";
+ * String simple = "< a< b< c< d";
  * RuleBasedCollator mySimple = new RuleBasedCollator(simple);
  * </pre>
  * </blockquote>
  * Or:
  * <blockquote>
  * <pre>
- * String Norwegian = "&lt; a, A &lt; b, B &lt; c, C &lt; d, D &lt; e, E &lt; f, F &lt; g, G &lt; h, H &lt; i, I" +
- *                    "&lt; j, J &lt; k, K &lt; l, L &lt; m, M &lt; n, N &lt; o, O &lt; p, P &lt; q, Q &lt; r, R" +
- *                    "&lt; s, S &lt; t, T &lt; u, U &lt; v, V &lt; w, W &lt; x, X &lt; y, Y &lt; z, Z" +
- *                    "&lt; &#92;u00E6, &#92;u00C6" +     // Latin letter ae &amp; AE
- *                    "&lt; &#92;u00F8, &#92;u00D8" +     // Latin letter o &amp; O with stroke
- *                    "&lt; &#92;u00E5 = a&#92;u030A," +  // Latin letter a with ring above
+ * String Norwegian = "< a, A < b, B < c, C < d, D < e, E < f, F < g, G < h, H < i, I" +
+ *                    "< j, J < k, K < l, L < m, M < n, N < o, O < p, P < q, Q < r, R" +
+ *                    "< s, S < t, T < u, U < v, V < w, W < x, X < y, Y < z, Z" +
+ *                    "< &#92;u00E6, &#92;u00C6" +     // Latin letter ae &amp; AE
+ *                    "< &#92;u00F8, &#92;u00D8" +     // Latin letter o &amp; O with stroke
+ *                    "< &#92;u00E5 = a&#92;u030A," +  // Latin letter a with ring above
  *                    "  &#92;u00C5 = A&#92;u030A;" +  // Latin letter A with ring above
  *                    "  aa, AA";
  * RuleBasedCollator myNorwegian = new RuleBasedCollator(Norwegian);
@@ -231,8 +231,8 @@ import java.util.Locale;
  *                 + ";&#92;u0306;&#92;u0307;&#92;u0309;&#92;u030A"    // main accents
  *                 + ";&#92;u030B;&#92;u030C;&#92;u030D;&#92;u030E"    // main accents
  *                 + ";&#92;u030F;&#92;u0310;&#92;u0311;&#92;u0312"    // main accents
- *                 + "&lt; a , A ; ae, AE ; &#92;u00e6 , &#92;u00c6"
- *                 + "&lt; b , B &lt; c, C &lt; e, E &amp; C &lt; d, D";
+ *                 + "< a , A ; ae, AE ; &#92;u00e6 , &#92;u00c6"
+ *                 + "< b , B < c, C < e, E &amp; C < d, D";
  * // change the order of accent characters
  * String addOn = "&amp; &#92;u0300 ; &#92;u0308 ; &#92;u0302";
  * RuleBasedCollator myCollator = new RuleBasedCollator(oldRules + addOn);
@@ -274,7 +274,7 @@ public class RuleBasedCollator extends Collator{
      * @param rules the collation rules to build the collation table from.
      * @exception ParseException A format exception
      * will be thrown if the build process of the rules fails. For
-     * example, build rule "a &lt; ? &lt; d" will cause the constructor to
+     * example, build rule "a < ? < d" will cause the constructor to
      * throw the ParseException because the '?' is not quoted.
      */
     public RuleBasedCollator(String rules) throws ParseException {

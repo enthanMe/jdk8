@@ -43,7 +43,7 @@ import sun.security.util.SecurityConstants;
  * all the files and directories contained in that directory. A pathname
  * that ends with "/-" indicates (recursively) all files
  * and subdirectories contained in that directory. A pathname consisting of
- * the special token "&lt;&lt;ALL FILES&gt;&gt;" matches <b>any</b> file.
+ * the special token "<<ALL FILES>>" matches <b>any</b> file.
  * <P>
  * Note: A pathname consisting of a single "*" indicates all the files
  * in the current directory, while a pathname consisting of a single "-"
@@ -76,7 +76,7 @@ import sun.security.util.SecurityConstants;
  * <P>
  * Be careful when granting FilePermissions. Think about the implications
  * of granting read and especially write access to various files and
- * directories. The "&lt;&lt;ALL FILES&gt;&gt;" permission with write action is
+ * directories. The "<<ALL FILES>>" permission with write action is
  * especially dangerous. This grants permission to write to the entire
  * file system. One thing this effectively allows is replacement of the
  * system binary, including the JVM runtime environment.
@@ -255,7 +255,7 @@ public final class FilePermission extends Permission implements Serializable {
      * indicates all the files and directories contained in that directory.
      * A pathname that ends with "/-" indicates (recursively) all files and
      * subdirectories contained in that directory. The special pathname
-     * "&lt;&lt;ALL FILES&gt;&gt;" matches any file.
+     * "<<ALL FILES>>" matches any file.
      *
      * <p>A pathname consisting of a single "*" indicates all the files
      * in the current directory, while a pathname consisting of a single "-"

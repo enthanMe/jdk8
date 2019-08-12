@@ -36,7 +36,7 @@ import com.sun.jmx.snmp.SnmpMsg;
 import com.sun.jmx.snmp.internal.SnmpSecurityCache;
 import com.sun.jmx.snmp.SnmpBadSecurityLevelException;
 /**
- * <P> An <CODE>SnmpIncomingResponse</CODE> handles the unmarshalling of the received response.</P>
+ * An <CODE>SnmpIncomingResponse</CODE> handles the unmarshalling of the received response.</P>
  * <p><b>This API is a Sun Microsystems internal API  and is subject
  * to change without notice.</b></p>
  * @since 1.5

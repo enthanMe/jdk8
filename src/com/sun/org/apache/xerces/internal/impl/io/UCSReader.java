@@ -109,7 +109,7 @@ public class UCSReader extends Reader {
      * Read a single character.  This method will block until a character is
      * available, an I/O error occurs, or the end of the stream is reached.
      *
-     * <p> Subclasses that intend to support efficient single-character input
+     * Subclasses that intend to support efficient single-character input
      * should override this method.
      *
      * @return     The character read, as an integer in the range 0 to 127

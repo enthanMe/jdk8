@@ -80,9 +80,9 @@ public interface AppletStub {
      * Returns the value of the named parameter in the HTML tag. For
      * example, if an applet is specified as
      * <blockquote><pre>
-     * &lt;applet code="Clock" width=50 height=50&gt;
-     * &lt;param name=Color value="blue"&gt;
-     * &lt;/applet&gt;
+     * <applet code="Clock" width=50 height=50>
+     * <param name=Color value="blue">
+     * </applet>
      * </pre></blockquote>
      * <p>
      * then a call to <code>getParameter("Color")</code> returns the

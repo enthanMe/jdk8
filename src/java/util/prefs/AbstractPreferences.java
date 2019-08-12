@@ -783,7 +783,7 @@ public abstract class AbstractPreferences extends Preferences {
      * consecutively, or the final token is <tt>"/"</tt> (rather than a name),
      * an appropriate <tt>IllegalArgumentException</tt> is thrown.
      *
-     * <p> If the first character of <tt>path</tt> is <tt>'/'</tt>
+     * If the first character of <tt>path</tt> is <tt>'/'</tt>
      * (indicating an absolute path name) this preference node's
      * lock is dropped prior to breaking <tt>path</tt> into tokens, and
      * this method recursively traverses the path starting from the root
@@ -1134,7 +1134,7 @@ public abstract class AbstractPreferences extends Preferences {
      * not been removed.  (The implementor needn't check for either of these
      * things.)
      *
-     * <p> Generally speaking, this method should not throw an exception
+     * Generally speaking, this method should not throw an exception
      * under any circumstances.  If, however, if it does throw an exception,
      * the exception will be intercepted and treated as a <tt>null</tt>
      * return value.
@@ -1376,7 +1376,7 @@ public abstract class AbstractPreferences extends Preferences {
      * the subTree while only that node is locked. Note that flushSpi() is
      * invoked top-down.
      *
-     * <p> If this method is invoked on a node that has been removed with
+     * If this method is invoked on a node that has been removed with
      * the {@link #removeNode()} method, flushSpi() is invoked on this node,
      * but not on others.
      *

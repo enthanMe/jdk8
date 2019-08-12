@@ -174,7 +174,7 @@ public class JTree extends JComponent implements Scrollable, Accessible
     transient protected TreeCellRenderer  cellRenderer;
 
     /**
-     * Height to use for each display row. If this is &lt;= 0 the renderer
+     * Height to use for each display row. If this is <= 0 the renderer
      * determines the height for each row.
      */
     protected int                         rowHeight;
@@ -1707,7 +1707,7 @@ public class JTree extends JComponent implements Scrollable, Accessible
     /**
      * Selects the nodes corresponding to each of the specified rows
      * in the display. If a particular element of <code>rows</code> is
-     * &lt; 0 or &gt;= <code>getRowCount</code>, it will be ignored.
+     * < 0 or >= <code>getRowCount</code>, it will be ignored.
      * If none of the elements
      * in <code>rows</code> are valid rows, the selection will
      * be cleared. That is it will be as if <code>clearSelection</code>
@@ -2168,8 +2168,8 @@ public class JTree extends JComponent implements Scrollable, Accessible
      *
      * @param row  an integer specifying a row
      * @return the <code>TreePath</code> to the specified node,
-     *          <code>null</code> if <code>row &lt; 0</code>
-     *          or <code>row &gt;= getRowCount()</code>
+     *          <code>null</code> if <code>row < 0</code>
+     *          or <code>row >= getRowCount()</code>
      */
     public TreePath getPathForRow(int row) {
         TreeUI                  tree = getUI();
@@ -2217,7 +2217,7 @@ public class JTree extends JComponent implements Scrollable, Accessible
      * Ensures that the node in the specified row is expanded and
      * viewable.
      * <p>
-     * If <code>row</code> is &lt; 0 or &gt;= <code>getRowCount</code> this
+     * If <code>row</code> is < 0 or >= <code>getRowCount</code> this
      * will have no effect.
      *
      * @param row  an integer specifying a display row, where 0 is the
@@ -2240,7 +2240,7 @@ public class JTree extends JComponent implements Scrollable, Accessible
     /**
      * Ensures that the node in the specified row is collapsed.
      * <p>
-     * If <code>row</code> is &lt; 0 or &gt;= <code>getRowCount</code> this
+     * If <code>row</code> is < 0 or >= <code>getRowCount</code> this
      * will have no effect.
      *
      * @param row  an integer specifying a display row, where 0 is the

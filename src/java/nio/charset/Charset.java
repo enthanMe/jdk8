@@ -54,21 +54,21 @@ import sun.security.action.GetPropertyAction;
  * for retrieving the various names associated with a charset.  Instances of
  * this class are immutable.
  *
- * <p> This class also defines static methods for testing whether a particular
+ * This class also defines static methods for testing whether a particular
  * charset is supported, for locating charset instances by name, and for
  * constructing a map that contains every charset for which support is
  * available in the current Java virtual machine.  Support for new charsets can
  * be added via the service-provider interface defined in the {@link
  * java.nio.charset.spi.CharsetProvider} class.
  *
- * <p> All of the methods defined in this class are safe for use by multiple
+ * All of the methods defined in this class are safe for use by multiple
  * concurrent threads.
  *
  *
  * <a name="names"></a><a name="charenc"></a>
  * <h2>Charset names</h2>
  *
- * <p> Charsets are named by strings composed of the following characters:
+ * Charsets are named by strings composed of the following characters:
  *
  * <ul>
  *
@@ -105,7 +105,7 @@ import sun.security.action.GetPropertyAction;
  * href="http://www.ietf.org/rfc/rfc2278.txt"><i>RFC&nbsp;2278:&nbsp;IANA Charset
  * Registration Procedures</i></a>.
  *
- * <p> Every charset has a <i>canonical name</i> and may also have one or more
+ * Every charset has a <i>canonical name</i> and may also have one or more
  * <i>aliases</i>.  The canonical name is returned by the {@link #name() name} method
  * of this class.  Canonical names are, by convention, usually in upper case.
  * The aliases of a charset are returned by the {@link #aliases() aliases}
@@ -129,7 +129,7 @@ import sun.security.action.GetPropertyAction;
  * supported charset is not listed in the IANA registry then its canonical name
  * must begin with one of the strings <tt>"X-"</tt> or <tt>"x-"</tt>.
  *
- * <p> The IANA charset registry does change over time, and so the canonical
+ * The IANA charset registry does change over time, and so the canonical
  * name and the aliases of a particular charset may also change over time.  To
  * ensure compatibility it is recommended that no alias ever be removed from a
  * charset, and that if the canonical name of a charset is changed then its
@@ -165,21 +165,21 @@ import sun.security.action.GetPropertyAction;
  *         byte&nbsp;order identified by an optional byte-order mark</td></tr>
  * </table></blockquote>
  *
- * <p> The <tt>UTF-8</tt> charset is specified by <a
+ * The <tt>UTF-8</tt> charset is specified by <a
  * href="http://www.ietf.org/rfc/rfc2279.txt"><i>RFC&nbsp;2279</i></a>; the
  * transformation format upon which it is based is specified in
  * Amendment&nbsp;2 of ISO&nbsp;10646-1 and is also described in the <a
  * href="http://www.unicode.org/unicode/standard/standard.html"><i>Unicode
  * Standard</i></a>.
  *
- * <p> The <tt>UTF-16</tt> charsets are specified by <a
+ * The <tt>UTF-16</tt> charsets are specified by <a
  * href="http://www.ietf.org/rfc/rfc2781.txt"><i>RFC&nbsp;2781</i></a>; the
  * transformation formats upon which they are based are specified in
  * Amendment&nbsp;1 of ISO&nbsp;10646-1 and are also described in the <a
  * href="http://www.unicode.org/unicode/standard/standard.html"><i>Unicode
  * Standard</i></a>.
  *
- * <p> The <tt>UTF-16</tt> charsets use sixteen-bit quantities and are
+ * The <tt>UTF-16</tt> charsets use sixteen-bit quantities and are
  * therefore sensitive to byte order.  In these encodings the byte order of a
  * stream may be indicated by an initial <i>byte-order mark</i> represented by
  * the Unicode character <tt>'&#92;uFEFF'</tt>.  Byte-order marks are handled
@@ -187,13 +187,13 @@ import sun.security.action.GetPropertyAction;
  *
  * <ul>
  *
- *   <li><p> When decoding, the <tt>UTF-16BE</tt> and <tt>UTF-16LE</tt>
+ *   <li>When decoding, the <tt>UTF-16BE</tt> and <tt>UTF-16LE</tt>
  *   charsets interpret the initial byte-order marks as a <small>ZERO-WIDTH
  *   NON-BREAKING SPACE</small>; when encoding, they do not write
  *   byte-order marks. </p></li>
 
  *
- *   <li><p> When decoding, the <tt>UTF-16</tt> charset interprets the
+ *   <li>When decoding, the <tt>UTF-16</tt> charset interprets the
  *   byte-order mark at the beginning of the input stream to indicate the
  *   byte-order of the stream but defaults to big-endian if there is no
  *   byte-order mark; when encoding, it uses big-endian byte order and writes
@@ -205,7 +205,7 @@ import sun.security.action.GetPropertyAction;
  * input sequence are not omitted since the same code is used to represent
  * <small>ZERO-WIDTH NON-BREAKING SPACE</small>.
  *
- * <p> Every instance of the Java virtual machine has a default charset, which
+ * Every instance of the Java virtual machine has a default charset, which
  * may or may not be one of the standard charsets.  The default charset is
  * determined during virtual-machine startup and typically depends upon the
  * locale and charset being used by the underlying operating system. </p>
@@ -215,25 +215,25 @@ import sun.security.action.GetPropertyAction;
  *
  * <h2>Terminology</h2>
  *
- * <p> The name of this class is taken from the terms used in
+ * The name of this class is taken from the terms used in
  * <a href="http://www.ietf.org/rfc/rfc2278.txt"><i>RFC&nbsp;2278</i></a>.
  * In that document a <i>charset</i> is defined as the combination of
  * one or more coded character sets and a character-encoding scheme.
  * (This definition is confusing; some other software systems define
  * <i>charset</i> as a synonym for <i>coded character set</i>.)
  *
- * <p> A <i>coded character set</i> is a mapping between a set of abstract
+ * A <i>coded character set</i> is a mapping between a set of abstract
  * characters and a set of integers.  US-ASCII, ISO&nbsp;8859-1,
  * JIS&nbsp;X&nbsp;0201, and Unicode are examples of coded character sets.
  *
- * <p> Some standards have defined a <i>character set</i> to be simply a
+ * Some standards have defined a <i>character set</i> to be simply a
  * set of abstract characters without an associated assigned numbering.
  * An alphabet is an example of such a character set.  However, the subtle
  * distinction between <i>character set</i> and <i>coded character set</i>
  * is rarely used in practice; the former has become a short form for the
  * latter, including in the Java API specification.
  *
- * <p> A <i>character-encoding scheme</i> is a mapping between one or more
+ * A <i>character-encoding scheme</i> is a mapping between one or more
  * coded character sets and a set of octet (eight-bit byte) sequences.
  * UTF-8, UTF-16, ISO&nbsp;2022, and EUC are examples of
  * character-encoding schemes.  Encoding schemes are often associated with
@@ -242,7 +242,7 @@ import sun.security.action.GetPropertyAction;
  * coded character sets; EUC, for example, can be used to encode
  * characters in a variety of Asian coded character sets.
  *
- * <p> When a coded character set is used exclusively with a single
+ * When a coded character set is used exclusively with a single
  * character-encoding scheme then the corresponding charset is usually
  * named for the coded character set; otherwise a charset is usually named
  * for the encoding scheme and, possibly, the locale of the coded
@@ -252,7 +252,7 @@ import sun.security.action.GetPropertyAction;
  * JIS&nbsp;X&nbsp;0201, JIS&nbsp;X&nbsp;0208, and JIS&nbsp;X&nbsp;0212
  * coded character sets for the Japanese language.
  *
- * <p> The native character encoding of the Java programming language is
+ * The native character encoding of the Java programming language is
  * UTF-16.  A charset in the Java platform therefore defines a mapping
  * between sequences of sixteen-bit UTF-16 code units (that is, sequences
  * of chars) and sequences of bytes. </p>
@@ -545,13 +545,13 @@ public abstract class Charset
     /**
      * Constructs a sorted map from canonical charset names to charset objects.
      *
-     * <p> The map returned by this method will have one entry for each charset
+     * The map returned by this method will have one entry for each charset
      * for which support is available in the current Java virtual machine.  If
      * two or more supported charsets have the same canonical name then the
      * resulting map will contain just one of them; which one it will contain
      * is not specified. </p>
      *
-     * <p> The invocation of this method, and the subsequent use of the
+     * The invocation of this method, and the subsequent use of the
      * resulting map, may cause time-consuming disk or network I/O operations
      * to occur.  This method is provided for applications that need to
      * enumerate all of the available charsets, for example to allow user
@@ -559,7 +559,7 @@ public abstract class Charset
      * forName} method, which instead employs an efficient incremental lookup
      * algorithm.
      *
-     * <p> This method may return different results at different times if new
+     * This method may return different results at different times if new
      * charset providers are dynamically made available to the current Java
      * virtual machine.  In the absence of such changes, the charsets returned
      * by this method are exactly those that can be retrieved via the {@link
@@ -593,7 +593,7 @@ public abstract class Charset
     /**
      * Returns the default charset of this Java virtual machine.
      *
-     * <p> The default charset is determined during virtual-machine startup and
+     * The default charset is determined during virtual-machine startup and
      * typically depends upon the locale and charset of the underlying
      * operating system.
      *
@@ -673,7 +673,7 @@ public abstract class Charset
     /**
      * Returns this charset's human-readable name for the default locale.
      *
-     * <p> The default implementation of this method simply returns this
+     * The default implementation of this method simply returns this
      * charset's canonical name.  Concrete subclasses of this class may
      * override this method in order to provide a localized display name. </p>
      *
@@ -698,7 +698,7 @@ public abstract class Charset
     /**
      * Returns this charset's human-readable name for the given locale.
      *
-     * <p> The default implementation of this method simply returns this
+     * The default implementation of this method simply returns this
      * charset's canonical name.  Concrete subclasses of this class may
      * override this method in order to provide a localized display name. </p>
      *
@@ -714,20 +714,20 @@ public abstract class Charset
     /**
      * Tells whether or not this charset contains the given charset.
      *
-     * <p> A charset <i>C</i> is said to <i>contain</i> a charset <i>D</i> if,
+     * A charset <i>C</i> is said to <i>contain</i> a charset <i>D</i> if,
      * and only if, every character representable in <i>D</i> is also
      * representable in <i>C</i>.  If this relationship holds then it is
      * guaranteed that every string that can be encoded in <i>D</i> can also be
      * encoded in <i>C</i> without performing any replacements.
      *
-     * <p> That <i>C</i> contains <i>D</i> does not imply that each character
+     * That <i>C</i> contains <i>D</i> does not imply that each character
      * representable in <i>C</i> by a particular byte sequence is represented
      * in <i>D</i> by the same byte sequence, although sometimes this is the
      * case.
      *
-     * <p> Every charset contains itself.
+     * Every charset contains itself.
      *
-     * <p> This method computes an approximation of the containment relation:
+     * This method computes an approximation of the containment relation:
      * If it returns <tt>true</tt> then the given charset is known to be
      * contained by this charset; if it returns <tt>false</tt>, however, then
      * it is not necessarily the case that the given charset is not contained
@@ -760,7 +760,7 @@ public abstract class Charset
     /**
      * Tells whether or not this charset supports encoding.
      *
-     * <p> Nearly all charsets support encoding.  The primary exceptions are
+     * Nearly all charsets support encoding.  The primary exceptions are
      * special-purpose <i>auto-detect</i> charsets whose decoders can determine
      * which of several possible encoding schemes is in use by examining the
      * input byte sequence.  Such charsets do not support encoding because
@@ -778,7 +778,7 @@ public abstract class Charset
      * Convenience method that decodes bytes in this charset into Unicode
      * characters.
      *
-     * <p> An invocation of this method upon a charset <tt>cs</tt> returns the
+     * An invocation of this method upon a charset <tt>cs</tt> returns the
      * same result as the expression
      *
      * <pre>
@@ -790,7 +790,7 @@ public abstract class Charset
      * except that it is potentially more efficient because it can cache
      * decoders between successive invocations.
      *
-     * <p> This method always replaces malformed-input and unmappable-character
+     * This method always replaces malformed-input and unmappable-character
      * sequences with this charset's default replacement byte array.  In order
      * to detect such sequences, use the {@link
      * CharsetDecoder#decode(java.nio.ByteBuffer)} method directly.  </p>
@@ -814,7 +814,7 @@ public abstract class Charset
      * Convenience method that encodes Unicode characters into bytes in this
      * charset.
      *
-     * <p> An invocation of this method upon a charset <tt>cs</tt> returns the
+     * An invocation of this method upon a charset <tt>cs</tt> returns the
      * same result as the expression
      *
      * <pre>
@@ -826,7 +826,7 @@ public abstract class Charset
      * except that it is potentially more efficient because it can cache
      * encoders between successive invocations.
      *
-     * <p> This method always replaces malformed-input and unmappable-character
+     * This method always replaces malformed-input and unmappable-character
      * sequences with this charset's default replacement string.  In order to
      * detect such sequences, use the {@link
      * CharsetEncoder#encode(java.nio.CharBuffer)} method directly.  </p>
@@ -849,7 +849,7 @@ public abstract class Charset
     /**
      * Convenience method that encodes a string into bytes in this charset.
      *
-     * <p> An invocation of this method upon a charset <tt>cs</tt> returns the
+     * An invocation of this method upon a charset <tt>cs</tt> returns the
      * same result as the expression
      *
      * <pre>
@@ -866,7 +866,7 @@ public abstract class Charset
     /**
      * Compares this charset to another.
      *
-     * <p> Charsets are ordered by their canonical names, without regard to
+     * Charsets are ordered by their canonical names, without regard to
      * case. </p>
      *
      * @param  that
@@ -891,7 +891,7 @@ public abstract class Charset
     /**
      * Tells whether or not this object is equal to another.
      *
-     * <p> Two charsets are equal if, and only if, they have the same canonical
+     * Two charsets are equal if, and only if, they have the same canonical
      * names.  A charset is never equal to any other type of object.  </p>
      *
      * @return  <tt>true</tt> if, and only if, this charset is equal to the

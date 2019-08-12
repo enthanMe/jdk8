@@ -32,7 +32,7 @@
  * but not limited to, the {@linkplain javax.annotation.processing
  * annotation processing} framework.
  *
- * <p> This language model follows a <i>mirror</i>-based design; see
+ * This language model follows a <i>mirror</i>-based design; see
  *
  * <blockquote>
  * Gilad Bracha and David Ungar. <i>Mirrors: Design Principles for
@@ -48,7 +48,7 @@
  * with an element, like the raw type {@code java.util.Set}, {@code
  * java.util.Set<String>}, and {@code java.util.Set<T>}.
  *
- * <p> Unless otherwise specified, methods in this package will throw
+ * Unless otherwise specified, methods in this package will throw
  * a {@code NullPointerException} if given a {@code null} argument.
  *
  * @author Joseph D. Darcy

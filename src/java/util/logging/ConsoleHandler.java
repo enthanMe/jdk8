@@ -37,16 +37,16 @@ package java.util.logging;
  * If properties are not defined
  * (or have invalid values) then the specified default values are used.
  * <ul>
- * <li>   &lt;handler-name&gt;.level
+ * <li>   <handler-name>.level
  *        specifies the default level for the <tt>Handler</tt>
  *        (defaults to <tt>Level.INFO</tt>). </li>
- * <li>   &lt;handler-name&gt;.filter
+ * <li>   <handler-name>.filter
  *        specifies the name of a <tt>Filter</tt> class to use
  *        (defaults to no <tt>Filter</tt>). </li>
- * <li>   &lt;handler-name&gt;.formatter
+ * <li>   <handler-name>.formatter
  *        specifies the name of a <tt>Formatter</tt> class to use
  *        (defaults to <tt>java.util.logging.SimpleFormatter</tt>). </li>
- * <li>   &lt;handler-name&gt;.encoding
+ * <li>   <handler-name>.encoding
  *        the name of the character set encoding to use (defaults to
  *        the default platform encoding). </li>
  * </ul>

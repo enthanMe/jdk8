@@ -92,13 +92,13 @@ public abstract class KeyStoreSpi {
     /**
      * Returns the certificate associated with the given alias.
      *
-     * <p> If the given alias name identifies an entry
+     * If the given alias name identifies an entry
      * created by a call to {@code setCertificateEntry},
      * or created by a call to {@code setEntry} with a
      * {@code TrustedCertificateEntry},
      * then the trusted certificate contained in that entry is returned.
      *
-     * <p> If the given alias name identifies an entry
+     * If the given alias name identifies an entry
      * created by a call to {@code setKeyEntry},
      * or created by a call to {@code setEntry} with a
      * {@code PrivateKeyEntry},
@@ -177,7 +177,7 @@ public abstract class KeyStoreSpi {
     /**
      * Assigns the given certificate to the given alias.
      *
-     * <p> If the given alias identifies an existing entry
+     * If the given alias identifies an existing entry
      * created by a call to {@code setCertificateEntry},
      * or created by a call to {@code setEntry} with a
      * {@code TrustedCertificateEntry},
@@ -265,7 +265,7 @@ public abstract class KeyStoreSpi {
      * {@code TrustedCertificateEntry},
      * then the given certificate is compared to that entry's certificate.
      *
-     * <p> If the entry being considered was
+     * If the entry being considered was
      * created by a call to {@code setKeyEntry},
      * or created by a call to {@code setEntry} with a
      * {@code PrivateKeyEntry},
@@ -353,7 +353,7 @@ public abstract class KeyStoreSpi {
      * Loads the keystore using the given
      * {@code KeyStore.LoadStoreParameter}.
      *
-     * <p> Note that if this KeyStore has already been loaded, it is
+     * Note that if this KeyStore has already been loaded, it is
      * reinitialized and loaded again from the given parameter.
      *
      * @param param the {@code KeyStore.LoadStoreParameter}
@@ -488,7 +488,7 @@ public abstract class KeyStoreSpi {
      * The specified protection parameter is used to protect the
      * {@code Entry}.
      *
-     * <p> If an entry already exists for the specified alias,
+     * If an entry already exists for the specified alias,
      * it is overridden.
      *
      * @param alias save the {@code KeyStore.Entry} under this alias

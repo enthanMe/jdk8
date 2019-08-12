@@ -47,7 +47,7 @@ import org.xml.sax.Attributes;
  * Public Domain, and comes with <strong>NO WARRANTY</strong>.</em>
  * </blockquote>
  *
- * <p> XMLReader implementations are not required to support this
+ * XMLReader implementations are not required to support this
  * information, and it is not part of core-only SAX2 distributions.</p>
  *
  * <p>Note that if an attribute was defaulted (<em>!isSpecified()</em>)

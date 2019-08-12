@@ -49,7 +49,7 @@ package java.security;
  * Thus, this is not an equality test, but rather more of a
  * subset test.
  *
- * <P> Permission objects are similar to String objects in that they
+ * Permission objects are similar to String objects in that they
  * are immutable once they have been created. Subclasses should not
  * provide methods that can change the state of a permission
  * once it has been created.

@@ -714,7 +714,7 @@ public class JSplitPane extends JComponent implements Accessible
      * extra space.
      *
      * @param value as described above
-     * @exception IllegalArgumentException if <code>value</code> is &lt; 0 or &gt; 1
+     * @exception IllegalArgumentException if <code>value</code> is < 0 or > 1
      * @since 1.3
      * @beaninfo
      *        bound: true
@@ -769,8 +769,8 @@ public class JSplitPane extends JComponent implements Accessible
      * @param proportionalLocation  a double-precision floating point value
      *        that specifies a percentage, from zero (top/left) to 1.0
      *        (bottom/right)
-     * @exception IllegalArgumentException if the specified location is &lt; 0
-     *            or &gt; 1.0
+     * @exception IllegalArgumentException if the specified location is < 0
+     *            or > 1.0
      * @beaninfo
      *  description: The location of the divider.
      */

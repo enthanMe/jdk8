@@ -215,7 +215,7 @@ public abstract class SnmpTableSupport implements SnmpTableEntryFactory,
      * <li>
      * <CODE>setCreationEnabled(false)</CODE> will disable remote entry
      *      creation via SET operations.</li>
-     * <p> By default remote entry creation via SET operation is disabled.
+     * By default remote entry creation via SET operation is disabled.
      * </p>
      *
      * @see com.sun.jmx.snmp.agent.SnmpMibTable

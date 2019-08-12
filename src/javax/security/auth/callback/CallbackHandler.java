@@ -26,19 +26,19 @@
 package javax.security.auth.callback;
 
 /**
- * <p> An application implements a {@code CallbackHandler} and passes
+ * An application implements a {@code CallbackHandler} and passes
  * it to underlying security services so that they may interact with
  * the application to retrieve specific authentication data,
  * such as usernames and passwords, or to display certain information,
  * such as error and warning messages.
  *
- * <p> CallbackHandlers are implemented in an application-dependent fashion.
+ * CallbackHandlers are implemented in an application-dependent fashion.
  * For example, implementations for an application with a graphical user
  * interface (GUI) may pop up windows to prompt for requested information
  * or to display error messages.  An implementation may also choose to obtain
  * requested information from an alternate source without asking the end user.
  *
- * <p> Underlying security services make requests for different types
+ * Underlying security services make requests for different types
  * of information by passing individual Callbacks to the
  * {@code CallbackHandler}.  The {@code CallbackHandler}
  * implementation decides how to retrieve and display information
@@ -49,18 +49,18 @@ package javax.security.auth.callback;
  * can then choose to prompt for a username and password serially,
  * or to prompt for both in a single window.
  *
- * <p> A default {@code CallbackHandler} class implementation
+ * A default {@code CallbackHandler} class implementation
  * may be specified by setting the value of the
  * {@code auth.login.defaultCallbackHandler} security property.
  *
- * <p> If the security property is set to the fully qualified name of a
+ * If the security property is set to the fully qualified name of a
  * {@code CallbackHandler} implementation class,
  * then a {@code LoginContext} will load the specified
  * {@code CallbackHandler} and pass it to the underlying LoginModules.
  * The {@code LoginContext} only loads the default handler
  * if it was not provided one.
  *
- * <p> All default handler implementations must provide a public
+ * All default handler implementations must provide a public
  * zero-argument constructor.
  *
  * @see java.security.Security security properties
@@ -68,10 +68,10 @@ package javax.security.auth.callback;
 public interface CallbackHandler {
 
     /**
-     * <p> Retrieve or display the information requested in the
+     * Retrieve or display the information requested in the
      * provided Callbacks.
      *
-     * <p> The {@code handle} method implementation checks the
+     * The {@code handle} method implementation checks the
      * instance(s) of the {@code Callback} object(s) passed in
      * to retrieve or display the requested information.
      * The following example is provided to help demonstrate what an

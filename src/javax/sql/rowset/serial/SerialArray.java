@@ -203,7 +203,7 @@ public class SerialArray implements Array, Serializable, Cloneable {
     /**
      * This method frees the {@code SeriableArray} object and releases the
      * resources that it holds. The object is invalid once the {@code free}
-     * method is called. <p> If {@code free} is called multiple times, the
+     * method is called. If {@code free} is called multiple times, the
      * subsequent calls to {@code free} are treated as a no-op. </P>
      *
      * @throws SQLException if an error occurs releasing the SerialArray's resources

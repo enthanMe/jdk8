@@ -54,7 +54,7 @@ import sun.net.www.MessageHeader;
  *     <td>Interact with the resource; query header fields and
  *         contents.</td></tr>
  * </table>
- * ----------------------------&gt;
+ * ---------------------------->
  * <br>time</center>
  *
  * <ol>
@@ -371,7 +371,7 @@ public abstract class URLConnection {
      * java.net.SocketTimeoutException is raised. A timeout of zero is
      * interpreted as an infinite timeout.
 
-     * <p> Some non-standard implementation of this method may ignore
+     * Some non-standard implementation of this method may ignore
      * the specified timeout. To see the connect timeout set, please
      * call getConnectTimeout().
      *
@@ -414,7 +414,7 @@ public abstract class URLConnection {
      * for read, a java.net.SocketTimeoutException is raised. A
      * timeout of zero is interpreted as an infinite timeout.
      *
-     *<p> Some non-standard implementation of this method ignores the
+     *Some non-standard implementation of this method ignores the
      * specified timeout. To see the read timeout set, please call
      * getReadTimeout().
      *
@@ -706,9 +706,9 @@ public abstract class URLConnection {
      *     factory's {@code createContentHandler} method returns
      *     {@code null}, then the application loads the class named:
      *     <blockquote><pre>
-     *         sun.net.www.content.&lt;<i>contentType</i>&gt;
+     *         sun.net.www.content.<<i>contentType</i>>
      *     </pre></blockquote>
-     *     where &lt;<i>contentType</i>&gt; is formed by taking the
+     *     where <<i>contentType</i>> is formed by taking the
      *     content-type string, replacing all slash characters with a
      *     {@code period} ('.'), and all other non-alphanumeric characters
      *     with the underscore character '{@code _}'. The alphanumeric
@@ -1057,7 +1057,7 @@ public abstract class URLConnection {
      * Sets the general request property. If a property with the key already
      * exists, overwrite its value with the new value.
      *
-     * <p> NOTE: HTTP requires all request properties which can
+     * NOTE: HTTP requires all request properties which can
      * legally have multiple instances with the same key
      * to use a comma-separated list syntax which enables multiple
      * properties to be appended into a single property.

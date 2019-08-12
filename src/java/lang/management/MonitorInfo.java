@@ -56,7 +56,7 @@ public class MonitorInfo extends LockInfo {
      * @param stackFrame the stack frame that locked the object monitor.
      * @throws IllegalArgumentException if
      *    <tt>stackDepth</tt> &ge; 0 but <tt>stackFrame</tt> is <tt>null</tt>,
-     *    or <tt>stackDepth</tt> &lt; 0 but <tt>stackFrame</tt> is not
+     *    or <tt>stackDepth</tt> < 0 but <tt>stackFrame</tt> is not
      *       <tt>null</tt>.
      */
     public MonitorInfo(String className,

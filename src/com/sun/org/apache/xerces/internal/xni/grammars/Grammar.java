@@ -34,7 +34,7 @@ package com.sun.org.apache.xerces.internal.xni.grammars;
  * rules in your choice of grammar syntax but there is no guarantee that
  * the input and output will be the same.
  *
- * <p> Right now, this class is largely a shell; eventually,
+ * Right now, this class is largely a shell; eventually,
  * it will be enriched by having more expressive methods added. </p>
  * will be moved from dtd.Grammar here.
  *

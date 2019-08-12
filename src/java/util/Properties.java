@@ -78,7 +78,7 @@ import sun.util.spi.XmlPropertiesProvider;
  * sequence. The native2ascii tool can be used to convert property files to and
  * from other character encodings.
  *
- * <p> The {@link #loadFromXML(InputStream)} and {@link
+ * The {@link #loadFromXML(InputStream)} and {@link
  * #storeToXML(OutputStream, String, String)} methods load and store properties
  * in a simple XML format.  By default the UTF-8 character encoding is used,
  * however a specific encoding may be specified if required. Implementations
@@ -86,25 +86,25 @@ import sun.util.spi.XmlPropertiesProvider;
  * An XML properties document has the following DOCTYPE declaration:
  *
  * <pre>
- * &lt;!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd"&gt;
+ * <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
  * </pre>
  * Note that the system URI (http://java.sun.com/dtd/properties.dtd) is
  * <i>not</i> accessed when exporting or importing properties; it merely
  * serves as a string to uniquely identify the DTD, which is:
  * <pre>
- *    &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+ *    <?xml version="1.0" encoding="UTF-8"?>
  *
- *    &lt;!-- DTD for properties --&gt;
+ *    <!-- DTD for properties -->
  *
- *    &lt;!ELEMENT properties ( comment?, entry* ) &gt;
+ *    <!ELEMENT properties ( comment?, entry* ) >
  *
- *    &lt;!ATTLIST properties version CDATA #FIXED "1.0"&gt;
+ *    <!ATTLIST properties version CDATA #FIXED "1.0">
  *
- *    &lt;!ELEMENT comment (#PCDATA) &gt;
+ *    <!ELEMENT comment (#PCDATA) >
  *
- *    &lt;!ELEMENT entry (#PCDATA) &gt;
+ *    <!ELEMENT entry (#PCDATA) >
  *
- *    &lt;!ATTLIST entry key CDATA #REQUIRED&gt;
+ *    <!ATTLIST entry key CDATA #REQUIRED>
  * </pre>
  *
  * <p>This class is thread-safe: multiple threads can share a single
@@ -850,12 +850,12 @@ class Properties extends Hashtable<Object,Object> {
      *
      * <p>The XML document must have the following DOCTYPE declaration:
      * <pre>
-     * &lt;!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd"&gt;
+     * <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
      * </pre>
      * Furthermore, the document must satisfy the properties DTD described
      * above.
      *
-     * <p> An implementation is required to read XML documents that use the
+     * An implementation is required to read XML documents that use the
      * "{@code UTF-8}" or "{@code UTF-16}" encoding. An implementation may
      * support additional encodings.
      *
@@ -886,7 +886,7 @@ class Properties extends Hashtable<Object,Object> {
      * Emits an XML document representing all of the properties contained
      * in this table.
      *
-     * <p> An invocation of this method of the form <tt>props.storeToXML(os,
+     * An invocation of this method of the form <tt>props.storeToXML(os,
      * comment)</tt> behaves in exactly the same way as the invocation
      * <tt>props.storeToXML(os, comment, "UTF-8");</tt>.
      *
@@ -914,13 +914,13 @@ class Properties extends Hashtable<Object,Object> {
      *
      * <p>The XML document will have the following DOCTYPE declaration:
      * <pre>
-     * &lt;!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd"&gt;
+     * <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
      * </pre>
      *
      * <p>If the specified comment is {@code null} then no comment
      * will be stored in the document.
      *
-     * <p> An implementation is required to support writing of XML documents
+     * An implementation is required to support writing of XML documents
      * that use the "{@code UTF-8}" or "{@code UTF-16}" encoding. An
      * implementation may support additional encodings.
      *
@@ -1133,7 +1133,7 @@ class Properties extends Hashtable<Object,Object> {
     /**
      * Supporting class for loading/storing properties in XML format.
      *
-     * <p> The {@code load} and {@code store} methods defined here delegate to a
+     * The {@code load} and {@code store} methods defined here delegate to a
      * system-wide {@code XmlPropertiesProvider}. On first invocation of either
      * method then the system-wide provider is located as follows: </p>
      *

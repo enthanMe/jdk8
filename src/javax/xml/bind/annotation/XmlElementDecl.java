@@ -34,7 +34,7 @@ import static java.lang.annotation.ElementType.METHOD;
 /**
  * Maps a factory method to a XML element.
  *
- * <p> <b>Usage</b> </p>
+ * <b>Usage</b> </p>
  *
  * The annotation creates a mapping between an XML schema element
  * declaration and a <i> element factory method </i> that returns a
@@ -62,12 +62,12 @@ import static java.lang.annotation.ElementType.METHOD;
  *     &#64;XmlRegistry
  *     class ObjectFactory {
  *         &#64;XmlElementDecl(name="foo")
- *         JAXBElement&lt;String> createFoo(String s) { ... }
+ *         JAXBElement<String> createFoo(String s) { ... }
  *     }
  * </pre>
  * <pre>
- *     &lt;!-- XML input -->
- *       &lt;foo>string</foo>
+ *     <!-- XML input -->
+ *       <foo>string</foo>
  *
  *     // Example: code fragment corresponding to XML input
  *     JAXBElement<String> o =
@@ -77,8 +77,8 @@ import static java.lang.annotation.ElementType.METHOD;
  *     System.out.println(o.getValue());  // prints  "string"
  *     System.out.println(o.getValue().getClass()); // prints "java.lang.String"
  *
- *     &lt;!-- Example: XML schema definition -->
- *     &lt;xs:element name="foo" type="xs:string"/>
+ *     <!-- Example: XML schema definition -->
+ *     <xs:element name="foo" type="xs:string"/>
  * </pre>
  *
  * <p><b>Example 2: </b> Element declaration with non local scope
@@ -91,16 +91,16 @@ import static java.lang.annotation.ElementType.METHOD;
  * this javadoc.
  *
  * <pre>
- *     &lt;!-- Example: XML schema definition -->
- *     &lt;xs:schema>
- *       &lt;xs:complexType name="pea">
- *         &lt;xs:choice maxOccurs="unbounded">
- *           &lt;xs:element name="foo" type="xs:string"/>
- *           &lt;xs:element name="bar" type="xs:string"/>
- *         &lt;/xs:choice>
- *       &lt;/xs:complexType>
- *       &lt;xs:element name="foo" type="xs:int"/>
- *     &lt;/xs:schema>
+ *     <!-- Example: XML schema definition -->
+ *     <xs:schema>
+ *       <xs:complexType name="pea">
+ *         <xs:choice maxOccurs="unbounded">
+ *           <xs:element name="foo" type="xs:string"/>
+ *           <xs:element name="bar" type="xs:string"/>
+ *         </xs:choice>
+ *       </xs:complexType>
+ *       <xs:element name="foo" type="xs:int"/>
+ *     </xs:schema>
  * </pre>
  * <pre>
  *     // Example: expected default binding
@@ -109,7 +109,7 @@ import static java.lang.annotation.ElementType.METHOD;
  *             &#64;XmlElementRef(name="foo",type=JAXBElement.class)
  *             &#64;XmlElementRef(name="bar",type=JAXBElement.class)
  *         })
- *         List&lt;JAXBElement&lt;String>> fooOrBar;
+ *         List<JAXBElement<String>> fooOrBar;
  *     }
  *
  *     &#64;XmlRegistry

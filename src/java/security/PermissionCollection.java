@@ -77,7 +77,7 @@ import java.util.*;
  * the Permissions object uses a default PermissionCollection implementation
  * that stores the permission objects in a Hashtable.
  *
- * <p> Subclass implementations of PermissionCollection should assume
+ * Subclass implementations of PermissionCollection should assume
  * that they may be called simultaneously from multiple threads,
  * and therefore should be synchronized properly.  Furthermore,
  * Enumerations returned via the {@code elements} method are

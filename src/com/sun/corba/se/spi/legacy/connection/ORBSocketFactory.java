@@ -203,7 +203,7 @@ public interface ORBSocketFactory
      * Once you have the port you may add information to references
      * created by the associated adapter by calling
      *
-     *    <code>IORInfo::add_ior_component</code><p> <p>
+     *    <code>IORInfo::add_ior_component</code><p>
      *
      *
      * Note: if one is using a POA and the lifespan policy of that

@@ -150,7 +150,7 @@ public class AdjustmentEvent extends AWTEvent {
      * Constructs an <code>AdjustmentEvent</code> object with the
      * specified <code>Adjustable</code> source, event type,
      * adjustment type, and value.
-     * <p> This method throws an
+     * This method throws an
      * <code>IllegalArgumentException</code> if <code>source</code>
      * is <code>null</code>.
      *
@@ -176,7 +176,7 @@ public class AdjustmentEvent extends AWTEvent {
     /**
      * Constructs an <code>AdjustmentEvent</code> object with the
      * specified Adjustable source, event type, adjustment type, and value.
-     * <p> This method throws an
+     * This method throws an
      * <code>IllegalArgumentException</code> if <code>source</code>
      * is <code>null</code>.
      *

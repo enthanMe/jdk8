@@ -60,7 +60,7 @@ package com.sun.org.apache.bcel.internal.generic;
 
 /**
  * DRETURN -  Return double from method
- * <PRE>Stack: ..., value.word1, value.word2 -&gt; &lt;empty&gt;</PRE>
+ * <PRE>Stack: ..., value.word1, value.word2 -> <empty></PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

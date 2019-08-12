@@ -79,7 +79,7 @@ package java.security;
  * representations of the underlying key material) through the use of a key
  * factory (see {@link KeyFactory}).
  *
- * <p> A Key should use KeyRep as its serialized representation.
+ * A Key should use KeyRep as its serialized representation.
  * Note that a serialized Key may contain sensitive information
  * which should not be exposed in untrusted environments.  See the
  * <a href="../../../platform/serialization/spec/security.html">

@@ -36,7 +36,7 @@ import static javax.lang.model.SourceVersion.*;
  * appropriate for the {@link SourceVersion#RELEASE_6 RELEASE_6}
  * source version.
  *
- * <p> <b>WARNING:</b> The {@code ElementVisitor} interface
+ * <b>WARNING:</b> The {@code ElementVisitor} interface
  * implemented by this class may have methods added to it in the
  * future to accommodate new, currently unknown, language structures
  * added to future versions of the Java&trade; programming language.
@@ -64,7 +64,7 @@ import static javax.lang.model.SourceVersion.*;
  *
  * @param <R> the return type of this visitor's methods.  Use {@link
  *            Void} for visitors that do not need to return results.
- * @param <P> the type of the additional parameter to this visitor's
+ * @param the type of the additional parameter to this visitor's
  *            methods.  Use {@code Void} for visitors that do not need an
  *            additional parameter.
  *
@@ -114,7 +114,7 @@ public abstract class AbstractElementVisitor6<R, P> implements ElementVisitor<R,
     /**
      * {@inheritDoc}
      *
-     * <p> The default implementation of this method in
+     * The default implementation of this method in
      * {@code AbstractElementVisitor6} will always throw
      * {@code UnknownElementException}.
      * This behavior is not required of a subclass.

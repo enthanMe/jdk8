@@ -28,15 +28,15 @@ package java.security;
 import java.security.spec.AlgorithmParameterSpec;
 
 /**
- * <p> This class defines the <i>Service Provider Interface</i> (<b>SPI</b>)
+ * This class defines the <i>Service Provider Interface</i> (<b>SPI</b>)
  * for the {@code KeyPairGenerator} class, which is used to generate
  * pairs of public and private keys.
  *
- * <p> All the abstract methods in this class must be implemented by each
+ * All the abstract methods in this class must be implemented by each
  * cryptographic service provider who wishes to supply the implementation
  * of a key pair generator for a particular algorithm.
  *
- * <p> In case the client does not explicitly initialize the KeyPairGenerator
+ * In case the client does not explicitly initialize the KeyPairGenerator
  * (via a call to an {@code initialize} method), each provider must
  * supply (and document) a default initialization.
  * For example, the <i>Sun</i> provider uses a default modulus size (keysize)

@@ -132,7 +132,7 @@ public class OutputKeys {
      * to be used in the document type declaration.</p>
      * <p>If the doctype-system property is specified, the xml output method
      * should output a document type declaration immediately before the first
-     * element. The name following &lt;!DOCTYPE should be the name of the first
+     * element. The name following <!DOCTYPE should be the name of the first
      * element. If doctype-public property is also specified, then the xml
      * output method should output PUBLIC followed by the public identifier
      * and then the system identifier; otherwise, it should output SYSTEM
@@ -141,7 +141,7 @@ public class OutputKeys {
      * property is specified.</p>
      * <p>If the doctype-public or doctype-system properties are specified,
      * then the html output method should output a document type declaration
-     * immediately before the first element. The name following &lt;!DOCTYPE
+     * immediately before the first element. The name following <!DOCTYPE
      * should be HTML or html. If the doctype-public property is specified,
      * then the output method should output PUBLIC followed by the specified
      * public identifier; if the doctype-system property is also specified,

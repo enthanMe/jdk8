@@ -30,7 +30,7 @@ import java.util.Vector;
 import java.util.ArrayList;
 
 /**
- * XSAllCM implements XSCMValidator and handles &lt;all&gt;.
+ * XSAllCM implements XSCMValidator and handles <all>.
  *
  * @xerces.internal
  *

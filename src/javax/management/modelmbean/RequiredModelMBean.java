@@ -460,16 +460,16 @@ public class RequiredModelMBean
      * The valid value will be in the 'value' field if there is one.
      * If the 'currencyTimeLimit' field in the descriptor is:
      * <ul>
-     *   <li><b>&lt;0</b> Then the value is not cached and is never valid.
+     *   <li><b><0</b> Then the value is not cached and is never valid.
      *         Null is returned. The 'value' and 'lastUpdatedTimeStamp'
      *         fields are cleared.</li>
      *   <li><b>=0</b> Then the value is always cached and always valid.
      *         The 'value' field is returned.
      *         The 'lastUpdatedTimeStamp' field is not checked.</li>
-     *   <li><b>&gt;0</b> Represents the number of seconds that the
+     *   <li><b>>0</b> Represents the number of seconds that the
      *         'value' field is valid.
      *         The 'value' field is no longer valid when
-     *         'lastUpdatedTimeStamp' + 'currencyTimeLimit' &gt; Now.
+     *         'lastUpdatedTimeStamp' + 'currencyTimeLimit' > Now.
      *       <ul>
      *       <li>When 'value' is valid, 'valid' is returned.</li>
      *       <li>When 'value' is no longer valid then null is returned and
@@ -819,7 +819,7 @@ public class RequiredModelMBean
      * The valid value will be in the 'value' field if there is one.
      * If the 'currencyTimeLimit' field in the descriptor is:
      * <UL>
-     * <LI><b>&lt;0</b> Then the value is not cached and is never valid.
+     * <LI><b><0</b> Then the value is not cached and is never valid.
      *      The operation method is invoked.
      *      The 'value' and 'lastUpdatedTimeStamp' fields are cleared.</LI>
      * <LI><b>=0</b> Then the value is always cached and always valid.
@@ -827,10 +827,10 @@ public class RequiredModelMBean
      *      then the operation method is invoked for the attribute.
      *      The 'lastUpdatedTimeStamp' field and `value' fields are set to
      *      the operation's return value and the current time stamp.</LI>
-     * <LI><b>&gt;0</b> Represents the number of seconds that the 'value'
+     * <LI><b>>0</b> Represents the number of seconds that the 'value'
      *      field is valid.
      *      The 'value' field is no longer valid when
-     *      'lastUpdatedTimeStamp' + 'currencyTimeLimit' &gt; Now.
+     *      'lastUpdatedTimeStamp' + 'currencyTimeLimit' > Now.
      *      <UL>
      *         <LI>When 'value' is valid, 'value' is returned.</LI>
      *         <LI>When 'value' is no longer valid then the operation
@@ -1394,7 +1394,7 @@ public class RequiredModelMBean
      * The valid value will be in the 'value' field if there is one.
      * If the 'currencyTimeLimit' field in the descriptor is:
      * <UL>
-     * <LI>  <b>&lt;0</b> Then the value is not cached and is never valid.
+     * <LI>  <b><0</b> Then the value is not cached and is never valid.
      *       The getter method is invoked for the attribute.
      *       The 'value' and 'lastUpdatedTimeStamp' fields are cleared.</LI>
      * <LI>  <b>=0</b> Then the value is always cached and always valid.
@@ -1402,10 +1402,10 @@ public class RequiredModelMBean
      *       then the getter method is invoked for the attribute.
      *       The 'lastUpdatedTimeStamp' field and `value' fields are set
      *       to the attribute's value and the current time stamp.</LI>
-     * <LI>  <b>&gt;0</b> Represents the number of seconds that the 'value'
+     * <LI>  <b>>0</b> Represents the number of seconds that the 'value'
      *       field is valid.
      *       The 'value' field is no longer valid when
-     *       'lastUpdatedTimeStamp' + 'currencyTimeLimit' &gt; Now.
+     *       'lastUpdatedTimeStamp' + 'currencyTimeLimit' > Now.
      *   <UL>
      *        <LI>When 'value' is valid, 'value' is returned.</LI>
      *        <LI>When 'value' is no longer valid then the getter
@@ -1832,7 +1832,7 @@ public class RequiredModelMBean
      * The response from the method is set as the value of the attribute
      * in the descriptor.
      *
-     * <p>If currencyTimeLimit is &gt; 0, then the new value for the
+     * <p>If currencyTimeLimit is > 0, then the new value for the
      * attribute is cached in the attribute descriptor's
      * 'value' field and the 'lastUpdatedTimeStamp' field is set to
      * the current time stamp.

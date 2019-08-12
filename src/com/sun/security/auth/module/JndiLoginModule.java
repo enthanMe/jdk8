@@ -44,11 +44,11 @@ import com.sun.security.auth.UnixNumericGroupPrincipal;
 
 
 /**
- * <p> The module prompts for a username and password
+ * The module prompts for a username and password
  * and then verifies the password against the password stored in
  * a directory service configured under JNDI.
  *
- * <p> This <code>LoginModule</code> interoperates with
+ * This <code>LoginModule</code> interoperates with
  * any conformant JNDI service provider.  To direct this
  * <code>LoginModule</code> to use a specific JNDI service provider,
  * two options must be specified in the login <code>Configuration</code>
@@ -88,7 +88,7 @@ import com.sun.security.auth.UnixNumericGroupPrincipal;
  * (for example, <i>ou=People,o=Sun,c=US</i> and <i>ou=Groups,o=Sun,c=US</i>
  * for user and group information, respectively).
  *
- * <p> The format in which the user's information must be stored in
+ * The format in which the user's information must be stored in
  * the directory service is specified in RFC 2307.  Specifically,
  * this <code>LoginModule</code> will search for the user's entry in the
  * directory service using the user's <i>uid</i> attribute,
@@ -111,7 +111,7 @@ import com.sun.security.auth.UnixNumericGroupPrincipal;
  * and the relevant UnixNumericGroupPrincipals with the
  * <code>Subject</code>.
  *
- * <p> This LoginModule also recognizes the following <code>Configuration</code>
+ * This LoginModule also recognizes the following <code>Configuration</code>
  * options:
  * <pre>
  *    debug          if, true, debug messages are output to System.out.
@@ -255,7 +255,7 @@ public class JndiLoginModule implements LoginModule {
     }
 
     /**
-     * <p> Prompt for username and password.
+     * Prompt for username and password.
      * Verify the password against the relevant name service.
      *
      * <p>
@@ -360,12 +360,12 @@ public class JndiLoginModule implements LoginModule {
     /**
      * Abstract method to commit the authentication process (phase 2).
      *
-     * <p> This method is called if the LoginContext's
+     * This method is called if the LoginContext's
      * overall authentication succeeded
      * (the relevant REQUIRED, REQUISITE, SUFFICIENT and OPTIONAL LoginModules
      * succeeded).
      *
-     * <p> If this LoginModule's own authentication attempt
+     * If this LoginModule's own authentication attempt
      * succeeded (checked by retrieving the private state saved by the
      * <code>login</code> method), then this method associates a
      * <code>UnixPrincipal</code>
@@ -418,12 +418,12 @@ public class JndiLoginModule implements LoginModule {
     }
 
     /**
-     * <p> This method is called if the LoginContext's
+     * This method is called if the LoginContext's
      * overall authentication failed.
      * (the relevant REQUIRED, REQUISITE, SUFFICIENT and OPTIONAL LoginModules
      * did not succeed).
      *
-     * <p> If this LoginModule's own authentication attempt
+     * If this LoginModule's own authentication attempt
      * succeeded (checked by retrieving the private state saved by the
      * <code>login</code> and <code>commit</code> methods),
      * then this method cleans up any state that was originally saved.
@@ -463,7 +463,7 @@ public class JndiLoginModule implements LoginModule {
     /**
      * Logout a user.
      *
-     * <p> This method removes the Principals
+     * This method removes the Principals
      * that were added by the <code>commit</code> method.
      *
      * <p>
@@ -670,7 +670,7 @@ public class JndiLoginModule implements LoginModule {
      * This method does not return any value.
      * Instead, it sets global name and password variables.
      *
-     * <p> Also note that this method will set the username and password
+     * Also note that this method will set the username and password
      * values in the shared state in case subsequent LoginModules
      * want to use them via use/tryFirstPass.
      *

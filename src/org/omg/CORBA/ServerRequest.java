@@ -72,8 +72,8 @@ public abstract class ServerRequest {
      * invoked. According to OMG IDL's rules, these names must be unique
      * among all operations supported by this object's "most-derived"
      * interface. Note that the operation names for getting and setting
-     * attributes are <code>_get_&lt;attribute_name&gt;</code>
-     * and <code>_set_&lt;attribute_name&gt;</code>,
+     * attributes are <code>_get_<attribute_name></code>
+     * and <code>_set_<attribute_name></code>,
      * respectively.
      *
      * @return     the name of the operation to be invoked
@@ -93,8 +93,8 @@ public abstract class ServerRequest {
      * invoked. According to OMG IDL's rules, these names must be unique
      * among all operations supported by this object's "most-derived"
      * interface. Note that the operation names for getting and setting
-     * attributes are <code>_get_&lt;attribute_name&gt;</code>
-     * and <code>_set_&lt;attribute_name&gt;</code>,
+     * attributes are <code>_get_<attribute_name></code>
+     * and <code>_set_<attribute_name></code>,
      * respectively.
      *
      * @return     the name of the operation to be invoked

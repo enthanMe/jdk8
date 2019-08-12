@@ -203,8 +203,8 @@ public class Area implements Shape, Cloneable {
      * in either this or the specified <code>Area</code>.
      * <pre>
      *     // Example:
-     *     Area a1 = new Area([triangle 0,0 =&gt; 8,0 =&gt; 0,8]);
-     *     Area a2 = new Area([triangle 0,0 =&gt; 8,0 =&gt; 8,8]);
+     *     Area a1 = new Area([triangle 0,0 => 8,0 => 0,8]);
+     *     Area a2 = new Area([triangle 0,0 => 8,0 => 8,8]);
      *     a1.add(a2);
      *
      *        a1(before)     +         a2         =     a1(after)
@@ -236,8 +236,8 @@ public class Area implements Shape, Cloneable {
      * and not in the specified <code>Area</code>.
      * <pre>
      *     // Example:
-     *     Area a1 = new Area([triangle 0,0 =&gt; 8,0 =&gt; 0,8]);
-     *     Area a2 = new Area([triangle 0,0 =&gt; 8,0 =&gt; 8,8]);
+     *     Area a1 = new Area([triangle 0,0 => 8,0 => 0,8]);
+     *     Area a2 = new Area([triangle 0,0 => 8,0 => 8,8]);
      *     a1.subtract(a2);
      *
      *        a1(before)     -         a2         =     a1(after)
@@ -269,8 +269,8 @@ public class Area implements Shape, Cloneable {
      * and also in the specified <code>Area</code>.
      * <pre>
      *     // Example:
-     *     Area a1 = new Area([triangle 0,0 =&gt; 8,0 =&gt; 0,8]);
-     *     Area a2 = new Area([triangle 0,0 =&gt; 8,0 =&gt; 8,8]);
+     *     Area a1 = new Area([triangle 0,0 => 8,0 => 0,8]);
+     *     Area a2 = new Area([triangle 0,0 => 8,0 => 8,8]);
      *     a1.intersect(a2);
      *
      *      a1(before)   intersect     a2         =     a1(after)
@@ -303,8 +303,8 @@ public class Area implements Shape, Cloneable {
      * or in the specified <code>Area</code>, but not in both.
      * <pre>
      *     // Example:
-     *     Area a1 = new Area([triangle 0,0 =&gt; 8,0 =&gt; 0,8]);
-     *     Area a2 = new Area([triangle 0,0 =&gt; 8,0 =&gt; 8,8]);
+     *     Area a1 = new Area([triangle 0,0 => 8,0 => 0,8]);
+     *     Area a2 = new Area([triangle 0,0 => 8,0 => 8,8]);
      *     a1.exclusiveOr(a2);
      *
      *        a1(before)    xor        a2         =     a1(after)

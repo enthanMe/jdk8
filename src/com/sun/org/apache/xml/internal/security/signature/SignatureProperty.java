@@ -30,7 +30,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 
 /**
- * Handles <code>&lt;ds:SignatureProperty&gt;</code> elements
+ * Handles <code><ds:SignatureProperty></code> elements
  * Additional information item concerning the generation of the signature(s) can
  * be placed in this Element
  *

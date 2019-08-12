@@ -60,7 +60,7 @@ package com.sun.org.apache.bcel.internal.generic;
 
 /**
  * DUP_X2 - Duplicate top operand stack word and put three down
- * <PRE>Stack: ..., word3, word2, word1 -&gt; ..., word1, word3, word2, word1</PRE>
+ * <PRE>Stack: ..., word3, word2, word1 -> ..., word1, word3, word2, word1</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

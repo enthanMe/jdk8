@@ -145,7 +145,7 @@ public class ScriptException extends Exception {
     /**
      * Get the source of the script causing the error.
      * @return The file name of the script or some other string describing the script
-     * source.  May return some implementation-defined string such as <i>&lt;unknown&gt;</i>
+     * source.  May return some implementation-defined string such as <i><unknown></i>
      * if a description of the source is unavailable.
      */
     public String getFileName() {

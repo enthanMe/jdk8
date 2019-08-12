@@ -821,7 +821,7 @@ implements XMLDTDScanner, XMLComponent, XMLEntityHandler {
      * [15] Comment ::= '&lt!--' ((Char - '-') | ('-' (Char - '-')))* '-->'
      * </pre>
      * <p>
-     * <strong>Note:</strong> Called after scanning past '&lt;!--'
+     * <strong>Note:</strong> Called after scanning past '<!--'
      */
     protected final void scanComment() throws IOException, XNIException {
 
@@ -841,11 +841,11 @@ implements XMLDTDScanner, XMLComponent, XMLEntityHandler {
      * Scans an element declaration
      * <p>
      * <pre>
-     * [45]    elementdecl    ::=    '&lt;!ELEMENT' S Name S contentspec S? '>'
+     * [45]    elementdecl    ::=    '<!ELEMENT' S Name S contentspec S? '>'
      * [46]    contentspec    ::=    'EMPTY' | 'ANY' | Mixed | children
      * </pre>
      * <p>
-     * <strong>Note:</strong> Called after scanning past '&lt;!ELEMENT'
+     * <strong>Note:</strong> Called after scanning past '<!ELEMENT'
      */
     protected final void scanElementDecl() throws IOException, XNIException {
 
@@ -1160,11 +1160,11 @@ implements XMLDTDScanner, XMLComponent, XMLEntityHandler {
      * Scans an attlist declaration
      * <p>
      * <pre>
-     * [52]  AttlistDecl    ::=   '&lt;!ATTLIST' S Name AttDef* S? '>'
+     * [52]  AttlistDecl    ::=   '<!ATTLIST' S Name AttDef* S? '>'
      * [53]  AttDef         ::=   S Name S AttType S DefaultDecl
      * </pre>
      * <p>
-     * <strong>Note:</strong> Called after scanning past '&lt;!ATTLIST'
+     * <strong>Note:</strong> Called after scanning past '<!ATTLIST'
      */
     protected final void scanAttlistDecl() throws IOException, XNIException {
 
@@ -1296,7 +1296,7 @@ implements XMLDTDScanner, XMLComponent, XMLEntityHandler {
      * [59]  Enumeration    ::=    '(' S? Nmtoken (S? '|' S? Nmtoken)* S? ')'
      * </pre>
      * <p>
-     * <strong>Note:</strong> Called after scanning past '&lt;!ATTLIST'
+     * <strong>Note:</strong> Called after scanning past '<!ATTLIST'
      *
      * @param elName The element type name this declaration is about.
      * @param atName The attribute name this declaration is about.
@@ -1448,8 +1448,8 @@ implements XMLDTDScanner, XMLComponent, XMLEntityHandler {
      * <p>
      * <pre>
      * [70]    EntityDecl  ::=    GEDecl | PEDecl
-     * [71]    GEDecl      ::=    '&lt;!ENTITY' S Name S EntityDef S? '>'
-     * [72]    PEDecl      ::=    '&lt;!ENTITY' S '%' S Name S PEDef S? '>'
+     * [71]    GEDecl      ::=    '<!ENTITY' S Name S EntityDef S? '>'
+     * [72]    PEDecl      ::=    '<!ENTITY' S '%' S Name S PEDef S? '>'
      * [73]    EntityDef   ::=    EntityValue | (ExternalID NDataDecl?)
      * [74]    PEDef       ::=    EntityValue | ExternalID
      * [75]    ExternalID  ::=    'SYSTEM' S SystemLiteral
@@ -1457,7 +1457,7 @@ implements XMLDTDScanner, XMLComponent, XMLEntityHandler {
      * [76]    NDataDecl   ::=    S 'NDATA' S Name
      * </pre>
      * <p>
-     * <strong>Note:</strong> Called after scanning past '&lt;!ENTITY'
+     * <strong>Note:</strong> Called after scanning past '<!ENTITY'
      */
     private final void scanEntityDecl() throws IOException, XNIException {
 
@@ -1769,11 +1769,11 @@ implements XMLDTDScanner, XMLComponent, XMLEntityHandler {
      * Scans a notation declaration
      * <p>
      * <pre>
-     * [82] NotationDecl ::= '&lt;!NOTATION' S Name S (ExternalID|PublicID) S? '>'
+     * [82] NotationDecl ::= '<!NOTATION' S Name S (ExternalID|PublicID) S? '>'
      * [83]  PublicID    ::= 'PUBLIC' S PubidLiteral
      * </pre>
      * <p>
-     * <strong>Note:</strong> Called after scanning past '&lt;!NOTATION'
+     * <strong>Note:</strong> Called after scanning past '<!NOTATION'
      */
     private final void scanNotationDecl() throws IOException, XNIException {
 
@@ -1838,13 +1838,13 @@ implements XMLDTDScanner, XMLComponent, XMLEntityHandler {
      * <p>
      * <pre>
      * [61] conditionalSect   ::= includeSect | ignoreSect
-     * [62] includeSect       ::= '&lt;![' S? 'INCLUDE' S? '[' extSubsetDecl ']]>'
-     * [63] ignoreSect   ::= '&lt;![' S? 'IGNORE' S? '[' ignoreSectContents* ']]>'
-     * [64] ignoreSectContents ::= Ignore ('&lt;![' ignoreSectContents ']]>' Ignore)*
-     * [65] Ignore            ::=    Char* - (Char* ('&lt;![' | ']]>') Char*)
+     * [62] includeSect       ::= '<![' S? 'INCLUDE' S? '[' extSubsetDecl ']]>'
+     * [63] ignoreSect   ::= '<![' S? 'IGNORE' S? '[' ignoreSectContents* ']]>'
+     * [64] ignoreSectContents ::= Ignore ('<![' ignoreSectContents ']]>' Ignore)*
+     * [65] Ignore            ::=    Char* - (Char* ('<![' | ']]>') Char*)
      * </pre>
      * <p>
-     * <strong>Note:</strong> Called after scanning past '&lt;![' */
+     * <strong>Note:</strong> Called after scanning past '<![' */
     private final void scanConditionalSect(int currPEDepth)
     throws IOException, XNIException {
 

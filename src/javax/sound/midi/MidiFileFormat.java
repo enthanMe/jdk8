@@ -174,7 +174,7 @@ public class MidiFileFormat {
      *      or UNKNOWN_LENGTH if not known
      * @param microseconds the duration of the file in microseconds,
      *      or UNKNOWN_LENGTH if not known
-     * @param properties  a <code>Map&lt;String,Object&gt;</code> object
+     * @param properties  a <code>Map<String,Object></code> object
      *        with properties
      *
      * @see #UNKNOWN_LENGTH
@@ -259,7 +259,7 @@ public class MidiFileFormat {
      * The concept of properties is further explained in
      * the {@link MidiFileFormat class description}.
      *
-     * @return a <code>Map&lt;String,Object&gt;</code> object containing
+     * @return a <code>Map<String,Object></code> object containing
      *         all properties. If no properties are recognized, an empty map is
      *         returned.
      *

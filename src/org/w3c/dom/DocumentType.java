@@ -63,10 +63,10 @@ public interface DocumentType extends Node {
      * A <code>NamedNodeMap</code> containing the general entities, both
      * external and internal, declared in the DTD. Parameter entities are
      * not contained. Duplicates are discarded. For example in:
-     * <pre>&lt;!DOCTYPE
-     * ex SYSTEM "ex.dtd" [ &lt;!ENTITY foo "foo"&gt; &lt;!ENTITY bar
-     * "bar"&gt; &lt;!ENTITY bar "bar2"&gt; &lt;!ENTITY % baz "baz"&gt;
-     * ]&gt; &lt;ex/&gt;</pre>
+     * <pre><!DOCTYPE
+     * ex SYSTEM "ex.dtd" [ <!ENTITY foo "foo"> <!ENTITY bar
+     * "bar"> <!ENTITY bar "bar2"> <!ENTITY % baz "baz">
+     * ]> <ex/></pre>
      *  the interface provides access to <code>foo</code>
      * and the first declaration of <code>bar</code> but not the second
      * declaration of <code>bar</code> or <code>baz</code>. Every node in

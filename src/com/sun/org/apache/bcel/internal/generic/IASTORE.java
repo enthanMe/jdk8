@@ -60,7 +60,7 @@ package com.sun.org.apache.bcel.internal.generic;
 
 /**
  * IASTORE -  Store into int array
- * <PRE>Stack: ..., arrayref, index, value -&gt; ...</PRE>
+ * <PRE>Stack: ..., arrayref, index, value -> ...</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

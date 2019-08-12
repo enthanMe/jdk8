@@ -723,7 +723,7 @@ public class Window extends Container implements Accessible {
      * </pre>
      * is equivalent to:
      * <pre>
-     *     ArrayList&lt;Image&gt; imageList = new ArrayList&lt;Image&gt;();
+     *     ArrayList<Image> imageList = new ArrayList<Image>();
      *     imageList.add(image);
      *     setIconImages(imageList);
      * </pre>
@@ -2178,7 +2178,7 @@ public class Window extends Container implements Accessible {
      * always-on-top.  When an always-on-top window is sent {@link #toBack
      * toBack}, its always-on-top state is set to {@code false}.
      *
-     * <p> When this method is called on a window with a value of
+     * When this method is called on a window with a value of
      * {@code true}, and the window is visible and the platform
      * supports always-on-top for this window, the window is immediately
      * brought forward, "sticking" it in the top-most position. If the
@@ -2186,7 +2186,7 @@ public class Window extends Container implements Accessible {
      * state to {@code true} but does not bring the window forward.
      * When the window is later shown, it will be always-on-top.
      *
-     * <p> When this method is called on a window with a value of
+     * When this method is called on a window with a value of
      * {@code false} the always-on-top state is set to normal. It may also
      * cause an unspecified, platform-dependent change in the z-order of
      * top-level windows, but other always-on-top windows will remain in

@@ -2058,7 +2058,7 @@ public abstract class JTextComponent extends JComponent implements Scrollable, A
      * <p>
      * Note: In <i>headless</i> mode, no dialogs will be shown.
      *
-     * <p> This method calls the full featured
+     * This method calls the full featured
      * {@link #print(MessageFormat, MessageFormat, boolean, PrintService, PrintRequestAttributeSet, boolean)
      * print} method to perform printing.
      * @return {@code true}, unless printing is canceled by the user
@@ -2084,7 +2084,7 @@ public abstract class JTextComponent extends JComponent implements Scrollable, A
      * <p>
      * Note: In <i>headless</i> mode, no dialogs will be shown.
      *
-     * <p> This method calls the full featured
+     * This method calls the full featured
      * {@link #print(MessageFormat, MessageFormat, boolean, PrintService, PrintRequestAttributeSet, boolean)
      * print} method to perform printing.
      * @param headerFormat the text, in {@code MessageFormat}, to be
@@ -2182,9 +2182,9 @@ public abstract class JTextComponent extends JComponent implements Scrollable, A
      * The following pattern might be used for <i>background</i>
      * printing:
      * <pre>
-     *     FutureTask&lt;Boolean&gt; future =
-     *         new FutureTask&lt;Boolean&gt;(
-     *             new Callable&lt;Boolean&gt;() {
+     *     FutureTask<Boolean> future =
+     *         new FutureTask<Boolean>(
+     *             new Callable<Boolean>() {
      *                 public Boolean call() {
      *                     return textComponent.print(.....);
      *                 }

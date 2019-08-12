@@ -39,14 +39,14 @@ import java.security.spec.AlgorithmParameterSpec;
  * The XML Schema Definition is defined as:
  * <p>
  * <pre>
- *   &lt;element name="DigestMethod" type="ds:DigestMethodType"/&gt;
- *     &lt;complexType name="DigestMethodType" mixed="true"&gt;
- *       &lt;sequence&gt;
- *         &lt;any namespace="##any" minOccurs="0" maxOccurs="unbounded"/&gt;
- *           &lt;!-- (0,unbounded) elements from (1,1) namespace --&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="Algorithm" type="anyURI" use="required"/&gt;
- *     &lt;/complexType&gt;
+ *   <element name="DigestMethod" type="ds:DigestMethodType"/>
+ *     <complexType name="DigestMethodType" mixed="true">
+ *       <sequence>
+ *         <any namespace="##any" minOccurs="0" maxOccurs="unbounded"/>
+ *           <!-- (0,unbounded) elements from (1,1) namespace -->
+ *       </sequence>
+ *       <attribute name="Algorithm" type="anyURI" use="required"/>
+ *     </complexType>
  * </pre>
  *
  * A <code>DigestMethod</code> instance may be created by invoking the

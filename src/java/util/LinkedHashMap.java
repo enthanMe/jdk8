@@ -479,7 +479,7 @@ public class LinkedHashMap<K,V>
      *     private static final int MAX_ENTRIES = 100;
      *
      *     protected boolean removeEldestEntry(Map.Entry eldest) {
-     *        return size() &gt; MAX_ENTRIES;
+     *        return size() > MAX_ENTRIES;
      *     }
      * </pre>
      *

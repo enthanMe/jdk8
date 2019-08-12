@@ -31,7 +31,7 @@ package java.lang.ref;
  * collector in response to memory demand.  Soft references are most often used
  * to implement memory-sensitive caches.
  *
- * <p> Suppose that the garbage collector determines at a certain point in time
+ * Suppose that the garbage collector determines at a certain point in time
  * that an object is <a href="package-summary.html#reachability">softly
  * reachable</a>.  At that time it may choose to clear atomically all soft
  * references to that object and all soft references to any other
@@ -40,7 +40,7 @@ package java.lang.ref;
  * enqueue those newly-cleared soft references that are registered with
  * reference queues.
  *
- * <p> All soft references to softly-reachable objects are guaranteed to have
+ * All soft references to softly-reachable objects are guaranteed to have
  * been cleared before the virtual machine throws an
  * <code>OutOfMemoryError</code>.  Otherwise no constraints are placed upon the
  * time at which a soft reference will be cleared or the order in which a set
@@ -48,7 +48,7 @@ package java.lang.ref;
  * implementations are, however, encouraged to bias against clearing
  * recently-created or recently-used soft references.
  *
- * <p> Direct instances of this class may be used to implement simple caches;
+ * Direct instances of this class may be used to implement simple caches;
  * this class or derived subclasses may also be used in larger data structures
  * to implement more sophisticated caches.  As long as the referent of a soft
  * reference is strongly reachable, that is, is actually in use, the soft

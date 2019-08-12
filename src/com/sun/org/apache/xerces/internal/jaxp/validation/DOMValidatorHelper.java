@@ -486,7 +486,7 @@ final class DOMValidatorHelper implements ValidatorHelper, EntityState {
         /**
          * Namespace binding information. This array is composed of a
          * series of tuples containing the namespace binding information:
-         * &lt;prefix, uri&gt;.
+         * <prefix, uri>.
          */
         protected String[] fNamespace = new String[16 * 2];
 

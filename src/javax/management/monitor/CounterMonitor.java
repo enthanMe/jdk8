@@ -36,13 +36,13 @@ import static javax.management.monitor.MonitorNotification.*;
  * Defines a monitor MBean designed to observe the values of a counter
  * attribute.
  *
- * <P> A counter monitor sends a {@link
+ * A counter monitor sends a {@link
  * MonitorNotification#THRESHOLD_VALUE_EXCEEDED threshold
  * notification} when the value of the counter reaches or exceeds a
  * threshold known as the comparison level.  The notify flag must be
  * set to <CODE>true</CODE>.
  *
- * <P> In addition, an offset mechanism enables particular counting
+ * In addition, an offset mechanism enables particular counting
  * intervals to be detected.  If the offset value is not zero,
  * whenever the threshold is triggered by the counter value reaching a
  * comparison level, that comparison level is incremented by the
@@ -51,11 +51,11 @@ import static javax.management.monitor.MonitorNotification.*;
  * the threshold triggers an event notification every time the count
  * increases by an interval equal to the offset value.
  *
- * <P> If the counter can wrap around its maximum value, the modulus
+ * If the counter can wrap around its maximum value, the modulus
  * needs to be specified.  The modulus is the value at which the
  * counter is reset to zero.
  *
- * <P> If the counter difference mode is used, the value of the
+ * If the counter difference mode is used, the value of the
  * derived gauge is calculated as the difference between the observed
  * counter values for two successive observations.  If this difference
  * is negative, the value of the derived gauge is incremented by the

@@ -83,7 +83,7 @@ import org.w3c.dom.Text;
  * much as possible once we've switched to a node there is no going back. This
  * is because we have no way to know whether the application keeps referring to
  * the node we once returned.
- * <p> The gain in memory varies on the density of attributes in the document.
+ * The gain in memory varies on the density of attributes in the document.
  * But in the tests I've run I've seen up to 12% of memory gain. And the good
  * thing is that it also leads to a slight gain in speed because we allocate
  * fewer objects! I mean, that's until we have to actually create the node...

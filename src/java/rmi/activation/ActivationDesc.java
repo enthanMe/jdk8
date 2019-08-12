@@ -94,7 +94,7 @@ public final class ActivationDesc implements Serializable {
      * services, use one of the <code>ActivationDesc</code> constructors that
      * takes a boolean parameter, <code>restart</code>.
      *
-     * <p> This constructor will throw <code>ActivationException</code> if
+     * This constructor will throw <code>ActivationException</code> if
      * there is no current activation group for this VM.  To create an
      * <code>ActivationGroup</code> use the
      * <code>ActivationGroup.createGroup</code> method.

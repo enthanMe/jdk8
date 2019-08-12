@@ -82,7 +82,7 @@ public interface SeeTag extends Tag {
      * return "java.lang.String".
      * For "<code>@see java.lang</code>", return "java.lang".
      * Return null if <code>@see</code> references a non-element, such as
-     * <code>@see &lt;a href="java.sun.com"&gt;</code>.
+     * <code>@see <a href="java.sun.com"></code>.
      */
     String referencedClassName();
 

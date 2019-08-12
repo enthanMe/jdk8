@@ -51,7 +51,7 @@ import sun.security.jca.GetInstance.Instance;
  * of a digital signature algorithm. Digital signatures are used for
  * authentication and integrity assurance of digital data.
  *
- * <p> The signature algorithm can be, among others, the NIST standard
+ * The signature algorithm can be, among others, the NIST standard
  * DSA, using DSA and SHA-1. The DSA algorithm using the
  * SHA-1 message digest algorithm can be specified as {@code SHA1withDSA}.
  * In the case of RSA, there are multiple choices for the message digest
@@ -59,10 +59,10 @@ import sun.security.jca.GetInstance.Instance;
  * {@code MD2withRSA}, {@code MD5withRSA}, or {@code SHA1withRSA}.
  * The algorithm name must be specified, as there is no default.
  *
- * <p> A Signature object can be used to generate and verify digital
+ * A Signature object can be used to generate and verify digital
  * signatures.
  *
- * <p> There are three phases to the use of a Signature object for
+ * There are three phases to the use of a Signature object for
  * either signing data or verifying a signature:<ol>
  *
  * <li>Initialization, with either
@@ -98,7 +98,7 @@ import sun.security.jca.GetInstance.Instance;
  * the superclass are intended for cryptographic service providers who wish to
  * supply their own implementations of digital signature algorithms.
  *
- * <p> Every implementation of the Java platform is required to support the
+ * Every implementation of the Java platform is required to support the
  * following standard {@code Signature} algorithms:
  * <ul>
  * <li>{@code SHA1withDSA}</li>
@@ -193,13 +193,13 @@ public abstract class Signature extends SignatureSpi {
      * Returns a Signature object that implements the specified signature
      * algorithm.
      *
-     * <p> This method traverses the list of registered security Providers,
+     * This method traverses the list of registered security Providers,
      * starting with the most preferred Provider.
      * A new Signature object encapsulating the
      * SignatureSpi implementation from the first
      * Provider that supports the specified algorithm is returned.
      *
-     * <p> Note that the list of registered providers may be retrieved via
+     * Note that the list of registered providers may be retrieved via
      * the {@link Security#getProviders() Security.getProviders()} method.
      *
      * @param algorithm the standard name of the algorithm requested.
@@ -314,12 +314,12 @@ public abstract class Signature extends SignatureSpi {
      * Returns a Signature object that implements the specified signature
      * algorithm.
      *
-     * <p> A new Signature object encapsulating the
+     * A new Signature object encapsulating the
      * SignatureSpi implementation from the specified provider
      * is returned.  The specified provider must be registered
      * in the security provider list.
      *
-     * <p> Note that the list of registered providers may be retrieved via
+     * Note that the list of registered providers may be retrieved via
      * the {@link Security#getProviders() Security.getProviders()} method.
      *
      * @param algorithm the name of the algorithm requested.
@@ -367,7 +367,7 @@ public abstract class Signature extends SignatureSpi {
      * Returns a Signature object that implements the specified
      * signature algorithm.
      *
-     * <p> A new Signature object encapsulating the
+     * A new Signature object encapsulating the
      * SignatureSpi implementation from the specified Provider
      * object is returned.  Note that the specified Provider object
      * does not have to be registered in the provider list.

@@ -40,26 +40,26 @@ import java.util.List;
  * The XML Schema Definition is defined as:
  *
  * <pre>
- *    &lt;element name="X509Data" type="ds:X509DataType"/&gt;
- *    &lt;complexType name="X509DataType"&gt;
- *        &lt;sequence maxOccurs="unbounded"&gt;
- *          &lt;choice&gt;
- *            &lt;element name="X509IssuerSerial" type="ds:X509IssuerSerialType"/&gt;
- *            &lt;element name="X509SKI" type="base64Binary"/&gt;
- *            &lt;element name="X509SubjectName" type="string"/&gt;
- *            &lt;element name="X509Certificate" type="base64Binary"/&gt;
- *            &lt;element name="X509CRL" type="base64Binary"/&gt;
- *            &lt;any namespace="##other" processContents="lax"/&gt;
- *          &lt;/choice&gt;
- *        &lt;/sequence&gt;
- *    &lt;/complexType&gt;
+ *    <element name="X509Data" type="ds:X509DataType"/>
+ *    <complexType name="X509DataType">
+ *        <sequence maxOccurs="unbounded">
+ *          <choice>
+ *            <element name="X509IssuerSerial" type="ds:X509IssuerSerialType"/>
+ *            <element name="X509SKI" type="base64Binary"/>
+ *            <element name="X509SubjectName" type="string"/>
+ *            <element name="X509Certificate" type="base64Binary"/>
+ *            <element name="X509CRL" type="base64Binary"/>
+ *            <any namespace="##other" processContents="lax"/>
+ *          </choice>
+ *        </sequence>
+ *    </complexType>
  *
- *    &lt;complexType name="X509IssuerSerialType"&gt;
- *      &lt;sequence&gt;
- *        &lt;element name="X509IssuerName" type="string"/&gt;
- *        &lt;element name="X509SerialNumber" type="integer"/&gt;
- *      &lt;/sequence&gt;
- *    &lt;/complexType&gt;
+ *    <complexType name="X509IssuerSerialType">
+ *      <sequence>
+ *        <element name="X509IssuerName" type="string"/>
+ *        <element name="X509SerialNumber" type="integer"/>
+ *      </sequence>
+ *    </complexType>
  * </pre>
  *
  * An <code>X509Data</code> instance may be created by invoking the

@@ -37,13 +37,13 @@ import sun.nio.cs.StreamDecoder;
  * may be specified by name or may be given explicitly, or the platform's
  * default charset may be accepted.
  *
- * <p> Each invocation of one of an InputStreamReader's read() methods may
+ * Each invocation of one of an InputStreamReader's read() methods may
  * cause one or more bytes to be read from the underlying byte-input stream.
  * To enable the efficient conversion of bytes to characters, more bytes may
  * be read ahead from the underlying stream than are necessary to satisfy the
  * current read operation.
  *
- * <p> For top efficiency, consider wrapping an InputStreamReader within a
+ * For top efficiency, consider wrapping an InputStreamReader within a
  * BufferedReader.  For example:
  *
  * <pre>
@@ -135,10 +135,10 @@ public class InputStreamReader extends Reader {
     /**
      * Returns the name of the character encoding being used by this stream.
      *
-     * <p> If the encoding has an historical name then that name is returned;
+     * If the encoding has an historical name then that name is returned;
      * otherwise the encoding's canonical name is returned.
      *
-     * <p> If this instance was created with the {@link
+     * If this instance was created with the {@link
      * #InputStreamReader(InputStream, String)} constructor then the returned
      * name, being unique for the encoding, may differ from the name passed to
      * the constructor. This method will return <code>null</code> if the

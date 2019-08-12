@@ -102,9 +102,9 @@ public class SpinnerNumberModel extends AbstractSpinnerModel implements Serializ
      * have an upper or lower bound.
      * If <code>value</code> or <code>stepSize</code> is <code>null</code>,
      * or if both <code>minimum</code> and <code>maximum</code>
-     * are specified and <code>minimum &gt; maximum</code> then an
+     * are specified and <code>minimum > maximum</code> then an
      * <code>IllegalArgumentException</code> is thrown.
-     * Similarly if <code>(minimum &lt;= value &lt;= maximum</code>) is false,
+     * Similarly if <code>(minimum <= value <= maximum</code>) is false,
      * an <code>IllegalArgumentException</code> is thrown.
      *
      * @param value the current (non <code>null</code>) value of the model
@@ -114,7 +114,7 @@ public class SpinnerNumberModel extends AbstractSpinnerModel implements Serializ
      *
      * @throws IllegalArgumentException if stepSize or value is
      *     <code>null</code> or if the following expression is false:
-     *     <code>minimum &lt;= value &lt;= maximum</code>
+     *     <code>minimum <= value <= maximum</code>
      */
     public SpinnerNumberModel(Number value, Comparable minimum, Comparable maximum, Number stepSize) {
         if ((value == null) || (stepSize == null)) {
@@ -141,7 +141,7 @@ public class SpinnerNumberModel extends AbstractSpinnerModel implements Serializ
      * @param maximum the last number in the sequence
      * @param stepSize the difference between elements of the sequence
      * @throws IllegalArgumentException if the following expression is false:
-     *     <code>minimum &lt;= value &lt;= maximum</code>
+     *     <code>minimum <= value <= maximum</code>
      */
     public SpinnerNumberModel(int value, int minimum, int maximum, int stepSize) {
         this(Integer.valueOf(value), Integer.valueOf(minimum), Integer.valueOf(maximum), Integer.valueOf(stepSize));
@@ -158,7 +158,7 @@ public class SpinnerNumberModel extends AbstractSpinnerModel implements Serializ
      * @param maximum the last number in the sequence
      * @param stepSize the difference between elements of the sequence
      * @throws IllegalArgumentException   if the following expression is false:
-     *     <code>minimum &lt;= value &lt;= maximum</code>
+     *     <code>minimum <= value <= maximum</code>
      */
     public SpinnerNumberModel(double value, double minimum, double maximum, double stepSize) {
         this(new Double(value), new Double(minimum), new Double(maximum), new Double(stepSize));
@@ -180,7 +180,7 @@ public class SpinnerNumberModel extends AbstractSpinnerModel implements Serializ
      * If <code>minimum</code> is <code>null</code>,
      * then there is no lower bound.  No bounds checking is done here;
      * the new <code>minimum</code> value may invalidate the
-     * <code>(minimum &lt;= value &lt;= maximum)</code>
+     * <code>(minimum <= value <= maximum)</code>
      * invariant enforced by the constructors.  This is to simplify updating
      * the model, naturally one should ensure that the invariant is true
      * before calling the <code>getNextValue</code>,
@@ -196,7 +196,7 @@ public class SpinnerNumberModel extends AbstractSpinnerModel implements Serializ
      * MyDate extends Date {  // Date already implements Comparable
      *     public int compareTo(Long o) {
      *         long t = getTime();
-     *         return (t &lt; o.longValue() ? -1 : (t == o.longValue() ? 0 : 1));
+     *         return (t < o.longValue() ? -1 : (t == o.longValue() ? 0 : 1));
      *     }
      * }
      * </pre>
@@ -235,7 +235,7 @@ public class SpinnerNumberModel extends AbstractSpinnerModel implements Serializ
      * If <code>maximum</code> is <code>null</code>, then there
      * is no upper bound.  No bounds checking is done here; the new
      * <code>maximum</code> value may invalidate the
-     * <code>(minimum &lt;= value &lt; maximum)</code>
+     * <code>(minimum <= value < maximum)</code>
      * invariant enforced by the constructors.  This is to simplify updating
      * the model, naturally one should ensure that the invariant is true
      * before calling the <code>next</code>, <code>previous</code>,
@@ -417,14 +417,14 @@ public class SpinnerNumberModel extends AbstractSpinnerModel implements Serializ
      * <code>null</code>, or not a <code>Number</code>, an
      * <code>IllegalArgumentException</code> is thrown.  No
      * bounds checking is done here; the new value may invalidate the
-     * <code>(minimum &lt;= value &lt;= maximum)</code>
+     * <code>(minimum <= value <= maximum)</code>
      * invariant enforced by the constructors.   It's also possible to set
      * the value to be something that wouldn't naturally occur in the sequence,
      * i.e. a value that's not modulo the <code>stepSize</code>.
      * This is to simplify updating the model, and to accommodate
      * spinners that don't want to restrict values that have been
      * directly entered by the user. Naturally, one should ensure that the
-     * <code>(minimum &lt;= value &lt;= maximum)</code> invariant is true
+     * <code>(minimum <= value <= maximum)</code> invariant is true
      * before calling the <code>next</code>, <code>previous</code>, or
      * <code>setValue</code> methods.
      * <p>

@@ -33,7 +33,7 @@ import java.io.IOException;
  * A file attribute view that supports reading or updating a file's Access
  * Control Lists (ACL) or file owner attributes.
  *
- * <p> ACLs are used to specify access rights to file system objects. An ACL is
+ * ACLs are used to specify access rights to file system objects. An ACL is
  * an ordered list of {@link AclEntry access-control-entries}, each specifying a
  * {@link UserPrincipal} and the level of access for that user principal. This
  * file attribute view defines the {@link #getAcl() getAcl}, and {@link
@@ -45,10 +45,10 @@ import java.io.IOException;
  * model used by the file system. The details of such mapping are implementation
  * dependent and are therefore unspecified.
  *
- * <p> This class also extends {@code FileOwnerAttributeView} so as to define
+ * This class also extends {@code FileOwnerAttributeView} so as to define
  * methods to get and set the file owner.
  *
- * <p> When a file system provides access to a set of {@link FileStore
+ * When a file system provides access to a set of {@link FileStore
  * file-systems} that are not homogeneous then only some of the file systems may
  * support ACLs. The {@link FileStore#supportsFileAttributeView
  * supportsFileAttributeView} method can be used to test if a file system
@@ -67,7 +67,7 @@ import java.io.IOException;
  * UserPrincipalLookupService#lookupPrincipalByName lookupPrincipalByName}
  * method.
  *
- * <p> <b>Usage Example:</b>
+ * <b>Usage Example:</b>
  * Suppose we wish to add an entry to an existing ACL to grant "joe" access:
  * <pre>
  *     // lookup "joe"
@@ -85,13 +85,13 @@ import java.io.IOException;
  *         .build();
  *
  *     // read ACL, insert ACE, re-write ACL
- *     List&lt;AclEntry&gt; acl = view.getAcl();
+ *     List<AclEntry> acl = view.getAcl();
  *     acl.add(0, entry);   // insert before any DENY entries
  *     view.setAcl(acl);
  * </pre>
  *
  * <h2> Dynamic Access </h2>
- * <p> Where dynamic access to file attributes is required, the attributes
+ * Where dynamic access to file attributes is required, the attributes
  * supported by this attribute view are as follows:
  * <blockquote>
  * <table border="1" cellpadding="8" summary="Supported attributes">
@@ -101,7 +101,7 @@ import java.io.IOException;
  *   </tr>
  *   <tr>
  *     <td> "acl" </td>
- *     <td> {@link List}&lt;{@link AclEntry}&gt; </td>
+ *     <td> {@link List}<{@link AclEntry}> </td>
  *   </tr>
  *   <tr>
  *     <td> "owner" </td>
@@ -110,24 +110,24 @@ import java.io.IOException;
  * </table>
  * </blockquote>
  *
- * <p> The {@link Files#getAttribute getAttribute} method may be used to read
+ * The {@link Files#getAttribute getAttribute} method may be used to read
  * the ACL or owner attributes as if by invoking the {@link #getAcl getAcl} or
  * {@link #getOwner getOwner} methods.
  *
- * <p> The {@link Files#setAttribute setAttribute} method may be used to
+ * The {@link Files#setAttribute setAttribute} method may be used to
  * update the ACL or owner attributes as if by invoking the {@link #setAcl setAcl}
  * or {@link #setOwner setOwner} methods.
  *
  * <h2> Setting the ACL when creating a file </h2>
  *
- * <p> Implementations supporting this attribute view may also support setting
+ * Implementations supporting this attribute view may also support setting
  * the initial ACL when creating a file or directory. The initial ACL
  * may be provided to methods such as {@link Files#createFile createFile} or {@link
  * Files#createDirectory createDirectory} as an {@link FileAttribute} with {@link
  * FileAttribute#name name} {@code "acl:acl"} and a {@link FileAttribute#value
  * value} that is the list of {@code AclEntry} objects.
  *
- * <p> Where an implementation supports an ACL model that differs from the NFSv4
+ * Where an implementation supports an ACL model that differs from the NFSv4
  * defined ACL model then setting the initial ACL when creating the file must
  * translate the ACL to the model supported by the file system. Methods that
  * create a file should reject (by throwing {@link IOException IOException})
@@ -150,11 +150,11 @@ public interface AclFileAttributeView
     /**
      * Reads the access control list.
      *
-     * <p> When the file system uses an ACL model that differs from the NFSv4
+     * When the file system uses an ACL model that differs from the NFSv4
      * defined ACL model, then this method returns an ACL that is the translation
      * of the ACL to the NFSv4 ACL model.
      *
-     * <p> The returned list is modifiable so as to facilitate changes to the
+     * The returned list is modifiable so as to facilitate changes to the
      * existing ACL. The {@link #setAcl setAcl} method is used to update
      * the file's ACL attribute.
      *
@@ -174,7 +174,7 @@ public interface AclFileAttributeView
     /**
      * Updates (replace) the access control list.
      *
-     * <p> Where the file system supports Access Control Lists, and it uses an
+     * Where the file system supports Access Control Lists, and it uses an
      * ACL model that differs from the NFSv4 defined ACL model, then this method
      * must translate the ACL to the model supported by the file system. This
      * method should reject (by throwing {@link IOException IOException}) any
@@ -184,12 +184,12 @@ public interface AclFileAttributeView
      * AclEntryType#ALARM} entries, then this method ignores these entries when
      * writing the ACL.
      *
-     * <p> If an ACL entry contains a {@link AclEntry#principal user-principal}
+     * If an ACL entry contains a {@link AclEntry#principal user-principal}
      * that is not associated with the same provider as this attribute view then
      * {@link ProviderMismatchException} is thrown. Additional validation, if
      * any, is implementation dependent.
      *
-     * <p> If the file system supports other security related file attributes
+     * If the file system supports other security related file attributes
      * (such as a file {@link PosixFileAttributes#permissions
      * access-permissions} for example), the updating the access control list
      * may also cause these security related attributes to be updated.

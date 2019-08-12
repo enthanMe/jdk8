@@ -42,7 +42,7 @@ import java.net.*;
  * is the default parser used by HTMLEditorKit to parse HTML url's.
  * <p>This will message the callback for all valid tags, as well as
  * tags that are implied but not explicitly specified. For example, the
- * html string (&lt;p&gt;blah) only has a p tag defined. The callback
+ * html string (<p>blah) only has a p tag defined. The callback
  * will see the following methods:
  * <ol><li><i>handleStartTag(html, ...)</i></li>
  *     <li><i>handleStartTag(head, ...)</i></li>
@@ -63,7 +63,7 @@ import java.net.*;
  * <p>HTML.Attributes defines a type safe enumeration of html attributes.
  * If an attribute key of a tag is defined in HTML.Attribute, the
  * HTML.Attribute will be used as the key, otherwise a String will be used.
- * For example &lt;p foo=bar class=neat&gt; has two attributes. foo is
+ * For example <p foo=bar class=neat> has two attributes. foo is
  * not defined in HTML.Attribute, where as class is, therefore the
  * AttributeSet will have two values in it, HTML.Attribute.CLASS with
  * a String value of 'neat' and the String key 'foo' with a String value of
@@ -81,7 +81,7 @@ import java.net.*;
  * the text 'blah' will have a position of 3, the newlines are skipped.
  * <p>
  * For attributes that do not have a value, eg in the html
- * string <code>&lt;foo blah&gt;</code> the attribute <code>blah</code>
+ * string <code><foo blah></code> the attribute <code>blah</code>
  * does not have a value, there are two possible values that will be
  * placed in the AttributeSet's value:
  * <ul>
@@ -89,7 +89,7 @@ import java.net.*;
  *     definition does not have an explicit value then the value in the
  *     AttributeSet will be <code>HTML.NULL_ATTRIBUTE_VALUE</code>.
  * <li>If the DTD contains an explicit value, as in:
- *     <code>&lt;!ATTLIST OPTION selected (selected) #IMPLIED&gt;</code>
+ *     <code><!ATTLIST OPTION selected (selected) #IMPLIED></code>
  *     this value from the dtd (in this case selected) will be used.
  * </ul>
  * <p>

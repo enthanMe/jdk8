@@ -62,7 +62,7 @@ import com.sun.org.apache.xml.internal.utils.XMLString;
  * <strong>Subject To Change.</strong> This wouldn't affect most
  * users, but might require updating some extensions.</p>
  *
- * <p> The largest change being contemplated is a reconsideration of
+ * The largest change being contemplated is a reconsideration of
  * the Node Handle representation.  We are still not entirely sure
  * that an integer packed with two numeric subfields is really the
  * best solution. It has been suggested that we move up to a Long, to
@@ -226,7 +226,7 @@ public interface DTM
 
   /**
    * Given a node handle, test if it has child nodes.
-   * <p> %REVIEW% This is obviously useful at the DOM layer, where it
+   * %REVIEW% This is obviously useful at the DOM layer, where it
    * would permit testing this without having to create a proxy
    * node. It's less useful in the DTM API, where
    * (dtm.getFirstChild(nodeHandle)!=DTM.NULL) is just as fast and
@@ -505,7 +505,7 @@ public interface DTM
    * (As defined in Namespaces, this is the portion of the name before any
    * colon character).
    *
-   * <p> %REVIEW% Are you sure you want "" for no prefix?  </p>
+   * %REVIEW% Are you sure you want "" for no prefix?  </p>
    *
    * @param nodeHandle the id of the node.
    * @return String prefix of this node's name, or "" if no explicit
@@ -740,7 +740,7 @@ public interface DTM
    *
    * @return false if secondNode comes before firstNode, otherwise return true.
    * You can think of this as
-   * <code>(firstNode.documentOrderPosition &lt;= secondNode.documentOrderPosition)</code>.
+   * <code>(firstNode.documentOrderPosition <= secondNode.documentOrderPosition)</code>.
    */
   public boolean isNodeAfter(int firstNodeHandle, int secondNodeHandle);
 
@@ -910,7 +910,7 @@ public interface DTM
    * is immutable so nodes can't be removed from their previous
    * location.
    *
-   * <p> %REVIEW%  DTM maintains an insertion cursor which
+   * %REVIEW%  DTM maintains an insertion cursor which
    * performs a depth-first tree walk as nodes come in, and this operation
    * is really equivalent to:
    *    insertionCursor.appendChild(document.importNode(newChild)))

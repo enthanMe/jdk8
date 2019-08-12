@@ -62,10 +62,10 @@ import javax.swing.UIDefaults;
  * The following <a href="doc-files/synthFileFormat.html">xml</a>
  * accomplishes the same thing:
  * <pre>
- * &lt;style id="splitPaneStyle"&gt;
+ * <style id="splitPaneStyle">
  *   ...
- * &lt;/style&gt;
- * &lt;bind style="splitPaneStyle" type="region" key="SplitPane"/&gt;
+ * </style>
+ * <bind style="splitPaneStyle" type="region" key="SplitPane"/>
  * </pre>
  *
  * @since 1.5

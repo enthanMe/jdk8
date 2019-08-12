@@ -475,7 +475,7 @@ public final class Security {
      * according to their
      * {@linkplain #insertProviderAt(java.security.Provider, int) preference order}.
      *
-     * <p> A cryptographic service is always associated with a particular
+     * A cryptographic service is always associated with a particular
      * algorithm or type. For example, a digital signature service is
      * always associated with a particular algorithm (e.g., DSA),
      * and a CertificateFactory service is always associated with
@@ -485,31 +485,31 @@ public final class Security {
      * formats:
      * <ul>
      * <li> <i>{@literal <crypto_service>.<algorithm_or_type>}</i>
-     * <p> The cryptographic service name must not contain any dots.
-     * <p> A
+     * The cryptographic service name must not contain any dots.
+     * A
      * provider satisfies the specified selection criterion iff the provider
      * implements the
      * specified algorithm or type for the specified cryptographic service.
-     * <p> For example, "CertificateFactory.X.509"
+     * For example, "CertificateFactory.X.509"
      * would be satisfied by any provider that supplied
      * a CertificateFactory implementation for X.509 certificates.
      * <li> <i>{@literal <crypto_service>.<algorithm_or_type>
      * <attribute_name>:<attribute_value>}</i>
-     * <p> The cryptographic service name must not contain any dots. There
+     * The cryptographic service name must not contain any dots. There
      * must be one or more space characters between the
      * <i>{@literal <algorithm_or_type>}</i> and the
      * <i>{@literal <attribute_name>}</i>.
-     *  <p> A provider satisfies this selection criterion iff the
+     *  A provider satisfies this selection criterion iff the
      * provider implements the specified algorithm or type for the specified
      * cryptographic service and its implementation meets the
      * constraint expressed by the specified attribute name/value pair.
-     * <p> For example, "Signature.SHA1withDSA KeySize:1024" would be
+     * For example, "Signature.SHA1withDSA KeySize:1024" would be
      * satisfied by any provider that implemented
      * the SHA1withDSA signature algorithm with a keysize of 1024 (or larger).
      *
      * </ul>
      *
-     * <p> See the <a href=
+     * See the <a href=
      * "{@docRoot}/../technotes/guides/security/StandardNames.html">
      * Java Cryptography Architecture Standard Algorithm Name Documentation</a>
      * for information about standard cryptographic service names, standard
@@ -562,25 +562,25 @@ public final class Security {
      * following two formats:
      * <ul>
      * <li> <i>{@literal <crypto_service>.<algorithm_or_type>}</i>
-     * <p> The cryptographic service name must not contain any dots.
-     * <p> The value associated with the key must be an empty string.
-     * <p> A provider
+     * The cryptographic service name must not contain any dots.
+     * The value associated with the key must be an empty string.
+     * A provider
      * satisfies this selection criterion iff the provider implements the
      * specified algorithm or type for the specified cryptographic service.
      * <li>  <i>{@literal <crypto_service>}.
      * {@literal <algorithm_or_type> <attribute_name>}</i>
-     * <p> The cryptographic service name must not contain any dots. There
+     * The cryptographic service name must not contain any dots. There
      * must be one or more space characters between the
      * <i>{@literal <algorithm_or_type>}</i>
      * and the <i>{@literal <attribute_name>}</i>.
-     * <p> The value associated with the key must be a non-empty string.
+     * The value associated with the key must be a non-empty string.
      * A provider satisfies this selection criterion iff the
      * provider implements the specified algorithm or type for the specified
      * cryptographic service and its implementation meets the
      * constraint expressed by the specified attribute name/value pair.
      * </ul>
      *
-     * <p> See the <a href=
+     * See the <a href=
      * "../../../technotes/guides/security/StandardNames.html">
      * Java Cryptography Architecture Standard Algorithm Name Documentation</a>
      * for information about standard cryptographic service names, standard

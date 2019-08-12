@@ -33,20 +33,20 @@ import java.util.Enumeration;
  * span multiple namespaces), or a compound name (names that are
  * used within individual hierarchical naming systems).
  *
- * <p> There can be different implementations of <tt>Name</tt>; for example,
+ * There can be different implementations of <tt>Name</tt>; for example,
  * composite names, URLs, or namespace-specific compound names.
  *
- * <p> The components of a name are numbered.  The indexes of a name
+ * The components of a name are numbered.  The indexes of a name
  * with N components range from 0 up to, but not including, N.  This
  * range may be written as [0,N).
  * The most significant component is at index 0.
  * An empty name has no components.
  *
- * <p> None of the methods in this interface accept null as a valid
+ * None of the methods in this interface accept null as a valid
  * value for a parameter that is a name or a name component.
  * Likewise, methods that return a name or name component never return null.
  *
- * <p> An instance of a <tt>Name</tt> may not be synchronized against
+ * An instance of a <tt>Name</tt> may not be synchronized against
  * concurrent multithreaded access if that access is not read-only.
  *
  * @author Rosanna Lee
@@ -82,7 +82,7 @@ public interface Name
      * Returns a negative integer, zero, or a positive integer as this
      * name is less than, equal to, or greater than the given name.
      *
-     * <p> As with <tt>Object.equals()</tt>, the notion of ordering for names
+     * As with <tt>Object.equals()</tt>, the notion of ordering for names
      * depends on the class that implements this interface.
      * For example, the ordering may be
      * based on lexicographical ordering of the name components.

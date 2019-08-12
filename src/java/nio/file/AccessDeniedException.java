@@ -29,7 +29,7 @@ package java.nio.file;
  * Checked exception thrown when a file system operation is denied, typically
  * due to a file permission or other access check.
  *
- * <p> This exception is not related to the {@link
+ * This exception is not related to the {@link
  * java.security.AccessControlException AccessControlException} or {@link
  * SecurityException} thrown by access controllers or security managers when
  * access to a file is denied.

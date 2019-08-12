@@ -37,7 +37,7 @@ import java.lang.annotation.Target;
  * <p>This annotation, together with {@link XmlEnumValue} provides a
  * mapping of enum type to XML representation.
  *
- * <p> <b>Usage</b> </p>
+ * <b>Usage</b> </p>
  * <p>
  * The <tt>@XmlEnum</tt> annotation can be used with the
  * following program elements:
@@ -45,7 +45,7 @@ import java.lang.annotation.Target;
  *   <li>enum type</li>
  * </ul>
  *
- * <p> The usage is subject to the following constraints:
+ * The usage is subject to the following constraints:
  * <ul>
  *   <li> This annotation can be used the following other annotations:
  *         {@link XmlType},

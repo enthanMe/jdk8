@@ -77,29 +77,29 @@ import javax.xml.ws.Service;
  * <b>Example 1: </b>Possible Policy Assertion in the generated WSDL for
  * <code>&#64;Addressing</code>
  * <pre>
- *   &lt;wsam:Addressing wsp:Optional="true">
- *     &lt;wsp:Policy/>
- *   &lt;/wsam:Addressing>
+ *   <wsam:Addressing wsp:Optional="true">
+ *     <wsp:Policy/>
+ *   </wsam:Addressing>
  * </pre>
  *
  * <p>
  * <b>Example 2: </b>Possible Policy Assertion in the generated WSDL for
  * <code>&#64;Addressing(required=true)</code>
  * <pre>
- *   &lt;wsam:Addressing>
- *     &lt;wsp:Policy/>
- *   &lt;/wsam:Addressing>
+ *   <wsam:Addressing>
+ *     <wsp:Policy/>
+ *   </wsam:Addressing>
  * </pre>
  *
  * <p>
  * <b>Example 3: </b>Possible Policy Assertion in the generated WSDL for
  * <code>&#64;Addressing(required=true, responses=Responses.ANONYMOUS)</code>
  * <pre>
- *   &lt;wsam:Addressing>
- *      &lt;wsp:Policy>
- *        &lt;wsam:AnonymousResponses/>
- *      &lt;/wsp:Policy>
- *   &lt;/wsam:Addressing>
+ *   <wsam:Addressing>
+ *      <wsp:Policy>
+ *        <wsam:AnonymousResponses/>
+ *      </wsp:Policy>
+ *   </wsam:Addressing>
  * </pre>
  *
  * <p>

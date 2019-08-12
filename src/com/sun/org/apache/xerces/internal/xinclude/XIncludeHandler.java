@@ -77,14 +77,14 @@ import java.util.Objects;
  * W3C specification for XML Inclusions.
  * </p>
  * <p>
- * This component analyzes each event in the pipeline, looking for &lt;include&gt;
- * elements. An &lt;include&gt; element is one which has a namespace of
+ * This component analyzes each event in the pipeline, looking for <include>
+ * elements. An <include> element is one which has a namespace of
  * <code>http://www.w3.org/2001/XInclude</code> and a localname of <code>include</code>.
- * When it finds an &lt;include&gt; element, it attempts to include the file specified
+ * When it finds an <include> element, it attempts to include the file specified
  * in the <code>href</code> attribute of the element.  If inclusion succeeds, all
- * children of the &lt;include&gt; element are ignored (with the exception of
+ * children of the <include> element are ignored (with the exception of
  * checking for invalid children as outlined in the specification).  If the inclusion
- * fails, the &lt;fallback&gt; child of the &lt;include&gt; element is processed.
+ * fails, the <fallback> child of the <include> element is processed.
  * </p>
  * <p>
  * See the <a href="http://www.w3.org/TR/xinclude/">XInclude specification</a> for
@@ -1857,11 +1857,11 @@ public class XIncludeHandler
     }
 
     /**
-     * Checks if the element is an &lt;include&gt; element.  The element must have
+     * Checks if the element is an <include> element.  The element must have
      * the XInclude namespace, and a local name of "include".
      *
      * @param element the element to check
-     * @return true if the element is an &lt;include&gt; element
+     * @return true if the element is an <include> element
      * @see #hasXIncludeNamespace(QName)
      */
     protected boolean isIncludeElement(QName element) {
@@ -1870,11 +1870,11 @@ public class XIncludeHandler
     }
 
     /**
-     * Checks if the element is an &lt;fallback&gt; element.  The element must have
+     * Checks if the element is an <fallback> element.  The element must have
      * the XInclude namespace, and a local name of "fallback".
      *
      * @param element the element to check
-     * @return true if the element is an &lt;fallback; element
+     * @return true if the element is an <fallback; element
      * @see #hasXIncludeNamespace(QName)
      */
     protected boolean isFallbackElement(QName element) {
@@ -2314,7 +2314,7 @@ public class XIncludeHandler
     }
 
     /**
-     * Records that an &lt;fallback&gt; was encountered at the specified depth,
+     * Records that an <fallback> was encountered at the specified depth,
      * as an ancestor of the current element, or as a sibling of an ancestor of the
      * current element.
      *
@@ -2331,7 +2331,7 @@ public class XIncludeHandler
     }
 
     /**
-     * Returns whether an &lt;fallback&gt; was encountered at the specified depth,
+     * Returns whether an <fallback> was encountered at the specified depth,
      * as an ancestor of the current element, or as a sibling of an ancestor of the
      * current element.
      *
@@ -2345,7 +2345,7 @@ public class XIncludeHandler
     }
 
     /**
-     * Records that an &lt;include&gt; was encountered at the specified depth,
+     * Records that an <include> was encountered at the specified depth,
      * as an ancestor of the current item.
      *
      * @param depth
@@ -2361,7 +2361,7 @@ public class XIncludeHandler
     }
 
     /**
-     * Return whether an &lt;include&gt; was encountered at the specified depth,
+     * Return whether an <include> was encountered at the specified depth,
      * as an ancestor of the current item.
      *
      * @param depth

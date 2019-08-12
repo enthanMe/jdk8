@@ -180,7 +180,7 @@ public abstract class AbstractRegionPainter implements Painter<JComponent> {
      * points at runtime, such as the stretching insets, the canvas size at which the
      * encoded points were defined, and whether the stretching insets are inverted.</p>
      *
-     * <p> This method allows for subclasses to package the painting of different states
+     * This method allows for subclasses to package the painting of different states
      * with possibly different canvas sizes, etc, into one AbstractRegionPainter implementation.</p>
      *
      * @return a PaintContext associated with this paint operation.
@@ -536,11 +536,11 @@ public abstract class AbstractRegionPainter implements Painter<JComponent> {
          * @param maxH The maximum scale in the horizontal direction to use before punting and redrawing from scratch.
          *             For example, if maxH is 2, then we will attempt to scale any cached images up to 2x the canvas
          *             width before redrawing from scratch. Reasonable maxH values may improve painting performance.
-         *             If set too high, then you may get poor looking graphics at higher zoom levels. Must be &gt;= 1.
+         *             If set too high, then you may get poor looking graphics at higher zoom levels. Must be >= 1.
          * @param maxV The maximum scale in the vertical direction to use before punting and redrawing from scratch.
          *             For example, if maxV is 2, then we will attempt to scale any cached images up to 2x the canvas
          *             height before redrawing from scratch. Reasonable maxV values may improve painting performance.
-         *             If set too high, then you may get poor looking graphics at higher zoom levels. Must be &gt;= 1.
+         *             If set too high, then you may get poor looking graphics at higher zoom levels. Must be >= 1.
          */
         public PaintContext(Insets insets, Dimension canvasSize, boolean inverted,
                             CacheMode cacheMode, double maxH, double maxV) {

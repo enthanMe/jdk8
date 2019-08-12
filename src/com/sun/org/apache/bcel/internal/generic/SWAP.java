@@ -60,7 +60,7 @@ package com.sun.org.apache.bcel.internal.generic;
 
 /**
  * SWAP - Swa top operand stack word
- * <PRE>Stack: ..., word2, word1 -&gt; ..., word1, word2</PRE>
+ * <PRE>Stack: ..., word2, word1 -> ..., word1, word2</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

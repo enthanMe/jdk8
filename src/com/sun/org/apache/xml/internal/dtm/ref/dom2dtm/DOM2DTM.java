@@ -1084,8 +1084,8 @@ public class DOM2DTM extends DTMDefaultBaseIterators
    * mapping.
    * Given a node handle, return the prefix used to map to the namespace.
    *
-   * <p> %REVIEW% Are you sure you want "" for no prefix?  </p>
-   * <p> %REVIEW-COMMENT% I think so... not totally sure. -sb  </p>
+   * %REVIEW% Are you sure you want "" for no prefix?  </p>
+   * %REVIEW-COMMENT% I think so... not totally sure. -sb  </p>
    *
    * @param nodeHandle the id of the node.
    * @return String prefix of this node's name, or "" if no explicit

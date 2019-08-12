@@ -83,12 +83,12 @@ import sun.reflect.misc.ReflectUtil;
  * {@code double}), and the keyword {@code void} are also
  * represented as {@code Class} objects.
  *
- * <p> {@code Class} has no public constructor. Instead {@code Class}
+ * {@code Class} has no public constructor. Instead {@code Class}
  * objects are constructed automatically by the Java Virtual Machine as classes
  * are loaded and by calls to the {@code defineClass} method in the class
  * loader.
  *
- * <p> The following example uses a {@code Class} object to print the
+ * The following example uses a {@code Class} object to print the
  * class name of an object:
  *
  * <blockquote><pre>
@@ -98,7 +98,7 @@ import sun.reflect.misc.ReflectUtil;
  *     }
  * </pre></blockquote>
  *
- * <p> It is also possible to get the {@code Class} object for a named
+ * It is also possible to get the {@code Class} object for a named
  * type (or for void) using a class literal.  See Section 15.8.2 of
  * <cite>The Java&trade; Language Specification</cite>.
  * For example:
@@ -238,7 +238,7 @@ public final class Class<T> implements java.io.Serializable,
      * where {@code currentLoader} denotes the defining class loader of
      * the current class.
      *
-     * <p> For example, the following code fragment returns the
+     * For example, the following code fragment returns the
      * runtime {@code Class} descriptor for the class named
      * {@code java.lang.Thread}:
      *
@@ -277,16 +277,16 @@ public final class Class<T> implements java.io.Serializable,
      * {@code initialize} parameter is {@code true} and if it has
      * not been initialized earlier.
      *
-     * <p> If {@code name} denotes a primitive type or void, an attempt
+     * If {@code name} denotes a primitive type or void, an attempt
      * will be made to locate a user-defined class in the unnamed package whose
      * name is {@code name}. Therefore, this method cannot be used to
      * obtain any of the {@code Class} objects representing primitive
      * types or void.
      *
-     * <p> If {@code name} denotes an array class, the component type of
+     * If {@code name} denotes an array class, the component type of
      * the array class is loaded but not initialized.
      *
-     * <p> For example, in an instance method the expression:
+     * For example, in an instance method the expression:
      *
      * <blockquote>
      *  {@code Class.forName("Foo")}
@@ -304,7 +304,7 @@ public final class Class<T> implements java.io.Serializable,
      * Note that this method does not check whether the requested class
      * is accessible to its caller.
      *
-     * <p> If the {@code loader} is {@code null}, and a security
+     * If the {@code loader} is {@code null}, and a security
      * manager is present, and the caller's class loader is not null, then this
      * method calls the security manager's {@code checkPermission} method
      * with a {@code RuntimePermission("getClassLoader")} permission to
@@ -460,7 +460,7 @@ public final class Class<T> implements java.io.Serializable,
      * raising a {@code ClassCastException.} It returns {@code false}
      * otherwise.
      *
-     * <p> Specifically, if this {@code Class} object represents a
+     * Specifically, if this {@code Class} object represents a
      * declared class, this method returns {@code true} if the specified
      * {@code Object} argument is an instance of the represented class (or
      * of any of its subclasses); it returns {@code false} otherwise. If
@@ -494,7 +494,7 @@ public final class Class<T> implements java.io.Serializable,
      * exactly this {@code Class} object; otherwise it returns
      * {@code false}.
      *
-     * <p> Specifically, this method tests whether the type represented by the
+     * Specifically, this method tests whether the type represented by the
      * specified {@code Class} parameter can be converted to the type
      * represented by this {@code Class} object via an identity conversion
      * or via a widening reference conversion. See <em>The Java Language
@@ -534,14 +534,14 @@ public final class Class<T> implements java.io.Serializable,
      * Determines if the specified {@code Class} object represents a
      * primitive type.
      *
-     * <p> There are nine predefined {@code Class} objects to represent
+     * There are nine predefined {@code Class} objects to represent
      * the eight primitive types and void.  These are created by the Java
      * Virtual Machine, and have the same names as the primitive types that
      * they represent, namely {@code boolean}, {@code byte},
      * {@code char}, {@code short}, {@code int},
      * {@code long}, {@code float}, and {@code double}.
      *
-     * <p> These objects may only be accessed via the following public static
+     * These objects may only be accessed via the following public static
      * final variables, and are the only {@code Class} objects for which
      * this method returns {@code true}.
      *
@@ -590,16 +590,16 @@ public final class Class<T> implements java.io.Serializable,
      * primitive type, or void) represented by this {@code Class} object,
      * as a {@code String}.
      *
-     * <p> If this class object represents a reference type that is not an
+     * If this class object represents a reference type that is not an
      * array type then the binary name of the class is returned, as specified
      * by
      * <cite>The Java&trade; Language Specification</cite>.
      *
-     * <p> If this class object represents a primitive type or void, then the
+     * If this class object represents a primitive type or void, then the
      * name returned is a {@code String} equal to the Java language
      * keyword corresponding to the primitive type or void.
      *
-     * <p> If this class object represents a class of arrays, then the internal
+     * If this class object represents a class of arrays, then the internal
      * form of the name consists of the name of the element type preceded by
      * one or more '{@code [}' characters representing the depth of the array
      * nesting.  The encoding of element type names is as follows:
@@ -618,10 +618,10 @@ public final class Class<T> implements java.io.Serializable,
      * <tr><td> short        <td> &nbsp;&nbsp;&nbsp; <td align=center> S
      * </table></blockquote>
      *
-     * <p> The class or interface name <i>classname</i> is the binary name of
+     * The class or interface name <i>classname</i> is the binary name of
      * the class specified above.
      *
-     * <p> Examples:
+     * Examples:
      * <blockquote><pre>
      * String.class.getName()
      *     returns "java.lang.String"
@@ -653,7 +653,7 @@ public final class Class<T> implements java.io.Serializable,
      * null in such implementations if this class was loaded by the bootstrap
      * class loader.
      *
-     * <p> If a security manager is present, and the caller's class loader is
+     * If a security manager is present, and the caller's class loader is
      * not null and the caller's class loader is not the same as or an ancestor of
      * the class loader for the class whose class loader is requested, then
      * this method calls the security manager's {@code checkPermission}
@@ -784,7 +784,7 @@ public final class Class<T> implements java.io.Serializable,
      * package of the class. Null is returned if no package object was created
      * by the class loader of this class.
      *
-     * <p> Packages have attributes for versions and specifications only if the
+     * Packages have attributes for versions and specifications only if the
      * information was defined in the manifests that accompany the classes, and
      * if the class loader created the package instance with the attributes
      * from the manifest.
@@ -801,7 +801,7 @@ public final class Class<T> implements java.io.Serializable,
      * Determines the interfaces implemented by the class or interface
      * represented by this object.
      *
-     * <p> If this object represents a class, the return value is an array
+     * If this object represents a class, the return value is an array
      * containing objects representing all interfaces implemented by the
      * class. The order of the interface objects in the array corresponds to
      * the order of the interface names in the {@code implements} clause
@@ -823,19 +823,19 @@ public final class Class<T> implements java.io.Serializable,
      * is the {@code Class} object that represents interface
      * {@code DessertTopping}.
      *
-     * <p> If this object represents an interface, the array contains objects
+     * If this object represents an interface, the array contains objects
      * representing all interfaces extended by the interface. The order of the
      * interface objects in the array corresponds to the order of the interface
      * names in the {@code extends} clause of the declaration of the
      * interface represented by this object.
      *
-     * <p> If this object represents a class or interface that implements no
+     * If this object represents a class or interface that implements no
      * interfaces, the method returns an array of length 0.
      *
-     * <p> If this object represents a primitive type or void, the method
+     * If this object represents a primitive type or void, the method
      * returns an array of length 0.
      *
-     * <p> If this {@code Class} object represents an array type, the
+     * If this {@code Class} object represents an array type, the
      * interfaces {@code Cloneable} and {@code java.io.Serializable} are
      * returned in that order.
      *
@@ -873,7 +873,7 @@ public final class Class<T> implements java.io.Serializable,
      * for the semantics of the creation process for parameterized
      * types.
      *
-     * <p> If this object represents a class, the return value is an
+     * If this object represents a class, the return value is an
      * array containing objects representing all interfaces
      * implemented by the class. The order of the interface objects in
      * the array corresponds to the order of the interface names in
@@ -935,7 +935,7 @@ public final class Class<T> implements java.io.Serializable,
      * {@code abstract} and {@code interface}; they should be decoded
      * using the methods of class {@code Modifier}.
      *
-     * <p> If the underlying class is an array class, then its
+     * If the underlying class is an array class, then its
      * {@code public}, {@code private} and {@code protected}
      * modifiers are the same as those of its component type.  If this
      * {@code Class} represents a primitive type or void, its
@@ -947,7 +947,7 @@ public final class Class<T> implements java.io.Serializable,
      * {@code false}. The values of its other modifiers are not determined
      * by this specification.
      *
-     * <p> The modifier encodings are defined in <em>The Java Virtual Machine
+     * The modifier encodings are defined in <em>The Java Virtual Machine
      * Specification</em>, table 4.1.
      *
      * @return the {@code int} representing the modifiers for this class
@@ -1520,21 +1520,21 @@ public final class Class<T> implements java.io.Serializable,
      * the accessible public fields of the class or interface represented by
      * this {@code Class} object.
      *
-     * <p> If this {@code Class} object represents a class or interface with no
+     * If this {@code Class} object represents a class or interface with no
      * no accessible public fields, then this method returns an array of length
      * 0.
      *
-     * <p> If this {@code Class} object represents a class, then this method
+     * If this {@code Class} object represents a class, then this method
      * returns the public fields of the class and of all its superclasses.
      *
-     * <p> If this {@code Class} object represents an interface, then this
+     * If this {@code Class} object represents an interface, then this
      * method returns the fields of the interface and of all its
      * superinterfaces.
      *
-     * <p> If this {@code Class} object represents an array type, a primitive
+     * If this {@code Class} object represents an array type, a primitive
      * type, or void, then this method returns an array of length 0.
      *
-     * <p> The elements in the returned array are not sorted and are not in any
+     * The elements in the returned array are not sorted and are not in any
      * particular order.
      *
      * @return the array of {@code Field} objects representing the
@@ -1564,35 +1564,35 @@ public final class Class<T> implements java.io.Serializable,
      * Class} object, including those declared by the class or interface and
      * those inherited from superclasses and superinterfaces.
      *
-     * <p> If this {@code Class} object represents a type that has multiple
+     * If this {@code Class} object represents a type that has multiple
      * public methods with the same name and parameter types, but different
      * return types, then the returned array has a {@code Method} object for
      * each such method.
      *
-     * <p> If this {@code Class} object represents a type with a class
+     * If this {@code Class} object represents a type with a class
      * initialization method {@code <clinit>}, then the returned array does
      * <em>not</em> have a corresponding {@code Method} object.
      *
-     * <p> If this {@code Class} object represents an array type, then the
+     * If this {@code Class} object represents an array type, then the
      * returned array has a {@code Method} object for each of the public
      * methods inherited by the array type from {@code Object}. It does not
      * contain a {@code Method} object for {@code clone()}.
      *
-     * <p> If this {@code Class} object represents an interface then the
+     * If this {@code Class} object represents an interface then the
      * returned array does not contain any implicitly declared methods from
      * {@code Object}. Therefore, if no methods are explicitly declared in
      * this interface or any of its superinterfaces then the returned array
      * has length 0. (Note that a {@code Class} object which represents a class
      * always has public methods, inherited from {@code Object}.)
      *
-     * <p> If this {@code Class} object represents a primitive type or void,
+     * If this {@code Class} object represents a primitive type or void,
      * then the returned array has length 0.
      *
-     * <p> Static methods declared in superinterfaces of the class or interface
+     * Static methods declared in superinterfaces of the class or interface
      * represented by this {@code Class} object are not considered members of
      * the class or interface.
      *
-     * <p> The elements in the returned array are not sorted and are not in any
+     * The elements in the returned array are not sorted and are not in any
      * particular order.
      *
      * @return the array of {@code Method} objects representing the
@@ -1658,7 +1658,7 @@ public final class Class<T> implements java.io.Serializable,
      * object. The {@code name} parameter is a {@code String} specifying the
      * simple name of the desired field.
      *
-     * <p> The field to be reflected is determined by the algorithm that
+     * The field to be reflected is determined by the algorithm that
      * follows.  Let C be the class or interface represented by this object:
      *
      * <OL>
@@ -1673,7 +1673,7 @@ public final class Class<T> implements java.io.Serializable,
      *      is thrown.</LI>
      * </OL>
      *
-     * <p> If this {@code Class} object represents an array type, then this
+     * If this {@code Class} object represents an array type, then this
      * method does not find the {@code length} field of the array type.
      *
      * @param name the field name
@@ -1716,7 +1716,7 @@ public final class Class<T> implements java.io.Serializable,
      * order. If {@code parameterTypes} is {@code null}, it is
      * treated as if it were an empty array.
      *
-     * <p> If the {@code name} is "{@code <init>}" or "{@code <clinit>}" a
+     * If the {@code name} is "{@code <init>}" or "{@code <clinit>}" a
      * {@code NoSuchMethodException} is raised. Otherwise, the method to
      * be reflected is determined by the algorithm that follows.  Let C be the
      * class or interface represented by this object:
@@ -1733,7 +1733,7 @@ public final class Class<T> implements java.io.Serializable,
      *   </OL></LI>
      * </OL>
      *
-     * <p> To find a matching method in a class or interface C:&nbsp; If C
+     * To find a matching method in a class or interface C:&nbsp; If C
      * declares exactly one public method with the specified name and exactly
      * the same formal parameter types, that is the method reflected. If more
      * than one such method is found in C, and one of these methods has a
@@ -1751,10 +1751,10 @@ public final class Class<T> implements java.io.Serializable,
      * method and the method being overridden would have the same
      * signature but different return types.
      *
-     * <p> If this {@code Class} object represents an array type, then this
+     * If this {@code Class} object represents an array type, then this
      * method does not find the {@code clone()} method.
      *
-     * <p> Static methods declared in superinterfaces of the class or interface
+     * Static methods declared in superinterfaces of the class or interface
      * represented by this {@code Class} object are not considered members of
      * the class or interface.
      *
@@ -1763,7 +1763,7 @@ public final class Class<T> implements java.io.Serializable,
      * @return the {@code Method} object that matches the specified
      *         {@code name} and {@code parameterTypes}
      * @throws NoSuchMethodException if a matching method is not found
-     *         or if the name is "&lt;init&gt;"or "&lt;clinit&gt;".
+     *         or if the name is "<init>"or "<clinit>".
      * @throws NullPointerException if {@code name} is {@code null}
      * @throws SecurityException
      *         If a security manager, <i>s</i>, is present and
@@ -1800,7 +1800,7 @@ public final class Class<T> implements java.io.Serializable,
      * declared in a non-static context, the formal parameter types
      * include the explicit enclosing instance as the first parameter.
      *
-     * <p> The constructor to reflect is the public constructor of the class
+     * The constructor to reflect is the public constructor of the class
      * represented by this {@code Class} object whose formal parameter
      * types match those specified by {@code parameterTypes}.
      *
@@ -1874,13 +1874,13 @@ public final class Class<T> implements java.io.Serializable,
      * {@code Class} object. This includes public, protected, default
      * (package) access, and private fields, but excludes inherited fields.
      *
-     * <p> If this {@code Class} object represents a class or interface with no
+     * If this {@code Class} object represents a class or interface with no
      * declared fields, then this method returns an array of length 0.
      *
-     * <p> If this {@code Class} object represents an array type, a primitive
+     * If this {@code Class} object represents an array type, a primitive
      * type, or void, then this method returns an array of length 0.
      *
-     * <p> The elements in the returned array are not sorted and are not in any
+     * The elements in the returned array are not sorted and are not in any
      * particular order.
      *
      * @return  the array of {@code Field} objects representing all the
@@ -1924,22 +1924,22 @@ public final class Class<T> implements java.io.Serializable,
      * Class} object, including public, protected, default (package)
      * access, and private methods, but excluding inherited methods.
      *
-     * <p> If this {@code Class} object represents a type that has multiple
+     * If this {@code Class} object represents a type that has multiple
      * declared methods with the same name and parameter types, but different
      * return types, then the returned array has a {@code Method} object for
      * each such method.
      *
-     * <p> If this {@code Class} object represents a type that has a class
+     * If this {@code Class} object represents a type that has a class
      * initialization method {@code <clinit>}, then the returned array does
      * <em>not</em> have a corresponding {@code Method} object.
      *
-     * <p> If this {@code Class} object represents a class or interface with no
+     * If this {@code Class} object represents a class or interface with no
      * declared methods, then the returned array has length 0.
      *
-     * <p> If this {@code Class} object represents an array type, a primitive
+     * If this {@code Class} object represents an array type, a primitive
      * type, or void, then the returned array has length 0.
      *
-     * <p> The elements in the returned array are not sorted and are not in any
+     * The elements in the returned array are not sorted and are not in any
      * particular order.
      *
      * @return  the array of {@code Method} objects representing all the
@@ -1987,7 +1987,7 @@ public final class Class<T> implements java.io.Serializable,
      * object represents an interface, a primitive type, an array class, or
      * void.
      *
-     * <p> See <em>The Java Language Specification</em>, section 8.2.
+     * See <em>The Java Language Specification</em>, section 8.2.
      *
      * @return  the array of {@code Constructor} objects representing all the
      *          declared constructors of this class
@@ -2027,7 +2027,7 @@ public final class Class<T> implements java.io.Serializable,
      * object. The {@code name} parameter is a {@code String} that specifies
      * the simple name of the desired field.
      *
-     * <p> If this {@code Class} object represents an array type, then this
+     * If this {@code Class} object represents an array type, then this
      * method does not find the {@code length} field of the array type.
      *
      * @param name the name of the field
@@ -2084,10 +2084,10 @@ public final class Class<T> implements java.io.Serializable,
      * parameter types is declared in a class, and one of these methods has a
      * return type that is more specific than any of the others, that method is
      * returned; otherwise one of the methods is chosen arbitrarily.  If the
-     * name is "&lt;init&gt;"or "&lt;clinit&gt;" a {@code NoSuchMethodException}
+     * name is "<init>"or "<clinit>" a {@code NoSuchMethodException}
      * is raised.
      *
-     * <p> If this {@code Class} object represents an array type, then this
+     * If this {@code Class} object represents an array type, then this
      * method does not find the {@code clone()} method.
      *
      * @param name the name of the method
@@ -2186,7 +2186,7 @@ public final class Class<T> implements java.io.Serializable,
      * the bootstrap class loader, the method delegates to {@link
      * ClassLoader#getSystemResourceAsStream}.
      *
-     * <p> Before delegation, an absolute resource name is constructed from the
+     * Before delegation, an absolute resource name is constructed from the
      * given resource name using this algorithm:
      *
      * <ul>
@@ -2201,7 +2201,7 @@ public final class Class<T> implements java.io.Serializable,
      *   {@code modified_package_name/name}
      * </blockquote>
      *
-     * <p> Where the {@code modified_package_name} is the package name of this
+     * Where the {@code modified_package_name} is the package name of this
      * object with {@code '/'} substituted for {@code '.'}
      * (<tt>'&#92;u002e'</tt>).
      *
@@ -2231,7 +2231,7 @@ public final class Class<T> implements java.io.Serializable,
      * the bootstrap class loader, the method delegates to {@link
      * ClassLoader#getSystemResource}.
      *
-     * <p> Before delegation, an absolute resource name is constructed from the
+     * Before delegation, an absolute resource name is constructed from the
      * given resource name using this algorithm:
      *
      * <ul>
@@ -2246,7 +2246,7 @@ public final class Class<T> implements java.io.Serializable,
      *   {@code modified_package_name/name}
      * </blockquote>
      *
-     * <p> Where the {@code modified_package_name} is the package name of this
+     * Where the {@code modified_package_name} is the package name of this
      * object with {@code '/'} substituted for {@code '.'}
      * (<tt>'&#92;u002e'</tt>).
      *
@@ -2330,7 +2330,7 @@ public final class Class<T> implements java.io.Serializable,
      *
      * This method also enforces package access.
      *
-     * <p> Default policy: allow all clients access with normal Java access
+     * Default policy: allow all clients access with normal Java access
      * control.
      */
     private void checkMemberAccess(int which, Class<?> caller, boolean checkProxyInterfaces) {
@@ -3577,12 +3577,12 @@ public final class Class<T> implements java.io.Serializable,
      * in '...  extends Foo' is distinct from the <em>declaration</em> of type
      * Foo.)
      *
-     * <p> If this {@code Class} object represents a type whose declaration
+     * If this {@code Class} object represents a type whose declaration
      * does not explicitly indicate an annotated superclass, then the return
      * value is an {@code AnnotatedType} object representing an element with no
      * annotations.
      *
-     * <p> If this {@code Class} represents either the {@code Object} class, an
+     * If this {@code Class} represents either the {@code Object} class, an
      * interface type, an array type, a primitive type, or void, the return
      * value is {@code null}.
      *
@@ -3608,24 +3608,24 @@ public final class Class<T> implements java.io.Serializable,
      * superinterface in '... implements Foo' is distinct from the
      * <em>declaration</em> of type Foo.)
      *
-     * <p> If this {@code Class} object represents a class, the return value is
+     * If this {@code Class} object represents a class, the return value is
      * an array containing objects representing the uses of interface types to
      * specify interfaces implemented by the class. The order of the objects in
      * the array corresponds to the order of the interface types used in the
      * 'implements' clause of the declaration of this {@code Class} object.
      *
-     * <p> If this {@code Class} object represents an interface, the return
+     * If this {@code Class} object represents an interface, the return
      * value is an array containing objects representing the uses of interface
      * types to specify interfaces directly extended by the interface. The
      * order of the objects in the array corresponds to the order of the
      * interface types used in the 'extends' clause of the declaration of this
      * {@code Class} object.
      *
-     * <p> If this {@code Class} object represents a class or interface whose
+     * If this {@code Class} object represents a class or interface whose
      * declaration does not explicitly indicate any annotated superinterfaces,
      * the return value is an array of length 0.
      *
-     * <p> If this {@code Class} object represents either the {@code Object}
+     * If this {@code Class} object represents either the {@code Object}
      * class, an array type, a primitive type, or void, the return value is an
      * array of length 0.
      *

@@ -331,7 +331,7 @@ public interface List<E> extends Collection<E> {
      * @throws IllegalArgumentException if some property of an element of the
      *         specified collection prevents it from being added to this list
      * @throws IndexOutOfBoundsException if the index is out of range
-     *         (<tt>index &lt; 0 || index &gt; size()</tt>)
+     *         (<tt>index < 0 || index > size()</tt>)
      */
     boolean addAll(int index, Collection<? extends E> c);
 
@@ -539,7 +539,7 @@ public interface List<E> extends Collection<E> {
      * @param index index of the element to return
      * @return the element at the specified position in this list
      * @throws IndexOutOfBoundsException if the index is out of range
-     *         (<tt>index &lt; 0 || index &gt;= size()</tt>)
+     *         (<tt>index < 0 || index >= size()</tt>)
      */
     E get(int index);
 
@@ -559,7 +559,7 @@ public interface List<E> extends Collection<E> {
      * @throws IllegalArgumentException if some property of the specified
      *         element prevents it from being added to this list
      * @throws IndexOutOfBoundsException if the index is out of range
-     *         (<tt>index &lt; 0 || index &gt;= size()</tt>)
+     *         (<tt>index < 0 || index >= size()</tt>)
      */
     E set(int index, E element);
 
@@ -580,7 +580,7 @@ public interface List<E> extends Collection<E> {
      * @throws IllegalArgumentException if some property of the specified
      *         element prevents it from being added to this list
      * @throws IndexOutOfBoundsException if the index is out of range
-     *         (<tt>index &lt; 0 || index &gt; size()</tt>)
+     *         (<tt>index < 0 || index > size()</tt>)
      */
     void add(int index, E element);
 
@@ -595,7 +595,7 @@ public interface List<E> extends Collection<E> {
      * @throws UnsupportedOperationException if the <tt>remove</tt> operation
      *         is not supported by this list
      * @throws IndexOutOfBoundsException if the index is out of range
-     *         (<tt>index &lt; 0 || index &gt;= size()</tt>)
+     *         (<tt>index < 0 || index >= size()</tt>)
      */
     E remove(int index);
 
@@ -702,8 +702,8 @@ public interface List<E> extends Collection<E> {
      * @param toIndex high endpoint (exclusive) of the subList
      * @return a view of the specified range within this list
      * @throws IndexOutOfBoundsException for an illegal endpoint index value
-     *         (<tt>fromIndex &lt; 0 || toIndex &gt; size ||
-     *         fromIndex &gt; toIndex</tt>)
+     *         (<tt>fromIndex < 0 || toIndex > size ||
+     *         fromIndex > toIndex</tt>)
      */
     List<E> subList(int fromIndex, int toIndex);
 

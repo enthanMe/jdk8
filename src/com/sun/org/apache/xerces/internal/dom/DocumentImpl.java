@@ -526,7 +526,7 @@ public class DocumentImpl
     } // LEntry
 
     /**
-     * Introduced in DOM Level 2. <p> Register an event listener with this
+     * Introduced in DOM Level 2. Register an event listener with this
      * Node. A listener may be independently registered as both Capturing and
      * Bubbling, but may only be registered once per role; redundant
      * registrations are ignored.
@@ -570,7 +570,7 @@ public class DocumentImpl
     } // addEventListener(NodeImpl,String,EventListener,boolean) :void
 
     /**
-     * Introduced in DOM Level 2. <p> Deregister an event listener previously
+     * Introduced in DOM Level 2. Deregister an event listener previously
      * registered with this Node.  A listener must be independently removed
      * from the Capturing and Bubbling roles. Redundant removals (of listeners
      * not currently registered for this role) are ignored.

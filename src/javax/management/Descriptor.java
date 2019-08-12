@@ -339,8 +339,8 @@ import javax.management.openmbean.OpenType;
  *
  * <tr><td>currencyTimeLimit</td><td>Number</td>
  *     <td>ModelMBeanInfo<br>ModelMBeanAttributeInfo<br>ModelMBeanOperationInfo</td>
- *     <td>How long cached value is valid: &lt;0 never, =0 always,
- *         &gt;0 seconds.</td></tr>
+ *     <td>How long cached value is valid: <0 never, =0 always,
+ *         >0 seconds.</td></tr>
  *
  * <tr><td>default</td><td>Object</td><td>ModelMBeanAttributeInfo</td>
  *     <td>Default value for attribute.</td></tr>

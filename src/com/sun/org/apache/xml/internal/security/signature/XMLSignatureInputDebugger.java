@@ -284,7 +284,7 @@ public class XMLSignatureInputDebugger {
                 this.writer.write(HTMLExcludePrefix);
             }
 
-            this.writer.write("&lt;");
+            this.writer.write("<");
             this.writer.write(currentElement.getTagName());
 
             this.writer.write(HTMLIncludeOrExcludeSuffix);
@@ -334,7 +334,7 @@ public class XMLSignatureInputDebugger {
                 this.writer.write(HTMLExcludePrefix);
             }
 
-            this.writer.write("&gt;");
+            this.writer.write(">");
 
             this.writer.write(HTMLIncludeOrExcludeSuffix);
 
@@ -351,9 +351,9 @@ public class XMLSignatureInputDebugger {
                 this.writer.write(HTMLExcludePrefix);
             }
 
-            this.writer.write("&lt;/");
+            this.writer.write("</");
             this.writer.write(currentElement.getTagName());
-            this.writer.write("&gt;");
+            this.writer.write(">");
 
             this.writer.write(HTMLIncludeOrExcludeSuffix);
             break;
@@ -482,7 +482,7 @@ public class XMLSignatureInputDebugger {
             return;
         }
 
-        this.writer.write("&lt;?");
+        this.writer.write("<?");
 
         String target = currentPI.getTarget();
         int length = target.length();
@@ -533,7 +533,7 @@ public class XMLSignatureInputDebugger {
             }
         }
 
-        this.writer.write("?&gt;");
+        this.writer.write("?>");
     }
 
     /**
@@ -548,7 +548,7 @@ public class XMLSignatureInputDebugger {
             return;
         }
 
-        this.writer.write("&lt;!--");
+        this.writer.write("<!--");
 
         String data = currentComment.getData();
         int length = data.length();
@@ -576,7 +576,7 @@ public class XMLSignatureInputDebugger {
             }
         }
 
-        this.writer.write("--&gt;");
+        this.writer.write("-->");
     }
 
     /**

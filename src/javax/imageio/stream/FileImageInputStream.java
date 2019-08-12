@@ -54,7 +54,7 @@ public class FileImageInputStream extends ImageInputStreamImpl {
      * Constructs a <code>FileImageInputStream</code> that will read
      * from a given <code>File</code>.
      *
-     * <p> The file contents must not change between the time this
+     * The file contents must not change between the time this
      * object is constructed and the time of the last call to a read
      * method.
      *
@@ -77,7 +77,7 @@ public class FileImageInputStream extends ImageInputStreamImpl {
      * Constructs a <code>FileImageInputStream</code> that will read
      * from a given <code>RandomAccessFile</code>.
      *
-     * <p> The file contents must not change between the time this
+     * The file contents must not change between the time this
      * object is constructed and the time of the last call to a read
      * method.
      *

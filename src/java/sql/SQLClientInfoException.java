@@ -38,7 +38,7 @@ import java.util.Map;
  * method threw an exception.  An application can use the <code>getFailedProperties </code>
  * method to retrieve a list of client info properties that were not set.  The
  * properties are identified by passing a
- * <code>Map&lt;String,ClientInfoStatus&gt;</code> to
+ * <code>Map<String,ClientInfoStatus></code> to
  * the appropriate <code>SQLClientInfoException</code> constructor.
  * <p>
  * @see ClientInfoStatus

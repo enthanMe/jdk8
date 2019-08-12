@@ -234,7 +234,7 @@ public abstract class RowSorter<M> {
      * @param firstRow the first row
      * @param endRow the last row
      * @throws IndexOutOfBoundsException if either argument is invalid, or
-     *         <code>firstRow</code> &gt; <code>endRow</code>
+     *         <code>firstRow</code> > <code>endRow</code>
      */
     public abstract void rowsInserted(int firstRow, int endRow);
 
@@ -254,7 +254,7 @@ public abstract class RowSorter<M> {
      * @param endRow the last row
      * @throws IndexOutOfBoundsException if either argument is outside
      *         the range of the model before the change, or
-     *         <code>firstRow</code> &gt; <code>endRow</code>
+     *         <code>firstRow</code> > <code>endRow</code>
      */
     public abstract void rowsDeleted(int firstRow, int endRow);
 
@@ -269,7 +269,7 @@ public abstract class RowSorter<M> {
      * @param endRow the last row, in terms of the underlying model
      * @throws IndexOutOfBoundsException if either argument is outside
      *         the range of the underlying model, or
-     *         <code>firstRow</code> &gt; <code>endRow</code>
+     *         <code>firstRow</code> > <code>endRow</code>
      */
     public abstract void rowsUpdated(int firstRow, int endRow);
 
@@ -286,7 +286,7 @@ public abstract class RowSorter<M> {
      *        model
      * @throws IndexOutOfBoundsException if either argument is outside
      *         the range of the underlying model after the change,
-     *         <code>firstRow</code> &gt; <code>endRow</code>, or
+     *         <code>firstRow</code> > <code>endRow</code>, or
      *         <code>column</code> is outside the range of the underlying
      *          model
      */

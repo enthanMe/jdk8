@@ -32,14 +32,14 @@ package java.io;
  * #getLineNumber()} for setting and getting the current line number
  * respectively.
  *
- * <p> By default, line numbering begins at 0. This number increments at every
+ * By default, line numbering begins at 0. This number increments at every
  * <a href="#lt">line terminator</a> as the data is read, and can be changed
  * with a call to <tt>setLineNumber(int)</tt>.  Note however, that
  * <tt>setLineNumber(int)</tt> does not actually change the current position in
  * the stream; it only changes the value that will be returned by
  * <tt>getLineNumber()</tt>.
  *
- * <p> A line is considered to be <a name="lt">terminated</a> by any one of a
+ * A line is considered to be <a name="lt">terminated</a> by any one of a
  * line feed ('\n'), a carriage return ('\r'), or a carriage return followed
  * immediately by a linefeed.
  *

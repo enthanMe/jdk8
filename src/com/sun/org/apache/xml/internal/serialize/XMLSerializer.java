@@ -1238,7 +1238,7 @@ extends BaseMarkupSerializer {
             if (ch == '\n' || ch == '\r' || ch == '\t') {
                 printHex(ch);
             } else if (ch == '<') {
-                _printer.printText("&lt;");
+                _printer.printText("<");
             } else if (ch == '&') {
                 _printer.printText("&amp;");
             } else if (ch == '"') {
@@ -1256,13 +1256,13 @@ extends BaseMarkupSerializer {
         if (ch == '\r') {
                         printHex(ch);
         } else if ( ch == '<') {
-            _printer.printText("&lt;");
+            _printer.printText("<");
         } else if (ch == '&') {
             _printer.printText("&amp;");
         } else if (ch == '>'){
                 // character sequence "]]>" can't appear in content, therefore
                 // we should escape '>'
-                        _printer.printText("&gt;");
+                        _printer.printText(">");
         } else if ( ch == '\n' ||  ch == '\t' ||
                     ( ch >= ' ' && _encodingInfo.isPrintable((char)ch))) {
             _printer.printText((char)ch);

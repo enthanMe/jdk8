@@ -43,8 +43,8 @@ interface SerializerConstants
 
     static final String ENTITY_AMP = "&amp;";
     static final String ENTITY_CRLF = "&#xA;";
-    static final String ENTITY_GT = "&gt;";
-    static final String ENTITY_LT = "&lt;";
+    static final String ENTITY_GT = ">";
+    static final String ENTITY_LT = "<";
     static final String ENTITY_QUOT = "&quot;";
 
     static final String XML_PREFIX = "xml";

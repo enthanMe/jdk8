@@ -96,7 +96,7 @@ import java.util.Objects;
  * <pre>
  *        System.out.printf("Example()%n");
  *        // Enumerate the list of available calendars and print today for each
- *        Set&lt;Chronology&gt; chronos = Chronology.getAvailableChronologies();
+ *        Set<Chronology> chronos = Chronology.getAvailableChronologies();
  *        for (Chronology chrono : chronos) {
  *            ChronoLocalDate date = chrono.dateNow();
  *            System.out.printf("   %20s: %s%n", chrono.getID(), date.toString());
@@ -122,11 +122,11 @@ import java.util.Objects;
  * </pre>
  *
  * <h3>Adding Calendars</h3>
- * <p> The set of calendars is extensible by defining a subclass of {@link ChronoLocalDate}
+ * The set of calendars is extensible by defining a subclass of {@link ChronoLocalDate}
  * to represent a date instance and an implementation of {@code Chronology}
  * to be the factory for the ChronoLocalDate subclass.
  * </p>
- * <p> To permit the discovery of the additional calendar types the implementation of
+ * To permit the discovery of the additional calendar types the implementation of
  * {@code Chronology} must be registered as a Service implementing the {@code Chronology} interface
  * in the {@code META-INF/Services} file as per the specification of {@link java.util.ServiceLoader}.
  * The subclass must function according to the {@code Chronology} class description and must provide its

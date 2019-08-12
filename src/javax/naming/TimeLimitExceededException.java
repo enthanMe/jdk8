@@ -35,7 +35,7 @@ import javax.naming.Name;
  * the method should take no longer than 10 seconds, and the
  * method fails to complete with 10 seconds.
  *
- * <p> Synchronization and serialization issues that apply to NamingException
+ * Synchronization and serialization issues that apply to NamingException
  * apply directly here.
  *
  * @author Rosanna Lee

@@ -112,7 +112,7 @@ final public class XMLReaderFactory
      *
      * </ul>
      *
-     * <p> In environments such as small embedded systems, which can not
+     * In environments such as small embedded systems, which can not
      * support that flexibility, other mechanisms to determine the default
      * may be used. </p>
      *

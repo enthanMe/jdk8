@@ -98,8 +98,8 @@ import static sun.security.util.SecurityConstants.GET_CLASSLOADER_PERMISSION;
  * For example, the following produces two {@code DataFlavors} that
  * are considered identical:
  * <pre>
- *   DataFlavor flavor1 = new DataFlavor(Object.class, &quot;X-test/test; class=&lt;java.lang.Object&gt;; foo=bar&quot;);
- *   DataFlavor flavor2 = new DataFlavor(Object.class, &quot;X-test/test; class=&lt;java.lang.Object&gt;; x=y&quot;);
+ *   DataFlavor flavor1 = new DataFlavor(Object.class, &quot;X-test/test; class=<java.lang.Object>; foo=bar&quot;);
+ *   DataFlavor flavor2 = new DataFlavor(Object.class, &quot;X-test/test; class=<java.lang.Object>; x=y&quot;);
  *   // The following returns true.
  *   flavor1.equals(flavor2);
  * </pre>
@@ -403,9 +403,9 @@ public class DataFlavor implements Externalizable, Cloneable {
      * characteristics:
      * <p>
      * If the <code>mimeType</code> is
-     * "application/x-java-serialized-object; class=&lt;representation class&gt;",
+     * "application/x-java-serialized-object; class=<representation class>",
      * the result is the same as calling
-     * <code>new DataFlavor(Class:forName(&lt;representation class&gt;)</code>.
+     * <code>new DataFlavor(Class:forName(<representation class>)</code>.
      * <p>
      * Otherwise:
      * <pre>
@@ -446,9 +446,9 @@ public class DataFlavor implements Externalizable, Cloneable {
      * characteristics:
      * <p>
      * If the mimeType is
-     * "application/x-java-serialized-object; class=&lt;representation class&gt;",
+     * "application/x-java-serialized-object; class=<representation class>",
      * the result is the same as calling
-     * <code>new DataFlavor(Class:forName(&lt;representation class&gt;)</code>.
+     * <code>new DataFlavor(Class:forName(<representation class>)</code>.
      * <p>
      * Otherwise:
      * <pre>
@@ -478,7 +478,7 @@ public class DataFlavor implements Externalizable, Cloneable {
 
     /**
      * Constructs a <code>DataFlavor</code> from a <code>mimeType</code> string.
-     * The string can specify a "class=&lt;fully specified Java class name&gt;"
+     * The string can specify a "class=<fully specified Java class name>"
      * parameter to create a <code>DataFlavor</code> with the desired
      * representation class. If the string does not contain "class=" parameter,
      * <code>java.io.InputStream</code> is used as default.
@@ -598,7 +598,7 @@ public class DataFlavor implements Externalizable, Cloneable {
      * <pre>
      *     representationClass = java.io.InputStream
      *     mimeType            = "text/plain;
-     *                            charset=&lt;platform default Unicode encoding&gt;"
+     *                            charset=<platform default Unicode encoding>"
      * </pre>
      * Sun's implementation for Microsoft Windows uses the encoding <code>utf-16le</code>.
      * Sun's implementation for Solaris and Linux uses the encoding
@@ -643,7 +643,7 @@ public class DataFlavor implements Externalizable, Cloneable {
      * <li>"text/calendar"
      * <li>"application/x-java-serialized-object"
      * <li>"text/plain"
-     * <li>"text/&lt;other&gt;"
+     * <li>"text/<other>"
      * </ul>
      * <p>For example, "text/sgml" will be selected over
      * "text/html", and <code>DataFlavor.stringFlavor</code> will be chosen
@@ -676,7 +676,7 @@ public class DataFlavor implements Externalizable, Cloneable {
      * <li>"text/rfc822-headers"
      * <li>"text/parityfec"
      * </ul>
-     * For "text/&lt;other&gt;" MIME types, the first time the JRE needs to
+     * For "text/<other>" MIME types, the first time the JRE needs to
      * determine whether the MIME type supports the charset parameter, it will
      * check whether the parameter is explicitly listed in an arbitrarily
      * chosen <code>DataFlavor</code> which uses that MIME type. If so, the JRE
@@ -686,17 +686,17 @@ public class DataFlavor implements Externalizable, Cloneable {
      * not support the charset parameter and will not check again. Because
      * this check is performed on an arbitrarily chosen
      * <code>DataFlavor</code>, developers must ensure that all
-     * <code>DataFlavor</code>s with a "text/&lt;other&gt;" MIME type specify
+     * <code>DataFlavor</code>s with a "text/<other>" MIME type specify
      * the charset parameter if it is supported by that MIME type. Developers
      * should never rely on the JRE to substitute the platform's default
-     * charset for a "text/&lt;other&gt;" DataFlavor. Failure to adhere to this
+     * charset for a "text/<other>" DataFlavor. Failure to adhere to this
      * restriction will lead to undefined behavior.
      * <p>
      * If the best MIME type in the array does not support the charset
      * parameter, the flavors which share that MIME type will then be sorted by
      * their representation classes in the following order:
      * <code>java.io.InputStream</code>, <code>java.nio.ByteBuffer</code>,
-     * <code>[B</code>, &lt;all others&gt;.
+     * <code>[B</code>, <all others>.
      * <p>
      * If two or more flavors share the best representation class, or if no
      * flavor has one of the three specified representations, then one of those
@@ -706,7 +706,7 @@ public class DataFlavor implements Externalizable, Cloneable {
      * the flavors which share that MIME type will then be sorted by their
      * representation classes in the following order:
      * <code>java.io.Reader</code>, <code>java.lang.String</code>,
-     * <code>java.nio.CharBuffer</code>, <code>[C</code>, &lt;all others&gt;.
+     * <code>java.nio.CharBuffer</code>, <code>[C</code>, <all others>.
      * <p>
      * If two or more flavors share the best representation class, and that
      * representation is one of the four explicitly listed, then one of those
@@ -722,7 +722,7 @@ public class DataFlavor implements Externalizable, Cloneable {
      * If two or more flavors share the best charset, the flavors will then
      * again be sorted by their representation classes in the following order:
      * <code>java.io.InputStream</code>, <code>java.nio.ByteBuffer</code>,
-     * <code>[B</code>, &lt;all others&gt;.
+     * <code>[B</code>, <all others>.
      * <p>
      * If two or more flavors share the best representation class, or if no
      * flavor has one of the three specified representations, then one of those

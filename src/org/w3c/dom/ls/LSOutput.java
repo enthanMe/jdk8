@@ -43,18 +43,18 @@ package org.w3c.dom.ls;
 
 /**
  *  This interface represents an output destination for data.
- * <p> This interface allows an application to encapsulate information about
+ * This interface allows an application to encapsulate information about
  * an output destination in a single object, which may include a URI, a byte
  * stream (possibly with a specified encoding), a base URI, and/or a
  * character stream.
- * <p> The exact definitions of a byte stream and a character stream are
+ * The exact definitions of a byte stream and a character stream are
  * binding dependent.
- * <p> The application is expected to provide objects that implement this
+ * The application is expected to provide objects that implement this
  * interface whenever such objects are needed. The application can either
  * provide its own objects that implement this interface, or it can use the
  * generic factory method <code>DOMImplementationLS.createLSOutput()</code>
  * to create objects that implement this interface.
- * <p> The <code>LSSerializer</code> will use the <code>LSOutput</code> object
+ * The <code>LSSerializer</code> will use the <code>LSOutput</code> object
  * to determine where to serialize the output to. The
  * <code>LSSerializer</code> will look at the different outputs specified in
  * the <code>LSOutput</code> in the following order to know which one to
@@ -69,7 +69,7 @@ package org.w3c.dom.ls;
  * <li> <code>LSOutput.systemId</code>
  * </li>
  * </ol>
- * <p> <code>LSOutput</code> objects belong to the application. The DOM
+ * <code>LSOutput</code> objects belong to the application. The DOM
  * implementation will never modify them (though it may make copies and
  * modify the copies, if necessary).
  * <p>See also the <a href='http://www.w3.org/TR/2004/REC-DOM-Level-3-LS-20040407'>Document Object Model (DOM) Level 3 Load

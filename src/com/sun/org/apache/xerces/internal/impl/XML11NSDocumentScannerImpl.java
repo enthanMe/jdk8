@@ -116,12 +116,12 @@ public class XML11NSDocumentScannerImpl extends XML11DocumentScannerImpl {
      * of the element.
      * <p>
      * <pre>
-     * [44] EmptyElemTag ::= '&lt;' Name (S Attribute)* S? '/>'
-     * [40] STag ::= '&lt;' Name (S Attribute)* S? '>'
+     * [44] EmptyElemTag ::= '<' Name (S Attribute)* S? '/>'
+     * [40] STag ::= '<' Name (S Attribute)* S? '>'
      * </pre>
      * <p>
      * <strong>Note:</strong> This method assumes that the leading
-     * '&lt;' character has been consumed.
+     * '<' character has been consumed.
      * <p>
      * <strong>Note:</strong> This method uses the fElementQName and
      * fAttributes variables. The contents of these variables will be
@@ -721,7 +721,7 @@ public class XML11NSDocumentScannerImpl extends XML11DocumentScannerImpl {
      * Scans an end element.
      * <p>
      * <pre>
-     * [42] ETag ::= '&lt;/' Name S? '>'
+     * [42] ETag ::= '</' Name S? '>'
      * </pre>
      * <p>
      * <strong>Note:</strong> This method uses the fElementQName variable.

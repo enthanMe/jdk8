@@ -35,7 +35,7 @@ import static javax.management.monitor.MonitorNotification.*;
 /**
  * Defines a monitor MBean designed to observe the values of a gauge attribute.
  *
- * <P> A gauge monitor observes an attribute that is continuously
+ * A gauge monitor observes an attribute that is continuously
  * variable with time. A gauge monitor sends notifications as
  * follows:
  *
@@ -67,7 +67,7 @@ import static javax.management.monitor.MonitorNotification.*;
  * of notifications when the attribute value makes small oscillations
  * around the high or low threshold value.
  *
- * <P> If the gauge difference mode is used, the value of the derived
+ * If the gauge difference mode is used, the value of the derived
  * gauge is calculated as the difference between the observed gauge
  * values for two successive observations.
  *

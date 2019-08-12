@@ -982,7 +982,7 @@ public abstract class XMLGregorianCalendar
      * <p>Convert this <code>XMLGregorianCalendar</code> along with provided parameters
      * to a {@link GregorianCalendar} instance.</p>
      *
-     * <p> Since XML Schema 1.0 date/time datetypes has no concept of
+     * Since XML Schema 1.0 date/time datetypes has no concept of
      * timezone ids or daylight savings timezone ids, this conversion operation
      * allows the user to explicitly specify one with
      * <code>timezone</code> parameter.</p>

@@ -1,118 +1,83 @@
-/*
- * Copyright (c) 2007, 2013, Oracle and/or its affiliates. All rights reserved.
- * ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- */
-
 package java.nio.file;
 
 /**
- * An event or a repeated event for an object that is registered with a {@link
- * WatchService}.
+ * 使用{@link WatchService}注册的对象的事件或重复事件。
  *
- * <p> An event is classified by its {@link #kind() kind} and has a {@link
- * #count() count} to indicate the number of times that the event has been
- * observed. This allows for efficient representation of repeated events. The
- * {@link #context() context} method returns any context associated with
- * the event. In the case of a repeated event then the context is the same for
- * all events.
+ * 事件按其{@link #kind() kind}进行分类，并具有{@link #count() count}以指示事件被观察的次数。
+ * 这允许重复事件的有效表示。{@link #context() context}方法返回与事件关联的任何上下文。
+ * 在重复事件的情况下，所有事件的上下文都是相同的。
  *
- * <p> Watch events are immutable and safe for use by multiple concurrent
- * threads.
+ * 监视事件是不可变的，可供多个并发线程使用。
  *
- * @param   <T>     The type of the context object associated with the event
+ * @param <T> 与事件关联的上下文对象的类型
  *
  * @since 1.7
  */
-
 public interface WatchEvent<T> {
 
     /**
-     * An event kind, for the purposes of identification.
+     * 一种事件类型，用户区分标识
      *
      * @since 1.7
      * @see StandardWatchEventKinds
      */
     public static interface Kind<T> {
         /**
-         * Returns the name of the event kind.
+         * 返回事件类型的名称
          *
-         * @return the name of the event kind
+         * @return 事件类型的名称
          */
         String name();
 
         /**
-         * Returns the type of the {@link WatchEvent#context context} value.
+         * 返回{@link WatchEvent#context context}对象的类型
          *
          *
-         * @return the type of the context value
+         * @return 上下文对象的类型
          */
         Class<T> type();
     }
 
     /**
-     * An event modifier that qualifies how a {@link Watchable} is registered
-     * with a {@link WatchService}.
+     * 一个事件修饰符，用于限定{@link Watchable}如何在{@link WatchService}中注册。
      *
-     * <p> This release does not define any <em>standard</em> modifiers.
+     * 此版本未定义任何<em>标准</ em>修饰符
      *
      * @since 1.7
      * @see Watchable#register
      */
     public static interface Modifier {
         /**
-         * Returns the name of the modifier.
+         * 返回修饰符的名称.
          *
-         * @return the name of the modifier
+         * @return 修饰符的名称.
          */
         String name();
     }
 
     /**
-     * Returns the event kind.
+     * 返回事件类型.
      *
-     * @return  the event kind
+     * @return  事件类型
      */
     Kind<T> kind();
 
     /**
-     * Returns the event count. If the event count is greater than {@code 1}
-     * then this is a repeated event.
+     * 返回事件计数。
+     * 如果事件计数大于{@code 1}，则这是重复事件
      *
-     * @return  the event count
+     * @return 事件计数
      */
     int count();
 
     /**
-     * Returns the context for the event.
+     * 返回事件的上下文对象。
      *
-     * <p> In the case of {@link StandardWatchEventKinds#ENTRY_CREATE ENTRY_CREATE},
-     * {@link StandardWatchEventKinds#ENTRY_DELETE ENTRY_DELETE}, and {@link
-     * StandardWatchEventKinds#ENTRY_MODIFY ENTRY_MODIFY} events the context is
-     * a {@code Path} that is the {@link Path#relativize relative} path between
-     * the directory registered with the watch service, and the entry that is
-     * created, deleted, or modified.
+     * 对于{@link StandardWatchEventKinds#ENTRY_CREATE ENTRY_CREATE}，{@link StandardWatchEventKinds#ENTRY_DELETE ENTRY_DELETE}
+     * 和{@link StandardWatchEventKinds#ENTRY_MODIFY ENTRY_MODIFY}事件，上下文对象是{@code Path}，
+     * 即{@link Path#relativize 注册到监视服务的目录与创建，删除或修改的条目之间的路径。
      *
-     * @return  the event context; may be {@code null}
+     * @return 事件上下文对象; 可能为{@code null}
      */
     T context();
 }

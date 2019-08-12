@@ -63,7 +63,7 @@ import com.sun.org.apache.bcel.internal.util.ByteSequence;
 /**
  * SIPUSH - Push short
  *
- * <PRE>Stack: ... -&gt; ..., value</PRE>
+ * <PRE>Stack: ... -> ..., value</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

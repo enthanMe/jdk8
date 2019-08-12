@@ -303,7 +303,7 @@ public final class TextAttribute extends Attribute {
      * <code>"Default"</code>, which causes the platform default font
      * family to be used.
      *
-     * <p> The <code>Font</code> class defines constants for the logical
+     * The <code>Font</code> class defines constants for the logical
      * font names
      * {@link java.awt.Font#DIALOG DIALOG},
      * {@link java.awt.Font#DIALOG_INPUT DIALOG_INPUT},

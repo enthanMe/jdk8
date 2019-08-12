@@ -91,7 +91,7 @@ import java.util.Date;
  * </pre>
  * OR
  * <pre>
- * byte[] certData = &lt;certificate read from a file, say&gt;
+ * byte[] certData = <certificate read from a file, say>
  * X509Certificate cert = X509Certificate.getInstance(certData);
  * </pre>
  * <p>

@@ -34,7 +34,7 @@ import javax.swing.event.*;
  * Defines four interrelated integer properties: minimum, maximum, extent
  * and value.  These four integers define two nested ranges like this:
  * <pre>
- * minimum &lt;= value &lt;= value+extent &lt;= maximum
+ * minimum <= value <= value+extent <= maximum
  * </pre>
  * The outer range is <code>minimum,maximum</code> and the inner
  * range is <code>value,value+extent</code>.  The inner range
@@ -93,7 +93,7 @@ public interface BoundedRangeModel
      * other three properties may be changed as well, to ensure
      * that:
      * <pre>
-     * minimum &lt;= value &lt;= value+extent &lt;= maximum
+     * minimum <= value <= value+extent <= maximum
      * </pre>
      * <p>
      * Notifies any listeners if the model changes.
@@ -120,7 +120,7 @@ public interface BoundedRangeModel
      * Sets the model's maximum to <I>newMaximum</I>. The other
      * three properties may be changed as well, to ensure that
      * <pre>
-     * minimum &lt;= value &lt;= value+extent &lt;= maximum
+     * minimum <= value <= value+extent <= maximum
      * </pre>
      * <p>
      * Notifies any listeners if the model changes.
@@ -147,7 +147,7 @@ public interface BoundedRangeModel
      * Sets the model's current value to <code>newValue</code> if <code>newValue</code>
      * satisfies the model's constraints. Those constraints are:
      * <pre>
-     * minimum &lt;= value &lt;= value+extent &lt;= maximum
+     * minimum <= value <= value+extent <= maximum
      * </pre>
      * Otherwise, if <code>newValue</code> is less than <code>minimum</code>
      * it's set to <code>minimum</code>, if its greater than

@@ -236,8 +236,8 @@ public class ArrayType<T> extends OpenType<T> {
      * The internal field corresponding to the description of this <code>ArrayType</code> instance is set to a string value
      * which follows the following template:
      * <ul>
-     * <li>if non-primitive array: <tt><i>&lt;dimension&gt;</i>-dimension array of <i>&lt;element_class_name&gt;</i></tt></li>
-     * <li>if primitive array: <tt><i>&lt;dimension&gt;</i>-dimension array of <i>&lt;primitive_type_of_the_element_class_name&gt;</i></tt></li>
+     * <li>if non-primitive array: <tt><i><dimension></i>-dimension array of <i><element_class_name></i></tt></li>
+     * <li>if primitive array: <tt><i><dimension></i>-dimension array of <i><primitive_type_of_the_element_class_name></i></tt></li>
      * </ul>
      * <p>
      * As an example, the following piece of code:
@@ -329,8 +329,8 @@ public class ArrayType<T> extends OpenType<T> {
      * The internal field corresponding to the description of this <code>ArrayType</code> instance is set to a string value
      * which follows the following template:
      * <ul>
-     * <li>if non-primitive array: <tt>1-dimension array of <i>&lt;element_class_name&gt;</i></tt></li>
-     * <li>if primitive array: <tt>1-dimension array of <i>&lt;primitive_type_of_the_element_class_name&gt;</i></tt></li>
+     * <li>if non-primitive array: <tt>1-dimension array of <i><element_class_name></i></tt></li>
+     * <li>if primitive array: <tt>1-dimension array of <i><primitive_type_of_the_element_class_name></i></tt></li>
      * </ul>
      * <p>
      * As an example, the following piece of code:

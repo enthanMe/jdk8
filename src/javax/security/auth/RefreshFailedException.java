@@ -28,7 +28,7 @@ package javax.security.auth;
 /**
  * Signals that a {@code refresh} operation failed.
  *
- * <p> This exception is thrown by credentials implementing
+ * This exception is thrown by credentials implementing
  * the {@code Refreshable} interface when the {@code refresh}
  * method fails.
  *

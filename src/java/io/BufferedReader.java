@@ -37,10 +37,10 @@ import java.util.stream.StreamSupport;
  * Reads text from a character-input stream, buffering characters so as to
  * provide for the efficient reading of characters, arrays, and lines.
  *
- * <p> The buffer size may be specified, or the default size may be used.  The
+ * The buffer size may be specified, or the default size may be used.  The
  * default is large enough for most purposes.
  *
- * <p> In general, each read request made of a Reader causes a corresponding
+ * In general, each read request made of a Reader causes a corresponding
  * read request to be made of the underlying character or byte stream.  It is
  * therefore advisable to wrap a BufferedReader around any Reader whose read()
  * operations may be costly, such as FileReaders and InputStreamReaders.  For
@@ -56,7 +56,7 @@ import java.util.stream.StreamSupport;
  * file, converted into characters, and then returned, which can be very
  * inefficient.
  *
- * <p> Programs that use DataInputStreams for textual input can be localized by
+ * Programs that use DataInputStreams for textual input can be localized by
  * replacing each DataInputStream with an appropriate BufferedReader.
  *
  * @see FileReader
@@ -231,7 +231,7 @@ public class BufferedReader extends Reader {
     /**
      * Reads characters into a portion of an array.
      *
-     * <p> This method implements the general contract of the corresponding
+     * This method implements the general contract of the corresponding
      * <code>{@link Reader#read(char[], int, int) read}</code> method of the
      * <code>{@link Reader}</code> class.  As an additional convenience, it
      * attempts to read as many characters as possible by repeatedly invoking
@@ -253,10 +253,10 @@ public class BufferedReader extends Reader {
      * <code>-1</code>.  Otherwise this method returns the number of characters
      * actually read.
      *
-     * <p> Subclasses of this class are encouraged, but not required, to
+     * Subclasses of this class are encouraged, but not required, to
      * attempt to read as many characters as possible in the same fashion.
      *
-     * <p> Ordinarily this method takes characters from this stream's character
+     * Ordinarily this method takes characters from this stream's character
      * buffer, filling it from the underlying stream as necessary.  If,
      * however, the buffer is empty, the mark is not valid, and the requested
      * length is at least as large as the buffer, then this method will read
@@ -537,15 +537,15 @@ public class BufferedReader extends Reader {
      * <a href="../util/stream/package-summary.html#StreamOps">terminal
      * stream operation</a>.
      *
-     * <p> The reader must not be operated on during the execution of the
+     * The reader must not be operated on during the execution of the
      * terminal stream operation. Otherwise, the result of the terminal stream
      * operation is undefined.
      *
-     * <p> After execution of the terminal stream operation there are no
+     * After execution of the terminal stream operation there are no
      * guarantees that the reader will be at a specific position from which to
      * read the next character or line.
      *
-     * <p> If an {@link IOException} is thrown when accessing the underlying
+     * If an {@link IOException} is thrown when accessing the underlying
      * {@code BufferedReader}, it is wrapped in an {@link
      * UncheckedIOException} which will be thrown from the {@code Stream}
      * method that caused the read to take place. This method will return a

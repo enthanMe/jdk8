@@ -126,7 +126,7 @@ final class WriterToUTF8Buffered extends Writer implements WriterChain
    * the 16 low-order bits of the given integer value; the 16 high-order bits
    * are ignored.
    *
-   * <p> Subclasses that intend to support efficient single-character output
+   * Subclasses that intend to support efficient single-character output
    * should override this method.
    *
    * @param c  int specifying a character to be written.

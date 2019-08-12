@@ -26,7 +26,7 @@
 package javax.security.auth.callback;
 
 /**
- * <p> Underlying security services instantiate and pass a
+ * Underlying security services instantiate and pass a
  * {@code ChoiceCallback} to the {@code handle}
  * method of a {@code CallbackHandler} to display a list of choices
  * and to retrieve the selected choice(s).

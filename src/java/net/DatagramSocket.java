@@ -39,7 +39,7 @@ import java.security.PrivilegedExceptionAction;
  * one machine to another may be routed differently, and may arrive in
  * any order.
  *
- * <p> Where possible, a newly constructed {@code DatagramSocket} has the
+ * Where possible, a newly constructed {@code DatagramSocket} has the
  * {@link SocketOptions#SO_BROADCAST SO_BROADCAST} socket option enabled so as
  * to allow the transmission of broadcast datagrams. In order to receive
  * broadcast packets a DatagramSocket should be bound to the wildcard address.
@@ -418,7 +418,7 @@ class DatagramSocket implements java.io.Closeable {
      * send or receive may throw a PortUnreachableException. Note, there is no
      * guarantee that the exception will be thrown.
      *
-     * <p> If a security manager has been installed then it is invoked to check
+     * If a security manager has been installed then it is invoked to check
      * access to the remote address. Specifically, if the given {@code address}
      * is a {@link InetAddress#isMulticastAddress multicast address},
      * the security manager's {@link
@@ -431,7 +431,7 @@ class DatagramSocket implements java.io.Closeable {
      * verify that datagrams are permitted to be sent and received
      * respectively.
      *
-     * <p> When a socket is connected, {@link #receive receive} and
+     * When a socket is connected, {@link #receive receive} and
      * {@link #send send} <b>will not perform any security checks</b>
      * on incoming and outgoing packets, other than matching the packet's
      * and the socket's address and port. On a send operation, if the
@@ -464,7 +464,7 @@ class DatagramSocket implements java.io.Closeable {
     /**
      * Connects this socket to a remote socket address (IP address + port number).
      *
-     * <p> If given an {@link InetSocketAddress InetSocketAddress}, this method
+     * If given an {@link InetSocketAddress InetSocketAddress}, this method
      * behaves as if invoking {@link #connect(InetAddress,int) connect(InetAddress,int)}
      * with the the given socket addresses IP address and port number.
      *
@@ -1105,7 +1105,7 @@ class DatagramSocket implements java.io.Closeable {
     /**
      * Enable/disable SO_BROADCAST.
      *
-     * <p> Some operating systems may require that the Java virtual machine be
+     * Some operating systems may require that the Java virtual machine be
      * started with implementation specific privileges to enable this option or
      * send broadcast datagrams.
      *
@@ -1145,7 +1145,7 @@ class DatagramSocket implements java.io.Closeable {
      * As the underlying network implementation may ignore this
      * value applications should consider it a hint.
      *
-     * <P> The tc <B>must</B> be in the range {@code 0 <= tc <=
+     * The tc <B>must</B> be in the range {@code 0 <= tc <=
      * 255} or an IllegalArgumentException will be thrown.
      * <p>Notes:
      * <p>For Internet Protocol v4 the value consists of an
@@ -1220,7 +1220,7 @@ class DatagramSocket implements java.io.Closeable {
      * Any thread currently blocked in {@link #receive} upon this socket
      * will throw a {@link SocketException}.
      *
-     * <p> If this socket has an associated channel then the channel is closed
+     * If this socket has an associated channel then the channel is closed
      * as well.
      *
      * @revised 1.4
@@ -1251,7 +1251,7 @@ class DatagramSocket implements java.io.Closeable {
      * Returns the unique {@link java.nio.channels.DatagramChannel} object
      * associated with this datagram socket, if any.
      *
-     * <p> A datagram socket will have a channel if, and only if, the channel
+     * A datagram socket will have a channel if, and only if, the channel
      * itself was created via the {@link java.nio.channels.DatagramChannel#open
      * DatagramChannel.open} method.
      *

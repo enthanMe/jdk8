@@ -144,8 +144,8 @@ public interface PropertyEditor {
      * Gets the property value as text.
      *
      * @return The property value as a human editable string.
-     * <p>   Returns null if the value can't be expressed as an editable string.
-     * <p>   If a non-null value is returned, then the PropertyEditor should
+     *   Returns null if the value can't be expressed as an editable string.
+     *   If a non-null value is returned, then the PropertyEditor should
      *       be prepared to parse that string back in setAsText().
      */
     String getAsText();

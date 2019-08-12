@@ -83,34 +83,34 @@ import java.nio.charset.UnsupportedCharsetException;
  * Below is an example of an XML archive containing
  * some user interface components from the <em>swing</em> toolkit:
  * <pre>
- * &lt;?xml version="1.0" encoding="UTF-8"?&gt;
- * &lt;java version="1.0" class="java.beans.XMLDecoder"&gt;
- * &lt;object class="javax.swing.JFrame"&gt;
- *   &lt;void property="name"&gt;
- *     &lt;string&gt;frame1&lt;/string&gt;
- *   &lt;/void&gt;
- *   &lt;void property="bounds"&gt;
- *     &lt;object class="java.awt.Rectangle"&gt;
- *       &lt;int&gt;0&lt;/int&gt;
- *       &lt;int&gt;0&lt;/int&gt;
- *       &lt;int&gt;200&lt;/int&gt;
- *       &lt;int&gt;200&lt;/int&gt;
- *     &lt;/object&gt;
- *   &lt;/void&gt;
- *   &lt;void property="contentPane"&gt;
- *     &lt;void method="add"&gt;
- *       &lt;object class="javax.swing.JButton"&gt;
- *         &lt;void property="label"&gt;
- *           &lt;string&gt;Hello&lt;/string&gt;
- *         &lt;/void&gt;
- *       &lt;/object&gt;
- *     &lt;/void&gt;
- *   &lt;/void&gt;
- *   &lt;void property="visible"&gt;
- *     &lt;boolean&gt;true&lt;/boolean&gt;
- *   &lt;/void&gt;
- * &lt;/object&gt;
- * &lt;/java&gt;
+ * <?xml version="1.0" encoding="UTF-8"?>
+ * <java version="1.0" class="java.beans.XMLDecoder">
+ * <object class="javax.swing.JFrame">
+ *   <void property="name">
+ *     <string>frame1</string>
+ *   </void>
+ *   <void property="bounds">
+ *     <object class="java.awt.Rectangle">
+ *       <int>0</int>
+ *       <int>0</int>
+ *       <int>200</int>
+ *       <int>200</int>
+ *     </object>
+ *   </void>
+ *   <void property="contentPane">
+ *     <void method="add">
+ *       <object class="javax.swing.JButton">
+ *         <void property="label">
+ *           <string>Hello</string>
+ *         </void>
+ *       </object>
+ *     </void>
+ *   </void>
+ *   <void property="visible">
+ *     <boolean>true</boolean>
+ *   </void>
+ * </object>
+ * </java>
  * </pre>
  * The XML syntax uses the following conventions:
  * <ul>
@@ -142,7 +142,7 @@ import java.nio.charset.UnsupportedCharsetException;
  * by a "class" attribute.
  * <li>
  * Java's String class is treated specially and is
- * written &lt;string&gt;Hello, world&lt;/string&gt; where
+ * written <string>Hello, world</string> where
  * the characters of the string are converted to bytes
  * using the UTF-8 character encoding.
  * </ul>
@@ -156,12 +156,12 @@ import java.nio.charset.UnsupportedCharsetException;
  * The default method name is "new".
  * <li>
  * A reference to a java class is written in the form
- *  &lt;class&gt;javax.swing.JButton&lt;/class&gt;.
+ *  <class>javax.swing.JButton</class>.
  * <li>
  * Instances of the wrapper classes for Java's primitive types are written
  * using the name of the primitive type as the tag. For example, an
  * instance of the <code>Integer</code> class could be written:
- * &lt;int&gt;123&lt;/int&gt;. Note that the <code>XMLEncoder</code> class
+ * <int>123</int>. Note that the <code>XMLEncoder</code> class
  * uses Java's reflection package in which the conversion between
  * Java's primitive types and their associated "wrapper classes"
  * is handled internally. The API for the <code>XMLEncoder</code> class
@@ -663,8 +663,8 @@ public class XMLEncoder extends Encoder implements AutoCloseable {
     private static String quoteCharCode(int code) {
         switch(code) {
           case '&':  return "&amp;";
-          case '<':  return "&lt;";
-          case '>':  return "&gt;";
+          case '<':  return "<";
+          case '>':  return ">";
           case '"':  return "&quot;";
           case '\'': return "&apos;";
           case '\r': return "&#13;";

@@ -29,7 +29,7 @@ package java.lang.management;
  * The management interface for the compilation system of
  * the Java virtual machine.
  *
- * <p> A Java virtual machine has a single instance of the implementation
+ * A Java virtual machine has a single instance of the implementation
  * class of this interface.  This instance implementing this interface is
  * an <a href="ManagementFactory.html#MXBean">MXBean</a>
  * that can be obtained by calling
@@ -85,7 +85,7 @@ public interface CompilationMXBean extends PlatformManagedObject {
      * method can be used to determine if the Java virtual machine
      * supports this operation.
      *
-     * <p> This value does not indicate the level of performance of
+     * This value does not indicate the level of performance of
      * the Java virtual machine and is not intended for performance comparisons
      * of different virtual machine implementations.
      * The implementations may have different definitions and different

@@ -243,12 +243,12 @@ public interface Types {
      * for example, this method may be used to get the
      * parameterized type {@code Set<String>}.
      *
-     * <p> The number of type arguments must either equal the
+     * The number of type arguments must either equal the
      * number of the type element's formal type parameters, or must be
      * zero.  If zero, and if the type element is generic,
      * then the type element's raw type is returned.
      *
-     * <p> If a parameterized type is being returned, its type element
+     * If a parameterized type is being returned, its type element
      * must not be contained within a generic outer class.
      * The parameterized type {@code Outer<String>.Inner<Number>},
      * for example, may be constructed by first using this
@@ -276,7 +276,7 @@ public interface Types {
      * to get the type {@code Outer<String>}, and then invoking
      * this method.
      *
-     * <p> If the containing type is a parameterized type,
+     * If the containing type is a parameterized type,
      * the number of type arguments must equal the
      * number of {@code typeElem}'s formal type parameters.
      * If it is not parameterized or if it is {@code null}, this method is

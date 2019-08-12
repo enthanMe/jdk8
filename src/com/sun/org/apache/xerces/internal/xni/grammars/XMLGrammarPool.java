@@ -20,7 +20,7 @@
 package com.sun.org.apache.xerces.internal.xni.grammars;
 
 /**
- * <p> This interface specifies how the parser and the application
+ * This interface specifies how the parser and the application
  * interact with respect to Grammar objects that the application
  * possesses--either by having precompiled them or by having stored them
  * from a previous validation of an instance document.  It makes no
@@ -51,7 +51,7 @@ public interface XMLGrammarPool {
     // methods. </p>
 
     /**
-     * <p> retrieve the initial known set of grammars. this method is
+     * retrieve the initial known set of grammars. this method is
      * called by a validator before the validation starts. the application
      * can provide an initial set of grammars available to the current
      * validation attempt. </p>
@@ -74,7 +74,7 @@ public interface XMLGrammarPool {
     public void cacheGrammars(String grammarType, Grammar[] grammars);
 
     /**
-     * <p> This method requests that the application retrieve a grammar
+     * This method requests that the application retrieve a grammar
      * corresponding to the given GrammarIdentifier from its cache.
      * If it cannot do so it must return null; the parser will then
      * call the EntityResolver.  <strong>An application must not call its

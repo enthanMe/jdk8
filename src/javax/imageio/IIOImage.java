@@ -36,7 +36,7 @@ import javax.imageio.metadata.IIOMetadata;
  * thumbnail (preview) images, and an object representing metadata
  * associated with the image.
  *
- * <p> The image data may take the form of either a
+ * The image data may take the form of either a
  * <code>RenderedImage</code>, or a <code>Raster</code>.  Reader
  * methods that return an <code>IIOImage</code> will always return a
  * <code>BufferedImage</code> using the <code>RenderedImage</code>
@@ -44,7 +44,7 @@ import javax.imageio.metadata.IIOMetadata;
  * will always accept a <code>RenderedImage</code>, and may optionally
  * accept a <code>Raster</code>.
  *
- * <p> Exactly one of <code>getRenderedImage</code> and
+ * Exactly one of <code>getRenderedImage</code> and
  * <code>getRaster</code> will return a non-<code>null</code> value.
  * Subclasses are responsible for ensuring this behavior.
  *
@@ -87,9 +87,9 @@ public class IIOImage {
      * <code>RenderedImage</code>, and thumbnails and metadata
      * associated with it.
      *
-     * <p> All parameters are stored by reference.
+     * All parameters are stored by reference.
      *
-     * <p> The <code>thumbnails</code> argument must either be
+     * The <code>thumbnails</code> argument must either be
      * <code>null</code> or contain only <code>BufferedImage</code>
      * objects.
      *
@@ -119,7 +119,7 @@ public class IIOImage {
      * <code>Raster</code>, and thumbnails and metadata
      * associated with it.
      *
-     * <p> All parameters are stored by reference.
+     * All parameters are stored by reference.
      *
      * @param raster a <code>Raster</code>.
      * @param thumbnails a <code>List</code> of <code>BufferedImage</code>s,
@@ -281,7 +281,7 @@ public class IIOImage {
      * <code>BufferedImage</code>s, or to <code>null</code>.  The
      * reference to the previous <code>List</code> is discarded.
      *
-     * <p> The <code>thumbnails</code> argument must either be
+     * The <code>thumbnails</code> argument must either be
      * <code>null</code> or contain only <code>BufferedImage</code>
      * objects.
      *

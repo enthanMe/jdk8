@@ -41,11 +41,11 @@ import javax.lang.model.util.*;
  * Each element represents a static, language-level construct
  * (and not, for example, a runtime construct of the virtual machine).
  *
- * <p> Elements should be compared using the {@link #equals(Object)}
+ * Elements should be compared using the {@link #equals(Object)}
  * method.  There is no guarantee that any particular element will
  * always be represented by the same object.
  *
- * <p> To implement operations based on the class of an {@code
+ * To implement operations based on the class of an {@code
  * Element} object, either use a {@linkplain ElementVisitor visitor} or
  * use the result of the {@link #getKind} method.  Using {@code
  * instanceof} is <em>not</em> necessarily a reliable idiom for
@@ -64,7 +64,7 @@ public interface Element extends javax.lang.model.AnnotatedConstruct {
     /**
      * Returns the type defined by this element.
      *
-     * <p> A generic element defines a family of types, not just one.
+     * A generic element defines a family of types, not just one.
      * If this is a generic element, a <i>prototypical</i> type is
      * returned.  This is the element's invocation on the
      * type variables corresponding to its own formal type parameters.
@@ -217,7 +217,7 @@ public interface Element extends javax.lang.model.AnnotatedConstruct {
     /**
      * {@inheritDoc}
      *
-     * <p> To get inherited annotations as well, use {@link
+     * To get inherited annotations as well, use {@link
      * Elements#getAllAnnotationMirrors(Element)
      * getAllAnnotationMirrors}.
      *
@@ -237,7 +237,7 @@ public interface Element extends javax.lang.model.AnnotatedConstruct {
      * Applies a visitor to this element.
      *
      * @param <R> the return type of the visitor's methods
-     * @param <P> the type of the additional parameter to the visitor's methods
+     * @param the type of the additional parameter to the visitor's methods
      * @param v   the visitor operating on this element
      * @param p   additional parameter to the visitor
      * @return a visitor-specified result

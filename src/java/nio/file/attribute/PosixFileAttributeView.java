@@ -34,13 +34,13 @@ import java.io.IOException;
  * associated with files on file systems used by operating systems that implement
  * the Portable Operating System Interface (POSIX) family of standards.
  *
- * <p> Operating systems that implement the <a href="http://www.opengroup.org">
+ * Operating systems that implement the <a href="http://www.opengroup.org">
  * POSIX</a> family of standards commonly use file systems that have a
  * file <em>owner</em>, <em>group-owner</em>, and related <em>access
  * permissions</em>. This file attribute view provides read and write access
  * to these attributes.
  *
- * <p> The {@link #readAttributes() readAttributes} method is used to read the
+ * The {@link #readAttributes() readAttributes} method is used to read the
  * file's attributes. The file {@link PosixFileAttributes#owner() owner} is
  * represented by a {@link UserPrincipal} that is the identity of the file owner
  * for the purposes of access control. The {@link PosixFileAttributes#group()
@@ -48,7 +48,7 @@ import java.io.IOException;
  * group owner, where a group is an identity created for administrative purposes
  * so as to determine the access rights for the members of the group.
  *
- * <p> The {@link PosixFileAttributes#permissions() permissions} attribute is a
+ * The {@link PosixFileAttributes#permissions() permissions} attribute is a
  * set of access permissions. This file attribute view provides access to the nine
  * permission defined by the {@link PosixFilePermission} class.
  * These nine permission bits determine the <em>read</em>, <em>write</em>, and
@@ -57,7 +57,7 @@ import java.io.IOException;
  * operating systems and file systems may provide additional permission bits
  * but access to these other bits is not defined by this class in this release.
  *
- * <p> <b>Usage Example:</b>
+ * <b>Usage Example:</b>
  * Suppose we need to print out the owner and access permissions of a file:
  * <pre>
  *     Path file = ...
@@ -69,7 +69,7 @@ import java.io.IOException;
  * </pre>
  *
  * <h2> Dynamic Access </h2>
- * <p> Where dynamic access to file attributes is required, the attributes
+ * Where dynamic access to file attributes is required, the attributes
  * supported by this attribute view are as defined by {@link
  * BasicFileAttributeView} and {@link FileOwnerAttributeView}, and in addition,
  * the following attributes are supported:
@@ -81,7 +81,7 @@ import java.io.IOException;
  *   </tr>
  *  <tr>
  *     <td> "permissions" </td>
- *     <td> {@link Set}&lt;{@link PosixFilePermission}&gt; </td>
+ *     <td> {@link Set}<{@link PosixFilePermission}> </td>
  *   </tr>
  *   <tr>
  *     <td> "group" </td>
@@ -90,12 +90,12 @@ import java.io.IOException;
  * </table>
  * </blockquote>
  *
- * <p> The {@link Files#getAttribute getAttribute} method may be used to read
+ * The {@link Files#getAttribute getAttribute} method may be used to read
  * any of these attributes, or any of the attributes defined by {@link
  * BasicFileAttributeView} as if by invoking the {@link #readAttributes
  * readAttributes()} method.
  *
- * <p> The {@link Files#setAttribute setAttribute} method may be used to update
+ * The {@link Files#setAttribute setAttribute} method may be used to update
  * the file's last modified time, last access time or create time attributes as
  * defined by {@link BasicFileAttributeView}. It may also be used to update
  * the permissions, owner, or group-owner as if by invoking the {@link
@@ -103,7 +103,7 @@ import java.io.IOException;
  * #setGroup setGroup} methods respectively.
  *
  * <h2> Setting Initial Permissions </h2>
- * <p> Implementations supporting this attribute view may also support setting
+ * Implementations supporting this attribute view may also support setting
  * the initial permissions when creating a file or directory. The
  * initial permissions are provided to the {@link Files#createFile createFile}
  * or {@link Files#createDirectory createDirectory} methods as a {@link
@@ -115,12 +115,12 @@ import java.io.IOException;
  *
  * <pre>
  *     Path path = ...
- *     Set&lt;PosixFilePermission&gt; perms =
+ *     Set<PosixFilePermission> perms =
  *         EnumSet.of(OWNER_READ, OWNER_WRITE, OWNER_EXECUTE, GROUP_READ);
  *     Files.createFile(path, PosixFilePermissions.asFileAttribute(perms));
  * </pre>
  *
- * <p> When the access permissions are set at file creation time then the actual
+ * When the access permissions are set at file creation time then the actual
  * value of the permissions may differ that the value of the attribute object.
  * The reasons for this are implementation specific. On UNIX systems, for
  * example, a process has a <em>umask</em> that impacts the permission bits

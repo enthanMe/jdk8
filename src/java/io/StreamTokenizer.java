@@ -264,7 +264,7 @@ public class StreamTokenizer {
 
     /**
      * Specifies that all characters <i>c</i> in the range
-     * <code>low&nbsp;&lt;=&nbsp;<i>c</i>&nbsp;&lt;=&nbsp;high</code>
+     * <code>low&nbsp;<=&nbsp;<i>c</i>&nbsp;<=&nbsp;high</code>
      * are word constituents. A word token consists of a word constituent
      * followed by zero or more word constituents or number constituents.
      *
@@ -282,7 +282,7 @@ public class StreamTokenizer {
 
     /**
      * Specifies that all characters <i>c</i> in the range
-     * <code>low&nbsp;&lt;=&nbsp;<i>c</i>&nbsp;&lt;=&nbsp;high</code>
+     * <code>low&nbsp;<=&nbsp;<i>c</i>&nbsp;<=&nbsp;high</code>
      * are white space characters. White space characters serve only to
      * separate tokens in the input stream.
      *
@@ -303,7 +303,7 @@ public class StreamTokenizer {
 
     /**
      * Specifies that all characters <i>c</i> in the range
-     * <code>low&nbsp;&lt;=&nbsp;<i>c</i>&nbsp;&lt;=&nbsp;high</code>
+     * <code>low&nbsp;<=&nbsp;<i>c</i>&nbsp;<=&nbsp;high</code>
      * are "ordinary" in this tokenizer. See the
      * {@code ordinaryChar} method for more information on a
      * character being ordinary.

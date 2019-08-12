@@ -146,7 +146,7 @@ class ZipEntry implements ZipConstants, Cloneable {
     /**
      * Sets the last modification time of the entry.
      *
-     * <p> If the entry is output to a ZIP file or ZIP file formatted
+     * If the entry is output to a ZIP file or ZIP file formatted
      * output stream the last modification time set by this method will
      * be stored into the {@code date and time fields} of the zip file
      * entry and encoded in standard {@code MS-DOS date and time format}.
@@ -174,7 +174,7 @@ class ZipEntry implements ZipConstants, Cloneable {
     /**
      * Returns the last modification time of the entry.
      *
-     * <p> If the entry is read from a ZIP file or ZIP file formatted
+     * If the entry is read from a ZIP file or ZIP file formatted
      * input stream, this is the last modification time from the {@code
      * date and time fields} of the zip file entry. The
      * {@link java.util.TimeZone#getDefault() default TimeZone} is used
@@ -197,7 +197,7 @@ class ZipEntry implements ZipConstants, Cloneable {
     /**
      * Sets the last modification time of the entry.
      *
-     * <p> When output to a ZIP file or ZIP file formatted output stream
+     * When output to a ZIP file or ZIP file formatted output stream
      * the last modification time set by this method will be stored into
      * zip file entry's {@code date and time fields} in {@code standard
      * MS-DOS date and time format}), and the extended timestamp fields
@@ -221,7 +221,7 @@ class ZipEntry implements ZipConstants, Cloneable {
     /**
      * Returns the last modification time of the entry.
      *
-     * <p> If the entry is read from a ZIP file or ZIP file formatted
+     * If the entry is read from a ZIP file or ZIP file formatted
      * input stream, this is the last modification time from the zip
      * file entry's {@code optional extra data} if the extended timestamp
      * fields are present. Otherwise the last modification time is read
@@ -245,7 +245,7 @@ class ZipEntry implements ZipConstants, Cloneable {
     /**
      * Sets the last access time of the entry.
      *
-     * <p> If set, the last access time will be stored into the extended
+     * If set, the last access time will be stored into the extended
      * timestamp fields of entry's {@code optional extra data}, when output
      * to a ZIP file or ZIP file formatted stream.
      *
@@ -266,7 +266,7 @@ class ZipEntry implements ZipConstants, Cloneable {
     /**
      * Returns the last access time of the entry.
      *
-     * <p> The last access time is from the extended timestamp fields
+     * The last access time is from the extended timestamp fields
      * of entry's {@code optional extra data} when read from a ZIP file
      * or ZIP file formatted stream.
      *
@@ -282,7 +282,7 @@ class ZipEntry implements ZipConstants, Cloneable {
     /**
      * Sets the creation time of the entry.
      *
-     * <p> If set, the creation time will be stored into the extended
+     * If set, the creation time will be stored into the extended
      * timestamp fields of entry's {@code optional extra data}, when
      * output to a ZIP file or ZIP file formatted stream.
      *
@@ -303,7 +303,7 @@ class ZipEntry implements ZipConstants, Cloneable {
     /**
      * Returns the creation time of the entry.
      *
-     * <p> The creation time is from the extended timestamp fields of
+     * The creation time is from the extended timestamp fields of
      * entry's {@code optional extra data} when read from a ZIP file
      * or ZIP file formatted stream.
      *
@@ -346,7 +346,7 @@ class ZipEntry implements ZipConstants, Cloneable {
     /**
      * Returns the size of the compressed entry data.
      *
-     * <p> In the case of a stored entry, the compressed size will be the same
+     * In the case of a stored entry, the compressed size will be the same
      * as the uncompressed size of the entry.
      *
      * @return the size of the compressed entry data, or -1 if not known
@@ -424,7 +424,7 @@ class ZipEntry implements ZipConstants, Cloneable {
     /**
      * Sets the optional extra field data for the entry.
      *
-     * <p> Invoking this method may change this entry's last modification
+     * Invoking this method may change this entry's last modification
      * time, last access time and creation time, if the {@code extra} field
      * data includes the extensible timestamp fields, such as {@code NTFS tag
      * 0x0001} or {@code Info-ZIP Extended Timestamp}, as specified in

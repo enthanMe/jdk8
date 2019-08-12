@@ -23,7 +23,7 @@ package com.sun.org.apache.xerces.internal.impl.xpath.regex;
 /**
  * @xerces.internal
  *
- * @author TAMURA Kent &lt;kent@trl.ibm.co.jp&gt;
+ * @author TAMURA Kent <kent@trl.ibm.co.jp>
  */
 public class ParseException extends RuntimeException {
 

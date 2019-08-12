@@ -198,7 +198,7 @@ public class _NamingContextExtStub extends org.omg.CORBA.portable.ObjectImpl imp
  * Indicates that the name is invalid. <p>
  *
  * @exception org.omg.CosNaming.NamingContextPackage.AlreadyBound 
- * Indicates an object is already bound to the specified name.<p> 
+ * Indicates an object is already bound to the specified name.
  */
   public void bind (org.omg.CosNaming.NameComponent[] n, org.omg.CORBA.Object obj) throws org.omg.CosNaming.NamingContextPackage.NotFound, org.omg.CosNaming.NamingContextPackage.CannotProceed, org.omg.CosNaming.NamingContextPackage.InvalidName, org.omg.CosNaming.NamingContextPackage.AlreadyBound
   {

@@ -182,7 +182,7 @@ public class DescriptorSupport
      * stores the descriptor fields.
      *
      * @exception RuntimeOperationsException for illegal value for
-     * initNumFields (&lt;= 0)
+     * initNumFields (<= 0)
      * @exception MBeanException Wraps a distributed communication Exception.
      */
     public DescriptorSupport(int initNumFields)
@@ -1070,7 +1070,7 @@ public class DescriptorSupport
      * String in the same format.</p>
      *
      * <p>If the descriptor is empty the following String is
-     * returned: &lt;Descriptor&gt;&lt;/Descriptor&gt;</p>
+     * returned: <Descriptor></Descriptor></p>
      *
      * @return the XML string.
      *
@@ -1108,8 +1108,8 @@ public class DescriptorSupport
     private static final String[] entities = {
         " &#32;",
         "\"&quot;",
-        "<&lt;",
-        ">&gt;",
+        "<<",
+        ">>",
         "&&amp;",
         "\r&#13;",
         "\t&#9;",

@@ -125,7 +125,7 @@ public class FocusEvent extends ComponentEvent {
      * application, with a Java application in a different VM,
      * or with no other <code>Component</code>, then the opposite
      * <code>Component</code> is <code>null</code>.
-     * <p> This method throws an
+     * This method throws an
      * <code>IllegalArgumentException</code> if <code>source</code>
      * is <code>null</code>.
      *
@@ -154,7 +154,7 @@ public class FocusEvent extends ComponentEvent {
     /**
      * Constructs a <code>FocusEvent</code> object and identifies
      * whether or not the change is temporary.
-     * <p> This method throws an
+     * This method throws an
      * <code>IllegalArgumentException</code> if <code>source</code>
      * is <code>null</code>.
      *
@@ -176,7 +176,7 @@ public class FocusEvent extends ComponentEvent {
     /**
      * Constructs a <code>FocusEvent</code> object and identifies it
      * as a permanent change in focus.
-     * <p> This method throws an
+     * This method throws an
      * <code>IllegalArgumentException</code> if <code>source</code>
      * is <code>null</code>.
      *

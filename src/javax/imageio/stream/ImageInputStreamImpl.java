@@ -37,7 +37,7 @@ import javax.imageio.IIOException;
  * This class is designed to reduce the number of methods that must
  * be implemented by subclasses.
  *
- * <p> In particular, this class handles most or all of the details of
+ * In particular, this class handles most or all of the details of
  * byte order interpretation, buffering, mark/reset, discarding,
  * closing, and disposing.
  */
@@ -124,11 +124,11 @@ public abstract class ImageInputStreamImpl implements ImageInputStream {
      * <code>int</code> between 0 and 255.  If EOF is reached,
      * <code>-1</code> is returned.
      *
-     * <p> Subclasses must provide an implementation for this method.
+     * Subclasses must provide an implementation for this method.
      * The subclass implementation should update the stream position
      * before exiting.
      *
-     * <p> The bit offset within the stream must be reset to zero before
+     * The bit offset within the stream must be reset to zero before
      * the read occurs.
      *
      * @return the value of the next byte in the stream, or <code>-1</code>
@@ -141,7 +141,7 @@ public abstract class ImageInputStreamImpl implements ImageInputStream {
     /**
      * A convenience method that calls <code>read(b, 0, b.length)</code>.
      *
-     * <p> The bit offset within the stream is reset to zero before
+     * The bit offset within the stream is reset to zero before
      * the read occurs.
      *
      * @return the number of bytes actually read, or <code>-1</code>
@@ -161,10 +161,10 @@ public abstract class ImageInputStreamImpl implements ImageInputStream {
      * If no bytes can be read because the end of the stream has been
      * reached, <code>-1</code> is returned.
      *
-     * <p> The bit offset within the stream must be reset to zero before
+     * The bit offset within the stream must be reset to zero before
      * the read occurs.
      *
-     * <p> Subclasses must provide an implementation for this method.
+     * Subclasses must provide an implementation for this method.
      * The subclass implementation should update the stream position
      * before exiting.
      *
@@ -722,7 +722,7 @@ public abstract class ImageInputStreamImpl implements ImageInputStream {
      * Advances the current stream position by calling
      * <code>seek(getStreamPosition() + n)</code>.
      *
-     * <p> The bit offset is reset to zero.
+     * The bit offset is reset to zero.
      *
      * @param n the number of bytes to seek forward.
      *
@@ -743,7 +743,7 @@ public abstract class ImageInputStreamImpl implements ImageInputStream {
      * Advances the current stream position by calling
      * <code>seek(getStreamPosition() + n)</code>.
      *
-     * <p> The bit offset is reset to zero.
+     * The bit offset is reset to zero.
      *
      * @param n the number of bytes to seek forward.
      *
@@ -788,7 +788,7 @@ public abstract class ImageInputStreamImpl implements ImageInputStream {
      * Resets the current stream byte and bit positions from the stack
      * of marked positions.
      *
-     * <p> An <code>IOException</code> will be thrown if the previous
+     * An <code>IOException</code> will be thrown if the previous
      * marked position lies in the discarded portion of the stream.
      *
      * @exception IOException if an I/O error occurs.

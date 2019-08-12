@@ -61,7 +61,7 @@ package com.sun.org.apache.bcel.internal.generic;
 /**
  * IFGT - Branch if int comparison with zero succeeds
  *
- * <PRE>Stack: ..., value -&gt; ...</PRE>
+ * <PRE>Stack: ..., value -> ...</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

@@ -29,7 +29,7 @@ import com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException;
 import com.sun.org.apache.xerces.internal.impl.dv.ValidationContext;
 
 /**
- * Validator for &lt;dateTime&gt; datatype (W3C Schema Datatypes)
+ * Validator for <dateTime> datatype (W3C Schema Datatypes)
  *
  * @xerces.internal
  *

@@ -50,23 +50,23 @@ package java.util.logging;
  * <p>
  * <b>Configuration:</b>
  * By default each <tt>MemoryHandler</tt> is initialized using the following
- * <tt>LogManager</tt> configuration properties where <tt>&lt;handler-name&gt;</tt>
+ * <tt>LogManager</tt> configuration properties where <tt><handler-name></tt>
  * refers to the fully-qualified class name of the handler.
  * If properties are not defined
  * (or have invalid values) then the specified default values are used.
  * If no default value is defined then a RuntimeException is thrown.
  * <ul>
- * <li>   &lt;handler-name&gt;.level
+ * <li>   <handler-name>.level
  *        specifies the level for the <tt>Handler</tt>
  *        (defaults to <tt>Level.ALL</tt>). </li>
- * <li>   &lt;handler-name&gt;.filter
+ * <li>   <handler-name>.filter
  *        specifies the name of a <tt>Filter</tt> class to use
  *        (defaults to no <tt>Filter</tt>). </li>
- * <li>   &lt;handler-name&gt;.size
+ * <li>   <handler-name>.size
  *        defines the buffer size (defaults to 1000). </li>
- * <li>   &lt;handler-name&gt;.push
+ * <li>   <handler-name>.push
  *        defines the <tt>pushLevel</tt> (defaults to <tt>level.SEVERE</tt>). </li>
- * <li>   &lt;handler-name&gt;.target
+ * <li>   <handler-name>.target
  *        specifies the name of the target <tt>Handler </tt> class.
  *        (no default). </li>
  * </ul>

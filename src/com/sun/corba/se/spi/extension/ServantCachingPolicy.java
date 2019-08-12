@@ -31,7 +31,7 @@ import com.sun.corba.se.impl.orbutil.ORBConstants ;
 
 /** Policy used to implement servant caching optimization in the POA.
 * Creating a POA with an instance pol of this policy where
-* pol.getType() &gt; NO_SERVANT_CACHING will cause the servant to be
+* pol.getType() > NO_SERVANT_CACHING will cause the servant to be
 * looked up in the POA and cached in the LocalClientRequestDispatcher when
 * the ClientRequestDispatcher is colocated with the implementation of the
 * objref.  This greatly speeds up invocations at the cost of violating the

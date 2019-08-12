@@ -58,7 +58,7 @@ import com.sun.org.apache.xerces.internal.xni.parser.XMLDocumentSource;
  * the content and structure; augmenting the InfoSet, if applicable;
  * and notifying the parser of the information resulting from the
  * validation process.
- * <p> Formerly, this component also handled DTD events and grammar construction.
+ * Formerly, this component also handled DTD events and grammar construction.
  * To facilitate the development of a meaningful DTD grammar caching/preparsing
  * framework, this functionality has been moved into the XMLDTDLoader
  * class.  Therefore, this class no longer implements the DTDFilter
@@ -92,7 +92,7 @@ public class XMLDTDValidator
     // Constants
     //
 
-    /** Symbol: "&lt;&lt;datatypes>>". */
+    /** Symbol: "<<datatypes>>". */
 
     /** Top level scope (-1). */
     private static final int TOP_LEVEL_SCOPE = -1;

@@ -35,14 +35,14 @@ import javax.imageio.stream.ImageOutputStream;
  * provider interfaces, see the class comment for the
  * <code>IIORegistry</code> class.
  *
- * <p> This interface allows arbitrary objects to be "wrapped" by
+ * This interface allows arbitrary objects to be "wrapped" by
  * instances of <code>ImageOutputStream</code>.  For example, a
  * particular <code>ImageOutputStreamSpi</code> might allow a generic
  * <code>OutputStream</code> to be used as a destination; another
  * might output to a <code>File</code> or to a device such as a serial
  * port.
  *
- * <p> By treating the creation of <code>ImageOutputStream</code>s as
+ * By treating the creation of <code>ImageOutputStream</code>s as
  * a pluggable service, it becomes possible to handle future output
  * destinations without changing the API.  Also, high-performance
  * implementations of <code>ImageOutputStream</code> (for example,
@@ -99,7 +99,7 @@ public abstract class ImageOutputStreamSpi extends IIOServiceProvider {
      * <code>ImageOutputStream</code> via the
      * <code>createOutputStreamInstance</code> method.
      *
-     * <p> Typical return values might include
+     * Typical return values might include
      * <code>OutputStream.class</code> or <code>File.class</code>, but
      * any class may be used.
      *
@@ -119,7 +119,7 @@ public abstract class ImageOutputStreamSpi extends IIOServiceProvider {
      * the value of the <code>cacheFile</code> argument to
      * <code>createOutputStreamInstance</code> will be ignored.
      *
-     * <p> The default implementation returns <code>false</code>.
+     * The default implementation returns <code>false</code>.
      *
      * @return <code>true</code> if a cache file can be used by the
      * output streams created by this service provider.
@@ -133,7 +133,7 @@ public abstract class ImageOutputStreamSpi extends IIOServiceProvider {
      * implementation associated with this service provider requires
      * the use of a cache <code>File</code>.
      *
-     * <p> The default implementation returns <code>false</code>.
+     * The default implementation returns <code>false</code>.
      *
      * @return <code>true</code> if a cache file is needed by the
      * output streams created by this service provider.

@@ -104,7 +104,7 @@ public class ComponentEvent extends AWTEvent {
 
     /**
      * Constructs a <code>ComponentEvent</code> object.
-     * <p> This method throws an
+     * This method throws an
      * <code>IllegalArgumentException</code> if <code>source</code>
      * is <code>null</code>.
      *

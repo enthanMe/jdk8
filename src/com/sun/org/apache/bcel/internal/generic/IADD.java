@@ -60,7 +60,7 @@ package com.sun.org.apache.bcel.internal.generic;
 
 /**
  * IADD - Add ints
- * <PRE>Stack: ..., value1, value2 -&gt; result</PRE>
+ * <PRE>Stack: ..., value1, value2 -> result</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

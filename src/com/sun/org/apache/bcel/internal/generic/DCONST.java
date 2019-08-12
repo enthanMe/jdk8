@@ -61,7 +61,7 @@ package com.sun.org.apache.bcel.internal.generic;
 /**
  * DCONST - Push 0.0 or 1.0, other values cause an exception
  *
- * <PRE>Stack: ... -&gt; ..., </PRE>
+ * <PRE>Stack: ... -> ..., </PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

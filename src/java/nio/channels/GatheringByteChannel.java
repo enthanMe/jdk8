@@ -32,7 +32,7 @@ import java.nio.ByteBuffer;
 /**
  * A channel that can write bytes from a sequence of buffers.
  *
- * <p> A <i>gathering</i> write operation writes, in a single invocation, a
+ * A <i>gathering</i> write operation writes, in a single invocation, a
  * sequence of bytes from one or more of a given sequence of buffers.
  * Gathering writes are often useful when implementing network protocols or
  * file formats that, for example, group data into segments consisting of one
@@ -54,7 +54,7 @@ public interface GatheringByteChannel
      * Writes a sequence of bytes to this channel from a subsequence of the
      * given buffers.
      *
-     * <p> An attempt is made to write up to <i>r</i> bytes to this channel,
+     * An attempt is made to write up to <i>r</i> bytes to this channel,
      * where <i>r</i> is the total number of bytes remaining in the specified
      * subsequence of the given buffer array, that is,
      *
@@ -65,8 +65,8 @@ public interface GatheringByteChannel
      *
      * at the moment that this method is invoked.
      *
-     * <p> Suppose that a byte sequence of length <i>n</i> is written, where
-     * <tt>0</tt>&nbsp;<tt>&lt;=</tt>&nbsp;<i>n</i>&nbsp;<tt>&lt;=</tt>&nbsp;<i>r</i>.
+     * Suppose that a byte sequence of length <i>n</i> is written, where
+     * <tt>0</tt>&nbsp;<tt><=</tt>&nbsp;<i>n</i>&nbsp;<tt><=</tt>&nbsp;<i>r</i>.
      * Up to the first <tt>srcs[offset].remaining()</tt> bytes of this sequence
      * are written from buffer <tt>srcs[offset]</tt>, up to the next
      * <tt>srcs[offset+1].remaining()</tt> bytes are written from buffer
@@ -75,13 +75,13 @@ public interface GatheringByteChannel
      * the final position of each updated buffer, except the last updated
      * buffer, is guaranteed to be equal to that buffer's limit.
      *
-     * <p> Unless otherwise specified, a write operation will return only after
+     * Unless otherwise specified, a write operation will return only after
      * writing all of the <i>r</i> requested bytes.  Some types of channels,
      * depending upon their state, may write only some of the bytes or possibly
      * none at all.  A socket channel in non-blocking mode, for example, cannot
      * write any more bytes than are free in the socket's output buffer.
      *
-     * <p> This method may be invoked at any time.  If another thread has
+     * This method may be invoked at any time.  If another thread has
      * already initiated a write operation upon this channel, however, then an
      * invocation of this method will block until the first operation is
      * complete. </p>
@@ -131,7 +131,7 @@ public interface GatheringByteChannel
     /**
      * Writes a sequence of bytes to this channel from the given buffers.
      *
-     * <p> An invocation of this method of the form <tt>c.write(srcs)</tt>
+     * An invocation of this method of the form <tt>c.write(srcs)</tt>
      * behaves in exactly the same manner as the invocation
      *
      * <blockquote><pre>

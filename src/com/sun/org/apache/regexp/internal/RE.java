@@ -1578,9 +1578,9 @@ public class RE implements Serializable
      * It is also possible to reference the contents of a parenthesized expression
      * with $0, $1, ... $9. A regular expression of "http://[\\.\\w\\-\\?/~_@&=%]+",
      * a String to substituteIn of "visit us: http://www.apache.org!" and the
-     * substitution String "&lt;a href=\"$0\"&gt;$0&lt;/a&gt;", the resulting String
+     * substitution String "<a href=\"$0\">$0</a>", the resulting String
      * returned by subst would be
-     * "visit us: &lt;a href=\"http://www.apache.org\"&gt;http://www.apache.org&lt;/a&gt;!".
+     * "visit us: <a href=\"http://www.apache.org\">http://www.apache.org</a>!".
      * <p>
      * <i>Note:</i> $0 represents the whole match.
      *

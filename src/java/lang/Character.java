@@ -3137,7 +3137,7 @@ class Character implements java.io.Serializable, Comparable<Character> {
         /**
          * Returns the UnicodeBlock with the given name. Block
          * names are determined by The Unicode Standard. The file
-         * Blocks-&lt;version&gt;.txt defines blocks for a particular
+         * Blocks-<version>.txt defines blocks for a particular
          * version of the standard. The {@link Character} class specifies
          * the version of the standard that it supports.
          * <p>
@@ -4489,8 +4489,8 @@ class Character implements java.io.Serializable, Comparable<Character> {
         /**
          * Returns the UnicodeScript constant with the given Unicode script
          * name or the script name alias. Script names and their aliases are
-         * determined by The Unicode Standard. The files Scripts&lt;version&gt;.txt
-         * and PropertyValueAliases&lt;version&gt;.txt define script names
+         * determined by The Unicode Standard. The files Scripts<version>.txt
+         * and PropertyValueAliases<version>.txt define script names
          * and the script name aliases for a particular version of the
          * standard. The {@link Character} class specifies the version of
          * the standard that it supports.
@@ -5401,7 +5401,7 @@ class Character implements java.io.Serializable, Comparable<Character> {
      * '&#92;u00EF' '&#92;u00F0' '&#92;u00F1' '&#92;u00F2' '&#92;u00F3' '&#92;u00F4' '&#92;u00F5' '&#92;u00F6'
      * '&#92;u00F8' '&#92;u00F9' '&#92;u00FA' '&#92;u00FB' '&#92;u00FC' '&#92;u00FD' '&#92;u00FE' '&#92;u00FF'
      * </pre></blockquote>
-     * <p> Many other Unicode characters are lowercase too.
+     * Many other Unicode characters are lowercase too.
      *
      * <p><b>Note:</b> This method cannot handle <a
      * href="#supplementary"> supplementary characters</a>. To support
@@ -5437,7 +5437,7 @@ class Character implements java.io.Serializable, Comparable<Character> {
      * '&#92;u00EF' '&#92;u00F0' '&#92;u00F1' '&#92;u00F2' '&#92;u00F3' '&#92;u00F4' '&#92;u00F5' '&#92;u00F6'
      * '&#92;u00F8' '&#92;u00F9' '&#92;u00FA' '&#92;u00FB' '&#92;u00FC' '&#92;u00FD' '&#92;u00FE' '&#92;u00FF'
      * </pre></blockquote>
-     * <p> Many other Unicode characters are lowercase too.
+     * Many other Unicode characters are lowercase too.
      *
      * @param   codePoint the character (Unicode code point) to be tested.
      * @return  {@code true} if the character is lowercase;
@@ -5468,7 +5468,7 @@ class Character implements java.io.Serializable, Comparable<Character> {
      * '&#92;u00D0' '&#92;u00D1' '&#92;u00D2' '&#92;u00D3' '&#92;u00D4' '&#92;u00D5' '&#92;u00D6' '&#92;u00D8'
      * '&#92;u00D9' '&#92;u00DA' '&#92;u00DB' '&#92;u00DC' '&#92;u00DD' '&#92;u00DE'
      * </pre></blockquote>
-     * <p> Many other Unicode characters are uppercase too.
+     * Many other Unicode characters are uppercase too.
      *
      * <p><b>Note:</b> This method cannot handle <a
      * href="#supplementary"> supplementary characters</a>. To support
@@ -5503,7 +5503,7 @@ class Character implements java.io.Serializable, Comparable<Character> {
      * '&#92;u00D0' '&#92;u00D1' '&#92;u00D2' '&#92;u00D3' '&#92;u00D4' '&#92;u00D5' '&#92;u00D6' '&#92;u00D8'
      * '&#92;u00D9' '&#92;u00DA' '&#92;u00DB' '&#92;u00DC' '&#92;u00DD' '&#92;u00DE'
      * </pre></blockquote>
-     * <p> Many other Unicode characters are uppercase too.<p>
+     * Many other Unicode characters are uppercase too.<p>
      *
      * @param   codePoint the character (Unicode code point) to be tested.
      * @return  {@code true} if the character is uppercase;
@@ -5540,7 +5540,7 @@ class Character implements java.io.Serializable, Comparable<Character> {
      * <li>{@code LATIN CAPITAL LETTER N WITH SMALL LETTER J}
      * <li>{@code LATIN CAPITAL LETTER D WITH SMALL LETTER Z}
      * </ul>
-     * <p> Many other Unicode characters are titlecase too.
+     * Many other Unicode characters are titlecase too.
      *
      * <p><b>Note:</b> This method cannot handle <a
      * href="#supplementary"> supplementary characters</a>. To support
@@ -5581,7 +5581,7 @@ class Character implements java.io.Serializable, Comparable<Character> {
      * <li>{@code LATIN CAPITAL LETTER N WITH SMALL LETTER J}
      * <li>{@code LATIN CAPITAL LETTER D WITH SMALL LETTER Z}
      * </ul>
-     * <p> Many other Unicode characters are titlecase too.<p>
+     * Many other Unicode characters are titlecase too.<p>
      *
      * @param   codePoint the character (Unicode code point) to be tested.
      * @return  {@code true} if the character is titlecase;
@@ -6314,7 +6314,7 @@ class Character implements java.io.Serializable, Comparable<Character> {
      * lowercase using case mapping information from the UnicodeData
      * file.
      *
-     * <p> Note that
+     * Note that
      * {@code Character.isLowerCase(Character.toLowerCase(codePoint))}
      * does not always return {@code true} for some ranges of
      * characters, particularly those that are symbols or ideographs.

@@ -36,7 +36,7 @@ import static java.lang.annotation.RetentionPolicy.*;
 /**
  * Maps a JavaBean property to a XML element derived from property name.
  *
- * <p> <b>Usage</b> </p>
+ * <b>Usage</b> </p>
  * <p>
  * <tt>@XmlElement</tt> annotation can be used with the following program
  * elements:
@@ -83,12 +83,12 @@ import static java.lang.annotation.RetentionPolicy.*;
  *         public java.math.BigDecimal price;
  *     }
  *
- *     &lt;!-- Example: Local XML Schema element -->
- *     &lt;xs:complexType name="USPrice"/>
- *       &lt;xs:sequence>
- *         &lt;xs:element name="itemprice" type="xs:decimal" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/xs:complexType>
+ *     <!-- Example: Local XML Schema element -->
+ *     <xs:complexType name="USPrice"/>
+ *       <xs:sequence>
+ *         <xs:element name="itemprice" type="xs:decimal" minOccurs="0"/>
+ *       </sequence>
+ *     </xs:complexType>
  *   </pre>
  * <p>
  *
@@ -101,12 +101,12 @@ import static java.lang.annotation.RetentionPolicy.*;
  *         public java.math.BigDecimal price;
  *     }
  *
- *     &lt;!-- Example: Local XML Schema element -->
- *     &lt;xs:complexType name="USPrice">
- *       &lt;xs:sequence>
- *         &lt;xs:element name="price" type="xs:decimal" nillable="true" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/xs:complexType>
+ *     <!-- Example: Local XML Schema element -->
+ *     <xs:complexType name="USPrice">
+ *       <xs:sequence>
+ *         <xs:element name="price" type="xs:decimal" nillable="true" minOccurs="0"/>
+ *       </sequence>
+ *     </xs:complexType>
  *   </pre>
  * <p>
  * <b> Example 3: </b> Map a field to a nillable, required element.
@@ -118,16 +118,16 @@ import static java.lang.annotation.RetentionPolicy.*;
  *         public java.math.BigDecimal price;
  *     }
  *
- *     &lt;!-- Example: Local XML Schema element -->
- *     &lt;xs:complexType name="USPrice">
- *       &lt;xs:sequence>
- *         &lt;xs:element name="price" type="xs:decimal" nillable="true" minOccurs="1"/>
- *       &lt;/sequence>
- *     &lt;/xs:complexType>
+ *     <!-- Example: Local XML Schema element -->
+ *     <xs:complexType name="USPrice">
+ *       <xs:sequence>
+ *         <xs:element name="price" type="xs:decimal" nillable="true" minOccurs="1"/>
+ *       </sequence>
+ *     </xs:complexType>
  *   </pre>
  * <p>
  *
- * <p> <b>Example 4: </b>Map a JavaBean property to an XML element
+ * <b>Example 4: </b>Map a JavaBean property to an XML element
  * with anonymous type.</p>
  * <p>
  * See Example 6 in @{@link XmlType}.
@@ -141,7 +141,7 @@ import static java.lang.annotation.RetentionPolicy.*;
 public @interface XmlElement {
     /**
      * Name of the XML Schema element.
-     * <p> If the value is "##default", then element name is derived from the
+     * If the value is "##default", then element name is derived from the
      * JavaBean property name.
      */
     String name() default "##default";

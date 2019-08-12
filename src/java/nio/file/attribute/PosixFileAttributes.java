@@ -32,7 +32,7 @@ import java.util.Set;
  * that implement the Portable Operating System Interface (POSIX) family of
  * standards.
  *
- * <p> The POSIX attributes of a file are retrieved using a {@link
+ * The POSIX attributes of a file are retrieved using a {@link
  * PosixFileAttributeView} by invoking its {@link
  * PosixFileAttributeView#readAttributes readAttributes} method.
  *

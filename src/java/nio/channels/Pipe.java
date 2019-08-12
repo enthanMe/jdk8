@@ -32,12 +32,12 @@ import java.nio.channels.spi.*;
 /**
  * A pair of channels that implements a unidirectional pipe.
  *
- * <p> A pipe consists of a pair of channels: A writable {@link
+ * A pipe consists of a pair of channels: A writable {@link
  * Pipe.SinkChannel sink} channel and a readable {@link Pipe.SourceChannel source}
  * channel.  Once some bytes are written to the sink channel they can be read
  * from source channel in exactlyAthe order in which they were written.
  *
- * <p> Whether or not a thread writing bytes to a pipe will block until another
+ * Whether or not a thread writing bytes to a pipe will block until another
  * thread reads those bytes, or some previously-written bytes, from the pipe is
  * system-dependent and therefore unspecified.  Many pipe implementations will
  * buffer up to a certain number of bytes between the sink and source channels,
@@ -74,7 +74,7 @@ public abstract class Pipe {
          * Returns an operation set identifying this channel's supported
          * operations.
          *
-         * <p> Pipe-source channels only support reading, so this method
+         * Pipe-source channels only support reading, so this method
          * returns {@link SelectionKey#OP_READ}.  </p>
          *
          * @return  The valid-operation set
@@ -108,7 +108,7 @@ public abstract class Pipe {
          * Returns an operation set identifying this channel's supported
          * operations.
          *
-         * <p> Pipe-sink channels only support writing, so this method returns
+         * Pipe-sink channels only support writing, so this method returns
          * {@link SelectionKey#OP_WRITE}.  </p>
          *
          * @return  The valid-operation set
@@ -141,7 +141,7 @@ public abstract class Pipe {
     /**
      * Opens a pipe.
      *
-     * <p> The new pipe is created by invoking the {@link
+     * The new pipe is created by invoking the {@link
      * java.nio.channels.spi.SelectorProvider#openPipe openPipe} method of the
      * system-wide default {@link java.nio.channels.spi.SelectorProvider}
      * object.  </p>

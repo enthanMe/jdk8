@@ -258,7 +258,7 @@ public abstract class Reference<T> {
      * Clears this reference object.  Invoking this method will not cause this
      * object to be enqueued.
      *
-     * <p> This method is invoked only by Java code; when the garbage collector
+     * This method is invoked only by Java code; when the garbage collector
      * clears references it does so directly, without invoking this method.
      */
     public void clear() {
@@ -285,7 +285,7 @@ public abstract class Reference<T> {
      * Adds this reference object to the queue with which it is registered,
      * if any.
      *
-     * <p> This method is invoked only by Java code; when the garbage collector
+     * This method is invoked only by Java code; when the garbage collector
      * enqueues references it does so directly, without invoking this method.
      *
      * @return   <code>true</code> if this reference object was successfully

@@ -221,14 +221,14 @@ public class RenderableImageOp implements RenderableImage {
      * of the full image.  All the rendering hints come from hints
      * passed in.
      *
-     * <p> If w == 0, it will be taken to equal
+     * If w == 0, it will be taken to equal
      * Math.round(h*(getWidth()/getHeight())).
      * Similarly, if h == 0, it will be taken to equal
      * Math.round(w*(getHeight()/getWidth())).  One of
      * w or h must be non-zero or else an IllegalArgumentException
      * will be thrown.
      *
-     * <p> The created RenderedImage may have a property identified
+     * The created RenderedImage may have a property identified
      * by the String HINTS_OBSERVED to indicate which RenderingHints
      * were used to create the image.  In addition any RenderedImages
      * that are obtained via the getSources() method on the created
@@ -273,7 +273,7 @@ public class RenderableImageOp implements RenderableImage {
      * RenderableImageOp (including its Renderable sources) rendered
      * according to the given RenderContext.
      *
-     * <p> This method supports chaining of either Renderable or
+     * This method supports chaining of either Renderable or
      * RenderedImage operations.  If sources in
      * the ParameterBlock used to construct the RenderableImageOp are
      * RenderableImages, then a three step process is followed:
@@ -290,13 +290,13 @@ public class RenderableImageOp implements RenderableImage {
      * createRendering() calls.
      * </ol>
      *
-     * <p> If the elements of the source Vector of
+     * If the elements of the source Vector of
      * the ParameterBlock used to construct the RenderableImageOp are
      * instances of RenderedImage, then the CRIF.create() method is
      * called immediately using the original ParameterBlock.
      * This provides a basis case for the recursion.
      *
-     * <p> The created RenderedImage may have a property identified
+     * The created RenderedImage may have a property identified
      * by the String HINTS_OBSERVED to indicate which RenderingHints
      * (from the RenderContext) were used to create the image.
      * In addition any RenderedImages

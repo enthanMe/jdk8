@@ -177,7 +177,7 @@ public class RoleUnresolvedList extends ArrayList<Object> {
      *
      * @exception IllegalArgumentException  if the unresolved role is null.
      * @exception IndexOutOfBoundsException if index is out of range
-     * (<code>index &lt; 0 || index &gt; size()</code>).
+     * (<code>index < 0 || index > size()</code>).
      */
     public void add(int index,
                     RoleUnresolved role)
@@ -203,7 +203,7 @@ public class RoleUnresolvedList extends ArrayList<Object> {
      *
      * @exception IllegalArgumentException   if the unresolved role is null.
      * @exception IndexOutOfBoundsException if index is out of range
-     * (<code>index &lt; 0 || index &gt;= size()</code>).
+     * (<code>index < 0 || index >= size()</code>).
      */
      public void set(int index,
                      RoleUnresolved role)
@@ -254,7 +254,7 @@ public class RoleUnresolvedList extends ArrayList<Object> {
      *
      * @exception IllegalArgumentException  if the role is null.
      * @exception IndexOutOfBoundsException if index is out of range
-     * (<code>index &lt; 0 || index &gt; size()</code>).
+     * (<code>index < 0 || index > size()</code>).
      */
     public boolean addAll(int index,
                           RoleUnresolvedList roleList)

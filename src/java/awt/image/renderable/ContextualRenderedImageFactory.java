@@ -46,10 +46,10 @@ import java.awt.image.RenderedImage;
  * The name ContextualRenderedImageFactory is commonly shortened to
  * "CRIF."
  *
- * <p> All operations that are to be used in a rendering-independent
+ * All operations that are to be used in a rendering-independent
  * chain must implement ContextualRenderedImageFactory.
  *
- * <p> Classes that implement this interface must provide a
+ * Classes that implement this interface must provide a
  * constructor with no arguments.
  */
 public interface ContextualRenderedImageFactory extends RenderedImageFactory {

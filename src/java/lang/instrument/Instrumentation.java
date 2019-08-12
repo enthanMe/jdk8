@@ -48,11 +48,11 @@ import  java.util.jar.JarFile;
  * <code>Instrumentation</code> interface:
  *
  * <ol>
- *   <li><p> When a JVM is launched in a way that indicates an agent
+ *   <li>When a JVM is launched in a way that indicates an agent
  *     class. In that case an <code>Instrumentation</code> instance
  *     is passed to the <code>premain</code> method of the agent class.
  *     </p></li>
- *   <li><p> When a JVM provides a mechanism to start agents sometime
+ *   <li>When a JVM provides a mechanism to start agents sometime
  *     after the JVM is launched. In that case an <code>Instrumentation</code>
  *     instance is passed to the <code>agentmain</code> method of the
  *     agent code. </p> </li>
@@ -417,14 +417,14 @@ public interface Instrumentation {
      * Specifies a JAR file with instrumentation classes to be defined by the
      * bootstrap class loader.
      *
-     * <p> When the virtual machine's built-in class loader, known as the "bootstrap
+     * When the virtual machine's built-in class loader, known as the "bootstrap
      * class loader", unsuccessfully searches for a class, the entries in the {@link
      * java.util.jar.JarFile JAR file} will be searched as well.
      *
-     * <p> This method may be used multiple times to add multiple JAR files to be
+     * This method may be used multiple times to add multiple JAR files to be
      * searched in the order that this method was invoked.
      *
-     * <p> The agent should take care to ensure that the JAR does not contain any
+     * The agent should take care to ensure that the JAR does not contain any
      * classes or resources other than those to be defined by the bootstrap
      * class loader for the purpose of instrumentation.
      * Failure to observe this warning could result in unexpected
@@ -473,10 +473,10 @@ public interface Instrumentation {
      * unsuccessfully searches for a class, the entries in the {@link
      * java.util.jar.JarFile JarFile} will be searched as well.
      *
-     * <p> This method may be used multiple times to add multiple JAR files to be
+     * This method may be used multiple times to add multiple JAR files to be
      * searched in the order that this method was invoked.
      *
-     * <p> The agent should take care to ensure that the JAR does not contain any
+     * The agent should take care to ensure that the JAR does not contain any
      * classes or resources other than those to be defined by the system class
      * loader for the purpose of instrumentation.
      * Failure to observe this warning could result in unexpected
@@ -484,7 +484,7 @@ public interface Instrumentation {
      * {@link #appendToBootstrapClassLoaderSearch
      * appendToBootstrapClassLoaderSearch}).
      *
-     * <p> The system class loader supports adding a JAR file to be searched if
+     * The system class loader supports adding a JAR file to be searched if
      * it implements a method named <code>appendToClassPathForInstrumentation</code>
      * which takes a single parameter of type <code>java.lang.String</code>. The
      * method is not required to have <code>public</code> access. The name of
@@ -502,7 +502,7 @@ public interface Instrumentation {
      * unsuccessfully attempted to resolve a reference, then subsequent attempts to
      * resolve that reference will fail with the same error as the initial attempt.
      *
-     * <p> This method does not change the value of <code>java.class.path</code>
+     * This method does not change the value of <code>java.class.path</code>
      * {@link java.lang.System#getProperties system property}.
      *
      * @param   jarfile

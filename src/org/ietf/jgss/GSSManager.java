@@ -70,8 +70,8 @@ import java.security.Provider;
  * The <code>GSSManager</code> class has two methods that enable these modes of
  * usage:  {@link #addProviderAtFront(Provider, Oid) addProviderAtFront} and
  * {@link #addProviderAtEnd(Provider, Oid) addProviderAtEnd}. These methods
- * have the effect of creating an ordered list of <i>&lt;provider,
- * oid&gt;</i> pairs  where each pair indicates a preference of provider
+ * have the effect of creating an ordered list of <i><provider,
+ * oid></i> pairs  where each pair indicates a preference of provider
  * for a given oid.<p>
  *
  * It is important to note that there are certain interactions

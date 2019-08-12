@@ -37,29 +37,29 @@ import java.util.Map;
  * <a href="http://www.w3.org/TR/xmldsig-filter2">
  * W3C Recommendation for XML-Signature XPath Filter 2.0</a>:
  * <pre><code>
- * &lt;schema xmlns="http://www.w3.org/2001/XMLSchema"
+ * <schema xmlns="http://www.w3.org/2001/XMLSchema"
  *         xmlns:xf="http://www.w3.org/2002/06/xmldsig-filter2"
  *         targetNamespace="http://www.w3.org/2002/06/xmldsig-filter2"
- *         version="0.1" elementFormDefault="qualified"&gt;
+ *         version="0.1" elementFormDefault="qualified">
  *
- * &lt;element name="XPath"
- *          type="xf:XPathType"/&gt;
+ * <element name="XPath"
+ *          type="xf:XPathType"/>
  *
- * &lt;complexType name="XPathType"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="string"&gt;
- *       &lt;attribute name="Filter"&gt;
- *         &lt;simpleType&gt;
- *           &lt;restriction base="string"&gt;
- *             &lt;enumeration value="intersect"/&gt;
- *             &lt;enumeration value="subtract"/&gt;
- *             &lt;enumeration value="union"/&gt;
- *           &lt;/restriction&gt;
- *         &lt;/simpleType&gt;
- *       &lt;/attribute&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * <complexType name="XPathType">
+ *   <simpleContent>
+ *     <extension base="string">
+ *       <attribute name="Filter">
+ *         <simpleType>
+ *           <restriction base="string">
+ *             <enumeration value="intersect"/>
+ *             <enumeration value="subtract"/>
+ *             <enumeration value="union"/>
+ *           </restriction>
+ *         </simpleType>
+ *       </attribute>
+ *     </extension>
+ *   </simpleContent>
+ * </complexType>
  * </code></pre>
  *
  * @author Sean Mullan

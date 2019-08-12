@@ -62,18 +62,18 @@ import java.lang.annotation.Target;
  *
  * The generated WSDL looks like:
  * <pre>
- *   &lt;definitions targetNamespace="http://example.com/numbers" ...>
+ *   <definitions targetNamespace="http://example.com/numbers" ...>
  *     ...
- *     &lt;portType name="AddNumbersPortType">
- *       &lt;operation name="AddNumbers">
- *         &lt;input message="tns:AddNumbersInput" name="foo"
+ *     <portType name="AddNumbersPortType">
+ *       <operation name="AddNumbers">
+ *         <input message="tns:AddNumbersInput" name="foo"
  *           <b>wsam:Action="http://example.com/inputAction"</b>/>
- *         &lt;output message="tns:AddNumbersOutput" name="bar"
+ *         <output message="tns:AddNumbersOutput" name="bar"
  *           <b>wsam:Action="http://example.com/outputAction"</b>/>
- *       &lt;/operation>
- *     &lt;/portType>
+ *       </operation>
+ *     </portType>
  *     ...
- *   &lt;/definitions>
+ *   </definitions>
  * </pre>
  *
  * <p>
@@ -93,18 +93,18 @@ import java.lang.annotation.Target;
  *
  * The generated WSDL looks like:
  * <pre>
- *   &lt;definitions targetNamespace="http://example.com/numbers" ...>
+ *   <definitions targetNamespace="http://example.com/numbers" ...>
  *     ...
- *     &lt;portType name="AddNumbersPortType">
- *       &lt;operation name="AddNumbers">
- *         &lt;input message="tns:AddNumbersInput" name="foo"
+ *     <portType name="AddNumbersPortType">
+ *       <operation name="AddNumbers">
+ *         <input message="tns:AddNumbersInput" name="foo"
  *           <b>wsam:Action="http://example.com/inputAction"</b> />
- *         &lt;output message="tns:AddNumbersOutput" name="bar"
+ *         <output message="tns:AddNumbersOutput" name="bar"
  *           <b>wsam:Action="http://example.com/numbers/AddNumbersPortType/AddNumbersResponse"</b>/>
- *       &lt;/operation>
- *     &lt;/portType>
+ *       </operation>
+ *     </portType>
  *     ...
- *   &lt;/definitions>
+ *   </definitions>
  * </pre>
  *
  * It is legitimate to specify an explicit value for <code>Action</code> message addressing property for

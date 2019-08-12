@@ -37,7 +37,7 @@ import java.nio.channels.spi.SelectorProvider;
 /**
  * A selectable channel for datagram-oriented sockets.
  *
- * <p> A datagram channel is created by invoking one of the {@link #open open} methods
+ * A datagram channel is created by invoking one of the {@link #open open} methods
  * of this class. It is not possible to create a channel for an arbitrary,
  * pre-existing datagram socket. A newly-created datagram channel is open but not
  * connected. A datagram channel need not be connected in order for the {@link #send
@@ -49,11 +49,11 @@ import java.nio.channels.spi.SelectorProvider;
  * #write(java.nio.ByteBuffer) write} methods, since those methods do not
  * accept or return socket addresses.
  *
- * <p> Once connected, a datagram channel remains connected until it is
+ * Once connected, a datagram channel remains connected until it is
  * disconnected or closed.  Whether or not a datagram channel is connected may
  * be determined by invoking its {@link #isConnected isConnected} method.
  *
- * <p> Socket options are configured using the {@link #setOption(SocketOption,Object)
+ * Socket options are configured using the {@link #setOption(SocketOption,Object)
  * setOption} method. A datagram channel to an Internet Protocol socket supports
  * the following options:
  * <blockquote>
@@ -101,7 +101,7 @@ import java.nio.channels.spi.SelectorProvider;
  * </blockquote>
  * Additional (implementation specific) options may also be supported.
  *
- * <p> Datagram channels are safe for use by multiple concurrent threads.  They
+ * Datagram channels are safe for use by multiple concurrent threads.  They
  * support concurrent reading and writing, though at most one thread may be
  * reading and at most one thread may be writing at any given time.  </p>
  *
@@ -128,13 +128,13 @@ public abstract class DatagramChannel
     /**
      * Opens a datagram channel.
      *
-     * <p> The new channel is created by invoking the {@link
+     * The new channel is created by invoking the {@link
      * java.nio.channels.spi.SelectorProvider#openDatagramChannel()
      * openDatagramChannel} method of the system-wide default {@link
      * java.nio.channels.spi.SelectorProvider} object.  The channel will not be
      * connected.
      *
-     * <p> The {@link ProtocolFamily ProtocolFamily} of the channel's socket
+     * The {@link ProtocolFamily ProtocolFamily} of the channel's socket
      * is platform (and possibly configuration) dependent and therefore unspecified.
      * The {@link #open(ProtocolFamily) open} allows the protocol family to be
      * selected when opening a datagram channel, and should be used to open
@@ -152,12 +152,12 @@ public abstract class DatagramChannel
     /**
      * Opens a datagram channel.
      *
-     * <p> The {@code family} parameter is used to specify the {@link
+     * The {@code family} parameter is used to specify the {@link
      * ProtocolFamily}. If the datagram channel is to be used for IP multicasting
      * then this should correspond to the address type of the multicast groups
      * that this channel will join.
      *
-     * <p> The new channel is created by invoking the {@link
+     * The new channel is created by invoking the {@link
      * java.nio.channels.spi.SelectorProvider#openDatagramChannel(ProtocolFamily)
      * openDatagramChannel} method of the system-wide default {@link
      * java.nio.channels.spi.SelectorProvider} object.  The channel will not be
@@ -186,7 +186,7 @@ public abstract class DatagramChannel
      * Returns an operation set identifying this channel's supported
      * operations.
      *
-     * <p> Datagram channels support reading and writing, so this method
+     * Datagram channels support reading and writing, so this method
      * returns <tt>(</tt>{@link SelectionKey#OP_READ} <tt>|</tt>&nbsp;{@link
      * SelectionKey#OP_WRITE}<tt>)</tt>.  </p>
      *
@@ -229,7 +229,7 @@ public abstract class DatagramChannel
     /**
      * Retrieves a datagram socket associated with this channel.
      *
-     * <p> The returned object will not declare any public methods that are not
+     * The returned object will not declare any public methods that are not
      * declared in the {@link java.net.DatagramSocket} class.  </p>
      *
      * @return  A datagram socket associated with this channel
@@ -247,13 +247,13 @@ public abstract class DatagramChannel
     /**
      * Connects this channel's socket.
      *
-     * <p> The channel's socket is configured so that it only receives
+     * The channel's socket is configured so that it only receives
      * datagrams from, and sends datagrams to, the given remote <i>peer</i>
      * address.  Once connected, datagrams may not be received from or sent to
      * any other address.  A datagram socket remains connected until it is
      * explicitly disconnected or until it is closed.
      *
-     * <p> This method performs exactly the same security checks as the {@link
+     * This method performs exactly the same security checks as the {@link
      * java.net.DatagramSocket#connect connect} method of the {@link
      * java.net.DatagramSocket} class.  That is, if a security manager has been
      * installed then this method verifies that its {@link
@@ -262,7 +262,7 @@ public abstract class DatagramChannel
      * datagrams to be received from and sent to, respectively, the given
      * remote address.
      *
-     * <p> This method may be invoked at any time.  It will not have any effect
+     * This method may be invoked at any time.  It will not have any effect
      * on read or write operations that are already in progress at the moment
      * that it is invoked. If this channel's socket is not bound then this method
      * will first cause the socket to be bound to an address that is assigned
@@ -300,15 +300,15 @@ public abstract class DatagramChannel
     /**
      * Disconnects this channel's socket.
      *
-     * <p> The channel's socket is configured so that it can receive datagrams
+     * The channel's socket is configured so that it can receive datagrams
      * from, and sends datagrams to, any remote address so long as the security
      * manager, if installed, permits it.
      *
-     * <p> This method may be invoked at any time.  It will not have any effect
+     * This method may be invoked at any time.  It will not have any effect
      * on read or write operations that are already in progress at the moment
      * that it is invoked.
      *
-     * <p> If this channel's socket is not connected, or if the channel is
+     * If this channel's socket is not connected, or if the channel is
      * closed, then invoking this method has no effect.  </p>
      *
      * @return  This datagram channel
@@ -336,20 +336,20 @@ public abstract class DatagramChannel
     /**
      * Receives a datagram via this channel.
      *
-     * <p> If a datagram is immediately available, or if this channel is in
+     * If a datagram is immediately available, or if this channel is in
      * blocking mode and one eventually becomes available, then the datagram is
      * copied into the given byte buffer and its source address is returned.
      * If this channel is in non-blocking mode and a datagram is not
      * immediately available then this method immediately returns
      * <tt>null</tt>.
      *
-     * <p> The datagram is transferred into the given byte buffer starting at
+     * The datagram is transferred into the given byte buffer starting at
      * its current position, as if by a regular {@link
      * ReadableByteChannel#read(java.nio.ByteBuffer) read} operation.  If there
      * are fewer bytes remaining in the buffer than are required to hold the
      * datagram then the remainder of the datagram is silently discarded.
      *
-     * <p> This method performs exactly the same security checks as the {@link
+     * This method performs exactly the same security checks as the {@link
      * java.net.DatagramSocket#receive receive} method of the {@link
      * java.net.DatagramSocket} class.  That is, if the socket is not connected
      * to a specific remote address and a security manager has been installed
@@ -359,7 +359,7 @@ public abstract class DatagramChannel
      * of this security check can be avoided by first connecting the socket via
      * the {@link #connect connect} method.
      *
-     * <p> This method may be invoked at any time.  If another thread has
+     * This method may be invoked at any time.  If another thread has
      * already initiated a read operation upon this channel, however, then an
      * invocation of this method will block until the first operation is
      * complete. If this channel's socket is not bound then this method will
@@ -400,16 +400,16 @@ public abstract class DatagramChannel
     /**
      * Sends a datagram via this channel.
      *
-     * <p> If this channel is in non-blocking mode and there is sufficient room
+     * If this channel is in non-blocking mode and there is sufficient room
      * in the underlying output buffer, or if this channel is in blocking mode
      * and sufficient room becomes available, then the remaining bytes in the
      * given buffer are transmitted as a single datagram to the given target
      * address.
      *
-     * <p> The datagram is transferred from the byte buffer as if by a regular
+     * The datagram is transferred from the byte buffer as if by a regular
      * {@link WritableByteChannel#write(java.nio.ByteBuffer) write} operation.
      *
-     * <p> This method performs exactly the same security checks as the {@link
+     * This method performs exactly the same security checks as the {@link
      * java.net.DatagramSocket#send send} method of the {@link
      * java.net.DatagramSocket} class.  That is, if the socket is not connected
      * to a specific remote address and a security manager has been installed
@@ -419,7 +419,7 @@ public abstract class DatagramChannel
      * overhead of this security check can be avoided by first connecting the
      * socket via the {@link #connect connect} method.
      *
-     * <p> This method may be invoked at any time.  If another thread has
+     * This method may be invoked at any time.  If another thread has
      * already initiated a write operation upon this channel, however, then an
      * invocation of this method will block until the first operation is
      * complete. If this channel's socket is not bound then this method will
@@ -469,7 +469,7 @@ public abstract class DatagramChannel
     /**
      * Reads a datagram from this channel.
      *
-     * <p> This method may only be invoked if this channel's socket is
+     * This method may only be invoked if this channel's socket is
      * connected, and it only accepts datagrams from the socket's peer.  If
      * there are more bytes in the datagram than remain in the given buffer
      * then the remainder of the datagram is silently discarded.  Otherwise
@@ -484,7 +484,7 @@ public abstract class DatagramChannel
     /**
      * Reads a datagram from this channel.
      *
-     * <p> This method may only be invoked if this channel's socket is
+     * This method may only be invoked if this channel's socket is
      * connected, and it only accepts datagrams from the socket's peer.  If
      * there are more bytes in the datagram than remain in the given buffers
      * then the remainder of the datagram is silently discarded.  Otherwise
@@ -500,7 +500,7 @@ public abstract class DatagramChannel
     /**
      * Reads a datagram from this channel.
      *
-     * <p> This method may only be invoked if this channel's socket is
+     * This method may only be invoked if this channel's socket is
      * connected, and it only accepts datagrams from the socket's peer.  If
      * there are more bytes in the datagram than remain in the given buffers
      * then the remainder of the datagram is silently discarded.  Otherwise
@@ -517,7 +517,7 @@ public abstract class DatagramChannel
     /**
      * Writes a datagram to this channel.
      *
-     * <p> This method may only be invoked if this channel's socket is
+     * This method may only be invoked if this channel's socket is
      * connected, in which case it sends datagrams directly to the socket's
      * peer.  Otherwise it behaves exactly as specified in the {@link
      * WritableByteChannel} interface.  </p>
@@ -530,7 +530,7 @@ public abstract class DatagramChannel
     /**
      * Writes a datagram to this channel.
      *
-     * <p> This method may only be invoked if this channel's socket is
+     * This method may only be invoked if this channel's socket is
      * connected, in which case it sends datagrams directly to the socket's
      * peer.  Otherwise it behaves exactly as specified in the {@link
      * GatheringByteChannel} interface.  </p>
@@ -550,7 +550,7 @@ public abstract class DatagramChannel
     /**
      * Writes a datagram to this channel.
      *
-     * <p> This method may only be invoked if this channel's socket is
+     * This method may only be invoked if this channel's socket is
      * connected, in which case it sends datagrams directly to the socket's
      * peer.  Otherwise it behaves exactly as specified in the {@link
      * GatheringByteChannel} interface.  </p>

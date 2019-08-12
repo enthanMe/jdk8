@@ -33,7 +33,7 @@ import java.util.List;
  *
  * <p>
  * &#064;see "string" <br>
- * &#064;see &lt;a href="URL#value"&gt; label &lt;/a&gt; <br>
+ * &#064;see <a href="URL#value"> label </a> <br>
  * &#064;see reference
  *
  * @since 1.8

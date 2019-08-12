@@ -66,7 +66,7 @@ import com.sun.org.apache.bcel.internal.util.ByteSequence;
 
 /**
  * INVOKEINTERFACE - Invoke interface method
- * <PRE>Stack: ..., objectref, [arg1, [arg2 ...]] -&gt; ...</PRE>
+ * <PRE>Stack: ..., objectref, [arg1, [arg2 ...]] -> ...</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

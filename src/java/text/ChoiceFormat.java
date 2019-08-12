@@ -50,7 +50,7 @@ import java.util.Arrays;
  * specifies a half-open interval up to the next item:
  * <blockquote>
  * <pre>
- * X matches j if and only if limit[j] &le; X &lt; limit[j+1]
+ * X matches j if and only if limit[j] &le; X < limit[j+1]
  * </pre>
  * </blockquote>
  * If there is no match, then either the first or last index is used, depending

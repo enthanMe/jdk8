@@ -34,7 +34,7 @@ import javax.imageio.ImageReader;
  * warnings (non-fatal errors).  Fatal errors cause the relevant
  * read method to throw an <code>IIOException</code>.
  *
- * <p> Localization is handled by associating a <code>Locale</code>
+ * Localization is handled by associating a <code>Locale</code>
  * with each <code>IIOReadWarningListener</code> as it is registered
  * with an <code>ImageReader</code>.  It is up to the
  * <code>ImageReader</code> to provide localized messages.

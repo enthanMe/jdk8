@@ -34,7 +34,7 @@ import java.lang.annotation.Target;
  * <p>
  * A container for multiple @{@link XmlSchemaType} annotations.
  *
- * <p> Multiple annotations of the same type are not allowed on a program
+ * Multiple annotations of the same type are not allowed on a program
  * element. This annotation therefore serves as a container annotation
  * for multiple &#64;XmlSchemaType annotations as follows:
  *

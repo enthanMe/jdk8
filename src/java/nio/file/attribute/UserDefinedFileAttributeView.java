@@ -37,7 +37,7 @@ import java.io.IOException;
  * that support such a capability directly but may be emulated. The details of
  * such emulation are highly implementation specific and therefore not specified.
  *
- * <p> This {@code FileAttributeView} provides a view of a file's user-defined
+ * This {@code FileAttributeView} provides a view of a file's user-defined
  * attributes as a set of name/value pairs, where the attribute name is
  * represented by a {@code String}. An implementation may require to encode and
  * decode from the platform or file system representation when accessing the
@@ -47,18 +47,18 @@ import java.io.IOException;
  * intended for use where the size of an attribute value is larger than {@link
  * Integer#MAX_VALUE}.
  *
- * <p> User-defined attributes may be used in some implementations to store
+ * User-defined attributes may be used in some implementations to store
  * security related attributes so consequently, in the case of the default
  * provider at least, all methods that access user-defined attributes require the
  * {@code RuntimePermission("accessUserDefinedAttributes")} permission when a
  * security manager is installed.
  *
- * <p> The {@link java.nio.file.FileStore#supportsFileAttributeView
+ * The {@link java.nio.file.FileStore#supportsFileAttributeView
  * supportsFileAttributeView} method may be used to test if a specific {@link
  * java.nio.file.FileStore FileStore} supports the storage of user-defined
  * attributes.
  *
- * <p> Where dynamic access to file attributes is required, the {@link
+ * Where dynamic access to file attributes is required, the {@link
  * java.nio.file.Files#getAttribute getAttribute} method may be used to read
  * the attribute value. The attribute value is returned as a byte array (byte[]).
  * The {@link java.nio.file.Files#setAttribute setAttribute} method may be used
@@ -119,7 +119,7 @@ public interface UserDefinedFileAttributeView
     /**
      * Read the value of a user-defined attribute into a buffer.
      *
-     * <p> This method reads the value of the attribute into the given buffer
+     * This method reads the value of the attribute into the given buffer
      * as a sequence of bytes, failing if the number of bytes remaining in
      * the buffer is insufficient to read the complete attribute value. The
      * number of bytes transferred into the buffer is {@code n}, where {@code n}
@@ -128,7 +128,7 @@ public interface UserDefinedFileAttributeView
      * {@code p} is the buffer's position. Upon return the buffer's position
      * will be equal to {@code p + n}; its limit will not have changed.
      *
-     * <p> <b>Usage Example:</b>
+     * <b>Usage Example:</b>
      * Suppose we want to read a file's MIME type that is stored as a user-defined
      * attribute with the name "{@code user.mimetype}".
      * <pre>
@@ -167,7 +167,7 @@ public interface UserDefinedFileAttributeView
     /**
      * Writes the value of a user-defined attribute from a buffer.
      *
-     * <p> This method writes the value of the attribute from a given buffer as
+     * This method writes the value of the attribute from a given buffer as
      * a sequence of bytes. The size of the value to transfer is {@code r},
      * where {@code r} is the number of bytes remaining in the buffer, that is
      * {@code src.remaining()}. The sequence of bytes is transferred from the
@@ -176,17 +176,17 @@ public interface UserDefinedFileAttributeView
      * p + n}, where {@code n} is the number of bytes transferred; its limit
      * will not have changed.
      *
-     * <p> If an attribute of the given name already exists then its value is
+     * If an attribute of the given name already exists then its value is
      * replaced. If the attribute does not exist then it is created. If it
      * implementation specific if a test to check for the existence of the
      * attribute and the creation of attribute are atomic with respect to other
      * file system activities.
      *
-     * <p> Where there is insufficient space to store the attribute, or the
+     * Where there is insufficient space to store the attribute, or the
      * attribute name or value exceed an implementation specific maximum size
      * then an {@code IOException} is thrown.
      *
-     * <p> <b>Usage Example:</b>
+     * <b>Usage Example:</b>
      * Suppose we want to write a file's MIME type as a user-defined attribute:
      * <pre>
      *    UserDefinedFileAttributeView view =

@@ -26,7 +26,7 @@
 package javax.security.auth.callback;
 
 /**
- * <p> Underlying security services instantiate and pass a
+ * Underlying security services instantiate and pass a
  * {@code TextOutputCallback} to the {@code handle}
  * method of a {@code CallbackHandler} to display information messages,
  * warning messages and error messages.

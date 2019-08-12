@@ -60,7 +60,7 @@ package com.sun.org.apache.bcel.internal.generic;
 
 /**
  * DUP - Duplicate top operand stack word
- * <PRE>Stack: ..., word -&gt; ..., word, word</PRE>
+ * <PRE>Stack: ..., word -> ..., word, word</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

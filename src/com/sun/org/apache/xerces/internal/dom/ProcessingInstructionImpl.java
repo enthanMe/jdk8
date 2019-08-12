@@ -115,7 +115,7 @@ public class ProcessingInstructionImpl
      * immediately after the target -- @see getTarget().
      * <p>
      * In HTML, the data begins with the character immediately after the
-     * "&lt;?" token that begins the PI.
+     * "<?" token that begins the PI.
      * <p>
      * Note that getNodeValue is aliased to getData
      */

@@ -34,7 +34,7 @@ import java.awt.Rectangle;
  * methods that are shared by <code>ImageReadParam</code> and
  * <code>ImageWriteParam</code>.
  *
- * <p> This class provides mechanisms to specify a source region and a
+ * This class provides mechanisms to specify a source region and a
  * destination region.  When reading, the source is the stream and
  * the in-memory image is the destination.  When writing, these are
  * reversed.  In the case of writing, destination regions may be used
@@ -150,12 +150,12 @@ public abstract class IIOParam {
      * If subsampling has been set such that this number is zero,
      * an <code>IllegalStateException</code> will be thrown.
      *
-     * <p> The source region of interest specified by this method will
+     * The source region of interest specified by this method will
      * be clipped as needed to fit within the source bounds, as well
      * as the destination offsets, width, and height at the time of
      * actual I/O.
      *
-     * <p> A value of <code>null</code> for <code>sourceRegion</code>
+     * A value of <code>null</code> for <code>sourceRegion</code>
      * will remove any region specification, causing the entire image
      * to be used.
      *
@@ -243,7 +243,7 @@ public abstract class IIOParam {
      * regions that will be assembled into a complete subsampled image.
      * Most users will want to simply leave these parameters at 0.
      *
-     * <p> The number of pixels and scanlines to be used are calculated
+     * The number of pixels and scanlines to be used are calculated
      * as follows.
      * <p>
      * The number of subsampled pixels in a scanline is given by
@@ -269,16 +269,16 @@ public abstract class IIOParam {
      * <br>
      * grid offset = [period - (region offset modulo period)] modulo period)
      *
-     * <p> If either <code>sourceXSubsampling</code> or
+     * If either <code>sourceXSubsampling</code> or
      * <code>sourceYSubsampling</code> is 0 or negative, an
      * <code>IllegalArgumentException</code> will be thrown.
      *
-     * <p> If either <code>subsamplingXOffset</code> or
+     * If either <code>subsamplingXOffset</code> or
      * <code>subsamplingYOffset</code> is negative or greater than or
      * equal to the corresponding period, an
      * <code>IllegalArgumentException</code> will be thrown.
      *
-     * <p> There is no <code>unsetSourceSubsampling</code> method;
+     * There is no <code>unsetSourceSubsampling</code> method;
      * simply call <code>setSourceSubsampling(1, 1, 0, 0)</code> to
      * restore default values.
      *
@@ -395,10 +395,10 @@ public abstract class IIOParam {
      * Sets the indices of the source bands to be used.  Duplicate
      * indices are not allowed.
      *
-     * <p> A <code>null</code> value indicates that all source bands
+     * A <code>null</code> value indicates that all source bands
      * will be used.
      *
-     * <p> At the time of reading, an
+     * At the time of reading, an
      * <code>IllegalArgumentException</code> will be thrown by the
      * reader or writer if a value larger than the largest available
      * source band index has been specified or if the number of source
@@ -406,7 +406,7 @@ public abstract class IIOParam {
      * <code>ImageReader.checkReadParamBandSettings</code> method may
      * be used to automate this test.
      *
-     * <p> Semantically, a copy is made of the array; changes to the
+     * Semantically, a copy is made of the array; changes to the
      * array contents subsequent to this call have no effect on
      * this <code>IIOParam</code>.
      *
@@ -447,7 +447,7 @@ public abstract class IIOParam {
      * <code>setSourceBands</code>, or <code>null</code> if there have
      * been no calls to <code>setSourceBands</code>.
      *
-     * <p> Semantically, the array returned is a copy; changes to
+     * Semantically, the array returned is a copy; changes to
      * array contents subsequent to this call have no effect on this
      * <code>IIOParam</code>.
      *
@@ -467,7 +467,7 @@ public abstract class IIOParam {
      * Sets the desired image type for the destination image, using an
      * <code>ImageTypeSpecifier</code>.
      *
-     * <p> When reading, if the layout of the destination has been set
+     * When reading, if the layout of the destination has been set
      * using this method, each call to an <code>ImageReader</code>
      * <code>read</code> method will return a new
      * <code>BufferedImage</code> using the format specified by the
@@ -478,7 +478,7 @@ public abstract class IIOParam {
      * method may be thought of as calling
      * <code>setDestination((BufferedImage)null)</code>.
      *
-     * <p> When writing, the destination type maybe used to determine
+     * When writing, the destination type maybe used to determine
      * the color type of the image.  The <code>SampleModel</code>
      * information will be ignored, and may be <code>null</code>.  For
      * example, a 4-banded image could represent either CMYK or RGBA
@@ -519,18 +519,18 @@ public abstract class IIOParam {
      * decoded pixels are to be placed, when reading, or where a
      * region will be written, when writing.
      *
-     * <p> When reading, the region to be written within the
+     * When reading, the region to be written within the
      * destination <code>BufferedImage</code> will start at this
      * offset and have a width and height determined by the source
      * region of interest, the subsampling parameters, and the
      * destination bounds.
      *
-     * <p> Normal writes are not affected by this method, only writes
+     * Normal writes are not affected by this method, only writes
      * performed using <code>ImageWriter.replacePixels</code>.  For
      * such writes, the offset specified is within the output stream
      * image whose pixels are being modified.
      *
-     * <p> There is no <code>unsetDestinationOffset</code> method;
+     * There is no <code>unsetDestinationOffset</code> method;
      * simply call <code>setDestinationOffset(new Point(0, 0))</code> to
      * restore default values.
      *
@@ -554,7 +554,7 @@ public abstract class IIOParam {
      * Returns the offset in the destination image at which pixels are
      * to be placed.
      *
-     * <p> If <code>setDestinationOffsets</code> has not been called,
+     * If <code>setDestinationOffsets</code> has not been called,
      * a <code>Point</code> with zero X and Y values is returned
      * (which is the correct value).
      *
@@ -652,7 +652,7 @@ public abstract class IIOParam {
      * returned, no settings in this object will have been disturbed
      * (<i>i.e.</i>, the user canceled the operation).
      *
-     * <p> Ordinarily, the controller will be a GUI providing a user
+     * Ordinarily, the controller will be a GUI providing a user
      * interface for a subclass of <code>IIOParam</code> for a
      * particular plug-in.  Controllers need not be GUIs, however.
      *

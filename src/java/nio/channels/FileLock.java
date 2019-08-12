@@ -30,7 +30,7 @@ import java.io.IOException;
 /**
  * A token representing a lock on a region of a file.
  *
- * <p> A file-lock object is created each time a lock is acquired on a file via
+ * A file-lock object is created each time a lock is acquired on a file via
  * one of the {@link FileChannel#lock(long,long,boolean) lock} or {@link
  * FileChannel#tryLock(long,long,boolean) tryLock} methods of the
  * {@link FileChannel} class, or the {@link
@@ -38,48 +38,48 @@ import java.io.IOException;
  * or {@link AsynchronousFileChannel#tryLock(long,long,boolean) tryLock}
  * methods of the {@link AsynchronousFileChannel} class.
  *
- * <p> A file-lock object is initially valid.  It remains valid until the lock
+ * A file-lock object is initially valid.  It remains valid until the lock
  * is released by invoking the {@link #release release} method, by closing the
  * channel that was used to acquire it, or by the termination of the Java
  * virtual machine, whichever comes first.  The validity of a lock may be
  * tested by invoking its {@link #isValid isValid} method.
  *
- * <p> A file lock is either <i>exclusive</i> or <i>shared</i>.  A shared lock
+ * A file lock is either <i>exclusive</i> or <i>shared</i>.  A shared lock
  * prevents other concurrently-running programs from acquiring an overlapping
  * exclusive lock, but does allow them to acquire overlapping shared locks.  An
  * exclusive lock prevents other programs from acquiring an overlapping lock of
  * either type.  Once it is released, a lock has no further effect on the locks
  * that may be acquired by other programs.
  *
- * <p> Whether a lock is exclusive or shared may be determined by invoking its
+ * Whether a lock is exclusive or shared may be determined by invoking its
  * {@link #isShared isShared} method.  Some platforms do not support shared
  * locks, in which case a request for a shared lock is automatically converted
  * into a request for an exclusive lock.
  *
- * <p> The locks held on a particular file by a single Java virtual machine do
+ * The locks held on a particular file by a single Java virtual machine do
  * not overlap.  The {@link #overlaps overlaps} method may be used to test
  * whether a candidate lock range overlaps an existing lock.
  *
- * <p> A file-lock object records the file channel upon whose file the lock is
+ * A file-lock object records the file channel upon whose file the lock is
  * held, the type and validity of the lock, and the position and size of the
  * locked region.  Only the validity of a lock is subject to change over time;
  * all other aspects of a lock's state are immutable.
  *
- * <p> File locks are held on behalf of the entire Java virtual machine.
+ * File locks are held on behalf of the entire Java virtual machine.
  * They are not suitable for controlling access to a file by multiple
  * threads within the same virtual machine.
  *
- * <p> File-lock objects are safe for use by multiple concurrent threads.
+ * File-lock objects are safe for use by multiple concurrent threads.
  *
  *
  * <a name="pdep"></a><h2> Platform dependencies </h2>
  *
- * <p> This file-locking API is intended to map directly to the native locking
+ * This file-locking API is intended to map directly to the native locking
  * facility of the underlying operating system.  Thus the locks held on a file
  * should be visible to all programs that have access to the file, regardless
  * of the language in which those programs are written.
  *
- * <p> Whether or not a lock actually prevents another program from accessing
+ * Whether or not a lock actually prevents another program from accessing
  * the content of the locked region is system-dependent and therefore
  * unspecified.  The native file-locking facilities of some systems are merely
  * <i>advisory</i>, meaning that programs must cooperatively observe a known
@@ -92,18 +92,18 @@ import java.io.IOException;
  * it is strongly recommended that the locks provided by this API be used as if
  * they were advisory locks.
  *
- * <p> On some systems, acquiring a mandatory lock on a region of a file
+ * On some systems, acquiring a mandatory lock on a region of a file
  * prevents that region from being {@link java.nio.channels.FileChannel#map
  * <i>mapped into memory</i>}, and vice versa.  Programs that combine
  * locking and mapping should be prepared for this combination to fail.
  *
- * <p> On some systems, closing a channel releases all locks held by the Java
+ * On some systems, closing a channel releases all locks held by the Java
  * virtual machine on the underlying file regardless of whether the locks were
  * acquired via that channel or via another channel open on the same file.  It
  * is strongly recommended that, within a program, a unique channel be used to
  * acquire all locks on any given file.
  *
- * <p> Some network filesystems permit file locking to be used with
+ * Some network filesystems permit file locking to be used with
  * memory-mapped files only when the locked regions are page-aligned and a
  * whole multiple of the underlying hardware's page size.  Some network
  * filesystems do not implement file locks on regions that extend past a
@@ -200,7 +200,7 @@ public abstract class FileLock implements AutoCloseable {
     /**
      * Returns the file channel upon whose file this lock was acquired.
      *
-     * <p> This method has been superseded by the {@link #acquiredBy acquiredBy}
+     * This method has been superseded by the {@link #acquiredBy acquiredBy}
      * method.
      *
      * @return  The file channel, or {@code null} if the file lock was not
@@ -225,7 +225,7 @@ public abstract class FileLock implements AutoCloseable {
      * Returns the position within the file of the first byte of the locked
      * region.
      *
-     * <p> A locked region need not be contained within, or even overlap, the
+     * A locked region need not be contained within, or even overlap, the
      * actual underlying file, so the value returned by this method may exceed
      * the file's current size.  </p>
      *
@@ -238,7 +238,7 @@ public abstract class FileLock implements AutoCloseable {
     /**
      * Returns the size of the locked region in bytes.
      *
-     * <p> A locked region need not be contained within, or even overlap, the
+     * A locked region need not be contained within, or even overlap, the
      * actual underlying file, so the value returned by this method may exceed
      * the file's current size.  </p>
      *
@@ -280,7 +280,7 @@ public abstract class FileLock implements AutoCloseable {
     /**
      * Tells whether or not this lock is valid.
      *
-     * <p> A lock object remains valid until it is released or the associated
+     * A lock object remains valid until it is released or the associated
      * file channel is closed, whichever comes first.  </p>
      *
      * @return  <tt>true</tt> if, and only if, this lock is valid
@@ -290,7 +290,7 @@ public abstract class FileLock implements AutoCloseable {
     /**
      * Releases this lock.
      *
-     * <p> If this lock object is valid then invoking this method releases the
+     * If this lock object is valid then invoking this method releases the
      * lock and renders the object invalid.  If this lock object is invalid
      * then invoking this method has no effect.  </p>
      *

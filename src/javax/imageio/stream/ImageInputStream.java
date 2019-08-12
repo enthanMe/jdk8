@@ -52,7 +52,7 @@ public interface ImageInputStream extends DataInput, Closeable {
      * value '0x01020304' using network byte order and the value
      * '0x04030201' under the reverse byte order.
      *
-     * <p> The enumeration class <code>java.nio.ByteOrder</code> is
+     * The enumeration class <code>java.nio.ByteOrder</code> is
      * used to specify the byte order.  A value of
      * <code>ByteOrder.BIG_ENDIAN</code> specifies so-called
      * big-endian or network byte order, in which the high-order byte
@@ -60,7 +60,7 @@ public interface ImageInputStream extends DataInput, Closeable {
      * format, while Intel processors store data in the reverse
      * <code>ByteOrder.LITTLE_ENDIAN</code> order.
      *
-     * <p> The byte order has no effect on the results returned from
+     * The byte order has no effect on the results returned from
      * the <code>readBits</code> method (or the value written by
      * <code>ImageOutputStream.writeBits</code>).
      *
@@ -94,7 +94,7 @@ public interface ImageInputStream extends DataInput, Closeable {
      * integer between 0 and 255.  If the end of the stream is
      * reached, -1 is returned.
      *
-     * <p> The bit offset within the stream is reset to zero before
+     * The bit offset within the stream is reset to zero before
      * the read occurs.
      *
      * @return a byte value from the stream, as an int, or -1 to
@@ -110,7 +110,7 @@ public interface ImageInputStream extends DataInput, Closeable {
      * number of bytes read is returned.  If no bytes can be read
      * because the end of the stream has been reached, -1 is returned.
      *
-     * <p> The bit offset within the stream is reset to zero before
+     * The bit offset within the stream is reset to zero before
      * the read occurs.
      *
      * @param b an array of bytes to be written to.
@@ -132,7 +132,7 @@ public interface ImageInputStream extends DataInput, Closeable {
      * because the end of the stream has been reached, <code>-1</code>
      * is returned.
      *
-     * <p> The bit offset within the stream is reset to zero before
+     * The bit offset within the stream is reset to zero before
      * the read occurs.
      *
      * @param b an array of bytes to be written to.
@@ -158,7 +158,7 @@ public interface ImageInputStream extends DataInput, Closeable {
      * The caller should not attempt to modify the data found in the
      * <code>IIOByteBuffer</code>.
      *
-     * <p> The bit offset within the stream is reset to zero before
+     * The bit offset within the stream is reset to zero before
      * the read occurs.
      *
      * @param buf an IIOByteBuffer object to be modified.
@@ -178,7 +178,7 @@ public interface ImageInputStream extends DataInput, Closeable {
      * value of <code>true</code> if it is nonzero, <code>false</code>
      * if it is zero.
      *
-     * <p> The bit offset within the stream is reset to zero before
+     * The bit offset within the stream is reset to zero before
      * the read occurs.
      *
      * @return a boolean value from the stream.
@@ -196,7 +196,7 @@ public interface ImageInputStream extends DataInput, Closeable {
      * <code>0x80</code> and <code>0xff</code> represent negative
      * values from <code>-128</code> to <code>/1</code>.
      *
-     * <p> The bit offset within the stream is reset to zero before
+     * The bit offset within the stream is reset to zero before
      * the read occurs.
      *
      * @return a signed byte value from the stream.
@@ -212,7 +212,7 @@ public interface ImageInputStream extends DataInput, Closeable {
      * any sign-extension bits, and returns it as a <code>byte</code>
      * value.
      *
-     * <p> Thus, byte values between <code>0x00</code> and
+     * Thus, byte values between <code>0x00</code> and
      * <code>0x7f</code> are simply returned as integer values between
      * <code>0</code> and <code>127</code>.  Values between
      * <code>0x80</code> and <code>0xff</code>, which normally
@@ -220,7 +220,7 @@ public interface ImageInputStream extends DataInput, Closeable {
      * positive integers between <code>128</code> and
      * <code>255</code>.
      *
-     * <p> The bit offset within the stream is reset to zero before
+     * The bit offset within the stream is reset to zero before
      * the read occurs.
      *
      * @return an unsigned byte value from the stream.
@@ -235,7 +235,7 @@ public interface ImageInputStream extends DataInput, Closeable {
      * concatenates them according to the current byte order, and
      * returns the result as a <code>short</code> value.
      *
-     * <p> The bit offset within the stream is reset to zero before
+     * The bit offset within the stream is reset to zero before
      * the read occurs.
      *
      * @return a signed short value from the stream.
@@ -256,7 +256,7 @@ public interface ImageInputStream extends DataInput, Closeable {
      * buts, and returns the result as an unsigned <code>int</code>
      * value.
      *
-     * <p> The bit offset within the stream is reset to zero before
+     * The bit offset within the stream is reset to zero before
      * the read occurs.
      *
      * @return an unsigned short value from the stream, as an int.
@@ -273,7 +273,7 @@ public interface ImageInputStream extends DataInput, Closeable {
      * Equivalent to <code>readUnsignedShort</code>, except that the
      * result is returned using the <code>char</code> datatype.
      *
-     * <p> The bit offset within the stream is reset to zero before
+     * The bit offset within the stream is reset to zero before
      * the read occurs.
      *
      * @return an unsigned char value from the stream.
@@ -291,7 +291,7 @@ public interface ImageInputStream extends DataInput, Closeable {
      * them according to the current byte order and returns the result
      * as an <code>int</code>.
      *
-     * <p> The bit offset within the stream is ignored and treated as
+     * The bit offset within the stream is ignored and treated as
      * though it were zero.
      *
      * @return a signed int value from the stream.
@@ -311,7 +311,7 @@ public interface ImageInputStream extends DataInput, Closeable {
      * strip off any sign-extension bits, and returns the result as an
      * unsigned <code>long</code> value.
      *
-     * <p> The bit offset within the stream is reset to zero before
+     * The bit offset within the stream is reset to zero before
      * the read occurs.
      *
      * @return an unsigned int value from the stream, as a long.
@@ -329,7 +329,7 @@ public interface ImageInputStream extends DataInput, Closeable {
      * them according to the current byte order and returns the result
      * as a <code>long</code>.
      *
-     * <p> The bit offset within the stream is reset to zero before
+     * The bit offset within the stream is reset to zero before
      * the read occurs.
      *
      * @return a signed long value from the stream.
@@ -347,7 +347,7 @@ public interface ImageInputStream extends DataInput, Closeable {
      * them according to the current byte order and returns the result
      * as a <code>float</code>.
      *
-     * <p> The bit offset within the stream is reset to zero before
+     * The bit offset within the stream is reset to zero before
      * the read occurs.
      *
      * @return a float value from the stream.
@@ -365,7 +365,7 @@ public interface ImageInputStream extends DataInput, Closeable {
      * them according to the current byte order and returns the result
      * as a <code>double</code>.
      *
-     * <p> The bit offset within the stream is reset to zero before
+     * The bit offset within the stream is reset to zero before
      * the read occurs.
      *
      * @return a double value from the stream.
@@ -387,7 +387,7 @@ public interface ImageInputStream extends DataInput, Closeable {
      * bytes, it does not support input of the full Unicode character
      * set.
      *
-     * <p> If end of file is encountered before even one byte can be
+     * If end of file is encountered before even one byte can be
      * read, then <code>null</code> is returned. Otherwise, each byte
      * that is read is converted to type <code>char</code> by
      * zero-extension. If the character <code>'\n'</code> is
@@ -403,7 +403,7 @@ public interface ImageInputStream extends DataInput, Closeable {
      * every character in this string will have a value less than
      * <code>&#92;u0100</code>, that is, <code>(char)256</code>.
      *
-     * <p> The bit offset within the stream is reset to zero before
+     * The bit offset within the stream is reset to zero before
      * the read occurs.
      *
      * @return a String containing a line of text from the stream.
@@ -421,7 +421,7 @@ public interface ImageInputStream extends DataInput, Closeable {
      * in modified UTF-8 format; this string of characters is
      * then returned as a <code>String</code>.
      *
-     * <p> First, two bytes are read and used to construct an unsigned
+     * First, two bytes are read and used to construct an unsigned
      * 16-bit integer in the manner of the
      * <code>readUnsignedShort</code> method, using network byte order
      * (regardless of the current byte order setting). This integer
@@ -432,12 +432,12 @@ public interface ImageInputStream extends DataInput, Closeable {
      * group. The byte following a group, if any, is the first byte of
      * the next group.
      *
-     * <p> If the first byte of a group matches the bit pattern
+     * If the first byte of a group matches the bit pattern
      * <code>0xxxxxxx</code> (where <code>x</code> means "may be
      * <code>0</code> or <code>1</code>"), then the group consists of
      * just that byte. The byte is zero-extended to form a character.
      *
-     * <p> If the first byte of a group matches the bit pattern
+     * If the first byte of a group matches the bit pattern
      * <code>110xxxxx</code>, then the group consists of that byte
      * <code>a</code> and a second byte <code>b</code>. If there is no
      * byte <code>b</code> (because byte <code>a</code> was the last
@@ -446,8 +446,8 @@ public interface ImageInputStream extends DataInput, Closeable {
      * <code>UTFDataFormatException</code> is thrown. Otherwise, the
      * group is converted to the character:
      *
-     * <p> <pre><code>
-     * (char)(((a&amp; 0x1F) &lt;&lt; 6) | (b &amp; 0x3F))
+     * <pre><code>
+     * (char)(((a&amp; 0x1F) << 6) | (b &amp; 0x3F))
      * </code></pre>
      *
      * If the first byte of a group matches the bit pattern
@@ -460,25 +460,25 @@ public interface ImageInputStream extends DataInput, Closeable {
      * <code>UTFDataFormatException</code> is thrown. Otherwise, the
      * group is converted to the character:
      *
-     * <p> <pre><code>
-     * (char)(((a &amp; 0x0F) &lt;&lt; 12) | ((b &amp; 0x3F) &lt;&lt; 6) | (c &amp; 0x3F))
+     * <pre><code>
+     * (char)(((a &amp; 0x0F) << 12) | ((b &amp; 0x3F) << 6) | (c &amp; 0x3F))
      * </code></pre>
      *
      * If the first byte of a group matches the pattern
      * <code>1111xxxx</code> or the pattern <code>10xxxxxx</code>,
      * then a <code>UTFDataFormatException</code> is thrown.
      *
-     * <p> If end of file is encountered at any time during this
+     * If end of file is encountered at any time during this
      * entire process, then an <code>java.io.EOFException</code> is thrown.
      *
-     * <p> After every group has been converted to a character by this
+     * After every group has been converted to a character by this
      * process, the characters are gathered, in the same order in
      * which their corresponding groups were read from the input
      * stream, to form a <code>String</code>, which is returned.
      *
-     * <p> The current byte order setting is ignored.
+     * The current byte order setting is ignored.
      *
-     * <p> The bit offset within the stream is reset to zero before
+     * The bit offset within the stream is reset to zero before
      * the read occurs.
      *
      * <p><strong>Note:</strong> This method should not be used in
@@ -502,7 +502,7 @@ public interface ImageInputStream extends DataInput, Closeable {
      * If the end of the stream is reached, an <code>java.io.EOFException</code>
      * will be thrown.
      *
-     * <p> The bit offset within the stream is reset to zero before
+     * The bit offset within the stream is reset to zero before
      * the read occurs.
      *
      * @param b an array of bytes to be written to.
@@ -526,7 +526,7 @@ public interface ImageInputStream extends DataInput, Closeable {
      * If the end of the stream is reached, an <code>java.io.EOFException</code>
      * will be thrown.
      *
-     * <p> The bit offset within the stream is reset to zero before
+     * The bit offset within the stream is reset to zero before
      * the read occurs.
      *
      * @param b an array of <code>byte</code>s.
@@ -546,7 +546,7 @@ public interface ImageInputStream extends DataInput, Closeable {
      * <code>off</code>.  If the end of the stream is reached, an
      * <code>java.io.EOFException</code> will be thrown.
      *
-     * <p> The bit offset within the stream is reset to zero before
+     * The bit offset within the stream is reset to zero before
      * the read occurs.
      *
      * @param s an array of shorts to be written to.
@@ -571,7 +571,7 @@ public interface ImageInputStream extends DataInput, Closeable {
      * <code>off</code>.  If the end of the stream is reached, an
      * <code>java.io.EOFException</code> will be thrown.
      *
-     * <p> The bit offset within the stream is reset to zero before
+     * The bit offset within the stream is reset to zero before
      * the read occurs.
      *
      * @param c an array of chars to be written to.
@@ -596,7 +596,7 @@ public interface ImageInputStream extends DataInput, Closeable {
      * <code>off</code>.  If the end of the stream is reached, an
      * <code>java.io.EOFException</code> will be thrown.
      *
-     * <p> The bit offset within the stream is reset to zero before
+     * The bit offset within the stream is reset to zero before
      * the read occurs.
      *
      * @param i an array of ints to be written to.
@@ -621,7 +621,7 @@ public interface ImageInputStream extends DataInput, Closeable {
      * <code>off</code>.  If the end of the stream is reached, an
      * <code>java.io.EOFException</code> will be thrown.
      *
-     * <p> The bit offset within the stream is reset to zero before
+     * The bit offset within the stream is reset to zero before
      * the read occurs.
      *
      * @param l an array of longs to be written to.
@@ -646,7 +646,7 @@ public interface ImageInputStream extends DataInput, Closeable {
      * index <code>off</code>.  If the end of the stream is reached,
      * an <code>java.io.EOFException</code> will be thrown.
      *
-     * <p> The bit offset within the stream is reset to zero before
+     * The bit offset within the stream is reset to zero before
      * the read occurs.
      *
      * @param f an array of floats to be written to.
@@ -671,7 +671,7 @@ public interface ImageInputStream extends DataInput, Closeable {
      * index <code>off</code>.  If the end of the stream is reached,
      * an <code>java.io.EOFException</code> will be thrown.
      *
-     * <p> The bit offset within the stream is reset to zero before
+     * The bit offset within the stream is reset to zero before
      * the read occurs.
      *
      * @param d an array of doubles to be written to.
@@ -706,7 +706,7 @@ public interface ImageInputStream extends DataInput, Closeable {
      * most-significant bit, and a value of 7 indicates the least
      * significant bit, of the byte being read.
      *
-     * <p> The bit offset is set to 0 when a stream is first
+     * The bit offset is set to 0 when a stream is first
      * opened, and is reset to 0 by calls to <code>seek</code>,
      * <code>skipBytes</code>, or any <code>read</code> or
      * <code>readFully</code> method.
@@ -762,7 +762,7 @@ public interface ImageInputStream extends DataInput, Closeable {
      * by <code>getBitOffset</code>.  The bit offset is advanced by
      * <code>numBits</code> and reduced modulo 8.
      *
-     * <p> The byte order of the stream has no effect on this
+     * The byte order of the stream has no effect on this
      * method.  The return value of this method is constructed as
      * though the bits were read one at a time, and shifted into
      * the right side of the return value, as shown by the following
@@ -781,7 +781,7 @@ public interface ImageInputStream extends DataInput, Closeable {
      * byte order is being used (i.e., <code>getByteOrder() ==
      * false</code>).
      *
-     * <p> If the end of the stream is encountered before all the bits
+     * If the end of the stream is encountered before all the bits
      * have been read, an <code>java.io.EOFException</code> is thrown.
      *
      * @param numBits the number of bits to read, as an <code>int</code>
@@ -845,11 +845,11 @@ public interface ImageInputStream extends DataInput, Closeable {
      * next read will occur at this location.  The bit offset is set
      * to 0.
      *
-     * <p> An <code>IndexOutOfBoundsException</code> will be thrown if
+     * An <code>IndexOutOfBoundsException</code> will be thrown if
      * <code>pos</code> is smaller than the flushed position (as
      * returned by <code>getflushedPosition</code>).
      *
-     * <p> It is legal to seek past the end of the file; an
+     * It is legal to seek past the end of the file; an
      * <code>java.io.EOFException</code> will be thrown only if a read is
      * performed.
      *
@@ -869,16 +869,16 @@ public interface ImageInputStream extends DataInput, Closeable {
      * support marking.  Additionally, calls to <code>mark</code> and
      * <code>reset</code> may be nested arbitrarily.
      *
-     * <p> Unlike the <code>mark</code> methods declared by the
+     * Unlike the <code>mark</code> methods declared by the
      * <code>Reader</code> and <code>InputStream</code> interfaces, no
      * <code>readLimit</code> parameter is used.  An arbitrary amount
      * of data may be read following the call to <code>mark</code>.
      *
-     * <p> The bit position used by the <code>readBits</code> method
+     * The bit position used by the <code>readBits</code> method
      * is saved and restored by each pair of calls to
      * <code>mark</code> and <code>reset</code>.
      *
-     * <p> Note that it is valid for an <code>ImageReader</code> to call
+     * Note that it is valid for an <code>ImageReader</code> to call
      * <code>flushBefore</code> as part of a read operation.
      * Therefore, if an application calls <code>mark</code> prior to
      * passing that stream to an <code>ImageReader</code>, the application
@@ -892,10 +892,10 @@ public interface ImageInputStream extends DataInput, Closeable {
      * the bit offset, at the time of the most recent unmatched call
      * to <code>mark</code>.
      *
-     * <p> Calls to <code>reset</code> without a corresponding call
+     * Calls to <code>reset</code> without a corresponding call
      * to <code>mark</code> have no effect.
      *
-     * <p> An <code>IOException</code> will be thrown if the previous
+     * An <code>IOException</code> will be thrown if the previous
      * marked position lies in the discarded portion of the stream.
      *
      * @exception IOException if an I/O error occurs.
@@ -908,7 +908,7 @@ public interface ImageInputStream extends DataInput, Closeable {
      * flushed portion of the stream will result in an
      * <code>IndexOutOfBoundsException</code>.
      *
-     * <p> Calling <code>flushBefore</code> may allow classes
+     * Calling <code>flushBefore</code> may allow classes
      * implementing this interface to free up resources such as memory
      * or disk space that are being used to store data from the
      * stream.

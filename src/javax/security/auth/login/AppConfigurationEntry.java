@@ -50,7 +50,7 @@ public class AppConfigurationEntry {
     /**
      * Default constructor for this class.
      *
-     * <p> This entry represents a single {@code LoginModule}
+     * This entry represents a single {@code LoginModule}
      * entry configured for the application specified in the
      * {@code getAppConfigurationEntry(String appName)}
      * method from the {@code Configuration} class.
@@ -159,7 +159,7 @@ public class AppConfigurationEntry {
         /**
          * Return a String representation of this controlFlag.
          *
-         * <p> The String has the format, "LoginModuleControlFlag: <i>flag</i>",
+         * The String has the format, "LoginModuleControlFlag: <i>flag</i>",
          * where <i>flag</i> is either <i>required</i>, <i>requisite</i>,
          * <i>sufficient</i>, or <i>optional</i>.
          *

@@ -82,22 +82,22 @@ import java.lang.annotation.Target;
  *         public List items;
  *    }
  *
- *    &lt;!-- XML Representation for a List of {1,2.5}
+ *    <!-- XML Representation for a List of {1,2.5}
  *            XML output is not wrapped using another element -->
  *    ...
- *    &lt;A> 1 &lt;/A>
- *    &lt;B> 2.5 &lt;/B>
+ *    <A> 1 </A>
+ *    <B> 2.5 </B>
  *    ...
  *
- *    &lt;!-- XML Schema fragment -->
- *    &lt;xs:complexType name="Foo">
- *      &lt;xs:sequence>
- *        &lt;xs:choice minOccurs="0" maxOccurs="unbounded">
- *          &lt;xs:element name="A" type="xs:int"/>
- *          &lt;xs:element name="B" type="xs:float"/>
- *        &lt;xs:choice>
- *      &lt;/xs:sequence>
- *    &lt;/xs:complexType>
+ *    <!-- XML Schema fragment -->
+ *    <xs:complexType name="Foo">
+ *      <xs:sequence>
+ *        <xs:choice minOccurs="0" maxOccurs="unbounded">
+ *          <xs:element name="A" type="xs:int"/>
+ *          <xs:element name="B" type="xs:float"/>
+ *        <xs:choice>
+ *      </xs:sequence>
+ *    </xs:complexType>
  *
  * </pre>
  *
@@ -115,19 +115,19 @@ import java.lang.annotation.Target;
  *        public List items;
  *    }
  *
- *    &lt;!-- XML Schema fragment -->
- *    &lt;xs:complexType name="Foo">
- *      &lt;xs:sequence>
- *        &lt;xs:element name="bar">
- *          &lt;xs:complexType>
- *            &lt;xs:choice minOccurs="0" maxOccurs="unbounded">
- *              &lt;xs:element name="A" type="xs:int"/>
- *              &lt;xs:element name="B" type="xs:float"/>
- *            &lt;/xs:choice>
- *          &lt;/xs:complexType>
- *        &lt;/xs:element>
- *      &lt;/xs:sequence>
- *    &lt;/xs:complexType>
+ *    <!-- XML Schema fragment -->
+ *    <xs:complexType name="Foo">
+ *      <xs:sequence>
+ *        <xs:element name="bar">
+ *          <xs:complexType>
+ *            <xs:choice minOccurs="0" maxOccurs="unbounded">
+ *              <xs:element name="A" type="xs:int"/>
+ *              <xs:element name="B" type="xs:float"/>
+ *            </xs:choice>
+ *          </xs:complexType>
+ *        </xs:element>
+ *      </xs:sequence>
+ *    </xs:complexType>
  * </pre>
  *
  * <p><b>Example 3:</b> Change element name based on type using an adapter.
@@ -146,19 +146,19 @@ import java.lang.annotation.Target;
  *    &#64;XmlType(name="PX") class PX extends P {...}
  *    &#64;XmlType(name="PY") class PY extends P {...}
  *
- *    &lt;!-- XML Schema fragment -->
- *    &lt;xs:complexType name="Foo">
- *      &lt;xs:sequence>
- *        &lt;xs:element name="bar">
- *          &lt;xs:complexType>
- *            &lt;xs:choice minOccurs="0" maxOccurs="unbounded">
- *              &lt;xs:element name="A" type="PX"/>
- *              &lt;xs:element name="B" type="PY"/>
- *            &lt;/xs:choice>
- *          &lt;/xs:complexType>
- *        &lt;/xs:element>
- *      &lt;/xs:sequence>
- *    &lt;/xs:complexType>
+ *    <!-- XML Schema fragment -->
+ *    <xs:complexType name="Foo">
+ *      <xs:sequence>
+ *        <xs:element name="bar">
+ *          <xs:complexType>
+ *            <xs:choice minOccurs="0" maxOccurs="unbounded">
+ *              <xs:element name="A" type="PX"/>
+ *              <xs:element name="B" type="PY"/>
+ *            </xs:choice>
+ *          </xs:complexType>
+ *        </xs:element>
+ *      </xs:sequence>
+ *    </xs:complexType>
  * </pre>
  *
  * @author <ul><li>Kohsuke Kawaguchi, Sun Microsystems, Inc.</li><li>Sekhar Vajjhala, Sun Microsystems, Inc.</li></ul>

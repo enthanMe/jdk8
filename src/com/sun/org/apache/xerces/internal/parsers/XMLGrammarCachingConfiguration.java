@@ -41,13 +41,13 @@ import com.sun.org.apache.xerces.internal.xni.parser.XMLEntityResolver;
 import com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource;
 
 /**
- * <p> This configuration provides a generic way of using
+ * This configuration provides a generic way of using
  * Xerces's grammar caching facilities.  It extends the
  * XIncludeAwareParserConfiguration and thus may validate documents
  * according to XML schemas or DTD's.  It also allows the user to
  * preparse a grammar, and to lock the grammar pool
  * implementation such that no more grammars will be added.</p>
- * <p> Using the com.sun.org.apache.xerces.internal.xni.parser property, an
+ * Using the com.sun.org.apache.xerces.internal.xni.parser property, an
  * application may instantiate a Xerces SAX or DOM parser with
  * this configuration.  When invoked in this manner, the default
  * behaviour will be elicited; to use this configuration's

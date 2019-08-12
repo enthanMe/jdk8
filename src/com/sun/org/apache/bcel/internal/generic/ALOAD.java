@@ -60,7 +60,7 @@ package com.sun.org.apache.bcel.internal.generic;
 
 /**
  * ALOAD - Load reference from local variable
- * <PRE>Stack: ... -&gt; ..., objectref</PRE>
+ * <PRE>Stack: ... -> ..., objectref</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

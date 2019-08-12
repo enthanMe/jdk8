@@ -101,7 +101,7 @@ import javax.swing.text.*;
  * <p>
  * The semantics for when a CSS style should overide visual attributes
  * defined by an element are not well defined. For example, the html
- * <code>&lt;body bgcolor=red&gt;</code> makes the body have a red
+ * <code><body bgcolor=red></code> makes the body have a red
  * background. But if the html file also contains the CSS rule
  * <code>body { background: blue }</code> it becomes less clear as to
  * what color the background of the body should be. The current
@@ -282,7 +282,7 @@ public class StyleSheet extends StyleContext {
     /**
      * Adds a set of rules to the sheet.  The rules are expected to
      * be in valid CSS format.  Typically this would be called as
-     * a result of parsing a &lt;style&gt; tag.
+     * a result of parsing a <style> tag.
      */
     public void addRule(String rule) {
         if (rule != null) {

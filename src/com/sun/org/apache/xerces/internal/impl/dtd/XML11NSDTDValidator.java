@@ -76,7 +76,7 @@ import com.sun.org.apache.xerces.internal.xni.XNIException;
  * the content and structure; augmenting the InfoSet, if applicable;
  * and notifying the parser of the information resulting from the
  * validation process.
- * <p> Formerly, this component also handled DTD events and grammar construction.
+ * Formerly, this component also handled DTD events and grammar construction.
  * To facilitate the development of a meaningful DTD grammar caching/preparsing
  * framework, this functionality has been moved into the XMLDTDLoader
  * class.  Therefore, this class no longer implements the DTDFilter

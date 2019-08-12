@@ -105,7 +105,7 @@ import sun.security.util.Debug;
  * the superclass are intended for cryptographic service providers who wish to
  * supply their own implementations of key pair generators.
  *
- * <p> Every implementation of the Java platform is required to support the
+ * Every implementation of the Java platform is required to support the
  * following standard {@code KeyPairGenerator} algorithms and keysizes in
  * parentheses:
  * <ul>
@@ -186,13 +186,13 @@ public abstract class KeyPairGenerator extends KeyPairGeneratorSpi {
      * Returns a KeyPairGenerator object that generates public/private
      * key pairs for the specified algorithm.
      *
-     * <p> This method traverses the list of registered security Providers,
+     * This method traverses the list of registered security Providers,
      * starting with the most preferred Provider.
      * A new KeyPairGenerator object encapsulating the
      * KeyPairGeneratorSpi implementation from the first
      * Provider that supports the specified algorithm is returned.
      *
-     * <p> Note that the list of registered providers may be retrieved via
+     * Note that the list of registered providers may be retrieved via
      * the {@link Security#getProviders() Security.getProviders()} method.
      *
      * @param algorithm the standard string name of the algorithm.
@@ -243,12 +243,12 @@ public abstract class KeyPairGenerator extends KeyPairGeneratorSpi {
      * Returns a KeyPairGenerator object that generates public/private
      * key pairs for the specified algorithm.
      *
-     * <p> A new KeyPairGenerator object encapsulating the
+     * A new KeyPairGenerator object encapsulating the
      * KeyPairGeneratorSpi implementation from the specified provider
      * is returned.  The specified provider must be registered
      * in the security provider list.
      *
-     * <p> Note that the list of registered providers may be retrieved via
+     * Note that the list of registered providers may be retrieved via
      * the {@link Security#getProviders() Security.getProviders()} method.
      *
      * @param algorithm the standard string name of the algorithm.
@@ -285,7 +285,7 @@ public abstract class KeyPairGenerator extends KeyPairGeneratorSpi {
      * Returns a KeyPairGenerator object that generates public/private
      * key pairs for the specified algorithm.
      *
-     * <p> A new KeyPairGenerator object encapsulating the
+     * A new KeyPairGenerator object encapsulating the
      * KeyPairGeneratorSpi implementation from the specified Provider
      * object is returned.  Note that the specified Provider object
      * does not have to be registered in the provider list.

@@ -83,7 +83,7 @@ import java.lang.*;
  * method can be used to break up a string into its basic tokens:
  * <blockquote><pre>
  *     String[] result = "this is a test".split("\\s");
- *     for (int x=0; x&lt;result.length; x++)
+ *     for (int x=0; x<result.length; x++)
  *         System.out.println(result[x]);
  * </pre></blockquote>
  * <p>

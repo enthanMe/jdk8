@@ -139,7 +139,7 @@ import sun.swing.AccumulativeRunnable;
  *
  * <pre>
  *   final JLabel label;
- *   class MeaningOfLifeFinder extends SwingWorker&lt;String, Object&gt; {
+ *   class MeaningOfLifeFinder extends SwingWorker<String, Object> {
  *       {@code @Override}
  *       public String doInBackground() {
  *           return findTheMeaningOfLife();
@@ -168,13 +168,13 @@ import sun.swing.AccumulativeRunnable;
  * the prime numbers to {@code System.out}.
  * <pre>
  * class PrimeNumbersTask extends
- *         SwingWorker&lt;List&lt;Integer&gt;, Integer&gt; {
+ *         SwingWorker<List<Integer>, Integer> {
  *     PrimeNumbersTask(JTextArea textArea, int numbersToFind) {
  *         //initialize
  *     }
  *
  *     {@code @Override}
- *     public List&lt;Integer&gt; doInBackground() {
+ *     public List<Integer> doInBackground() {
  *         while (! enough &amp;&amp; ! isCancelled()) {
  *                 number = nextPrimeNumber();
  *                 publish(number);
@@ -185,7 +185,7 @@ import sun.swing.AccumulativeRunnable;
  *     }
  *
  *     {@code @Override}
- *     protected void process(List&lt;Integer&gt; chunks) {
+ *     protected void process(List<Integer> chunks) {
  *         for (int number : chunks) {
  *             textArea.append(number + &quot;\n&quot;);
  *         }
@@ -372,7 +372,7 @@ public abstract class SwingWorker<T, V> implements RunnableFuture<T> {
      *
      * <pre>
      * class TableSwingWorker extends
-     *         SwingWorker&lt;DefaultTableModel, Object[]&gt; {
+     *         SwingWorker<DefaultTableModel, Object[]> {
      *     private final DefaultTableModel tableModel;
      *
      *     public TableSwingWorker(DefaultTableModel tableModel) {
@@ -390,7 +390,7 @@ public abstract class SwingWorker<T, V> implements RunnableFuture<T> {
      *     }
      *
      *     {@code @Override}
-     *     protected void process(List&lt;Object[]&gt; chunks) {
+     *     protected void process(List<Object[]> chunks) {
      *         for (Object[] row : chunks) {
      *             tableModel.addRow(row);
      *         }

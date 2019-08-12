@@ -80,7 +80,7 @@ public abstract class UserPrincipalLookupService {
     /**
      * Lookup a group principal by group name.
      *
-     * <p> Where an implementation does not support any notion of group then
+     * Where an implementation does not support any notion of group then
      * this method always throws {@link UserPrincipalNotFoundException}. Where
      * the namespace for user accounts and groups is the same, then this method
      * is identical to invoking {@link #lookupPrincipalByName

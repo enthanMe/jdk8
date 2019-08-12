@@ -55,14 +55,14 @@ package javax.lang.model.element;
  *         &#64;Nesting(LOCAL)
  *         class LocalClass{};
  *
- *         Class&lt;?&gt;[] classes = {
+ *         Class<?>[] classes = {
  *             NestingExamples.class,
  *             MemberClass1.class,
  *             MemberClass2.class,
  *             LocalClass.class
  *         };
  *
- *         for(Class&lt;?&gt; clazz : classes) {
+ *         for(Class<?> clazz : classes) {
  *             System.out.format("%s is %s%n",
  *                               clazz.getName(),
  *                               clazz.getAnnotation(Nesting.class).value());

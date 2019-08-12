@@ -60,7 +60,7 @@ package com.sun.org.apache.bcel.internal.generic;
 
 /**
  * FLOAD - Load float from local variable
- * <PRE>Stack ... -&gt; ..., result</PRE>
+ * <PRE>Stack ... -> ..., result</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

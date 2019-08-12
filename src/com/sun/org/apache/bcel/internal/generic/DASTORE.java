@@ -60,7 +60,7 @@ package com.sun.org.apache.bcel.internal.generic;
 
 /**
  * DASTORE -  Store into double array
- * <PRE>Stack: ..., arrayref, index, value.word1, value.word2 -&gt; ...</PRE>
+ * <PRE>Stack: ..., arrayref, index, value.word1, value.word2 -> ...</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

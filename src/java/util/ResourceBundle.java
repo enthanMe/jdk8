@@ -247,14 +247,14 @@ import sun.util.locale.LocaleObjectCache;
  *         return null;
  *     }
  *
- *     public Enumeration&lt;String&gt; getKeys() {
+ *     public Enumeration<String> getKeys() {
  *         return Collections.enumeration(keySet());
  *     }
  *
  *     // Overrides handleKeySet() so that the getKeys() implementation
  *     // can rely on the keySet() value.
- *     protected Set&lt;String&gt; handleKeySet() {
- *         return new HashSet&lt;String&gt;(Arrays.asList("okKey", "cancelKey"));
+ *     protected Set<String> handleKeySet() {
+ *         return new HashSet<String>(Arrays.asList("okKey", "cancelKey"));
  *     }
  * }
  *
@@ -266,8 +266,8 @@ import sun.util.locale.LocaleObjectCache;
  *         return null;
  *     }
  *
- *     protected Set&lt;String&gt; handleKeySet() {
- *         return new HashSet&lt;String&gt;(Arrays.asList("cancelKey"));
+ *     protected Set<String> handleKeySet() {
+ *         return new HashSet<String>(Arrays.asList("cancelKey"));
  *     }
  * }
  * </pre>
@@ -1948,7 +1948,7 @@ public abstract class ResourceBundle {
      * <pre>
      * ResourceBundle rb = ResourceBundle.getBundle("Messages",
      *     new ResourceBundle.Control() {
-     *         public List&lt;String&gt; getFormats(String baseName) {
+     *         public List<String> getFormats(String baseName) {
      *             if (baseName == null)
      *                 throw new NullPointerException();
      *             return Arrays.asList("xml");
@@ -2004,7 +2004,7 @@ public abstract class ResourceBundle {
      *     protected Object handleGetObject(String key) {
      *         return props.getProperty(key);
      *     }
-     *     public Enumeration&lt;String&gt; getKeys() {
+     *     public Enumeration<String> getKeys() {
      *         ...
      *     }
      * }

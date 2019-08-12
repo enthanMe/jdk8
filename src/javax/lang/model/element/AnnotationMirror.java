@@ -32,7 +32,7 @@ import javax.lang.model.type.DeclaredType;
  * Represents an annotation.  An annotation associates a value with
  * each element of an annotation type.
  *
- * <p> Annotations should be compared using the {@code equals}
+ * Annotations should be compared using the {@code equals}
  * method.  There is no guarantee that any particular annotation will
  * always be represented by the same object.
  *

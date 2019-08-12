@@ -242,7 +242,7 @@ public class Canonicalizer {
     /**
      * This method tries to canonicalize the given bytes. It's possible to even
      * canonicalize non-wellformed sequences if they are well-formed after being
-     * wrapped with a <CODE>&gt;a&lt;...&gt;/a&lt;</CODE>.
+     * wrapped with a <CODE>>a<...>/a<</CODE>.
      *
      * @param inputBytes
      * @return the result of the canonicalization.

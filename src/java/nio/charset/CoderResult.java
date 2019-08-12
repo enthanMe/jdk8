@@ -34,7 +34,7 @@ import java.util.HashMap;
 /**
  * A description of the result state of a coder.
  *
- * <p> A charset coder, that is, either a decoder or an encoder, consumes bytes
+ * A charset coder, that is, either a decoder or an encoder, consumes bytes
  * (or characters) from an input buffer, translates them, and writes the
  * resulting characters (or bytes) to an output buffer.  A coding process
  * terminates for one of four categories of reasons, which are described by
@@ -42,25 +42,25 @@ import java.util.HashMap;
  *
  * <ul>
  *
- *   <li><p> <i>Underflow</i> is reported when there is no more input to be
+ *   <li><i>Underflow</i> is reported when there is no more input to be
  *   processed, or there is insufficient input and additional input is
  *   required.  This condition is represented by the unique result object
  *   {@link #UNDERFLOW}, whose {@link #isUnderflow() isUnderflow} method
  *   returns <tt>true</tt>.  </p></li>
  *
- *   <li><p> <i>Overflow</i> is reported when there is insufficient room
+ *   <li><i>Overflow</i> is reported when there is insufficient room
  *   remaining in the output buffer.  This condition is represented by the
  *   unique result object {@link #OVERFLOW}, whose {@link #isOverflow()
  *   isOverflow} method returns <tt>true</tt>.  </p></li>
  *
- *   <li><p> A <i>malformed-input error</i> is reported when a sequence of
+ *   <li>A <i>malformed-input error</i> is reported when a sequence of
  *   input units is not well-formed.  Such errors are described by instances of
  *   this class whose {@link #isMalformed() isMalformed} method returns
  *   <tt>true</tt> and whose {@link #length() length} method returns the length
  *   of the malformed sequence.  There is one unique instance of this class for
  *   all malformed-input errors of a given length.  </p></li>
  *
- *   <li><p> An <i>unmappable-character error</i> is reported when a sequence
+ *   <li>An <i>unmappable-character error</i> is reported when a sequence
  *   of input units denotes a character that cannot be represented in the
  *   output charset.  Such errors are described by instances of this class
  *   whose {@link #isUnmappable() isUnmappable} method returns <tt>true</tt> and
@@ -71,7 +71,7 @@ import java.util.HashMap;
  *
  * </ul>
  *
- * <p> For convenience, the {@link #isError() isError} method returns <tt>true</tt>
+ * For convenience, the {@link #isError() isError} method returns <tt>true</tt>
  * for result objects that describe malformed-input and unmappable-character
  * errors but <tt>false</tt> for those that describe underflow or overflow
  * conditions.  </p>

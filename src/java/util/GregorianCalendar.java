@@ -57,7 +57,7 @@ import sun.util.calendar.ZoneInfo;
  * <code>Calendar</code> and provides the standard calendar system
  * used by most of the world.
  *
- * <p> <code>GregorianCalendar</code> is a hybrid calendar that
+ * <code>GregorianCalendar</code> is a hybrid calendar that
  * supports both the Julian and Gregorian calendar systems with the
  * support of a single discontinuity, which corresponds by default to
  * the Gregorian date when the Gregorian calendar was instituted

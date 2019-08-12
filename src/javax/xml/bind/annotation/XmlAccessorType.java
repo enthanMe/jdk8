@@ -34,18 +34,18 @@ import static java.lang.annotation.ElementType.*;
 import static java.lang.annotation.RetentionPolicy.*;
 
 /**
- * <p> Controls whether fields or Javabean properties are serialized by default. </p>
+ * Controls whether fields or Javabean properties are serialized by default. </p>
  *
- * <p> <b> Usage </b> </p>
+ * <b> Usage </b> </p>
  *
- * <p> <tt>@XmlAccessorType</tt> annotation can be used with the following program elements:</p>
+ * <tt>@XmlAccessorType</tt> annotation can be used with the following program elements:</p>
  *
  * <ul>
  *   <li> package</li>
  *   <li> a top level class </li>
  * </ul>
  *
- * <p> See "Package Specification" in javax.xml.bind.package javadoc for
+ * See "Package Specification" in javax.xml.bind.package javadoc for
  * additional common information.</p>
  *
  * <p>This annotation provides control over the default serialization
@@ -63,14 +63,14 @@ import static java.lang.annotation.RetentionPolicy.*;
  *   <li> Otherwise, the <tt>@XmlAccessorType </tt> on a package is
  *        inherited.
  * </ul>
- * <p> <b> Defaulting Rules: </b> </p>
+ * <b> Defaulting Rules: </b> </p>
  *
  * <p>By default, if <tt>@XmlAccessorType </tt> on a package is absent,
  * then the following package level annotation is assumed.</p>
  * <pre>
  *   &#64;XmlAccessorType(XmlAccessType.PUBLIC_MEMBER)
  * </pre>
- * <p> By default, if <tt>@XmlAccessorType</tt> on a class is absent,
+ * By default, if <tt>@XmlAccessorType</tt> on a class is absent,
  * and none of its super classes is annotated with
  * <tt>@XmlAccessorType</tt>, then the following default on the class
  * is assumed: </p>

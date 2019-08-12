@@ -128,8 +128,8 @@ public abstract class LocalVariableInstruction extends Instruction
   /**
    * Long output format:
    *
-   * &lt;name of opcode&gt; "["&lt;opcode number&gt;"]"
-   * "("&lt;length of instruction&gt;")" "&lt;"&lt; local variable index&gt;"&gt;"
+   * <name of opcode> "["<opcode number>"]"
+   * "("<length of instruction>")" "<"< local variable index>">"
    *
    * @param verbose long/short format switch
    * @return mnemonic for instruction

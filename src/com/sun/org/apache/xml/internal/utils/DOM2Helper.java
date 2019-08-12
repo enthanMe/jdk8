@@ -226,7 +226,7 @@ public class DOM2Helper extends DOMHelper
    *
    * @return false if node2 comes before node1, otherwise return true.
    * You can think of this as
-   * <code>(node1.documentOrderPosition &lt;= node2.documentOrderPosition)</code>.
+   * <code>(node1.documentOrderPosition <= node2.documentOrderPosition)</code>.
    */
   public static boolean isNodeAfter(Node node1, Node node2)
   {

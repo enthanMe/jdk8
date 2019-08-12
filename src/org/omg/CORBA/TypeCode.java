@@ -55,7 +55,7 @@ import org.omg.CORBA.portable.IDLEntity;
  * describing the OMG IDL type <code>1ong</code> has kind
  * <code>TCKind.tk_long</code> and no additional fields.
  * The <code>TypeCode</code> describing OMG IDL type
- * <code>sequence&lt;boolean, 10&gt;</code> has a <code>kind</code> field
+ * <code>sequence<boolean, 10></code> has a <code>kind</code> field
  * with the value
  * <code>TCKind.tk_sequence</code> and also fields with the values
  * <code>boolean</code> and <code>10</code> for the
@@ -74,13 +74,13 @@ import org.omg.CORBA.portable.IDLEntity;
  * <PRE>
  *   org.omg.CORBA.TypeCode tcString = orb.create_string_tc(30);
  * </PRE>
- * <P> The following creates a <code>TypeCode</code>
+ * The following creates a <code>TypeCode</code>
  * object for an <code>array</code> of five <code>string</code>s:
  * <PRE>
  *   org.omg.CORBA.TypeCode tcArray = orb.create_array_tc(
  *                                       5, TCKind.tk_string);
  * </PRE>
- * <P> The following creates a <code>TypeCode</code>
+ * The following creates a <code>TypeCode</code>
  * object for an interface named "Account":
  * <PRE>
  *   org.omg.CORBA.TypeCode tcInterface = orb.create_interface_tc(

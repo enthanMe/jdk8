@@ -297,7 +297,7 @@ class BufferedInputStream extends FilterInputStream {
      * Reads bytes from this byte-input stream into the specified byte array,
      * starting at the given offset.
      *
-     * <p> This method implements the general contract of the corresponding
+     * This method implements the general contract of the corresponding
      * <code>{@link InputStream#read(byte[], int, int) read}</code> method of
      * the <code>{@link InputStream}</code> class.  As an additional
      * convenience, it attempts to read as many bytes as possible by repeatedly
@@ -318,7 +318,7 @@ class BufferedInputStream extends FilterInputStream {
      * <code>-1</code>.  Otherwise this method returns the number of bytes
      * actually read.
      *
-     * <p> Subclasses of this class are encouraged, but not required, to
+     * Subclasses of this class are encouraged, but not required, to
      * attempt to read as many bytes as possible in the same fashion.
      *
      * @param      b     destination buffer.

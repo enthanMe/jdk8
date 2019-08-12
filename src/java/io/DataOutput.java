@@ -262,7 +262,7 @@ interface DataOutput {
      * <code>s</code>,  taken in order, one byte
      * is written to the output stream.  If
      * <code>s</code> is <code>null</code>, a <code>NullPointerException</code>
-     * is thrown.<p>  If <code>s.length</code>
+     * is thrown. If <code>s.length</code>
      * is zero, then no bytes are written. Otherwise,
      * the character <code>s[0]</code> is written
      * first, then <code>s[1]</code>, and so on;
@@ -323,7 +323,7 @@ interface DataOutput {
      * in the order shown: <pre>{@code
      * (byte)(0xc0 | (0x1f & (c >> 6)))
      * (byte)(0x80 | (0x3f & c))
-     * }</pre> <p> If a character
+     * }</pre> If a character
      * <code>c</code> is in the range <code>&#92;u0800</code>
      * through <code>uffff</code>, then it is
      * represented by three bytes, to be written
@@ -331,7 +331,7 @@ interface DataOutput {
      * (byte)(0xe0 | (0x0f & (c >> 12)))
      * (byte)(0x80 | (0x3f & (c >>  6)))
      * (byte)(0x80 | (0x3f & c))
-     * }</pre>  <p> First,
+     * }</pre>  First,
      * the total number of bytes needed to represent
      * all the characters of <code>s</code> is
      * calculated. If this number is larger than
@@ -341,7 +341,7 @@ interface DataOutput {
      * of the <code>writeShort</code> method;
      * after this, the one-, two-, or three-byte
      * representation of each character in the
-     * string <code>s</code> is written.<p>  The
+     * string <code>s</code> is written. The
      * bytes written by this method may be read
      * by the <code>readUTF</code> method of interface
      * <code>DataInput</code> , which will then

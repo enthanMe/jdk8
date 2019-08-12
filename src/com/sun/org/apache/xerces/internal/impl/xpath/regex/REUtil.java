@@ -177,7 +177,7 @@ public final class REUtil {
 
     /**
      * Sample entry.
-     * <div>Usage: <KBD>com.sun.org.apache.xerces.internal.utils.regex.REUtil &lt;regex&gt; &lt;string&gt;</KBD></div>
+     * <div>Usage: <KBD>com.sun.org.apache.xerces.internal.utils.regex.REUtil <regex> <string></KBD></div>
      */
     public static void main(String[] argv) {
         String pattern = null;

@@ -60,7 +60,7 @@ package com.sun.org.apache.bcel.internal.generic;
 
 /**
  * RETURN -  Return from void method
- * <PRE>Stack: ... -&gt; &lt;empty&gt;</PRE>
+ * <PRE>Stack: ... -> <empty></PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

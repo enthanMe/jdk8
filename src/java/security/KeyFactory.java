@@ -41,17 +41,17 @@ import sun.security.jca.GetInstance.Instance;
  * (transparent representations of the underlying key material), and vice
  * versa.
  *
- * <P> Key factories are bi-directional. That is, they allow you to build an
+ * Key factories are bi-directional. That is, they allow you to build an
  * opaque key object from a given key specification (key material), or to
  * retrieve the underlying key material of a key object in a suitable format.
  *
- * <P> Multiple compatible key specifications may exist for the same key.
+ * Multiple compatible key specifications may exist for the same key.
  * For example, a DSA public key may be specified using
  * {@code DSAPublicKeySpec} or
  * {@code X509EncodedKeySpec}. A key factory can be used to translate
  * between compatible key specifications.
  *
- * <P> The following is an example of how to use a key factory in order to
+ * The following is an example of how to use a key factory in order to
  * instantiate a DSA public key from its encoding.
  * Assume Alice has received a digital signature from Bob.
  * Bob also sent her his public key (in encoded format) to verify
@@ -67,7 +67,7 @@ import sun.security.jca.GetInstance.Instance;
  * sig.verify(signature);
  * </pre>
  *
- * <p> Every implementation of the Java platform is required to support the
+ * Every implementation of the Java platform is required to support the
  * following standard {@code KeyFactory} algorithms:
  * <ul>
  * <li>{@code DiffieHellman}</li>
@@ -144,13 +144,13 @@ public class KeyFactory {
      * Returns a KeyFactory object that converts
      * public/private keys of the specified algorithm.
      *
-     * <p> This method traverses the list of registered security Providers,
+     * This method traverses the list of registered security Providers,
      * starting with the most preferred Provider.
      * A new KeyFactory object encapsulating the
      * KeyFactorySpi implementation from the first
      * Provider that supports the specified algorithm is returned.
      *
-     * <p> Note that the list of registered providers may be retrieved via
+     * Note that the list of registered providers may be retrieved via
      * the {@link Security#getProviders() Security.getProviders()} method.
      *
      * @param algorithm the name of the requested key algorithm.
@@ -176,12 +176,12 @@ public class KeyFactory {
      * Returns a KeyFactory object that converts
      * public/private keys of the specified algorithm.
      *
-     * <p> A new KeyFactory object encapsulating the
+     * A new KeyFactory object encapsulating the
      * KeyFactorySpi implementation from the specified provider
      * is returned.  The specified provider must be registered
      * in the security provider list.
      *
-     * <p> Note that the list of registered providers may be retrieved via
+     * Note that the list of registered providers may be retrieved via
      * the {@link Security#getProviders() Security.getProviders()} method.
      *
      * @param algorithm the name of the requested key algorithm.
@@ -218,7 +218,7 @@ public class KeyFactory {
      * Returns a KeyFactory object that converts
      * public/private keys of the specified algorithm.
      *
-     * <p> A new KeyFactory object encapsulating the
+     * A new KeyFactory object encapsulating the
      * KeyFactorySpi implementation from the specified Provider
      * object is returned.  Note that the specified Provider object
      * does not have to be registered in the provider list.

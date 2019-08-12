@@ -186,8 +186,8 @@ public interface ModelMBeanInfo
      *     <td>Frequency of persist cycle in seconds, for OnTime and
      *         NoMoreOftenThan PersistPolicy</td></tr>
      * <tr><td>currencyTimeLimit</td><td>Number</td>
-     *     <td>How long cached value is valid: &lt;0 never, =0 always,
-     *         &gt;0 seconds.</td></tr>
+     *     <td>How long cached value is valid: <0 never, =0 always,
+     *         >0 seconds.</td></tr>
      * <tr><td>log</td><td>String</td>
      *     <td>t: log all notifications, f: log no notifications.</td></tr>
      * <tr><td>logfile</td><td>String</td>

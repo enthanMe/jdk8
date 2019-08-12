@@ -68,7 +68,7 @@ public class SnmpMibOid extends SnmpMibNode implements Serializable {
     /**
      * Generic handling of the <CODE>get</CODE> operation.
      *
-     * <p> This method should be overridden in subclasses.
+     * This method should be overridden in subclasses.
      * <p>
      *
      * @param req   The sub-request that must be handled by this node.
@@ -92,7 +92,7 @@ public class SnmpMibOid extends SnmpMibNode implements Serializable {
     /**
      * Generic handling of the <CODE>set</CODE> operation.
      *
-     * <p> This method should be overridden in subclasses.
+     * This method should be overridden in subclasses.
      * <p>
      *
      * @param req   The sub-request that must be handled by this node.
@@ -116,7 +116,7 @@ public class SnmpMibOid extends SnmpMibNode implements Serializable {
     /**
      * Generic handling of the <CODE>check</CODE> operation.
      *
-     * <p> This method should be overridden in subclasses.
+     * This method should be overridden in subclasses.
      * <p>
      *
      * @param req   The sub-request that must be handled by this node.

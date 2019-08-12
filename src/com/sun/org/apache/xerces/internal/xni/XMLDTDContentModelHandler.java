@@ -49,10 +49,10 @@ public interface XMLDTDContentModelHandler {
      * <p>
      * For example:
      * <pre>
-     * &lt;!ELEMENT elem (foo|bar)&gt;
-     * &lt;!ELEMENT elem (foo|bar+)&gt;
-     * &lt;!ELEMENT elem (foo|bar|baz)&gt;
-     * &lt;!ELEMENT elem (#PCDATA|foo|bar)*&gt;
+     * <!ELEMENT elem (foo|bar)>
+     * <!ELEMENT elem (foo|bar+)>
+     * <!ELEMENT elem (foo|bar|baz)>
+     * <!ELEMENT elem (#PCDATA|foo|bar)*>
      * </pre>
      *
      * @see #SEPARATOR_SEQUENCE
@@ -65,9 +65,9 @@ public interface XMLDTDContentModelHandler {
      * specified sequence.
      * <p>
      * <pre>
-     * &lt;!ELEMENT elem (foo,bar)&gt;
-     * &lt;!ELEMENT elem (foo,bar*)&gt;
-     * &lt;!ELEMENT elem (foo,bar,baz)&gt;
+     * <!ELEMENT elem (foo,bar)>
+     * <!ELEMENT elem (foo,bar*)>
+     * <!ELEMENT elem (foo,bar,baz)>
      * </pre>
      *
      * @see #SEPARATOR_CHOICE
@@ -83,7 +83,7 @@ public interface XMLDTDContentModelHandler {
      * <p>
      * For example:
      * <pre>
-     * &lt;!ELEMENT elem (foo?)&gt;
+     * <!ELEMENT elem (foo?)>
      * </pre>
      *
      * @see #OCCURS_ZERO_OR_MORE
@@ -99,8 +99,8 @@ public interface XMLDTDContentModelHandler {
      * <p>
      * For example:
      * <pre>
-     * &lt;!ELEMENT elem (foo*)&gt;
-     * &lt;!ELEMENT elem (#PCDATA|foo|bar)*&gt;
+     * <!ELEMENT elem (foo*)>
+     * <!ELEMENT elem (#PCDATA|foo|bar)*>
      * </pre>
      *
      * @see #OCCURS_ZERO_OR_ONE
@@ -116,7 +116,7 @@ public interface XMLDTDContentModelHandler {
      * <p>
      * For example:
      * <pre>
-     * &lt;!ELEMENT elem (foo+)&gt;
+     * <!ELEMENT elem (foo+)>
      * </pre>
      *
      * @see #OCCURS_ZERO_OR_ONE

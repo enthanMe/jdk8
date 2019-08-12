@@ -88,7 +88,7 @@ public interface Dispatch<T> extends BindingProvider {
      * @return A <code>Future</code> object that may be used to check the status
      *     of the operation invocation. This object MUST NOT be used to try to
      *     obtain the results of the operation - the object returned from
-     *     <code>Future&lt;?>.get()</code> is implementation dependent
+     *     <code>Future<?>.get()</code> is implementation dependent
      *     and any use of it will result in non-portable behaviour.
      * @throws WebServiceException If there is any error in the configuration of
      *     the <code>Dispatch</code> instance

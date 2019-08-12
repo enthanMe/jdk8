@@ -28,10 +28,10 @@ package com.sun.security.auth;
 import java.security.Principal;
 
 /**
- * <p> This class implements the <code>Principal</code> interface
+ * This class implements the <code>Principal</code> interface
  * and represents a Unix user.
  *
- * <p> Principals such as this <code>UnixPrincipal</code>
+ * Principals such as this <code>UnixPrincipal</code>
  * may be associated with a particular <code>Subject</code>
  * to augment that <code>Subject</code> with an additional
  * identity.  Refer to the <code>Subject</code> class for more information

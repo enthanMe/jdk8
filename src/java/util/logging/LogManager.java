@@ -97,14 +97,14 @@ import sun.misc.SharedSecrets;
  * Note that these Handlers may be created lazily, when they are
  * first used.
  *
- * <li>A property "&lt;logger&gt;.handlers". This defines a whitespace or
+ * <li>A property "<logger>.handlers". This defines a whitespace or
  * comma separated list of class names for handlers classes to
  * load and register as handlers to the specified logger. Each class
  * name must be for a Handler class which has a default constructor.
  * Note that these Handlers may be created lazily, when they are
  * first used.
  *
- * <li>A property "&lt;logger&gt;.useParentHandlers". This defines a boolean
+ * <li>A property "<logger>.useParentHandlers". This defines a boolean
  * value. By default every logger calls its parent in addition to
  * handling the logging message itself, this often result in messages
  * being handled by the root logger as well. When setting this property

@@ -26,10 +26,10 @@
 package com.sun.security.auth;
 
 /**
- * <p> This class extends <code>NTSid</code>
+ * This class extends <code>NTSid</code>
  * and represents a Windows NT user's primary group SID.
  *
- * <p> Principals such as this <code>NTSidPrimaryGroupPrincipal</code>
+ * Principals such as this <code>NTSidPrimaryGroupPrincipal</code>
  * may be associated with a particular <code>Subject</code>
  * to augment that <code>Subject</code> with an additional
  * identity.  Refer to the <code>Subject</code> class for more information

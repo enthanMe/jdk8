@@ -43,7 +43,7 @@ import java.util.NoSuchElementException;
 /**
  * A simple service-provider loading facility.
  *
- * <p> A <i>service</i> is a well-known set of interfaces and (usually
+ * A <i>service</i> is a well-known set of interfaces and (usually
  * abstract) classes.  A <i>service provider</i> is a specific implementation
  * of a service.  The classes in a provider typically implement the interfaces
  * and subclass the classes defined in the service itself.  Service providers
@@ -52,7 +52,7 @@ import java.util.NoSuchElementException;
  * directories.  Providers can also be made available by adding them to the
  * application's class path or by some other platform-specific means.
  *
- * <p> For the purpose of loading, a service is represented by a single type,
+ * For the purpose of loading, a service is represented by a single type,
  * that is, a single interface or abstract class.  (A concrete class can be
  * used, but this is not recommended.)  A provider of a given service contains
  * one or more concrete classes that extend this <i>service type</i> with data
@@ -78,7 +78,7 @@ import java.util.NoSuchElementException;
  * each line all characters following the first comment character are ignored.
  * The file must be encoded in UTF-8.
  *
- * <p> If a particular concrete provider class is named in more than one
+ * If a particular concrete provider class is named in more than one
  * configuration file, or is named in the same configuration file more than
  * once, then the duplicates are ignored.  The configuration file naming a
  * particular provider need not be in the same jar file or other distribution
@@ -87,7 +87,7 @@ import java.util.NoSuchElementException;
  * note that this is not necessarily the class loader from which the file was
  * actually loaded.
  *
- * <p> Providers are located and instantiated lazily, that is, on demand.  A
+ * Providers are located and instantiated lazily, that is, on demand.  A
  * service loader maintains a cache of the providers that have been loaded so
  * far.  Each invocation of the {@link #iterator iterator} method returns an
  * iterator that first yields all of the elements of the cache, in
@@ -95,15 +95,15 @@ import java.util.NoSuchElementException;
  * providers, adding each one to the cache in turn.  The cache can be cleared
  * via the {@link #reload reload} method.
  *
- * <p> Service loaders always execute in the security context of the caller.
+ * Service loaders always execute in the security context of the caller.
  * Trusted system code should typically invoke the methods in this class, and
  * the methods of the iterators which they return, from within a privileged
  * security context.
  *
- * <p> Instances of this class are not safe for use by multiple concurrent
+ * Instances of this class are not safe for use by multiple concurrent
  * threads.
  *
- * <p> Unless otherwise specified, passing a <tt>null</tt> argument to any
+ * Unless otherwise specified, passing a <tt>null</tt> argument to any
  * method in this class will cause a {@link NullPointerException} to be thrown.
  *
  *
@@ -120,25 +120,25 @@ import java.util.NoSuchElementException;
  * does not support the given encoding.  Typical providers support more than
  * one encoding.
  *
- * <p> If <tt>com.example.impl.StandardCodecs</tt> is an implementation of the
+ * If <tt>com.example.impl.StandardCodecs</tt> is an implementation of the
  * <tt>CodecSet</tt> service then its jar file also contains a file named
  *
  * <blockquote><pre>
  * META-INF/services/com.example.CodecSet</pre></blockquote>
  *
- * <p> This file contains the single line:
+ * This file contains the single line:
  *
  * <blockquote><pre>
  * com.example.impl.StandardCodecs    # Standard codecs</pre></blockquote>
  *
- * <p> The <tt>CodecSet</tt> class creates and saves a single service instance
+ * The <tt>CodecSet</tt> class creates and saves a single service instance
  * at initialization:
  *
  * <blockquote><pre>
- * private static ServiceLoader&lt;CodecSet&gt; codecSetLoader
+ * private static ServiceLoader<CodecSet> codecSetLoader
  *     = ServiceLoader.load(CodecSet.class);</pre></blockquote>
  *
- * <p> To locate an encoder for a given encoding name it defines a static
+ * To locate an encoder for a given encoding name it defines a static
  * factory method which iterates through the known and available providers,
  * returning only when it has located a suitable encoder or has run out of
  * providers.
@@ -153,7 +153,7 @@ import java.util.NoSuchElementException;
  *     return null;
  * }</pre></blockquote>
  *
- * <p> A <tt>getDecoder</tt> method is defined similarly.
+ * A <tt>getDecoder</tt> method is defined similarly.
  *
  *
  * <p><span style="font-weight: bold; padding-right: 1em">Usage Note</span> If
@@ -161,12 +161,12 @@ import java.util.NoSuchElementException;
  * remote network URLs then those URLs will be dereferenced in the process of
  * searching for provider-configuration files.
  *
- * <p> This activity is normal, although it may cause puzzling entries to be
+ * This activity is normal, although it may cause puzzling entries to be
  * created in web-server logs.  If a web server is not configured correctly,
  * however, then this activity may cause the provider-loading algorithm to fail
  * spuriously.
  *
- * <p> A web server should return an HTTP 404 (Not Found) response when a
+ * A web server should return an HTTP 404 (Not Found) response when a
  * requested resource does not exist.  Sometimes, however, web servers are
  * erroneously configured to return an HTTP 200 (OK) response along with a
  * helpful HTML error page in such cases.  This will cause a {@link
@@ -207,11 +207,11 @@ public final class ServiceLoader<S>
      * Clear this loader's provider cache so that all providers will be
      * reloaded.
      *
-     * <p> After invoking this method, subsequent invocations of the {@link
+     * After invoking this method, subsequent invocations of the {@link
      * #iterator() iterator} method will lazily look up and instantiate
      * providers from scratch, just as is done by a newly-created loader.
      *
-     * <p> This method is intended for use in situations in which new providers
+     * This method is intended for use in situations in which new providers
      * can be installed into a running Java virtual machine.
      */
     public void reload() {
@@ -419,12 +419,12 @@ public final class ServiceLoader<S>
     /**
      * Lazily loads the available providers of this loader's service.
      *
-     * <p> The iterator returned by this method first yields all of the
+     * The iterator returned by this method first yields all of the
      * elements of the provider cache, in instantiation order.  It then lazily
      * loads and instantiates any remaining providers, adding each one to the
      * cache in turn.
      *
-     * <p> To achieve laziness the actual work of parsing the available
+     * To achieve laziness the actual work of parsing the available
      * provider-configuration files and instantiating providers must be done by
      * the iterator itself.  Its {@link java.util.Iterator#hasNext hasNext} and
      * {@link java.util.Iterator#next next} methods can therefore throw a
@@ -436,7 +436,7 @@ public final class ServiceLoader<S>
      * instantiated.  To write robust code it is only necessary to catch {@link
      * ServiceConfigurationError} when using a service iterator.
      *
-     * <p> If such an error is thrown then subsequent invocations of the
+     * If such an error is thrown then subsequent invocations of the
      * iterator will make a best effort to locate and instantiate the next
      * available provider, but in general such recovery cannot be guaranteed.
      *
@@ -449,7 +449,7 @@ public final class ServiceLoader<S>
      * preferable to throw an error rather than try to recover or, even worse,
      * fail silently.</blockquote>
      *
-     * <p> The iterator returned by this method does not support removal.
+     * The iterator returned by this method does not support removal.
      * Invoking its {@link java.util.Iterator#remove() remove} method will
      * cause an {@link UnsupportedOperationException} to be thrown.
      *
@@ -515,7 +515,7 @@ public final class ServiceLoader<S>
      * current thread's {@linkplain java.lang.Thread#getContextClassLoader
      * context class loader}.
      *
-     * <p> An invocation of this convenience method of the form
+     * An invocation of this convenience method of the form
      *
      * <blockquote><pre>
      * ServiceLoader.load(<i>service</i>)</pre></blockquote>
@@ -542,17 +542,17 @@ public final class ServiceLoader<S>
      * Creates a new service loader for the given service type, using the
      * extension class loader.
      *
-     * <p> This convenience method simply locates the extension class loader,
+     * This convenience method simply locates the extension class loader,
      * call it <tt><i>extClassLoader</i></tt>, and then returns
      *
      * <blockquote><pre>
      * ServiceLoader.load(<i>service</i>, <i>extClassLoader</i>)</pre></blockquote>
      *
-     * <p> If the extension class loader cannot be found then the system class
+     * If the extension class loader cannot be found then the system class
      * loader is used; if there is no system class loader then the bootstrap
      * class loader is used.
      *
-     * <p> This method is intended for use when only installed providers are
+     * This method is intended for use when only installed providers are
      * desired.  The resulting service will only find and load providers that
      * have been installed into the current Java virtual machine; providers on
      * the application's class path will be ignored.

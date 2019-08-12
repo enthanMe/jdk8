@@ -33,12 +33,12 @@ import java.util.Objects;
 import sun.security.util.Debug;
 
 /**
- * <p> This is an abstract class for representing the system policy for
+ * This is an abstract class for representing the system policy for
  * Subject-based authorization.  A subclass implementation
  * of this class provides a means to specify a Subject-based
  * access control {@code Policy}.
  *
- * <p> A {@code Policy} object can be queried for the set of
+ * A {@code Policy} object can be queried for the set of
  * Permissions granted to code running as a
  * {@code Principal} in the following manner:
  *
@@ -54,14 +54,14 @@ import sun.security.util.Debug;
  * provided <i>subject</i>, and granted to the code specified
  * by the provided <i>codeSource</i>.
  *
- * <p> A {@code Policy} contains the following information.
+ * A {@code Policy} contains the following information.
  * Note that this example only represents the syntax for the default
  * {@code Policy} implementation. Subclass implementations of this class
  * may implement alternative syntaxes and may retrieve the
  * {@code Policy} from any source such as files, databases,
  * or servers.
  *
- * <p> Each entry in the {@code Policy} is represented as
+ * Each entry in the {@code Policy} is represented as
  * a <b><i>grant</i></b> entry.  Each <b><i>grant</i></b> entry
  * specifies a codebase, code signers, and Principals triplet,
  * as well as the Permissions granted to that triplet.
@@ -93,7 +93,7 @@ import sun.security.util.Debug;
  * permits the executing code to read and write files in the directory,
  * "/home/duke".
  *
- * <p> To "run" as a particular {@code Principal},
+ * To "run" as a particular {@code Principal},
  * code invokes the {@code Subject.doAs(subject, ...)} method.
  * After invoking that method, the code runs as all the Principals
  * associated with the specified {@code Subject}.
@@ -101,7 +101,7 @@ import sun.security.util.Debug;
  * granted in this {@code Policy}) only become effective
  * after the call to {@code Subject.doAs} has occurred.
  *
- * <p> Multiple Principals may be listed within one <b><i>grant</i></b> entry.
+ * Multiple Principals may be listed within one <b><i>grant</i></b> entry.
  * All the Principals in the grant entry must be associated with
  * the {@code Subject} provided to {@code Subject.doAs}
  * for that {@code Subject} to be granted the specified Permissions.
@@ -118,7 +118,7 @@ import sun.security.util.Debug;
  * permission to read and write files in duke's home directory,
  * as well as permission to make socket connections to "duke.com".
  *
- * <p> Note that non Principal-based grant entries are not permitted
+ * Note that non Principal-based grant entries are not permitted
  * in this {@code Policy}.  Therefore, grant entries such as:
  *
  * <pre>
@@ -130,7 +130,7 @@ import sun.security.util.Debug;
  * are rejected.  Such permission must be listed in the
  * {@code java.security.Policy}.
  *
- * <p> The default {@code Policy} implementation can be changed by
+ * The default {@code Policy} implementation can be changed by
  * setting the value of the {@code auth.policy.provider} security property to
  * the fully qualified name of the desired {@code Policy} implementation class.
  *

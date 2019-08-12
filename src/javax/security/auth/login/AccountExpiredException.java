@@ -28,7 +28,7 @@ package javax.security.auth.login;
 /**
  * Signals that a user account has expired.
  *
- * <p> This exception is thrown by LoginModules when they determine
+ * This exception is thrown by LoginModules when they determine
  * that an account has expired.  For example, a {@code LoginModule},
  * after successfully authenticating a user, may determine that the
  * user's account has expired.  In this case the {@code LoginModule}

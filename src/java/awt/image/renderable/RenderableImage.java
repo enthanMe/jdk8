@@ -48,13 +48,13 @@ import java.awt.image.*;
  * specific contexts, such as a draft preview, a high-quality screen
  * display, or a printer, each in an optimal fashion.
  *
- * <p> A RenderedImage is returned from a RenderableImage via the
+ * A RenderedImage is returned from a RenderableImage via the
  * createRendering() method, which takes a RenderContext.  The
  * RenderContext specifies how the RenderedImage should be
  * constructed.  Note that it is not possible to extract pixels
  * directly from a RenderableImage.
  *
- * <p> The createDefaultRendering() and createScaledRendering() methods are
+ * The createDefaultRendering() and createScaledRendering() methods are
  * convenience methods that construct an appropriate RenderContext
  * internally.  All of the rendering methods may return a reference to a
  * previously produced rendering.
@@ -147,14 +147,14 @@ public interface RenderableImage {
      * of the full image.  All the rendering hints come from hints
      * passed in.
      *
-     * <p> If w == 0, it will be taken to equal
+     * If w == 0, it will be taken to equal
      * Math.round(h*(getWidth()/getHeight())).
      * Similarly, if h == 0, it will be taken to equal
      * Math.round(w*(getHeight()/getWidth())).  One of
      * w or h must be non-zero or else an IllegalArgumentException
      * will be thrown.
      *
-     * <p> The created RenderedImage may have a property identified
+     * The created RenderedImage may have a property identified
      * by the String HINTS_OBSERVED to indicate which RenderingHints
      * were used to create the image.  In addition any RenderedImages
      * that are obtained via the getSources() method on the created
@@ -184,7 +184,7 @@ public interface RenderableImage {
      * using a given RenderContext.  This is the most general way to obtain a
      * rendering of a RenderableImage.
      *
-     * <p> The created RenderedImage may have a property identified
+     * The created RenderedImage may have a property identified
      * by the String HINTS_OBSERVED to indicate which RenderingHints
      * (from the RenderContext) were used to create the image.
      * In addition any RenderedImages

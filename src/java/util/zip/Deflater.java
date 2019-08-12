@@ -262,7 +262,7 @@ class Deflater {
     /**
      * Sets the compression strategy to the specified value.
      *
-     * <p> If the compression strategy is changed, the next invocation
+     * If the compression strategy is changed, the next invocation
      * of {@code deflate} will compress the input available so far with
      * the old strategy (and may be flushed); the new strategy will take
      * effect only after that invocation.
@@ -291,7 +291,7 @@ class Deflater {
     /**
      * Sets the compression level to the specified value.
      *
-     * <p> If the compression level is changed, the next invocation
+     * If the compression level is changed, the next invocation
      * of {@code deflate} will compress the input available so far
      * with the old level (and may be flushed); the new level will
      * take effect only after that invocation.

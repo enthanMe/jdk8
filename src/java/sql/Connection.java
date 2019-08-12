@@ -613,7 +613,7 @@ public interface Connection  extends Wrapper, AutoCloseable {
      * copy of the <code>Map</code> object passed to <code>setTypeMap</code>:
      *
      * <pre>
-     *      Map&lt;String,Class&lt;?&gt;&gt; myMap = con.getTypeMap();
+     *      Map<String,Class<?>> myMap = con.getTypeMap();
      *      myMap.put("mySchemaName.ATHLETES", Athletes.class);
      *      con.setTypeMap(myMap);
      * </pre>
@@ -638,7 +638,7 @@ public interface Connection  extends Wrapper, AutoCloseable {
      * of the <code>TypeMap</code>:
      *
      * <pre>
-     *      Map myMap&lt;String,Class&lt;?&gt;&gt; = new HashMap&lt;String,Class&lt;?&gt;&gt;();
+     *      Map myMap<String,Class<?>> = new HashMap<String,Class<?>>();
      *      myMap.put("mySchemaName.ATHLETES", Athletes.class);
      *      con.setTypeMap(myMap);
      * </pre>
@@ -700,7 +700,7 @@ public interface Connection  extends Wrapper, AutoCloseable {
      * Creates an unnamed savepoint in the current transaction and
      * returns the new <code>Savepoint</code> object that represents it.
      *
-     *<p> if setSavepoint is invoked outside of an active transaction, a transaction will be started at this newly created
+     *if setSavepoint is invoked outside of an active transaction, a transaction will be started at this newly created
      *savepoint.
      *
      * @return the new <code>Savepoint</code> object
@@ -720,7 +720,7 @@ public interface Connection  extends Wrapper, AutoCloseable {
      * Creates a savepoint with the given name in the current transaction
      * and returns the new <code>Savepoint</code> object that represents it.
      *
-     * <p> if setSavepoint is invoked outside of an active transaction, a transaction will be started at this newly created
+     * if setSavepoint is invoked outside of an active transaction, a transaction will be started at this newly created
      *savepoint.
      *
      * @param name a <code>String</code> containing the name of the savepoint

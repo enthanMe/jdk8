@@ -321,7 +321,7 @@ class ThreadGroup implements Thread.UncaughtExceptionHandler {
      * group and its subgroups. Recursively iterates over all subgroups in
      * this thread group.
      *
-     * <p> The value returned is only an estimate because the number of
+     * The value returned is only an estimate because the number of
      * threads may change dynamically while this method traverses internal
      * data structures, and might be affected by the presence of certain
      * system threads. This method is intended primarily for debugging
@@ -361,7 +361,7 @@ class ThreadGroup implements Thread.UncaughtExceptionHandler {
      * Copies into the specified array every active thread in this
      * thread group and its subgroups.
      *
-     * <p> An invocation of this method behaves in exactly the same
+     * An invocation of this method behaves in exactly the same
      * way as the invocation
      *
      * <blockquote>
@@ -392,14 +392,14 @@ class ThreadGroup implements Thread.UncaughtExceptionHandler {
      * subgroups are also included. If the array is too short to
      * hold all the threads, the extra threads are silently ignored.
      *
-     * <p> An application might use the {@linkplain #activeCount activeCount}
+     * An application might use the {@linkplain #activeCount activeCount}
      * method to get an estimate of how big the array should be, however
      * <i>if the array is too short to hold all the threads, the extra threads
      * are silently ignored.</i>  If it is critical to obtain every active
      * thread in this thread group, the caller should verify that the returned
      * int value is strictly less than the length of {@code list}.
      *
-     * <p> Due to the inherent race condition in this method, it is recommended
+     * Due to the inherent race condition in this method, it is recommended
      * that the method only be used for debugging and monitoring purposes.
      *
      * @param  list
@@ -460,7 +460,7 @@ class ThreadGroup implements Thread.UncaughtExceptionHandler {
      * thread group and its subgroups. Recursively iterates over
      * all subgroups in this thread group.
      *
-     * <p> The value returned is only an estimate because the number of
+     * The value returned is only an estimate because the number of
      * thread groups may change dynamically while this method traverses
      * internal data structures. This method is intended primarily for
      * debugging and monitoring purposes.
@@ -495,7 +495,7 @@ class ThreadGroup implements Thread.UncaughtExceptionHandler {
      * Copies into the specified array references to every active
      * subgroup in this thread group and its subgroups.
      *
-     * <p> An invocation of this method behaves in exactly the same
+     * An invocation of this method behaves in exactly the same
      * way as the invocation
      *
      * <blockquote>
@@ -525,7 +525,7 @@ class ThreadGroup implements Thread.UncaughtExceptionHandler {
      * thread group and references to every active thread group in these
      * subgroups are also included.
      *
-     * <p> An application might use the
+     * An application might use the
      * {@linkplain #activeGroupCount activeGroupCount} method to
      * get an estimate of how big the array should be, however <i>if the
      * array is too short to hold all the thread groups, the extra thread
@@ -534,7 +534,7 @@ class ThreadGroup implements Thread.UncaughtExceptionHandler {
      * the returned int value is strictly less than the length of
      * {@code list}.
      *
-     * <p> Due to the inherent race condition in this method, it is recommended
+     * Due to the inherent race condition in this method, it is recommended
      * that the method only be used for debugging and monitoring purposes.
      *
      * @param  list
@@ -873,7 +873,7 @@ class ThreadGroup implements Thread.UncaughtExceptionHandler {
     /**
      * Adds the specified thread to this thread group.
      *
-     * <p> Note: This method is called from both library code
+     * Note: This method is called from both library code
      * and the Virtual Machine. It is called from VM to add
      * certain system threads to the system thread group.
      *
@@ -911,7 +911,7 @@ class ThreadGroup implements Thread.UncaughtExceptionHandler {
      * Notifies the group that the thread {@code t} has failed
      * an attempt to start.
      *
-     * <p> The state of this thread group is rolled back as if the
+     * The state of this thread group is rolled back as if the
      * attempt to start the thread has never occurred. The thread is again
      * considered an unstarted member of the thread group, and a subsequent
      * attempt to start the thread is permitted.
@@ -929,7 +929,7 @@ class ThreadGroup implements Thread.UncaughtExceptionHandler {
     /**
      * Notifies the group that the thread {@code t} has terminated.
      *
-     * <p> Destroy the group if all of the following conditions are
+     * Destroy the group if all of the following conditions are
      * true: this is a daemon thread group; there are no more alive
      * or unstarted threads in the group; there are no subgroups in
      * this thread group.

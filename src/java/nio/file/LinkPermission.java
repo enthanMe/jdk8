@@ -30,7 +30,7 @@ import java.security.BasicPermission;
 /**
  * The {@code Permission} class for link creation operations.
  *
- * <p> The following table provides a summary description of what the permission
+ * The following table provides a summary description of what the permission
  * allows, and discusses the risks of granting code the permission.
  *
  * <table border=1 cellpadding=5

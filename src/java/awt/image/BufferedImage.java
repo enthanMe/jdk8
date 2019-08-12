@@ -229,16 +229,16 @@ public class BufferedImage extends java.awt.Image
      * sRGB <code>ColorSpace</code>: {0,&nbsp;0,&nbsp;0} and
      * {255,&nbsp;255,&nbsp;255}.
      *
-     * <p> Images with 2 or 4 bits per pixel may be constructed via
+     * Images with 2 or 4 bits per pixel may be constructed via
      * the <code>BufferedImage</code> constructor that takes a
      * <code>ColorModel</code> argument by supplying a
      * <code>ColorModel</code> with an appropriate map size.
      *
-     * <p> Images with 8 bits per pixel should use the image types
+     * Images with 8 bits per pixel should use the image types
      * <code>TYPE_BYTE_INDEXED</code> or <code>TYPE_BYTE_GRAY</code>
      * depending on their <code>ColorModel</code>.
 
-     * <p> When color data is stored in an image of this type,
+     * When color data is stored in an image of this type,
      * the closest color in the colormap is determined
      * by the <code>IndexColorModel</code> and the resulting index is stored.
      * Approximation and loss of alpha or color components
@@ -257,7 +257,7 @@ public class BufferedImage extends java.awt.Image
      * from 216-255 populated by grayscale values in the
      * default sRGB ColorSpace.
      *
-     * <p> When color data is stored in an image of this type,
+     * When color data is stored in an image of this type,
      * the closest color in the colormap is determined
      * by the <code>IndexColorModel</code> and the resulting index is stored.
      * Approximation and loss of alpha or color components
@@ -510,7 +510,7 @@ public class BufferedImage extends java.awt.Image
      * image types:
      * TYPE_BYTE_BINARY or TYPE_BYTE_INDEXED.
      *
-     * <p> If the image type is TYPE_BYTE_BINARY, the number of
+     * If the image type is TYPE_BYTE_BINARY, the number of
      * entries in the color model is used to determine whether the
      * image should have 1, 2, or 4 bits per pixel.  If the color model
      * has 1 or 2 entries, the image will have 1 bit per pixel.  If it

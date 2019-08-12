@@ -39,15 +39,15 @@ import java.security.spec.AlgorithmParameterSpec;
  * The XML Schema Definition is defined as:
  * <p>
  * <pre>
- *   &lt;element name="SignatureMethod" type="ds:SignatureMethodType"/&gt;
- *     &lt;complexType name="SignatureMethodType" mixed="true"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="HMACOutputLength" minOccurs="0" type="ds:HMACOutputLengthType"/&gt;
- *         &lt;any namespace="##any" minOccurs="0" maxOccurs="unbounded"/&gt;
- *           &lt;!-- (0,unbounded) elements from (1,1) namespace --&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="Algorithm" type="anyURI" use="required"/&gt;
- *     &lt;/complexType&gt;
+ *   <element name="SignatureMethod" type="ds:SignatureMethodType"/>
+ *     <complexType name="SignatureMethodType" mixed="true">
+ *       <sequence>
+ *         <element name="HMACOutputLength" minOccurs="0" type="ds:HMACOutputLengthType"/>
+ *         <any namespace="##any" minOccurs="0" maxOccurs="unbounded"/>
+ *           <!-- (0,unbounded) elements from (1,1) namespace -->
+ *       </sequence>
+ *       <attribute name="Algorithm" type="anyURI" use="required"/>
+ *     </complexType>
  * </pre>
  *
  * A <code>SignatureMethod</code> instance may be created by invoking the

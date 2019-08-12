@@ -1703,7 +1703,7 @@ public abstract class Toolkit {
      * therefore not assume that the EventQueue instance returned
      * by this method will be shared by other applets or the system.
      *
-     * <p> If there is a security manager then its
+     * If there is a security manager then its
      * {@link SecurityManager#checkPermission checkPermission} method
      * is called to check {@code AWTPermission("accessEventQueue")}.
      *

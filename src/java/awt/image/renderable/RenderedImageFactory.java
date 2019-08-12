@@ -53,7 +53,7 @@ public interface RenderedImageFactory {
    * referenced by the ParameterBlock for their dimensions,
    * SampleModels, properties, etc., as necessary.
    *
-   * <p> The create() method can return null if the
+   * The create() method can return null if the
    * RenderedImageFactory is not capable of producing output for the
    * given set of source images and parameters.  For example, if a
    * RenderedImageFactory is only capable of performing a 3x3
@@ -61,7 +61,7 @@ public interface RenderedImageFactory {
    * multiple bands or the convolution Kernel is 5x5, null should be
    * returned.
    *
-   * <p> Hints should be taken into account, but can be ignored.
+   * Hints should be taken into account, but can be ignored.
    * The created RenderedImage may have a property identified
    * by the String HINTS_OBSERVED to indicate which RenderingHints
    * were used to create the image.  In addition any RenderedImages

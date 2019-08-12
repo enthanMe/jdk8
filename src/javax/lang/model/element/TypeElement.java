@@ -35,7 +35,7 @@ import javax.lang.model.util.*;
  * type is a kind of class and an annotation type is a kind of
  * interface.
  *
- * <p> <a name="ELEM_VS_TYPE"></a>
+ * <a name="ELEM_VS_TYPE"></a>
  * While a {@code TypeElement} represents a class or interface
  * <i>element</i>, a {@link DeclaredType} represents a class
  * or interface <i>type</i>, the latter being a use
@@ -47,7 +47,7 @@ import javax.lang.model.util.*;
  * {@code java.util.Set<String>} and {@code java.util.Set<Number>}
  * (and many others), and to the raw type {@code java.util.Set}.
  *
- * <p> Each method of this interface that returns a list of elements
+ * Each method of this interface that returns a list of elements
  * will return them in the order that is natural for the underlying
  * source of program information.  For example, if the underlying
  * source of information is Java source code, then the elements will be
@@ -68,7 +68,7 @@ public interface TypeElement extends Element, Parameterizable, QualifiedNameable
      * the implicit {@code values} and {@code valueOf} methods of an
      * enum type.
      *
-     * <p> Note that as a particular instance of the {@linkplain
+     * Note that as a particular instance of the {@linkplain
      * javax.lang.model.element general accuracy requirements} and the
      * ordering behavior required of this interface, the list of
      * enclosed elements will be returned in the natural order for the

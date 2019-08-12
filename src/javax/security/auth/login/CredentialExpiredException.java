@@ -28,7 +28,7 @@ package javax.security.auth.login;
 /**
  * Signals that a {@code Credential} has expired.
  *
- * <p> This exception is thrown by LoginModules when they determine
+ * This exception is thrown by LoginModules when they determine
  * that a {@code Credential} has expired.
  * For example, a {@code LoginModule} authenticating a user
  * in its {@code login} method may determine that the user's

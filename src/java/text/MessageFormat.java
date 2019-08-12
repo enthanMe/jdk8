@@ -776,7 +776,7 @@ public class MessageFormat extends Format {
      *    <tr>
      *       <td><code>instanceof ChoiceFormat</code>
      *       <td><i>any</i>
-     *       <td><code>subformat.format(argument).indexOf('{') &gt;= 0 ?<br>
+     *       <td><code>subformat.format(argument).indexOf('{') >= 0 ?<br>
      *           (new MessageFormat(subformat.format(argument), getLocale())).format(argument) :
      *           subformat.format(argument)</code>
      *    <tr>

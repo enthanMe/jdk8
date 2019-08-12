@@ -49,7 +49,7 @@ import org.xml.sax.helpers.DefaultHandler;
  * Public Domain, and comes with <strong>NO WARRANTY</strong>.</em>
  * </blockquote>
  *
- * <p> <em>Note:</em> this class might yet learn that the
+ * <em>Note:</em> this class might yet learn that the
  * <em>ContentHandler.setDocumentLocator()</em> call might be passed a
  * {@link Locator2} object, and that the
  * <em>ContentHandler.startElement()</em> call might be passed a

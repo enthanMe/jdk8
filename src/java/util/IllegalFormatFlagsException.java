@@ -28,7 +28,7 @@ package java.util;
 /**
  * Unchecked exception thrown when an illegal combination flags is given.
  *
- * <p> Unless otherwise specified, passing a <tt>null</tt> argument to any
+ * Unless otherwise specified, passing a <tt>null</tt> argument to any
  * method or constructor in this class will cause a {@link
  * NullPointerException} to be thrown.
  *

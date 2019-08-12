@@ -79,7 +79,7 @@ public class PipedInputStream extends InputStream {
     /**
      * The index of the position in the circular buffer at which the
      * next byte of data will be stored when received from the connected
-     * piped output stream. <code>in&lt;0</code> implies the buffer is empty,
+     * piped output stream. <code>in<0</code> implies the buffer is empty,
      * <code>in==out</code> implies the buffer is full
      * @since   JDK1.1
      */

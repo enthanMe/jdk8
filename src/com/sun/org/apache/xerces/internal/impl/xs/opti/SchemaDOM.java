@@ -180,12 +180,12 @@ public class SchemaDOM extends DefaultDocument {
                     annotationBuffer.append("&amp;");
                 }
                 else if (ch == '<') {
-                    annotationBuffer.append("&lt;");
+                    annotationBuffer.append("<");
                 }
                 // character sequence "]]>" cannot appear in content,
                 // therefore we should escape '>'.
                 else if (ch == '>') {
-                    annotationBuffer.append("&gt;");
+                    annotationBuffer.append(">");
                 }
                 // If CR is part of the document's content, it
                 // must not be printed as a literal otherwise
@@ -435,7 +435,7 @@ public class SchemaDOM extends DefaultDocument {
                 newVal.append("&quot;");
             }
             else if (currChar == '<') {
-                newVal.append("&lt;");
+                newVal.append("<");
             }
             else if (currChar == '&') {
                 newVal.append("&amp;");

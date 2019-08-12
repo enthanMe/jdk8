@@ -109,7 +109,7 @@ public abstract class CertificateFactorySpi {
      * the data read from the {@code InputStream} inStream. The data
      * is assumed to be in the default encoding.
      *
-     * <p> This method was added to version 1.4 of the Java 2 Platform
+     * This method was added to version 1.4 of the Java 2 Platform
      * Standard Edition. In order to maintain backwards compatibility with
      * existing service providers, this method cannot be {@code abstract}
      * and by default throws an {@code UnsupportedOperationException}.
@@ -132,7 +132,7 @@ public abstract class CertificateFactorySpi {
      * the data read from the {@code InputStream} inStream. The data
      * is assumed to be in the specified encoding.
      *
-     * <p> This method was added to version 1.4 of the Java 2 Platform
+     * This method was added to version 1.4 of the Java 2 Platform
      * Standard Edition. In order to maintain backwards compatibility with
      * existing service providers, this method cannot be {@code abstract}
      * and by default throws an {@code UnsupportedOperationException}.
@@ -160,7 +160,7 @@ public abstract class CertificateFactorySpi {
      * {@code CertificateFactory}. They will be copied out of the supplied
      * {@code List} object.
      *
-     * <p> This method was added to version 1.4 of the Java 2 Platform
+     * This method was added to version 1.4 of the Java 2 Platform
      * Standard Edition. In order to maintain backwards compatibility with
      * existing service providers, this method cannot be {@code abstract}
      * and by default throws an {@code UnsupportedOperationException}.
@@ -191,7 +191,7 @@ public abstract class CertificateFactorySpi {
      * {@code remove} method result in an
      * {@code UnsupportedOperationException}.
      *
-     * <p> This method was added to version 1.4 of the Java 2 Platform
+     * This method was added to version 1.4 of the Java 2 Platform
      * Standard Edition. In order to maintain backwards compatibility with
      * existing service providers, this method cannot be {@code abstract}
      * and by default throws an {@code UnsupportedOperationException}.

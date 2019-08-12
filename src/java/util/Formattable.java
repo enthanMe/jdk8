@@ -91,7 +91,7 @@ import java.io.IOException;
  *   }
  * }
  *
- * <p> When used in conjunction with the {@link java.util.Formatter}, the above
+ * When used in conjunction with the {@link java.util.Formatter}, the above
  * class produces the following output for various format strings.
  *
  * {@code
@@ -106,11 +106,11 @@ import java.io.IOException;
  *   fmt.format(Locale.FRANCE, "%25s", sn);  //   -> "   Fruit Titanesque, Inc."
  * }
  *
- * <p> Formattables are not necessarily safe for multithreaded access.  Thread
+ * Formattables are not necessarily safe for multithreaded access.  Thread
  * safety is optional and may be enforced by classes that extend and implement
  * this interface.
  *
- * <p> Unless otherwise specified, passing a <tt>null</tt> argument to
+ * Unless otherwise specified, passing a <tt>null</tt> argument to
  * any method in this interface will cause a {@link
  * NullPointerException} to be thrown.
  *

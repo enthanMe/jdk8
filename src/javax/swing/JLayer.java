@@ -63,10 +63,10 @@ import java.security.PrivilegedAction;
  *
  * public class JLayerSample {
  *
- *     private static JLayer&lt;JComponent&gt; createLayer() {
+ *     private static JLayer<JComponent> createLayer() {
  *         // This custom layerUI will fill the layer with translucent green
  *         // and print out all mouseMotion events generated within its borders
- *         LayerUI&lt;JComponent&gt; layerUI = new LayerUI&lt;JComponent&gt;() {
+ *         LayerUI<JComponent> layerUI = new LayerUI<JComponent>() {
  *
  *             public void paint(Graphics g, JComponent c) {
  *                 // paint the layer as is
@@ -89,7 +89,7 @@ import java.security.PrivilegedAction;
  *             }
  *
  *             // overridden method which catches MouseMotion events
- *             public void eventDispatched(AWTEvent e, JLayer&lt;? extends JComponent&gt; l) {
+ *             public void eventDispatched(AWTEvent e, JLayer<? extends JComponent> l) {
  *                 System.out.println("AWTEvent detected: " + e);
  *             }
  *         };
@@ -98,7 +98,7 @@ import java.security.PrivilegedAction;
  *         panel.add(new JButton("JButton"));
  *
  *         // create the layer for the panel using our custom layerUI
- *         return new JLayer&lt;JComponent&gt;(panel, layerUI);
+ *         return new JLayer<JComponent>(panel, layerUI);
  *     }
  *
  *     private static void createAndShowGUI() {

@@ -168,7 +168,7 @@ public interface AttributedCharacterIterator extends CharacterIterator {
 
         /**
          * Attribute key for the language of some text.
-         * <p> Values are instances of {@link java.util.Locale Locale}.
+         * Values are instances of {@link java.util.Locale Locale}.
          * @see java.util.Locale
          */
         public static final Attribute LANGUAGE = new Attribute("language");

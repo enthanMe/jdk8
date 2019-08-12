@@ -314,13 +314,13 @@ public abstract class SocketImpl implements SocketOptions {
     /**
      * Sets performance preferences for this socket.
      *
-     * <p> Sockets use the TCP/IP protocol by default.  Some implementations
+     * Sockets use the TCP/IP protocol by default.  Some implementations
      * may offer alternative protocols which have different performance
      * characteristics than TCP/IP.  This method allows the application to
      * express its own preferences as to how these tradeoffs should be made
      * when the implementation chooses from the available protocols.
      *
-     * <p> Performance preferences are described by three integers
+     * Performance preferences are described by three integers
      * whose values indicate the relative importance of short connection time,
      * low latency, and high bandwidth.  The absolute values of the integers
      * are irrelevant; in order to choose a protocol the values are simply

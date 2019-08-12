@@ -82,15 +82,15 @@ import javax.management.ServiceNotFoundException;
  * <p>
  * The <CODE>MLET</CODE> tag has the following syntax:
  * <p>
- * &lt;<CODE>MLET</CODE><BR>
+ * <<CODE>MLET</CODE><BR>
  *      <CODE>CODE = </CODE><VAR>class</VAR><CODE> | OBJECT = </CODE><VAR>serfile</VAR><BR>
  *      <CODE>ARCHIVE = &quot;</CODE><VAR>archiveList</VAR><CODE>&quot;</CODE><BR>
  *      <CODE>[CODEBASE = </CODE><VAR>codebaseURL</VAR><CODE>]</CODE><BR>
  *      <CODE>[NAME = </CODE><VAR>mbeanname</VAR><CODE>]</CODE><BR>
  *      <CODE>[VERSION = </CODE><VAR>version</VAR><CODE>]</CODE><BR>
- * &gt;<BR>
+ * ><BR>
  *      <CODE>[</CODE><VAR>arglist</VAR><CODE>]</CODE><BR>
- * &lt;<CODE>/MLET</CODE>&gt;
+ * <<CODE>/MLET</CODE>>
  * <p>
  * where:
  * <DL>
@@ -147,7 +147,7 @@ import javax.management.ServiceNotFoundException;
  * Use the following syntax to specify each item in
  * <VAR>arglist</VAR>:
  * <DL>
- * <DT>&lt;<CODE>ARG TYPE=</CODE><VAR>argumentType</VAR> <CODE>VALUE=</CODE><VAR>value</VAR>&gt;</DT>
+ * <DT><<CODE>ARG TYPE=</CODE><VAR>argumentType</VAR> <CODE>VALUE=</CODE><VAR>value</VAR>></DT>
  * <DD>where:
  * <UL>
  * <LI><VAR>argumentType</VAR> is the type of the argument that will be passed as parameter to the MBean's constructor.</UL>
@@ -757,7 +757,7 @@ public class MLet extends java.net.URLClassLoader
       * Allows the m-let to perform any operations it needs before
       * being registered in the MBean server. If the ObjectName is
       * null, the m-let provides a default name for its registration
-      * &lt;defaultDomain&gt;:type=MLet
+      * <defaultDomain>:type=MLet
       *
       * @param server The MBean server in which the m-let will be registered.
       * @param name The object name of the m-let.

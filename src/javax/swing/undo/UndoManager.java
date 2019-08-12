@@ -228,7 +228,7 @@ public class UndoManager extends CompoundEdit implements UndoableEditListener {
      * All edits in the given range (inclusive, and in reverse order)
      * will have <code>die</code> invoked on them and are removed from
      * the list of edits. This has no effect if
-     * <code>from</code> &gt; <code>to</code>.
+     * <code>from</code> > <code>to</code>.
      *
      * @param from the minimum index to remove
      * @param to the maximum index to remove

@@ -59,7 +59,7 @@ public interface TypeVariable extends ReferenceType {
     /**
      * Returns the upper bound of this type variable.
      *
-     * <p> If this type variable was declared with no explicit
+     * If this type variable was declared with no explicit
      * upper bounds, the result is {@code java.lang.Object}.
      * If it was declared with multiple upper bounds,
      * the result is an {@linkplain IntersectionType intersection type};

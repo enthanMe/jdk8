@@ -38,13 +38,13 @@ import java.nio.charset.UnsupportedCharsetException;
  * PrintStream}.  It does not contain methods for writing raw bytes, for which
  * a program should use unencoded byte streams.
  *
- * <p> Unlike the {@link PrintStream} class, if automatic flushing is enabled
+ * Unlike the {@link PrintStream} class, if automatic flushing is enabled
  * it will be done only when one of the <tt>println</tt>, <tt>printf</tt>, or
  * <tt>format</tt> methods is invoked, rather than whenever a newline character
  * happens to be output.  These methods use the platform's own notion of line
  * separator rather than the newline character.
  *
- * <p> Methods in this class never throw I/O exceptions, although some of its
+ * Methods in this class never throw I/O exceptions, although some of its
  * constructors may.  The client may inquire as to whether any errors have
  * occurred by invoking {@link #checkError checkError()}.
  *
@@ -368,7 +368,7 @@ public class PrintWriter extends Writer {
     /**
      * Indicates that an error has occurred.
      *
-     * <p> This method will cause subsequent invocations of {@link
+     * This method will cause subsequent invocations of {@link
      * #checkError()} to return <tt>true</tt> until {@link
      * #clearError()} is invoked.
      */
@@ -379,7 +379,7 @@ public class PrintWriter extends Writer {
     /**
      * Clears the error state of this stream.
      *
-     * <p> This method will cause subsequent invocations of {@link
+     * This method will cause subsequent invocations of {@link
      * #checkError()} to return <tt>false</tt> until another write
      * operation fails and invokes {@link #setError()}.
      *
@@ -763,7 +763,7 @@ public class PrintWriter extends Writer {
      * the specified format string and arguments.  If automatic flushing is
      * enabled, calls to this method will flush the output buffer.
      *
-     * <p> An invocation of this method of the form <tt>out.printf(format,
+     * An invocation of this method of the form <tt>out.printf(format,
      * args)</tt> behaves in exactly the same way as the invocation
      *
      * <pre>
@@ -809,7 +809,7 @@ public class PrintWriter extends Writer {
      * the specified format string and arguments.  If automatic flushing is
      * enabled, calls to this method will flush the output buffer.
      *
-     * <p> An invocation of this method of the form <tt>out.printf(l, format,
+     * An invocation of this method of the form <tt>out.printf(l, format,
      * args)</tt> behaves in exactly the same way as the invocation
      *
      * <pre>
@@ -860,7 +860,7 @@ public class PrintWriter extends Writer {
      * string and arguments.  If automatic flushing is enabled, calls to this
      * method will flush the output buffer.
      *
-     * <p> The locale always used is the one returned by {@link
+     * The locale always used is the one returned by {@link
      * java.util.Locale#getDefault() Locale.getDefault()}, regardless of any
      * previous invocations of other formatting methods on this object.
      *
@@ -976,13 +976,13 @@ public class PrintWriter extends Writer {
     /**
      * Appends the specified character sequence to this writer.
      *
-     * <p> An invocation of this method of the form <tt>out.append(csq)</tt>
+     * An invocation of this method of the form <tt>out.append(csq)</tt>
      * behaves in exactly the same way as the invocation
      *
      * <pre>
      *     out.write(csq.toString()) </pre>
      *
-     * <p> Depending on the specification of <tt>toString</tt> for the
+     * Depending on the specification of <tt>toString</tt> for the
      * character sequence <tt>csq</tt>, the entire sequence may not be
      * appended. For instance, invoking the <tt>toString</tt> method of a
      * character buffer will return a subsequence whose content depends upon
@@ -1008,7 +1008,7 @@ public class PrintWriter extends Writer {
     /**
      * Appends a subsequence of the specified character sequence to this writer.
      *
-     * <p> An invocation of this method of the form <tt>out.append(csq, start,
+     * An invocation of this method of the form <tt>out.append(csq, start,
      * end)</tt> when <tt>csq</tt> is not <tt>null</tt>, behaves in
      * exactly the same way as the invocation
      *
@@ -1046,7 +1046,7 @@ public class PrintWriter extends Writer {
     /**
      * Appends the specified character to this writer.
      *
-     * <p> An invocation of this method of the form <tt>out.append(c)</tt>
+     * An invocation of this method of the form <tt>out.append(c)</tt>
      * behaves in exactly the same way as the invocation
      *
      * <pre>

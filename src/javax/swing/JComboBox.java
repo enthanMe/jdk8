@@ -605,7 +605,7 @@ implements ItemSelectable,ListDataListener,ActionListener, Accessible {
      *
      * @param anIndex an integer specifying the list item to select,
      *                  where 0 specifies the first item in the list and -1 indicates no selection
-     * @exception IllegalArgumentException if <code>anIndex</code> &lt; -1 or
+     * @exception IllegalArgumentException if <code>anIndex</code> < -1 or
      *                  <code>anIndex</code> is greater than or equal to size
      * @beaninfo
      *   preferred: true

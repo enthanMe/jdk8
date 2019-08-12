@@ -36,7 +36,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 /**
  * Maps a Java type to a simple schema built-in type.
  *
- * <p> <b>Usage</b> </p>
+ * <b>Usage</b> </p>
  * <p>
  * <tt>@XmlSchemaType</tt> annotation can be used with the following program
  * elements:
@@ -46,13 +46,13 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
  *   <li> package</li>
  * </ul>
  *
- * <p> <tt>@XmlSchemaType</tt> annotation defined for Java type
+ * <tt>@XmlSchemaType</tt> annotation defined for Java type
  * applies to all references to the Java type from a property/field.
  * A <tt>@XmlSchemaType</tt> annotation specified on the
  * property/field overrides the <tt>@XmlSchemaType</tt> annotation
  * specified at the package level.
  *
- * <p> This annotation can be used with the following annotations:
+ * This annotation can be used with the following annotations:
  * {@link XmlElement},  {@link XmlAttribute}.
  * <p>
  * <b>Example 1: </b> Customize mapping of XMLGregorianCalendar on the
@@ -66,15 +66,15 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
  *         public XMLGregorianCalendar date;
  *     }
  *
- *     &lt;!-- Example: Local XML Schema element -->
- *     &lt;xs:complexType name="USPrice"/>
- *       &lt;xs:sequence>
- *         &lt;xs:element name="date" type="xs:date"/>
- *       &lt;/sequence>
- *     &lt;/xs:complexType>
+ *     <!-- Example: Local XML Schema element -->
+ *     <xs:complexType name="USPrice"/>
+ *       <xs:sequence>
+ *         <xs:element name="date" type="xs:date"/>
+ *       </sequence>
+ *     </xs:complexType>
  * </pre>
  *
- * <p> <b> Example 2: </b> Customize mapping of XMLGregorianCalendar at package
+ * <b> Example 2: </b> Customize mapping of XMLGregorianCalendar at package
  *     level </p>
  * <pre>
  *     package foo;

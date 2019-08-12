@@ -41,13 +41,13 @@ import java.io.IOException;
  * by an attacker while the directory is open. A {@code SecureDirectoryStream}
  * may also be used as a virtual <em>working directory</em>.
  *
- * <p> A {@code SecureDirectoryStream} requires corresponding support from the
+ * A {@code SecureDirectoryStream} requires corresponding support from the
  * underlying operating system. Where an implementation supports this features
  * then the {@code DirectoryStream} returned by the {@link Files#newDirectoryStream
  * newDirectoryStream} method will be a {@code SecureDirectoryStream} and must
  * be cast to that type in order to invoke the methods defined by this interface.
  *
- * <p> In the case of the default {@link java.nio.file.spi.FileSystemProvider
+ * In the case of the default {@link java.nio.file.spi.FileSystemProvider
  * provider}, and a security manager is set, then the permission checks are
  * performed using the path obtained by resolving the given relative path
  * against the <i>original path</i> of the directory (irrespective of if the
@@ -63,7 +63,7 @@ public interface SecureDirectoryStream<T>
      * Opens the directory identified by the given path, returning a {@code
      * SecureDirectoryStream} to iterate over the entries in the directory.
      *
-     * <p> This method works in exactly the manner specified by the {@link
+     * This method works in exactly the manner specified by the {@link
      * Files#newDirectoryStream(Path) newDirectoryStream} method for the case that
      * the {@code path} parameter is an {@link Path#isAbsolute absolute} path.
      * When the parameter is a relative path then the directory to open is
@@ -71,7 +71,7 @@ public interface SecureDirectoryStream<T>
      * LinkOption#NOFOLLOW_LINKS NOFOLLOW_LINKS} option may be used to
      * ensure that this method fails if the file is a symbolic link.
      *
-     * <p> The new directory stream, once created, is not dependent upon the
+     * The new directory stream, once created, is not dependent upon the
      * directory stream used to create it. Closing this directory stream has no
      * effect upon newly created directory stream.
      *
@@ -101,7 +101,7 @@ public interface SecureDirectoryStream<T>
      * Opens or creates a file in this directory, returning a seekable byte
      * channel to access the file.
      *
-     * <p> This method works in exactly the manner specified by the {@link
+     * This method works in exactly the manner specified by the {@link
      * Files#newByteChannel Files.newByteChannel} method for the
      * case that the {@code path} parameter is an {@link Path#isAbsolute absolute}
      * path. When the parameter is a relative path then the file to open or
@@ -110,7 +110,7 @@ public interface SecureDirectoryStream<T>
      * LinkOption#NOFOLLOW_LINKS NOFOLLOW_LINKS} option may be used to
      * ensure that this method fails if the file is a symbolic link.
      *
-     * <p> The channel, once created, is not dependent upon the directory stream
+     * The channel, once created, is not dependent upon the directory stream
      * used to create it. Closing this directory stream has no effect upon the
      * channel.
      *
@@ -153,7 +153,7 @@ public interface SecureDirectoryStream<T>
     /**
      * Deletes a file.
      *
-     * <p> Unlike the {@link Files#delete delete()} method, this method does
+     * Unlike the {@link Files#delete delete()} method, this method does
      * not first examine the file to determine if the file is a directory.
      * Whether a directory is deleted by this method is system dependent and
      * therefore not specified. If the file is a symbolic link, then the link
@@ -180,7 +180,7 @@ public interface SecureDirectoryStream<T>
     /**
      * Deletes a directory.
      *
-     * <p> Unlike the {@link Files#delete delete()} method, this method
+     * Unlike the {@link Files#delete delete()} method, this method
      * does not first examine the file to determine if the file is a directory.
      * Whether non-directories are deleted by this method is system dependent and
      * therefore not specified. When the parameter is a relative path then the
@@ -208,7 +208,7 @@ public interface SecureDirectoryStream<T>
     /**
      * Move a file from this directory to another directory.
      *
-     * <p> This method works in a similar manner to {@link Files#move move}
+     * This method works in a similar manner to {@link Files#move move}
      * method when the {@link StandardCopyOption#ATOMIC_MOVE ATOMIC_MOVE} option
      * is specified. That is, this method moves a file as an atomic file system
      * operation. If the {@code srcpath} parameter is an {@link Path#isAbsolute
@@ -250,14 +250,14 @@ public interface SecureDirectoryStream<T>
      * Returns a new file attribute view to access the file attributes of this
      * directory.
      *
-     * <p> The resulting file attribute view can be used to read or update the
+     * The resulting file attribute view can be used to read or update the
      * attributes of this (open) directory. The {@code type} parameter specifies
      * the type of the attribute view and the method returns an instance of that
      * type if supported. Invoking this method to obtain a {@link
      * BasicFileAttributeView} always returns an instance of that class that is
      * bound to this open directory.
      *
-     * <p> The state of resulting file attribute view is intimately connected
+     * The state of resulting file attribute view is intimately connected
      * to this directory stream. Once the directory stream is {@link #close closed},
      * then all methods to read or update attributes will throw {@link
      * ClosedDirectoryStreamException ClosedDirectoryStreamException}.
@@ -277,14 +277,14 @@ public interface SecureDirectoryStream<T>
      * Returns a new file attribute view to access the file attributes of a file
      * in this directory.
      *
-     * <p> The resulting file attribute view can be used to read or update the
+     * The resulting file attribute view can be used to read or update the
      * attributes of file in this directory. The {@code type} parameter specifies
      * the type of the attribute view and the method returns an instance of that
      * type if supported. Invoking this method to obtain a {@link
      * BasicFileAttributeView} always returns an instance of that class that is
      * bound to the file in the directory.
      *
-     * <p> The state of resulting file attribute view is intimately connected
+     * The state of resulting file attribute view is intimately connected
      * to this directory stream. Once the directory stream {@link #close closed},
      * then all methods to read or update attributes will throw {@link
      * ClosedDirectoryStreamException ClosedDirectoryStreamException}. The

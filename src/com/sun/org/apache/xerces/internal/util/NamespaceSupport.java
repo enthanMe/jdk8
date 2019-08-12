@@ -86,7 +86,7 @@ public class NamespaceSupport implements NamespaceContext {
     /**
      * Namespace binding information. This array is composed of a
      * series of tuples containing the namespace binding information:
-     * &lt;prefix, uri&gt;. The default size can be set to anything
+     * <prefix, uri>. The default size can be set to anything
      * as long as it is a power of 2 greater than 1.
      *
      * @see #fNamespaceSize

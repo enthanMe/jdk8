@@ -133,9 +133,9 @@ public class SpinnerDateModel extends AbstractSpinnerModel implements Serializab
      * upper or lower bound.  If <code>value</code> or
      * <code>calendarField</code> is <code>null</code>, or if both
      * <code>start</code> and <code>end</code> are specified and
-     * <code>minimum &gt; maximum</code> then an
+     * <code>minimum > maximum</code> then an
      * <code>IllegalArgumentException</code> is thrown.
-     * Similarly if <code>(minimum &lt;= value &lt;= maximum)</code> is false,
+     * Similarly if <code>(minimum <= value <= maximum)</code> is false,
      * an IllegalArgumentException is thrown.
      *
      * @param value the current (non <code>null</code>) value of the model
@@ -164,7 +164,7 @@ public class SpinnerDateModel extends AbstractSpinnerModel implements Serializab
      *    <code>calendarField</code> are <code>null</code>,
      *    if <code>calendarField</code> isn't valid,
      *    or if the following expression is
-     *    false: <code>(start &lt;= value &lt;= end)</code>.
+     *    false: <code>(start <= value <= end)</code>.
      *
      * @see Calendar#add
      * @see #setValue
@@ -208,7 +208,7 @@ public class SpinnerDateModel extends AbstractSpinnerModel implements Serializab
      * If <code>start</code> is <code>null</code>,
      * then there is no lower limit.  No bounds checking is done here:
      * the new start value may invalidate the
-     * <code>(start &lt;= value &lt;= end)</code>
+     * <code>(start <= value <= end)</code>
      * invariant enforced by the constructors.  This is to simplify updating
      * the model.  Naturally one should ensure that the invariant is true
      * before calling the <code>nextValue</code>, <code>previousValue</code>,
@@ -221,7 +221,7 @@ public class SpinnerDateModel extends AbstractSpinnerModel implements Serializab
      * MyStartDate implements Comparable {
      *     long t = 12345;
      *     public int compareTo(Date d) {
-     *            return (t &lt; d.getTime() ? -1 : (t == d.getTime() ? 0 : 1));
+     *            return (t < d.getTime() ? -1 : (t == d.getTime() ? 0 : 1));
      *     }
      *     public int compareTo(Object o) {
      *            return compareTo((Date)o);
@@ -263,7 +263,7 @@ public class SpinnerDateModel extends AbstractSpinnerModel implements Serializab
      * Changes the upper limit for <code>Date</code>s in this sequence.
      * If <code>start</code> is <code>null</code>, then there is no upper
      * limit.  No bounds checking is done here: the new
-     * start value may invalidate the <code>(start &lt;= value &lt;= end)</code>
+     * start value may invalidate the <code>(start <= value <= end)</code>
      * invariant enforced by the constructors.  This is to simplify updating
      * the model.  Naturally, one should ensure that the invariant is true
      * before calling the <code>nextValue</code>, <code>previousValue</code>,
@@ -435,9 +435,9 @@ public class SpinnerDateModel extends AbstractSpinnerModel implements Serializab
      * If <code>value</code> is <code>null</code>,
      * an <code>IllegalArgumentException</code> is thrown.  No bounds
      * checking is done here:
-     * the new value may invalidate the <code>(start &lt;= value &lt; end)</code>
+     * the new value may invalidate the <code>(start <= value < end)</code>
      * invariant enforced by the constructors.  Naturally, one should ensure
-     * that the <code>(start &lt;= value &lt;= maximum)</code> invariant is true
+     * that the <code>(start <= value <= maximum)</code> invariant is true
      * before calling the <code>nextValue</code>, <code>previousValue</code>,
      * or <code>setValue</code> methods.
      * <p>

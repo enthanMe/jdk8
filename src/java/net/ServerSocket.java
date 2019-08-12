@@ -570,7 +570,7 @@ class ServerSocket implements java.io.Closeable {
      * Any thread currently blocked in {@link #accept()} will throw
      * a {@link SocketException}.
      *
-     * <p> If this socket has an associated channel then the channel is closed
+     * If this socket has an associated channel then the channel is closed
      * as well.
      *
      * @exception  IOException  if an I/O error occurs when closing the socket.
@@ -591,7 +591,7 @@ class ServerSocket implements java.io.Closeable {
      * Returns the unique {@link java.nio.channels.ServerSocketChannel} object
      * associated with this socket, if any.
      *
-     * <p> A server socket will have a channel if, and only if, the channel
+     * A server socket will have a channel if, and only if, the channel
      * itself was created via the {@link
      * java.nio.channels.ServerSocketChannel#open ServerSocketChannel.open}
      * method.
@@ -878,13 +878,13 @@ class ServerSocket implements java.io.Closeable {
     /**
      * Sets performance preferences for this ServerSocket.
      *
-     * <p> Sockets use the TCP/IP protocol by default.  Some implementations
+     * Sockets use the TCP/IP protocol by default.  Some implementations
      * may offer alternative protocols which have different performance
      * characteristics than TCP/IP.  This method allows the application to
      * express its own preferences as to how these tradeoffs should be made
      * when the implementation chooses from the available protocols.
      *
-     * <p> Performance preferences are described by three integers
+     * Performance preferences are described by three integers
      * whose values indicate the relative importance of short connection time,
      * low latency, and high bandwidth.  The absolute values of the integers
      * are irrelevant; in order to choose a protocol the values are simply
@@ -895,7 +895,7 @@ class ServerSocket implements java.io.Closeable {
      * latency, and low latency above short connection time, then it could
      * invoke this method with the values {@code (0, 1, 2)}.
      *
-     * <p> Invoking this method after this socket has been bound
+     * Invoking this method after this socket has been bound
      * will have no effect. This implies that in order to use this capability
      * requires the socket to be created with the no-argument constructor.
      *

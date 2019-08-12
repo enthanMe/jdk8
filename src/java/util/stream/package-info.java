@@ -124,7 +124,7 @@
  * arbitrary client-controlled pipeline traversals in the event that the
  * existing operations are not sufficient to the task.
  *
- * <p> Processing streams lazily allows for significant efficiencies; in a
+ * Processing streams lazily allows for significant efficiencies; in a
  * pipeline such as the filter-map-sum example above, filtering, mapping, and
  * summing can be fused into a single pass on the data, with minimal
  * intermediate state. Laziness also allows avoiding examining all the data

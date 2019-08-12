@@ -28,7 +28,7 @@ package javax.xml.bind.annotation.adapters;
 /**
  * Adapts a Java type for custom marshaling.
  *
- * <p> <b> Usage: </b> </p>
+ * <b> Usage: </b> </p>
  *
  * <p>
  * Some Java types do not map naturally to a XML representation, for
@@ -69,48 +69,48 @@ package javax.xml.bind.annotation.adapters;
  * </ul>
  *
  * <p><b>Example:</b> Customized mapping of <tt>HashMap</tt></p>
- * <p> The following example illustrates the use of
+ * The following example illustrates the use of
  * <tt>&#64;XmlAdapter</tt> and <tt>&#64;XmlJavaTypeAdapter</tt> to
  * customize the mapping of a <tt>HashMap</tt>.
  *
- * <p> <b> Step 1: </b> Determine the desired XML representation for HashMap.
+ * <b> Step 1: </b> Determine the desired XML representation for HashMap.
  *
  * <pre>
- *     &lt;hashmap>
- *         &lt;entry key="id123">this is a value&lt;/entry>
- *         &lt;entry key="id312">this is another value&lt;/entry>
+ *     <hashmap>
+ *         <entry key="id123">this is a value</entry>
+ *         <entry key="id312">this is another value</entry>
  *         ...
- *       &lt;/hashmap>
+ *       </hashmap>
  * </pre>
  *
- * <p> <b> Step 2: </b> Determine the schema definition that the
+ * <b> Step 2: </b> Determine the schema definition that the
  * desired XML representation shown above should follow.
  *
  * <pre>
  *
- *     &lt;xs:complexType name="myHashMapType">
- *       &lt;xs:sequence>
- *         &lt;xs:element name="entry" type="myHashMapEntryType"
+ *     <xs:complexType name="myHashMapType">
+ *       <xs:sequence>
+ *         <xs:element name="entry" type="myHashMapEntryType"
  *                        minOccurs = "0" maxOccurs="unbounded"/>
- *       &lt;/xs:sequence>
- *     &lt;/xs:complexType>
+ *       </xs:sequence>
+ *     </xs:complexType>
  *
- *     &lt;xs:complexType name="myHashMapEntryType">
- *       &lt;xs:simpleContent>
- *         &lt;xs:extension base="xs:string">
- *           &lt;xs:attribute name="key" type="xs:int"/>
- *         &lt;/xs:extension>
- *       &lt;/xs:simpleContent>
- *     &lt;/xs:complexType>
+ *     <xs:complexType name="myHashMapEntryType">
+ *       <xs:simpleContent>
+ *         <xs:extension base="xs:string">
+ *           <xs:attribute name="key" type="xs:int"/>
+ *         </xs:extension>
+ *       </xs:simpleContent>
+ *     </xs:complexType>
  *
  * </pre>
  *
- * <p> <b> Step 3: </b> Write value types that can generate the above
+ * <b> Step 3: </b> Write value types that can generate the above
  * schema definition.
  *
  * <pre>
  *     public class MyHashMapType {
- *         List&lt;MyHashMapEntryType> entry;
+ *         List<MyHashMapEntryType> entry;
  *     }
  *
  *     public class MyHashMapEntryType {
@@ -122,16 +122,16 @@ package javax.xml.bind.annotation.adapters;
  *     }
  * </pre>
  *
- * <p> <b> Step 4: </b> Write the adapter that adapts the value type,
+ * <b> Step 4: </b> Write the adapter that adapts the value type,
  * MyHashMapType to a bound type, HashMap, used by the application.
  *
  * <pre>
  *     public final class MyHashMapAdapter extends
- *                        XmlAdapter&lt;MyHashMapType,HashMap> { ... }
+ *                        XmlAdapter<MyHashMapType,HashMap> { ... }
  *
  * </pre>
  *
- * <p> <b> Step 5: </b> Use the adapter.
+ * <b> Step 5: </b> Use the adapter.
  *
  * <pre>
  *     public class Foo {
@@ -144,11 +144,11 @@ package javax.xml.bind.annotation.adapters;
  * The above code fragment will map to the following schema:
  *
  * <pre>
- *     &lt;xs:complexType name="Foo">
- *       &lt;xs:sequence>
- *         &lt;xs:element name="hashmap" type="myHashMapType"
- *       &lt;/xs:sequence>
- *     &lt;/xs:complexType>
+ *     <xs:complexType name="Foo">
+ *       <xs:sequence>
+ *         <xs:element name="hashmap" type="myHashMapType"
+ *       </xs:sequence>
+ *     </xs:complexType>
  * </pre>
  *
  * @param <BoundType>

@@ -623,7 +623,7 @@ public class MemoryPool
 
     <pre>
 String typeName =
-    "java.util.Map&lt;java.lang.String, javax.management.ObjectName&gt;";
+    "java.util.Map<java.lang.String, javax.management.ObjectName>";
 String[] keyValue =
     new String[] {"key", "value"};
 OpenType[] openTypes =
@@ -1036,7 +1036,7 @@ public interface <b>Node</b> {
 
     <pre>
 public interface <b>NodeList</b> {
-    public List&lt;Node&gt; getNodes();
+    public List<Node> getNodes();
 }
 
 public interface Node {

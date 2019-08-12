@@ -62,7 +62,7 @@ import com.sun.org.apache.bcel.internal.util.ByteSequence;
 
 /**
  * NEWARRAY -  Create new array of basic type (int, short, ...)
- * <PRE>Stack: ..., count -&gt; ..., arrayref</PRE>
+ * <PRE>Stack: ..., count -> ..., arrayref</PRE>
  * type must be one of T_INT, T_SHORT, ...
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>

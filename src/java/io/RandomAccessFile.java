@@ -82,7 +82,7 @@ public class RandomAccessFile implements DataOutput, DataInput, Closeable {
      * {@link FileDescriptor} object is created to represent the
      * connection to the file.
      *
-     * <p> The <tt>mode</tt> argument specifies the access mode with which the
+     * The <tt>mode</tt> argument specifies the access mode with which the
      * file is to be opened.  The permitted values and their meanings are as
      * specified for the <a
      * href="#mode"><tt>RandomAccessFile(File,String)</tt></a> constructor.
@@ -262,7 +262,7 @@ public class RandomAccessFile implements DataOutput, DataInput, Closeable {
      * Returns the unique {@link java.nio.channels.FileChannel FileChannel}
      * object associated with this file.
      *
-     * <p> The {@link java.nio.channels.FileChannel#position()
+     * The {@link java.nio.channels.FileChannel#position()
      * position} of the returned channel will always be equal to
      * this object's file-pointer offset as returned by the {@link
      * #getFilePointer getFilePointer} method.  Changing this object's
@@ -571,14 +571,14 @@ public class RandomAccessFile implements DataOutput, DataInput, Closeable {
     /**
      * Sets the length of this file.
      *
-     * <p> If the present length of the file as returned by the
+     * If the present length of the file as returned by the
      * {@code length} method is greater than the {@code newLength}
      * argument then the file will be truncated.  In this case, if the file
      * offset as returned by the {@code getFilePointer} method is greater
      * than {@code newLength} then after this method returns the offset
      * will be equal to {@code newLength}.
      *
-     * <p> If the present length of the file as returned by the
+     * If the present length of the file as returned by the
      * {@code length} method is smaller than the {@code newLength}
      * argument then the file will be extended.  In this case, the contents of
      * the extended portion of the file are not defined.
@@ -595,7 +595,7 @@ public class RandomAccessFile implements DataOutput, DataInput, Closeable {
      * file cannot perform input or output operations and cannot be
      * reopened.
      *
-     * <p> If this file has an associated channel then the channel is closed
+     * If this file has an associated channel then the channel is closed
      * as well.
      *
      * @exception  IOException  if an I/O error occurs.
@@ -649,7 +649,7 @@ public class RandomAccessFile implements DataOutput, DataInput, Closeable {
      * Reads a signed eight-bit value from this file. This method reads a
      * byte from the file, starting from the current file pointer.
      * If the byte read is {@code b}, where
-     * <code>0&nbsp;&lt;=&nbsp;b&nbsp;&lt;=&nbsp;255</code>,
+     * <code>0&nbsp;<=&nbsp;b&nbsp;<=&nbsp;255</code>,
      * then the result is:
      * <blockquote><pre>
      *     (byte)(b)
@@ -698,7 +698,7 @@ public class RandomAccessFile implements DataOutput, DataInput, Closeable {
      * between {@code 0} and {@code 255}, inclusive, then the
      * result is equal to:
      * <blockquote><pre>
-     *     (short)((b1 &lt;&lt; 8) | b2)
+     *     (short)((b1 << 8) | b2)
      * </pre></blockquote>
      * <p>
      * This method blocks until the two bytes are read, the end of the
@@ -723,10 +723,10 @@ public class RandomAccessFile implements DataOutput, DataInput, Closeable {
      * two bytes from the file, starting at the current file pointer.
      * If the bytes read, in order, are
      * {@code b1} and {@code b2}, where
-     * <code>0&nbsp;&lt;=&nbsp;b1, b2&nbsp;&lt;=&nbsp;255</code>,
+     * <code>0&nbsp;<=&nbsp;b1, b2&nbsp;<=&nbsp;255</code>,
      * then the result is equal to:
      * <blockquote><pre>
-     *     (b1 &lt;&lt; 8) | b2
+     *     (b1 << 8) | b2
      * </pre></blockquote>
      * <p>
      * This method blocks until the two bytes are read, the end of the
@@ -751,10 +751,10 @@ public class RandomAccessFile implements DataOutput, DataInput, Closeable {
      * bytes from the file, starting at the current file pointer.
      * If the bytes read, in order, are
      * {@code b1} and {@code b2}, where
-     * <code>0&nbsp;&lt;=&nbsp;b1,&nbsp;b2&nbsp;&lt;=&nbsp;255</code>,
+     * <code>0&nbsp;<=&nbsp;b1,&nbsp;b2&nbsp;<=&nbsp;255</code>,
      * then the result is equal to:
      * <blockquote><pre>
-     *     (char)((b1 &lt;&lt; 8) | b2)
+     *     (char)((b1 << 8) | b2)
      * </pre></blockquote>
      * <p>
      * This method blocks until the two bytes are read, the end of the
@@ -779,10 +779,10 @@ public class RandomAccessFile implements DataOutput, DataInput, Closeable {
      * bytes from the file, starting at the current file pointer.
      * If the bytes read, in order, are {@code b1},
      * {@code b2}, {@code b3}, and {@code b4}, where
-     * <code>0&nbsp;&lt;=&nbsp;b1, b2, b3, b4&nbsp;&lt;=&nbsp;255</code>,
+     * <code>0&nbsp;<=&nbsp;b1, b2, b3, b4&nbsp;<=&nbsp;255</code>,
      * then the result is equal to:
      * <blockquote><pre>
-     *     (b1 &lt;&lt; 24) | (b2 &lt;&lt; 16) + (b3 &lt;&lt; 8) + b4
+     *     (b1 << 24) | (b2 << 16) + (b3 << 8) + b4
      * </pre></blockquote>
      * <p>
      * This method blocks until the four bytes are read, the end of the
@@ -812,15 +812,15 @@ public class RandomAccessFile implements DataOutput, DataInput, Closeable {
      * {@code b4}, {@code b5}, {@code b6},
      * {@code b7}, and {@code b8,} where:
      * <blockquote><pre>
-     *     0 &lt;= b1, b2, b3, b4, b5, b6, b7, b8 &lt;=255,
+     *     0 <= b1, b2, b3, b4, b5, b6, b7, b8 <=255,
      * </pre></blockquote>
      * <p>
      * then the result is equal to:
      * <blockquote><pre>
-     *     ((long)b1 &lt;&lt; 56) + ((long)b2 &lt;&lt; 48)
-     *     + ((long)b3 &lt;&lt; 40) + ((long)b4 &lt;&lt; 32)
-     *     + ((long)b5 &lt;&lt; 24) + ((long)b6 &lt;&lt; 16)
-     *     + ((long)b7 &lt;&lt; 8) + b8
+     *     ((long)b1 << 56) + ((long)b2 << 48)
+     *     + ((long)b3 << 40) + ((long)b4 << 32)
+     *     + ((long)b5 << 24) + ((long)b6 << 16)
+     *     + ((long)b7 << 8) + b8
      * </pre></blockquote>
      * <p>
      * This method blocks until the eight bytes are read, the end of the
@@ -891,13 +891,13 @@ public class RandomAccessFile implements DataOutput, DataInput, Closeable {
      * high eight bits of the character to zero.  This method does not,
      * therefore, support the full Unicode character set.
      *
-     * <p> A line of text is terminated by a carriage-return character
+     * A line of text is terminated by a carriage-return character
      * ({@code '\u005Cr'}), a newline character ({@code '\u005Cn'}), a
      * carriage-return character immediately followed by a newline character,
      * or the end of the file.  Line-terminating characters are discarded and
      * are not included as part of the string returned.
      *
-     * <p> This method blocks until a newline character is read, a carriage
+     * This method blocks until a newline character is read, a carriage
      * return and the byte following it are read (to see if it is a newline),
      * the end of the file is reached, or an exception is thrown.
      *

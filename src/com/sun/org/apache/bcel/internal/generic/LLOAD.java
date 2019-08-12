@@ -60,7 +60,7 @@ package com.sun.org.apache.bcel.internal.generic;
 
 /**
  * LLOAD - Load long from local variable
- *<PRE>Stack ... -&GT; ..., result.word1, result.word2</PRE>
+ *<PRE>Stack ... -> ..., result.word1, result.word2</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

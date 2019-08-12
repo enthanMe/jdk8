@@ -28,16 +28,16 @@ package com.sun.security.auth;
 import java.security.Principal;
 
 /**
- * <p> This class implements the <code>Principal</code> interface
+ * This class implements the <code>Principal</code> interface
  * and represents information about a Windows NT user, group or realm.
  *
- * <p> Windows NT chooses to represent users, groups and realms (or domains)
+ * Windows NT chooses to represent users, groups and realms (or domains)
  * with not only common names, but also relatively unique numbers.  These
  * numbers are called Security IDentifiers, or SIDs.  Windows NT
  * also provides services that render these SIDs into string forms.
  * This class represents these string forms.
  *
- * <p> Principals such as this <code>NTSid</code>
+ * Principals such as this <code>NTSid</code>
  * may be associated with a particular <code>Subject</code>
  * to augment that <code>Subject</code> with an additional
  * identity.  Refer to the <code>Subject</code> class for more information

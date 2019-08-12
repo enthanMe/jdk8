@@ -677,7 +677,7 @@ public class JMenu extends JMenuItem implements Accessible,MenuElement
      * @param pos an integer specifying the position at which to add the
      *               new menu item
      * @exception IllegalArgumentException when the value of
-     *                  <code>pos</code> &lt; 0
+     *                  <code>pos</code> < 0
      */
     public void insert(String s, int pos) {
         if (pos < 0) {
@@ -696,7 +696,7 @@ public class JMenu extends JMenuItem implements Accessible,MenuElement
      *               new <code>JMenuitem</code>
      * @return the new menu item
      * @exception IllegalArgumentException if the value of
-     *                  <code>pos</code> &lt; 0
+     *                  <code>pos</code> < 0
      */
     public JMenuItem insert(JMenuItem mi, int pos) {
         if (pos < 0) {
@@ -715,7 +715,7 @@ public class JMenu extends JMenuItem implements Accessible,MenuElement
      * @param pos an integer specifying the position at which to add the
      *               new menu item
      * @exception IllegalArgumentException if the value of
-     *                  <code>pos</code> &lt; 0
+     *                  <code>pos</code> < 0
      */
     public JMenuItem insert(Action a, int pos) {
         if (pos < 0) {
@@ -736,7 +736,7 @@ public class JMenu extends JMenuItem implements Accessible,MenuElement
      * @param       index an integer specifying the position at which to
      *                    insert the menu separator
      * @exception   IllegalArgumentException if the value of
-     *                       <code>index</code> &lt; 0
+     *                       <code>index</code> < 0
      */
     public void insertSeparator(int index) {
         if (index < 0) {
@@ -755,7 +755,7 @@ public class JMenu extends JMenuItem implements Accessible,MenuElement
      *
      * @param pos    an integer specifying the position
      * @exception   IllegalArgumentException if the value of
-     *                       <code>pos</code> &lt; 0
+     *                       <code>pos</code> < 0
      * @return  the menu item at the specified position; or <code>null</code>
      *          if the item as the specified position is not a menu item
      */
@@ -812,7 +812,7 @@ public class JMenu extends JMenuItem implements Accessible,MenuElement
      *
      * @param       pos the position of the item to be removed
      * @exception   IllegalArgumentException if the value of
-     *                       <code>pos</code> &lt; 0, or if <code>pos</code>
+     *                       <code>pos</code> < 0, or if <code>pos</code>
      *                       is greater than the number of menu items
      */
     public void remove(int pos) {

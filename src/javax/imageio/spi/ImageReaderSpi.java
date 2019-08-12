@@ -34,10 +34,10 @@ import javax.imageio.stream.ImageInputStream;
  * For more information on service provider classes, see the class comment
  * for the <code>IIORegistry</code> class.
  *
- * <p> Each <code>ImageReaderSpi</code> provides several types of information
+ * Each <code>ImageReaderSpi</code> provides several types of information
  * about the <code>ImageReader</code> class with which it is associated.
  *
- * <p> The name of the vendor who defined the SPI class and a
+ * The name of the vendor who defined the SPI class and a
  * brief description of the class are available via the
  * <code>getVendorName</code>, <code>getDescription</code>,
  * and <code>getVersion</code> methods.
@@ -46,7 +46,7 @@ import javax.imageio.stream.ImageInputStream;
  * human-readable information that might be used to organize a pop-up
  * menu or other list.
  *
- * <p> Lists of format names, file suffixes, and MIME types associated
+ * Lists of format names, file suffixes, and MIME types associated
  * with the service may be obtained by means of the
  * <code>getFormatNames</code>, <code>getFileSuffixes</code>, and
  * <code>getMIMETypes</code> methods.  These methods may be used to
@@ -55,12 +55,12 @@ import javax.imageio.stream.ImageInputStream;
  * naming, or MIME associations (for example, when accessing a file
  * over HTTP or as an email attachment).
  *
- * <p> A more reliable way to determine which <code>ImageReader</code>s
+ * A more reliable way to determine which <code>ImageReader</code>s
  * are likely to be able to parse a particular data stream is provided
  * by the <code>canDecodeInput</code> method.  This methods allows the
  * service provider to inspect the actual stream contents.
  *
- * <p> Finally, an instance of the <code>ImageReader</code> class
+ * Finally, an instance of the <code>ImageReader</code> class
  * associated with this service provider may be obtained by calling
  * the <code>createReaderInstance</code> method.  Any heavyweight
  * initialization, such as the loading of native libraries or creation
@@ -246,7 +246,7 @@ public abstract class ImageReaderSpi extends ImageReaderWriterSpi {
      * types of objects may be used as arguments to the reader's
      * <code>setInput</code> method.
      *
-     * <p> For most readers, which only accept input from an
+     * For most readers, which only accept input from an
      * <code>ImageInputStream</code>, a single-element array
      * containing <code>ImageInputStream.class</code> should be
      * returned.
@@ -271,7 +271,7 @@ public abstract class ImageReaderSpi extends ImageReaderWriterSpi {
      * commenced, the reader may still indicate failure at any time
      * prior to the completion of decoding.
      *
-     * <p> It is important that the state of the object not be
+     * It is important that the state of the object not be
      * disturbed in order that other <code>ImageReaderSpi</code>s can
      * properly determine whether they are able to decode the object.
      * In particular, if the source is an
@@ -279,12 +279,12 @@ public abstract class ImageReaderSpi extends ImageReaderWriterSpi {
      * <code>mark</code>/<code>reset</code> pair should be used to
      * preserve the stream position.
      *
-     * <p> Formats such as "raw," which can potentially attempt
+     * Formats such as "raw," which can potentially attempt
      * to read nearly any stream, should return <code>false</code>
      * in order to avoid being invoked in preference to a closer
      * match.
      *
-     * <p> If <code>source</code> is not an instance of one of the
+     * If <code>source</code> is not an instance of one of the
      * classes returned by <code>getInputTypes</code>, the method
      * should simply return <code>false</code>.
      *
@@ -307,7 +307,7 @@ public abstract class ImageReaderSpi extends ImageReaderWriterSpi {
      * The returned object will initially be in an initial state
      * as if its <code>reset</code> method had been called.
      *
-     * <p> The default implementation simply returns
+     * The default implementation simply returns
      * <code>createReaderInstance(null)</code>.
      *
      * @return an <code>ImageReader</code> instance.
@@ -326,11 +326,11 @@ public abstract class ImageReaderSpi extends ImageReaderWriterSpi {
      * The returned object will initially be in an initial state
      * as if its <code>reset</code> method had been called.
      *
-     * <p> An <code>Object</code> may be supplied to the plug-in at
+     * An <code>Object</code> may be supplied to the plug-in at
      * construction time.  The nature of the object is entirely
      * plug-in specific.
      *
-     * <p> Typically, a plug-in will implement this method using code
+     * Typically, a plug-in will implement this method using code
      * such as <code>return new MyImageReader(this)</code>.
      *
      * @param extension a plug-in specific extension object, which may
@@ -353,7 +353,7 @@ public abstract class ImageReaderSpi extends ImageReaderWriterSpi {
      * passed in is an instance of the <code>ImageReader</code>
      * associated with this service provider.
      *
-     * <p> The default implementation compares the fully-qualified
+     * The default implementation compares the fully-qualified
      * class name of the <code>reader</code> argument with the class
      * name passed into the constructor.  This method may be overridden
      * if more sophisticated checking is required.
@@ -383,12 +383,12 @@ public abstract class ImageReaderSpi extends ImageReaderWriterSpi {
      * non-<code>null</code> value is returned, it must have non-zero
      * length.
      *
-     * <p> The first item in the array must be the name of the service
+     * The first item in the array must be the name of the service
      * provider for the "preferred" writer, as it will be used to
      * instantiate the <code>ImageWriter</code> returned by
      * <code>ImageIO.getImageWriter(ImageReader)</code>.
      *
-     * <p> This mechanism may be used to obtain
+     * This mechanism may be used to obtain
      * <code>ImageWriters</code> that will understand the internal
      * structure of non-pixel meta-data (see
      * <code>IIOTreeInfo</code>) generated by an

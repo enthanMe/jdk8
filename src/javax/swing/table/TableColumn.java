@@ -563,7 +563,7 @@ public class TableColumn extends Object implements Serializable {
      * Sets the <code>TableColumn</code>'s minimum width to
      * <code>minWidth</code>,
      * adjusting the new minimum width if necessary to ensure that
-     * 0 &lt;= <code>minWidth</code> &lt;= <code>maxWidth</code>.
+     * 0 <= <code>minWidth</code> <= <code>maxWidth</code>.
      * For example, if the <code>minWidth</code> argument is negative,
      * this method sets the <code>minWidth</code> property to 0.
      *

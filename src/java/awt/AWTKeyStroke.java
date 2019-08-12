@@ -474,10 +474,10 @@ public class AWTKeyStroke implements Serializable {
      * Parses a string and returns an <code>AWTKeyStroke</code>.
      * The string must have the following syntax:
      * <pre>
-     *    &lt;modifiers&gt;* (&lt;typedID&gt; | &lt;pressedReleasedID&gt;)
+     *    <modifiers>* (<typedID> | <pressedReleasedID>)
      *
      *    modifiers := shift | control | ctrl | meta | alt | altGraph
-     *    typedID := typed &lt;typedKey&gt;
+     *    typedID := typed <typedKey>
      *    typedKey := string of length 1 giving Unicode character.
      *    pressedReleasedID := (pressed | released) key
      *    key := KeyEvent key code name, i.e. the name following "VK_".
@@ -485,11 +485,11 @@ public class AWTKeyStroke implements Serializable {
      * If typed, pressed or released is not specified, pressed is assumed. Here
      * are some examples:
      * <pre>
-     *     "INSERT" =&gt; getAWTKeyStroke(KeyEvent.VK_INSERT, 0);
-     *     "control DELETE" =&gt; getAWTKeyStroke(KeyEvent.VK_DELETE, InputEvent.CTRL_MASK);
-     *     "alt shift X" =&gt; getAWTKeyStroke(KeyEvent.VK_X, InputEvent.ALT_MASK | InputEvent.SHIFT_MASK);
-     *     "alt shift released X" =&gt; getAWTKeyStroke(KeyEvent.VK_X, InputEvent.ALT_MASK | InputEvent.SHIFT_MASK, true);
-     *     "typed a" =&gt; getAWTKeyStroke('a');
+     *     "INSERT" => getAWTKeyStroke(KeyEvent.VK_INSERT, 0);
+     *     "control DELETE" => getAWTKeyStroke(KeyEvent.VK_DELETE, InputEvent.CTRL_MASK);
+     *     "alt shift X" => getAWTKeyStroke(KeyEvent.VK_X, InputEvent.ALT_MASK | InputEvent.SHIFT_MASK);
+     *     "alt shift released X" => getAWTKeyStroke(KeyEvent.VK_X, InputEvent.ALT_MASK | InputEvent.SHIFT_MASK, true);
+     *     "typed a" => getAWTKeyStroke('a');
      * </pre>
      *
      * @param s a String formatted as described above

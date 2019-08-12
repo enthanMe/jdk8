@@ -62,7 +62,7 @@ import com.sun.org.apache.bcel.internal.ExceptionConstants;
 
 /**
  * NEW - Create new object
- * <PRE>Stack: ... -&gt; ..., objectref</PRE>
+ * <PRE>Stack: ... -> ..., objectref</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

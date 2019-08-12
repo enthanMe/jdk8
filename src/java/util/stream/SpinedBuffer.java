@@ -44,7 +44,7 @@ import java.util.function.LongConsumer;
  * traversal phase, during which elements can be traversed in order but no
  * further modifications are possible.
  *
- * <p> One or more arrays are used to store elements. The use of a multiple
+ * One or more arrays are used to store elements. The use of a multiple
  * arrays has better performance characteristics than a single array used by
  * {@link ArrayList}, as when the capacity of the list needs to be increased
  * no copying of elements is required.  This is usually beneficial in the case
@@ -405,7 +405,7 @@ class SpinedBuffer<E>
      * added, and a traversal phase, during which elements can be traversed in
      * order but no further modifications are possible.
      *
-     * <p> One or more arrays are used to store elements. The use of a multiple
+     * One or more arrays are used to store elements. The use of a multiple
      * arrays has better performance characteristics than a single array used by
      * {@link ArrayList}, as when the capacity of the list needs to be increased
      * no copying of elements is required.  This is usually beneficial in the case

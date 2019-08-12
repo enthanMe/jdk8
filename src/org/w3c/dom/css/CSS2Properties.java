@@ -53,19 +53,19 @@ import org.w3c.dom.DOMException;
  * <code>CSSStyleDeclaration</code> interface. Setting an attribute of this
  * interface is equivalent to calling the <code>setProperty</code> method of
  * the <code>CSSStyleDeclaration</code> interface.
- * <p> A conformant implementation of the CSS module is not required to
+ * A conformant implementation of the CSS module is not required to
  * implement the <code>CSS2Properties</code> interface. If an implementation
  * does implement this interface, the expectation is that language-specific
  * methods can be used to cast from an instance of the
  * <code>CSSStyleDeclaration</code> interface to the
  * <code>CSS2Properties</code> interface.
- * <p> If an implementation does implement this interface, it is expected to
+ * If an implementation does implement this interface, it is expected to
  * understand the specific syntax of the shorthand properties, and apply
  * their semantics; when the <code>margin</code> property is set, for
  * example, the <code>marginTop</code>, <code>marginRight</code>,
  * <code>marginBottom</code> and <code>marginLeft</code> properties are
  * actually being set by the underlying implementation.
- * <p> When dealing with CSS "shorthand" properties, the shorthand properties
+ * When dealing with CSS "shorthand" properties, the shorthand properties
  * should be decomposed into their component longhand properties as
  * appropriate, and when querying for their value, the form returned should
  * be the shortest form exactly equivalent to the declarations made in the
@@ -74,20 +74,20 @@ import org.w3c.dom.DOMException;
  * declared in the ruleset (i.e., by adding longhand rules that were
  * previously not declared in the ruleset), then the empty string should be
  * returned for the shorthand property.
- * <p> For example, querying for the <code>font</code> property should not
+ * For example, querying for the <code>font</code> property should not
  * return "normal normal normal 14pt/normal Arial, sans-serif", when "14pt
  * Arial, sans-serif" suffices. (The normals are initial values, and are
  * implied by use of the longhand property.)
- * <p> If the values for all the longhand properties that compose a particular
+ * If the values for all the longhand properties that compose a particular
  * string are the initial values, then a string consisting of all the
  * initial values should be returned (e.g. a <code>border-width</code> value
  * of "medium" should be returned as such, not as "").
- * <p> For some shorthand properties that take missing values from other
+ * For some shorthand properties that take missing values from other
  * sides, such as the <code>margin</code>, <code>padding</code>, and
  * <code>border-[width|style|color]</code> properties, the minimum number of
  * sides possible should be used; i.e., "0px 10px" will be returned instead
  * of "0px 10px 0px 10px".
- * <p> If the value of a shorthand property can not be decomposed into its
+ * If the value of a shorthand property can not be decomposed into its
  * component longhand properties, as is the case for the <code>font</code>
  * property with a value of "menu", querying for the values of the component
  * longhand properties should return the empty string.

@@ -33,7 +33,7 @@ package javax.xml.soap;
  * for retrieving reason messages and for retrieving the embedded
  * <code>Throwable</code> object.
  *
- * <P> Typical reasons for throwing a <code>SOAPException</code>
+ * Typical reasons for throwing a <code>SOAPException</code>
  * object are problems such as difficulty setting a header, not being
  * able to send a message, and not being able to get a connection with
  * the provider.  Reasons for embedding a <code>Throwable</code>

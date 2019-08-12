@@ -106,7 +106,7 @@ import static java.lang.annotation.ElementType.METHOD;
  *         // element name will be derived from the &#64;XmlRootElement
  *         // annotation on the type (for e.g. "jar" for JarTask).
  *         &#64;XmlElementRef
- *         List&lt;Task> tasks;
+ *         List<Task> tasks;
  *     }
  *
  *     abstract class Task {
@@ -122,16 +122,16 @@ import static java.lang.annotation.ElementType.METHOD;
  *         ...
  *     }
  *
- *     &lt;!-- XML Schema fragment -->
- *     &lt;xs:element name="target" type="Target">
- *     &lt;xs:complexType name="Target">
- *       &lt;xs:sequence>
- *         &lt;xs:choice maxOccurs="unbounded">
- *           &lt;xs:element ref="jar">
- *           &lt;xs:element ref="javac">
- *         &lt;/xs:choice>
- *       &lt;/xs:sequence>
- *     &lt;/xs:complexType>
+ *     <!-- XML Schema fragment -->
+ *     <xs:element name="target" type="Target">
+ *     <xs:complexType name="Target">
+ *       <xs:sequence>
+ *         <xs:choice maxOccurs="unbounded">
+ *           <xs:element ref="jar">
+ *           <xs:element ref="javac">
+ *         </xs:choice>
+ *       </xs:sequence>
+ *     </xs:complexType>
  *
  * </pre>
  * <p>
@@ -144,14 +144,14 @@ import static java.lang.annotation.ElementType.METHOD;
  * </pre>
  * will produce the following XML output:
  * <pre>
- *     &lt;target>
- *       &lt;jar>
+ *     <target>
+ *       <jar>
  *         ....
- *       &lt;/jar>
- *       &lt;javac>
+ *       </jar>
+ *       <javac>
  *         ....
- *       &lt;/javac>
- *     &lt;/target>
+ *       </javac>
+ *     </target>
  * </pre>
  * <p>
  * It is not an error to have a class that extends <tt>Task</tt>
@@ -159,7 +159,7 @@ import static java.lang.annotation.ElementType.METHOD;
  * XML instance (because they don't have XML element names).
  *
  * <p><b>Example 2: XML Schema Susbstitution group support</b>
- * <p> The following example shows the annotations for XML Schema
+ * The following example shows the annotations for XML Schema
  * substitution groups.  The annotations and the ObjectFactory are
  * derived from the schema.
  *
@@ -182,17 +182,17 @@ import static java.lang.annotation.ElementType.METHOD;
  *         //  substituted in the XML document.
  *         //
  *         &#64;XmlElementRef(type=JAXBElement.class,name="operator")
- *         JAXBElement&lt;? extends Operator> term;
+ *         JAXBElement<? extends Operator> term;
  *     }
  *
  *     &#64;XmlRegistry
  *     class ObjectFactory {
  *         &#64;XmlElementDecl(name="operator")
- *         JAXBElement&lt;Operator> createOperator(Operator o) {...}
+ *         JAXBElement<Operator> createOperator(Operator o) {...}
  *         &#64;XmlElementDecl(name="add",substitutionHeadName="operator")
- *         JAXBElement&lt;Operator> createAdd(Operator o) {...}
+ *         JAXBElement<Operator> createAdd(Operator o) {...}
  *         &#64;XmlElementDecl(name="sub",substitutionHeadName="operator")
- *         JAXBElement&lt;Operator> createSub(Operator o) {...}
+ *         JAXBElement<Operator> createSub(Operator o) {...}
  *     }
  *
  *     class Operator {
@@ -208,9 +208,9 @@ import static java.lang.annotation.ElementType.METHOD;
  * </pre>
  * will produce the following XML output:
  * <pre>
- *     &lt;math>
- *       &lt;add>...&lt;/add>
- *     &lt;/math>
+ *     <math>
+ *       <add>...</add>
+ *     </math>
  * </pre>
  *
  *
@@ -233,7 +233,7 @@ public @interface XmlElementRef {
      * This parameter and {@link #name()} are used to determine the
      * XML element for the JavaBean property.
      *
-     * <p> If <tt>type()</tt> is <tt>JAXBElement.class</tt> , then
+     * If <tt>type()</tt> is <tt>JAXBElement.class</tt> , then
      * <tt>namespace()</tt> and <tt>name()</tt>
      * point to a factory method with {@link XmlElementDecl}. The XML
      * element name is the element name from the factory method's
@@ -242,13 +242,13 @@ public @interface XmlElementRef {
      * substituted in the XML document, then the element name is from the
      * {@link XmlElementDecl} on the substituted element.
      *
-     * <p> If {@link #type()} is not <tt>JAXBElement.class</tt>, then
+     * If {@link #type()} is not <tt>JAXBElement.class</tt>, then
      * the XML element name is the XML element name statically
      * associated with the type using the annotation {@link
      * XmlRootElement} on the type. If the type is not annotated with
      * an {@link XmlElementDecl}, then it is an error.
      *
-     * <p> If <tt>type()</tt> is not <tt>JAXBElement.class</tt>, then
+     * If <tt>type()</tt> is not <tt>JAXBElement.class</tt>, then
      * this value must be "".
      *
      */

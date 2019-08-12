@@ -58,7 +58,7 @@ public interface ThrowsTag extends Tag {
      * If the type of the exception is a type variable, return the
      * <code>ClassDoc</code> of its erasure.
      *
-     * <p> <i>This method cannot accommodate certain generic type
+     * <i>This method cannot accommodate certain generic type
      * constructs.  The <code>exceptionType</code> method
      * should be used instead.</i>
      *

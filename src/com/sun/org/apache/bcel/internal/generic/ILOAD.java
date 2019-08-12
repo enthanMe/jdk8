@@ -60,7 +60,7 @@ package com.sun.org.apache.bcel.internal.generic;
 
 /**
  * ILOAD - Load int from local variable onto stack
- * <PRE>Stack: ... -&gt; ..., result</PRE>
+ * <PRE>Stack: ... -> ..., result</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

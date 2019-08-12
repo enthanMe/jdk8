@@ -213,7 +213,7 @@ public class DFAContentModel
      * content model, it is valid to have no content. In other words,
      * all parts of the content model are optional. For example:
      * <pre>
-     *      &lt;!ELEMENT AllOptional (Optional*,NotRequired?)&gt;
+     *      <!ELEMENT AllOptional (Optional*,NotRequired?)>
      * </pre>
      */
     private boolean fEmptyContentIsValid = false;

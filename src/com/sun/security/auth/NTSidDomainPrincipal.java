@@ -26,14 +26,14 @@
 package com.sun.security.auth;
 
 /**
- * <p> This class extends <code>NTSid</code>
+ * This class extends <code>NTSid</code>
  * and represents a Windows NT user's domain SID.
  *
- * <p> An NT user only has a domain SID if in fact they are logged
+ * An NT user only has a domain SID if in fact they are logged
  * into an NT domain.  If the user is logged into a workgroup or
  * just a standalone configuration, they will NOT have a domain SID.
  *
- * <p> Principals such as this <code>NTSidDomainPrincipal</code>
+ * Principals such as this <code>NTSidDomainPrincipal</code>
  * may be associated with a particular <code>Subject</code>
  * to augment that <code>Subject</code> with an additional
  * identity.  Refer to the <code>Subject</code> class for more information

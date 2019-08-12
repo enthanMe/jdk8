@@ -63,7 +63,7 @@ import com.sun.org.apache.bcel.internal.util.ByteSequence;
 /**
  * LDC - Push item from constant pool.
  *
- * <PRE>Stack: ... -&gt; ..., item</PRE>
+ * <PRE>Stack: ... -> ..., item</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

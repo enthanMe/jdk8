@@ -38,14 +38,14 @@ import javax.xml.crypto.dsig.spec.C14NMethodParameterSpec;
  * Schema Definition is defined as:
  * <p>
  * <pre>
- *   &lt;element name="CanonicalizationMethod" type="ds:CanonicalizationMethodType"/&gt;
- *     &lt;complexType name="CanonicalizationMethodType" mixed="true"&gt;
- *       &lt;sequence&gt;
- *         &lt;any namespace="##any" minOccurs="0" maxOccurs="unbounded"/&gt;
- *           &lt;!-- (0,unbounded) elements from (1,1) namespace --&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="Algorithm" type="anyURI" use="required"/&gt;
- *     &lt;/complexType&gt;
+ *   <element name="CanonicalizationMethod" type="ds:CanonicalizationMethodType"/>
+ *     <complexType name="CanonicalizationMethodType" mixed="true">
+ *       <sequence>
+ *         <any namespace="##any" minOccurs="0" maxOccurs="unbounded"/>
+ *           <!-- (0,unbounded) elements from (1,1) namespace -->
+ *       </sequence>
+ *       <attribute name="Algorithm" type="anyURI" use="required"/>
+ *     </complexType>
  * </pre>
  *
  * A <code>CanonicalizationMethod</code> instance may be created by invoking

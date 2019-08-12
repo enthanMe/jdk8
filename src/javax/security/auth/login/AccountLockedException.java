@@ -28,7 +28,7 @@ package javax.security.auth.login;
 /**
  * Signals that an account was locked.
  *
- * <p> This exception may be thrown by a LoginModule if it
+ * This exception may be thrown by a LoginModule if it
  * determines that authentication is being attempted on a
  * locked account.
  *

@@ -44,7 +44,7 @@ import java.nio.charset.UnsupportedCharsetException;
  * <code>println</code> methods is invoked, or a newline character or byte
  * (<code>'\n'</code>) is written.
  *
- * <p> All characters printed by a <code>PrintStream</code> are converted into
+ * All characters printed by a <code>PrintStream</code> are converted into
  * bytes using the platform's default character encoding.  The <code>{@link
  * PrintWriter}</code> class should be used in situations that require writing
  * characters rather than bytes.
@@ -400,7 +400,7 @@ public class PrintStream extends FilterOutputStream
     /**
      * Sets the error state of the stream to <code>true</code>.
      *
-     * <p> This method will cause subsequent invocations of {@link
+     * This method will cause subsequent invocations of {@link
      * #checkError()} to return <tt>true</tt> until {@link
      * #clearError()} is invoked.
      *
@@ -413,7 +413,7 @@ public class PrintStream extends FilterOutputStream
     /**
      * Clears the internal error state of this stream.
      *
-     * <p> This method will cause subsequent invocations of {@link
+     * This method will cause subsequent invocations of {@link
      * #checkError()} to return <tt>false</tt> until another write
      * operation fails and invokes {@link #setError()}.
      *
@@ -433,7 +433,7 @@ public class PrintStream extends FilterOutputStream
      * automatic flushing is enabled then the <code>flush</code> method will be
      * invoked.
      *
-     * <p> Note that the byte is written as given; to write a character that
+     * Note that the byte is written as given; to write a character that
      * will be translated according to the platform's default character
      * encoding, use the <code>print(char)</code> or <code>println(char)</code>
      * methods.
@@ -464,7 +464,7 @@ public class PrintStream extends FilterOutputStream
      * offset <code>off</code> to this stream.  If automatic flushing is
      * enabled then the <code>flush</code> method will be invoked.
      *
-     * <p> Note that the bytes will be written as given; to write characters
+     * Note that the bytes will be written as given; to write characters
      * that will be translated according to the platform's default character
      * encoding, use the <code>print(char)</code> or <code>println(char)</code>
      * methods.
@@ -830,7 +830,7 @@ public class PrintStream extends FilterOutputStream
      * A convenience method to write a formatted string to this output stream
      * using the specified format string and arguments.
      *
-     * <p> An invocation of this method of the form <tt>out.printf(format,
+     * An invocation of this method of the form <tt>out.printf(format,
      * args)</tt> behaves in exactly the same way as the invocation
      *
      * <pre>
@@ -875,7 +875,7 @@ public class PrintStream extends FilterOutputStream
      * A convenience method to write a formatted string to this output stream
      * using the specified format string and arguments.
      *
-     * <p> An invocation of this method of the form <tt>out.printf(l, format,
+     * An invocation of this method of the form <tt>out.printf(l, format,
      * args)</tt> behaves in exactly the same way as the invocation
      *
      * <pre>
@@ -925,7 +925,7 @@ public class PrintStream extends FilterOutputStream
      * Writes a formatted string to this output stream using the specified
      * format string and arguments.
      *
-     * <p> The locale always used is the one returned by {@link
+     * The locale always used is the one returned by {@link
      * java.util.Locale#getDefault() Locale.getDefault()}, regardless of any
      * previous invocations of other formatting methods on this object.
      *
@@ -1037,13 +1037,13 @@ public class PrintStream extends FilterOutputStream
     /**
      * Appends the specified character sequence to this output stream.
      *
-     * <p> An invocation of this method of the form <tt>out.append(csq)</tt>
+     * An invocation of this method of the form <tt>out.append(csq)</tt>
      * behaves in exactly the same way as the invocation
      *
      * <pre>
      *     out.print(csq.toString()) </pre>
      *
-     * <p> Depending on the specification of <tt>toString</tt> for the
+     * Depending on the specification of <tt>toString</tt> for the
      * character sequence <tt>csq</tt>, the entire sequence may not be
      * appended.  For instance, invoking then <tt>toString</tt> method of a
      * character buffer will return a subsequence whose content depends upon
@@ -1070,7 +1070,7 @@ public class PrintStream extends FilterOutputStream
      * Appends a subsequence of the specified character sequence to this output
      * stream.
      *
-     * <p> An invocation of this method of the form <tt>out.append(csq, start,
+     * An invocation of this method of the form <tt>out.append(csq, start,
      * end)</tt> when <tt>csq</tt> is not <tt>null</tt>, behaves in
      * exactly the same way as the invocation
      *
@@ -1108,7 +1108,7 @@ public class PrintStream extends FilterOutputStream
     /**
      * Appends the specified character to this output stream.
      *
-     * <p> An invocation of this method of the form <tt>out.append(c)</tt>
+     * An invocation of this method of the form <tt>out.append(c)</tt>
      * behaves in exactly the same way as the invocation
      *
      * <pre>

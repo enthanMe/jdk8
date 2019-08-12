@@ -373,7 +373,7 @@ public abstract class DateFormat extends Format {
      * example, a time text {@code "07/10/96 4:5 PM, PDT"} will be parsed into a {@code Date}
      * that is equivalent to {@code Date(837039900000L)}.
      *
-     * <p> By default, parsing is lenient: If the input is not in the form used
+     * By default, parsing is lenient: If the input is not in the form used
      * by this object's format method but can still be parsed as a date, then
      * the parse succeeds.  Clients may insist on strict adherence to the
      * format by calling {@link #setLenient(boolean) setLenient(false)}.

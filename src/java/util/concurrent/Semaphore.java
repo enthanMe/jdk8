@@ -114,7 +114,7 @@ import java.util.concurrent.locks.AbstractQueuedSynchronizer;
  * ownership).  This can be useful in some specialized contexts, such
  * as deadlock recovery.
  *
- * <p> The constructor for this class optionally accepts a
+ * The constructor for this class optionally accepts a
  * <em>fairness</em> parameter. When set false, this class makes no
  * guarantees about the order in which threads acquire permits. In
  * particular, <em>barging</em> is permitted, that is, a thread

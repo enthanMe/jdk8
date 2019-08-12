@@ -2475,7 +2475,7 @@ public class XMLGregorianCalendarImpl
      * <p>Convert <code>this</code> along with provided parameters
      * to <code>java.util.GregorianCalendar</code> instance.</p>
      *
-     * <p> Since XML Schema 1.0 date/time datetypes has no concept of
+     * Since XML Schema 1.0 date/time datetypes has no concept of
      * timezone ids or daylight savings timezone ids, this conversion operation
      * allows the user to explicitly specify one with
      * <code>timezone</code> parameter.</p>

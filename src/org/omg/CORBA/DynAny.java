@@ -107,7 +107,7 @@ public interface DynAny extends org.omg.CORBA.Object
      * Inserts the given <code>boolean</code> as the value for this
      * <code>DynAny</code> object.
      *
-     * <p> If this method is called on a constructed <code>DynAny</code>
+     * If this method is called on a constructed <code>DynAny</code>
      * object, it initializes the next component of the constructed data
      * value associated with this <code>DynAny</code> object.
      *
@@ -124,7 +124,7 @@ public interface DynAny extends org.omg.CORBA.Object
      * Inserts the given <code>byte</code> as the value for this
      * <code>DynAny</code> object.
      *
-     * <p> If this method is called on a constructed <code>DynAny</code>
+     * If this method is called on a constructed <code>DynAny</code>
      * object, it initializes the next component of the constructed data
      * value associated with this <code>DynAny</code> object.
      *
@@ -141,7 +141,7 @@ public interface DynAny extends org.omg.CORBA.Object
      * Inserts the given <code>char</code> as the value for this
      * <code>DynAny</code> object.
      *
-     * <p> If this method is called on a constructed <code>DynAny</code>
+     * If this method is called on a constructed <code>DynAny</code>
      * object, it initializes the next component of the constructed data
      * value associated with this <code>DynAny</code> object.
      *
@@ -158,7 +158,7 @@ public interface DynAny extends org.omg.CORBA.Object
      * Inserts the given <code>short</code> as the value for this
      * <code>DynAny</code> object.
      *
-     * <p> If this method is called on a constructed <code>DynAny</code>
+     * If this method is called on a constructed <code>DynAny</code>
      * object, it initializes the next component of the constructed data
      * value associated with this <code>DynAny</code> object.
      *
@@ -175,7 +175,7 @@ public interface DynAny extends org.omg.CORBA.Object
      * Inserts the given <code>short</code> as the value for this
      * <code>DynAny</code> object.
      *
-     * <p> If this method is called on a constructed <code>DynAny</code>
+     * If this method is called on a constructed <code>DynAny</code>
      * object, it initializes the next component of the constructed data
      * value associated with this <code>DynAny</code> object.
      *
@@ -192,7 +192,7 @@ public interface DynAny extends org.omg.CORBA.Object
      * Inserts the given <code>int</code> as the value for this
      * <code>DynAny</code> object.
      *
-     * <p> If this method is called on a constructed <code>DynAny</code>
+     * If this method is called on a constructed <code>DynAny</code>
      * object, it initializes the next component of the constructed data
      * value associated with this <code>DynAny</code> object.
      *
@@ -209,7 +209,7 @@ public interface DynAny extends org.omg.CORBA.Object
      * Inserts the given <code>int</code> as the value for this
      * <code>DynAny</code> object.
      *
-     * <p> If this method is called on a constructed <code>DynAny</code>
+     * If this method is called on a constructed <code>DynAny</code>
      * object, it initializes the next component of the constructed data
      * value associated with this <code>DynAny</code> object.
      *
@@ -226,7 +226,7 @@ public interface DynAny extends org.omg.CORBA.Object
      * Inserts the given <code>float</code> as the value for this
      * <code>DynAny</code> object.
      *
-     * <p> If this method is called on a constructed <code>DynAny</code>
+     * If this method is called on a constructed <code>DynAny</code>
      * object, it initializes the next component of the constructed data
      * value associated with this <code>DynAny</code> object.
      *
@@ -243,7 +243,7 @@ public interface DynAny extends org.omg.CORBA.Object
      * Inserts the given <code>double</code> as the value for this
      * <code>DynAny</code> object.
      *
-     * <p> If this method is called on a constructed <code>DynAny</code>
+     * If this method is called on a constructed <code>DynAny</code>
      * object, it initializes the next component of the constructed data
      * value associated with this <code>DynAny</code> object.
      *
@@ -260,7 +260,7 @@ public interface DynAny extends org.omg.CORBA.Object
      * Inserts the given <code>String</code> object as the value for this
      * <code>DynAny</code> object.
      *
-     * <p> If this method is called on a constructed <code>DynAny</code>
+     * If this method is called on a constructed <code>DynAny</code>
      * object, it initializes the next component of the constructed data
      * value associated with this <code>DynAny</code> object.
      *
@@ -277,7 +277,7 @@ public interface DynAny extends org.omg.CORBA.Object
      * Inserts the given <code>org.omg.CORBA.Object</code> as the value for this
      * <code>DynAny</code> object.
      *
-     * <p> If this method is called on a constructed <code>DynAny</code>
+     * If this method is called on a constructed <code>DynAny</code>
      * object, it initializes the next component of the constructed data
      * value associated with this <code>DynAny</code> object.
      *
@@ -294,7 +294,7 @@ public interface DynAny extends org.omg.CORBA.Object
      * Inserts the given <code>org.omg.CORBA.TypeCode</code> as the value for this
      * <code>DynAny</code> object.
      *
-     * <p> If this method is called on a constructed <code>DynAny</code>
+     * If this method is called on a constructed <code>DynAny</code>
      * object, it initializes the next component of the constructed data
      * value associated with this <code>DynAny</code> object.
      *
@@ -311,7 +311,7 @@ public interface DynAny extends org.omg.CORBA.Object
      * Inserts the given <code>long</code> as the value for this
      * <code>DynAny</code> object.
      *
-     * <p> If this method is called on a constructed <code>DynAny</code>
+     * If this method is called on a constructed <code>DynAny</code>
      * object, it initializes the next component of the constructed data
      * value associated with this <code>DynAny</code> object.
      *
@@ -328,7 +328,7 @@ public interface DynAny extends org.omg.CORBA.Object
      * Inserts the given <code>long</code> as the value for this
      * <code>DynAny</code> object.
      *
-     * <p> If this method is called on a constructed <code>DynAny</code>
+     * If this method is called on a constructed <code>DynAny</code>
      * object, it initializes the next component of the constructed data
      * value associated with this <code>DynAny</code> object.
      *
@@ -345,7 +345,7 @@ public interface DynAny extends org.omg.CORBA.Object
      * Inserts the given <code>char</code> as the value for this
      * <code>DynAny</code> object.
      *
-     * <p> If this method is called on a constructed <code>DynAny</code>
+     * If this method is called on a constructed <code>DynAny</code>
      * object, it initializes the next component of the constructed data
      * value associated with this <code>DynAny</code> object.
      *
@@ -362,7 +362,7 @@ public interface DynAny extends org.omg.CORBA.Object
      * Inserts the given <code>String</code> as the value for this
      * <code>DynAny</code> object.
      *
-     * <p> If this method is called on a constructed <code>DynAny</code>
+     * If this method is called on a constructed <code>DynAny</code>
      * object, it initializes the next component of the constructed data
      * value associated with this <code>DynAny</code> object.
      *
@@ -379,7 +379,7 @@ public interface DynAny extends org.omg.CORBA.Object
      * Inserts the given <code>org.omg.CORBA.Any</code> object as the value for this
      * <code>DynAny</code> object.
      *
-     * <p> If this method is called on a constructed <code>DynAny</code>
+     * If this method is called on a constructed <code>DynAny</code>
      * object, it initializes the next component of the constructed data
      * value associated with this <code>DynAny</code> object.
      *
@@ -398,7 +398,7 @@ public interface DynAny extends org.omg.CORBA.Object
      * Inserts the given <code>java.io.Serializable</code> object as the value for this
      * <code>DynAny</code> object.
      *
-     * <p> If this method is called on a constructed <code>DynAny</code>
+     * If this method is called on a constructed <code>DynAny</code>
      * object, it initializes the next component of the constructed data
      * value associated with this <code>DynAny</code> object.
      *

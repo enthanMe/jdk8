@@ -246,13 +246,13 @@ public interface SocketOptions {
      * DatagramSocket.receive();
      * </PRE>
      *
-     * <P> The option must be set prior to entering a blocking
+     * The option must be set prior to entering a blocking
      * operation to take effect.  If the timeout expires and the
      * operation would continue to block,
      * <B>java.io.InterruptedIOException</B> is raised.  The Socket is
      * not closed in this case.
      *
-     * <P> Valid for all sockets: SocketImpl, DatagramSocketImpl
+     * Valid for all sockets: SocketImpl, DatagramSocketImpl
      *
      * @see Socket#setSoTimeout
      * @see ServerSocket#setSoTimeout

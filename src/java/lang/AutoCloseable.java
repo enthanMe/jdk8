@@ -60,7 +60,7 @@ public interface AutoCloseable {
      * throw more specific exceptions, or to throw no exception at all
      * if the close operation cannot fail.
      *
-     * <p> Cases where the close operation may fail require careful
+     * Cases where the close operation may fail require careful
      * attention by implementers. It is strongly advised to relinquish
      * the underlying resources and to internally <em>mark</em> the
      * resource as closed, prior to throwing the exception. The {@code

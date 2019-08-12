@@ -132,7 +132,7 @@ class LoweredBorder extends AbstractRegionPainter implements Border {
      * insets, the canvas size at which the encoded points were defined, and
      * whether the stretching insets are inverted.</p>
      * <p/>
-     * <p> This method allows for subclasses to package the painting of
+     * This method allows for subclasses to package the painting of
      * different states with possibly different canvas sizes, etc, into one
      * AbstractRegionPainter implementation.</p>
      *

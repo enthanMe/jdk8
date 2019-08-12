@@ -836,7 +836,7 @@ class Socket implements java.io.Closeable {
      * Returns the unique {@link java.nio.channels.SocketChannel SocketChannel}
      * object associated with this socket, if any.
      *
-     * <p> A socket will have a channel if, and only if, the channel itself was
+     * A socket will have a channel if, and only if, the channel itself was
      * created via the {@link java.nio.channels.SocketChannel#open
      * SocketChannel.open} or {@link
      * java.nio.channels.ServerSocketChannel#accept ServerSocketChannel.accept}
@@ -856,7 +856,7 @@ class Socket implements java.io.Closeable {
     /**
      * Returns an input stream for this socket.
      *
-     * <p> If this socket has an associated channel then the resulting input
+     * If this socket has an associated channel then the resulting input
      * stream delegates all of its operations to the channel.  If the channel
      * is in non-blocking mode then the input stream's {@code read} operations
      * will throw an {@link java.nio.channels.IllegalBlockingModeException}.
@@ -886,7 +886,7 @@ class Socket implements java.io.Closeable {
      *
      * </ul>
      *
-     * <p> Closing the returned {@link java.io.InputStream InputStream}
+     * Closing the returned {@link java.io.InputStream InputStream}
      * will close the associated socket.
      *
      * @return     an input stream for reading bytes from this socket.
@@ -923,13 +923,13 @@ class Socket implements java.io.Closeable {
     /**
      * Returns an output stream for this socket.
      *
-     * <p> If this socket has an associated channel then the resulting output
+     * If this socket has an associated channel then the resulting output
      * stream delegates all of its operations to the channel.  If the channel
      * is in non-blocking mode then the output stream's {@code write}
      * operations will throw an {@link
      * java.nio.channels.IllegalBlockingModeException}.
      *
-     * <p> Closing the returned {@link java.io.OutputStream OutputStream}
+     * Closing the returned {@link java.io.OutputStream OutputStream}
      * will close the associated socket.
      *
      * @return     an output stream for writing bytes to this socket.
@@ -1332,7 +1332,7 @@ class Socket implements java.io.Closeable {
      * As the underlying network implementation may ignore this
      * value applications should consider it a hint.
      *
-     * <P> The tc <B>must</B> be in the range {@code 0 <= tc <=
+     * The tc <B>must</B> be in the range {@code 0 <= tc <=
      * 255} or an IllegalArgumentException will be thrown.
      * <p>Notes:
      * <p>For Internet Protocol v4 the value consists of an
@@ -1475,11 +1475,11 @@ class Socket implements java.io.Closeable {
      * use (i.e. can't be reconnected or rebound). A new socket needs to be
      * created.
      *
-     * <p> Closing this socket will also close the socket's
+     * Closing this socket will also close the socket's
      * {@link java.io.InputStream InputStream} and
      * {@link java.io.OutputStream OutputStream}.
      *
-     * <p> If this socket has an associated channel then the channel is closed
+     * If this socket has an associated channel then the channel is closed
      * as well.
      *
      * @exception  IOException  if an I/O error occurs when closing this socket.
@@ -1686,13 +1686,13 @@ class Socket implements java.io.Closeable {
     /**
      * Sets performance preferences for this socket.
      *
-     * <p> Sockets use the TCP/IP protocol by default.  Some implementations
+     * Sockets use the TCP/IP protocol by default.  Some implementations
      * may offer alternative protocols which have different performance
      * characteristics than TCP/IP.  This method allows the application to
      * express its own preferences as to how these tradeoffs should be made
      * when the implementation chooses from the available protocols.
      *
-     * <p> Performance preferences are described by three integers
+     * Performance preferences are described by three integers
      * whose values indicate the relative importance of short connection time,
      * low latency, and high bandwidth.  The absolute values of the integers
      * are irrelevant; in order to choose a protocol the values are simply
@@ -1704,7 +1704,7 @@ class Socket implements java.io.Closeable {
      * latency, and low latency above short connection time, then it could
      * invoke this method with the values {@code (0, 1, 2)}.
      *
-     * <p> Invoking this method after this socket has been connected
+     * Invoking this method after this socket has been connected
      * will have no effect.
      *
      * @param  connectionTime

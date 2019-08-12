@@ -60,11 +60,11 @@ import com.sun.security.auth.UserPrincipal;
  * created using the user's username and both are associated
  * with the current {@link Subject}.
  *
- * <p> This module operates in one of three modes: <i>search-first</i>,
+ * This module operates in one of three modes: <i>search-first</i>,
  * <i>authentication-first</i> or <i>authentication-only</i>.
  * A mode is selected by specifying a particular set of options.
  *
- * <p> In search-first mode, the LDAP directory is searched to determine the
+ * In search-first mode, the LDAP directory is searched to determine the
  * user's distinguished name and then authentication is attempted.
  * An (anonymous) search is performed using the supplied username in
  * conjunction with a specified search filter.
@@ -75,7 +75,7 @@ import com.sun.security.auth.UserPrincipal;
  * Use search-first mode when the user's distinguished name is not
  * known in advance.
  *
- * <p> In authentication-first mode, authentication is attempted using the
+ * In authentication-first mode, authentication is attempted using the
  * supplied username and password and then the LDAP directory is searched.
  * If authentication is successful then a search is performed using the
  * supplied username in conjunction with a specified search filter.
@@ -84,7 +84,7 @@ import com.sun.security.auth.UserPrincipal;
  * Use authentication-first mode when accessing an LDAP directory
  * that has been configured to disallow anonymous searches.
  *
- * <p> In authentication-only mode, authentication is attempted using the
+ * In authentication-only mode, authentication is attempted using the
  * supplied username and password. The LDAP directory is not searched because
  * the user's distinguished name is already known.
  * To enable this mode, set the <code>authIdentity</code> option to a valid
@@ -92,7 +92,7 @@ import com.sun.security.auth.UserPrincipal;
  * Use authentication-only mode when the user's distinguished name is
  * known in advance.
  *
- * <p> The following option is mandatory and must be specified in this
+ * The following option is mandatory and must be specified in this
  * module's login {@link Configuration}:
  * <dl><dt></dt><dd>
  * <dl>
@@ -118,7 +118,7 @@ import com.sun.security.auth.UserPrincipal;
  *      the LDAP URL. </dd>
  * </dl></dl>
  *
- * <p> This module also recognizes the following optional {@link Configuration}
+ * This module also recognizes the following optional {@link Configuration}
  *     options:
  * <dl><dt></dt><dd>
  * <dl>
@@ -489,7 +489,7 @@ public class LdapLoginModule implements LoginModule {
     /**
      * Begin user authentication.
      *
-     * <p> Acquire the user's credentials and verify them against the
+     * Acquire the user's credentials and verify them against the
      * specified LDAP directory.
      *
      * @return true always, since this <code>LoginModule</code>
@@ -586,12 +586,12 @@ public class LdapLoginModule implements LoginModule {
     /**
      * Complete user authentication.
      *
-     * <p> This method is called if the LoginContext's
+     * This method is called if the LoginContext's
      * overall authentication succeeded
      * (the relevant REQUIRED, REQUISITE, SUFFICIENT and OPTIONAL LoginModules
      * succeeded).
      *
-     * <p> If this LoginModule's own authentication attempt
+     * If this LoginModule's own authentication attempt
      * succeeded (checked by retrieving the private state saved by the
      * <code>login</code> method), then this method associates an
      * <code>LdapPrincipal</code> and one or more <code>UserPrincipal</code>s
@@ -656,11 +656,11 @@ public class LdapLoginModule implements LoginModule {
     /**
      * Abort user authentication.
      *
-     * <p> This method is called if the overall authentication failed.
+     * This method is called if the overall authentication failed.
      * (the relevant REQUIRED, REQUISITE, SUFFICIENT and OPTIONAL LoginModules
      * did not succeed).
      *
-     * <p> If this LoginModule's own authentication attempt
+     * If this LoginModule's own authentication attempt
      * succeeded (checked by retrieving the private state saved by the
      * <code>login</code> and <code>commit</code> methods),
      * then this method cleans up any state that was originally saved.
@@ -696,7 +696,7 @@ public class LdapLoginModule implements LoginModule {
     /**
      * Logout a user.
      *
-     * <p> This method removes the Principals
+     * This method removes the Principals
      * that were added by the <code>commit</code> method.
      *
      * @exception LoginException if the logout fails.
@@ -946,7 +946,7 @@ public class LdapLoginModule implements LoginModule {
      * This method does not return any value.
      * Instead, it sets global name and password variables.
      *
-     * <p> Also note that this method will set the username and password
+     * Also note that this method will set the username and password
      * values in the shared state in case subsequent LoginModules
      * want to use them via use/tryFirstPass.
      *

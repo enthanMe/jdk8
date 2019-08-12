@@ -36,7 +36,7 @@ import java.lang.annotation.*;
  * unchecked warnings about parameterized array creation at call
  * sites.
  *
- * <p> In addition to the usage restrictions imposed by its {@link
+ * In addition to the usage restrictions imposed by its {@link
  * Target @Target} meta-annotation, compilers are required to implement
  * additional usage restrictions on this annotation type; it is a
  * compile-time error if a method or constructor declaration is
@@ -49,7 +49,7 @@ import java.lang.annotation.*;
  *
  * </ul>
  *
- * <p> Compilers are encouraged to issue warnings when this annotation
+ * Compilers are encouraged to issue warnings when this annotation
  * type is applied to a method or constructor declaration where:
  *
  * <ul>
@@ -67,9 +67,9 @@ import java.lang.annotation.*;
  *
  * <blockquote><pre>
  * &#64;SafeVarargs // Not actually safe!
- * static void m(List&lt;String&gt;... stringLists) {
+ * static void m(List<String>... stringLists) {
  *   Object[] array = stringLists;
- *   List&lt;Integer&gt; tmpList = Arrays.asList(42);
+ *   List<Integer> tmpList = Arrays.asList(42);
  *   array[0] = tmpList; // Semantically invalid, but compiles without warnings
  *   String s = stringLists[0].get(0); // Oh no, ClassCastException at runtime!
  * }

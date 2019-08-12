@@ -28,7 +28,7 @@ package javax.security.auth.callback;
 import java.util.Locale;
 
 /**
- * <p> Underlying security services instantiate and pass a
+ * Underlying security services instantiate and pass a
  * {@code LanguageCallback} to the {@code handle}
  * method of a {@code CallbackHandler} to retrieve the {@code Locale}
  * used for localizing text.

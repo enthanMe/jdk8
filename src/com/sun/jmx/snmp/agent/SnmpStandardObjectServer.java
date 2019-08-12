@@ -66,7 +66,7 @@ public class SnmpStandardObjectServer implements Serializable {
 
     /**
      * Generic handling of the <CODE>get</CODE> operation.
-     * <p> The default implementation of this method is to loop over the
+     * The default implementation of this method is to loop over the
      * varbind list associated with the sub-request and to call
      * <CODE>get(var.oid.getOidArc(depth), data);</CODE>
      * <pre>
@@ -92,7 +92,7 @@ public class SnmpStandardObjectServer implements Serializable {
      *    }
      * }
      * </pre>
-     * <p> You can override this method if you need to implement some
+     * You can override this method if you need to implement some
      * specific policies for minimizing the accesses made to some remote
      * underlying resources.
      * <p>
@@ -127,7 +127,7 @@ public class SnmpStandardObjectServer implements Serializable {
 
     /**
      * Generic handling of the <CODE>set</CODE> operation.
-     * <p> The default implementation of this method is to loop over the
+     * The default implementation of this method is to loop over the
      * varbind list associated with the sub-request and to call
      * <CODE>set(var.value, var.oid.getOidArc(depth), data);</CODE>
      * <pre>
@@ -153,7 +153,7 @@ public class SnmpStandardObjectServer implements Serializable {
      *    }
      * }
      * </pre>
-     * <p> You can override this method if you need to implement some
+     * You can override this method if you need to implement some
      * specific policies for minimizing the accesses made to some remote
      * underlying resources.
      * <p>
@@ -191,7 +191,7 @@ public class SnmpStandardObjectServer implements Serializable {
 
     /**
      * Generic handling of the <CODE>check</CODE> operation.
-     * <p> The default implementation of this method is to loop over the
+     * The default implementation of this method is to loop over the
      * varbind list associated with the sub-request and to call
      * <CODE>check(var.value, var.oid.getOidArc(depth), data);</CODE>
      * <pre>
@@ -217,7 +217,7 @@ public class SnmpStandardObjectServer implements Serializable {
      *    }
      * }
      * </pre>
-     * <p> You can override this method if you need to implement some
+     * You can override this method if you need to implement some
      * specific policies for minimizing the accesses made to some remote
      * underlying resources, or if you need to implement some consistency
      * checks between the different values provided in the varbind list.

@@ -41,16 +41,16 @@ import com.sun.security.auth.NTSidGroupPrincipal;
 import com.sun.security.auth.NTNumericCredential;
 
 /**
- * <p> This <code>LoginModule</code>
+ * This <code>LoginModule</code>
  * renders a user's NT security information as some number of
  * <code>Principal</code>s
  * and associates them with a <code>Subject</code>.
  *
- * <p> This LoginModule recognizes the debug option.
+ * This LoginModule recognizes the debug option.
  * If set to true in the login Configuration,
  * debug messages will be output to the output stream, System.out.
  *
- * <p> This LoginModule also recognizes the debugNative option.
+ * This LoginModule also recognizes the debugNative option.
  * If set to true in the login Configuration,
  * debug messages from the native component of the module
  * will be output to the output stream, System.out.
@@ -219,12 +219,12 @@ public class NTLoginModule implements LoginModule {
     }
 
     /**
-     * <p> This method is called if the LoginContext's
+     * This method is called if the LoginContext's
      * overall authentication succeeded
      * (the relevant REQUIRED, REQUISITE, SUFFICIENT and OPTIONAL LoginModules
      * succeeded).
      *
-     * <p> If this LoginModule's own authentication attempt
+     * If this LoginModule's own authentication attempt
      * succeeded (checked by retrieving the private state saved by the
      * <code>login</code> method), then this method associates some
      * number of various <code>Principal</code>s
@@ -288,12 +288,12 @@ public class NTLoginModule implements LoginModule {
 
 
     /**
-     * <p> This method is called if the LoginContext's
+     * This method is called if the LoginContext's
      * overall authentication failed.
      * (the relevant REQUIRED, REQUISITE, SUFFICIENT and OPTIONAL LoginModules
      * did not succeed).
      *
-     * <p> If this LoginModule's own authentication attempt
+     * If this LoginModule's own authentication attempt
      * succeeded (checked by retrieving the private state saved by the
      * <code>login</code> and <code>commit</code> methods),
      * then this method cleans up any state that was originally saved.
@@ -334,7 +334,7 @@ public class NTLoginModule implements LoginModule {
     /**
      * Logout the user.
      *
-     * <p> This method removes the <code>NTUserPrincipal</code>,
+     * This method removes the <code>NTUserPrincipal</code>,
      * <code>NTDomainPrincipal</code>, <code>NTSidUserPrincipal</code>,
      * <code>NTSidDomainPrincipal</code>, <code>NTSidGroupPrincipal</code>s,
      * and <code>NTSidPrimaryGroupPrincipal</code>

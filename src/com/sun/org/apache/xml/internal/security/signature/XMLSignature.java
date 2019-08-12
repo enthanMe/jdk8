@@ -56,7 +56,7 @@ import org.w3c.dom.NodeList;
 import org.w3c.dom.Text;
 
 /**
- * Handles <code>&lt;ds:Signature&gt;</code> elements.
+ * Handles <code><ds:Signature></code> elements.
  * This is the main class that deals with creating and verifying signatures.
  *
  * <p>There are 2 types of constructors for this class. The ones that take a

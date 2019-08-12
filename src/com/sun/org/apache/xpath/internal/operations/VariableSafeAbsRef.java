@@ -33,7 +33,7 @@ import com.sun.org.apache.xpath.internal.objects.XObject;
  * This is a "smart" variable reference that is used in situations where
  * an absolute path is optimized into a variable reference, but may
  * be used in some situations where the document context may have changed.
- * For instance, in select="document(doc/@href)//name[//salary &gt; 7250]", the
+ * For instance, in select="document(doc/@href)//name[//salary > 7250]", the
  * root in the predicate will be different for each node in the set.  While
  * this is easy to detect statically in this case, in other cases static
  * detection would be very hard or impossible.  So, this class does a dynamic check

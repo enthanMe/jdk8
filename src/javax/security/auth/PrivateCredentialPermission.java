@@ -37,7 +37,7 @@ import sun.security.util.ResourcesMgr;
  * belonging to a particular {@code Subject}.  The {@code Subject}
  * is represented by a Set of Principals.
  *
- * <p> The target name of this {@code Permission} specifies
+ * The target name of this {@code Permission} specifies
  * a Credential class name, and a Set of Principals.
  * The only valid value for this Permission's actions is, "read".
  * The target name must abide by the following syntax:
@@ -85,7 +85,7 @@ import sun.security.util.ResourcesMgr;
  * then access is granted to the specified Credential owned by
  * any {@code Subject}.
  *
- * <p> In addition, the PrincipalClass/PrincipalName pairing may be repeated:
+ * In addition, the PrincipalClass/PrincipalName pairing may be repeated:
  *
  * <pre>
  *    grant {

@@ -60,7 +60,7 @@ package com.sun.org.apache.bcel.internal.generic;
 
 /**
  * ARRAYLENGTH -  Get length of array
- * <PRE>Stack: ..., arrayref -&gt; ..., length</PRE>
+ * <PRE>Stack: ..., arrayref -> ..., length</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

@@ -36,13 +36,13 @@ import com.sun.security.auth.UnixNumericUserPrincipal;
 import com.sun.security.auth.UnixNumericGroupPrincipal;
 
 /**
- * <p> This <code>LoginModule</code> imports a user's Unix
+ * This <code>LoginModule</code> imports a user's Unix
  * <code>Principal</code> information (<code>UnixPrincipal</code>,
  * <code>UnixNumericUserPrincipal</code>,
  * and <code>UnixNumericGroupPrincipal</code>)
  * and associates them with the current <code>Subject</code>.
  *
- * <p> This LoginModule recognizes the debug option.
+ * This LoginModule recognizes the debug option.
  * If set to true in the login Configuration,
  * debug messages will be output to the output stream, System.out.
  *
@@ -106,7 +106,7 @@ public class UnixLoginModule implements LoginModule {
     /**
      * Authenticate the user (first phase).
      *
-     * <p> The implementation of this method attempts to retrieve the user's
+     * The implementation of this method attempts to retrieve the user's
      * Unix <code>Subject</code> information by making a native Unix
      * system call.
      *
@@ -161,12 +161,12 @@ public class UnixLoginModule implements LoginModule {
     /**
      * Commit the authentication (second phase).
      *
-     * <p> This method is called if the LoginContext's
+     * This method is called if the LoginContext's
      * overall authentication succeeded
      * (the relevant REQUIRED, REQUISITE, SUFFICIENT and OPTIONAL LoginModules
      * succeeded).
      *
-     * <p> If this LoginModule's own authentication attempt
+     * If this LoginModule's own authentication attempt
      * succeeded (the importing of the Unix authentication information
      * succeeded), then this method associates the Unix Principals
      * with the <code>Subject</code> currently tied to the
@@ -222,12 +222,12 @@ public class UnixLoginModule implements LoginModule {
     /**
      * Abort the authentication (second phase).
      *
-     * <p> This method is called if the LoginContext's
+     * This method is called if the LoginContext's
      * overall authentication failed.
      * (the relevant REQUIRED, REQUISITE, SUFFICIENT and OPTIONAL LoginModules
      * did not succeed).
      *
-     * <p> This method cleans up any state that was originally saved
+     * This method cleans up any state that was originally saved
      * as part of the authentication attempt from the <code>login</code>
      * and <code>commit</code> methods.
      *
@@ -266,7 +266,7 @@ public class UnixLoginModule implements LoginModule {
     /**
      * Logout the user
      *
-     * <p> This method removes the Principals associated
+     * This method removes the Principals associated
      * with the <code>Subject</code>.
      *
      * <p>

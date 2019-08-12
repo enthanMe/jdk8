@@ -203,14 +203,14 @@ class IIOAttr extends IIOMetadataNode implements Attr {
  * for the storage of non-textual objects via the
  * <code>getUserObject</code> and <code>setUserObject</code> methods.
  *
- * <p> This class is not intended to be used for general XML
+ * This class is not intended to be used for general XML
  * processing. In particular, <code>Element</code> nodes created
  * within the Image I/O API are not compatible with those created by
  * Sun's standard implementation of the <code>org.w3.dom</code> API.
  * In particular, the implementation is tuned for simple uses and may
  * not perform well for intensive processing.
  *
- * <p> Namespaces are ignored in this implementation.  The terms "tag
+ * Namespaces are ignored in this implementation.  The terms "tag
  * name" and "node name" are always considered to be synonymous.
  *
  * <em>Note:</em>

@@ -60,7 +60,7 @@ package com.sun.org.apache.bcel.internal.generic;
 
 /**
  * LAND - Bitwise AND longs
- * <PRE>Stack: ..., value1.word1, value1.word2, value2.word1, value2.word2 -&gt;</PRE>
+ * <PRE>Stack: ..., value1.word1, value1.word2, value2.word1, value2.word2 -></PRE>
  *        ..., result.word1, result.word2
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>

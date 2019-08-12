@@ -196,7 +196,7 @@ public interface EntityResolver2 extends EntityResolver
      *  are interpreted.  This is always an absolute URI, unless it is
      *  null (likely because the XMLReader was given an InputSource without
      *  one).  This URI is defined by the XML specification to be the one
-     *  associated with the "&lt;" starting the relevant declaration.
+     *  associated with the "<" starting the relevant declaration.
      * @param systemId The system identifier of the external entity
      *  being referenced; either a relative or absolute URI.
      *  This is never null when invoked by a SAX2 parser; only declared

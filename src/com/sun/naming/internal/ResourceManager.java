@@ -186,7 +186,7 @@ public final class ResourceManager {
      * parameter, the applet parameters (where appropriate), the
      * system properties, and all application resource files.
      *
-     * <p> This method will modify <tt>env</tt> and save
+     * This method will modify <tt>env</tt> and save
      * a reference to it.  The caller may no longer modify it.
      *
      * @param env       environment passed to initial context constructor.

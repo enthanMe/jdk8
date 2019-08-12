@@ -845,7 +845,7 @@ public interface MBeanServerConnection {
     /**
      * Removes a listener from a registered MBean.
      *
-     * <P> If the listener is registered more than once, perhaps with
+     * If the listener is registered more than once, perhaps with
      * different filters or callbacks, this method will remove all
      * those registrations.
      *
@@ -911,7 +911,7 @@ public interface MBeanServerConnection {
     /**
      * <p>Removes a listener from a registered MBean.</p>
      *
-     * <P> If the listener is registered more than once, perhaps with
+     * If the listener is registered more than once, perhaps with
      * different filters or callbacks, this method will remove all
      * those registrations.
      *

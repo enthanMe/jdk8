@@ -74,15 +74,15 @@ import static java.lang.annotation.RetentionPolicy.*;
  *        .... other properties not shown
  *    }
  *
- *    &lt;!-- Example: XML Schema fragment -->
- *    &lt;xs:complexType name="Customer">
- *      &lt;xs:complexContent>
- *        &lt;xs:sequence>
+ *    <!-- Example: XML Schema fragment -->
+ *    <xs:complexType name="Customer">
+ *      <xs:complexContent>
+ *        <xs:sequence>
  *          ....
- *        &lt;/xs:sequence>
- *        &lt;xs:attribute name="customerID" type="xs:ID"/>
- *      &lt;/xs:complexContent>
- *    &lt;/xs:complexType>
+ *        </xs:sequence>
+ *        <xs:attribute name="customerID" type="xs:ID"/>
+ *      </xs:complexContent>
+ *    </xs:complexType>
  * </pre>
  *
  * @author Sekhar Vajjhala, Sun Microsystems, Inc.

@@ -49,7 +49,7 @@ import static java.lang.annotation.RetentionPolicy.*;
  * with its derived classes, as if the class is inlined.
  *
  * <p><b>Usage</b></p>
- * <p> The <tt>@XmlTransient</tt> annotation can be used with the following
+ * The <tt>@XmlTransient</tt> annotation can be used with the following
  *     program elements:
  * <ul>
  *   <li> a JavaBean property </li>
@@ -79,12 +79,12 @@ import static java.lang.annotation.RetentionPolicy.*;
  *   }
  *
  *
- *   &lt;!-- Example: XML Schema fragment -->
- *   &lt;xs:complexType name="USAddress">
- *     &lt;xs:sequence>
- *       &lt;xs:element name="name" type="xs:string"/>
- *     &lt;/xs:sequence>
- *   &lt;/xs:complexType>
+ *   <!-- Example: XML Schema fragment -->
+ *   <xs:complexType name="USAddress">
+ *     <xs:sequence>
+ *       <xs:element name="name" type="xs:string"/>
+ *     </xs:sequence>
+ *   </xs:complexType>
  * </pre>
  *
  * @author Sekhar Vajjhala, Sun Microsystems, Inc.

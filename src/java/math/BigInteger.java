@@ -1261,7 +1261,7 @@ public class BigInteger extends Number implements Comparable<BigInteger> {
     /**
      * Adds the contents of the int array x and long value val. This
      * method allocates a new int array to hold the answer and returns
-     * a reference to that array.  Assumes x.length &gt; 0 and val is
+     * a reference to that array.  Assumes x.length > 0 and val is
      * non-negative
      */
     private static int[] add(int[] x, long val) {
@@ -1387,7 +1387,7 @@ public class BigInteger extends Number implements Comparable<BigInteger> {
      * first (big).  The first int array (big) must represent a larger number
      * than the second.  This method allocates the space necessary to hold the
      * answer.
-     * assumes val &gt;= 0
+     * assumes val >= 0
      */
     private static int[] subtract(int[] big, long val) {
         int highWord = (int)(val >>> 32);
@@ -3508,8 +3508,8 @@ public class BigInteger extends Number implements Comparable<BigInteger> {
      * of the six boolean comparison operators ({@literal <}, ==,
      * {@literal >}, {@literal >=}, !=, {@literal <=}).  The suggested
      * idiom for performing these comparisons is: {@code
-     * (x.compareTo(y)} &lt;<i>op</i>&gt; {@code 0)}, where
-     * &lt;<i>op</i>&gt; is one of the six comparison operators.
+     * (x.compareTo(y)} <<i>op</i>> {@code 0)}, where
+     * <<i>op</i>> is one of the six comparison operators.
      *
      * @param  val BigInteger to which this BigInteger is to be compared.
      * @return -1, 0 or 1 as this BigInteger is numerically less than, equal

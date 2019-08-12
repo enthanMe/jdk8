@@ -31,7 +31,7 @@ import org.w3c.dom.Node;
 
 
 /**
- * Handles <code>&lt;ds:Object&gt;</code> elements
+ * Handles <code><ds:Object></code> elements
  * <code>Object<code> {@link Element} supply facility which can contain any kind data
  *
  * @author Christian Geuer-Pollmann

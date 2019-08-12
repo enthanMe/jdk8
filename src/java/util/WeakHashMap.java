@@ -44,17 +44,17 @@ import java.util.function.Consumer;
  * so this class behaves somewhat differently from other <tt>Map</tt>
  * implementations.
  *
- * <p> Both null values and the null key are supported. This class has
+ * Both null values and the null key are supported. This class has
  * performance characteristics similar to those of the <tt>HashMap</tt>
  * class, and has the same efficiency parameters of <em>initial capacity</em>
  * and <em>load factor</em>.
  *
- * <p> Like most collection classes, this class is not synchronized.
+ * Like most collection classes, this class is not synchronized.
  * A synchronized <tt>WeakHashMap</tt> may be constructed using the
  * {@link Collections#synchronizedMap Collections.synchronizedMap}
  * method.
  *
- * <p> This class is intended primarily for use with key objects whose
+ * This class is intended primarily for use with key objects whose
  * <tt>equals</tt> methods test for object identity using the
  * <tt>==</tt> operator.  Once such a key is discarded it can never be
  * recreated, so it is impossible to do a lookup of that key in a
@@ -65,7 +65,7 @@ import java.util.function.Consumer;
  * however, the automatic removal of <tt>WeakHashMap</tt> entries whose
  * keys have been discarded may prove to be confusing.
  *
- * <p> The behavior of the <tt>WeakHashMap</tt> class depends in part upon
+ * The behavior of the <tt>WeakHashMap</tt> class depends in part upon
  * the actions of the garbage collector, so several familiar (though not
  * required) <tt>Map</tt> invariants do not hold for this class.  Because
  * the garbage collector may discard keys at any time, a
@@ -83,12 +83,12 @@ import java.util.function.Consumer;
  * for successive examinations of the key set, the value collection, and
  * the entry set to yield successively smaller numbers of elements.
  *
- * <p> Each key object in a <tt>WeakHashMap</tt> is stored indirectly as
+ * Each key object in a <tt>WeakHashMap</tt> is stored indirectly as
  * the referent of a weak reference.  Therefore a key will automatically be
  * removed only after the weak references to it, both inside and outside of the
  * map, have been cleared by the garbage collector.
  *
- * <p> <strong>Implementation note:</strong> The value objects in a
+ * <strong>Implementation note:</strong> The value objects in a
  * <tt>WeakHashMap</tt> are held by ordinary strong references.  Thus care
  * should be taken to ensure that value objects do not strongly refer to their
  * own keys, either directly or indirectly, since that will prevent the keys

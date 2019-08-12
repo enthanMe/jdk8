@@ -61,7 +61,7 @@ public class CharArrayReader extends Reader {
     /**
      * Creates a CharArrayReader from the specified array of chars.
      *
-     * <p> The resulting reader will start reading at the given
+     * The resulting reader will start reading at the given
      * <tt>offset</tt>.  The total number of <tt>char</tt> values that can be
      * read from this reader will be either <tt>length</tt> or
      * <tt>buf.length-offset</tt>, whichever is smaller.

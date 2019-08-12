@@ -331,7 +331,7 @@ class FileOutputStream extends OutputStream
      * associated with this stream. This file output stream may no longer
      * be used for writing bytes.
      *
-     * <p> If this stream has an associated channel then the channel is closed
+     * If this stream has an associated channel then the channel is closed
      * as well.
      *
      * @exception  IOException  if an I/O error occurs.
@@ -379,7 +379,7 @@ class FileOutputStream extends OutputStream
      * Returns the unique {@link java.nio.channels.FileChannel FileChannel}
      * object associated with this file output stream.
      *
-     * <p> The initial {@link java.nio.channels.FileChannel#position()
+     * The initial {@link java.nio.channels.FileChannel#position()
      * position} of the returned channel will be equal to the
      * number of bytes written to the file so far unless this stream is in
      * append mode, in which case it will be equal to the size of the file.

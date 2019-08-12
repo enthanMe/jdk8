@@ -36,7 +36,7 @@ import java.nio.channels.spi.SelectorProvider;
 /**
  * A selectable channel for stream-oriented connecting sockets.
  *
- * <p> A socket channel is created by invoking one of the {@link #open open}
+ * A socket channel is created by invoking one of the {@link #open open}
  * methods of this class.  It is not possible to create a channel for an arbitrary,
  * pre-existing socket. A newly-created socket channel is open but not yet
  * connected.  An attempt to invoke an I/O operation upon an unconnected
@@ -46,14 +46,14 @@ import java.nio.channels.spi.SelectorProvider;
  * closed.  Whether or not a socket channel is connected may be determined by
  * invoking its {@link #isConnected isConnected} method.
  *
- * <p> Socket channels support <i>non-blocking connection:</i>&nbsp;A socket
+ * Socket channels support <i>non-blocking connection:</i>&nbsp;A socket
  * channel may be created and the process of establishing the link to the
  * remote socket may be initiated via the {@link #connect connect} method for
  * later completion by the {@link #finishConnect finishConnect} method.
  * Whether or not a connection operation is in progress may be determined by
  * invoking the {@link #isConnectionPending isConnectionPending} method.
  *
- * <p> Socket channels support <i>asynchronous shutdown,</i> which is similar
+ * Socket channels support <i>asynchronous shutdown,</i> which is similar
  * to the asynchronous close operation specified in the {@link Channel} class.
  * If the input side of a socket is shut down by one thread while another
  * thread is blocked in a read operation on the socket's channel, then the read
@@ -63,7 +63,7 @@ import java.nio.channels.spi.SelectorProvider;
  * channel, then the blocked thread will receive an {@link
  * AsynchronousCloseException}.
  *
- * <p> Socket options are configured using the {@link #setOption(SocketOption,Object)
+ * Socket options are configured using the {@link #setOption(SocketOption,Object)
  * setOption} method. Socket channels support the following options:
  * <blockquote>
  * <table border summary="Socket options">
@@ -100,7 +100,7 @@ import java.nio.channels.spi.SelectorProvider;
  * </blockquote>
  * Additional (implementation specific) options may also be supported.
  *
- * <p> Socket channels are safe for use by multiple concurrent threads.  They
+ * Socket channels are safe for use by multiple concurrent threads.  They
  * support concurrent reading and writing, though at most one thread may be
  * reading and at most one thread may be writing at any given time.  The {@link
  * #connect connect} and {@link #finishConnect finishConnect} methods are
@@ -131,7 +131,7 @@ public abstract class SocketChannel
     /**
      * Opens a socket channel.
      *
-     * <p> The new channel is created by invoking the {@link
+     * The new channel is created by invoking the {@link
      * java.nio.channels.spi.SelectorProvider#openSocketChannel
      * openSocketChannel} method of the system-wide default {@link
      * java.nio.channels.spi.SelectorProvider} object.  </p>
@@ -148,7 +148,7 @@ public abstract class SocketChannel
     /**
      * Opens a socket channel and connects it to a remote address.
      *
-     * <p> This convenience method works as if by invoking the {@link #open()}
+     * This convenience method works as if by invoking the {@link #open()}
      * method, invoking the {@link #connect(SocketAddress) connect} method upon
      * the resulting socket channel, passing it <tt>remote</tt>, and then
      * returning that channel.  </p>
@@ -203,7 +203,7 @@ public abstract class SocketChannel
      * Returns an operation set identifying this channel's supported
      * operations.
      *
-     * <p> Socket channels support connecting, reading, and writing, so this
+     * Socket channels support connecting, reading, and writing, so this
      * method returns <tt>(</tt>{@link SelectionKey#OP_CONNECT}
      * <tt>|</tt>&nbsp;{@link SelectionKey#OP_READ} <tt>|</tt>&nbsp;{@link
      * SelectionKey#OP_WRITE}<tt>)</tt>.  </p>
@@ -253,7 +253,7 @@ public abstract class SocketChannel
     /**
      * Shutdown the connection for reading without closing the channel.
      *
-     * <p> Once shutdown for reading then further reads on the channel will
+     * Once shutdown for reading then further reads on the channel will
      * return {@code -1}, the end-of-stream indication. If the input side of the
      * connection is already shutdown then invoking this method has no effect.
      *
@@ -273,7 +273,7 @@ public abstract class SocketChannel
     /**
      * Shutdown the connection for writing without closing the channel.
      *
-     * <p> Once shutdown for writing then further attempts to write to the
+     * Once shutdown for writing then further attempts to write to the
      * channel will throw {@link ClosedChannelException}. If the output side of
      * the connection is already shutdown then invoking this method has no
      * effect.
@@ -294,7 +294,7 @@ public abstract class SocketChannel
     /**
      * Retrieves a socket associated with this channel.
      *
-     * <p> The returned object will not declare any public methods that are not
+     * The returned object will not declare any public methods that are not
      * declared in the {@link java.net.Socket} class.  </p>
      *
      * @return  A socket associated with this channel
@@ -322,24 +322,24 @@ public abstract class SocketChannel
     /**
      * Connects this channel's socket.
      *
-     * <p> If this channel is in non-blocking mode then an invocation of this
+     * If this channel is in non-blocking mode then an invocation of this
      * method initiates a non-blocking connection operation.  If the connection
      * is established immediately, as can happen with a local connection, then
      * this method returns <tt>true</tt>.  Otherwise this method returns
      * <tt>false</tt> and the connection operation must later be completed by
      * invoking the {@link #finishConnect finishConnect} method.
      *
-     * <p> If this channel is in blocking mode then an invocation of this
+     * If this channel is in blocking mode then an invocation of this
      * method will block until the connection is established or an I/O error
      * occurs.
      *
-     * <p> This method performs exactly the same security checks as the {@link
+     * This method performs exactly the same security checks as the {@link
      * java.net.Socket} class.  That is, if a security manager has been
      * installed then this method verifies that its {@link
      * java.lang.SecurityManager#checkConnect checkConnect} method permits
      * connecting to the address and port number of the given remote endpoint.
      *
-     * <p> This method may be invoked at any time.  If a read or write
+     * This method may be invoked at any time.  If a read or write
      * operation upon this channel is invoked while an invocation of this
      * method is in progress then that operation will first block until this
      * invocation is complete.  If a connection attempt is initiated but fails,
@@ -391,7 +391,7 @@ public abstract class SocketChannel
     /**
      * Finishes the process of connecting a socket channel.
      *
-     * <p> A non-blocking connection operation is initiated by placing a socket
+     * A non-blocking connection operation is initiated by placing a socket
      * channel in non-blocking mode and then invoking its {@link #connect
      * connect} method.  Once the connection is established, or the attempt has
      * failed, the socket channel will become connectable and this method may
@@ -399,7 +399,7 @@ public abstract class SocketChannel
      * operation failed then invoking this method will cause an appropriate
      * {@link java.io.IOException} to be thrown.
      *
-     * <p> If this channel is already connected then this method will not block
+     * If this channel is already connected then this method will not block
      * and will immediately return <tt>true</tt>.  If this channel is in
      * non-blocking mode then this method will return <tt>false</tt> if the
      * connection process is not yet complete.  If this channel is in blocking
@@ -407,7 +407,7 @@ public abstract class SocketChannel
      * or fails, and will always either return <tt>true</tt> or throw a checked
      * exception describing the failure.
      *
-     * <p> This method may be invoked at any time.  If a read or write
+     * This method may be invoked at any time.  If a read or write
      * operation upon this channel is invoked while an invocation of this
      * method is in progress then that operation will first block until this
      * invocation is complete.  If a connection attempt fails, that is, if an
@@ -442,7 +442,7 @@ public abstract class SocketChannel
     /**
      * Returns the remote address to which this channel's socket is connected.
      *
-     * <p> Where the channel is bound and connected to an Internet Protocol
+     * Where the channel is bound and connected to an Internet Protocol
      * socket address then the return value from this method is of type {@link
      * java.net.InetSocketAddress}.
      *

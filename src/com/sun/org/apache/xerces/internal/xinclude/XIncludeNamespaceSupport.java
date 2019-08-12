@@ -67,7 +67,7 @@ public class XIncludeNamespaceSupport extends MultipleScopeNamespaceSupport {
 
     /**
      * This method is used to set a context invalid for XInclude namespace processing.
-     * Any context defined by an &lt;include&gt; or &lt;fallback&gt; element is not
+     * Any context defined by an <include> or <fallback> element is not
      * valid for processing the include parent's [in-scope namespaces]. Thus, contexts
      * defined by these elements are set to invalid by the XInclude processor using
      * this method.

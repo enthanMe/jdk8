@@ -24,7 +24,13 @@
  */
 
 package java.lang;
-import java.util.*;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+import java.util.SortedMap;
+import java.util.SortedSet;
 
 /**
  * This interface imposes a total ordering on the objects of each class that
@@ -70,7 +76,7 @@ import java.util.*;
  *
  * For the mathematically inclined, the <i>relation</i> that defines
  * the natural ordering on a given class C is:<pre>
- *       {(x, y) such that x.compareTo(y) &lt;= 0}.
+ *       {(x, y) such that x.compareTo(y) <= 0}.
  * </pre> The <i>quotient</i> for this total order is: <pre>
  *       {(x, y) such that x.compareTo(y) == 0}.
  * </pre>
@@ -86,14 +92,13 @@ import java.util.*;
  * This interface is a member of the
  * <a href="{@docRoot}/../technotes/guides/collections/index.html">
  * Java Collections Framework</a>.
- *
  * @param <T> the type of objects that this object may be compared to
- *
- * @author  Josh Bloch
+ * @author Josh Bloch
  * @see java.util.Comparator
  * @since 1.2
  */
 public interface Comparable<T> {
+
     /**
      * Compares this object with the specified object for order.  Returns a
      * negative integer, zero, or a positive integer as this object is less
@@ -105,8 +110,8 @@ public interface Comparable<T> {
      * <tt>y.compareTo(x)</tt> throws an exception.)
      *
      * <p>The implementor must also ensure that the relation is transitive:
-     * <tt>(x.compareTo(y)&gt;0 &amp;&amp; y.compareTo(z)&gt;0)</tt> implies
-     * <tt>x.compareTo(z)&gt;0</tt>.
+     * <tt>(x.compareTo(y)>0 &amp;&amp; y.compareTo(z)>0)</tt> implies
+     * <tt>x.compareTo(z)>0</tt>.
      *
      * <p>Finally, the implementor must ensure that <tt>x.compareTo(y)==0</tt>
      * implies that <tt>sgn(x.compareTo(z)) == sgn(y.compareTo(z))</tt>, for
@@ -124,14 +129,12 @@ public interface Comparable<T> {
      * <i>signum</i> function, which is defined to return one of <tt>-1</tt>,
      * <tt>0</tt>, or <tt>1</tt> according to whether the value of
      * <i>expression</i> is negative, zero or positive.
-     *
-     * @param   o the object to be compared.
-     * @return  a negative integer, zero, or a positive integer as this object
-     *          is less than, equal to, or greater than the specified object.
-     *
+     * @param o the object to be compared.
+     * @return a negative integer, zero, or a positive integer as this object
+     * is less than, equal to, or greater than the specified object.
      * @throws NullPointerException if the specified object is null
      * @throws ClassCastException if the specified object's type prevents it
-     *         from being compared to this object.
+     * from being compared to this object.
      */
     public int compareTo(T o);
 }

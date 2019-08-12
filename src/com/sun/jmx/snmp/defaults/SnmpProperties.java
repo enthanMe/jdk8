@@ -166,7 +166,7 @@ public class SnmpProperties {
      * <p>
      * The list of SSL cipher suites is specified in the format:
      * <p>
-     * <DD><B>jdmk.ssl.cipher.suite.</B>&lt;n&gt;<B>=</B>&lt;cipher suite name&gt;</DD>
+     * <DD><B>jdmk.ssl.cipher.suite.</B><n><B>=</B><cipher suite name></DD>
      * <p>
      * For example:
      * <p>

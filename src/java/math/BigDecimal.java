@@ -2612,8 +2612,8 @@ public class BigDecimal extends Number implements Comparable<BigDecimal> {
      * comparison operators ({@literal <}, ==,
      * {@literal >}, {@literal >=}, !=, {@literal <=}).  The
      * suggested idiom for performing these comparisons is:
-     * {@code (x.compareTo(y)} &lt;<i>op</i>&gt; {@code 0)}, where
-     * &lt;<i>op</i>&gt; is one of the six comparison operators.
+     * {@code (x.compareTo(y)} <<i>op</i>> {@code 0)}, where
+     * <<i>op</i>> is one of the six comparison operators.
      *
      * @param  val {@code BigDecimal} to which this {@code BigDecimal} is
      *         to be compared.

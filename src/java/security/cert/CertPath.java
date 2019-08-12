@@ -84,7 +84,7 @@ import java.util.List;
  * detect any departure from these conventions that cause the certification
  * path to be invalid and throw a {@code CertPathValidatorException}.
  *
- * <p> Every implementation of the Java platform is required to support the
+ * Every implementation of the Java platform is required to support the
  * following standard {@code CertPath} encodings:
  * <ul>
  * <li>{@code PKCS7}</li>

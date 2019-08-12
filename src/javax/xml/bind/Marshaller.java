@@ -664,7 +664,7 @@ public interface Marshaller {
      *
      * <p>
      * Every marshaller internally maintains a
-     * {@link java.util.Map}&lt;{@link Class},{@link XmlAdapter}>,
+     * {@link java.util.Map}<{@link Class},{@link XmlAdapter}>,
      * which it uses for marshalling classes whose fields/methods are annotated
      * with {@link javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter}.
      *

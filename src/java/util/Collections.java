@@ -200,7 +200,7 @@ public class Collections {
      *         key would be inserted into the list: the index of the first
      *         element greater than the key, or <tt>list.size()</tt> if all
      *         elements in the list are less than the specified key.  Note
-     *         that this guarantees that the return value will be &gt;= 0 if
+     *         that this guarantees that the return value will be >= 0 if
      *         and only if the key is found.
      * @throws ClassCastException if the list contains elements that are not
      *         <i>mutually comparable</i> (for example, strings and
@@ -304,7 +304,7 @@ public class Collections {
      *         key would be inserted into the list: the index of the first
      *         element greater than the key, or <tt>list.size()</tt> if all
      *         elements in the list are less than the specified key.  Note
-     *         that this guarantees that the return value will be &gt;= 0 if
+     *         that this guarantees that the return value will be >= 0 if
      *         and only if the key is found.
      * @throws ClassCastException if the list contains elements that are not
      *         <i>mutually comparable</i> using the specified comparator,
@@ -484,8 +484,8 @@ public class Collections {
      * @param i the index of one element to be swapped.
      * @param j the index of the other element to be swapped.
      * @throws IndexOutOfBoundsException if either <tt>i</tt> or <tt>j</tt>
-     *         is out of range (i &lt; 0 || i &gt;= list.size()
-     *         || j &lt; 0 || j &gt;= list.size()).
+     *         is out of range (i < 0 || i >= list.size()
+     *         || j < 0 || j >= list.size()).
      * @since 1.4
      */
     @SuppressWarnings({"rawtypes", "unchecked"})
@@ -4284,7 +4284,7 @@ public class Collections {
      *
      * <p>This example illustrates the type-safe way to obtain an empty set:
      * <pre>
-     *     Set&lt;String&gt; s = Collections.emptySet();
+     *     Set<String> s = Collections.emptySet();
      * </pre>
      * @implNote Implementations of this method need not create a separate
      * {@code Set} object for each call.  Using this method is likely to have
@@ -4401,7 +4401,7 @@ public class Collections {
      *
      * <p>This example illustrates the type-safe way to obtain an empty list:
      * <pre>
-     *     List&lt;String&gt; s = Collections.emptyList();
+     *     List<String> s = Collections.emptyList();
      * </pre>
      *
      * @implNote
@@ -4502,7 +4502,7 @@ public class Collections {
      *
      * <p>This example illustrates the type-safe way to obtain an empty map:
      * <pre>
-     *     Map&lt;String, Date&gt; s = Collections.emptyMap();
+     *     Map<String, Date> s = Collections.emptyMap();
      * </pre>
      * @implNote Implementations of this method need not create a separate
      * {@code Map} object for each call.  Using this method is likely to have
@@ -5422,8 +5422,8 @@ public class Collections {
      * to this method, and no reference to the map is retained, as illustrated
      * in the following code fragment:
      * <pre>
-     *    Set&lt;Object&gt; weakHashSet = Collections.newSetFromMap(
-     *        new WeakHashMap&lt;Object, Boolean&gt;());
+     *    Set<Object> weakHashSet = Collections.newSetFromMap(
+     *        new WeakHashMap<Object, Boolean>());
      * </pre>
      *
      * @param <E> the class of the map keys and of the objects in the

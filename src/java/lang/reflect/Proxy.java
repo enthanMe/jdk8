@@ -49,14 +49,14 @@ import sun.security.util.SecurityConstants;
  * <p>To create a proxy for some interface {@code Foo}:
  * <pre>
  *     InvocationHandler handler = new MyInvocationHandler(...);
- *     Class&lt;?&gt; proxyClass = Proxy.getProxyClass(Foo.class.getClassLoader(), Foo.class);
+ *     Class<?> proxyClass = Proxy.getProxyClass(Foo.class.getClassLoader(), Foo.class);
  *     Foo f = (Foo) proxyClass.getConstructor(InvocationHandler.class).
  *                     newInstance(handler);
  * </pre>
  * or more simply:
  * <pre>
  *     Foo f = (Foo) Proxy.newProxyInstance(Foo.class.getClassLoader(),
- *                                          new Class&lt;?&gt;[] { Foo.class },
+ *                                          new Class<?>[] { Foo.class },
  *                                          handler);
  * </pre>
  *

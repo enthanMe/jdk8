@@ -36,7 +36,7 @@ import java.nio.ByteBuffer;
 /**
  * An asynchronous channel for stream-oriented connecting sockets.
  *
- * <p> Asynchronous socket channels are created in one of two ways. A newly-created
+ * Asynchronous socket channels are created in one of two ways. A newly-created
  * {@code AsynchronousSocketChannel} is created by invoking one of the {@link
  * #open open} methods defined by this class. A newly-created channel is open but
  * not yet connected. A connected {@code AsynchronousSocketChannel} is created
@@ -44,14 +44,14 @@ import java.nio.ByteBuffer;
  * It is not possible to create an asynchronous socket channel for an arbitrary,
  * pre-existing {@link java.net.Socket socket}.
  *
- * <p> A newly-created channel is connected by invoking its {@link #connect connect}
+ * A newly-created channel is connected by invoking its {@link #connect connect}
  * method; once connected, a channel remains connected until it is closed.  Whether
  * or not a socket channel is connected may be determined by invoking its {@link
  * #getRemoteAddress getRemoteAddress} method. An attempt to invoke an I/O
  * operation upon an unconnected channel will cause a {@link NotYetConnectedException}
  * to be thrown.
  *
- * <p> Channels of this type are safe for use by multiple concurrent threads.
+ * Channels of this type are safe for use by multiple concurrent threads.
  * They support concurrent reading and writing, though at most one read operation
  * and one write operation can be outstanding at any time.
  * If a thread initiates a read operation before a previous read operation has
@@ -59,7 +59,7 @@ import java.nio.ByteBuffer;
  * attempt to initiate a write operation before a previous write has completed
  * will throw a {@link WritePendingException}.
  *
- * <p> Socket options are configured using the {@link #setOption(SocketOption,Object)
+ * Socket options are configured using the {@link #setOption(SocketOption,Object)
  * setOption} method. Asynchronous socket channels support the following options:
  * <blockquote>
  * <table border summary="Socket options">
@@ -93,7 +93,7 @@ import java.nio.ByteBuffer;
  *
  * <h2>Timeouts</h2>
  *
- * <p> The {@link #read(ByteBuffer,long,TimeUnit,Object,CompletionHandler) read}
+ * The {@link #read(ByteBuffer,long,TimeUnit,Object,CompletionHandler) read}
  * and {@link #write(ByteBuffer,long,TimeUnit,Object,CompletionHandler) write}
  * methods defined by this class allow a timeout to be specified when initiating
  * a read or write operation. If the timeout elapses before an operation completes
@@ -143,7 +143,7 @@ public abstract class AsynchronousSocketChannel
     /**
      * Opens an asynchronous socket channel.
      *
-     * <p> The new channel is created by invoking the {@link
+     * The new channel is created by invoking the {@link
      * AsynchronousChannelProvider#openAsynchronousSocketChannel
      * openAsynchronousSocketChannel} method on the {@link
      * AsynchronousChannelProvider} that created the group. If the group parameter
@@ -172,7 +172,7 @@ public abstract class AsynchronousSocketChannel
     /**
      * Opens an asynchronous socket channel.
      *
-     * <p> This method returns an asynchronous socket channel that is bound to
+     * This method returns an asynchronous socket channel that is bound to
      * the <em>default group</em>.This method is equivalent to evaluating the
      * expression:
      * <blockquote><pre>
@@ -221,7 +221,7 @@ public abstract class AsynchronousSocketChannel
     /**
      * Shutdown the connection for reading without closing the channel.
      *
-     * <p> Once shutdown for reading then further reads on the channel will
+     * Once shutdown for reading then further reads on the channel will
      * return {@code -1}, the end-of-stream indication. If the input side of the
      * connection is already shutdown then invoking this method has no effect.
      * The effect on an outstanding read operation is system dependent and
@@ -243,7 +243,7 @@ public abstract class AsynchronousSocketChannel
     /**
      * Shutdown the connection for writing without closing the channel.
      *
-     * <p> Once shutdown for writing then further attempts to write to the
+     * Once shutdown for writing then further attempts to write to the
      * channel will throw {@link ClosedChannelException}. If the output side of
      * the connection is already shutdown then invoking this method has no
      * effect. The effect on an outstanding write operation is system dependent
@@ -265,7 +265,7 @@ public abstract class AsynchronousSocketChannel
     /**
      * Returns the remote address to which this channel's socket is connected.
      *
-     * <p> Where the channel is bound and connected to an Internet Protocol
+     * Where the channel is bound and connected to an Internet Protocol
      * socket address then the return value from this method is of type {@link
      * java.net.InetSocketAddress}.
      *
@@ -284,13 +284,13 @@ public abstract class AsynchronousSocketChannel
     /**
      * Connects this channel.
      *
-     * <p> This method initiates an operation to connect this channel. The
+     * This method initiates an operation to connect this channel. The
      * {@code handler} parameter is a completion handler that is invoked when
      * the connection is successfully established or connection cannot be
      * established. If the connection cannot be established then the channel is
      * closed.
      *
-     * <p> This method performs exactly the same security checks as the {@link
+     * This method performs exactly the same security checks as the {@link
      * java.net.Socket} class.  That is, if a security manager has been
      * installed then this method verifies that its {@link
      * java.lang.SecurityManager#checkConnect checkConnect} method permits
@@ -328,7 +328,7 @@ public abstract class AsynchronousSocketChannel
     /**
      * Connects this channel.
      *
-     * <p> This method initiates an operation to connect this channel. This
+     * This method initiates an operation to connect this channel. This
      * method behaves in exactly the same manner as the {@link
      * #connect(SocketAddress, Object, CompletionHandler)} method except that
      * instead of specifying a completion handler, this method returns a {@code
@@ -357,14 +357,14 @@ public abstract class AsynchronousSocketChannel
     /**
      * Reads a sequence of bytes from this channel into the given buffer.
      *
-     * <p> This method initiates an asynchronous read operation to read a
+     * This method initiates an asynchronous read operation to read a
      * sequence of bytes from this channel into the given buffer. The {@code
      * handler} parameter is a completion handler that is invoked when the read
      * operation completes (or fails). The result passed to the completion
      * handler is the number of bytes read or {@code -1} if no bytes could be
      * read because the channel has reached end-of-stream.
      *
-     * <p> If a timeout is specified and the timeout elapses before the operation
+     * If a timeout is specified and the timeout elapses before the operation
      * completes then the operation completes with the exception {@link
      * InterruptedByTimeoutException}. Where a timeout occurs, and the
      * implementation cannot guarantee that bytes have not been read, or will not
@@ -372,7 +372,7 @@ public abstract class AsynchronousSocketChannel
      * read from the channel will cause an unspecific runtime exception to be
      * thrown.
      *
-     * <p> Otherwise this method works in the same manner as the {@link
+     * Otherwise this method works in the same manner as the {@link
      * AsynchronousByteChannel#read(ByteBuffer,Object,CompletionHandler)}
      * method.
      *
@@ -440,7 +440,7 @@ public abstract class AsynchronousSocketChannel
      * {@code -1} if no bytes could be read because the channel has reached
      * end-of-stream.
      *
-     * <p> This method initiates a read of up to <i>r</i> bytes from this channel,
+     * This method initiates a read of up to <i>r</i> bytes from this channel,
      * where <i>r</i> is the total number of bytes remaining in the specified
      * subsequence of the given buffer array, that is,
      *
@@ -451,8 +451,8 @@ public abstract class AsynchronousSocketChannel
      *
      * at the moment that the read is attempted.
      *
-     * <p> Suppose that a byte sequence of length <i>n</i> is read, where
-     * <tt>0</tt>&nbsp;<tt>&lt;</tt>&nbsp;<i>n</i>&nbsp;<tt>&lt;=</tt>&nbsp;<i>r</i>.
+     * Suppose that a byte sequence of length <i>n</i> is read, where
+     * <tt>0</tt>&nbsp;<tt><</tt>&nbsp;<i>n</i>&nbsp;<tt><=</tt>&nbsp;<i>r</i>.
      * Up to the first <tt>dsts[offset].remaining()</tt> bytes of this sequence
      * are transferred into buffer <tt>dsts[offset]</tt>, up to the next
      * <tt>dsts[offset+1].remaining()</tt> bytes are transferred into buffer
@@ -466,7 +466,7 @@ public abstract class AsynchronousSocketChannel
      * I/O operation is performed with the maximum number of buffers allowed by
      * the operating system.
      *
-     * <p> If a timeout is specified and the timeout elapses before the operation
+     * If a timeout is specified and the timeout elapses before the operation
      * completes then it completes with the exception {@link
      * InterruptedByTimeoutException}. Where a timeout occurs, and the
      * implementation cannot guarantee that bytes have not been read, or will not
@@ -517,13 +517,13 @@ public abstract class AsynchronousSocketChannel
     /**
      * Writes a sequence of bytes to this channel from the given buffer.
      *
-     * <p> This method initiates an asynchronous write operation to write a
+     * This method initiates an asynchronous write operation to write a
      * sequence of bytes to this channel from the given buffer. The {@code
      * handler} parameter is a completion handler that is invoked when the write
      * operation completes (or fails). The result passed to the completion
      * handler is the number of bytes written.
      *
-     * <p> If a timeout is specified and the timeout elapses before the operation
+     * If a timeout is specified and the timeout elapses before the operation
      * completes then it completes with the exception {@link
      * InterruptedByTimeoutException}. Where a timeout occurs, and the
      * implementation cannot guarantee that bytes have not been written, or will
@@ -531,7 +531,7 @@ public abstract class AsynchronousSocketChannel
      * to write to the channel will cause an unspecific runtime exception to be
      * thrown.
      *
-     * <p> Otherwise this method works in the same manner as the {@link
+     * Otherwise this method works in the same manner as the {@link
      * AsynchronousByteChannel#write(ByteBuffer,Object,CompletionHandler)}
      * method.
      *
@@ -594,7 +594,7 @@ public abstract class AsynchronousSocketChannel
      * handler that is invoked when the write operation completes (or fails).
      * The result passed to the completion handler is the number of bytes written.
      *
-     * <p> This method initiates a write of up to <i>r</i> bytes to this channel,
+     * This method initiates a write of up to <i>r</i> bytes to this channel,
      * where <i>r</i> is the total number of bytes remaining in the specified
      * subsequence of the given buffer array, that is,
      *
@@ -605,8 +605,8 @@ public abstract class AsynchronousSocketChannel
      *
      * at the moment that the write is attempted.
      *
-     * <p> Suppose that a byte sequence of length <i>n</i> is written, where
-     * <tt>0</tt>&nbsp;<tt>&lt;</tt>&nbsp;<i>n</i>&nbsp;<tt>&lt;=</tt>&nbsp;<i>r</i>.
+     * Suppose that a byte sequence of length <i>n</i> is written, where
+     * <tt>0</tt>&nbsp;<tt><</tt>&nbsp;<i>n</i>&nbsp;<tt><=</tt>&nbsp;<i>r</i>.
      * Up to the first <tt>srcs[offset].remaining()</tt> bytes of this sequence
      * are written from buffer <tt>srcs[offset]</tt>, up to the next
      * <tt>srcs[offset+1].remaining()</tt> bytes are written from buffer
@@ -619,7 +619,7 @@ public abstract class AsynchronousSocketChannel
      * remaining), exceeds this limit, then the I/O operation is performed with
      * the maximum number of buffers allowed by the operating system.
      *
-     * <p> If a timeout is specified and the timeout elapses before the operation
+     * If a timeout is specified and the timeout elapses before the operation
      * completes then it completes with the exception {@link
      * InterruptedByTimeoutException}. Where a timeout occurs, and the
      * implementation cannot guarantee that bytes have not been written, or will

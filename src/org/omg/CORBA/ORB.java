@@ -860,7 +860,7 @@ abstract public class ORB {
      * <PRE>
      *    Struct Node {
      *        long value;
-     *        Sequence &lt;Node&gt; subnodes;
+     *        Sequence <Node> subnodes;
      *    };
      * </PRE>
      *
@@ -972,7 +972,7 @@ abstract public class ORB {
      * For example, the following IDL type declaration contains recursion:
      * <PRE>
      *    Struct Node {
-     *        Sequence&lt;Node&gt; subnodes;
+     *        Sequence<Node> subnodes;
      *    };
      * </PRE>
      * <P>

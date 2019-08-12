@@ -26,7 +26,7 @@
 package javax.security.auth.callback;
 
 /**
- * <p> Underlying security services instantiate and pass a
+ * Underlying security services instantiate and pass a
  * {@code PasswordCallback} to the {@code handle}
  * method of a {@code CallbackHandler} to retrieve password information.
  *
@@ -102,7 +102,7 @@ public class PasswordCallback implements Callback, java.io.Serializable {
     /**
      * Set the retrieved password.
      *
-     * <p> This method makes a copy of the input <i>password</i>
+     * This method makes a copy of the input <i>password</i>
      * before storing it.
      *
      * <p>
@@ -118,7 +118,7 @@ public class PasswordCallback implements Callback, java.io.Serializable {
     /**
      * Get the retrieved password.
      *
-     * <p> This method returns a copy of the retrieved password.
+     * This method returns a copy of the retrieved password.
      *
      * <p>
      *

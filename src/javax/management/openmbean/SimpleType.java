@@ -185,7 +185,7 @@ public final class SimpleType<T> extends OpenType<T> {
 
     /**
      * Tests whether <var>obj</var> is a value for this
-     * <code>SimpleType</code> instance.  <p> This method returns
+     * <code>SimpleType</code> instance.  This method returns
      * <code>true</code> if and only if <var>obj</var> is not null and
      * <var>obj</var>'s class name is the same as the className field
      * defined for this <code>SimpleType</code> instance (ie the class

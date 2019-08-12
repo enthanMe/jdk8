@@ -38,7 +38,7 @@ import java.util.concurrent.TimeUnit;
  * {@link BasicFileAttributes#lastAccessTime() accessed},
  * or {@link BasicFileAttributes#creationTime() created}.
  *
- * <p> Instances of this class are immutable.
+ * Instances of this class are immutable.
  *
  * @since 1.7
  * @see java.nio.file.Files#setLastModifiedTime
@@ -128,7 +128,7 @@ public final class FileTime
     /**
      * Returns the value at the given unit of granularity.
      *
-     * <p> Conversion from a coarser granularity that would numerically overflow
+     * Conversion from a coarser granularity that would numerically overflow
      * saturate to {@code Long.MIN_VALUE} if negative or {@code Long.MAX_VALUE}
      * if positive.
      *
@@ -160,7 +160,7 @@ public final class FileTime
     /**
      * Returns the value in milliseconds.
      *
-     * <p> Conversion from a coarser granularity that would numerically overflow
+     * Conversion from a coarser granularity that would numerically overflow
      * saturate to {@code Long.MIN_VALUE} if negative or {@code Long.MAX_VALUE}
      * if positive.
      *
@@ -214,10 +214,10 @@ public final class FileTime
     /**
      * Converts this {@code FileTime} object to an {@code Instant}.
      *
-     * <p> The conversion creates an {@code Instant} that represents the
+     * The conversion creates an {@code Instant} that represents the
      * same point on the time-line as this {@code FileTime}.
      *
-     * <p> {@code FileTime} can store points on the time-line further in the
+     * {@code FileTime} can store points on the time-line further in the
      * future and further in the past than {@code Instant}. Conversion
      * from such further time points saturates to {@link Instant#MIN} if
      * earlier than {@code Instant.MIN} or {@link Instant#MAX} if later
@@ -276,7 +276,7 @@ public final class FileTime
     /**
      * Tests this {@code FileTime} for equality with the given object.
      *
-     * <p> The result is {@code true} if and only if the argument is not {@code
+     * The result is {@code true} if and only if the argument is not {@code
      * null} and is a {@code FileTime} that represents the same time. This
      * method satisfies the general contract of the {@code Object.equals} method.
      *
@@ -294,7 +294,7 @@ public final class FileTime
     /**
      * Computes a hash code for this file time.
      *
-     * <p> The hash code is based upon the value represented, and satisfies the
+     * The hash code is based upon the value represented, and satisfies the
      * general contract of the {@link Object#hashCode} method.
      *
      * @return  the hash-code value
@@ -396,7 +396,7 @@ public final class FileTime
      * "2009-02-13T23:31:30Z"}, and {@code FileTime.fromMillis(1234567890123L).toString()}
      * yields {@code "2009-02-13T23:31:30.123Z"}.
      *
-     * <p> A {@code FileTime} is primarily intended to represent the value of a
+     * A {@code FileTime} is primarily intended to represent the value of a
      * file's time stamp. Where used to represent <i>extreme values</i>, where
      * the year is less than "{@code 0001}" or greater than "{@code 9999}" then
      * this method deviates from ISO 8601 in the same manner as the

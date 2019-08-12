@@ -75,7 +75,7 @@ public class TextEvent extends AWTEvent {
 
     /**
      * Constructs a <code>TextEvent</code> object.
-     * <p> This method throws an
+     * This method throws an
      * <code>IllegalArgumentException</code> if <code>source</code>
      * is <code>null</code>.
      *

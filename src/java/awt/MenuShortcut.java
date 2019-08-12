@@ -35,7 +35,7 @@ import java.awt.event.KeyEvent;
  * the accelerator key) would be created with code like the following:
  * <p>
  * <code>MenuShortcut ms = new MenuShortcut(KeyEvent.VK_A, false);</code>
- * <p> or alternatively
+ * or alternatively
  * <p>
  * <code>MenuShortcut ms = new MenuShortcut(KeyEvent.getExtendedKeyCodeForChar('A'), false);</code>
  * <p>

@@ -28,10 +28,10 @@ package com.sun.security.auth;
 import java.security.Principal;
 
 /**
- * <p> This class implements the <code>Principal</code> interface
+ * This class implements the <code>Principal</code> interface
  * and represents a user's Solaris group identification number (GID).
  *
- * <p> Principals such as this <code>SolarisNumericGroupPrincipal</code>
+ * Principals such as this <code>SolarisNumericGroupPrincipal</code>
  * may be associated with a particular <code>Subject</code>
  * to augment that <code>Subject</code> with an additional
  * identity.  Refer to the <code>Subject</code> class for more information

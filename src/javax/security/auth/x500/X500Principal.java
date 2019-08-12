@@ -33,11 +33,11 @@ import sun.security.x509.X500Name;
 import sun.security.util.*;
 
 /**
- * <p> This class represents an X.500 {@code Principal}.
+ * This class represents an X.500 {@code Principal}.
  * {@code X500Principal}s are represented by distinguished names such as
  * "CN=Duke, OU=JavaSoft, O=Sun Microsystems, C=US".
  *
- * <p> This class can be instantiated by using a string representation
+ * This class can be instantiated by using a string representation
  * of the distinguished name, or by using the ASN.1 DER encoded byte
  * representation of the distinguished name.  The current specification
  * for the string representation of a distinguished name is defined in
@@ -50,10 +50,10 @@ import sun.security.util.*;
  * <a href="http://www.ietf.org/rfc/rfc3280.txt">RFC 3280: Internet X.509
  * Public Key Infrastructure Certificate and CRL Profile</a>.
  *
- * <p> The string representation for this {@code X500Principal}
+ * The string representation for this {@code X500Principal}
  * can be obtained by calling the {@code getName} methods.
  *
- * <p> Note that the {@code getSubjectX500Principal} and
+ * Note that the {@code getSubjectX500Principal} and
  * {@code getIssuerX500Principal} methods of
  * {@code X509Certificate} return X500Principals representing the
  * issuer and subject fields of the certificate.
@@ -135,7 +135,7 @@ public final class X500Principal implements Principal, java.io.Serializable {
      * The distinguished name must be specified using the grammar defined in
      * RFC 1779 or RFC 2253 (either format is acceptable).
      *
-     * <p> This constructor recognizes the attribute type keywords specified
+     * This constructor recognizes the attribute type keywords specified
      * in {@link #X500Principal(String)} and also recognizes additional
      * keywords that have entries in the {@code keywordMap} parameter.
      * Keyword entries in the keywordMap take precedence over the default
@@ -239,7 +239,7 @@ public final class X500Principal implements Principal, java.io.Serializable {
      * documentation for
      * {@link #X500Principal(byte[] name) X500Principal(byte[] name)}.
      *
-     * <p> The read position of the input stream is positioned
+     * The read position of the input stream is positioned
      * to the next available byte after the encoded distinguished name.
      *
      * @param is an {@code InputStream} containing the distinguished
@@ -297,12 +297,12 @@ public final class X500Principal implements Principal, java.io.Serializable {
      * using the specified format. Valid values for the format are
      * "RFC1779", "RFC2253", and "CANONICAL" (case insensitive).
      *
-     * <p> If "RFC1779" is specified as the format,
+     * If "RFC1779" is specified as the format,
      * this method emits the attribute type keywords defined in
      * RFC 1779 (CN, L, ST, O, OU, C, STREET).
      * Any other attribute type is emitted as an OID.
      *
-     * <p> If "RFC2253" is specified as the format,
+     * If "RFC2253" is specified as the format,
      * this method emits the attribute type keywords defined in
      * RFC 2253 (CN, L, ST, O, OU, C, STREET, DC, UID).
      * Any other attribute type is emitted as an OID.
@@ -310,7 +310,7 @@ public final class X500Principal implements Principal, java.io.Serializable {
      * representation. The String returned by this method is the
      * Unicode string achieved by decoding this UTF-8 representation.
      *
-     * <p> If "CANONICAL" is specified as the format,
+     * If "CANONICAL" is specified as the format,
      * this method returns an RFC 2253 conformant string representation
      * with the following additional canonicalizations:
      *
@@ -345,7 +345,7 @@ public final class X500Principal implements Principal, java.io.Serializable {
      *          as described in the Unicode Standard and UAX #15
      * </ol>
      *
-     * <p> Additional standard formats may be introduced in the future.
+     * Additional standard formats may be introduced in the future.
      *
      * @param format the format to use
      *
@@ -382,9 +382,9 @@ public final class X500Principal implements Principal, java.io.Serializable {
      * in the name maps to an improperly specified keyword, an
      * {@code IllegalArgumentException} is thrown.
      *
-     * <p> Additional standard formats may be introduced in the future.
+     * Additional standard formats may be introduced in the future.
      *
-     * <p> Warning: additional attribute type keywords may not be recognized
+     * Warning: additional attribute type keywords may not be recognized
      * by other implementations; therefore do not use this method if
      * you are unsure if these keywords will be recognized by other
      * implementations.
@@ -450,13 +450,13 @@ public final class X500Principal implements Principal, java.io.Serializable {
      * Compares the specified {@code Object} with this
      * {@code X500Principal} for equality.
      *
-     * <p> Specifically, this method returns {@code true} if
+     * Specifically, this method returns {@code true} if
      * the {@code Object} <i>o</i> is an {@code X500Principal}
      * and if the respective canonical string representations
      * (obtained via the {@code getName(X500Principal.CANONICAL)} method)
      * of this object and <i>o</i> are equal.
      *
-     * <p> This implementation is compliant with the requirements of RFC 3280.
+     * This implementation is compliant with the requirements of RFC 3280.
      *
      * @param o Object to be compared for equality with this
      *          {@code X500Principal}
@@ -478,7 +478,7 @@ public final class X500Principal implements Principal, java.io.Serializable {
     /**
      * Return a hash code for this {@code X500Principal}.
      *
-     * <p> The hash code is calculated via:
+     * The hash code is calculated via:
      * {@code getName(X500Principal.CANONICAL).hashCode()}
      *
      * @return a hash code for this {@code X500Principal}

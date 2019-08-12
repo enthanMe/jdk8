@@ -83,7 +83,7 @@ public class XMLGrammarPoolImpl implements XMLGrammarPool {
     // XMLGrammarPool methods
     //
 
-    /* <p> Retrieve the initial known set of grammars. This method is
+    /* Retrieve the initial known set of grammars. This method is
      * called by a validator before the validation starts. The application
      * can provide an initial set of grammars available to the current
      * validation attempt. </p>
@@ -111,7 +111,7 @@ public class XMLGrammarPoolImpl implements XMLGrammarPool {
         }
     } // retrieveInitialGrammarSet (String): Grammar[]
 
-    /* <p> Return the final set of grammars that the validator ended up
+    /* Return the final set of grammars that the validator ended up
      * with. This method is called after the validation finishes. The
      * application may then choose to cache some of the returned grammars.</p>
      * <p>In this implementation, we make our choice based on whether this object
@@ -135,7 +135,7 @@ public class XMLGrammarPoolImpl implements XMLGrammarPool {
         }
     } // cacheGrammars(String, Grammar[]);
 
-    /* <p> This method requests that the application retrieve a grammar
+    /* This method requests that the application retrieve a grammar
      * corresponding to the given GrammarIdentifier from its cache.
      * If it cannot do so it must return null; the parser will then
      * call the EntityResolver. </p>
@@ -259,14 +259,14 @@ public class XMLGrammarPoolImpl implements XMLGrammarPool {
     }
     } // containsGrammar(XMLGrammarDescription):boolean
 
-    /* <p> Sets this grammar pool to a "locked" state--i.e.,
+    /* Sets this grammar pool to a "locked" state--i.e.,
      * no new grammars will be added until it is "unlocked".
      */
     public void lockPool() {
         fPoolIsLocked = true;
     } // lockPool()
 
-    /* <p> Sets this grammar pool to an "unlocked" state--i.e.,
+    /* Sets this grammar pool to an "unlocked" state--i.e.,
      * new grammars will be added when putGrammar or cacheGrammars
      * are called.
      */

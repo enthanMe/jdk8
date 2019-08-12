@@ -45,7 +45,7 @@ import java.io.IOException;
  * therefore always contiguous from the point of last
  * disposal to the current length.
  *
- * <p> The total number of blocks resident in the cache must not
+ * The total number of blocks resident in the cache must not
  * exceed <code>Integer.MAX_VALUE</code>.  In practice, the limit of
  * available memory will be exceeded long before this becomes an
  * issue, since a full cache would contain 8192*2^31 = 16 terabytes of

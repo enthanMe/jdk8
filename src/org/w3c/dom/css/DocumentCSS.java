@@ -46,7 +46,7 @@ import org.w3c.dom.stylesheets.DocumentStyle;
 
 /**
  * This interface represents a document with a CSS view.
- * <p> The <code>getOverrideStyle</code> method provides a mechanism through
+ * The <code>getOverrideStyle</code> method provides a mechanism through
  * which a DOM author could effect immediate change to the style of an
  * element without modifying the explicitly linked style sheets of a
  * document or the inline style of elements in the style sheets. This style
@@ -58,7 +58,7 @@ import org.w3c.dom.stylesheets.DocumentStyle;
  * take precedence over both override and author "!important" rules, and
  * override "!important" rules take precedence over author "!important"
  * rules.
- * <p> The expectation is that an instance of the <code>DocumentCSS</code>
+ * The expectation is that an instance of the <code>DocumentCSS</code>
  * interface can be obtained by using binding-specific casting methods on an
  * instance of the <code>Document</code> interface.
  * <p>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113'>Document Object Model (DOM) Level 2 Style Specification</a>.

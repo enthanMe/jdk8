@@ -273,10 +273,10 @@ public class KeyStroke extends AWTKeyStroke {
      * Parses a string and returns a <code>KeyStroke</code>.
      * The string must have the following syntax:
      * <pre>
-     *    &lt;modifiers&gt;* (&lt;typedID&gt; | &lt;pressedReleasedID&gt;)
+     *    <modifiers>* (<typedID> | <pressedReleasedID>)
      *
      *    modifiers := shift | control | ctrl | meta | alt | altGraph
-     *    typedID := typed &lt;typedKey&gt;
+     *    typedID := typed <typedKey>
      *    typedKey := string of length 1 giving Unicode character.
      *    pressedReleasedID := (pressed | released) key
      *    key := KeyEvent key code name, i.e. the name following "VK_".
@@ -284,11 +284,11 @@ public class KeyStroke extends AWTKeyStroke {
      * If typed, pressed or released is not specified, pressed is assumed. Here
      * are some examples:
      * <pre>
-     *     "INSERT" =&gt; getKeyStroke(KeyEvent.VK_INSERT, 0);
-     *     "control DELETE" =&gt; getKeyStroke(KeyEvent.VK_DELETE, InputEvent.CTRL_MASK);
-     *     "alt shift X" =&gt; getKeyStroke(KeyEvent.VK_X, InputEvent.ALT_MASK | InputEvent.SHIFT_MASK);
-     *     "alt shift released X" =&gt; getKeyStroke(KeyEvent.VK_X, InputEvent.ALT_MASK | InputEvent.SHIFT_MASK, true);
-     *     "typed a" =&gt; getKeyStroke('a');
+     *     "INSERT" => getKeyStroke(KeyEvent.VK_INSERT, 0);
+     *     "control DELETE" => getKeyStroke(KeyEvent.VK_DELETE, InputEvent.CTRL_MASK);
+     *     "alt shift X" => getKeyStroke(KeyEvent.VK_X, InputEvent.ALT_MASK | InputEvent.SHIFT_MASK);
+     *     "alt shift released X" => getKeyStroke(KeyEvent.VK_X, InputEvent.ALT_MASK | InputEvent.SHIFT_MASK, true);
+     *     "typed a" => getKeyStroke('a');
      * </pre>
      *
      * In order to maintain backward-compatibility, specifying a null String,

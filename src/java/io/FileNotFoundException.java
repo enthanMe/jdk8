@@ -30,7 +30,7 @@ package java.io;
  * Signals that an attempt to open the file denoted by a specified pathname
  * has failed.
  *
- * <p> This exception will be thrown by the {@link FileInputStream}, {@link
+ * This exception will be thrown by the {@link FileInputStream}, {@link
  * FileOutputStream}, and {@link RandomAccessFile} constructors when a file
  * with the specified pathname does not exist.  It will also be thrown by these
  * constructors if the file does exist but for some reason is inaccessible, for

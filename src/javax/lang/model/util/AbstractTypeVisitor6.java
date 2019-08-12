@@ -32,7 +32,7 @@ import javax.lang.model.type.*;
  * the {@link javax.lang.model.SourceVersion#RELEASE_6 RELEASE_6}
  * source version.
  *
- * <p> <b>WARNING:</b> The {@code TypeVisitor} interface implemented
+ * <b>WARNING:</b> The {@code TypeVisitor} interface implemented
  * by this class may have methods added to it in the future to
  * accommodate new, currently unknown, language structures added to
  * future versions of the Java&trade; programming language.
@@ -60,7 +60,7 @@ import javax.lang.model.type.*;
  *
  * @param <R> the return type of this visitor's methods.  Use {@link
  *            Void} for visitors that do not need to return results.
- * @param <P> the type of the additional parameter to this visitor's
+ * @param the type of the additional parameter to this visitor's
  *            methods.  Use {@code Void} for visitors that do not need an
  *            additional parameter.
  *
@@ -136,7 +136,7 @@ public abstract class AbstractTypeVisitor6<R, P> implements TypeVisitor<R, P> {
     /**
      * {@inheritDoc}
      *
-     * <p> The default implementation of this method in {@code
+     * The default implementation of this method in {@code
      * AbstractTypeVisitor6} will always throw {@code
      * UnknownTypeException}.  This behavior is not required of a
      * subclass.

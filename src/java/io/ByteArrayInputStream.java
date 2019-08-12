@@ -253,7 +253,7 @@ class ByteArrayInputStream extends InputStream {
      * offset passed to the constructor (or 0 if the offset was not
      * supplied).
      *
-     * <p> Note: The <code>readAheadLimit</code> for this class
+     * Note: The <code>readAheadLimit</code> for this class
      *  has no meaning.
      *
      * @since   JDK1.1

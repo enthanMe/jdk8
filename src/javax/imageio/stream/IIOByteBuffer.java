@@ -32,7 +32,7 @@ package javax.imageio.stream;
  * to the caller, possibly with fewer copies than using the conventional
  * <code>read</code> methods that take a user-supplied byte array.
  *
- * <p> The byte array referenced by an <code>IIOByteBuffer</code> will
+ * The byte array referenced by an <code>IIOByteBuffer</code> will
  * generally be part of an internal data structure belonging to an
  * <code>ImageReader</code> implementation; its contents should be
  * considered read-only and must not be modified.

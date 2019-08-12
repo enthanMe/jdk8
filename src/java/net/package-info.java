@@ -26,7 +26,7 @@
 /**
  * Provides the classes for implementing networking applications.
  *
- * <p> The java.net package can be roughly divided in two sections:</p>
+ * The java.net package can be roughly divided in two sections:</p>
  * <ul>
  *     <li><p><i>A Low Level API</i>, which deals with the
  *               following abstractions:</p>

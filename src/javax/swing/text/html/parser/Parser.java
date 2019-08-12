@@ -58,12 +58,12 @@ import sun.misc.MessageUtils;
  * space should be used here, but I am using &amp;nbsp to force the space to
  * be displayed):
  * <p>
- * '&lt;b&gt;blah&nbsp;&lt;i&gt;&nbsp;&lt;strike&gt;&nbsp;foo' which can be treated as:
- * '&lt;b&gt;blah&nbsp;&lt;i&gt;&lt;strike&gt;foo'
+ * '<b>blah&nbsp;<i>&nbsp;<strike>&nbsp;foo' which can be treated as:
+ * '<b>blah&nbsp;<i><strike>foo'
  * <p>as well as:
- * '&lt;p&gt;&lt;a href="xx"&gt;&nbsp;&lt;em&gt;Using&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;'
+ * '<p><a href="xx">&nbsp;<em>Using</em></a></p>'
  * which appears to be treated as:
- * '&lt;p&gt;&lt;a href="xx"&gt;&lt;em&gt;Using&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;'
+ * '<p><a href="xx"><em>Using</em></a></p>'
  * <p>
  * If <code>strict</code> is false, when a tag that breaks flow,
  * (<code>TagElement.breaksFlows</code>) or trailing whitespace is
@@ -115,12 +115,12 @@ class Parser implements DTDConstants {
      * of the popular browsers.
      * <p>
      * The problematic scenarios are:
-     * '&lt;b>blah &lt;i> &lt;strike> foo' which can be treated as:
-     * '&lt;b>blah &lt;i>&lt;strike>foo'
+     * '<b>blah <i> <strike> foo' which can be treated as:
+     * '<b>blah <i><strike>foo'
      * as well as:
-     * '&lt;p>&lt;a href="xx"> &lt;em>Using&lt;/em>&lt;/a>&lt;/p>'
+     * '<p><a href="xx"> <em>Using</em></a></p>'
      * which appears to be treated as:
-     * '&lt;p>&lt;a href="xx">&lt;em>Using&lt;/em>&lt;/a>&lt;/p>'
+     * '<p><a href="xx"><em>Using</em></a></p>'
      * <p>
      * When a tag that breaks flow, or trailing whitespace is encountered
      * ignoreSpace is set to true. From then on, all whitespace will be

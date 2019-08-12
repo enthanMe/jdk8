@@ -74,8 +74,8 @@ public class BasicHTML {
      * @param view the View to get the baseline for
      * @param w the width to get the baseline for
      * @param h the height to get the baseline for
-     * @throws IllegalArgumentException if width or height is &lt; 0
-     * @return baseline or a value &lt; 0 indicating there is no reasonable
+     * @throws IllegalArgumentException if width or height is < 0
+     * @return baseline or a value < 0 indicating there is no reasonable
      *                  baseline
      * @see java.awt.FontMetrics
      * @see javax.swing.JComponent#getBaseline(int,int)

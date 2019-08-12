@@ -44,14 +44,14 @@ import java.util.List;
  * The XML schema definition is defined as:
  *
  * <pre>
- *   &lt;element name="RetrievalMethod" type="ds:RetrievalMethodType"/&gt;
- *   &lt;complexType name="RetrievalMethodType"&gt;
- *     &lt;sequence&gt;
- *       &lt;element name="Transforms" type="ds:TransformsType" minOccurs="0"/&gt;
- *     &lt;/sequence&gt;
- *     &lt;attribute name="URI" type="anyURI"/&gt;
- *     &lt;attribute name="Type" type="anyURI" use="optional"/&gt;
- *   &lt;/complexType&gt;
+ *   <element name="RetrievalMethod" type="ds:RetrievalMethodType"/>
+ *   <complexType name="RetrievalMethodType">
+ *     <sequence>
+ *       <element name="Transforms" type="ds:TransformsType" minOccurs="0"/>
+ *     </sequence>
+ *     <attribute name="URI" type="anyURI"/>
+ *     <attribute name="Type" type="anyURI" use="optional"/>
+ *   </complexType>
  * </pre>
  *
  * A <code>RetrievalMethod</code> instance may be created by invoking one of the

@@ -72,12 +72,12 @@ import com.sun.org.apache.xerces.internal.util.IntStack;
  *   <dt><a name="S_OPTION"><code>"s"</code></a>
  *   <dd class="REGEX"><kbd>.</kbd> matches any one character.
  *   <dt><a name="U_OPTION"><code>"u"</code></a>
- *   <dd class="REGEX">Redefines <Kbd>\d \D \w \W \s \S \b \B \&lt; \></kbd> as becoming to Unicode.
+ *   <dd class="REGEX">Redefines <Kbd>\d \D \w \W \s \S \b \B \< \></kbd> as becoming to Unicode.
  *   <dt><a name="W_OPTION"><code>"w"</code></a>
- *   <dd class="REGEX">By this option, <kbd>\b \B \&lt; \></kbd> are processed with the method of
+ *   <dd class="REGEX">By this option, <kbd>\b \B \< \></kbd> are processed with the method of
  *      'Unicode Regular Expression Guidelines' Revision 4.
  *      When "w" and "u" are specified at the same time,
- *      <kbd>\b \B \&lt; \></kbd> are processed for the "w" option.
+ *      <kbd>\b \B \< \></kbd> are processed for the "w" option.
  *   <dt><a name="COMMA_OPTION"><code>","</code></a>
  *   <dd>The parser treats a comma in a character class as a range separator.
  *      <kbd class="REGEX">[a,b]</kbd> matches <kbd>a</kbd> or <kbd>,</kbd> or <kbd>b</kbd> without this option.
@@ -174,7 +174,7 @@ import com.sun.org.apache.xerces.internal.util.IntStack;
  *         <li class="REGEX">A character (including <Kbd>\e \f \n \r \t</kbd> <kbd>\u005cx</kbd><var>HH</var> <kbd>\u005cx{</kbd><var>HHHH</var><kbd>}</kbd> <!--kbd>\u005c u</kbd><var>HHHH</var--> <kbd>\u005cv</kbd><var>HHHHHH</var>)
  *             <p>This range matches the character.
  *         <li class="REGEX"><var>C<sub>1</sub></var><kbd>-</kbd><var>C<sub>2</sub></var>
- *             <p>This range matches a character which has a code point that is >= <var>C<sub>1</sub></var>'s code point and &lt;= <var>C<sub>2</sub></var>'s code point.
+ *             <p>This range matches a character which has a code point that is >= <var>C<sub>1</sub></var>'s code point and <= <var>C<sub>2</sub></var>'s code point.
 + *         <li class="REGEX">A POSIX character class: <Kbd>[:alpha:] [:alnum:] [:ascii:] [:cntrl:] [:digit:] [:graph:] [:lower:] [:print:] [:punct:] [:space:] [:upper:] [:xdigit:]</kbd>,
 + *             and negative POSIX character classes in Perl like <kbd>[:^alpha:]</kbd>
  *             <p>...
@@ -325,12 +325,12 @@ import com.sun.org.apache.xerces.internal.util.IntStack;
  * The <VAR>N</VAR>th gorup is the inside of the <VAR>N</VAR>th left parenthesis.
  *
  *   <p>For instance, a regular expression is
- *   "<FONT color=blue><KBD> *([^&lt;:]*) +&lt;([^&gt;]*)&gt; *</KBD></FONT>"
+ *   "<FONT color=blue><KBD> *([^<:]*) +<([^>]*)> *</KBD></FONT>"
  *   and target text is
- *   "<FONT color=red><KBD>From: TAMURA Kent &lt;kent@trl.ibm.co.jp&gt;</KBD></FONT>":
+ *   "<FONT color=red><KBD>From: TAMURA Kent <kent@trl.ibm.co.jp></KBD></FONT>":
  *   <ul>
  *     <li><code>Match.getCapturedText(0)</code>:
- *     "<FONT color=red><KBD> TAMURA Kent &lt;kent@trl.ibm.co.jp&gt;</KBD></FONT>"
+ *     "<FONT color=red><KBD> TAMURA Kent <kent@trl.ibm.co.jp></KBD></FONT>"
  *     <li><code>Match.getCapturedText(1)</code>: "<FONT color=red><KBD>TAMURA Kent</KBD></FONT>"
  *     <li><code>Match.getCapturedText(2)</code>: "<FONT color=red><KBD>kent@trl.ibm.co.jp</KBD></FONT>"
  *   </ul>
@@ -387,11 +387,11 @@ import com.sun.org.apache.xerces.internal.util.IntStack;
  *       <dd>Matches non word boundary.
  *           (See <a href="#W_OPTION">a "w" option</a>)
  *
- *       <dt class="REGEX"><kbd>\&lt;</kbd>
+ *       <dt class="REGEX"><kbd>\<</kbd>
  *       <dd>Matches the beginning of a word.
  *           (See <a href="#W_OPTION">a "w" option</a>)
  *
- *       <dt class="REGEX"><kbd>\&gt;</kbd>
+ *       <dt class="REGEX"><kbd>\></kbd>
  *       <dd>Matches the end of a word.
  *           (See <a href="#W_OPTION">a "w" option</a>)
  *     </dl>
@@ -404,11 +404,11 @@ import com.sun.org.apache.xerces.internal.util.IntStack;
  *       <dt class="REGEX"><kbd>(?!</kbd><var>X</var><kbd>)</kbd>
  *       <dd>Negative lookahead.
  *
- *       <dt class="REGEX"><kbd>(?&lt;=</kbd><var>X</var><kbd>)</kbd>
+ *       <dt class="REGEX"><kbd>(?<=</kbd><var>X</var><kbd>)</kbd>
  *       <dd>Lookbehind.
  *       <dd>(Note for text capturing......)
  *
- *       <dt class="REGEX"><kbd>(?&lt;!</kbd><var>X</var><kbd>)</kbd>
+ *       <dt class="REGEX"><kbd>(?<!</kbd><var>X</var><kbd>)</kbd>
  *       <dd>Negative lookbehind.
  *     </dl>
  *   </li>
@@ -439,9 +439,9 @@ import com.sun.org.apache.xerces.internal.util.IntStack;
  *          | '(?>' regex ')' | '(?' options ':' regex ')'
  *          | '(?' ('(' [0-9] ')' | '(' anchors ')' | looks) term ('|' term)? ')'
  * options ::= [imsw]* ('-' [imsw]+)?
- * anchors ::= '^' | '$' | '\A' | '\Z' | '\z' | '\b' | '\B' | '\&lt;' | '\>'
+ * anchors ::= '^' | '$' | '\A' | '\Z' | '\z' | '\b' | '\B' | '\<' | '\>'
  * looks ::= '(?=' regex ')'  | '(?!' regex ')'
- *           | '(?&lt;=' regex ')' | '(?&lt;!' regex ')'
+ *           | '(?<=' regex ')' | '(?<!' regex ')'
  * char ::= '\\' | '\' [efnrtv] | '\c' [@-_] | code-point | character-1
  * category-block ::= '\' [pP] category-symbol-1
  *                    | ('\p{' | '\P{') (category-symbol | block-name
@@ -485,7 +485,7 @@ import com.sun.org.apache.xerces.internal.util.IntStack;
  *
  * @xerces.internal
  *
- * @author TAMURA Kent &lt;kent@trl.ibm.co.jp&gt;
+ * @author TAMURA Kent <kent@trl.ibm.co.jp>
  * @version $Id: RegularExpression.java,v 1.9 2010/07/27 05:02:34 joehw Exp $
  */
 public class RegularExpression implements java.io.Serializable {
@@ -2200,7 +2200,7 @@ public class RegularExpression implements java.io.Serializable {
 
     /**
      * An option.
-     * This enables to process locale-independent word boundary for <span class="REGEX"><kbd>\b \B \&lt; \></kbd></span>.
+     * This enables to process locale-independent word boundary for <span class="REGEX"><kbd>\b \B \< \></kbd></span>.
      * <p>By default, the engine considers a position between a word character
      * (<span class="REGEX"><Kbd>\w</kbd></span>) and a non word character
      * is a word boundary.

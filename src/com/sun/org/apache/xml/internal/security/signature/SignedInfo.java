@@ -44,7 +44,7 @@ import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
 
 /**
- * Handles <code>&lt;ds:SignedInfo&gt;</code> elements
+ * Handles <code><ds:SignedInfo></code> elements
  * This <code>SignedInfo<code> element includes the canonicalization algorithm,
  * a signature algorithm, and one or more references.
  *

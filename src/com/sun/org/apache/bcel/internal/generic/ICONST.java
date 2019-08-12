@@ -61,7 +61,7 @@ package com.sun.org.apache.bcel.internal.generic;
 /**
  * ICONST - Push value between -1, ..., 5, other values cause an exception
  *
- * <PRE>Stack: ... -&gt; ..., </PRE>
+ * <PRE>Stack: ... -> ..., </PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

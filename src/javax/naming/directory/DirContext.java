@@ -200,15 +200,15 @@ public interface DirContext extends Context {
      * See the class description regarding attribute models, attribute
      * type names, and operational attributes.
      *
-     * <p> If the object does not have an attribute
+     * If the object does not have an attribute
      * specified, the directory will ignore the nonexistent attribute
      * and return those requested attributes that the object does have.
      *
-     * <p> A directory might return more attributes than was requested
+     * A directory might return more attributes than was requested
      * (see <strong>Attribute Type Names</strong> in the class description),
      * but is not allowed to return arbitrary, unrelated attributes.
      *
-     * <p> See also <strong>Operational Attributes</strong> in the class
+     * See also <strong>Operational Attributes</strong> in the class
      * description.
      *
      * @param name
@@ -539,11 +539,11 @@ public interface DirContext extends Context {
      * they can be added; what mandatory and optional attributes an object
      * can have. The range of support for schemas is directory-specific.
      *
-     * <p> This method returns the root of the schema information tree
+     * This method returns the root of the schema information tree
      * that is applicable to the named object. Several named objects
      * (or even an entire directory) might share the same schema.
      *
-     * <p> Issues such as structure and contents of the schema tree,
+     * Issues such as structure and contents of the schema tree,
      * permission to modify to the contents of the schema
      * tree, and the effect of such modifications on the directory
      * are dependent on the underlying directory.

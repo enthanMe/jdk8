@@ -34,7 +34,7 @@ import sun.nio.cs.StreamEncoder;
  * Methods to access the character-based console device, if any, associated
  * with the current Java virtual machine.
  *
- * <p> Whether a virtual machine has a console is dependent upon the
+ * Whether a virtual machine has a console is dependent upon the
  * underlying platform and also upon the manner in which the virtual
  * machine is invoked.  If the virtual machine is started from an
  * interactive command line without redirecting the standard input and
@@ -175,7 +175,7 @@ public final class Console implements Flushable
     * A convenience method to write a formatted string to this console's
     * output stream using the specified format string and arguments.
     *
-    * <p> An invocation of this method of the form <tt>con.printf(format,
+    * An invocation of this method of the form <tt>con.printf(format,
     * args)</tt> behaves in exactly the same way as the invocation of
     * <pre>con.format(format, args)</pre>.
     *

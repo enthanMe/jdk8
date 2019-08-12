@@ -33,7 +33,7 @@ import sun.nio.ch.DirectBuffer;
  * stream. An Adler-32 checksum is almost as reliable as a CRC-32 but
  * can be computed much faster.
  *
- * <p> Passing a {@code null} argument to a method in this class will cause
+ * Passing a {@code null} argument to a method in this class will cause
  * a {@link NullPointerException} to be thrown.
  *
  * @see         Checksum

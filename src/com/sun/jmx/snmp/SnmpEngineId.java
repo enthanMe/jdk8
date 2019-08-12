@@ -46,7 +46,7 @@ public class SnmpEngineId implements Serializable {
     String hexString = null;
     String humanString = null;
     /**
-     * New <CODE>SnmpEngineId</CODE> with an hex string value. Can handle engine Id format &lt;host&gt:&lt;port&gt.
+     * New <CODE>SnmpEngineId</CODE> with an hex string value. Can handle engine Id format <host&gt:<port&gt.
      * @param hexString Hexa string.
      */
     SnmpEngineId(String hexString) {
@@ -63,7 +63,7 @@ public class SnmpEngineId implements Serializable {
     }
 
     /**
-     * If a string of the format &lt;address&gt;:&lt;port&gt;:&lt;IANA number&gt; has been provided at creation time, this string is returned.
+     * If a string of the format <address>:<port>:<IANA number> has been provided at creation time, this string is returned.
      * @return The Id as a readable string or null if not provided.
      */
     public String getReadableId() {
@@ -179,22 +179,22 @@ public class SnmpEngineId implements Serializable {
 
    /**
     * <P>Generates a unique engine Id. Hexadecimal strings as well as a textual description are supported. The textual format is as follow:
-    * <BR>  &lt;address&gt;:&lt;port&gt;:&lt;IANA number&gt;</P>
+    * <BR>  <address>:<port>:<IANA number></P>
     * <P>The allowed formats :</P>
     * <ul>
-    * <li> &lt;address&gt;:&lt;port&gt;:&lt;IANA number&gt
+    * <li> <address>:<port>:<IANA number&gt
     * <BR>   All these parameters are used to generate the Id. WARNING, this method is not compliant with IPv6 address format. Use { @link com.sun.jmx.snmp.SnmpEngineId#createEngineId(java.lang.String,java.lang.String) } instead.</li>
-    * <li> &lt;address&gt;:&lt;port&gt;
+    * <li> <address>:<port>
     * <BR>   The IANA number will be the SUN Microsystems one (42). </li>
     * <li> address
     * <BR>   The port 161 will be used to generate the Id. IANA number will be the SUN Microsystems one (42). </li>
     * <li> :port
     * <BR>   The host to use is localhost. IANA number will be the SUN Microsystems one (42). </li>
-    * <li> ::&lt;IANA number&gt &nbsp;&nbsp;&nbsp;
+    * <li> ::<IANA number&gt &nbsp;&nbsp;&nbsp;
     * <BR>   The port 161 and localhost will be used to generate the Id. </li>
-    * <li> :&lt;port&gt;:&lt;IANA number&gt;
+    * <li> :<port>:<IANA number>
     * <BR>   The host to use is localhost. </li>
-    * <li> &lt;address&gt;::&lt;IANA number&gt
+    * <li> <address>::<IANA number&gt
     * <BR>   The port 161 will be used to generate the Id. </li>
     * <li> :: &nbsp;&nbsp;&nbsp;
     * <BR>   The port 161, localhost and the SUN Microsystems IANA number will be used to generate the Id. </li>

@@ -29,7 +29,7 @@ package java.lang.management;
  * The management interface for the operating system on which
  * the Java virtual machine is running.
  *
- * <p> A Java virtual machine has a single instance of the implementation
+ * A Java virtual machine has a single instance of the implementation
  * class of this interface.  This instance implementing this interface is
  * an <a href="ManagementFactory.html#MXBean">MXBean</a>
  * that can be obtained by calling
@@ -47,7 +47,7 @@ package java.lang.management;
  * It can be obtained by calling the
  * {@link PlatformManagedObject#getObjectName} method.
  *
- * <p> This interface defines several convenient methods for accessing
+ * This interface defines several convenient methods for accessing
  * system properties about the operating system on which the Java
  * virtual machine is running.
  *
@@ -110,7 +110,7 @@ public interface OperatingSystemMXBean extends PlatformManagedObject {
      * Returns the number of processors available to the Java virtual machine.
      * This method is equivalent to the {@link Runtime#availableProcessors()}
      * method.
-     * <p> This value may change during a particular invocation of
+     * This value may change during a particular invocation of
      * the virtual machine.
      *
      * @return  the number of processors available to the virtual

@@ -564,7 +564,7 @@ public final class ZoneRules implements Serializable {
      * There are various ways to handle the conversion from a {@code LocalDateTime}.
      * One technique, using this method, would be:
      * <pre>
-     *  List&lt;ZoneOffset&gt; validOffsets = rules.getOffset(localDT);
+     *  List<ZoneOffset> validOffsets = rules.getOffset(localDT);
      *  if (validOffsets.size() == 1) {
      *    // Normal case: only one valid offset
      *    zoneOffset = validOffsets.get(0);

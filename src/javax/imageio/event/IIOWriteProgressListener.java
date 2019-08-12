@@ -55,7 +55,7 @@ public interface IIOWriteProgressListener extends EventListener {
      * <code>write</code> call within the associated
      * <code>ImageWriter</code>.
      *
-     * <p> The degree of completion is expressed as an index
+     * The degree of completion is expressed as an index
      * indicating which image is being written, and a percentage
      * varying from <code>0.0F</code> to <code>100.0F</code>
      * indicating how much of the current image has been output.  The
@@ -69,7 +69,7 @@ public interface IIOWriteProgressListener extends EventListener {
      * <code>0</code> and <code>100</code>, as these may be inferred
      * by the callee from other methods.
      *
-     * <p> Each particular <code>ImageWriter</code> implementation may
+     * Each particular <code>ImageWriter</code> implementation may
      * call this method at whatever frequency it desires.  A rule of
      * thumb is to call it around each 5 percent mark.
      *

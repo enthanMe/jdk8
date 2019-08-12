@@ -61,7 +61,7 @@ package com.sun.org.apache.bcel.internal.generic;
 /**
  * POP2 - Pop two top operand stack words
  *
- * <PRE>Stack: ..., word2, word1 -&gt; ...</PRE>
+ * <PRE>Stack: ..., word2, word1 -> ...</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

@@ -120,7 +120,7 @@ class PushbackInputStream extends FilterInputStream {
      * is available, the end of the stream is detected, or an exception
      * is thrown.
      *
-     * <p> This method returns the most recently pushed-back byte, if there is
+     * This method returns the most recently pushed-back byte, if there is
      * one, and otherwise calls the <code>read</code> method of its underlying
      * input stream and returns whatever value that method returns.
      *
@@ -259,7 +259,7 @@ class PushbackInputStream extends FilterInputStream {
      * the same thread or another thread.  A single read or skip of this
      * many bytes will not block, but may read or skip fewer bytes.
      *
-     * <p> The method returns the sum of the number of bytes that have been
+     * The method returns the sum of the number of bytes that have been
      * pushed back and the value returned by {@link
      * java.io.FilterInputStream#available available}.
      *
@@ -286,7 +286,7 @@ class PushbackInputStream extends FilterInputStream {
      * reasons, end up skipping over some smaller number of bytes,
      * possibly zero.  If <code>n</code> is negative, no bytes are skipped.
      *
-     * <p> The <code>skip</code> method of <code>PushbackInputStream</code>
+     * The <code>skip</code> method of <code>PushbackInputStream</code>
      * first skips over the bytes in the pushback buffer, if any.  It then
      * calls the <code>skip</code> method of the underlying input stream if
      * more bytes need to be skipped.  The actual number of bytes skipped
@@ -338,7 +338,7 @@ class PushbackInputStream extends FilterInputStream {
     /**
      * Marks the current position in this input stream.
      *
-     * <p> The <code>mark</code> method of <code>PushbackInputStream</code>
+     * The <code>mark</code> method of <code>PushbackInputStream</code>
      * does nothing.
      *
      * @param   readlimit   the maximum limit of bytes that can be read before
@@ -352,7 +352,7 @@ class PushbackInputStream extends FilterInputStream {
      * Repositions this stream to the position at the time the
      * <code>mark</code> method was last called on this input stream.
      *
-     * <p> The method <code>reset</code> for class
+     * The method <code>reset</code> for class
      * <code>PushbackInputStream</code> does nothing except throw an
      * <code>IOException</code>.
      *

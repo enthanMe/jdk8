@@ -60,7 +60,7 @@ public final class ByteOrder {
     /**
      * Retrieves the native byte order of the underlying platform.
      *
-     * <p> This method is defined so that performance-sensitive Java code can
+     * This method is defined so that performance-sensitive Java code can
      * allocate direct buffers with the same byte order as the hardware.
      * Native code libraries are often more efficient when such buffers are
      * used.  </p>
@@ -75,7 +75,7 @@ public final class ByteOrder {
     /**
      * Constructs a string describing this object.
      *
-     * <p> This method returns the string <tt>"BIG_ENDIAN"</tt> for {@link
+     * This method returns the string <tt>"BIG_ENDIAN"</tt> for {@link
      * #BIG_ENDIAN} and <tt>"LITTLE_ENDIAN"</tt> for {@link #LITTLE_ENDIAN}.
      * </p>
      *

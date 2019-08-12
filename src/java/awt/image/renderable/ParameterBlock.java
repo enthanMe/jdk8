@@ -33,13 +33,13 @@ import java.util.Vector;
  * parameters (Objects) required by a RenderableImageOp, or other
  * classes that process images.
  *
- * <p> Although it is possible to place arbitrary objects in the
+ * Although it is possible to place arbitrary objects in the
  * source Vector, users of this class may impose semantic constraints
  * such as requiring all sources to be RenderedImages or
  * RenderableImage.  <code>ParameterBlock</code> itself is merely a container and
  * performs no checking on source or parameter types.
  *
- * <p> All parameters in a <code>ParameterBlock</code> are objects; convenience
+ * All parameters in a <code>ParameterBlock</code> are objects; convenience
  * add and set methods are available that take arguments of base type and
  * construct the appropriate subclass of Number (such as
  * Integer or Float).  Corresponding get methods perform a
@@ -48,7 +48,7 @@ import java.util.Vector;
  * There is no way to distinguish between the results of
  * "short s; add(s)" and "add(new Short(s))".
  *
- * <p> Note that the get and set methods operate on references.
+ * Note that the get and set methods operate on references.
  * Therefore, one must be careful not to share references between
  * <code>ParameterBlock</code>s when this is inappropriate.  For example, to create
  * a new <code>ParameterBlock</code> that is equal to an old one except for an
@@ -62,12 +62,12 @@ import java.util.Vector;
  * }
  * </pre>
  *
- * <p> This code will have the side effect of altering the original
+ * This code will have the side effect of altering the original
  * <code>ParameterBlock</code>, since the getSources operation returned a reference
  * to its source Vector.  Both pb and pb1 share their source Vector,
  * and a change in either is visible to both.
  *
- * <p> A correct way to write the addSource function is to clone
+ * A correct way to write the addSource function is to clone
  * the source Vector:
  *
  * <pre>
@@ -78,12 +78,12 @@ import java.util.Vector;
  * }
  * </pre>
  *
- * <p> The clone method of <code>ParameterBlock</code> has been defined to
+ * The clone method of <code>ParameterBlock</code> has been defined to
  * perform a clone of both the source and parameter Vectors for
  * this reason.  A standard, shallow clone is available as
  * shallowClone.
  *
- * <p> The addSource, setSource, add, and set methods are
+ * The addSource, setSource, add, and set methods are
  * defined to return 'this' after adding their argument.  This allows
  * use of syntax like:
  *

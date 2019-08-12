@@ -33,7 +33,7 @@ package java.security.spec;
  * specification may contain information that helps identify the key on the
  * device.
  *
- * <P> A key may be specified in an algorithm-specific way, or in an
+ * A key may be specified in an algorithm-specific way, or in an
  * algorithm-independent encoding format (such as ASN.1).
  * For example, a DSA private key may be specified by its components
  * {@code x}, {@code p}, {@code q}, and {@code g}
@@ -41,7 +41,7 @@ package java.security.spec;
  * specified using its DER encoding
  * (see {@link PKCS8EncodedKeySpec}).
  *
- * <P> This interface contains no methods or constants. Its only purpose
+ * This interface contains no methods or constants. Its only purpose
  * is to group (and provide type safety for) all key specifications.
  * All key specifications must implement this interface.
  *

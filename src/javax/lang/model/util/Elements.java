@@ -77,7 +77,7 @@ public interface Elements {
      * Returns the text of the documentation (&quot;Javadoc&quot;)
      * comment of an element.
      *
-     * <p> A documentation comment of an element is a comment that
+     * A documentation comment of an element is a comment that
      * begins with "{@code /**}" , ends with a separate
      * "<code>*&#47;</code>", and immediately precedes the element,
      * ignoring white space.  Therefore, a documentation comment
@@ -169,7 +169,7 @@ public interface Elements {
      * When a non-abstract method overrides an abstract one, the
      * former is also said to <i>implement</i> the latter.
      *
-     * <p> In the simplest and most typical usage, the value of the
+     * In the simplest and most typical usage, the value of the
      * {@code type} parameter will simply be the class or interface
      * directly enclosing {@code overrider} (the possibly-overriding
      * method).  For example, suppose {@code m1} represents the method

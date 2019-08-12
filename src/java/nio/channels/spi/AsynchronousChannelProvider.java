@@ -37,14 +37,14 @@ import java.security.PrivilegedAction;
 /**
  * Service-provider class for asynchronous channels.
  *
- * <p> An asynchronous channel provider is a concrete subclass of this class that
+ * An asynchronous channel provider is a concrete subclass of this class that
  * has a zero-argument constructor and implements the abstract methods specified
  * below.  A given invocation of the Java virtual machine maintains a single
  * system-wide default provider instance, which is returned by the {@link
  * #provider() provider} method.  The first invocation of that method will locate
  * the default provider as specified below.
  *
- * <p> All of the methods in this class are safe for use by multiple concurrent
+ * All of the methods in this class are safe for use by multiple concurrent
  * threads.  </p>
  *
  * @since 1.7
@@ -131,18 +131,18 @@ public abstract class AsynchronousChannelProvider {
      * Returns the system-wide default asynchronous channel provider for this
      * invocation of the Java virtual machine.
      *
-     * <p> The first invocation of this method locates the default provider
+     * The first invocation of this method locates the default provider
      * object as follows: </p>
      *
      * <ol>
      *
-     *   <li><p> If the system property
+     *   <li>If the system property
      *   <tt>java.nio.channels.spi.AsynchronousChannelProvider</tt> is defined
      *   then it is taken to be the fully-qualified name of a concrete provider class.
      *   The class is loaded and instantiated; if this process fails then an
      *   unspecified error is thrown.  </p></li>
      *
-     *   <li><p> If a provider class has been installed in a jar file that is
+     *   <li>If a provider class has been installed in a jar file that is
      *   visible to the system class loader, and that jar file contains a
      *   provider-configuration file named
      *   <tt>java.nio.channels.spi.AsynchronousChannelProvider</tt> in the resource
@@ -151,13 +151,13 @@ public abstract class AsynchronousChannelProvider {
      *   instantiated; if this process fails then an unspecified error is
      *   thrown.  </p></li>
      *
-     *   <li><p> Finally, if no provider has been specified by any of the above
+     *   <li>Finally, if no provider has been specified by any of the above
      *   means then the system-default provider class is instantiated and the
      *   result is returned.  </p></li>
      *
      * </ol>
      *
-     * <p> Subsequent invocations of this method return the provider that was
+     * Subsequent invocations of this method return the provider that was
      * returned by the first invocation.  </p>
      *
      * @return  The system-wide default AsynchronousChannel provider

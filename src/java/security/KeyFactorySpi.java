@@ -35,22 +35,22 @@ import java.security.spec.InvalidKeySpecException;
  * cryptographic service provider who wishes to supply the implementation
  * of a key factory for a particular algorithm.
  *
- * <P> Key factories are used to convert <I>keys</I> (opaque
+ * Key factories are used to convert <I>keys</I> (opaque
  * cryptographic keys of type {@code Key}) into <I>key specifications</I>
  * (transparent representations of the underlying key material), and vice
  * versa.
  *
- * <P> Key factories are bi-directional. That is, they allow you to build an
+ * Key factories are bi-directional. That is, they allow you to build an
  * opaque key object from a given key specification (key material), or to
  * retrieve the underlying key material of a key object in a suitable format.
  *
- * <P> Multiple compatible key specifications may exist for the same key.
+ * Multiple compatible key specifications may exist for the same key.
  * For example, a DSA public key may be specified using
  * {@code DSAPublicKeySpec} or
  * {@code X509EncodedKeySpec}. A key factory can be used to translate
  * between compatible key specifications.
  *
- * <P> A provider should document all the key specifications supported by its
+ * A provider should document all the key specifications supported by its
  * key factory.
  *
  * @author Jan Luehe

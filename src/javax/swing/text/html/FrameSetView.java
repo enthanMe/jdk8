@@ -32,7 +32,7 @@ import javax.swing.event.*;
 
 /**
  * Implements a FrameSetView, intended to support the HTML
- * &lt;FRAMESET&gt; tag.  Supports the ROWS and COLS attributes.
+ * <FRAMESET> tag.  Supports the ROWS and COLS attributes.
  *
  * @author  Sunita Mani
  *

@@ -91,7 +91,7 @@ import sun.security.jca.GetInstance.Instance;
  * }
  * </pre>
  *
- * <p> Every implementation of the Java platform is required to support the
+ * Every implementation of the Java platform is required to support the
  * following standard {@code CertificateFactory} type:
  * <ul>
  * <li>{@code X.509}</li>
@@ -154,13 +154,13 @@ public class CertificateFactory {
      * Returns a certificate factory object that implements the
      * specified certificate type.
      *
-     * <p> This method traverses the list of registered security Providers,
+     * This method traverses the list of registered security Providers,
      * starting with the most preferred Provider.
      * A new CertificateFactory object encapsulating the
      * CertificateFactorySpi implementation from the first
      * Provider that supports the specified type is returned.
      *
-     * <p> Note that the list of registered providers may be retrieved via
+     * Note that the list of registered providers may be retrieved via
      * the {@link Security#getProviders() Security.getProviders()} method.
      *
      * @param type the name of the requested certificate type.
@@ -193,12 +193,12 @@ public class CertificateFactory {
      * Returns a certificate factory object for the specified
      * certificate type.
      *
-     * <p> A new CertificateFactory object encapsulating the
+     * A new CertificateFactory object encapsulating the
      * CertificateFactorySpi implementation from the specified provider
      * is returned.  The specified provider must be registered
      * in the security provider list.
      *
-     * <p> Note that the list of registered providers may be retrieved via
+     * Note that the list of registered providers may be retrieved via
      * the {@link Security#getProviders() Security.getProviders()} method.
      *
      * @param type the certificate type.
@@ -240,7 +240,7 @@ public class CertificateFactory {
      * Returns a certificate factory object for the specified
      * certificate type.
      *
-     * <p> A new CertificateFactory object encapsulating the
+     * A new CertificateFactory object encapsulating the
      * CertificateFactorySpi implementation from the specified Provider
      * object is returned.  Note that the specified Provider object
      * does not have to be registered in the provider list.

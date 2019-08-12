@@ -61,7 +61,7 @@ public @interface SuppressWarnings {
      * free to emit a warning if an annotation contains an unrecognized
      * warning name.
      *
-     * <p> The string {@code "unchecked"} is used to suppress
+     * The string {@code "unchecked"} is used to suppress
      * unchecked warnings. Compiler vendors should document the
      * additional warning names they support in conjunction with this
      * annotation type. They are encouraged to cooperate to ensure

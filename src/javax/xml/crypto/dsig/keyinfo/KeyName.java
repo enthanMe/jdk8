@@ -38,7 +38,7 @@ import javax.xml.crypto.XMLStructure;
  * XML Schema Definition is defined as:
  *
  * <pre>
- * &lt;element name="KeyName" type="string"/&gt;
+ * <element name="KeyName" type="string"/>
  * </pre>
  *
  * A <code>KeyName</code> instance may be created by invoking the

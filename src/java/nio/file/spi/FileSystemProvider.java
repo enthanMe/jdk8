@@ -42,7 +42,7 @@ import java.security.PrivilegedAction;
  * java.nio.file.Files} class will typically delegate to an instance of this
  * class.
  *
- * <p> A file system provider is a concrete implementation of this class that
+ * A file system provider is a concrete implementation of this class that
  * implements the abstract methods defined by this class. A provider is
  * identified by a {@code URI} {@link #getScheme() scheme}. The default provider
  * is identified by the URI scheme "file". It creates the {@link FileSystem} that
@@ -55,7 +55,7 @@ import java.security.PrivilegedAction;
  * FileSystemProvider}. All other providers have a zero argument constructor
  * that initializes the provider.
  *
- * <p> A provider is a factory for one or more {@link FileSystem} instances. Each
+ * A provider is a factory for one or more {@link FileSystem} instances. Each
  * file system is identified by a {@code URI} where the URI's scheme matches
  * the provider's {@link #getScheme scheme}. The default file system, for example,
  * is identified by the URI {@code "file:///"}. A memory-based file system,
@@ -68,7 +68,7 @@ import java.security.PrivilegedAction;
  * the {@code newFileSystem} method is invoked. In the case of the default
  * provider, the {@code FileSystem} is created when the provider is initialized.
  *
- * <p> All of the methods in this class are safe for use by multiple concurrent
+ * All of the methods in this class are safe for use by multiple concurrent
  * threads.
  *
  * @since 1.7
@@ -95,7 +95,7 @@ public abstract class FileSystemProvider {
     /**
      * Initializes a new instance of this class.
      *
-     * <p> During construction a provider may safely access files associated
+     * During construction a provider may safely access files associated
      * with the default provider but care needs to be taken to avoid circular
      * loading of other installed providers. If circular loading of installed
      * providers is detected then an unspecified error is thrown.
@@ -139,7 +139,7 @@ public abstract class FileSystemProvider {
     /**
      * Returns a list of the installed file system providers.
      *
-     * <p> The first invocation of this method causes the default provider to be
+     * The first invocation of this method causes the default provider to be
      * initialized (if not already initialized) and loads any other installed
      * providers as described by the {@link FileSystems} class.
      *
@@ -191,13 +191,13 @@ public abstract class FileSystemProvider {
      * method is invoked by the {@link FileSystems#newFileSystem(URI,Map)}
      * method to open a new file system identified by a URI.
      *
-     * <p> The {@code uri} parameter is an absolute, hierarchical URI, with a
+     * The {@code uri} parameter is an absolute, hierarchical URI, with a
      * scheme equal (without regard to case) to the scheme supported by this
      * provider. The exact form of the URI is highly provider dependent. The
      * {@code env} parameter is a map of provider specific properties to configure
      * the file system.
      *
-     * <p> This method throws {@link FileSystemAlreadyExistsException} if the
+     * This method throws {@link FileSystemAlreadyExistsException} if the
      * file system already exists because it was previously created by an
      * invocation of this method. Once a file system is {@link
      * java.nio.file.FileSystem#close closed} it is provider-dependent if the
@@ -230,7 +230,7 @@ public abstract class FileSystemProvider {
     /**
      * Returns an existing {@code FileSystem} created by this provider.
      *
-     * <p> This method returns a reference to a {@code FileSystem} that was
+     * This method returns a reference to a {@code FileSystem} that was
      * created by invoking the {@link #newFileSystem(URI,Map) newFileSystem(URI,Map)}
      * method. File systems created the {@link #newFileSystem(Path,Map)
      * newFileSystem(Path,Map)} method are not returned by this method.
@@ -239,7 +239,7 @@ public abstract class FileSystemProvider {
      * path component is {@code "/"} and the authority, query and fragment components
      * are undefined (Undefined components are represented by {@code null}).
      *
-     * <p> Once a file system created by this provider is {@link
+     * Once a file system created by this provider is {@link
      * java.nio.file.FileSystem#close closed} it is provider-dependent if this
      * method returns a reference to the closed file system or throws {@link
      * FileSystemNotFoundException}. If the provider allows a new file system to
@@ -248,7 +248,7 @@ public abstract class FileSystemProvider {
      * closed (and before a new instance is created by the {@link #newFileSystem
      * newFileSystem} method).
      *
-     * <p> If a security manager is installed then a provider implementation
+     * If a security manager is installed then a provider implementation
      * may require to check a permission before returning a reference to an
      * existing file system. In the case of the {@link FileSystems#getDefault
      * default} file system, no permission check is required.
@@ -273,13 +273,13 @@ public abstract class FileSystemProvider {
      * resulting {@code Path} is associated with a {@link FileSystem} that
      * already exists or is constructed automatically.
      *
-     * <p> The exact form of the URI is file system provider dependent. In the
+     * The exact form of the URI is file system provider dependent. In the
      * case of the default provider, the URI scheme is {@code "file"} and the
      * given URI has a non-empty path component, and undefined query, and
      * fragment components. The resulting {@code Path} is associated with the
      * default {@link FileSystems#getDefault default} {@code FileSystem}.
      *
-     * <p> If a security manager is installed then a provider implementation
+     * If a security manager is installed then a provider implementation
      * may require to check a permission. In the case of the {@link
      * FileSystems#getDefault default} file system, no permission check is
      * required.
@@ -305,12 +305,12 @@ public abstract class FileSystemProvider {
      * Constructs a new {@code FileSystem} to access the contents of a file as a
      * file system.
      *
-     * <p> This method is intended for specialized providers of pseudo file
+     * This method is intended for specialized providers of pseudo file
      * systems where the contents of one or more files is treated as a file
      * system. The {@code env} parameter is a map of provider specific properties
      * to configure the file system.
      *
-     * <p> If this provider does not support the creation of such file systems
+     * If this provider does not support the creation of such file systems
      * or if the provider does not recognize the file type of the given file then
      * it throws {@code UnsupportedOperationException}. The default implementation
      * of this method throws {@code UnsupportedOperationException}.
@@ -347,7 +347,7 @@ public abstract class FileSystemProvider {
      * method works in exactly the manner specified by the {@link
      * Files#newInputStream} method.
      *
-     * <p> The default implementation of this method opens a channel to the file
+     * The default implementation of this method opens a channel to the file
      * as if by invoking the {@link #newByteChannel} method and constructs a
      * stream that reads bytes from the channel. This method should be overridden
      * where appropriate.
@@ -389,7 +389,7 @@ public abstract class FileSystemProvider {
      * write bytes to the file. This method works in exactly the manner
      * specified by the {@link Files#newOutputStream} method.
      *
-     * <p> The default implementation of this method opens a channel to the file
+     * The default implementation of this method opens a channel to the file
      * as if by invoking the {@link #newByteChannel} method and constructs a
      * stream that writes bytes to the channel. This method should be overridden
      * where appropriate.
@@ -622,7 +622,7 @@ public abstract class FileSystemProvider {
      * Creates a symbolic link to a target. This method works in exactly the
      * manner specified by the {@link Files#createSymbolicLink} method.
      *
-     * <p> The default implementation of this method throws {@code
+     * The default implementation of this method throws {@code
      * UnsupportedOperationException}.
      *
      * @param   link
@@ -659,7 +659,7 @@ public abstract class FileSystemProvider {
      * works in exactly the manner specified by the {@link Files#createLink}
      * method.
      *
-     * <p> The default implementation of this method throws {@code
+     * The default implementation of this method throws {@code
      * UnsupportedOperationException}.
      *
      * @param   link
@@ -712,7 +712,7 @@ public abstract class FileSystemProvider {
      * Deletes a file if it exists. This method works in exactly the manner
      * specified by the {@link Files#deleteIfExists} method.
      *
-     * <p> The default implementation of this method simply invokes {@link
+     * The default implementation of this method simply invokes {@link
      * #delete} ignoring the {@code NoSuchFileException} when the file does not
      * exist. It may be overridden where appropriate.
      *
@@ -747,7 +747,7 @@ public abstract class FileSystemProvider {
      * Reads the target of a symbolic link. This method works in exactly the
      * manner specified by the {@link Files#readSymbolicLink} method.
      *
-     * <p> The default implementation of this method throws {@code
+     * The default implementation of this method throws {@code
      * UnsupportedOperationException}.
      *
      * @param   link
@@ -870,7 +870,7 @@ public abstract class FileSystemProvider {
      * works in exactly the manner specified by the {@link Files#isHidden}
      * method.
      *
-     * <p> This method is invoked by the {@link Files#isHidden isHidden} method.
+     * This method is invoked by the {@link Files#isHidden isHidden} method.
      *
      * @param   path
      *          the path to the file to test
@@ -910,11 +910,11 @@ public abstract class FileSystemProvider {
     /**
      * Checks the existence, and optionally the accessibility, of a file.
      *
-     * <p> This method may be used by the {@link Files#isReadable isReadable},
+     * This method may be used by the {@link Files#isReadable isReadable},
      * {@link Files#isWritable isWritable} and {@link Files#isExecutable
      * isExecutable} methods to check the accessibility of a file.
      *
-     * <p> This method checks the existence of a file and that this Java virtual
+     * This method checks the existence of a file and that this Java virtual
      * machine has appropriate privileges that would allow it access the file
      * according to all of access modes specified in the {@code modes} parameter
      * as follows:
@@ -942,10 +942,10 @@ public abstract class FileSystemProvider {
      * </tr>
      * </table>
      *
-     * <p> If the {@code modes} parameter is of length zero, then the existence
+     * If the {@code modes} parameter is of length zero, then the existence
      * of the file is checked.
      *
-     * <p> This method follows symbolic links if the file referenced by this
+     * This method follows symbolic links if the file referenced by this
      * object is a symbolic link. Depending on the implementation, this method
      * may require to read file permissions, access control lists, or other
      * file attributes in order to check the effective access to the file. To

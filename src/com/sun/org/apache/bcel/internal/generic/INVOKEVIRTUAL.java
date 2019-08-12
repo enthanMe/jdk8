@@ -63,7 +63,7 @@ import com.sun.org.apache.bcel.internal.ExceptionConstants;
 /**
  * INVOKEVIRTUAL - Invoke instance method; dispatch based on class
  *
- * <PRE>Stack: ..., objectref, [arg1, [arg2 ...]] -&gt; ...</PRE>
+ * <PRE>Stack: ..., objectref, [arg1, [arg2 ...]] -> ...</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

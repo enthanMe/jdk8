@@ -61,7 +61,7 @@ package com.sun.org.apache.bcel.internal.generic;
 /**
  * LDC2_W - Push long or double from constant pool
  *
- * <PRE>Stack: ... -&gt; ..., item.word1, item.word2</PRE>
+ * <PRE>Stack: ... -> ..., item.word1, item.word2</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

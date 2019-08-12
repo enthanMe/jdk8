@@ -41,7 +41,7 @@ import sun.security.util.PendingException;
 import sun.security.util.ResourcesMgr;
 
 /**
- * <p> The {@code LoginContext} class describes the basic methods used
+ * The {@code LoginContext} class describes the basic methods used
  * to authenticate Subjects and provides a way to develop an
  * application independent of the underlying authentication technology.
  * A {@code Configuration} specifies the authentication technology, or
@@ -49,14 +49,14 @@ import sun.security.util.ResourcesMgr;
  * Different LoginModules can be plugged in under an application
  * without requiring any modifications to the application itself.
  *
- * <p> In addition to supporting <i>pluggable</i> authentication, this class
+ * In addition to supporting <i>pluggable</i> authentication, this class
  * also supports the notion of <i>stacked</i> authentication.
  * Applications may be configured to use more than one
  * LoginModule.  For example, one could
  * configure both a Kerberos LoginModule and a smart card
  * LoginModule under an application.
  *
- * <p> A typical caller instantiates a LoginContext with
+ * A typical caller instantiates a LoginContext with
  * a <i>name</i> and a {@code CallbackHandler}.
  * LoginContext uses the <i>name</i> as the index into a
  * Configuration to determine which LoginModules should be used,
@@ -66,7 +66,7 @@ import sun.security.util.ResourcesMgr;
  * (prompting for a username and password via a graphical user interface,
  * for example).
  *
- * <p> Once the caller has instantiated a LoginContext,
+ * Once the caller has instantiated a LoginContext,
  * it invokes the {@code login} method to authenticate
  * a {@code Subject}.  The {@code login} method invokes
  * the configured modules to perform their respective types of authentication
@@ -75,7 +75,7 @@ import sun.security.util.ResourcesMgr;
  * introduce delays if the authentication fails.
  * Such tasks belong to the LoginContext caller.
  *
- * <p> If the {@code login} method returns without
+ * If the {@code login} method returns without
  * throwing an exception, then the overall authentication succeeded.
  * The caller can then retrieve
  * the newly authenticated Subject by invoking the
@@ -84,16 +84,16 @@ import sun.security.util.ResourcesMgr;
  * respective {@code getPrincipals}, {@code getPublicCredentials},
  * and {@code getPrivateCredentials} methods.
  *
- * <p> To logout the Subject, the caller calls
+ * To logout the Subject, the caller calls
  * the {@code logout} method.  As with the {@code login}
  * method, this {@code logout} method invokes the {@code logout}
  * method for the configured modules.
  *
- * <p> A LoginContext should not be used to authenticate
+ * A LoginContext should not be used to authenticate
  * more than one Subject.  A separate LoginContext
  * should be used to authenticate each different Subject.
  *
- * <p> The following documentation applies to all LoginContext constructors:
+ * The following documentation applies to all LoginContext constructors:
  * <ol>
  *
  * <li> {@code Subject}
@@ -528,14 +528,14 @@ public class LoginContext {
     /**
      * Perform the authentication.
      *
-     * <p> This method invokes the {@code login} method for each
+     * This method invokes the {@code login} method for each
      * LoginModule configured for the <i>name</i> specified to the
      * {@code LoginContext} constructor, as determined by the login
      * {@code Configuration}.  Each {@code LoginModule}
      * then performs its respective type of authentication
      * (username/password, smart card pin verification, etc.).
      *
-     * <p> This method completes a 2-phase authentication process by
+     * This method completes a 2-phase authentication process by
      * calling each configured LoginModule's {@code commit} method
      * if the overall authentication succeeded (the relevant REQUIRED,
      * REQUISITE, SUFFICIENT, and OPTIONAL LoginModules succeeded),
@@ -546,22 +546,22 @@ public class LoginContext {
      * If authentication failed, each LoginModule's {@code abort} method
      * removes/destroys any previously stored state.
      *
-     * <p> If the {@code commit} phase of the authentication process
+     * If the {@code commit} phase of the authentication process
      * fails, then the overall authentication fails and this method
      * invokes the {@code abort} method for each configured
      * {@code LoginModule}.
      *
-     * <p> If the {@code abort} phase
+     * If the {@code abort} phase
      * fails for any reason, then this method propagates the
      * original exception thrown either during the {@code login} phase
      * or the {@code commit} phase.  In either case, the overall
      * authentication fails.
      *
-     * <p> In the case where multiple LoginModules fail,
+     * In the case where multiple LoginModules fail,
      * this method propagates the exception raised by the first
      * {@code LoginModule} which failed.
      *
-     * <p> Note that if this method enters the {@code abort} phase
+     * Note that if this method enters the {@code abort} phase
      * (either the {@code login} or {@code commit} phase failed),
      * this method invokes all LoginModules configured for the
      * application regardless of their respective {@code Configuration}
@@ -600,14 +600,14 @@ public class LoginContext {
     /**
      * Logout the {@code Subject}.
      *
-     * <p> This method invokes the {@code logout} method for each
+     * This method invokes the {@code logout} method for each
      * {@code LoginModule} configured for this {@code LoginContext}.
      * Each {@code LoginModule} performs its respective logout procedure
      * which may include removing/destroying
      * {@code Principal} and {@code Credential} information
      * from the {@code Subject} and state cleanup.
      *
-     * <p> Note that this method invokes all LoginModules configured for the
+     * Note that this method invokes all LoginModules configured for the
      * application regardless of their respective
      * {@code Configuration} flag parameters.  Essentially this means
      * that {@code Requisite} and {@code Sufficient} semantics are

@@ -28,7 +28,7 @@ package javax.security.auth.login;
 /**
  * Signals that an account was not found.
  *
- * <p> This exception may be thrown by a LoginModule if it is unable
+ * This exception may be thrown by a LoginModule if it is unable
  * to locate an account necessary to perform authentication.
  *
  * @since 1.5

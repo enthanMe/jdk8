@@ -43,15 +43,15 @@ import javax.xml.crypto.dsig.spec.TransformParameterSpec;
  * The XML Schema Definition is defined as:
  *
  * <pre>
- * &lt;element name="Transform" type="ds:TransformType"/&gt;
- *   &lt;complexType name="TransformType" mixed="true"&gt;
- *     &lt;choice minOccurs="0" maxOccurs="unbounded"&gt;
- *       &lt;any namespace="##other" processContents="lax"/&gt;
- *       &lt;!-- (1,1) elements from (0,unbounded) namespaces --&gt;
- *       &lt;element name="XPath" type="string"/&gt;
- *     &lt;/choice&gt;
- *     &lt;attribute name="Algorithm" type="anyURI" use="required"/&gt;
- *   &lt;/complexType&gt;
+ * <element name="Transform" type="ds:TransformType"/>
+ *   <complexType name="TransformType" mixed="true">
+ *     <choice minOccurs="0" maxOccurs="unbounded">
+ *       <any namespace="##other" processContents="lax"/>
+ *       <!-- (1,1) elements from (0,unbounded) namespaces -->
+ *       <element name="XPath" type="string"/>
+ *     </choice>
+ *     <attribute name="Algorithm" type="anyURI" use="required"/>
+ *   </complexType>
  * </pre>
  *
  * A <code>Transform</code> instance may be created by invoking the

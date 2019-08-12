@@ -89,7 +89,7 @@ public class LayerUI<V extends Component>
      * and set the layer event mask to {@code 0}
      * in {@link #uninstallUI(javax.swing.JComponent)} after that.
      * By default this  method calls the appropriate
-     * {@code process&lt;event&nbsp;type&gt;Event}
+     * {@code process<event&nbsp;type>Event}
      * method for the given class of event.
      * <p>
      * <b>Note:</b> Events are processed only for displayable {@code JLayer}s.
@@ -605,7 +605,7 @@ public class LayerUI<V extends Component>
      * @param c {@code JLayer} to return baseline resize behavior for
      * @param width the width to get the baseline for
      * @param height the height to get the baseline for
-     * @return baseline or a value &lt; 0 indicating there is no reasonable
+     * @return baseline or a value < 0 indicating there is no reasonable
      *                  baseline
      */
     public int getBaseline(JComponent c, int width, int height) {

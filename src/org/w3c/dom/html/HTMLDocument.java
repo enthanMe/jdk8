@@ -49,7 +49,7 @@ import org.w3c.dom.NodeList;
  * the entire content. Besides providing access to the hierarchy, it also
  * provides some convenience methods for accessing certain sets of
  * information from the document.
- * <p> The following properties have been deprecated in favor of the
+ * The following properties have been deprecated in favor of the
  * corresponding ones for the <code>BODY</code> element: alinkColor background
  *  bgColor fgColor linkColor vlinkColor In DOM Level 2, the method
  * <code>getElementById</code> is inherited from the <code>Document</code>

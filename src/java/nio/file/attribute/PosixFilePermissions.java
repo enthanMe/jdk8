@@ -62,7 +62,7 @@ public final class PosixFilePermissions {
      * is guaranteed that the returned {@code String} can be parsed by the
      * {@link #fromString} method.
      *
-     * <p> If the set contains {@code null} or elements that are not of type
+     * If the set contains {@code null} or elements that are not of type
      * {@code PosixFilePermission} then these elements are ignored.
      *
      * @param   perms
@@ -96,7 +96,7 @@ public final class PosixFilePermissions {
      * Returns the set of permissions corresponding to a given {@code String}
      * representation.
      *
-     * <p> The {@code perms} parameter is a {@code String} representing the
+     * The {@code perms} parameter is a {@code String} representing the
      * permissions. It has 9 characters that are interpreted as three sets of
      * three. The first set refers to the owner's permissions; the next to the
      * group permissions and the last to others. Within each set, the first
@@ -105,12 +105,12 @@ public final class PosixFilePermissions {
      * character is {@code 'x'} for execute permission. Where a permission is
      * not set then the corresponding character is set to {@code '-'}.
      *
-     * <p> <b>Usage Example:</b>
+     * <b>Usage Example:</b>
      * Suppose we require the set of permissions that indicate the owner has read,
      * write, and execute permissions, the group has read and execute permissions
      * and others have none.
      * <pre>
-     *   Set&lt;PosixFilePermission&gt; perms = PosixFilePermissions.fromString("rwxr-x---");
+     *   Set<PosixFilePermission> perms = PosixFilePermissions.fromString("rwxr-x---");
      * </pre>
      *
      * @param   perms

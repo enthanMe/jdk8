@@ -32,7 +32,7 @@ package java.lang.management;
  * objects to free up memory space.  A garbage collector is one type of
  * {@link MemoryManagerMXBean memory manager}.
  *
- * <p> A Java virtual machine may have one or more instances of
+ * A Java virtual machine may have one or more instances of
  * the implementation class of this interface.
  * An instance implementing this interface is
  * an <a href="ManagementFactory.html#MXBean">MXBean</a>

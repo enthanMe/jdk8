@@ -86,7 +86,7 @@ class MimeType implements Serializable, Cloneable {
 
     /**
      * Array of strings that hold pieces of this MIME type's canonical form.
-     * If the MIME type has <I>n</I> parameters, <I>n</I> &gt;= 0, then the
+     * If the MIME type has <I>n</I> parameters, <I>n</I> >= 0, then the
      * strings in the array are:
      * <BR>Index 0 -- Media type.
      * <BR>Index 1 -- Media subtype.

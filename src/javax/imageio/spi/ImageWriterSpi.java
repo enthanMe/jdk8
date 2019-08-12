@@ -36,10 +36,10 @@ import javax.imageio.stream.ImageOutputStream;
  * For more information on service provider classes, see the class comment
  * for the <code>IIORegistry</code> class.
  *
- * <p> Each <code>ImageWriterSpi</code> provides several types of information
+ * Each <code>ImageWriterSpi</code> provides several types of information
  * about the <code>ImageWriter</code> class with which it is associated.
  *
- * <p> The name of the vendor who defined the SPI class and a
+ * The name of the vendor who defined the SPI class and a
  * brief description of the class are available via the
  * <code>getVendorName</code>, <code>getDescription</code>,
  * and <code>getVersion</code> methods.
@@ -48,7 +48,7 @@ import javax.imageio.stream.ImageOutputStream;
  * human-writable information that might be used to organize a pop-up
  * menu or other list.
  *
- * <p> Lists of format names, file suffixes, and MIME types associated
+ * Lists of format names, file suffixes, and MIME types associated
  * with the service may be obtained by means of the
  * <code>getFormatNames</code>, <code>getFileSuffixes</code>, and
  * <code>getMIMEType</code> methods.  These methods may be used to
@@ -56,12 +56,12 @@ import javax.imageio.stream.ImageOutputStream;
  * particular file or stream based on manual format selection, file
  * naming, or MIME associations.
  *
- * <p> A more reliable way to determine which <code>ImageWriter</code>s
+ * A more reliable way to determine which <code>ImageWriter</code>s
  * are likely to be able to parse a particular data stream is provided
  * by the <code>canEncodeImage</code> method.  This methods allows the
  * service provider to inspect the actual image contents.
  *
- * <p> Finally, an instance of the <code>ImageWriter</code> class
+ * Finally, an instance of the <code>ImageWriter</code> class
  * associated with this service provider may be obtained by calling
  * the <code>createWriterInstance</code> method.  Any heavyweight
  * initialization, such as the loading of native libraries or creation
@@ -259,7 +259,7 @@ public abstract class ImageWriterSpi extends ImageReaderWriterSpi {
      * types of objects may be used as arguments to the writer's
      * <code>setOutput</code> method.
      *
-     * <p> For most writers, which only output to an
+     * For most writers, which only output to an
      * <code>ImageOutputStream</code>, a single-element array
      * containing <code>ImageOutputStream.class</code> should be
      * returned.
@@ -279,7 +279,7 @@ public abstract class ImageWriterSpi extends ImageReaderWriterSpi {
      * <code>ColorModel</code>) is described by an
      * <code>ImageTypeSpecifier</code> object.
      *
-     * <p> A return value of <code>true</code> is not an absolute
+     * A return value of <code>true</code> is not an absolute
      * guarantee of successful encoding; the encoding process may still
      * produce errors due to factors such as I/O errors, inconsistent
      * or malformed data structures, etc.  The intent is that a
@@ -292,7 +292,7 @@ public abstract class ImageWriterSpi extends ImageReaderWriterSpi {
      * 8-bit RGB imagery might refuse to encode an image with an
      * associated alpha channel.
      *
-     * <p> Different <code>ImageWriter</code>s, and thus service
+     * Different <code>ImageWriter</code>s, and thus service
      * providers, may choose to be more or less strict.  For example,
      * they might accept an image with premultiplied alpha even though
      * it will have to be divided out of each pixel, at some loss of
@@ -316,7 +316,7 @@ public abstract class ImageWriterSpi extends ImageReaderWriterSpi {
      * that this includes instances of
      * <code>java.awt.image.BufferedImage</code>.
      *
-     * <p> See the discussion for
+     * See the discussion for
      * <code>canEncodeImage(ImageTypeSpecifier)</code> for information
      * on the semantics of this method.
      *
@@ -338,7 +338,7 @@ public abstract class ImageWriterSpi extends ImageReaderWriterSpi {
      * The returned object will initially be in an initial state as if
      * its <code>reset</code> method had been called.
      *
-     * <p> The default implementation simply returns
+     * The default implementation simply returns
      * <code>createWriterInstance(null)</code>.
      *
      * @return an <code>ImageWriter</code> instance.
@@ -357,11 +357,11 @@ public abstract class ImageWriterSpi extends ImageReaderWriterSpi {
      * The returned object will initially be in an initial state
      * as if its <code>reset</code> method had been called.
      *
-     * <p> An <code>Object</code> may be supplied to the plug-in at
+     * An <code>Object</code> may be supplied to the plug-in at
      * construction time.  The nature of the object is entirely
      * plug-in specific.
      *
-     * <p> Typically, a plug-in will implement this method using code
+     * Typically, a plug-in will implement this method using code
      * such as <code>return new MyImageWriter(this)</code>.
      *
      * @param extension a plug-in specific extension object, which may
@@ -409,12 +409,12 @@ public abstract class ImageWriterSpi extends ImageReaderWriterSpi {
      * non-<code>null</code> value is returned, it must have non-zero
      * length.
      *
-     * <p> The first item in the array must be the name of the service
+     * The first item in the array must be the name of the service
      * provider for the "preferred" reader, as it will be used to
      * instantiate the <code>ImageReader</code> returned by
      * <code>ImageIO.getImageReader(ImageWriter)</code>.
      *
-     * <p> This mechanism may be used to obtain
+     * This mechanism may be used to obtain
      * <code>ImageReaders</code> that will generated non-pixel
      * meta-data (see <code>IIOExtraDataInfo</code>) in a structure
      * understood by an <code>ImageWriter</code>.  By reading the

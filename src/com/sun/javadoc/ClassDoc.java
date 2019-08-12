@@ -106,7 +106,7 @@ public interface ClassDoc extends ProgramElementDoc, Type {
      * Return the superclass of this class.  Return null if this is an
      * interface.
      *
-     * <p> <i>This method cannot accommodate certain generic type constructs.
+     * <i>This method cannot accommodate certain generic type constructs.
      * The <code>superclassType</code> method should be used instead.</i>
      *
      * @return the ClassDoc for the superclass of this class, null if
@@ -142,7 +142,7 @@ public interface ClassDoc extends ProgramElementDoc, Type {
      * inherited interfaces.
      * Return an empty array if there are no interfaces.
      *
-     * <p> <i>This method cannot accommodate certain generic type constructs.
+     * <i>This method cannot accommodate certain generic type constructs.
      * The <code>interfaceTypes</code> method should be used instead.</i>
      *
      * @return an array of ClassDoc objects representing the interfaces.

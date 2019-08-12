@@ -68,7 +68,7 @@ public class StAXResult implements Result {
      */
     private XMLStreamWriter xmlStreamWriter = null;
 
-    /** <p>System identifier for this <code>StAXResult</code>.<p> */
+    /** <p>System identifier for this <code>StAXResult</code>.*/
     private String systemId = null;
 
     /**

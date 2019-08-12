@@ -43,7 +43,7 @@ import org.xml.sax.helpers.LocatorImpl;
  * Public Domain, and comes with <strong>NO WARRANTY</strong>.</em>
  * </blockquote>
  *
- * <p> This is not part of core-only SAX2 distributions.</p>
+ * This is not part of core-only SAX2 distributions.</p>
  *
  * @since SAX 2.0.2
  * @author David Brownell

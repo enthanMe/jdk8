@@ -47,7 +47,7 @@ import javax.lang.model.SourceVersion;
  * to process.  The tool infrastructure may also ask a processor to
  * process files generated implicitly by the tool's operation.
  *
- * <p> Each implementation of a {@code Processor} must provide a
+ * Each implementation of a {@code Processor} must provide a
  * public no-argument constructor to be used by tools to instantiate
  * the processor.  The tool infrastructure will interact with classes
  * implementing this interface as follows:
@@ -77,7 +77,7 @@ import javax.lang.model.SourceVersion;
  * protocol being followed, then the processor's behavior is not
  * defined by this interface specification.
  *
- * <p> The tool uses a <i>discovery process</i> to find annotation
+ * The tool uses a <i>discovery process</i> to find annotation
  * processors and decide whether or not they should be run.  By
  * configuring the tool, the set of potential processors can be
  * controlled.  For example, for a {@link javax.tools.JavaCompiler
@@ -219,7 +219,7 @@ public interface Processor {
      * </dl>
      * </blockquote>
      *
-     * <p> A tool might use this information to determine if any
+     * A tool might use this information to determine if any
      * options provided by a user are unrecognized by any processor,
      * in which case it may wish to report a warning.
      *

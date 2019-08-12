@@ -61,7 +61,7 @@ import com.sun.org.apache.bcel.internal.ExceptionConstants;
 
 /**
  * ANEWARRAY -  Create new array of references
- * <PRE>Stack: ..., count -&gt; ..., arrayref</PRE>
+ * <PRE>Stack: ..., count -> ..., arrayref</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

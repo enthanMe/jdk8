@@ -61,7 +61,7 @@ package com.sun.org.apache.bcel.internal.generic;
 /**
  * IF_ACMPEQ - Branch if reference comparison succeeds
  *
- * <PRE>Stack: ..., value1, value2 -&gt; ...</PRE>
+ * <PRE>Stack: ..., value1, value2 -> ...</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

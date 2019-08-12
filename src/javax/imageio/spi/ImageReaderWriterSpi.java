@@ -322,7 +322,7 @@ public abstract class ImageReaderWriterSpi extends IIOServiceProvider {
      * suffixes.  If there are no known file suffixes,
      * <code>null</code> will be returned.
      *
-     * <p> Returning a particular suffix does not guarantee that files
+     * Returning a particular suffix does not guarantee that files
      * with that suffix can be processed; it merely indicates that it
      * may be worthwhile attempting to decode or encode such files
      * using this service provider.
@@ -342,7 +342,7 @@ public abstract class ImageReaderWriterSpi extends IIOServiceProvider {
      * <code>ImageWriter</code> implementation associated with this
      * service provider.
      *
-     * <p> Ideally, only a single MIME type would be required in order
+     * Ideally, only a single MIME type would be required in order
      * to describe a particular format.  However, for several reasons
      * it is necessary to associate a list of types with each service
      * provider.  First, many common image file formats do not have
@@ -357,7 +357,7 @@ public abstract class ImageReaderWriterSpi extends IIOServiceProvider {
      * point of view, for example <code>image/x-xbitmap</code> and
      * <code>image/x-xpixmap</code>.
      *
-     * <p> Returning a particular MIME type does not guarantee that
+     * Returning a particular MIME type does not guarantee that
      * files claiming to be of that type can be processed; it merely
      * indicates that it may be worthwhile attempting to decode or
      * encode such files using this service provider.
@@ -403,7 +403,7 @@ public abstract class ImageReaderWriterSpi extends IIOServiceProvider {
      * this plug-in.  If no such format is supported,
      * <code>null</code>will be returned.
      *
-     * <p> The default implementation returns the
+     * The default implementation returns the
      * <code>nativeStreamMetadataFormatName</code> instance variable,
      * which is typically set by the constructor.
      *
@@ -423,15 +423,15 @@ public abstract class ImageReaderWriterSpi extends IIOServiceProvider {
      * the stream metadata objects produced or consumed by this
      * plug-in.
      *
-     * <p> If the plug-in does not handle metadata, null should be
+     * If the plug-in does not handle metadata, null should be
      * returned.
      *
-     * <p> The set of formats may differ according to the particular
+     * The set of formats may differ according to the particular
      * images being read or written; this method should indicate all
      * the additional formats supported by the plug-in under any
      * circumstances.
      *
-     * <p> The default implementation returns a clone of the
+     * The default implementation returns a clone of the
      * <code>extraStreamMetadataFormatNames</code> instance variable,
      * which is typically set by the constructor.
      *
@@ -467,7 +467,7 @@ public abstract class ImageReaderWriterSpi extends IIOServiceProvider {
      * this plug-in.  If no such format is supported,
      * <code>null</code>will be returned.
      *
-     * <p> The default implementation returns the
+     * The default implementation returns the
      * <code>nativeImageMetadataFormatName</code> instance variable,
      * which is typically set by the constructor.
      *
@@ -488,14 +488,14 @@ public abstract class ImageReaderWriterSpi extends IIOServiceProvider {
      * the image metadata objects produced or consumed by this
      * plug-in.
      *
-     * <p> If the plug-in does not handle image metadata, null should
+     * If the plug-in does not handle image metadata, null should
      * be returned.
      *
-     * <p> The set of formats may differ according to the particular
+     * The set of formats may differ according to the particular
      * images being read or written; this method should indicate all
      * the additional formats supported by the plug-in under any circumstances.
      *
-     * <p> The default implementation returns a clone of the
+     * The default implementation returns a clone of the
      * <code>extraImageMetadataFormatNames</code> instance variable,
      * which is typically set by the constructor.
      *

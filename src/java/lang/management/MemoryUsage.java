@@ -35,7 +35,7 @@ import sun.management.MemoryUsageCompositeData;
  * information about individual memory pool of the Java virtual machine or
  * the heap or non-heap memory of the Java virtual machine as a whole.
  *
- * <p> A <tt>MemoryUsage</tt> object contains four values:
+ * A <tt>MemoryUsage</tt> object contains four values:
  * <table summary="Describes the MemoryUsage object content">
  * <tr>
  * <td valign=top> <tt>init</tt> </td>
@@ -71,8 +71,8 @@ import sun.management.MemoryUsageCompositeData;
  *      The amount of used and committed memory will always be less than
  *      or equal to <tt>max</tt> if <tt>max</tt> is defined.
  *      A memory allocation may fail if it attempts to increase the
- *      used memory such that <tt>used &gt; committed</tt> even
- *      if <tt>used &lt;= max</tt> would still be true (for example,
+ *      used memory such that <tt>used > committed</tt> even
+ *      if <tt>used <= max</tt> would still be true (for example,
  *      when the system is low on virtual memory).
  * </td>
  * </tr>
@@ -220,7 +220,7 @@ public class MemoryUsage {
      * used for memory management.  This method returns <tt>-1</tt>
      * if the maximum memory size is undefined.
      *
-     * <p> This amount of memory is not guaranteed to be available
+     * This amount of memory is not guaranteed to be available
      * for memory management if it is greater than the amount of
      * committed memory.  The Java virtual machine may fail to allocate
      * memory even if the amount of used memory does not exceed this

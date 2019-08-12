@@ -29,12 +29,12 @@ import java.security.Principal;
 import sun.security.x509.X500Name;
 
 /**
- * <p> This class represents an X.500 <code>Principal</code>.
+ * This class represents an X.500 <code>Principal</code>.
  * X500Principals have names such as,
  * "CN=Duke, OU=JavaSoft, O=Sun Microsystems, C=US"
  * (RFC 1779 style).
  *
- * <p> Principals such as this <code>X500Principal</code>
+ * Principals such as this <code>X500Principal</code>
  * may be associated with a particular <code>Subject</code>
  * to augment that <code>Subject</code> with an additional
  * identity.  Refer to the <code>Subject</code> class for more information

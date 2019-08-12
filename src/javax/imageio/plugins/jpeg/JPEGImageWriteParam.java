@@ -38,24 +38,24 @@ import com.sun.imageio.plugins.jpeg.JPEG;
  * <code>getDefaultImageWriteParam</code> methods of the built-in JPEG
  * <code>ImageWriter</code>.
 
- * <p> The principal purpose of these additions is to allow the
+ * The principal purpose of these additions is to allow the
  * specification of tables to use in encoding abbreviated streams.
  * The built-in JPEG writer will also accept an ordinary
  * <code>ImageWriteParam</code>, in which case the writer will
  * construct the necessary tables internally.
  *
- * <p> In either case, the quality setting in an <code>ImageWriteParam</code>
+ * In either case, the quality setting in an <code>ImageWriteParam</code>
  * has the same meaning as for the underlying library: 1.00 means a
  * quantization table of all 1's, 0.75 means the "standard", visually
  * lossless quantization table, and 0.00 means aquantization table of
  * all 255's.
  *
- * <p> While tables for abbreviated streams are often specified by
+ * While tables for abbreviated streams are often specified by
  * first writing an abbreviated stream containing only the tables, in
  * some applications the tables are fixed ahead of time.  This class
  * allows the tables to be specified directly from client code.
  *
- * <p> Normally, the tables are specified in the
+ * Normally, the tables are specified in the
  * <code>IIOMetadata</code> objects passed in to the writer, and any
  * tables included in these objects are written to the stream.
  * If no tables are specified in the metadata, then an abbreviated
@@ -70,12 +70,12 @@ import com.sun.imageio.plugins.jpeg.JPEG;
  * {@link JPEGHuffmanTable JPEGHuffmanTable} for more
  * information on the default tables.
  *
- * <p> The default <code>JPEGImageWriteParam</code> returned by the
+ * The default <code>JPEGImageWriteParam</code> returned by the
  * <code>getDefaultWriteParam</code> method of the writer contains no
  * tables.  Default tables are included in the default
  * <code>IIOMetadata</code> objects returned by the writer.
  *
- * <p> If the metadata does contain tables, the tables given in a
+ * If the metadata does contain tables, the tables given in a
  * <code>JPEGImageWriteParam</code> are ignored.  Furthermore, once a
  * set of tables has been written, only tables in the metadata can
  * override them for subsequent writes, whether to the same stream or
@@ -127,7 +127,7 @@ public class JPEGImageWriteParam extends ImageWriteParam {
     /**
      * Removes any previous compression quality setting.
      *
-     * <p> The default implementation resets the compression quality
+     * The default implementation resets the compression quality
      * to <code>0.75F</code>.
      *
      * @exception IllegalStateException if the compression mode is not

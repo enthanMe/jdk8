@@ -33,16 +33,16 @@ import java.nio.channels.spi.SelectorProvider;
 /**
  * A channel that can be multiplexed via a {@link Selector}.
  *
- * <p> In order to be used with a selector, an instance of this class must
+ * In order to be used with a selector, an instance of this class must
  * first be <i>registered</i> via the {@link #register(Selector,int,Object)
  * register} method.  This method returns a new {@link SelectionKey} object
  * that represents the channel's registration with the selector.
  *
- * <p> Once registered with a selector, a channel remains registered until it
+ * Once registered with a selector, a channel remains registered until it
  * is <i>deregistered</i>.  This involves deallocating whatever resources were
  * allocated to the channel by the selector.
  *
- * <p> A channel cannot be deregistered directly; instead, the key representing
+ * A channel cannot be deregistered directly; instead, the key representing
  * its registration must be <i>cancelled</i>.  Cancelling a key requests that
  * the channel be deregistered during the selector's next selection operation.
  * A key may be cancelled explicitly by invoking its {@link
@@ -51,16 +51,16 @@ import java.nio.channels.spi.SelectorProvider;
  * Channel#close close} method or by interrupting a thread blocked in an I/O
  * operation upon the channel.
  *
- * <p> If the selector itself is closed then the channel will be deregistered,
+ * If the selector itself is closed then the channel will be deregistered,
  * and the key representing its registration will be invalidated, without
  * further delay.
  *
- * <p> A channel may be registered at most once with any particular selector.
+ * A channel may be registered at most once with any particular selector.
  *
- * <p> Whether or not a channel is registered with one or more selectors may be
+ * Whether or not a channel is registered with one or more selectors may be
  * determined by invoking the {@link #isRegistered isRegistered} method.
  *
- * <p> Selectable channels are safe for use by multiple concurrent
+ * Selectable channels are safe for use by multiple concurrent
  * threads. </p>
  *
  *
@@ -74,7 +74,7 @@ import java.nio.channels.spi.SelectorProvider;
  * or possibly no bytes at all.  The blocking mode of a selectable channel may
  * be determined by invoking its {@link #isBlocking isBlocking} method.
  *
- * <p> Newly-created selectable channels are always in blocking mode.
+ * Newly-created selectable channels are always in blocking mode.
  * Non-blocking mode is most useful in conjunction with selector-based
  * multiplexing.  A channel must be placed into non-blocking mode before being
  * registered with a selector, and may not be returned to blocking mode until
@@ -127,7 +127,7 @@ public abstract class SelectableChannel
      * Tells whether or not this channel is currently registered with any
      * selectors.  A newly-created channel is not registered.
      *
-     * <p> Due to the inherent delay between key cancellation and channel
+     * Due to the inherent delay between key cancellation and channel
      * deregistration, a channel may remain registered for some time after all
      * of its keys have been cancelled.  A channel may also remain registered
      * for some time after it is closed.  </p>
@@ -157,7 +157,7 @@ public abstract class SelectableChannel
      * Registers this channel with the given selector, returning a selection
      * key.
      *
-     * <p> If this channel is currently registered with the given selector then
+     * If this channel is currently registered with the given selector then
      * the selection key representing that registration is returned.  The key's
      * interest set will have been changed to <tt>ops</tt>, as if by invoking
      * the {@link SelectionKey#interestOps(int) interestOps(int)} method.  If
@@ -165,12 +165,12 @@ public abstract class SelectableChannel
      * will have been set to that value.  A {@link CancelledKeyException} will
      * be thrown if the key has already been cancelled.
      *
-     * <p> Otherwise this channel has not yet been registered with the given
+     * Otherwise this channel has not yet been registered with the given
      * selector, so it is registered and the resulting new key is returned.
      * The key's initial interest set will be <tt>ops</tt> and its attachment
      * will be <tt>att</tt>.
      *
-     * <p> This method may be invoked at any time.  If this method is invoked
+     * This method may be invoked at any time.  If this method is invoked
      * while another invocation of this method or of the {@link
      * #configureBlocking(boolean) configureBlocking} method is in progress
      * then it will first block until the other operation is complete.  This
@@ -178,7 +178,7 @@ public abstract class SelectableChannel
      * block if invoked concurrently with another registration or selection
      * operation involving the same selector. </p>
      *
-     * <p> If this channel is closed while this operation is in progress then
+     * If this channel is closed while this operation is in progress then
      * the key returned by this method will have been cancelled and will
      * therefore be invalid. </p>
      *
@@ -233,7 +233,7 @@ public abstract class SelectableChannel
      * Registers this channel with the given selector, returning a selection
      * key.
      *
-     * <p> An invocation of this convenience method of the form
+     * An invocation of this convenience method of the form
      *
      * <blockquote><tt>sc.register(sel, ops)</tt></blockquote>
      *
@@ -283,16 +283,16 @@ public abstract class SelectableChannel
     /**
      * Adjusts this channel's blocking mode.
      *
-     * <p> If this channel is registered with one or more selectors then an
+     * If this channel is registered with one or more selectors then an
      * attempt to place it into blocking mode will cause an {@link
      * IllegalBlockingModeException} to be thrown.
      *
-     * <p> This method may be invoked at any time.  The new blocking mode will
+     * This method may be invoked at any time.  The new blocking mode will
      * only affect I/O operations that are initiated after this method returns.
      * For some implementations this may require blocking until all pending I/O
      * operations are complete.
      *
-     * <p> If this method is invoked while another invocation of this method or
+     * If this method is invoked while another invocation of this method or
      * of the {@link #register(Selector, int) register} method is in progress
      * then it will first block until the other operation is complete. </p>
      *
@@ -324,7 +324,7 @@ public abstract class SelectableChannel
      * Tells whether or not every I/O operation on this channel will block
      * until it completes.  A newly-created channel is always in blocking mode.
      *
-     * <p> If this channel is closed then the value returned by this method is
+     * If this channel is closed then the value returned by this method is
      * not specified. </p>
      *
      * @return <tt>true</tt> if, and only if, this channel is in blocking mode

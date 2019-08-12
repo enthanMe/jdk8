@@ -280,7 +280,7 @@ abstract class AbstractTask<P_IN, P_OUT, R,
      * the result to {@code setRawResult}. Otherwise splits off
      * subtasks, forking one and continuing as the other.
      *
-     * <p> The method is structured to conserve resources across a
+     * The method is structured to conserve resources across a
      * range of uses.  The loop continues with one of the child tasks
      * when split, to avoid deep recursion. To cope with spliterators
      * that may be systematically biased toward left-heavy or

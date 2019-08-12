@@ -44,7 +44,7 @@ import java.util.Arrays;
  * takes one of the following forms:
  *
  * <ol>
- *   <li><p> <A NAME="lform">The preferred form</a> is x:x:x:x:x:x:x:x,
+ *   <li><A NAME="lform">The preferred form</a> is x:x:x:x:x:x:x:x,
  *   where the 'x's are
  *   the hexadecimal values of the eight 16-bit pieces of the
  *   address. This is the full form.  For example,
@@ -53,11 +53,11 @@ import java.util.Arrays;
  *   <tr><td>{@code 1080:0:0:0:8:800:200C:417A}<td></tr>
  *   </table></blockquote>
  *
- *   <p> Note that it is not necessary to write the leading zeros in
+ *   Note that it is not necessary to write the leading zeros in
  *   an individual field. However, there must be at least one numeral
  *   in every field, except as described below.</li>
  *
- *   <li><p> Due to some methods of allocating certain styles of IPv6
+ *   <li>Due to some methods of allocating certain styles of IPv6
  *   addresses, it will be common for addresses to contain long
  *   strings of zero bits. In order to make writing addresses
  *   containing zero bits easier, a special syntax is available to
@@ -70,7 +70,7 @@ import java.util.Arrays;
  *   <tr><td>{@code 1080::8:800:200C:417A}<td></tr>
  *   </table></blockquote>
  *
- *   <li><p> An alternative form that is sometimes more convenient
+ *   <li>An alternative form that is sometimes more convenient
  *   when dealing with a mixed environment of IPv4 and IPv6 nodes is
  *   x:x:x:x:x:x:d.d.d.d, where the 'x's are the hexadecimal values
  *   of the six high-order 16-bit pieces of the address, and the 'd's
@@ -82,7 +82,7 @@ import java.util.Arrays;
  *   <tr><td>{@code ::129.144.52.38}<td></tr>
  *   </table></blockquote>
  *
- *   <p> where "::FFFF:d.d.d.d" and "::d.d.d.d" are, respectively, the
+ *   where "::FFFF:d.d.d.d" and "::d.d.d.d" are, respectively, the
  *   general forms of an IPv4-mapped IPv6 address and an
  *   IPv4-compatible IPv6 address. Note that the IPv4 portion must be
  *   in the "d.d.d.d" form. The following forms are invalid:
@@ -94,24 +94,24 @@ import java.util.Arrays;
  *   <tr><td>{@code ::d.d}<td></tr>
  *   </table></blockquote>
  *
- *   <p> The following form:
+ *   The following form:
  *
  *   <blockquote><table cellpadding=0 cellspacing=0 summary="layout">
  *   <tr><td>{@code ::FFFF:d}<td></tr>
  *   </table></blockquote>
  *
- *   <p> is valid, however it is an unconventional representation of
+ *   is valid, however it is an unconventional representation of
  *   the IPv4-compatible IPv6 address,
  *
  *   <blockquote><table cellpadding=0 cellspacing=0 summary="layout">
  *   <tr><td>{@code ::255.255.0.d}<td></tr>
  *   </table></blockquote>
  *
- *   <p> while "::d" corresponds to the general IPv6 address
+ *   while "::d" corresponds to the general IPv6 address
  *   "0:0:0:0:0:0:0:d".</li>
  * </ol>
  *
- * <p> For methods that return a textual representation as output
+ * For methods that return a textual representation as output
  * value, the full form is used. Inet6Address will return the full
  * form because it is unambiguous when used in combination with other
  * textual data.
@@ -136,11 +136,11 @@ import java.util.Arrays;
  *
  * <h4><A NAME="scoped">Textual representation of IPv6 scoped addresses</a></h4>
  *
- * <p> The textual representation of IPv6 addresses as described above can be
+ * The textual representation of IPv6 addresses as described above can be
  * extended to specify IPv6 scoped addresses. This extension to the basic
  * addressing architecture is described in [draft-ietf-ipngwg-scoping-arch-04.txt].
  *
- * <p> Because link-local and site-local addresses are non-global, it is possible
+ * Because link-local and site-local addresses are non-global, it is possible
  * that different hosts may have the same destination address and may be
  * reachable through different interfaces on the same originating system. In
  * this case, the originating system is said to be connected to multiple zones
@@ -148,10 +148,10 @@ import java.util.Arrays;
  * zone, it is possible to append a zone identifier (or <i>scope_id</i>) to an
  * IPv6 address.
  *
- * <p> The general format for specifying the <i>scope_id</i> is the following:
+ * The general format for specifying the <i>scope_id</i> is the following:
  *
  * <blockquote><i>IPv6-address</i>%<i>scope_id</i></blockquote>
- * <p> The IPv6-address is a literal IPv6 address as described above.
+ * The IPv6-address is a literal IPv6 address as described above.
  * The <i>scope_id</i> refers to an interface on the local system, and it can be
  * specified in two ways.
  * <ol><li><i>As a numeric identifier.</i> This must be a positive integer
@@ -165,7 +165,7 @@ import java.util.Arrays;
  * is determined at the time the object is created by querying the relevant
  * NetworkInterface.</li></ol>
  *
- * <p> Note also, that the numeric <i>scope_id</i> can be retrieved from
+ * Note also, that the numeric <i>scope_id</i> can be retrieved from
  * Inet6Address instances returned from the NetworkInterface class. This can be
  * used to find out the current scope ids configured on the system.
  * @since 1.4
@@ -887,7 +887,7 @@ class Inet6Address extends InetAddress {
      * true} if and only if the argument is not {@code null} and it represents
      * the same IP address as this object.
      *
-     * <p> Two instances of {@code InetAddress} represent the same IP address
+     * Two instances of {@code InetAddress} represent the same IP address
      * if the length of the byte arrays returned by {@code getAddress} is the
      * same for both, and each of the array components is the same for the byte
      * arrays.

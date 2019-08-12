@@ -190,12 +190,12 @@ import sun.util.spi.CalendarProvider;
  * following ways:
  * <ol>
  *     <li> 23:59 is the last minute of the day and 00:00 is the first
- *          minute of the next day. Thus, 23:59 on Dec 31, 1999 &lt; 00:00 on
- *          Jan 1, 2000 &lt; 00:01 on Jan 1, 2000.
+ *          minute of the next day. Thus, 23:59 on Dec 31, 1999 < 00:00 on
+ *          Jan 1, 2000 < 00:01 on Jan 1, 2000.
  *
  *     <li> Although historically not precise, midnight also belongs to "am",
  *          and noon belongs to "pm", so on the same day,
- *          12:00 am (midnight) &lt; 12:01 am, and 12:00 pm (noon) &lt; 12:01 pm
+ *          12:00 am (midnight) < 12:01 am, and 12:00 pm (noon) < 12:01 pm
  * </ol>
  *
  * <p>
@@ -1817,7 +1817,7 @@ public abstract class Calendar implements Serializable, Cloneable, Comparable<Ca
      * @param field the given calendar field.
      * @return the value for the given calendar field.
      * @throws ArrayIndexOutOfBoundsException if the specified field is out of range
-     *             (<code>field &lt; 0 || field &gt;= FIELD_COUNT</code>).
+     *             (<code>field < 0 || field >= FIELD_COUNT</code>).
      * @see #set(int,int)
      * @see #complete()
      */
@@ -1846,7 +1846,7 @@ public abstract class Calendar implements Serializable, Cloneable, Comparable<Ca
      * <code>Calendar</code> instance.
      *
      * @throws IndexOutOfBoundsException if the specified field is out of range
-     *             (<code>field &lt; 0 || field &gt;= FIELD_COUNT</code>).
+     *             (<code>field < 0 || field >= FIELD_COUNT</code>).
      * @see #areFieldsSet
      * @see #isTimeSet
      * @see #areAllFieldsSet
@@ -1864,7 +1864,7 @@ public abstract class Calendar implements Serializable, Cloneable, Comparable<Ca
      * @param field the given calendar field.
      * @param value the value to be set for the given calendar field.
      * @throws ArrayIndexOutOfBoundsException if the specified field is out of range
-     *             (<code>field &lt; 0 || field &gt;= FIELD_COUNT</code>).
+     *             (<code>field < 0 || field >= FIELD_COUNT</code>).
      * in non-lenient mode.
      * @see #set(int,int,int)
      * @see #set(int,int,int,int,int)
@@ -2279,7 +2279,7 @@ public abstract class Calendar implements Serializable, Cloneable, Comparable<Ca
      * <code>false</code> otherwise.
      * @exception IndexOutOfBoundsException if the specified
      *                <code>field</code> is out of range
-     *               (<code>field &lt; 0 || field &gt;= FIELD_COUNT</code>).
+     *               (<code>field < 0 || field >= FIELD_COUNT</code>).
      * @see #selectFields()
      * @see #setFieldsComputed(int)
      */
@@ -2312,7 +2312,7 @@ public abstract class Calendar implements Serializable, Cloneable, Comparable<Ca
      * @param fieldMask the field to be marked as computed.
      * @exception IndexOutOfBoundsException if the specified
      *                <code>field</code> is out of range
-     *               (<code>field &lt; 0 || field &gt;= FIELD_COUNT</code>).
+     *               (<code>field < 0 || field >= FIELD_COUNT</code>).
      * @see #isExternallySet(int)
      * @see #selectFields()
      */
@@ -2349,7 +2349,7 @@ public abstract class Calendar implements Serializable, Cloneable, Comparable<Ca
      * sync with the time value.
      * @exception IndexOutOfBoundsException if the specified
      *                <code>field</code> is out of range
-     *               (<code>field &lt; 0 || field &gt;= FIELD_COUNT</code>).
+     *               (<code>field < 0 || field >= FIELD_COUNT</code>).
      * @see #isExternallySet(int)
      * @see #selectFields()
      */
@@ -2405,11 +2405,11 @@ public abstract class Calendar implements Serializable, Cloneable, Comparable<Ca
      * Returns a field mask indicating which calendar field values
      * to be used to calculate the time value. The calendar fields are
      * returned as a bit mask, each bit of which corresponds to a field, i.e.,
-     * the mask value of <code>field</code> is <code>(1 &lt;&lt;
+     * the mask value of <code>field</code> is <code>(1 <<
      * field)</code>. For example, 0x26 represents the <code>YEAR</code>,
      * <code>MONTH</code>, and <code>DAY_OF_MONTH</code> fields (i.e., 0x26 is
      * equal to
-     * <code>(1&lt;&lt;YEAR)|(1&lt;&lt;MONTH)|(1&lt;&lt;DAY_OF_MONTH))</code>.
+     * <code>(1<<YEAR)|(1<<MONTH)|(1<<DAY_OF_MONTH))</code>.
      *
      * <p>This method supports the calendar fields resolution as described in
      * the class description. If the bit mask for a given field is on and its

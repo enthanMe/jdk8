@@ -48,26 +48,26 @@ import java.io.ObjectStreamException;
  * <tr><td>{@code d}</td></tr>
  * </table></blockquote>
  *
- * <p> When four parts are specified, each is interpreted as a byte of
+ * When four parts are specified, each is interpreted as a byte of
  * data and assigned, from left to right, to the four bytes of an IPv4
  * address.
 
- * <p> When a three part address is specified, the last part is
+ * When a three part address is specified, the last part is
  * interpreted as a 16-bit quantity and placed in the right most two
  * bytes of the network address. This makes the three part address
  * format convenient for specifying Class B net- work addresses as
  * 128.net.host.
  *
- * <p> When a two part address is supplied, the last part is
+ * When a two part address is supplied, the last part is
  * interpreted as a 24-bit quantity and placed in the right most three
  * bytes of the network address. This makes the two part address
  * format convenient for specifying Class A network addresses as
  * net.host.
  *
- * <p> When only one part is given, the value is stored directly in
+ * When only one part is given, the value is stored directly in
  * the network address without any byte rearrangement.
  *
- * <p> For methods that return a textual representation as output
+ * For methods that return a textual representation as output
  * value, the first form, i.e. a dotted-quad string, is used.
  *
  * <h4> The Scope of a Multicast Address </h4>

@@ -1462,10 +1462,10 @@ public class GroupLayout implements LayoutManager2 {
      * Unless otherwise specified all the methods of {@code Group} and
      * its subclasses that allow you to specify a range throw an
      * {@code IllegalArgumentException} if passed an invalid range. An
-     * invalid range is one in which any of the values are &lt; 0 and
+     * invalid range is one in which any of the values are < 0 and
      * not one of {@code PREFERRED_SIZE} or {@code DEFAULT_SIZE}, or
      * the following is not met (for specific values): {@code min}
-     * &lt;= {@code pref} &lt;= {@code max}.
+     * <= {@code pref} <= {@code max}.
      * <p>
      * Similarly any methods that take a {@code Component} throw a
      * {@code IllegalArgumentException} if passed {@code null} and any methods
@@ -1883,10 +1883,10 @@ public class GroupLayout implements LayoutManager2 {
          * @param comp2 the second component
          * @param type the type of gap
          * @param pref the preferred size of the grap; one of
-         *        {@code DEFAULT_SIZE} or a value &gt;= 0
+         *        {@code DEFAULT_SIZE} or a value >= 0
          * @param max the maximum size of the gap; one of
          *        {@code DEFAULT_SIZE}, {@code PREFERRED_SIZE}
-         *        or a value &gt;= 0
+         *        or a value >= 0
          * @return this {@code SequentialGroup}
          * @throws IllegalArgumentException if {@code type}, {@code comp1} or
          *         {@code comp2} is {@code null}
@@ -1942,10 +1942,10 @@ public class GroupLayout implements LayoutManager2 {
          *        {@code LayoutStyle.ComponentPlacement.RELATED} or
          *        {@code LayoutStyle.ComponentPlacement.UNRELATED}
          * @param pref the preferred size of the grap; one of
-         *        {@code DEFAULT_SIZE} or a value &gt;= 0
+         *        {@code DEFAULT_SIZE} or a value >= 0
          * @param max the maximum size of the gap; one of
          *        {@code DEFAULT_SIZE}, {@code PREFERRED_SIZE}
-         *        or a value &gt;= 0
+         *        or a value >= 0
          * @return this {@code SequentialGroup}
          * @throws IllegalArgumentException if {@code type} is not one of
          *         {@code LayoutStyle.ComponentPlacement.RELATED} or
@@ -1991,9 +1991,9 @@ public class GroupLayout implements LayoutManager2 {
          * container.
          *
          * @param pref the preferred size; one of {@code DEFAULT_SIZE} or a
-         *              value &gt;= 0
+         *              value >= 0
          * @param max the maximum size; one of {@code DEFAULT_SIZE},
-         *        {@code PREFERRED_SIZE} or a value &gt;= 0
+         *        {@code PREFERRED_SIZE} or a value >= 0
          * @return this {@code SequentialGroup}
          */
         public SequentialGroup addContainerGap(int pref, int max) {

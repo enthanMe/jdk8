@@ -24,15 +24,8 @@
  */
 package java.util.stream;
 
-import java.nio.charset.Charset;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.Collection;
 import java.util.Iterator;
 import java.util.Spliterator;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.function.IntConsumer;
-import java.util.function.Predicate;
 
 /**
  * Base interface for streams, which are sequences of elements supporting
@@ -51,24 +44,23 @@ import java.util.function.Predicate;
  * for <a href="package-summary.html">java.util.stream</a> for additional
  * specification of streams, stream operations, stream pipelines, and
  * parallelism, which governs the behavior of all stream types.
- *
  * @param <T> the type of the stream elements
  * @param <S> the type of of the stream implementing {@code BaseStream}
- * @since 1.8
  * @see Stream
  * @see IntStream
  * @see LongStream
  * @see DoubleStream
  * @see <a href="package-summary.html">java.util.stream</a>
+ * @since 1.8
  */
 public interface BaseStream<T, S extends BaseStream<T, S>>
         extends AutoCloseable {
+
     /**
      * Returns an iterator for the elements of this stream.
      *
      * <p>This is a <a href="package-summary.html#StreamOps">terminal
      * operation</a>.
-     *
      * @return the element iterator for this stream
      */
     Iterator<T> iterator();
@@ -78,7 +70,6 @@ public interface BaseStream<T, S extends BaseStream<T, S>>
      *
      * <p>This is a <a href="package-summary.html#StreamOps">terminal
      * operation</a>.
-     *
      * @return the element spliterator for this stream
      */
     Spliterator<T> spliterator();
@@ -87,7 +78,6 @@ public interface BaseStream<T, S extends BaseStream<T, S>>
      * Returns whether this stream, if a terminal operation were to be executed,
      * would execute in parallel.  Calling this method after invoking an
      * terminal stream operation method may yield unpredictable results.
-     *
      * @return {@code true} if this stream would execute in parallel if executed
      */
     boolean isParallel();
@@ -99,7 +89,6 @@ public interface BaseStream<T, S extends BaseStream<T, S>>
      *
      * <p>This is an <a href="package-summary.html#StreamOps">intermediate
      * operation</a>.
-     *
      * @return a sequential stream
      */
     S sequential();
@@ -111,7 +100,6 @@ public interface BaseStream<T, S extends BaseStream<T, S>>
      *
      * <p>This is an <a href="package-summary.html#StreamOps">intermediate
      * operation</a>.
-     *
      * @return a parallel stream
      */
     S parallel();
@@ -124,7 +112,6 @@ public interface BaseStream<T, S extends BaseStream<T, S>>
      *
      * <p>This is an <a href="package-summary.html#StreamOps">intermediate
      * operation</a>.
-     *
      * @return an unordered stream
      */
     S unordered();
@@ -143,7 +130,6 @@ public interface BaseStream<T, S extends BaseStream<T, S>>
      *
      * <p>This is an <a href="package-summary.html#StreamOps">intermediate
      * operation</a>.
-     *
      * @param closeHandler A task to execute when the stream is closed
      * @return a stream with a handler that is run if the stream is closed
      */
@@ -152,7 +138,6 @@ public interface BaseStream<T, S extends BaseStream<T, S>>
     /**
      * Closes this stream, causing all close handlers for this stream pipeline
      * to be called.
-     *
      * @see AutoCloseable#close()
      */
     @Override

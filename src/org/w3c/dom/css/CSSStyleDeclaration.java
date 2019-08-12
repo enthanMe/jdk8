@@ -48,14 +48,14 @@ import org.w3c.dom.DOMException;
  * declaration block. This interface may be used to determine the style
  * properties currently set in a block or to set style properties explicitly
  * within the block.
- * <p> While an implementation may not recognize all CSS properties within a
+ * While an implementation may not recognize all CSS properties within a
  * CSS declaration block, it is expected to provide access to all specified
  * properties in the style sheet through the <code>CSSStyleDeclaration</code>
  *  interface. Furthermore, implementations that support a specific level of
  * CSS should correctly handle CSS shorthand properties for that level. For
  * a further discussion of shorthand properties, see the
  * <code>CSS2Properties</code> interface.
- * <p> This interface is also used to provide a read-only access to the
+ * This interface is also used to provide a read-only access to the
  * computed values of an element. See also the <code>ViewCSS</code>
  * interface.  The CSS Object Model doesn't provide an access to the
  * specified or actual values of the CSS cascade.

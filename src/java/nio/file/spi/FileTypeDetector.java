@@ -31,11 +31,11 @@ import java.io.IOException;
 /**
  * A file type detector for probing a file to guess its file type.
  *
- * <p> A file type detector is a concrete implementation of this class, has a
+ * A file type detector is a concrete implementation of this class, has a
  * zero-argument constructor, and implements the abstract methods specified
  * below.
  *
- * <p> The means by which a file type detector determines the file type is
+ * The means by which a file type detector determines the file type is
  * highly implementation specific. A simple implementation might examine the
  * <em>file extension</em> (a convention used in some platforms) and map it to
  * a file type. In other cases, the file type may be stored as a file <a
@@ -71,12 +71,12 @@ public abstract class FileTypeDetector {
     /**
      * Probes the given file to guess its content type.
      *
-     * <p> The means by which this method determines the file type is highly
+     * The means by which this method determines the file type is highly
      * implementation specific. It may simply examine the file name, it may use
      * a file <a href="../attribute/package-summary.html">attribute</a>,
      * or it may examines bytes in the file.
      *
-     * <p> The probe result is the string form of the value of a
+     * The probe result is the string form of the value of a
      * Multipurpose Internet Mail Extension (MIME) content type as
      * defined by <a href="http://www.ietf.org/rfc/rfc2045.txt"><i>RFC&nbsp;2045:
      * Multipurpose Internet Mail Extensions (MIME) Part One: Format of Internet

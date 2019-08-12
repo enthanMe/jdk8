@@ -52,7 +52,7 @@ import org.w3c.dom.DOMException;
  * <code>CSSStyleDeclaration</code> interface. A
  * <code>CSSPrimitiveValue</code> object only occurs in a context of a CSS
  * property.
- * <p> Conversions are allowed between absolute values (from millimeters to
+ * Conversions are allowed between absolute values (from millimeters to
  * centimeters, from degrees to radians, and so on) but not between relative
  * values. (For example, a pixel value cannot be converted to a centimeter
  * value.) Percentage values can't be converted since they are relative to

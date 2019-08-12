@@ -38,7 +38,7 @@ public interface SnmpAccessControlSubSystem extends SnmpSubSystem {
 
     /**
      * Method called by the dispatcher in order to control the access at an SNMP pdu Level.
-     * <P> This call is routed by the sub system to the target model according to the SNMP protocol version number.</P>
+     * This call is routed by the sub system to the target model according to the SNMP protocol version number.</P>
      * @param version The SNMP protocol version number.
      * @param principal The request principal.
      * @param securityLevel The request security level as defined in <CODE>SnmpEngine</CODE>.
@@ -57,7 +57,7 @@ public interface SnmpAccessControlSubSystem extends SnmpSubSystem {
     /**
      * Method called by the dispatcher in order to control the access at an <CODE>SnmpOid</CODE> Level.
      * This method is called after the <CODE>checkPduAccess</CODE> pdu based method.
-     * <P> This call is routed by the sub system to the target model according to the SNMP protocol version number.</P>
+     * This call is routed by the sub system to the target model according to the SNMP protocol version number.</P>
      * @param version The SNMP protocol version number.
      * @param principal The request principal.
      * @param securityLevel The request security level as defined in <CODE>SnmpEngine</CODE>.

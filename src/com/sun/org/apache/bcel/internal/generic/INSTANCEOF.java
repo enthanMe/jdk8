@@ -60,7 +60,7 @@ package com.sun.org.apache.bcel.internal.generic;
 
 /**
  * INSTANCEOF - Determine if object is of given type
- * <PRE>Stack: ..., objectref -&gt; ..., result</PRE>
+ * <PRE>Stack: ..., objectref -> ..., result</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

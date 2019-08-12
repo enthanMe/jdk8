@@ -50,7 +50,7 @@ import javax.swing.SortOrder;
  * you need to convert the indices:
  * <pre>
  *   int[] selection = table.getSelectedRows();
- *   for (int i = 0; i &lt; selection.length; i++) {
+ *   for (int i = 0; i < selection.length; i++) {
  *     selection[i] = table.convertRowIndexToModel(selection[i]);
  *   }
  * </pre>

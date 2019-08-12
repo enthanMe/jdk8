@@ -36,7 +36,7 @@ import java.lang.annotation.RetentionPolicy;
  * wrapper bean to be used at runtime. The default value of the <code>localName</code> is
  * the <code>operationName</code>, as defined in <code>WebMethod</code> annotation and the
  * <code>targetNamespace</code> is the target namespace of the SEI.
- * <p> When starting from Java this annotation is used resolve
+ * When starting from Java this annotation is used resolve
  * overloading conflicts in document literal mode. Only the <code>className</code>
  * is required in this case.
  *

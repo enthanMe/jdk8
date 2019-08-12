@@ -60,7 +60,7 @@ import sun.security.jca.GetInstance.Instance;
  * and CRLs stored in one or more directories using the LDAP protocol and the
  * schema as defined in the RFC service attribute.
  *
- * <p> Every implementation of the Java platform is required to support the
+ * Every implementation of the Java platform is required to support the
  * following standard {@code CertStore} type:
  * <ul>
  * <li>{@code Collection}</li>
@@ -186,13 +186,13 @@ public class CertStore {
      * {@code CertStore} type and is initialized with the specified
      * parameters.
      *
-     * <p> This method traverses the list of registered security Providers,
+     * This method traverses the list of registered security Providers,
      * starting with the most preferred Provider.
      * A new CertStore object encapsulating the
      * CertStoreSpi implementation from the first
      * Provider that supports the specified type is returned.
      *
-     * <p> Note that the list of registered providers may be retrieved via
+     * Note that the list of registered providers may be retrieved via
      * the {@link Security#getProviders() Security.getProviders()} method.
      *
      * <p>The {@code CertStore} that is returned is initialized with the
@@ -247,12 +247,12 @@ public class CertStore {
      * Returns a {@code CertStore} object that implements the specified
      * {@code CertStore} type.
      *
-     * <p> A new CertStore object encapsulating the
+     * A new CertStore object encapsulating the
      * CertStoreSpi implementation from the specified provider
      * is returned.  The specified provider must be registered
      * in the security provider list.
      *
-     * <p> Note that the list of registered providers may be retrieved via
+     * Note that the list of registered providers may be retrieved via
      * the {@link Security#getProviders() Security.getProviders()} method.
      *
      * <p>The {@code CertStore} that is returned is initialized with the
@@ -308,7 +308,7 @@ public class CertStore {
      * Returns a {@code CertStore} object that implements the specified
      * {@code CertStore} type.
      *
-     * <p> A new CertStore object encapsulating the
+     * A new CertStore object encapsulating the
      * CertStoreSpi implementation from the specified Provider
      * object is returned.  Note that the specified Provider object
      * does not have to be registered in the provider list.

@@ -31,7 +31,7 @@ import java.util.Map;
  * The management interface for the thread system of
  * the Java virtual machine.
  *
- * <p> A Java virtual machine has a single instance of the implementation
+ * A Java virtual machine has a single instance of the implementation
  * class of this interface.  This instance implementing this interface is
  * an <a href="ManagementFactory.html#MXBean">MXBean</a>
  * that can be obtained by calling
@@ -55,7 +55,7 @@ import java.util.Map;
  * The thread ID is unique during its lifetime.  When a thread
  * is terminated, this thread ID may be reused.
  *
- * <p> Some methods in this interface take a thread ID or an array
+ * Some methods in this interface take a thread ID or an array
  * of thread IDs as the input parameter and return per-thread information.
  *
  * <h3>Thread CPU time</h3>
@@ -71,7 +71,7 @@ import java.util.Map;
  * A Java virtual machine implementation that supports CPU time measurement
  * for any thread will also support that for the current thread.
  *
- * <p> The CPU time provided by this interface has nanosecond precision
+ * The CPU time provided by this interface has nanosecond precision
  * but not necessarily nanosecond accuracy.
  *
  * <p>

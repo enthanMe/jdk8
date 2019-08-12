@@ -146,9 +146,9 @@ public interface Tag {
      * at the first period that is followed by a blank, tab, or
      * line terminator or at the first tagline.&quot;, in
      * addition a line will be terminated by paragraph and
-     * section terminating HTML tags: &lt;p&gt;  &lt;/p&gt;  &lt;h1&gt;
-     * &lt;h2&gt;  &lt;h3&gt; &lt;h4&gt;  &lt;h5&gt;  &lt;h6&gt;
-     * &lt;hr&gt;  &lt;pre&gt;  or &lt;/pre&gt;.
+     * section terminating HTML tags: <p>  </p>  <h1>
+     * <h2>  <h3> <h4>  <h5>  <h6>
+     * <hr>  <pre>  or </pre>.
      * If the locale is not English, the sentence end will be
      * determined by
      * {@link BreakIterator#getSentenceInstance(Locale)}.

@@ -41,12 +41,12 @@ import static javax.lang.model.SourceVersion.*;
  * call {@link #defaultAction defaultAction}, passing their arguments
  * to {@code defaultAction}'s corresponding parameters.
  *
- * <p> Methods in this class may be overridden subject to their
+ * Methods in this class may be overridden subject to their
  * general contract.  Note that annotating methods in concrete
  * subclasses with {@link java.lang.Override @Override} will help
  * ensure that methods are overridden as intended.
  *
- * <p> <b>WARNING:</b> The {@code ElementVisitor} interface
+ * <b>WARNING:</b> The {@code ElementVisitor} interface
  * implemented by this class may have methods added to it or the
  * {@code ElementKind} {@code enum} used in this case may have
  * constants added to it in the future to accommodate new, currently
@@ -76,7 +76,7 @@ import static javax.lang.model.SourceVersion.*;
  *
  * @param <R> the return type of this visitor's methods.  Use {@link
  *            Void} for visitors that do not need to return results.
- * @param <P> the type of the additional parameter to this visitor's
+ * @param the type of the additional parameter to this visitor's
  *            methods.  Use {@code Void} for visitors that do not need an
  *            additional parameter.
  *

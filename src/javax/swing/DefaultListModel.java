@@ -439,7 +439,7 @@ public class DefaultListModel<E> extends AbstractListModel<E>
      * <p>
      * Throws an <code>ArrayIndexOutOfBoundsException</code>
      * if the index is out of range
-     * (<code>index &lt; 0 || index &gt;= size()</code>).
+     * (<code>index < 0 || index >= size()</code>).
      *
      * @param index index of element to return
      */
@@ -453,7 +453,7 @@ public class DefaultListModel<E> extends AbstractListModel<E>
      * <p>
      * Throws an <code>ArrayIndexOutOfBoundsException</code>
      * if the index is out of range
-     * (<code>index &lt; 0 || index &gt;= size()</code>).
+     * (<code>index < 0 || index >= size()</code>).
      *
      * @param index index of element to replace
      * @param element element to be stored at the specified position
@@ -471,7 +471,7 @@ public class DefaultListModel<E> extends AbstractListModel<E>
      * <p>
      * Throws an <code>ArrayIndexOutOfBoundsException</code> if the
      * index is out of range
-     * (<code>index &lt; 0 || index &gt; size()</code>).
+     * (<code>index < 0 || index > size()</code>).
      *
      * @param index index at which the specified element is to be inserted
      * @param element element to be inserted
@@ -487,7 +487,7 @@ public class DefaultListModel<E> extends AbstractListModel<E>
      * <p>
      * Throws an <code>ArrayIndexOutOfBoundsException</code>
      * if the index is out of range
-     * (<code>index &lt; 0 || index &gt;= size()</code>).
+     * (<code>index < 0 || index >= size()</code>).
      *
      * @param index the index of the element to removed
      * @return the element previously at the specified position
@@ -520,7 +520,7 @@ public class DefaultListModel<E> extends AbstractListModel<E>
      * Throws an <code>ArrayIndexOutOfBoundsException</code>
      * if the index was invalid.
      * Throws an <code>IllegalArgumentException</code> if
-     * <code>fromIndex &gt; toIndex</code>.
+     * <code>fromIndex > toIndex</code>.
      *
      * @param      fromIndex the index of the lower end of the range
      * @param      toIndex   the index of the upper end of the range

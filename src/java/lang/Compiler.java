@@ -30,7 +30,7 @@ package java.lang;
  * compilers and related services. By design, the {@code Compiler} class does
  * nothing; it serves as a placeholder for a JIT compiler implementation.
  *
- * <p> When the Java Virtual Machine first starts, it determines if the system
+ * When the Java Virtual Machine first starts, it determines if the system
  * property {@code java.compiler} exists. (System properties are accessible
  * through {@link System#getProperty(String)} and {@link
  * System#getProperty(String, String)}.  If so, it is assumed to be the name of
@@ -39,7 +39,7 @@ package java.lang;
  * succeeds, the function named {@code java_lang_Compiler_start()} in that
  * library is called.
  *
- * <p> If no compiler is available, these methods do nothing.
+ * If no compiler is available, these methods do nothing.
  *
  * @author  Frank Yellin
  * @since   JDK1.0

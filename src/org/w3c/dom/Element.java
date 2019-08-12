@@ -63,8 +63,8 @@ public interface Element extends Node {
      * The name of the element. If <code>Node.localName</code> is different
      * from <code>null</code>, this attribute is a qualified name. For
      * example, in:
-     * <pre> &lt;elementExample id="demo"&gt; ...
-     * &lt;/elementExample&gt; , </pre>
+     * <pre> <elementExample id="demo"> ...
+     * </elementExample> , </pre>
      *  <code>tagName</code> has the value
      * <code>"elementExample"</code>. Note that this is case-preserving in
      * XML, as are all of the operations of the DOM. The HTML DOM returns

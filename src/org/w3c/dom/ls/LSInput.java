@@ -43,18 +43,18 @@ package org.w3c.dom.ls;
 
 /**
  *  This interface represents an input source for data.
- * <p> This interface allows an application to encapsulate information about
+ * This interface allows an application to encapsulate information about
  * an input source in a single object, which may include a public
  * identifier, a system identifier, a byte stream (possibly with a specified
  * encoding), a base URI, and/or a character stream.
- * <p> The exact definitions of a byte stream and a character stream are
+ * The exact definitions of a byte stream and a character stream are
  * binding dependent.
- * <p> The application is expected to provide objects that implement this
+ * The application is expected to provide objects that implement this
  * interface whenever such objects are needed. The application can either
  * provide its own objects that implement this interface, or it can use the
  * generic factory method <code>DOMImplementationLS.createLSInput()</code>
  * to create objects that implement this interface.
- * <p> The <code>LSParser</code> will use the <code>LSInput</code> object to
+ * The <code>LSParser</code> will use the <code>LSInput</code> object to
  * determine how to read data. The <code>LSParser</code> will look at the
  * different inputs specified in the <code>LSInput</code> in the following
  * order to know which one to read from, the first one that is not null and
@@ -73,11 +73,11 @@ package org.w3c.dom.ls;
  * <li> <code>LSInput.publicId</code>
  * </li>
  * </ol>
- * <p> If all inputs are null, the <code>LSParser</code> will report a
+ * If all inputs are null, the <code>LSParser</code> will report a
  * <code>DOMError</code> with its <code>DOMError.type</code> set to
  * <code>"no-input-specified"</code> and its <code>DOMError.severity</code>
  * set to <code>DOMError.SEVERITY_FATAL_ERROR</code>.
- * <p> <code>LSInput</code> objects belong to the application. The DOM
+ * <code>LSInput</code> objects belong to the application. The DOM
  * implementation will never modify them (though it may make copies and
  * modify the copies, if necessary).
  * <p>See also the <a href='http://www.w3.org/TR/2004/REC-DOM-Level-3-LS-20040407'>Document Object Model (DOM) Level 3 Load

@@ -1,28 +1,3 @@
-/*
- * Copyright (c) 2007, 2013, Oracle and/or its affiliates. All rights reserved.
- * ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- */
-
 package java.nio.file;
 
 import java.io.File;
@@ -34,7 +9,7 @@ import java.util.Iterator;
  * An object that may be used to locate a file in a file system. It will
  * typically represent a system dependent file path.
  *
- * <p> A {@code Path} represents a path that is hierarchical and composed of a
+ * A {@code Path} represents a path that is hierarchical and composed of a
  * sequence of directory and file name elements separated by a special separator
  * or delimiter. A <em>root component</em>, that identifies a file system
  * hierarchy, may also be present. The name element that is <em>farthest</em>
@@ -49,23 +24,23 @@ import java.util.Iterator;
  * subpath} methods to access the path components or a subsequence of its name
  * elements.
  *
- * <p> In addition to accessing the components of a path, a {@code Path} also
+ * In addition to accessing the components of a path, a {@code Path} also
  * defines the {@link #resolve(Path) resolve} and {@link #resolveSibling(Path)
  * resolveSibling} methods to combine paths. The {@link #relativize relativize}
  * method that can be used to construct a relative path between two paths.
  * Paths can be {@link #compareTo compared}, and tested against each other using
  * the {@link #startsWith startsWith} and {@link #endsWith endsWith} methods.
  *
- * <p> This interface extends {@link Watchable} interface so that a directory
+ * This interface extends {@link Watchable} interface so that a directory
  * located by a path can be {@link #register registered} with a {@link
  * WatchService} and entries in the directory watched. </p>
  *
- * <p> <b>WARNING:</b> This interface is only intended to be implemented by
+ * <b>WARNING:</b> This interface is only intended to be implemented by
  * those developing custom file system implementations. Methods may be added to
  * this interface in future releases. </p>
  *
  * <h2>Accessing Files</h2>
- * <p> Paths may be used with the {@link Files} class to operate on files,
+ * Paths may be used with the {@link Files} class to operate on files,
  * directories, and other types of files. For example, suppose we want a {@link
  * java.io.BufferedReader} to read text from a file "{@code access.log}". The
  * file is located in a directory "{@code logs}" relative to the current working
@@ -76,7 +51,7 @@ import java.util.Iterator;
  * </pre>
  *
  * <a name="interop"></a><h2>Interoperability</h2>
- * <p> Paths associated with the default {@link
+ * Paths associated with the default {@link
  * java.nio.file.spi.FileSystemProvider provider} are generally interoperable
  * with the {@link java.io.File java.io.File} class. Paths created by other
  * providers are unlikely to be interoperable with the abstract path names
@@ -88,13 +63,12 @@ import java.util.Iterator;
  * File} from the {@code String} representation of a {@code Path}.
  *
  * <h2>Concurrency</h2>
- * <p> Implementations of this interface are immutable and safe for use by
+ * Implementations of this interface are immutable and safe for use by
  * multiple concurrent threads.
  *
  * @since 1.7
  * @see Paths
  */
-
 public interface Path
     extends Comparable<Path>, Iterable<Path>, Watchable
 {
@@ -108,7 +82,7 @@ public interface Path
     /**
      * Tells whether or not this path is absolute.
      *
-     * <p> An absolute path is complete in that it doesn't need to be combined
+     * An absolute path is complete in that it doesn't need to be combined
      * with other path information in order to locate a file.
      *
      * @return  {@code true} if, and only if, this path is absolute
@@ -138,7 +112,7 @@ public interface Path
      * Returns the <em>parent path</em>, or {@code null} if this path does not
      * have a parent.
      *
-     * <p> The parent of this path object consists of this path's root
+     * The parent of this path object consists of this path's root
      * component, if any, and each element in the path except for the
      * <em>farthest</em> from the root in the directory hierarchy. This method
      * does not access the file system; the path or its parent may not exist.
@@ -149,7 +123,7 @@ public interface Path
      * #normalize normalize} method, to eliminate redundant names, for cases where
      * <em>shell-like</em> navigation is required.
      *
-     * <p> If this path has one or more elements, and no root component, then
+     * If this path has one or more elements, and no root component, then
      * this method is equivalent to evaluating the expression:
      * <blockquote><pre>
      * subpath(0,&nbsp;getNameCount()-1);
@@ -170,7 +144,7 @@ public interface Path
     /**
      * Returns a name element of this path as a {@code Path} object.
      *
-     * <p> The {@code index} parameter is the index of the name element to return.
+     * The {@code index} parameter is the index of the name element to return.
      * The element that is <em>closest</em> to the root in the directory hierarchy
      * has index {@code 0}. The element that is <em>farthest</em> from the root
      * has index {@link #getNameCount count}{@code -1}.
@@ -191,7 +165,7 @@ public interface Path
      * Returns a relative {@code Path} that is a subsequence of the name
      * elements of this path.
      *
-     * <p> The {@code beginIndex} and {@code endIndex} parameters specify the
+     * The {@code beginIndex} and {@code endIndex} parameters specify the
      * subsequence of name elements. The name that is <em>closest</em> to the root
      * in the directory hierarchy has index {@code 0}. The name that is
      * <em>farthest</em> from the root has index {@link #getNameCount
@@ -217,18 +191,18 @@ public interface Path
     /**
      * Tests if this path starts with the given path.
      *
-     * <p> This path <em>starts</em> with the given path if this path's root
+     * This path <em>starts</em> with the given path if this path's root
      * component <em>starts</em> with the root component of the given path,
      * and this path starts with the same name elements as the given path.
      * If the given path has more name elements than this path then {@code false}
      * is returned.
      *
-     * <p> Whether or not the root component of this path starts with the root
+     * Whether or not the root component of this path starts with the root
      * component of the given path is file system specific. If this path does
      * not have a root component and the given path has a root component then
      * this path does not start with the given path.
      *
-     * <p> If the given path is associated with a different {@code FileSystem}
+     * If the given path is associated with a different {@code FileSystem}
      * to this path then {@code false} is returned.
      *
      * @param   other
@@ -260,12 +234,12 @@ public interface Path
     /**
      * Tests if this path ends with the given path.
      *
-     * <p> If the given path has <em>N</em> elements, and no root component,
+     * If the given path has <em>N</em> elements, and no root component,
      * and this path has <em>N</em> or more elements, then this path ends with
      * the given path if the last <em>N</em> elements of each path, starting at
      * the element farthest from the root, are equal.
      *
-     * <p> If the given path has a root component then this path ends with the
+     * If the given path has a root component then this path ends with the
      * given path if the root component of this path <em>ends with</em> the root
      * component of the given path, and the corresponding elements of both paths
      * are equal. Whether or not the root component of this path ends with the
@@ -273,7 +247,7 @@ public interface Path
      * does not have a root component and the given path has a root component
      * then this path does not end with the given path.
      *
-     * <p> If the given path is associated with a different {@code FileSystem}
+     * If the given path is associated with a different {@code FileSystem}
      * to this path then {@code false} is returned.
      *
      * @param   other
@@ -308,7 +282,7 @@ public interface Path
     /**
      * Returns a path that is this path with redundant name elements eliminated.
      *
-     * <p> The precise definition of this method is implementation dependent but
+     * The precise definition of this method is implementation dependent but
      * in general it derives from this path, a path that does not contain
      * <em>redundant</em> name elements. In many file systems, the "{@code .}"
      * and "{@code ..}" are special names used to indicate the current directory
@@ -318,7 +292,7 @@ public interface Path
      * process to identify such names is repeated until it is no longer
      * applicable).
      *
-     * <p> This method does not access the file system; the path may not locate
+     * This method does not access the file system; the path may not locate
      * a file that exists. Eliminating "{@code ..}" and a preceding name from a
      * path may result in the path that locates a different file than the original
      * path. This can arise when the preceding name is a symbolic link.
@@ -337,7 +311,7 @@ public interface Path
     /**
      * Resolve the given path against this path.
      *
-     * <p> If the {@code other} parameter is an {@link #isAbsolute() absolute}
+     * If the {@code other} parameter is an {@link #isAbsolute() absolute}
      * path then this method trivially returns {@code other}. If {@code other}
      * is an <i>empty path</i> then this method trivially returns this path.
      * Otherwise this method considers this path to be a directory and resolves
@@ -418,7 +392,7 @@ public interface Path
     /**
      * Constructs a relative path between this path and a given path.
      *
-     * <p> Relativization is the inverse of {@link #resolve(Path) resolution}.
+     * Relativization is the inverse of {@link #resolve(Path) resolution}.
      * This method attempts to construct a {@link #isAbsolute relative} path
      * that when {@link #resolve(Path) resolved} against this path, yields a
      * path that locates the same file as the given path. For example, on UNIX,
@@ -431,13 +405,13 @@ public interface Path
      * relative path can be constructed. If this path and the given path are
      * {@link #equals equal} then an <i>empty path</i> is returned.
      *
-     * <p> For any two {@link #normalize normalized} paths <i>p</i> and
+     * For any two {@link #normalize normalized} paths <i>p</i> and
      * <i>q</i>, where <i>q</i> does not have a root component,
      * <blockquote>
      *   <i>p</i><tt>.relativize(</tt><i>p</i><tt>.resolve(</tt><i>q</i><tt>)).equals(</tt><i>q</i><tt>)</tt>
      * </blockquote>
      *
-     * <p> When symbolic links are supported, then whether the resulting path,
+     * When symbolic links are supported, then whether the resulting path,
      * when resolved against this path, yields a path that can be used to locate
      * the {@link Files#isSameFile same} file as {@code other} is implementation
      * dependent. For example, if this path is  {@code "/a/b"} and the given
@@ -460,12 +434,12 @@ public interface Path
     /**
      * Returns a URI to represent this path.
      *
-     * <p> This method constructs an absolute {@link URI} with a {@link
+     * This method constructs an absolute {@link URI} with a {@link
      * URI#getScheme() scheme} equal to the URI scheme that identifies the
      * provider. The exact form of the scheme specific part is highly provider
      * dependent.
      *
-     * <p> In the case of the default provider, the URI is hierarchical with
+     * In the case of the default provider, the URI is hierarchical with
      * a {@link URI#getPath() path} component that is absolute. The query and
      * fragment components are undefined. Whether the authority component is
      * defined or not is implementation dependent. There is no guarantee that
@@ -476,7 +450,7 @@ public interface Path
      * exists, and it can be determined that the file is a directory, then the
      * resulting {@code URI} will end with a slash.
      *
-     * <p> The default provider provides a similar <em>round-trip</em> guarantee
+     * The default provider provides a similar <em>round-trip</em> guarantee
      * to the {@link java.io.File} class. For a given {@code Path} <i>p</i> it
      * is guaranteed that
      * <blockquote><tt>
@@ -488,7 +462,7 @@ public interface Path
      * Java virtual machine. Whether other providers make any guarantees is
      * provider specific and therefore unspecified.
      *
-     * <p> When a file system is constructed to access the contents of a file
+     * When a file system is constructed to access the contents of a file
      * as a file system then it is highly implementation specific if the returned
      * URI represents the given path in the file system or it represents a
      * <em>compound</em> URI that encodes the URI of the enclosing file system.
@@ -514,7 +488,7 @@ public interface Path
      * Returns a {@code Path} object representing the absolute path of this
      * path.
      *
-     * <p> If this path is already {@link Path#isAbsolute absolute} then this
+     * If this path is already {@link Path#isAbsolute absolute} then this
      * method simply returns this path. Otherwise, this method resolves the path
      * in an implementation dependent manner, typically by resolving the path
      * against a file system default directory. Depending on the implementation,
@@ -536,7 +510,7 @@ public interface Path
     /**
      * Returns the <em>real</em> path of an existing file.
      *
-     * <p> The precise definition of this method is implementation dependent but
+     * The precise definition of this method is implementation dependent but
      * in general it derives from this path, an {@link #isAbsolute absolute}
      * path that locates the {@link Files#isSameFile same} file as this path, but
      * with name elements that represent the actual name of the directories
@@ -545,10 +519,10 @@ public interface Path
      * actual case. Additionally, the resulting path has redundant name
      * elements removed.
      *
-     * <p> If this path is relative then its absolute path is first obtained,
+     * If this path is relative then its absolute path is first obtained,
      * as if by invoking the {@link #toAbsolutePath toAbsolutePath} method.
      *
-     * <p> The {@code options} array may be used to indicate how symbolic links
+     * The {@code options} array may be used to indicate how symbolic links
      * are handled. By default, symbolic links are resolved to their final
      * target. If the option {@link LinkOption#NOFOLLOW_LINKS NOFOLLOW_LINKS} is
      * present then this method does not resolve symbolic links.
@@ -585,7 +559,7 @@ public interface Path
      * equivalent to returning a {@code File} object constructed with the
      * {@code String} representation of this path.
      *
-     * <p> If this path was created by invoking the {@code File} {@link
+     * If this path was created by invoking the {@code File} {@link
      * File#toPath toPath} method then there is no guarantee that the {@code
      * File} object returned by this method is {@link #equals equal} to the
      * original {@code File}.
@@ -602,7 +576,7 @@ public interface Path
     /**
      * Registers the file located by this path with a watch service.
      *
-     * <p> In this release, this path locates a directory that exists. The
+     * In this release, this path locates a directory that exists. The
      * directory is registered with the watch service so that entries in the
      * directory can be watched. The {@code events} parameter is the events to
      * register and may contain the following events:
@@ -615,19 +589,19 @@ public interface Path
      *        entry in directory was modified</li>
      * </ul>
      *
-     * <p> The {@link WatchEvent#context context} for these events is the
+     * The {@link WatchEvent#context context} for these events is the
      * relative path between the directory located by this path, and the path
      * that locates the directory entry that is created, deleted, or modified.
      *
-     * <p> The set of events may include additional implementation specific
+     * The set of events may include additional implementation specific
      * event that are not defined by the enum {@link StandardWatchEventKinds}
      *
-     * <p> The {@code modifiers} parameter specifies <em>modifiers</em> that
+     * The {@code modifiers} parameter specifies <em>modifiers</em> that
      * qualify how the directory is registered. This release does not define any
      * <em>standard</em> modifiers. It may contain implementation specific
      * modifiers.
      *
-     * <p> Where a file is registered with a watch service by means of a symbolic
+     * Where a file is registered with a watch service by means of a symbolic
      * link then it is implementation specific if the watch continues to depend
      * on the existence of the symbolic link after it is registered.
      *
@@ -666,13 +640,13 @@ public interface Path
     /**
      * Registers the file located by this path with a watch service.
      *
-     * <p> An invocation of this method behaves in exactly the same way as the
+     * An invocation of this method behaves in exactly the same way as the
      * invocation
      * <pre>
      *     watchable.{@link #register(WatchService,WatchEvent.Kind[],WatchEvent.Modifier[]) register}(watcher, events, new WatchEvent.Modifier[0]);
      * </pre>
      *
-     * <p> <b>Usage Example:</b>
+     * <b>Usage Example:</b>
      * Suppose we wish to register a directory for entry create, delete, and modify
      * events:
      * <pre>
@@ -715,7 +689,7 @@ public interface Path
     /**
      * Returns an iterator over the name elements of this path.
      *
-     * <p> The first element returned by the iterator represents the name
+     * The first element returned by the iterator represents the name
      * element that is closest to the root in the directory hierarchy, the
      * second element is the next closest, and so on. The last element returned
      * is the name of the file or directory denoted by this path. The {@link
@@ -734,7 +708,7 @@ public interface Path
      * provider, platform specific. This method does not access the file system
      * and neither file is required to exist.
      *
-     * <p> This method may not be used to compare paths that are associated
+     * This method may not be used to compare paths that are associated
      * with different file system providers.
      *
      * @param   other  the path compared to this path.
@@ -753,17 +727,17 @@ public interface Path
     /**
      * Tests this path for equality with the given object.
      *
-     * <p> If the given object is not a Path, or is a Path associated with a
+     * If the given object is not a Path, or is a Path associated with a
      * different {@code FileSystem}, then this method returns {@code false}.
      *
-     * <p> Whether or not two path are equal depends on the file system
+     * Whether or not two path are equal depends on the file system
      * implementation. In some cases the paths are compared without regard
      * to case, and others are case sensitive. This method does not access the
      * file system and the file is not required to exist. Where required, the
      * {@link Files#isSameFile isSameFile} method may be used to check if two
      * paths locate the same file.
      *
-     * <p> This method satisfies the general contract of the {@link
+     * This method satisfies the general contract of the {@link
      * java.lang.Object#equals(Object) Object.equals} method. </p>
      *
      * @param   other
@@ -777,7 +751,7 @@ public interface Path
     /**
      * Computes a hash code for this path.
      *
-     * <p> The hash code is based upon the components of the path, and
+     * The hash code is based upon the components of the path, and
      * satisfies the general contract of the {@link Object#hashCode
      * Object.hashCode} method.
      *
@@ -788,11 +762,11 @@ public interface Path
     /**
      * Returns the string representation of this path.
      *
-     * <p> If this path was created by converting a path string using the
+     * If this path was created by converting a path string using the
      * {@link FileSystem#getPath getPath} method then the path string returned
      * by this method may differ from the original String used to create the path.
      *
-     * <p> The returned path string uses the default name {@link
+     * The returned path string uses the default name {@link
      * FileSystem#getSeparator separator} to separate names in the path.
      *
      * @return  the string representation of this path

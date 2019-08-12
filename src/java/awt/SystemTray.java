@@ -42,7 +42,7 @@ import sun.awt.AWTAccessor;
  * Area", on KDE it is referred to as the "System Tray".  The system
  * tray is shared by all applications running on the desktop.
  *
- * <p> On some platforms the system tray may not be present or may not
+ * On some platforms the system tray may not be present or may not
  * be supported, in this case {@link SystemTray#getSystemTray()}
  * throws {@link UnsupportedOperationException}.  To detect whether the
  * system tray is supported, use {@link SystemTray#isSupported}.
@@ -236,7 +236,7 @@ public class SystemTray {
      * added.  The order in which icons are displayed in a tray is not
      * specified - it is platform and implementation-dependent.
      *
-     * <p> All icons added by the application are automatically
+     * All icons added by the application are automatically
      * removed from the <code>SystemTray</code> upon application exit
      * and also when the desktop system tray becomes unavailable.
      *
@@ -285,11 +285,11 @@ public class SystemTray {
      * Removes the specified <code>TrayIcon</code> from the
      * <code>SystemTray</code>.
      *
-     * <p> All icons added by the application are automatically
+     * All icons added by the application are automatically
      * removed from the <code>SystemTray</code> upon application exit
      * and also when the desktop system tray becomes unavailable.
      *
-     * <p> If <code>trayIcon</code> is <code>null</code> or was not
+     * If <code>trayIcon</code> is <code>null</code> or was not
      * added to the system tray, no exception is thrown and no action
      * is performed.
      *
@@ -323,7 +323,7 @@ public class SystemTray {
      * these contexts.  In such a scenario, only the tray icons added
      * from this context will be returned.
      *
-     * <p> The returned array is a copy of the actual array and may be
+     * The returned array is a copy of the actual array and may be
      * modified in any way without affecting the system tray.  To
      * remove a <code>TrayIcon</code> from the
      * <code>SystemTray</code>, use the {@link

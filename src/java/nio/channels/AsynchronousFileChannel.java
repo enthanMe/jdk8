@@ -39,14 +39,14 @@ import java.util.Collections;
 /**
  * An asynchronous channel for reading, writing, and manipulating a file.
  *
- * <p> An asynchronous file channel is created when a file is opened by invoking
+ * An asynchronous file channel is created when a file is opened by invoking
  * one of the {@link #open open} methods defined by this class. The file contains
  * a variable-length sequence of bytes that can be read and written and whose
  * current size can be {@link #size() queried}. The size of the file increases
  * when bytes are written beyond its  current size; the size of the file decreases
  * when it is {@link #truncate truncated}.
  *
- * <p> An asynchronous file channel does not have a <i>current position</i>
+ * An asynchronous file channel does not have a <i>current position</i>
  * within the file. Instead, the file position is specified to each read and
  * write method that initiates asynchronous operations. A {@link CompletionHandler}
  * is specified as a parameter and is invoked to consume the result of the I/O
@@ -55,21 +55,21 @@ import java.util.Collections;
  * result of the operation. The {@code Future} may be used to check if the
  * operation has completed, wait for its completion, and retrieve the result.
  *
- * <p> In addition to read and write operations, this class defines the
+ * In addition to read and write operations, this class defines the
  * following operations: </p>
  *
  * <ul>
  *
- *   <li><p> Updates made to a file may be {@link #force <i>forced
+ *   <li>Updates made to a file may be {@link #force <i>forced
  *   out</i>} to the underlying storage device, ensuring that data are not
  *   lost in the event of a system crash.  </p></li>
  *
- *   <li><p> A region of a file may be {@link #lock <i>locked</i>} against
+ *   <li>A region of a file may be {@link #lock <i>locked</i>} against
  *   access by other programs.  </p></li>
  *
  * </ul>
  *
- * <p> An {@code AsynchronousFileChannel} is associated with a thread pool to
+ * An {@code AsynchronousFileChannel} is associated with a thread pool to
  * which tasks are submitted to handle I/O events and dispatch to completion
  * handlers that consume the results of I/O operations on the channel. The
  * completion handler for an I/O operation initiated on a channel is guaranteed
@@ -83,7 +83,7 @@ import java.util.Collections;
  * channels. The default thread pool is configured by the system properties
  * defined by the {@link AsynchronousChannelGroup} class.
  *
- * <p> Channels of this type are safe for use by multiple concurrent threads. The
+ * Channels of this type are safe for use by multiple concurrent threads. The
  * {@link Channel#close close} method may be invoked at any time, as specified
  * by the {@link Channel} interface. This causes all outstanding asynchronous
  * operations on the channel to complete with the exception {@link
@@ -97,7 +97,7 @@ import java.util.Collections;
  * operation is initiated then care should be taken to ensure that the buffer is
  * not accessed until after the operation has completed.
  *
- * <p> As with {@link FileChannel}, the view of a file provided by an instance of
+ * As with {@link FileChannel}, the view of a file provided by an instance of
  * this class is guaranteed to be consistent with other views of the same file
  * provided by other instances in the same program.  The view provided by an
  * instance of this class may or may not, however, be consistent with the views
@@ -124,13 +124,13 @@ public abstract class AsynchronousFileChannel
      * Opens or creates a file for reading and/or writing, returning an
      * asynchronous file channel to access the file.
      *
-     * <p> The {@code options} parameter determines how the file is opened.
+     * The {@code options} parameter determines how the file is opened.
      * The {@link StandardOpenOption#READ READ} and {@link StandardOpenOption#WRITE
      * WRITE} options determines if the file should be opened for reading and/or
      * writing. If neither option is contained in the array then an existing file
      * is opened for  reading.
      *
-     * <p> In addition to {@code READ} and {@code WRITE}, the following options
+     * In addition to {@code READ} and {@code WRITE}, the following options
      * may be present:
      *
      * <table border=1 cellpadding=5 summary="">
@@ -188,9 +188,9 @@ public abstract class AsynchronousFileChannel
      * </tr>
      * </table>
      *
-     * <p> An implementation may also support additional options.
+     * An implementation may also support additional options.
      *
-     * <p> The {@code executor} parameter is the {@link ExecutorService} to
+     * The {@code executor} parameter is the {@link ExecutorService} to
      * which tasks are submitted to handle I/O events and dispatch completion
      * results for operations initiated on resulting channel.
      * The nature of these tasks is highly implementation specific and so care
@@ -200,10 +200,10 @@ public abstract class AsynchronousFileChannel
      * Shutting down the executor service while the channel is open results in
      * unspecified behavior.
      *
-     * <p> The {@code attrs} parameter is an optional array of file {@link
+     * The {@code attrs} parameter is an optional array of file {@link
      * FileAttribute file-attributes} to set atomically when creating the file.
      *
-     * <p> The new channel is created by invoking the {@link
+     * The new channel is created by invoking the {@link
      * FileSystemProvider#newFileChannel newFileChannel} method on the
      * provider that created the {@code Path}.
      *
@@ -255,16 +255,16 @@ public abstract class AsynchronousFileChannel
      * Opens or creates a file for reading and/or writing, returning an
      * asynchronous file channel to access the file.
      *
-     * <p> An invocation of this method behaves in exactly the same way as the
+     * An invocation of this method behaves in exactly the same way as the
      * invocation
      * <pre>
      *     ch.{@link #open(Path,Set,ExecutorService,FileAttribute[])
-     *       open}(file, opts, null, new FileAttribute&lt;?&gt;[0]);
+     *       open}(file, opts, null, new FileAttribute<?>[0]);
      * </pre>
      * where {@code opts} is a {@code Set} containing the options specified to
      * this method.
      *
-     * <p> The resulting channel is associated with default thread pool to which
+     * The resulting channel is associated with default thread pool to which
      * tasks are submitted to handle I/O events and dispatch to completion
      * handlers that consume the result of asynchronous operations performed on
      * the resulting channel.
@@ -316,7 +316,7 @@ public abstract class AsynchronousFileChannel
     /**
      * Truncates this channel's file to the given size.
      *
-     * <p> If the given size is less than the file's current size then the file
+     * If the given size is less than the file's current size then the file
      * is truncated, discarding any bytes beyond the new end of the file.  If
      * the given size is greater than or equal to the file's current size then
      * the file is not modified. </p>
@@ -344,16 +344,16 @@ public abstract class AsynchronousFileChannel
      * Forces any updates to this channel's file to be written to the storage
      * device that contains it.
      *
-     * <p> If this channel's file resides on a local storage device then when
+     * If this channel's file resides on a local storage device then when
      * this method returns it is guaranteed that all changes made to the file
      * since this channel was created, or since this method was last invoked,
      * will have been written to that device.  This is useful for ensuring that
      * critical information is not lost in the event of a system crash.
      *
-     * <p> If the file does not reside on a local device then no such guarantee
+     * If the file does not reside on a local device then no such guarantee
      * is made.
      *
-     * <p> The {@code metaData} parameter can be used to limit the number of
+     * The {@code metaData} parameter can be used to limit the number of
      * I/O operations that this method is required to perform.  Passing
      * {@code false} for this parameter indicates that only updates to the
      * file's content need be written to storage; passing {@code true}
@@ -362,13 +362,13 @@ public abstract class AsynchronousFileChannel
      * Whether this parameter actually has any effect is dependent upon the
      * underlying operating system and is therefore unspecified.
      *
-     * <p> Invoking this method may cause an I/O operation to occur even if the
+     * Invoking this method may cause an I/O operation to occur even if the
      * channel was only opened for reading.  Some operating systems, for
      * example, maintain a last-access time as part of a file's metadata, and
      * this time is updated whenever the file is read.  Whether or not this is
      * actually done is system-dependent and is therefore unspecified.
      *
-     * <p> This method is only guaranteed to force changes that were made to
+     * This method is only guaranteed to force changes that were made to
      * this channel's file via the methods defined in this class.
      *
      * @param   metaData
@@ -388,13 +388,13 @@ public abstract class AsynchronousFileChannel
     /**
      * Acquires a lock on the given region of this channel's file.
      *
-     * <p> This method initiates an operation to acquire a lock on the given
+     * This method initiates an operation to acquire a lock on the given
      * region of this channel's file. The {@code handler} parameter is a
      * completion handler that is invoked when the lock is acquired (or the
      * operation fails). The result passed to the completion handler is the
      * resulting {@code FileLock}.
      *
-     * <p> The region specified by the {@code position} and {@code size}
+     * The region specified by the {@code position} and {@code size}
      * parameters need not be contained within, or even overlap, the actual
      * underlying file.  Lock regions are fixed in size; if a locked region
      * initially contains the end of the file and the file grows beyond the
@@ -408,20 +408,20 @@ public abstract class AsynchronousFileChannel
      * been invoked to lock an overlapping region and that operation has not
      * completed, then this method throws {@link OverlappingFileLockException}.
      *
-     * <p> Some operating systems do not support a mechanism to acquire a file
+     * Some operating systems do not support a mechanism to acquire a file
      * lock in an asynchronous manner. Consequently an implementation may
      * acquire the file lock in a background thread or from a task executed by
      * a thread in the associated thread pool. If there are many lock operations
      * outstanding then it may consume threads in the Java virtual machine for
      * indefinite periods.
      *
-     * <p> Some operating systems do not support shared locks, in which case a
+     * Some operating systems do not support shared locks, in which case a
      * request for a shared lock is automatically converted into a request for
      * an exclusive lock.  Whether the newly-acquired lock is shared or
      * exclusive may be tested by invoking the resulting lock object's {@link
      * FileLock#isShared() isShared} method.
      *
-     * <p> File locks are held on behalf of the entire Java virtual machine.
+     * File locks are held on behalf of the entire Java virtual machine.
      * They are not suitable for controlling access to a file by multiple
      * threads within the same virtual machine.
      *
@@ -463,13 +463,13 @@ public abstract class AsynchronousFileChannel
     /**
      * Acquires an exclusive lock on this channel's file.
      *
-     * <p> This method initiates an operation to acquire a lock on the given
+     * This method initiates an operation to acquire a lock on the given
      * region of this channel's file. The {@code handler} parameter is a
      * completion handler that is invoked when the lock is acquired (or the
      * operation fails). The result passed to the completion handler is the
      * resulting {@code FileLock}.
      *
-     * <p> An invocation of this method of the form {@code ch.lock(att,handler)}
+     * An invocation of this method of the form {@code ch.lock(att,handler)}
      * behaves in exactly the same way as the invocation
      * <pre>
      *     ch.{@link #lock(long,long,boolean,Object,CompletionHandler) lock}(0L, Long.MAX_VALUE, false, att, handler)
@@ -497,7 +497,7 @@ public abstract class AsynchronousFileChannel
     /**
      * Acquires a lock on the given region of this channel's file.
      *
-     * <p> This method initiates an operation to acquire a lock on the given
+     * This method initiates an operation to acquire a lock on the given
      * region of this channel's file.  The method behaves in exactly the same
      * manner as the {@link #lock(long, long, boolean, Object, CompletionHandler)}
      * method except that instead of specifying a completion handler, this
@@ -534,12 +534,12 @@ public abstract class AsynchronousFileChannel
     /**
      * Acquires an exclusive lock on this channel's file.
      *
-     * <p> This method initiates an operation to acquire an exclusive lock on this
+     * This method initiates an operation to acquire an exclusive lock on this
      * channel's file. The method returns a {@code Future} representing the
      * pending result of the operation. The {@code Future}'s {@link Future#get()
      * get} method returns the {@link FileLock} on successful completion.
      *
-     * <p> An invocation of this method behaves in exactly the same way as the
+     * An invocation of this method behaves in exactly the same way as the
      * invocation
      * <pre>
      *     ch.{@link #lock(long,long,boolean) lock}(0L, Long.MAX_VALUE, false)
@@ -560,7 +560,7 @@ public abstract class AsynchronousFileChannel
     /**
      * Attempts to acquire a lock on the given region of this channel's file.
      *
-     * <p> This method does not block. An invocation always returns immediately,
+     * This method does not block. An invocation always returns immediately,
      * either having acquired a lock on the requested region or having failed to
      * do so.  If it fails to acquire a lock because an overlapping lock is held
      * by another program then it returns {@code null}.  If it fails to acquire
@@ -609,7 +609,7 @@ public abstract class AsynchronousFileChannel
     /**
      * Attempts to acquire an exclusive lock on this channel's file.
      *
-     * <p> An invocation of this method of the form {@code ch.tryLock()}
+     * An invocation of this method of the form {@code ch.tryLock()}
      * behaves in exactly the same way as the invocation
      *
      * <pre>
@@ -644,13 +644,13 @@ public abstract class AsynchronousFileChannel
      * Reads a sequence of bytes from this channel into the given buffer,
      * starting at the given file position.
      *
-     * <p> This method initiates the reading of a sequence of bytes from this
+     * This method initiates the reading of a sequence of bytes from this
      * channel into the given buffer, starting at the given file position. The
      * result of the read is the number of bytes read or {@code -1} if the given
      * position is greater than or equal to the file's size at the time that the
      * read is attempted.
      *
-     * <p> This method works in the same manner as the {@link
+     * This method works in the same manner as the {@link
      * AsynchronousByteChannel#read(ByteBuffer,Object,CompletionHandler)}
      * method, except that bytes are read starting at the given file position.
      * If the given file position is greater than the file's size at the time
@@ -682,14 +682,14 @@ public abstract class AsynchronousFileChannel
      * Reads a sequence of bytes from this channel into the given buffer,
      * starting at the given file position.
      *
-     * <p> This method initiates the reading of a sequence of bytes from this
+     * This method initiates the reading of a sequence of bytes from this
      * channel into the given buffer, starting at the given file position. This
      * method returns a {@code Future} representing the pending result of the
      * operation. The {@code Future}'s {@link Future#get() get} method returns
      * the number of bytes read or {@code -1} if the given position is greater
      * than or equal to the file's size at the time that the read is attempted.
      *
-     * <p> This method works in the same manner as the {@link
+     * This method works in the same manner as the {@link
      * AsynchronousByteChannel#read(ByteBuffer)} method, except that bytes are
      * read starting at the given file position. If the given file position is
      * greater than the file's size at the time that the read is attempted then
@@ -714,7 +714,7 @@ public abstract class AsynchronousFileChannel
      * Writes a sequence of bytes to this channel from the given buffer, starting
      * at the given file position.
      *
-     * <p> This method works in the same manner as the {@link
+     * This method works in the same manner as the {@link
      * AsynchronousByteChannel#write(ByteBuffer,Object,CompletionHandler)}
      * method, except that bytes are written starting at the given file position.
      * If the given position is greater than the file's size, at the time that
@@ -748,13 +748,13 @@ public abstract class AsynchronousFileChannel
      * Writes a sequence of bytes to this channel from the given buffer, starting
      * at the given file position.
      *
-     * <p> This method initiates the writing of a sequence of bytes to this
+     * This method initiates the writing of a sequence of bytes to this
      * channel from the given buffer, starting at the given file position. The
      * method returns a {@code Future} representing the pending result of the
      * write operation. The {@code Future}'s {@link Future#get() get} method
      * returns the number of bytes written.
      *
-     * <p> This method works in the same manner as the {@link
+     * This method works in the same manner as the {@link
      * AsynchronousByteChannel#write(ByteBuffer)} method, except that bytes are
      * written starting at the given file position. If the given position is
      * greater than the file's size, at the time that the write is attempted,

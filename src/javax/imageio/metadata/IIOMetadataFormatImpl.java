@@ -44,7 +44,7 @@ import com.sun.imageio.plugins.common.StandardMetadataFormat;
  * <code>javax_imageio_1.0</code> format is provided by the
  * <code>getStandardFormatInstance</code> method.
  *
- * <p> In order to supply localized descriptions of elements and
+ * In order to supply localized descriptions of elements and
  * attributes, a <code>ResourceBundle</code> with a base name of
  * <code>this.getClass().getName() + "Resources"</code> should be
  * supplied via the usual mechanism used by
@@ -63,10 +63,10 @@ import com.sun.imageio.plugins.common.StandardMetadataFormat;
  * <code>getString</code> method, and the resulting localized
  * description of the node or attribute is returned.
  *
- * <p> The subclass may supply a different base name for the resource
+ * The subclass may supply a different base name for the resource
  * bundles using the <code>setResourceBaseName</code> method.
  *
- * <p> A subclass may choose its own localization mechanism, if so
+ * A subclass may choose its own localization mechanism, if so
  * desired, by overriding the supplied implementations of
  * <code>getElementDescription</code> and
  * <code>getAttributeDescription</code>.
@@ -230,7 +230,7 @@ public abstract class IIOMetadataFormatImpl implements IIOMetadataFormat {
      * containing descriptions of elements and attributes for this
      * format.
      *
-     * <p> Prior to the first time this method is called, the base
+     * Prior to the first time this method is called, the base
      * name will be equal to <code>this.getClass().getName() +
      * "Resources"</code>.
      *
@@ -720,7 +720,7 @@ public abstract class IIOMetadataFormatImpl implements IIOMetadataFormat {
      * value of the <code>Object</code> is unconstrained other than by
      * its class type.
      *
-     * <p> If an <code>Object</code> reference was previously allowed,
+     * If an <code>Object</code> reference was previously allowed,
      * the previous settings are overwritten.
      *
      * @param elementName the name of the element.
@@ -754,7 +754,7 @@ public abstract class IIOMetadataFormatImpl implements IIOMetadataFormat {
      * value of the <code>Object</code> must be one of the values
      * given by <code>enumeratedValues</code>.
      *
-     * <p> If an <code>Object</code> reference was previously allowed,
+     * If an <code>Object</code> reference was previously allowed,
      * the previous settings are overwritten.
      *
      * @param elementName the name of the element.
@@ -821,7 +821,7 @@ public abstract class IIOMetadataFormatImpl implements IIOMetadataFormat {
      * Furthermore, the class type must implement the
      * <code>Comparable</code> interface.
      *
-     * <p> If an <code>Object</code> reference was previously allowed,
+     * If an <code>Object</code> reference was previously allowed,
      * the previous settings are overwritten.
      *
      * @param elementName the name of the element.
@@ -878,7 +878,7 @@ public abstract class IIOMetadataFormatImpl implements IIOMetadataFormat {
      * <code>arrayMinLength</code> and at most
      * <code>arrayMaxLength</code> elements.
      *
-     * <p> If an <code>Object</code> reference was previously allowed,
+     * If an <code>Object</code> reference was previously allowed,
      * the previous settings are overwritten.
      *
      * @param elementName the name of the element.
@@ -994,7 +994,7 @@ public abstract class IIOMetadataFormatImpl implements IIOMetadataFormat {
      * named element, or <code>null</code>.  The description will be
      * localized for the supplied <code>Locale</code> if possible.
      *
-     * <p> The default implementation will first locate a
+     * The default implementation will first locate a
      * <code>ResourceBundle</code> using the current resource base
      * name set by <code>setResourceBaseName</code> and the supplied
      * <code>Locale</code>, using the fallback mechanism described in
@@ -1004,7 +1004,7 @@ public abstract class IIOMetadataFormatImpl implements IIOMetadataFormat {
      * result returned.  If no <code>ResourceBundle</code> is found,
      * or no such key is present, <code>null</code> will be returned.
      *
-     * <p> If <code>locale</code> is <code>null</code>, the current
+     * If <code>locale</code> is <code>null</code>, the current
      * default <code>Locale</code> returned by <code>Locale.getLocale</code>
      * will be used.
      *
@@ -1132,7 +1132,7 @@ public abstract class IIOMetadataFormatImpl implements IIOMetadataFormat {
      * named attribute, or <code>null</code>.  The description will be
      * localized for the supplied <code>Locale</code> if possible.
      *
-     * <p> The default implementation will first locate a
+     * The default implementation will first locate a
      * <code>ResourceBundle</code> using the current resource base
      * name set by <code>setResourceBaseName</code> and the supplied
      * <code>Locale</code>, using the fallback mechanism described in
@@ -1144,7 +1144,7 @@ public abstract class IIOMetadataFormatImpl implements IIOMetadataFormat {
      * returned.  If no <code>ResourceBundle</code> is found, or no
      * such key is present, <code>null</code> will be returned.
      *
-     * <p> If <code>locale</code> is <code>null</code>, the current
+     * If <code>locale</code> is <code>null</code>, the current
      * default <code>Locale</code> returned by <code>Locale.getLocale</code>
      * will be used.
      *

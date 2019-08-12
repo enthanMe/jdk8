@@ -35,13 +35,13 @@ import javax.imageio.stream.ImageInputStream;
  * provider interfaces, see the class comment for the
  * <code>IIORegistry</code> class.
  *
- * <p> This interface allows arbitrary objects to be "wrapped" by
+ * This interface allows arbitrary objects to be "wrapped" by
  * instances of <code>ImageInputStream</code>.  For example,
  * a particular <code>ImageInputStreamSpi</code> might allow
  * a generic <code>InputStream</code> to be used as an input source;
  * another might take input from a <code>URL</code>.
  *
- * <p> By treating the creation of <code>ImageInputStream</code>s as a
+ * By treating the creation of <code>ImageInputStream</code>s as a
  * pluggable service, it becomes possible to handle future input
  * sources without changing the API.  Also, high-performance
  * implementations of <code>ImageInputStream</code> (for example,
@@ -97,7 +97,7 @@ public abstract class ImageInputStreamSpi extends IIOServiceProvider {
      * order to be "wrapped" in an <code>ImageInputStream</code> via
      * the <code>createInputStreamInstance</code> method.
      *
-     * <p> Typical return values might include
+     * Typical return values might include
      * <code>InputStream.class</code> or <code>URL.class</code>, but
      * any class may be used.
      *
@@ -117,7 +117,7 @@ public abstract class ImageInputStreamSpi extends IIOServiceProvider {
      * the <code>useCache</code> argument to
      * <code>createInputStreamInstance</code> will be ignored.
      *
-     * <p> The default implementation returns <code>false</code>.
+     * The default implementation returns <code>false</code>.
      *
      * @return <code>true</code> if a cache file can be used by the
      * input streams created by this service provider.
@@ -133,7 +133,7 @@ public abstract class ImageInputStreamSpi extends IIOServiceProvider {
      * the value of the <code>useCache</code> argument to
      * <code>createInputStreamInstance</code> will be ignored.
      *
-     * <p> The default implementation returns <code>false</code>.
+     * The default implementation returns <code>false</code>.
      *
      * @return <code>true</code> if a cache file is needed by the
      * input streams created by this service provider.

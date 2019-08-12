@@ -39,7 +39,7 @@ import sun.util.logging.PlatformLogger;
  * which manages storage, and a {@link CookiePolicy} object, which makes
  * policy decisions on cookie acceptance/rejection.
  *
- * <p> The HTTP cookie management in java.net package looks like:
+ * The HTTP cookie management in java.net package looks like:
  * <blockquote>
  * <pre>{@code
  *                  use
@@ -170,7 +170,7 @@ public class CookieManager extends CookieHandler
     /**
      * To set the cookie policy of this cookie manager.
      *
-     * <p> A instance of {@code CookieManager} will have
+     * A instance of {@code CookieManager} will have
      * cookie policy ACCEPT_ORIGINAL_SERVER by default. Users always
      * can call this method to set another cookie policy.
      *

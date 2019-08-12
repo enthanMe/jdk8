@@ -48,7 +48,7 @@ package org.w3c.dom.events;
  * <code>AddEventListener</code> method. The users should also remove their
  * <code>EventListener</code> from its <code>EventTarget</code> after they
  * have completed using the listener.
- * <p> When a <code>Node</code> is copied using the <code>cloneNode</code>
+ * When a <code>Node</code> is copied using the <code>cloneNode</code>
  * method the <code>EventListener</code>s attached to the source
  * <code>Node</code> are not attached to the copied <code>Node</code>. If
  * the user wishes the same <code>EventListener</code>s to be added to the

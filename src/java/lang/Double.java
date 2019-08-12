@@ -419,7 +419,7 @@ public final class Double extends Number implements Comparable<Double> {
      * Finally, after rounding a {@code Double} object representing
      * this {@code double} value is returned.
      *
-     * <p> To interpret localized string representations of a
+     * To interpret localized string representations of a
      * floating-point value, use subclasses of {@link
      * java.text.NumberFormat}.
      *

@@ -163,7 +163,7 @@ import sun.swing.PrintingStatus;
  * underlying model:
  * <pre>
  *   int[] selection = table.getSelectedRows();
- *   for (int i = 0; i &lt; selection.length; i++) {
+ *   for (int i = 0; i < selection.length; i++) {
  *     selection[i] = table.convertRowIndexToModel(selection[i]);
  *   }
  *   // selection is now in terms of the underlying TableModel
@@ -3085,14 +3085,14 @@ public class JTable extends JComponent implements TableModelListener, Scrollable
      * </pre>
      * where each individual delta[i] is calculated according to:
      * <p>
-     * If (DELTA &lt; 0) we are in shrink mode where:
+     * If (DELTA < 0) we are in shrink mode where:
      *
      * <PRE>
      *                        DELTA
      *          delta[i] = ------------ * (pref[i] - min[i])
      *                     (PREF - MIN)
      * </PRE>
-     * If (DELTA &gt; 0) we are in expand mode where:
+     * If (DELTA > 0) we are in expand mode where:
      *
      * <PRE>
      *                        DELTA

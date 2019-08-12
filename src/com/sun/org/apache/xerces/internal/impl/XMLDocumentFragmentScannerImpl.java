@@ -927,14 +927,14 @@ public class XMLDocumentFragmentScannerImpl
      * Scans an XML or text declaration.
      * <p>
      * <pre>
-     * [23] XMLDecl ::= '&lt;?xml' VersionInfo EncodingDecl? SDDecl? S? '?>'
+     * [23] XMLDecl ::= '<?xml' VersionInfo EncodingDecl? SDDecl? S? '?>'
      * [24] VersionInfo ::= S 'version' Eq (' VersionNum ' | " VersionNum ")
      * [80] EncodingDecl ::= S 'encoding' Eq ('"' EncName '"' |  "'" EncName "'" )
      * [81] EncName ::= [A-Za-z] ([A-Za-z0-9._] | '-')*
      * [32] SDDecl ::= S 'standalone' Eq (("'" ('yes' | 'no') "'")
      *                 | ('"' ('yes' | 'no') '"'))
      *
-     * [77] TextDecl ::= '&lt;?xml' VersionInfo? EncodingDecl S? '?>'
+     * [77] TextDecl ::= '<?xml' VersionInfo? EncodingDecl S? '?>'
      * </pre>
      *
      * @param scanningTextDecl True if a text declaration is to
@@ -1027,7 +1027,7 @@ public class XMLDocumentFragmentScannerImpl
      * [15] Comment ::= '&lt!--' ((Char - '-') | ('-' (Char - '-')))* '-->'
      * </pre>
      * <p>
-     * <strong>Note:</strong> Called after scanning past '&lt;!--'
+     * <strong>Note:</strong> Called after scanning past '<!--'
      */
     protected void scanComment() throws IOException, XNIException {
         fContentBuffer.clear();
@@ -1215,12 +1215,12 @@ public class XMLDocumentFragmentScannerImpl
      * of the element.
      * <p>
      * <pre>
-     * [44] EmptyElemTag ::= '&lt;' Name (S Attribute)* S? '/>'
-     * [40] STag ::= '&lt;' Name (S Attribute)* S? '>'
+     * [44] EmptyElemTag ::= '<' Name (S Attribute)* S? '/>'
+     * [40] STag ::= '<' Name (S Attribute)* S? '>'
      * </pre>
      * <p>
      * <strong>Note:</strong> This method assumes that the leading
-     * '&lt;' character has been consumed.
+     * '<' character has been consumed.
      * <p>
      * <strong>Note:</strong> This method uses the fElementQName and
      * fAttributes variables. The contents of these variables will be
@@ -1717,7 +1717,7 @@ public class XMLDocumentFragmentScannerImpl
      * Scans an end element.
      * <p>
      * <pre>
-     * [42] ETag ::= '&lt;/' Name S? '>'
+     * [42] ETag ::= '</' Name S? '>'
      * </pre>
      * <p>
      * <strong>Note:</strong> This method uses the fElementQName variable.
@@ -2751,7 +2751,7 @@ public class XMLDocumentFragmentScannerImpl
                         }
                     }//if last section was CDATA or ENTITY REFERENCE
                     //xxx: there might be another entity reference or CDATA after this
-                    //<foo>blah blah &amp;&lt;<![CDATA[[aa]]>blah blah</foo>
+                    //<foo>blah blah &amp;<<![CDATA[[aa]]>blah blah</foo>
                     else if((fLastSectionWasCData || fLastSectionWasEntityReference)){
                         //and current state is not SCANNER_STATE_CHARACTER_DATA
                         //or SCANNER_STATE_CDATA or SCANNER_STATE_REFERENCE

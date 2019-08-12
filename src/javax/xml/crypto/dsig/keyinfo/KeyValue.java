@@ -42,39 +42,39 @@ import javax.xml.crypto.XMLStructure;
  * useful in validating the signature. The XML schema definition is defined as:
  *
  * <pre>
- *    &lt;element name="KeyValue" type="ds:KeyValueType"/&gt;
- *    &lt;complexType name="KeyValueType" mixed="true"&gt;
- *      &lt;choice&gt;
- *        &lt;element ref="ds:DSAKeyValue"/&gt;
- *        &lt;element ref="ds:RSAKeyValue"/&gt;
- *        &lt;any namespace="##other" processContents="lax"/&gt;
- *      &lt;/choice&gt;
- *    &lt;/complexType&gt;
+ *    <element name="KeyValue" type="ds:KeyValueType"/>
+ *    <complexType name="KeyValueType" mixed="true">
+ *      <choice>
+ *        <element ref="ds:DSAKeyValue"/>
+ *        <element ref="ds:RSAKeyValue"/>
+ *        <any namespace="##other" processContents="lax"/>
+ *      </choice>
+ *    </complexType>
  *
- *    &lt;element name="DSAKeyValue" type="ds:DSAKeyValueType"/&gt;
- *    &lt;complexType name="DSAKeyValueType"&gt;
- *      &lt;sequence&gt;
- *        &lt;sequence minOccurs="0"&gt;
- *          &lt;element name="P" type="ds:CryptoBinary"/&gt;
- *          &lt;element name="Q" type="ds:CryptoBinary"/&gt;
- *        &lt;/sequence&gt;
- *        &lt;element name="G" type="ds:CryptoBinary" minOccurs="0"/&gt;
- *        &lt;element name="Y" type="ds:CryptoBinary"/&gt;
- *        &lt;element name="J" type="ds:CryptoBinary" minOccurs="0"/&gt;
- *        &lt;sequence minOccurs="0"&gt;
- *          &lt;element name="Seed" type="ds:CryptoBinary"/&gt;
- *          &lt;element name="PgenCounter" type="ds:CryptoBinary"/&gt;
- *        &lt;/sequence&gt;
- *      &lt;/sequence&gt;
- *    &lt;/complexType&gt;
+ *    <element name="DSAKeyValue" type="ds:DSAKeyValueType"/>
+ *    <complexType name="DSAKeyValueType">
+ *      <sequence>
+ *        <sequence minOccurs="0">
+ *          <element name="P" type="ds:CryptoBinary"/>
+ *          <element name="Q" type="ds:CryptoBinary"/>
+ *        </sequence>
+ *        <element name="G" type="ds:CryptoBinary" minOccurs="0"/>
+ *        <element name="Y" type="ds:CryptoBinary"/>
+ *        <element name="J" type="ds:CryptoBinary" minOccurs="0"/>
+ *        <sequence minOccurs="0">
+ *          <element name="Seed" type="ds:CryptoBinary"/>
+ *          <element name="PgenCounter" type="ds:CryptoBinary"/>
+ *        </sequence>
+ *      </sequence>
+ *    </complexType>
  *
- *    &lt;element name="RSAKeyValue" type="ds:RSAKeyValueType"/&gt;
- *    &lt;complexType name="RSAKeyValueType"&gt;
- *      &lt;sequence&gt;
- *        &lt;element name="Modulus" type="ds:CryptoBinary"/&gt;
- *        &lt;element name="Exponent" type="ds:CryptoBinary"/&gt;
- *      &lt;/sequence&gt;
- *    &lt;/complexType&gt;
+ *    <element name="RSAKeyValue" type="ds:RSAKeyValueType"/>
+ *    <complexType name="RSAKeyValueType">
+ *      <sequence>
+ *        <element name="Modulus" type="ds:CryptoBinary"/>
+ *        <element name="Exponent" type="ds:CryptoBinary"/>
+ *      </sequence>
+ *    </complexType>
  * </pre>
  * A <code>KeyValue</code> instance may be created by invoking the
  * {@link KeyInfoFactory#newKeyValue newKeyValue} method of the

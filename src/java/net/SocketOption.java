@@ -28,7 +28,7 @@ package java.net;
 /**
  * A socket option associated with a socket.
  *
- * <p> In the {@link java.nio.channels channels} package, the {@link
+ * In the {@link java.nio.channels channels} package, the {@link
  * java.nio.channels.NetworkChannel} interface defines the {@link
  * java.nio.channels.NetworkChannel#setOption(SocketOption,Object) setOption}
  * and {@link java.nio.channels.NetworkChannel#getOption(SocketOption) getOption}

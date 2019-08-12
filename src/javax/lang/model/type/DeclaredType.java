@@ -38,13 +38,13 @@ import javax.lang.model.util.Types;
  * This includes parameterized types such as {@code java.util.Set<String>}
  * as well as raw types.
  *
- * <p> While a {@code TypeElement} represents a class or interface
+ * While a {@code TypeElement} represents a class or interface
  * <i>element</i>, a {@code DeclaredType} represents a class
  * or interface <i>type</i>, the latter being a use
  * (or <i>invocation</i>) of the former.
  * See {@link TypeElement} for more on this distinction.
  *
- * <p> The supertypes (both class and interface types) of a declared
+ * The supertypes (both class and interface types) of a declared
  * type may be found using the {@link
  * Types#directSupertypes(TypeMirror)} method.  This returns the
  * supertypes with any type arguments substituted in.

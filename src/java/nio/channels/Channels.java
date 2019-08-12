@@ -47,7 +47,7 @@ import sun.nio.cs.StreamEncoder;
 /**
  * Utility methods for channels and streams.
  *
- * <p> This class defines static methods that support the interoperation of the
+ * This class defines static methods that support the interoperation of the
  * stream classes of the <tt>{@link java.io}</tt> package with the channel
  * classes of this package.  </p>
  *
@@ -107,7 +107,7 @@ public final class Channels {
     /**
      * Constructs a stream that reads bytes from the given channel.
      *
-     * <p> The <tt>read</tt> methods of the resulting stream will throw an
+     * The <tt>read</tt> methods of the resulting stream will throw an
      * {@link IllegalBlockingModeException} if invoked while the underlying
      * channel is in non-blocking mode.  The stream will not be buffered, and
      * it will not support the {@link InputStream#mark mark} or {@link
@@ -128,7 +128,7 @@ public final class Channels {
     /**
      * Constructs a stream that writes bytes to the given channel.
      *
-     * <p> The <tt>write</tt> methods of the resulting stream will throw an
+     * The <tt>write</tt> methods of the resulting stream will throw an
      * {@link IllegalBlockingModeException} if invoked while the underlying
      * channel is in non-blocking mode.  The stream will not be buffered.  The
      * stream will be safe for access by multiple concurrent threads.  Closing
@@ -184,7 +184,7 @@ public final class Channels {
     /**
      * Constructs a stream that reads bytes from the given channel.
      *
-     * <p> The stream will not be buffered, and it will not support the {@link
+     * The stream will not be buffered, and it will not support the {@link
      * InputStream#mark mark} or {@link InputStream#reset reset} methods.  The
      * stream will be safe for access by multiple concurrent threads.  Closing
      * the stream will in turn cause the channel to be closed.  </p>
@@ -259,7 +259,7 @@ public final class Channels {
     /**
      * Constructs a stream that writes bytes to the given channel.
      *
-     * <p> The stream will not be buffered. The stream will be safe for access
+     * The stream will not be buffered. The stream will be safe for access
      * by multiple concurrent threads.  Closing the stream will in turn cause
      * the channel to be closed.  </p>
      *
@@ -334,7 +334,7 @@ public final class Channels {
     /**
      * Constructs a channel that reads bytes from the given stream.
      *
-     * <p> The resulting channel will not be buffered; it will simply redirect
+     * The resulting channel will not be buffered; it will simply redirect
      * its I/O operations to the given stream.  Closing the channel will in
      * turn cause the stream to be closed.  </p>
      *
@@ -409,7 +409,7 @@ public final class Channels {
     /**
      * Constructs a channel that writes bytes to the given stream.
      *
-     * <p> The resulting channel will not be buffered; it will simply redirect
+     * The resulting channel will not be buffered; it will simply redirect
      * its I/O operations to the given stream.  Closing the channel will in
      * turn cause the stream to be closed.  </p>
      *
@@ -478,7 +478,7 @@ public final class Channels {
      * Constructs a reader that decodes bytes from the given channel using the
      * given decoder.
      *
-     * <p> The resulting stream will contain an internal input buffer of at
+     * The resulting stream will contain an internal input buffer of at
      * least <tt>minBufferCap</tt> bytes.  The stream's <tt>read</tt> methods
      * will, as needed, fill the buffer by reading bytes from the underlying
      * channel; if the channel is in non-blocking mode when bytes are to be
@@ -512,7 +512,7 @@ public final class Channels {
      * Constructs a reader that decodes bytes from the given channel according
      * to the named charset.
      *
-     * <p> An invocation of this method of the form
+     * An invocation of this method of the form
      *
      * <blockquote><pre>
      * Channels.newReader(ch, csname)</pre></blockquote>
@@ -548,7 +548,7 @@ public final class Channels {
      * Constructs a writer that encodes characters using the given encoder and
      * writes the resulting bytes to the given channel.
      *
-     * <p> The resulting stream will contain an internal output buffer of at
+     * The resulting stream will contain an internal output buffer of at
      * least <tt>minBufferCap</tt> bytes.  The stream's <tt>write</tt> methods
      * will, as needed, flush the buffer by writing bytes to the underlying
      * channel; if the channel is in non-blocking mode when bytes are to be
@@ -581,7 +581,7 @@ public final class Channels {
      * Constructs a writer that encodes characters according to the named
      * charset and writes the resulting bytes to the given channel.
      *
-     * <p> An invocation of this method of the form
+     * An invocation of this method of the form
      *
      * <blockquote><pre>
      * Channels.newWriter(ch, csname)</pre></blockquote>

@@ -49,8 +49,8 @@ import java.util.function.Supplier;
  *     private static final AtomicInteger nextId = new AtomicInteger(0);
  *
  *     // Thread local variable containing each thread's ID
- *     private static final ThreadLocal&lt;Integer&gt; threadId =
- *         new ThreadLocal&lt;Integer&gt;() {
+ *     private static final ThreadLocal<Integer> threadId =
+ *         new ThreadLocal<Integer>() {
  *             &#64;Override protected Integer initialValue() {
  *                 return nextId.getAndIncrement();
  *         }

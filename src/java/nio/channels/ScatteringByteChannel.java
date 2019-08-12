@@ -32,7 +32,7 @@ import java.nio.ByteBuffer;
 /**
  * A channel that can read bytes into a sequence of buffers.
  *
- * <p> A <i>scattering</i> read operation reads, in a single invocation, a
+ * A <i>scattering</i> read operation reads, in a single invocation, a
  * sequence of bytes into one or more of a given sequence of buffers.
  * Scattering reads are often useful when implementing network protocols or
  * file formats that, for example, group data into segments consisting of one
@@ -54,7 +54,7 @@ public interface ScatteringByteChannel
      * Reads a sequence of bytes from this channel into a subsequence of the
      * given buffers.
      *
-     * <p> An invocation of this method attempts to read up to <i>r</i> bytes
+     * An invocation of this method attempts to read up to <i>r</i> bytes
      * from this channel, where <i>r</i> is the total number of bytes remaining
      * the specified subsequence of the given buffer array, that is,
      *
@@ -65,8 +65,8 @@ public interface ScatteringByteChannel
      *
      * at the moment that this method is invoked.
      *
-     * <p> Suppose that a byte sequence of length <i>n</i> is read, where
-     * <tt>0</tt>&nbsp;<tt>&lt;=</tt>&nbsp;<i>n</i>&nbsp;<tt>&lt;=</tt>&nbsp;<i>r</i>.
+     * Suppose that a byte sequence of length <i>n</i> is read, where
+     * <tt>0</tt>&nbsp;<tt><=</tt>&nbsp;<i>n</i>&nbsp;<tt><=</tt>&nbsp;<i>r</i>.
      * Up to the first <tt>dsts[offset].remaining()</tt> bytes of this sequence
      * are transferred into buffer <tt>dsts[offset]</tt>, up to the next
      * <tt>dsts[offset+1].remaining()</tt> bytes are transferred into buffer
@@ -76,7 +76,7 @@ public interface ScatteringByteChannel
      * buffer, except the last updated buffer, is guaranteed to be equal to
      * that buffer's limit.
      *
-     * <p> This method may be invoked at any time.  If another thread has
+     * This method may be invoked at any time.  If another thread has
      * already initiated a read operation upon this channel, however, then an
      * invocation of this method will block until the first operation is
      * complete. </p>
@@ -126,7 +126,7 @@ public interface ScatteringByteChannel
     /**
      * Reads a sequence of bytes from this channel into the given buffers.
      *
-     * <p> An invocation of this method of the form <tt>c.read(dsts)</tt>
+     * An invocation of this method of the form <tt>c.read(dsts)</tt>
      * behaves in exactly the same manner as the invocation
      *
      * <blockquote><pre>

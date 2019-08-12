@@ -75,7 +75,7 @@ import java.util.Comparators;
  * For the mathematically inclined, the <i>relation</i> that defines the
  * <i>imposed ordering</i> that a given comparator <tt>c</tt> imposes on a
  * given set of objects <tt>S</tt> is:<pre>
- *       {(x, y) such that c.compare(x, y) &lt;= 0}.
+ *       {(x, y) such that c.compare(x, y) <= 0}.
  * </pre> The <i>quotient</i> for this total order is:<pre>
  *       {(x, y) such that c.compare(x, y) == 0}.
  * </pre>
@@ -124,8 +124,8 @@ public interface Comparator<T> {
      * if <tt>compare(y, x)</tt> throws an exception.)<p>
      *
      * The implementor must also ensure that the relation is transitive:
-     * <tt>((compare(x, y)&gt;0) &amp;&amp; (compare(y, z)&gt;0))</tt> implies
-     * <tt>compare(x, z)&gt;0</tt>.<p>
+     * <tt>((compare(x, y)>0) &amp;&amp; (compare(y, z)>0))</tt> implies
+     * <tt>compare(x, z)>0</tt>.<p>
      *
      * Finally, the implementor must ensure that <tt>compare(x, y)==0</tt>
      * implies that <tt>sgn(compare(x, z))==sgn(compare(y, z))</tt> for all

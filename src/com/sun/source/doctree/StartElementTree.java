@@ -32,7 +32,7 @@ import javax.lang.model.element.Name;
  * A tree node for the start of an HTML element.
  *
  * <p>
- * &lt; name [attributes] [/]&gt;
+ * < name [attributes] [/]>
  *
  * @since 1.8
  */

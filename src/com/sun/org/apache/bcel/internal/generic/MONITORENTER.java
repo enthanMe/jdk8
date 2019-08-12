@@ -60,7 +60,7 @@ package com.sun.org.apache.bcel.internal.generic;
 
 /**
  * MONITORENTER - Enter monitor for object
- * <PRE>Stack: ..., objectref -&gt; ...</PRE>
+ * <PRE>Stack: ..., objectref -> ...</PRE>
  *
  * @author  <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
  */

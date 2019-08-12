@@ -44,22 +44,22 @@ import java.lang.annotation.Target;
  *      int[] names;
  *
  *    // XML Serialization Form 1 (Unwrapped collection)
- *    &lt;names> ... &lt;/names>
- *    &lt;names> ... &lt;/names>
+ *    <names> ... </names>
+ *    <names> ... </names>
  *
  *    // XML Serialization Form 2 ( Wrapped collection )
- *    &lt;wrapperElement>
- *       &lt;names> value-of-item &lt;/names>
- *       &lt;names> value-of-item &lt;/names>
+ *    <wrapperElement>
+ *       <names> value-of-item </names>
+ *       <names> value-of-item </names>
  *       ....
- *    &lt;/wrapperElement>
+ *    </wrapperElement>
  * </pre>
  *
- * <p> The two serialized XML forms allow a null collection to be
+ * The two serialized XML forms allow a null collection to be
  * represented either by absence or presence of an element with a
  * nillable attribute.
  *
- * <p> <b>Usage</b> </p>
+ * <b>Usage</b> </p>
  * <p>
  * The <tt>@XmlElementWrapper</tt> annotation can be used with the
  * following program elements:

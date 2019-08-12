@@ -38,7 +38,7 @@ public interface Binding {
     * If the returned chain is modified a call to <code>setHandlerChain</code>
     * is required to configure the binding instance with the new chain.
     *
-    *  @return java.util.List&lt;Handler> Handler chain
+    *  @return java.util.List<Handler> Handler chain
     */
     public java.util.List<javax.xml.ws.handler.Handler> getHandlerChain();
 

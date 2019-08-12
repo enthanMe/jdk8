@@ -29,7 +29,7 @@ package java.io;
  * This abstract class is the superclass of all classes representing
  * an input stream of bytes.
  *
- * <p> Applications that need to define a subclass of <code>InputStream</code>
+ * Applications that need to define a subclass of <code>InputStream</code>
  * must always provide a method that returns the next byte of input.
  *
  * @author  Arthur van Hoff
@@ -56,7 +56,7 @@ public abstract class InputStream implements Closeable {
      * blocks until input data is available, the end of the stream is detected,
      * or an exception is thrown.
      *
-     * <p> A subclass must provide an implementation of this method.
+     * A subclass must provide an implementation of this method.
      *
      * @return     the next byte of data, or <code>-1</code> if the end of the
      *             stream is reached.
@@ -70,13 +70,13 @@ public abstract class InputStream implements Closeable {
      * returned as an integer.  This method blocks until input data is
      * available, end of file is detected, or an exception is thrown.
      *
-     * <p> If the length of <code>b</code> is zero, then no bytes are read and
+     * If the length of <code>b</code> is zero, then no bytes are read and
      * <code>0</code> is returned; otherwise, there is an attempt to read at
      * least one byte. If no byte is available because the stream is at the
      * end of the file, the value <code>-1</code> is returned; otherwise, at
      * least one byte is read and stored into <code>b</code>.
      *
-     * <p> The first byte read is stored into element <code>b[0]</code>, the
+     * The first byte read is stored into element <code>b[0]</code>, the
      * next one into <code>b[1]</code>, and so on. The number of bytes read is,
      * at most, equal to the length of <code>b</code>. Let <i>k</i> be the
      * number of bytes actually read; these bytes will be stored in elements
@@ -84,7 +84,7 @@ public abstract class InputStream implements Closeable {
      * leaving elements <code>b[</code><i>k</i><code>]</code> through
      * <code>b[b.length-1]</code> unaffected.
      *
-     * <p> The <code>read(b)</code> method for class <code>InputStream</code>
+     * The <code>read(b)</code> method for class <code>InputStream</code>
      * has the same effect as: <pre><code> read(b, 0, b.length) </code></pre>
      *
      * @param      b   the buffer into which the data is read.
@@ -107,16 +107,16 @@ public abstract class InputStream implements Closeable {
      * <code>len</code> bytes, but a smaller number may be read.
      * The number of bytes actually read is returned as an integer.
      *
-     * <p> This method blocks until input data is available, end of file is
+     * This method blocks until input data is available, end of file is
      * detected, or an exception is thrown.
      *
-     * <p> If <code>len</code> is zero, then no bytes are read and
+     * If <code>len</code> is zero, then no bytes are read and
      * <code>0</code> is returned; otherwise, there is an attempt to read at
      * least one byte. If no byte is available because the stream is at end of
      * file, the value <code>-1</code> is returned; otherwise, at least one
      * byte is read and stored into <code>b</code>.
      *
-     * <p> The first byte read is stored into element <code>b[off]</code>, the
+     * The first byte read is stored into element <code>b[off]</code>, the
      * next one into <code>b[off+1]</code>, and so on. The number of bytes read
      * is, at most, equal to <code>len</code>. Let <i>k</i> be the number of
      * bytes actually read; these bytes will be stored in elements
@@ -124,11 +124,11 @@ public abstract class InputStream implements Closeable {
      * leaving elements <code>b[off+</code><i>k</i><code>]</code> through
      * <code>b[off+len-1]</code> unaffected.
      *
-     * <p> In every case, elements <code>b[0]</code> through
+     * In every case, elements <code>b[0]</code> through
      * <code>b[off]</code> and elements <code>b[off+len]</code> through
      * <code>b[b.length-1]</code> are unaffected.
      *
-     * <p> The <code>read(b,</code> <code>off,</code> <code>len)</code> method
+     * The <code>read(b,</code> <code>off,</code> <code>len)</code> method
      * for class <code>InputStream</code> simply calls the method
      * <code>read()</code> repeatedly. If the first such call results in an
      * <code>IOException</code>, that exception is returned from the call to
@@ -198,7 +198,7 @@ public abstract class InputStream implements Closeable {
      * returns 0, and no bytes are skipped. Subclasses may handle the negative
      * value differently.
      *
-     * <p> The <code>skip</code> method of this class creates a
+     * The <code>skip</code> method of this class creates a
      * byte array and then repeatedly reads into it until <code>n</code> bytes
      * have been read or the end of the stream has been reached. Subclasses are
      * encouraged to provide a more efficient implementation of this method.
@@ -238,19 +238,19 @@ public abstract class InputStream implements Closeable {
      * might be the same thread or another thread.  A single read or skip of this
      * many bytes will not block, but may read or skip fewer bytes.
      *
-     * <p> Note that while some implementations of {@code InputStream} will return
+     * Note that while some implementations of {@code InputStream} will return
      * the total number of bytes in the stream, many will not.  It is
      * never correct to use the return value of this method to allocate
      * a buffer intended to hold all data in this stream.
      *
-     * <p> A subclass' implementation of this method may choose to throw an
+     * A subclass' implementation of this method may choose to throw an
      * {@link IOException} if this input stream has been closed by
      * invoking the {@link #close()} method.
      *
-     * <p> The {@code available} method for class {@code InputStream} always
+     * The {@code available} method for class {@code InputStream} always
      * returns {@code 0}.
      *
-     * <p> This method should be overridden by subclasses.
+     * This method should be overridden by subclasses.
      *
      * @return     an estimate of the number of bytes that can be read (or skipped
      *             over) from this input stream without blocking or {@code 0} when
@@ -265,7 +265,7 @@ public abstract class InputStream implements Closeable {
      * Closes this input stream and releases any system resources associated
      * with the stream.
      *
-     * <p> The <code>close</code> method of <code>InputStream</code> does
+     * The <code>close</code> method of <code>InputStream</code> does
      * nothing.
      *
      * @exception  IOException  if an I/O error occurs.
@@ -277,11 +277,11 @@ public abstract class InputStream implements Closeable {
      * the <code>reset</code> method repositions this stream at the last marked
      * position so that subsequent reads re-read the same bytes.
      *
-     * <p> The <code>readlimit</code> arguments tells this input stream to
+     * The <code>readlimit</code> arguments tells this input stream to
      * allow that many bytes to be read before the mark position gets
      * invalidated.
      *
-     * <p> The general contract of <code>mark</code> is that, if the method
+     * The general contract of <code>mark</code> is that, if the method
      * <code>markSupported</code> returns <code>true</code>, the stream somehow
      * remembers all the bytes read after the call to <code>mark</code> and
      * stands ready to supply those same bytes again if and whenever the method
@@ -289,9 +289,9 @@ public abstract class InputStream implements Closeable {
      * remember any data at all if more than <code>readlimit</code> bytes are
      * read from the stream before <code>reset</code> is called.
      *
-     * <p> Marking a closed stream should not have any effect on the stream.
+     * Marking a closed stream should not have any effect on the stream.
      *
-     * <p> The <code>mark</code> method of <code>InputStream</code> does
+     * The <code>mark</code> method of <code>InputStream</code> does
      * nothing.
      *
      * @param   readlimit   the maximum limit of bytes that can be read before
@@ -304,7 +304,7 @@ public abstract class InputStream implements Closeable {
      * Repositions this stream to the position at the time the
      * <code>mark</code> method was last called on this input stream.
      *
-     * <p> The general contract of <code>reset</code> is:
+     * The general contract of <code>reset</code> is:
      *
      * <ul>
      * <li> If the method <code>markSupported</code> returns

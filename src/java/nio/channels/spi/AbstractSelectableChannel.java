@@ -32,7 +32,7 @@ import java.nio.channels.*;
 /**
  * Base implementation class for selectable channels.
  *
- * <p> This class defines methods that handle the mechanics of channel
+ * This class defines methods that handle the mechanics of channel
  * registration, deregistration, and closing.  It maintains the current
  * blocking mode of this channel as well as its current set of selection keys.
  * It performs all of the synchronization required to implement the {@link
@@ -165,14 +165,14 @@ public abstract class AbstractSelectableChannel
     /**
      * Registers this channel with the given selector, returning a selection key.
      *
-     * <p>  This method first verifies that this channel is open and that the
+     *  This method first verifies that this channel is open and that the
      * given initial interest set is valid.
      *
-     * <p> If this channel is already registered with the given selector then
+     * If this channel is already registered with the given selector then
      * the selection key representing that registration is returned after
      * setting its interest set to the given value.
      *
-     * <p> Otherwise this channel has not yet been registered with the given
+     * Otherwise this channel has not yet been registered with the given
      * selector, so the {@link AbstractSelector#register register} method of
      * the selector is invoked while holding the appropriate locks.  The
      * resulting key is added to this channel's key set before being returned.
@@ -223,7 +223,7 @@ public abstract class AbstractSelectableChannel
     /**
      * Closes this channel.
      *
-     * <p> This method, which is specified in the {@link
+     * This method, which is specified in the {@link
      * AbstractInterruptibleChannel} class and is invoked by the {@link
      * java.nio.channels.Channel#close close} method, in turn invokes the
      * {@link #implCloseSelectableChannel implCloseSelectableChannel} method in
@@ -245,12 +245,12 @@ public abstract class AbstractSelectableChannel
     /**
      * Closes this selectable channel.
      *
-     * <p> This method is invoked by the {@link java.nio.channels.Channel#close
+     * This method is invoked by the {@link java.nio.channels.Channel#close
      * close} method in order to perform the actual work of closing the
      * channel.  This method is only invoked if the channel has not yet been
      * closed, and it is never invoked more than once.
      *
-     * <p> An implementation of this method must arrange for any other thread
+     * An implementation of this method must arrange for any other thread
      * that is blocked in an I/O operation upon this channel to return
      * immediately, either by throwing an exception or by returning normally.
      * </p>
@@ -276,7 +276,7 @@ public abstract class AbstractSelectableChannel
     /**
      * Adjusts this channel's blocking mode.
      *
-     * <p> If the given blocking mode is different from the current blocking
+     * If the given blocking mode is different from the current blocking
      * mode then this method invokes the {@link #implConfigureBlocking
      * implConfigureBlocking} method, while holding the appropriate locks, in
      * order to change the mode.  </p>
@@ -300,7 +300,7 @@ public abstract class AbstractSelectableChannel
     /**
      * Adjusts this channel's blocking mode.
      *
-     * <p> This method is invoked by the {@link #configureBlocking
+     * This method is invoked by the {@link #configureBlocking
      * configureBlocking} method in order to perform the actual work of
      * changing the blocking mode.  This method is only invoked if the new mode
      * is different from the current mode.  </p>

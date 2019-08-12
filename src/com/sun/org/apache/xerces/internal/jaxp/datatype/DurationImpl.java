@@ -57,10 +57,10 @@ import com.sun.org.apache.xerces.internal.util.DatatypeMessageFormatter;
  * <p>Duration objects only have partial order, where two values A and B
  * maybe either:</p>
  * <ol>
- *  <li>A&lt;B (A is shorter than B)
- *  <li>A&gt;B (A is longer than B)
+ *  <li>A<B (A is shorter than B)
+ *  <li>A>B (A is longer than B)
  *  <li>A==B   (A and B are of the same duration)
- *  <li>A&lt;>B (Comparison between A and B is indeterminate)
+ *  <li>A<>B (Comparison between A and B is indeterminate)
  * </ol>
  * <p>For example, 30 days cannot be meaningfully compared to one month.
  * The {@link #compare(Duration)} method implements this

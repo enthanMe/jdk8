@@ -405,11 +405,11 @@ public class DocumentTypeImpl
      * internal, defined in the DTD. For example, in:
      * <p>
      * <pre>
-     *   &lt;!doctype example SYSTEM "ex.dtd" [
-     *     &lt;!ENTITY foo "foo"&gt;
-     *     &lt;!ENTITY bar "bar"&gt;
-     *     &lt;!ENTITY % baz "baz"&gt;
-     *     ]&gt;
+     *   <!doctype example SYSTEM "ex.dtd" [
+     *     <!ENTITY foo "foo">
+     *     <!ENTITY bar "bar">
+     *     <!ENTITY % baz "baz">
+     *     ]>
      * </pre>
      * <p>
      * The Entities map includes foo and bar, but not baz. It is promised that
@@ -417,7 +417,7 @@ public class DocumentTypeImpl
      * <p>
      * For HTML, this will always be null.
      * <p>
-     * Note that "built in" entities such as &amp; and &lt; should be
+     * Note that "built in" entities such as &amp; and < should be
      * converted to their actual characters before being placed in the DOM's
      * contained text, and should be converted back when the DOM is rendered
      * as XML or HTML, and hence DO NOT appear here.

@@ -1020,7 +1020,7 @@ public class DefaultCaret extends Rectangle implements Caret, FocusListener, Mou
     /**
      * Fetches the current position of the caret.
      *
-     * @return the position &gt;= 0
+     * @return the position >= 0
      * @see Caret#getDot
      */
     public int getDot() {
@@ -1031,7 +1031,7 @@ public class DefaultCaret extends Rectangle implements Caret, FocusListener, Mou
      * Fetches the current position of the mark.  If there is a selection,
      * the dot and mark will not be the same.
      *
-     * @return the position &gt;= 0
+     * @return the position >= 0
      * @see Caret#getMark
      */
     public int getMark() {
@@ -1043,7 +1043,7 @@ public class DefaultCaret extends Rectangle implements Caret, FocusListener, Mou
      * with a forward bias. This implicitly sets the
      * selection range to zero.
      *
-     * @param dot the position &gt;= 0
+     * @param dot the position >= 0
      * @see #setDot(int, Position.Bias)
      * @see Caret#setDot
      */
@@ -1055,7 +1055,7 @@ public class DefaultCaret extends Rectangle implements Caret, FocusListener, Mou
      * Moves the caret position to the specified position,
      * with a forward bias.
      *
-     * @param dot the position &gt;= 0
+     * @param dot the position >= 0
      * @see #moveDot(int, javax.swing.text.Position.Bias)
      * @see Caret#moveDot
      */
@@ -1069,7 +1069,7 @@ public class DefaultCaret extends Rectangle implements Caret, FocusListener, Mou
      * Moves the caret position to the specified position, with the
      * specified bias.
      *
-     * @param dot the position &gt;= 0
+     * @param dot the position >= 0
      * @param dotBias the bias for this position, not <code>null</code>
      * @throws IllegalArgumentException if the bias is <code>null</code>
      * @see Caret#moveDot
@@ -1134,7 +1134,7 @@ public class DefaultCaret extends Rectangle implements Caret, FocusListener, Mou
      * specified bias. This implicitly sets the selection range
      * to zero.
      *
-     * @param dot the position &gt;= 0
+     * @param dot the position >= 0
      * @param dotBias the bias for this position, not <code>null</code>
      * @throws IllegalArgumentException if the bias is <code>null</code>
      * @see Caret#setDot

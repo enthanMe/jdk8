@@ -142,13 +142,13 @@ public class PKIXBuilderParameters extends PKIXParameters {
      * {@code CertPathBuilder} instance must not build
      * paths longer than the length specified.
      *
-     * <p> A value of 0 implies that the path can only contain
+     * A value of 0 implies that the path can only contain
      * a single certificate. A value of -1 implies that the
      * path length is unconstrained (i.e. there is no maximum).
      * The default maximum path length, if not specified, is 5.
      * Setting a value less than -1 will cause an exception to be thrown.
      *
-     * <p> If any of the CA certificates contain the
+     * If any of the CA certificates contain the
      * {@code BasicConstraintsExtension}, the value of the
      * {@code pathLenConstraint} field of the extension overrides
      * the maximum path length parameter whenever the result is a

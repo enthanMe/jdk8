@@ -111,7 +111,7 @@ public class ImageUtil {
      * <code>ColorModel</code> cannot be found, this method returns
      * <code>null</code>.
      *
-     * <p> Suitable <code>ColorModel</code>s are guaranteed to exist
+     * Suitable <code>ColorModel</code>s are guaranteed to exist
      * for all instances of <code>ComponentSampleModel</code>.
      * For 1- and 3- banded <code>SampleModel</code>s, the returned
      * <code>ColorModel</code> will be opaque.  For 2- and 4-banded
@@ -766,7 +766,7 @@ public class ImageUtil {
      * from an array of unpacked data of the form returned by
      * <code>getUnpackedBinaryData()</code>.
      *
-     * <p> If the data are binary, then the target bit will be set if
+     * If the data are binary, then the target bit will be set if
      * and only if the corresponding byte is non-zero.
      *
      * @throws IllegalArgumentException if <code>isBinary()</code> returns

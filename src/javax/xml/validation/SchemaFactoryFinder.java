@@ -48,7 +48,7 @@ class SchemaFactoryFinder  {
     /** debug support code. */
     private static boolean debug = false;
     /**
-     *<p> Take care of restrictions imposed by java security model </p>
+     *Take care of restrictions imposed by java security model </p>
      */
     private static final SecuritySupport ss = new SecuritySupport();
     private static final String DEFAULT_PACKAGE = "com.sun.org.apache.xerces.internal";

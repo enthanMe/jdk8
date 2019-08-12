@@ -73,9 +73,9 @@ import java.lang.Double;
  * it cannot contain the slash character ('/').
  *
  * <p>The root node has an absolute path name of <tt>"/"</tt>.  Children of
- * the root node have absolute path names of <tt>"/" + </tt><i>&lt;node
- * name&gt;</i>.  All other nodes have absolute path names of <i>&lt;parent's
- * absolute path name&gt;</i><tt> + "/" + </tt><i>&lt;node name&gt;</i>.
+ * the root node have absolute path names of <tt>"/" + </tt><i><node
+ * name></i>.  All other nodes have absolute path names of <i><parent's
+ * absolute path name></i><tt> + "/" + </tt><i><node name></i>.
  * Note that all absolute path names begin with the slash character.
  *
  * <p>A node <i>n</i>'s path name relative to its ancestor <i>a</i>
@@ -200,7 +200,7 @@ import java.lang.Double;
  * instantiated; if this process fails then an unspecified error is
  * thrown.</p></li>
  *
- * <li><p> If a <tt>PreferencesFactory</tt> implementation class file
+ * <li>If a <tt>PreferencesFactory</tt> implementation class file
  * has been installed in a jar file that is visible to the
  * {@link java.lang.ClassLoader#getSystemClassLoader system class loader},
  * and that jar file contains a provider-configuration file named
@@ -334,7 +334,7 @@ public abstract class Preferences {
      * <tt>com.acme.widget.Foo</tt> is <tt>/com/acme/widget</tt>.
      *
      * <p>This convention does not apply to the unnamed package, whose
-     * associated preference node is <tt>&lt;unnamed&gt;</tt>.  This node
+     * associated preference node is <tt><unnamed></tt>.  This node
      * is not intended for long term use, but for convenience in the early
      * development of programs that do not yet belong to a package, and
      * for "throwaway" programs.  <i>Valuable data should not be stored
@@ -378,7 +378,7 @@ public abstract class Preferences {
      * <tt>com.acme.widget.Foo</tt> is <tt>/com/acme/widget</tt>.
      *
      * <p>This convention does not apply to the unnamed package, whose
-     * associated preference node is <tt>&lt;unnamed&gt;</tt>.  This node
+     * associated preference node is <tt><unnamed></tt>.  This node
      * is not intended for long term use, but for convenience in the early
      * development of programs that do not yet belong to a package, and
      * for "throwaway" programs.  <i>Valuable data should not be stored
@@ -1042,7 +1042,7 @@ public abstract class Preferences {
      * persistent.  Note however that any preference value changes in
      * ancestors are <i>not</i> guaranteed to be made persistent.
      *
-     * <p> If this method is invoked on a node that has been removed with
+     * If this method is invoked on a node that has been removed with
      * the {@link #removeNode()} method, flushSpi() is invoked on this node,
      * but not on others.
      *

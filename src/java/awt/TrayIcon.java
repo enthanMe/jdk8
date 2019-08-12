@@ -70,7 +70,7 @@ import java.security.AccessController;
  * a {@code TrayIcon}. Otherwise the constructor will throw a
  * SecurityException.
  *
- * <p> See the {@link SystemTray} class overview for an example on how
+ * See the {@link SystemTray} class overview for an example on how
  * to use the <code>TrayIcon</code> API.
  *
  * @since 1.6
@@ -234,13 +234,13 @@ public class TrayIcon {
      * java.awt.Image#flush} method &#151; you will need to call it
      * manually.
      *
-     * <p> If the image represents an animated image, it will be
+     * If the image represents an animated image, it will be
      * animated automatically.
      *
-     * <p> See the {@link #setImageAutoSize(boolean)} property for
+     * See the {@link #setImageAutoSize(boolean)} property for
      * details on the size of the displayed image.
      *
-     * <p> Calling this method with the same image that is currently
+     * Calling this method with the same image that is currently
      * being used has no effect.
      *
      * @throws NullPointerException if <code>image</code> is <code>null</code>
@@ -366,12 +366,12 @@ public class TrayIcon {
      * for the image on the tray.  By default, the auto-size property
      * is set to <code>false</code>.
      *
-     * <p> If auto-size is <code>false</code>, and the image size
+     * If auto-size is <code>false</code>, and the image size
      * doesn't match the tray icon space, the image is painted as-is
      * inside that space &#151; if larger than the allocated space, it will
      * be cropped.
      *
-     * <p> If auto-size is <code>true</code>, the image is stretched or shrunk to
+     * If auto-size is <code>true</code>, the image is stretched or shrunk to
      * fit the tray icon space.
      *
      * @param autosize <code>true</code> to auto-size the image,
@@ -407,7 +407,7 @@ public class TrayIcon {
      * from the {@code TrayIcon}) are relative to the screen, not the
      * {@code TrayIcon}.
      *
-     * <p> <b>Note: </b>The <code>MOUSE_ENTERED</code> and
+     * <b>Note: </b>The <code>MOUSE_ENTERED</code> and
      * <code>MOUSE_EXITED</code> mouse events are not supported.
      * <p>Refer to <a href="doc-files/AWTThreadIssues.html#ListenersThreads"
      * >AWT Threading Issues</a> for details on AWT's threading model.
@@ -469,7 +469,7 @@ public class TrayIcon {
      * from the {@code TrayIcon}) are relative to the screen, not the
      * {@code TrayIcon}.
      *
-     * <p> <b>Note: </b>The <code>MOUSE_DRAGGED</code> mouse event is not supported.
+     * <b>Note: </b>The <code>MOUSE_DRAGGED</code> mouse event is not supported.
      * <p>Refer to <a href="doc-files/AWTThreadIssues.html#ListenersThreads"
      * >AWT Threading Issues</a> for details on AWT's threading model.
      *

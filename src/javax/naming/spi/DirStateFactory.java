@@ -61,7 +61,7 @@ import java.util.Hashtable;
   * uses the resulting attributes to create an LDAP entry and updates
   * the directory.
   *
-  * <p> Since <tt>DirStateFactory</tt> extends <tt>StateFactory</tt>, it
+  * Since <tt>DirStateFactory</tt> extends <tt>StateFactory</tt>, it
   * has two <tt>getStateToBind()</tt> methods, where one
   * differs from the other by the attributes
   * argument. <tt>DirectoryManager.getStateToBind()</tt> will only use
@@ -69,7 +69,7 @@ import java.util.Hashtable;
   * <tt>NamingManager.getStateToBind()</tt> will only use the form that
   * does not accept the attributes argument.
   *
-  * <p> Either form of the <tt>getStateToBind()</tt> method of a
+  * Either form of the <tt>getStateToBind()</tt> method of a
   * DirStateFactory may be invoked multiple times, possibly using different
   * parameters.  The implementation is thread-safe.
   *

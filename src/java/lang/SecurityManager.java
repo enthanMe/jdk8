@@ -276,7 +276,7 @@ class SecurityManager {
     /**
      * Constructs a new <code>SecurityManager</code>.
      *
-     * <p> If there is a security manager already installed, this method first
+     * If there is a security manager already installed, this method first
      * calls the security manager's <code>checkPermission</code> method
      * with the <code>RuntimePermission("createSecurityManager")</code>
      * permission to ensure the calling thread has permission to create a new
@@ -514,7 +514,7 @@ class SecurityManager {
      * The trusted method needs to determine if the other (possibly
      * untrusted) method would be allowed to perform the operation on its
      * own.
-     * <p> The default implementation of this method is to return
+     * The default implementation of this method is to return
      * an <code>AccessControlContext</code> object.
      *
      * @return  an implementation-dependent object that encapsulates
@@ -772,7 +772,7 @@ class SecurityManager {
      * <code>FilePermission(cmd,"execute")</code> permission
      * if cmd is an absolute path, otherwise it calls
      * <code>checkPermission</code> with
-     * <code>FilePermission("&lt;&lt;ALL FILES&gt;&gt;","execute")</code>.
+     * <code>FilePermission("<<ALL FILES>>","execute")</code>.
      * <p>
      * If you override this method, then you should make a call to
      * <code>super.checkExec</code>
@@ -895,11 +895,11 @@ class SecurityManager {
      * specified by the string argument. The context must be a security
      * context returned by a previous call to
      * <code>getSecurityContext</code>.
-     * <p> If <code>context</code> is an instance of
+     * If <code>context</code> is an instance of
      * <code>AccessControlContext</code> then the
      * <code>AccessControlContext.checkPermission</code> method will
      * be invoked with the <code>FilePermission(file,"read")</code> permission.
-     * <p> If <code>context</code> is not an instance of
+     * If <code>context</code> is not an instance of
      * <code>AccessControlContext</code> then a
      * <code>SecurityException</code> is thrown.
      * <p>
@@ -1061,7 +1061,7 @@ class SecurityManager {
      * A port number of <code>-1</code> indicates that the calling
      * method is attempting to determine the IP address of the specified
      * host name.
-     * <p> If <code>context</code> is not an instance of
+     * If <code>context</code> is not an instance of
      * <code>AccessControlContext</code> then a
      * <code>SecurityException</code> is thrown.
      * <p>
@@ -1729,18 +1729,18 @@ class SecurityManager {
      * Determines whether the permission with the specified permission target
      * name should be granted or denied.
      *
-     * <p> If the requested permission is allowed, this method returns
+     * If the requested permission is allowed, this method returns
      * quietly. If denied, a SecurityException is raised.
      *
-     * <p> This method creates a <code>SecurityPermission</code> object for
+     * This method creates a <code>SecurityPermission</code> object for
      * the given permission target name and calls <code>checkPermission</code>
      * with it.
      *
-     * <p> See the documentation for
+     * See the documentation for
      * <code>{@link java.security.SecurityPermission}</code> for
      * a list of possible permission target names.
      *
-     * <p> If you override this method, then you should make a call to
+     * If you override this method, then you should make a call to
      * <code>super.checkSecurityAccess</code>
      * at the point the overridden method would normally throw an
      * exception.
