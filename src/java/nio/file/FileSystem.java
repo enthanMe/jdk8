@@ -94,7 +94,6 @@ import java.io.IOException;
  *
  * @since 1.7
  */
-
 public abstract class FileSystem
     implements Closeable
 {

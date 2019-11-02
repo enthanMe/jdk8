@@ -5,6 +5,7 @@ import java.util.Objects;
 /**
  * 表示接受一个参数并生成结果的函数.
  *
+ *
  * @param <T> 函数输入的类型
  * @param <R> 函数结果的类型
  *

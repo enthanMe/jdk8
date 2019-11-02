@@ -1,28 +1,3 @@
-/*
- * Copyright (c) 2003, 2011, Oracle and/or its affiliates. All rights reserved.
- * ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- */
-
 package java.io;
 
 import java.util.ArrayList;
@@ -169,7 +144,6 @@ public final class FileDescriptor {
      * If multiple streams point to the same FileDescriptor, we cycle
      * through the list of all referents and call close()
      */
-
     /**
      * Attach a Closeable to this FD for tracking.
      * parent reference is added to otherParents when

@@ -1,28 +1,25 @@
 package java.io;
 
 /**
- * Instances of classes that implement this interface are used to
- * filter filenames. These instances are used to filter directory
- * listings in the <code>list</code> method of class
- * <code>File</code>, and by the Abstract Window Toolkit's file
- * dialog component.
+ * 实现此接口的类的实例用于过滤文件名。
+ * 这些实例用于过滤类<code>File</code>的<code>list</code>方法中的目录列表，以及Abstract Window Toolkit的文件对话框组件。
  *
- * @author  Arthur van Hoff
- * @author  Jonathan Payne
- * @see     java.awt.FileDialog#setFilenameFilter(java.io.FilenameFilter)
- * @see     java.io.File
- * @see     java.io.File#list(java.io.FilenameFilter)
- * @since   JDK1.0
+ * @author Arthur van Hoff
+ * @author Jonathan Payne
+ * @see java.awt.FileDialog#setFilenameFilter(java.io.FilenameFilter)
+ * @see java.io.File
+ * @see java.io.File#list(java.io.FilenameFilter)
+ * @since JDK1.0
  */
 @FunctionalInterface
 public interface FilenameFilter {
+
     /**
-     * Tests if a specified file should be included in a file list.
+     * 测试指定的文件是否应包含在文件列表中。
      *
-     * @param   dir    the directory in which the file was found.
-     * @param   name   the name of the file.
-     * @return  <code>true</code> if and only if the name should be
-     * included in the file list; <code>false</code> otherwise.
+     * @param dir 找到该文件的目录。
+     * @param name 文件名称.
+     * @return <code>true</code>包含在文件列表中; <code>false</code> 否则.
      */
     boolean accept(File dir, String name);
 }
